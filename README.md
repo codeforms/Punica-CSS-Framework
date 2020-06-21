@@ -1,4 +1,4 @@
-# Punica-CSS-Framework
+# Punica CSS Framework
 Lightweight, Responsive, Modern and Fully Customizable CSS Framework based on SASS/SCSS.
 
 ### LAYOUT
