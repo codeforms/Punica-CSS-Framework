@@ -1,17 +1,20 @@
 # Punica CSS Framework
-Lightweight, Responsive, Modern and Fully Customizable CSS Framework based on SASS/SCSS.
+Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS Framework based on SASS/SCSS.
 
-### LAYOUT
+### Base & Layout
+- [x] Base
 - [x] Grid
 
-### ELEMENTS
-- [x] Button
+### Elements
+- [x] Button & Dropdown
 - [ ] Form
+- [x] Icon
+- [ ] Label
 - [x] Table
 - [x] Typography
 - [ ] Label
 
-### COMPONENTS
+### Components
 - [x] Alert
 - [x] Badge
 - [ ] Billboard
@@ -20,6 +23,7 @@ Lightweight, Responsive, Modern and Fully Customizable CSS Framework based on SA
 - [x] Menu
 - [ ] Navbar
 - [x] Panel
-- [ ] Spotlight
+- [ ] Progress
 - [ ] Steps
+- [ ] Timeline
 - [ ] Tooltip
