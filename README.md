@@ -1,6 +1,9 @@
 # Punica CSS Framework
 Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS Framework based on SASS/SCSS.
 
+[![GitHub license](https://img.shields.io/github/license/codeforms/Punica-CSS-Framework)](https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE)
+![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)
+
 ### Base & Layout
 - [x] Base
 - [x] Grid
