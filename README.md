@@ -24,6 +24,7 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS 
 - [x] Card
 - [x] Menu
 - [ ] Navbar
+- [x] Pagination
 - [x] Panel
 - [ ] Progress
 - [ ] Steps
