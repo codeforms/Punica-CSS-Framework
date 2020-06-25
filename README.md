@@ -11,7 +11,7 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS 
 ### Elements
 - [x] Button & Dropdown
 - [ ] Form
-- [x] Icon
+- [x] Icon (Material Icons)
 - [ ] Label
 - [x] Table
 - [x] Typography
@@ -28,5 +28,5 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS 
 - [x] Panel
 - [ ] Progress
 - [ ] Steps
-- [ ] Timeline
+- [x] Timeline
 - [ ] Tooltip
