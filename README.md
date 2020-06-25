@@ -12,14 +12,14 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS 
 - [x] Button & Dropdown
 - [ ] Form
 - [x] Icon (Material Icons)
-- [ ] Label
+- [x] Label
 - [x] Table
 - [x] Typography
 
 ### Components
 - [x] Alert
 - [x] Badge
-- [ ] Billboard
+- [x] Billboard
 - [x] Breadcrumbs
 - [x] Card
 - [x] Menu
