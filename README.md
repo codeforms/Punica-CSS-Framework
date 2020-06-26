@@ -29,4 +29,4 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS 
 - [x] Process
 - [x] Progress
 - [x] Timeline
-- [ ] Tooltip
+- [x] Tooltip
