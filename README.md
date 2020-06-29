@@ -10,7 +10,7 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS 
 
 ### Elements
 - [x] Button & Dropdown
-- [ ] Form
+- [x] Form
 - [x] Icon (Material Icons)
 - [x] Label
 - [x] Table
@@ -36,5 +36,4 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS 
 
 ### TODO
 - [ ] Documentation (4%)
-- [ ] Elements : Form (90%)
 - [ ] Components : Navbar (responsive burger menu) (0%)
