@@ -1,0 +1,24 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : TIMELINE > VARIABLES *******/
+
+/* 
+NAMING ***********************************************/
+$timeline-container		: 'timeline';
+$timeline-item			: 'item';
+$timeline-author		: 'author';
+$timeline-body			: 'body';
+$timeline-type			: 'type';
+$timeline-date			: 'date';
+
+$timeline-types: (
+	"primary": $primary-color,
+	"success": $success-color,
+	"warning": $warning-color,
+	"error": $error-color,
+);
+
+$timeline-type-width	: 32px;
+$timeline-border-width	: 1px;
+$timeline-padding		: 1.25em 2em 1.25em;
+$timeline-type-bg		: $main-secondary-bg;
+$timeline-type-shadow	: 0 0.255em 0 0 rgba(0, 0, 0, 0.145);

@@ -1,0 +1,26 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : BILLBOARD > VARIABLES ********/
+
+/* 
+NAMING ***********************************************/
+$billboard-name		: 'billboard';
+$billboard-media	: 'media';
+$billboard-body		: 'body';
+$billboard-cover	: 'cover';
+$billboard-types	: (
+	"primary": $primary-color,
+	"success": $success-color,
+	"warning": $warning-color,
+	"error": $error-color,
+);
+$billboard-sizes	: (
+	"small": 2.5rem 1.5rem,
+	"large": 7.5rem 4rem
+);
+$billboard-text-sizes: (
+	"small": 1em,
+	"large": 1.6em
+);
+/* 
+PREFERENCES ******************************************/
+$billboard-default-padding	: 4.5rem 2.5rem;

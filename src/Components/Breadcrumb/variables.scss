@@ -1,0 +1,24 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : BREADCRUMB > VARIABLES *****/
+
+/* 
+NAMING ***********************************************/
+$breadcrumb-name				: 'breadcrumb';
+$breadcrumb-item				: 'item';
+$breadcrumb-active				: 'active';
+/* 
+PREFERENCES ******************************************/
+$breadcrumb-padding-x			: .8em;
+$breadcrumb-padding-y			: 0;
+/* 
+SEPARATOR ********************************************/
+$breadcrumb-seperator			: '\203A'; // [1]
+$breadcrumb-seperator-color		: black;
+$breadcrumb-seperator-padding	: $breadcrumb-padding-y .6em;
+$breadcrumb-seperator-vertical	: sub;
+$breadcrumb-seperator-size		: 1.8rem;
+/* 
+REFERENCES ******************************************
+[1] HTML Symbols : https://www.toptal.com/designers/htmlarrows/
+*****************************************************/
+

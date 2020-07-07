@@ -1,0 +1,31 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : PROGRESS *******************/
+
+// if progress is enable
+@if $components-progress {
+	.#{$progress-name} {
+		width: $progress-width;
+		height: $progress-height;
+		background: $progress-background;
+		box-shadow: $progress-inner-shadow;
+		border-radius: $progress-border-radius;
+		appearance: none;
+		&::-webkit-progress-bar {
+			background: transparent;
+			border-radius: $progress-border-radius;
+		}
+		&::-webkit-progress-value {
+			background: $primary-color;
+			border-radius: $progress-border-radius;
+		}
+		&::-moz-progress-bar {
+			background: $primary-color;
+			border-radius: $progress-border-radius;
+		}
+		@each $type, $color in $progreess-types {
+			&.#{$type}::-webkit-progress-value {
+				background: $color;
+			}
+		}
+	}
+}

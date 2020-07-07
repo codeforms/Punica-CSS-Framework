@@ -1,0 +1,59 @@
+/*****************************************************
+*** GLOBAL DEFINITIONS ******************************/
+/*
+FONT *************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap');
+/* 
+TYPOGRAPHY *******************************************/
+$main-font-family		: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$main-font-weight		: 400;
+$main-font-size			: 13px;
+$main-line-height		: 1.7;
+$main-title-weight		: 900;
+/* 
+BASE COLORS ******************************************/
+$main-bg				: white;
+$main-secondary-bg		: #e6e6e6; // Platinum
+$main-font-color		: #3f4143; // Onyx
+$main-invert-color		: white;
+$main-grey-color		: #77878b; // Roman Silver
+$form-color-schema		: #414552; // Charcoal
+/*
+THEME COLORS *****************************************/
+$primary-color			: #0a8fff; // Dodger Blue
+$success-color			: #2ec4b6; // Tiffany Blue
+$warning-color			: #de9e36; // Gamboge
+$error-color			: #d62828; // Maximum Red
+/*
+BORDER ***********************************************/
+$main-border-width		: 1px;
+$main-border-style		: solid;
+$main-border-color		: #c6c6c6; // Silver Sand
+$main-border-radius		: 4px;
+/*
+SCROLLBAR ********************************************/
+$scrollbar-width		: 4px;
+$scrollbar-bg			: $main-secondary-bg;
+$scrollbar-color		: $form-color-schema;
+/*
+MAIN GRID NAMING 
+It is used in card and form.
+******************************************************/
+$grids: (
+	"one": "1",
+	"two": "2",
+	"three": "3",
+	"four": "4",
+	"five": "5",
+	"six": "6",
+	"seven": "7",
+	"eight": "8",
+	"nine": "9",
+	"ten": "10",
+	"eleven": "11",
+	"twelve": "12",
+	"thirteen": "13",
+	"fourteen": "14",
+	"fifteen": "15",
+	"sixteen": "16"
+);

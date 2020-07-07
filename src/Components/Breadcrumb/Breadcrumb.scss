@@ -1,0 +1,30 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
+
+// if breadcrumb is enable
+@if $components-breadcrumb {
+	.#{$breadcrumb-name} {
+		display: inline-block;
+		white-space: nowrap;
+		.#{$breadcrumb-item} {
+			text-decoration: none;
+			&::after {
+				content: $breadcrumb-seperator;
+				color: $breadcrumb-seperator-color;
+				padding: $breadcrumb-seperator-padding;
+			    vertical-align: $breadcrumb-seperator-vertical;
+		        font-size: $breadcrumb-seperator-size;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&.#{$breadcrumb-active} {
+				color: $main-font-color;
+				font-weight: bold;
+				&::after {
+				content: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : FORM > VARIABLES *************/
+
+/* 
+NAMING ***********************************************/
+$form-name						: 'form';
+$form-items						: 'items';
+$form-item						: 'item';
+$form-checkbox					: 'checkbox';
+$form-radio						: 'radio';
+
+$form-input-height				: 2.5rem;
+$form-input-radius				: 0;
+$form-input-padding				: .4rem .5rem;
+$form-outline-width				: 2px;
+$form-outline-color				: $form-color-schema;
+$form-label-color				: black;
+$form-label-size				: 1.138em;
+$form-radio-checkbox-size		: 20px;
+$form-items-spacer				: 6px 0 .75em;
+$form-item-spacer				: 6px 6px .75em;
+
+// checkbox & radio
+$form-icon-font-family			: 'Material Icons';
+$form-radio-checkbox-color		: $form-color-schema;
+$form-radio-checkbox-size		: 1.5rem;
+$form-radio-checkbox-top		: -6px;
+$form-radio-checkbox-left		: 0;
+
+// checkbox (material icons)
+$form-checkbox-before-content	: "check_box_outline_blank";
+$form-checkbox-after-content	: "check_box";
+// radio (material icons)
+$form-radio-before-content		: "radio_button_unchecked";
+$form-radio-after-content		: "radio_button_checked";

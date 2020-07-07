@@ -1,0 +1,10 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : LABEL > MIXINS ***************/
+
+@mixin label-types(
+	$color: $main-font-color, $bg-color: $main-bg, $border-color: $main-border-color
+) {
+	background: $bg-color;
+	color: $color;
+	border-color: $border-color;
+}

@@ -1,0 +1,20 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : BADGE **********************/
+@import "mixins";
+
+// if badge is enable
+@if $components-badge {
+	.#{$badge-name} {
+		position: relative;
+		white-space: nowrap;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background: $badge-bg;
+		color: $badge-color;
+		font-size: $badge-font-size;
+		font-weight: $badge-font-weight;
+		border-radius: $badge-border-radius;
+		padding: $badge-padding-y $badge-padding-x;
+	}
+}

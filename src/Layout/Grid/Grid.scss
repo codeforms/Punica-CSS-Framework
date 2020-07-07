@@ -1,0 +1,44 @@
+/******************************************************************
+PUNICA CSS > LAYOUT : GRID ****************************************/
+@import "variables";
+@import "mixins"; 
+
+// if grid is enable
+@if $layout-grid {
+	.#{$container} {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.#{$row} {
+		display: grid;
+		grid-gap: $gutter;
+		grid-template-columns: repeat($grid, 1fr);
+		&> [class^="#{$column}"] { 
+			height: fit-content;
+			padding: $column-padding;
+			min-height: $column-min-height;	
+		}
+		@if $equal-feature {
+			&.#{$equal} > [class^="#{$column}"] { 
+				height: auto;	
+			}
+		}
+	}
+	@each $label, $breakpoint in $viewports {
+		@include breakpoints($breakpoint) {
+			@for $id from 1 through $grid {
+				.#{$column}-#{$id},
+				.#{$column}-#{$label}-#{$id} {
+					grid-column: span #{$id};
+				}
+				@if $offset-feature {
+					@for $offset-id from 1 through $grid {
+						.#{$column}-#{$label}-#{$id}.#{$offset}-#{$label}-#{$offset-id} {
+							grid-column: #{$offset-id} / span #{$id};
+						}
+					}
+				}
+			}
+		}
+	}	
+}

@@ -1,0 +1,40 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : MENU > VARIABLES ***********/
+
+/* 
+NAMING ***********************************************/
+$menu-name 					: 'menu';
+$menu-small 				: 'small';
+$menu-title 				: 'title';
+$menu-item 					: 'item';
+$menu-item-active			: 'active';
+$menu-badge					: 'badge';
+$menu-secondary				: 'secondary';
+/*
+PREFERENCES ******************************************/
+$menu-bg					: #fff;
+$menu-font-size				: 1em;
+$menu-small-font-size		: .879em;
+$menu-border-radius			: 0;
+$menu-min-width				: 180px;
+$menu-padding 				: .9rem;
+$menu-z-index				: 300;
+$menu-box-shadow			: 0 3px 10px rgba(0, 0, 0, 0.15);
+$menu-box-shadow-top		: 0 -3px 10px rgba(0, 0, 0, 0.15);
+// title
+$menu-title-font-size		: 1.25em;
+$menu-title-min-height		: 2rem;
+$menu-title-color			: #999;
+$menu-title-font-weight		: 300;
+$menu-title-padding			: .6rem 0;
+$menu-title-spacing			: -.015rem;
+// item
+$menu-item-margin-top		: 0;
+$menu-item-padding			: .1rem $menu-padding;
+$menu-small-item-padding	: .1rem $menu-padding;
+$menu-item-color			: #606265;
+$menu-item-hover-bg			: darken($menu-bg, 6%);
+// icon
+$menu-item-icon-color		: #7a7e80;
+$menu-item-icon-size		: 1.1rem;
+$menu-item-icon-mr			: 6px; // margin-right

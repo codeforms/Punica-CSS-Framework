@@ -1,0 +1,39 @@
+/***************************************************** 
+PUNICA CSS > COMPONENT : PANEL > VARIABLES ***********/
+
+/*
+NAMING ***********************************************/
+$panel-name						: 'panel';
+$panel-header					: 'header';
+$panel-title					: 'title';
+$panel-headline					: 'headline';
+$panel-bottom					: 'bottom';
+$panel-content					: 'content';
+$panel-title-actions			: 'actions';
+$panel-pure						: 'pure';
+/*
+PREFERENCES ******************************************/
+$panel-padding					: 24px;
+$panel-border-width				: 1px;
+$panel-margin					: $panel-padding 0;
+$panel-shadow					: 0 3px 5px rgba(0, 0, 0, 0.15);
+// border
+$panel-border-radius			: 4px;
+$panel-border-color				: $main-border-color;
+$panel-border-style				: $main-border-style;
+// header & title
+$panel-title-font-size			: 1.2rem;
+$panel-title-font-weight		: 900;
+$panel-title-bottom-border		: 1px $panel-border-style $panel-border-color;
+$panel-title-min-height			: 50px;
+$panel-title-padding			: 24px;
+// headline
+$panel-headline-font-size		: 1.48em;
+$panel-headline-line-height		: 1.5;
+$panel-headline-margin-bottom	: 32px;
+$panel-headline-color			: darken($main-font-color, 16%);
+$panel-content-p-size			: 1.1649em;
+// bottom
+$panel-bottom-min-height		: 50px;
+$panel-bottom-border			: 1px $panel-border-style $panel-border-color;
+$panel-bottom-padding			: 6px;

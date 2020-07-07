@@ -1,0 +1,83 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : BUTTON > VARIABLES ***********/
+
+/* 
+NAMING ***********************************************/
+$button-class				: 'button'; 
+// styles
+$button-class-primary		: 'primary';
+$button-class-success		: 'success';
+$button-class-error			: 'error';
+$button-class-link			: 'link';
+$button-secondary			: 'secondary';
+// active & disabled
+$button-class-active		: 'active';
+$button-class-disabled		: 'disabled';
+$button-class-inactive		: 'inactive';
+// sizes
+$button-class-mini			: 'mini';
+$button-class-small			: 'small';
+$button-class-large			: 'large';
+$button-class-huge			: 'huge';
+
+$button-class-block			: 'block';
+$button-class-group			: 'buttons';
+$button-class-invert		: 'invert';
+$button-force				: 'force';
+// dropdown
+$dropdown-name				: 'dropdown';
+$dropdown-right				: 'right';
+$dropdown-top				: 'top';
+$dropdown-toggle			: 'toggle';
+$menu-secondary				: 'secondary';
+/* 
+TEXT & FONT SIZE *************************************/
+$button-font-family			: $main-font-family;
+$button-font-size-mini		: .839em;
+$button-font-size-small		: .859em;
+$button-font-size			: .9338em;
+$button-font-size-large		: 1em;
+$button-font-size-huge		: 1.25em;
+/* 
+COLOR & BACKGROUND ***********************************/
+$button-bg-color			: #fff;
+$button-text-color			: $main-font-color;
+$button-bg-hover			: $button-bg-color;
+$button-hover-text-color	: $button-text-color;
+$button-bg-active			: $main-grey-color;
+// shadow
+$button-text-shadow 		: 0 1px 1px #fff;
+$button-shadow 				: none;
+$button-group-shadow 		: 0 0.155em 0 0 rgba(0, 0, 0, 0.095);
+// bg image
+$button-bg-image			: none;
+$button-bg-hover-image		: none;
+// button icon
+$button-icon-color			: $menu-item-icon-color;
+$button-icon-shadow			: none; 
+/*
+LINE HEIGHT & WEIGHT *********************************/
+$button-line-height			: 1;
+$button-font-weight			: 700;
+/* 
+BORDER ***********************************************/
+$button-border-width		: 1px;
+$button-border-color		: #ccc;
+/*
+BORDER RADIUS ****************************************/
+$button-border-radius		: 3px;
+$button-group-border-radius	: $button-border-radius;
+/* 
+PADDING **********************************************/
+$button-padding-mini		: .445rem .9rem;
+$button-padding-small		: .645rem 1.2rem;
+$button-padding				: .935rem 1.4rem; 
+$button-padding-large		: 1.15rem 1.9rem;
+$button-padding-huge		: 1.3rem 2.2rem;
+$button-padding-inactive	: .45rem !important;
+/* 
+SECONDARY ********************************************/
+$button-secondary-text-color	: $main-font-color;
+$button-secondary-hover-color	: $main-font-color;
+$button-secondary-bg-img		: linear-gradient(to bottom, #ffffff 0%,#ededed 60%,#e6e6e6 100%);
+$button-secondary-bg-img-hover	: linear-gradient(to bottom, #e1e1e1 0%,#e1e1e1 11%,#e8e8e8 22%,#eeeeee 43%,#fafafa 100%);

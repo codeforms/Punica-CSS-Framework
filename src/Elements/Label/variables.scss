@@ -1,0 +1,20 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : LABEL > VARIABLES ************/
+
+/* 
+NAMING ***********************************************/
+$label-name		: 'label';
+$label-types	: (
+	"primary": $primary-color,
+	"success": $success-color,
+	"warning": $warning-color,
+	"error": $error-color,
+);
+/* 
+PREFERENCES ******************************************/
+$label-line-height		: 1.2;
+$label-font-size		: .9195em;
+$label-font-weight		: 700;
+$label-padding			: 0.28rem 0.9rem;
+$label-border-radius	: $main-border-radius;
+$label-shadow			: 0 0.155em 0 0 rgba(0, 0, 0, 0.095);

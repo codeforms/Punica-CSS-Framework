@@ -1,0 +1,70 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : NAVBAR *********************/
+
+// if navbar is enable
+@if $components-navbar {
+	.#{$navbar-name} {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: space-between;
+		min-height: $navbar-min-height;
+		background: $navbar-bg;
+		color: $navbar-color;
+		width: 100%;
+		// grid container
+		.#{$container} {
+			display: flex;
+			width: $navbar-container-width;
+		}
+		.#{$navbar-section} {
+			display: flex;
+			flex: 1 0 0;
+			align-items: center;
+			&:not(:first-child):last-child {
+				justify-content: flex-end;
+			}
+		}
+		.#{$navbar-center} {
+			align-items: center;
+			display: flex;
+			flex: 0 0 auto;
+		}
+		.#{$navbar-brand} {
+			font-size: $navbar-font-size;
+			text-decoration: none;
+			padding: $navbar-brand-padding;
+			display: flex;
+			justify-content: center;
+		    min-height: 100%;
+		    align-items: center;
+		    img {
+		    	max-height: $navbar-min-height - 20px;
+		    	padding: ($navbar-min-height / 10);
+		    }
+		}
+		a.#{$navbar-brand},
+		a.#{$navbar-brand}:visited {
+			color: $navbar-color;
+		}
+		&.#{$navbar-fixed} {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0px;
+			margin-top: 0;
+			transform: translateY(0px);
+			z-index: 5;
+		}
+		&.#{$navbar-shadowed} {
+			box-shadow: $navbar-shadow;
+		}
+		.#{$button-class},
+		.#{$dropdown-name} .#{$button-class} {
+			font-size: $navbar-font-size;
+		}
+	}
+	.#{$navbar-spacer} {
+		margin-top: $navbar-spacer-top;
+	}
+}

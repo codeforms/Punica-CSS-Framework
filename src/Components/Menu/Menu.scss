@@ -1,0 +1,68 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : MENU ***********************/
+
+// if menu is enable
+@if $components-menu {
+	.#{$menu-name} {
+		background: $menu-bg;
+		border-radius: $menu-border-radius;
+		list-style: none;
+		margin: 0;
+		min-width: $menu-min-width;
+		padding: $menu-padding;
+		box-shadow: $menu-box-shadow;
+		z-index: $menu-z-index;
+		.#{$menu-title} {
+			font-size: $menu-title-font-size;
+			min-height: $menu-title-min-height;
+			color: $menu-title-color;
+			padding: $menu-title-padding;
+			font-weight: $menu-title-font-weight;
+			letter-spacing: $menu-title-spacing;
+		}
+		.#{$menu-item} {
+			margin-top: 0;
+			padding: $menu-item-padding;
+			position: relative;
+			text-decoration: none;
+			& > a {
+				color: $menu-item-color;
+				display: block;
+				margin: 0 (-$menu-padding);
+				padding: $menu-item-padding;
+				text-decoration: none;
+				font-size: $menu-font-size;
+				&:focus,
+				&:hover {
+					background: $menu-item-hover-bg;
+					color: darken($menu-item-color, 22%);
+				}
+				&:active,
+				&.#{$menu-item-active} {
+					background: $menu-item-hover-bg;
+					color: $menu-item-color;
+				}
+			}
+			& + .#{$menu-item} {
+				margin-top: .2rem;
+			}
+			i,
+			span.material-icons {
+				color: $menu-item-icon-color;
+				font-size: $menu-item-icon-size;
+				margin-right: $menu-item-icon-mr;
+			}
+		}
+		.#{$menu-badge} {
+			align-items: center;
+			display: flex;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		&.#{$menu-small} > .#{$menu-item} a {
+			font-size: $menu-small-font-size;
+		}
+	}
+}

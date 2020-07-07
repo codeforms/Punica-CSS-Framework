@@ -1,0 +1,50 @@
+/***************************************************** 
+PUNICA CSS
+https://github.com/codeforms/Punica-CSS-Framework
+****************************************************** 
+DEFAULT SETUP PREFERENCES
+******************************************************/
+// Layout
+$layout-grid 						: true;
+/**/$layout-grid-equal				: true;
+/**/$layout-grid-offset				: true;
+
+// Components
+$components-alert 					: true;
+$components-badge					: true;
+$components-card					: true;
+/**/$components-card-horizontal		: true;
+$components-menu					: true;
+$components-panel					: true;
+$components-timeline				: true;
+$components-breadcrumb				: true;
+$components-billboard				: true;
+$components-progress				: true;
+$components-process					: true;
+$components-tooltip					: true;
+$components-navbar					: true;
+
+// Elements
+$elements-button					: true;
+/**/$elements-button-group			: true;
+/**/$elements-button-types			: true;
+/**/$elements-button-sizes			: true;
+/**/$elements-button-secondary		: true;
+/**/$elements-button-dropdown		: true;
+$elements-form						: true;
+$elements-icon						: true;
+$elements-table						: true;
+/**/$elements-table-hovered			: true;
+/**/$elements-table-striped			: true;
+$elements-label						: true;
+
+/***************************************************** 
+LAUNCHER *********************************************/
+@import "_global/variables";
+@import "Components/variables";
+@import "Elements/variables";
+/**/
+@import "Layout/index";
+@import "Elements/index";
+@import "Components/index";
+@import "Utilities/helpers";

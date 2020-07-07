@@ -1,0 +1,66 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : TABLE ************************/
+
+// if table is enable
+@if $elements-table {
+	.#{$table-class} {
+		position: relative;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		max-width: 100%;
+		text-align: left;
+		overflow: hidden;
+		flex: 1;
+		margin-bottom: 1.5rem;
+		tr {
+			transition: all 0.3s;
+		}
+		// if table striped is enable
+		@if $elements-table-striped {
+			&.#{$table-class-striped} {
+				tr,
+				tbody tr {
+					&.#{$table-class-active} {
+						background: $main-secondary-bg; 
+					}
+					&:nth-of-type(odd) {
+						background: $table-nth-bg;
+					}
+				}
+				thead tr {
+					background: $table-thead-bg !important;
+				}
+			}
+		}
+		// if table hovered is enable
+		@if $elements-table-hovered {
+			&.#{$table-class-hovered} {
+				tr,
+				tbody tr {
+					&:hover {
+						background: $main-secondary-bg;
+					}
+				}
+				thead tr {
+					background: $table-thead-bg !important;
+				}
+			}
+		}
+		td,
+		th {
+			border-bottom: $table-bottom-border-width solid $table-border-color;
+			padding: $table-padding-y $table-padding-x;
+			text-align: inherit;
+		}
+		thead tr {
+			background: $table-thead-bg;
+			th {
+				border-bottom-width: $table-bottom-border-width;
+				border-top: $table-top-border-width solid $table-border-color;
+				font-weight: $table-th-weight;
+				color: $table-th-color;
+			}
+		}
+	}
+}

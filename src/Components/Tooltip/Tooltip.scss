@@ -1,0 +1,43 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : TOOLTIP ********************/
+
+// if tooltip is enable
+@if $components-tooltip {
+	.#{$tooltip-name} {
+		display: inline-flex;
+		justify-content: center;
+		position: relative;
+	    cursor: default;
+		.#{$tooltip-text} {
+			position: absolute;
+			color: $tooltip-color;
+			font-size: $tooltip-font-size;
+			text-align: center;
+			visibility: hidden;
+			background-color: $tooltip-background;
+			border-radius: $main-border-radius;
+			min-width: $tooltip-min-width;
+			max-width: $tooltip-max-width;
+			padding: $tooltip-padding;
+			top: 120%;
+			opacity: 0;
+			transition: opacity 0.18s;
+			z-index: 1;
+			&::after {
+				content: "";
+				position: absolute;
+				top: auto;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: transparent transparent $tooltip-background transparent;
+			}
+		}
+		&:hover .#{$tooltip-text} {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}

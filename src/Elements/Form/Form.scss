@@ -1,0 +1,169 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : FORM *************************/
+
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type='week'],
+input[type='file'],
+input:not([type]),
+textarea,
+select {
+	-webkit-appearance: none;
+	background-color: transparent;
+	border: $main-border-width $main-border-style $main-border-color;
+	height: $form-input-height;
+	border-radius: $form-input-radius;
+	outline: $form-outline-width solid transparent;
+	box-shadow: none;
+	box-sizing: inherit;
+	outline-offset: -$form-outline-width;
+	padding: .4rem .5rem;
+	width: 100%;
+	&:focus {
+		outline: $form-outline-width solid $form-outline-color;
+		outline-offset: -$form-outline-width;
+	}
+}
+select {
+	padding-right: 3.0rem;
+	text-indent: 5px;
+	background-image: 
+	url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=");
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	&[multiple] { 
+		background: none;
+		height: auto;
+	}
+}
+textarea {
+	min-height: 6.5rem;
+	resize: vertical;
+}
+label,
+legend {
+	display: block;
+	font-size: 1rem;
+	font-weight: 400;
+}
+fieldset {
+	border-width: 0;
+	padding: 0;
+}
+input[type='checkbox'],
+input[type='radio'] {
+	display: inline;
+}
+button {
+	background: #fff;
+}
+.#{$form-name} {
+	position: relative;
+	max-width: 100%;
+	.#{$form-items} {
+		margin: $form-items-spacer;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.#{$form-item} {
+		height: auto;
+		margin: $form-item-spacer;
+		display: inline-flex;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 100%;
+		position: relative;
+  		overflow: hidden;
+	    align-items: flex-start;
+		&>label {
+			margin: 0 0 .15rem 0;
+			color: $form-label-color;
+			font-size: $form-label-size;
+			font-weight: 600;
+			text-transform: none;
+			width: 100%;
+			height: fit-content;
+		}
+		> input[type="file"] {
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			cursor: pointer;
+	    }
+	}
+	@each $name, $number in $grids {
+		.#{$name}.#{$form-items} {
+			&>.#{$form-item} {
+				flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{$form-item-spacer}));
+			}
+		}
+	}
+}
+.#{$form-radio},
+.#{$form-checkbox} {
+	position: relative;
+	margin: .4rem 0;
+	label {
+		display: block;
+		padding: 0 1.2rem 0 2.2rem;
+		cursor: pointer;
+		user-select: none;
+		padding-top: 0;
+	}
+	input {
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 10px;
+	}
+	input + label::before,
+	input + label::after {
+		position: absolute;
+		transition: opacity 0.11s ease-in-out;
+		font-family: $form-icon-font-family;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none;
+		color: $form-radio-checkbox-color;
+	    font-size: $form-radio-checkbox-size;
+	    top: $form-radio-checkbox-top;
+	    left: $form-radio-checkbox-left;
+	}
+	input + label::before {
+		opacity: 1;
+	}
+	input + label::after {
+		opacity: 0;
+	}
+	input:checked + label::after {
+		opacity: 1;
+	}
+}
+.#{$form-checkbox} {
+	input + label::before {
+		content: $form-checkbox-before-content;
+	}
+	input + label::after {
+		content: $form-checkbox-after-content;
+	}
+}
+.#{$form-radio} {
+	input + label::before {
+		content: $form-radio-before-content;
+	}
+	input + label::after {
+		content: $form-radio-after-content;
+	}
+}

@@ -1,0 +1,81 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : TYPOGRAPHY *******************/
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	color: inherit;
+	line-height: $text-h-line-height;
+	font-weight: $main-title-weight;
+	margin-bottom: 1em;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: $main-title-weight;
+}
+h1.bordered,
+h2.bordered,
+h3.bordered,
+h4.bordered,
+h5.bordered,
+h6.bordered,
+.h1.bordered, 
+.h2.bordered, 
+.h3.bordered, 
+.h4.bordered, 
+.h5.bordered, 
+.h6.bordered {
+	border-bottom: $main-border-width $main-border-style $main-border-color;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+h1, .h1 {
+	font-size: $text-h1-size;
+}
+h2, .h2 {
+	font-size: $text-h2-size;
+}
+h3, .h3 {
+	font-size: $text-h3-size;
+}
+h4, .h4 {
+	font-size: $text-h4-size;
+}
+h5, .h5 {
+	font-size: $text-h5-size;
+}
+h6, .h6 {
+	font-size: $text-h6-size;
+}
+p {
+	margin: 0 0 1em;
+	font-size: $text-p-size;
+}
+a, ins, u {
+	text-decoration-skip: ink edges;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+	text-decoration: none;
+}
+blockquote {
+	border-left: .1rem dotted $main-grey-color;
+	margin-left: 0;
+	padding: .4rem .8rem;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}

@@ -1,0 +1,8 @@
+/***************************************************** 
+PUNICA CSS > COMPONENT : ALERT > MIXINS **************/
+
+@mixin alert-types($theme: $main-bg, $text-color: $main-font-color) {
+	background: $theme;
+	border-color: $theme;
+	color: $text-color;
+}

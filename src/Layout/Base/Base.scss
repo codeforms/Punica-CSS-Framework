@@ -1,0 +1,114 @@
+/****************************************************************** 
+PUNICA CSS > LAYOUT : BASE ****************************************/
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004) !important;
+}
+html {
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+body {
+	font-family: $main-font-family;
+	font-size: $main-font-size;
+	font-weight: $main-font-weight;
+	line-height: $main-line-height;
+	overflow-x: hidden;
+	color: $main-font-color;
+}
+html, body {
+	min-height: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+::-webkit-scrollbar {
+	width: $scrollbar-width;
+}
+::-webkit-scrollbar-track {
+	background: $scrollbar-bg;
+}
+::-webkit-scrollbar-thumb {
+	background: $scrollbar-color;
+}
+::selection {
+    background-color: $primary-color;
+    color: $main-invert-color;
+}
+a {
+	color: $primary-color;
+	outline: none;
+	text-decoration: none;
+	&:focus,
+	&:hover,
+	&:active,
+	&.active {
+		color: darken($primary-color, 8%);
+		text-decoration: underline;
+	}
+	&:visited {
+		color: $primary-color;
+	}
+}
+hr {
+	margin: 15px 0;
+	box-shadow: 0 0.05rem 0.2rem rgba(48,55,66,.3);
+	background-color: #ccc;
+	border: none;
+	height: 1px;
+}
+/* List */
+ul, ol {
+    margin: .8rem 0 .8rem .8rem;
+    padding: 0;
+    ul, ol {
+        margin: .8rem 0 .8rem .8rem;
+    }
+    li {
+        margin-top: .4rem;
+    }
+}
+ul {
+	list-style: disc inside;
+}
+ol {
+	list-style: decimal inside;
+}
+dl {
+    dt {
+        font-weight: bold;
+    }
+}
+/* embedded content */
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+    height: auto;
+}
+img {
+  border-style: none;
+}
+iframe {
+	outline: 0;
+}
+:not(pre)>code, 
+:not(pre)>kbd, 
+:not(pre)>samp {
+    color: $error-color;
+    white-space: nowrap;
+    padding: 2px 6px;
+    font-size: .935em;
+}

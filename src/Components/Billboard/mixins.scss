@@ -1,0 +1,8 @@
+/***************************************************** 
+PUNICA CSS > COMPONENT : BILLBOARD > MIXINS **********/
+
+@mixin billboard-types($text-color: $main-font-color, $theme: $main-bg) {
+	background: $theme;
+	border-color: darken($theme, 4.5%);
+	color: $text-color;
+}

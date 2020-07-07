@@ -1,0 +1,23 @@
+/***************************************************** 
+PUNICA CSS > COMPONENT : ALERT > VARIABLES ***********/
+
+/* 
+NAMING ***********************************************/
+$alert-name				: 'alert';
+$alert-primary			: 'primary';
+$alert-success			: 'success';
+$alert-warning			: 'warning';
+$alert-error			: 'error';
+$alert-active			: 'active';
+// alert types
+$alert-types: (
+	"primary": $primary-color,
+	"success": $success-color,
+	"warning": $warning-color,
+	"error": $error-color,
+);
+/*
+PREFERENCES ******************************************/
+$alert-padding			: .6rem;
+$alert-margin			: 0 0 8px;
+$alert-border-radius 	: $main-border-radius;

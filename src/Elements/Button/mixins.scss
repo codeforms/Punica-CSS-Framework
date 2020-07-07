@@ -1,0 +1,124 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
+@mixin button-types($color: $primary-color, $background: none, $bg-hover: none) {
+	background: $color;
+	color: $main-invert-color;
+	text-shadow: 0 1px 1px darken($color, 6%);
+	background-image: $background;
+	border-color: transparent;
+	&:focus,
+	&:hover {
+		background: lighten($color, 7.5%);
+		color: $main-invert-color;
+		background-image: $bg-hover;
+		border-color: transparent;
+	}
+	&:active,
+	&.#{$button-class-active} {
+		background: $color;
+		color: $main-invert-color;
+	}
+	&.#{$button-class-inactive} {
+		border-left-color: darken($color, 6%);
+	}
+	i, [class^="material-icons"] {
+		color: $main-invert-color;
+		text-shadow: $button-icon-shadow;
+	}
+}
+// Secondary Button
+@mixin secondary-button() {
+	color: $button-secondary-text-color;
+	background-image: $button-secondary-bg-img;
+	&:focus,
+	&:hover,
+	&:active, 
+	&.#{$button-class-active} {
+		color: $button-secondary-text-color;
+		background-image: $button-secondary-bg-img-hover;
+		z-index: 1;
+		border-color: $main-border-color;
+		i, [class^="material-icons"] {
+			color: $button-secondary-text-color;
+		}
+	}
+}
+// Link Button
+@mixin link-button() {
+	&.#{$button-class-link} {
+		background: transparent;
+		border-color: transparent;
+		color: $main-font-color;
+	    min-height: 100%;
+    	border: none;
+		&:focus,
+		&:hover,
+		&:active,
+		&.#{$button-class-active} {
+			color: darken($main-font-color, 8%);
+		}
+		&.#{$button-class-invert} {
+			color: $main-invert-color;
+			.#{$button-class},
+			i, [class^="material-icons"] {
+				background: transparent;
+				border-color: transparent;
+				color: $main-invert-color;
+			}
+		}
+	}
+}
+// Button Sizes
+@mixin button-sizes() {
+	&.#{$button-class-mini} {
+		font-size: $button-font-size-mini;
+		padding: $button-padding-mini;
+		font-weight: 400;
+	}
+	&.#{$button-class-small} {
+		font-size: $button-font-size-small;
+		padding: $button-padding-small;
+	}
+	&.#{$button-class-large} {
+		font-size: $button-font-size-large;
+		padding: $button-padding-large;
+	}
+	&.#{$button-class-huge} {
+		font-size: $button-font-size-huge;
+		padding: $button-padding-huge;
+	}
+}
+@mixin button-sizes-by() {
+	&.#{$button-class-mini} > .#{$button-class} {
+		font-size: $button-font-size-mini;
+		padding: $button-padding-mini;
+		font-weight: 400;
+	}
+	&.#{$button-class-small} > .#{$button-class} {
+		font-size: $button-font-size-small;
+		padding: $button-padding-small;
+	}
+	&.#{$button-class-large} > .#{$button-class} {
+		font-size: $button-font-size-large;
+		padding: $button-padding-large;
+	}
+	&.#{$button-class-huge} > .#{$button-class} {
+		font-size: $button-font-size-huge;
+		padding: $button-padding-huge;
+	}
+}
+// Button Force (height 100%)
+@mixin button-force() {
+	&.#{$button-force} {
+		height: 100%;
+		min-height: 100%;
+		box-shadow: none;
+		.#{$button-class} {
+			height: 100%;
+			min-height: 100%;
+			border-radius: 0;
+			border-top-width: 0;
+			border-bottom-width: 0;
+		}
+	}
+}

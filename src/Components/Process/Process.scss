@@ -1,0 +1,63 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : CARD ***********************/
+
+// if process is enable
+@if $components-process {
+	.#{$process-name} {
+		display: flex;
+		flex-wrap: nowrap;
+		margin: 2em 0;
+		width: 100%;
+		list-style: none;
+		.#{$process-item} {
+			flex: 1 1 auto;
+			min-height: 2rem;
+			text-align: center;
+			position: relative;
+			&:not(:first-child)::before {
+				background: $primary-color;
+				content: "";
+				height: 1px;
+				left: -50%;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+			a {
+				color: black;
+				display: inline-block;
+				padding: 10px 10px 0;
+				text-decoration: none;
+				&::before {
+					position: absolute;
+					content: "";
+					background: $primary-color;
+					top: 0;
+					left: 50%;
+					height: .5rem;
+					width: 1px;
+					z-index: 1;
+				}
+			}
+			&.#{$process-active} {
+				a {
+					font-weight: bold;
+				}
+				&~.#{$process-item} {
+					&::before {
+						background: $main-border-color;
+					}
+					a {
+						color: $main-grey-color;
+						&:hover {
+							color: darken($main-grey-color, 45%);
+						}
+						&::before {
+							background: $main-border-color;
+						}
+					}
+				}
+	    	}
+	  	}
+	}
+}

@@ -1,0 +1,52 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : BILLBOARD ******************/
+@import "mixins";
+
+// if billboard is enable
+@if $components-billboard {
+	.#{$billboard-name} {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: $billboard-default-padding;
+		@include billboard-types();
+		border: $main-border-width $main-border-style $main-border-color;
+		@each $type, $bg-color in $billboard-types {
+			&.#{$type} {
+				@include billboard-types($main-invert-color, $bg-color);
+			}
+		}
+		@each $size, $padding in $billboard-sizes {
+			&.#{$size} {
+				padding: $padding;
+			.#{$billboard-body} {
+				padding: $padding;
+			}
+			}
+		}
+		@each $size-name, $font-size in $billboard-text-sizes {
+			&.#{$size-name} p {
+				font-size: $font-size;
+			}
+		}
+		.#{$billboard-media} {
+			flex: 0 0 auto;
+		}
+		.#{$billboard-body} {
+			padding: $billboard-default-padding;
+			flex: 1 1 auto;
+		}
+    }
+	&.#{$billboard-cover} {
+		min-height: 100vh;
+		min-width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 0;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}

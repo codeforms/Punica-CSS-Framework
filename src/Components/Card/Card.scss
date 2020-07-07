@@ -1,0 +1,83 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : CARD ***********************/
+
+// if card is enable
+@if $components-card {
+	.#{$cards-name} {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	@each $name, $number in $grids {
+		.#{$cards-name}.#{$name} {
+			&>.#{$card-name} {
+				flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{$card-margin}));
+				height: auto;
+				margin: $card-margin;
+			}
+		}
+	}
+	.#{$card-name} {
+		background: $card-bg;
+		border: $main-border-width $main-border-style $main-border-color;
+		border-radius: $main-border-radius;
+		box-shadow: $card-shadow;
+		display: flex;
+		flex-direction: column;
+		width: calc(33% - (2 * #{$card-margin}));
+		height: 100%;
+		overflow: hidden;
+		.#{$card-title} {
+			color: darken($main-font-color, 15%);
+			line-height: initial;
+			&>.#{$card-subtitle} {
+				color: grey;
+				flex: 1 1 auto;
+			}
+		}
+		.#{$card-title},
+		.#{$card-content},
+		.#{$card-action} {
+			padding: $card-padding;
+		}
+		.#{$card-content} {
+			flex: 1 1 auto;
+			color: $main-font-color;
+		}
+		.#{$card-media} {
+			img {
+				display: block;
+				height: auto;
+				max-width: 100%;
+			}
+		}
+		@if $components-card-horizontal {
+			&.#{$card-horizontal} {
+				flex-direction: row;
+				width: 100%;
+				align-items: center;
+				margin-bottom: 15px;
+				.#{$card-media} {
+					flex-flow: row nowrap;
+					flex-shrink: unset;
+					img	{
+						flex-shrink: 0;
+					}
+				}
+				.#{$card-content} {
+					flex-shrink: 5;
+				}
+				.#{$card-title},
+				.#{$card-action} {
+					display: none;
+				}
+			}
+		}
+	}
+	@include breakpoints(768px, 'max-width') {
+		.#{$card-name},
+		.#{$cards-name} > .#{$card-name} {
+			flex: 0 0 100% !important;
+			width: 100%;
+		}
+	}
+}

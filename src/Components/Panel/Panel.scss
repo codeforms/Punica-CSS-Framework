@@ -1,0 +1,60 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : PANEL **********************/
+
+// if panel is enable
+@if $components-panel {
+	.#{$panel-name} {
+		display: flex;
+		flex-direction: column;
+		border: $panel-border-width $panel-border-style $panel-border-color;
+		border-radius: $panel-border-radius;
+		box-shadow: $panel-shadow;
+		background: $main-bg;
+		margin: $panel-margin;
+		.#{$panel-header},
+		.#{$panel-bottom} {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			.#{$panel-title-actions} {
+				margin-left: auto;
+				&:before {
+					flex-grow: 1;
+				}
+			}
+		}
+		.#{$panel-header} {
+			min-height: $panel-title-min-height;
+			border-bottom: $panel-title-bottom-border;
+			padding: $panel-title-padding;
+			.#{$panel-title} {
+				font-size: $panel-title-font-size;
+				font-weight: $panel-title-font-weight;
+			}
+		}
+		.#{$panel-content} {
+			flex: 1 1 auto;
+			padding: $panel-padding;
+			height: auto;
+			p {
+				font-size: $panel-content-p-size;
+			}
+			.#{$panel-headline},
+			p.#{$panel-headline} {
+				font-size: $panel-headline-font-size;
+				line-height: $panel-headline-line-height;
+				margin-bottom: $panel-headline-margin-bottom;
+				color: $panel-headline-color;
+			}
+		}
+		.#{$panel-bottom} {
+			min-height: $panel-bottom-min-height;
+			border-top: $panel-bottom-border;
+			padding: $panel-bottom-padding;
+		}
+		&.#{$panel-pure} {
+			border: none;
+			box-shadow: none;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : TABLE > VARIABLES ************/
+
+/* 
+NAMING ***********************************************/
+$table-class					: 'table';
+$table-class-striped			: 'striped';
+$table-class-hovered			: 'hovered';
+$table-class-active				: 'active';
+/*
+COLORS ***********************************************/
+$table-nth-bg					: #f5f6f7;
+$table-border-color				: #e6e6e6;
+$table-thead-bg					: $main-bg;
+$table-th-color					: #b7b7b7;
+$table-th-weight				: 400;
+/*
+BORDER ***********************************************/
+$table-top-border-width			: 1px;
+$table-bottom-border-width		: 1px;
+/*
+PADDING **********************************************/
+$table-padding-y				: 5px;
+$table-padding-x				: 7px;

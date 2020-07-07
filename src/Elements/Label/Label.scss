@@ -1,0 +1,25 @@
+/***************************************************** 
+PUNICA CSS > ELEMENTS : LABEL ************************/
+@import "mixins";
+
+// if label is enable
+@if $elements-label {
+	a.#{$label-name},
+	.#{$label-name} {
+		display: inline-block;
+		font-size: $label-font-size;
+		font-weight: $label-font-weight;
+		line-height: $label-line-height;
+		padding: $label-padding;
+		border-radius: $label-border-radius;
+		text-decoration: none;
+		border: $main-border-width solid $main-border-color;
+		box-shadow: $label-shadow;
+		@include label-types();
+		@each $type, $bg-color in $label-types {
+			&.#{$type} {
+				@include label-types($main-invert-color, $bg-color, darken($bg-color, 7%));
+			}
+		}
+	}
+}
