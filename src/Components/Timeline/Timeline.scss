@@ -21,8 +21,8 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 				background-color: $main-border-color;
 			}
 			&:target .#{$timeline-type} {
-				border-color: blue;
-				box-shadow: 0 0 0.2em blue;
+				border-color: $primary-color;
+				box-shadow: 0 0 0.2em $primary-color;
 			}
 			.#{$timeline-type} {
 				position: absolute;

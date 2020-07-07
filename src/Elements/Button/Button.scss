@@ -4,6 +4,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 
 // if button is enable
 @if $elements-button {
+	a.#{$button-class},
 	.#{$button-class} {
 		display: inline-flex;
 		font-family: $button-font-family;

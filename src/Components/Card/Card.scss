@@ -77,7 +77,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		.#{$card-name},
 		.#{$cards-name} > .#{$card-name} {
 			flex: 0 0 100% !important;
-			width: 100%;
+			width: 100%; // for single card
 		}
 	}
 }

@@ -20,9 +20,9 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 		@each $size, $padding in $billboard-sizes {
 			&.#{$size} {
 				padding: $padding;
-			.#{$billboard-body} {
-				padding: $padding;
-			}
+				.#{$billboard-body} {
+					padding: $padding;
+				}
 			}
 		}
 		@each $size-name, $font-size in $billboard-text-sizes {
@@ -40,10 +40,7 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
     }
 	&.#{$billboard-cover} {
 		min-height: 100vh;
-		min-width: 100vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		min-width: 100%;
 		border: 0;
 		background-size: cover;
 		background-position: center center;
