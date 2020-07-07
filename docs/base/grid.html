@@ -1,0 +1,352 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grid - Base : Punica CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='../css/syntaxhighlighter.css' />
+    <link rel="stylesheet" href="../css/punica.css">
+</head>
+
+<body>
+    <header class="navbar shadowed">
+        <section class="section">
+            <a href="../" class="brand" title="Punica CSS">
+                <img src="../images/punica.png">
+            </a>
+            <div class="buttons force">
+                <div class="dropdown large">
+                    <a class="button link invert toggle" tabindex="0">
+                        Base <span class="material-icons">keyboard_arrow_down</span>
+                    </a>
+                    <ul class="menu">
+                        <li class="item"><a href="./introduction.html">Introduction</a></li>
+                        <li class="item"><a href="./grid.html">Grid</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown large">
+                    <a class="button link invert toggle" tabindex="0">
+                        Elements <span class="material-icons">keyboard_arrow_down</span>
+                    </a>
+                    <ul class="menu">
+                        <li class="item"><a href="../elements/button.html">Button & Dropdown</a></li>
+                        <li class="item"><a href="../elements/form.html">Form</a></li>
+                        <li class="item"><a href="../elements/icon.html">Icon</a></li>
+                        <li class="item"><a href="../elements/label.html">Label</a></li>
+                        <li class="item"><a href="../elements/table.html">Table</a></li>
+                        <li class="item"><a href="../elements/typography.html">Typography</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown large">
+                    <a class="button link invert toggle" tabindex="0">
+                        Components <span class="material-icons">keyboard_arrow_down</span>
+                    </a>
+                    <ul class="menu">
+                        <li class="item"><a href="../components/alert.html">Alert</a></li>
+                        <li class="item"><a href="../components/badge.html">Badge</a></li>
+                        <li class="item"><a href="../components/billboard.html">Billboard</a></li>
+                        <li class="item"><a href="../components/breadcrumb.html">Breadcrumbs</a></li>
+                        <li class="item"><a href="../components/card.html">Card</a></li>
+                        <li class="item"><a href="../components/menu.html">Menu</a></li>
+                        <li class="item"><a href="../components/navbar.html">Navbar</a></li>
+                        <li class="item"><a href="../components/pagination.html">Pagination</a></li>
+                        <li class="item"><a href="../components/panel.html">Panel</a></li>
+                        <li class="item"><a href="../components/process.html">Process</a></li>
+                        <li class="item"><a href="../components/progress.html">Progress</a></li>
+                        <li class="item"><a href="../components/timeline.html">Timeline</a></li>
+                        <li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section mr-20">
+            <div class="buttons force link invert shadowless">
+                <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank" class="button">
+                    <span class="material-icons mr-5">launch</span> Github
+                </a>
+            </div>
+        </section>
+    </header>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-16 col-xs-16">
+                <div class="menu transparent shadowless">
+                    <div class="title">Base</div>
+                    <div class="item">
+                        <a href="./introduction.html">
+                            Introduction
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./grid.html" class="active">
+                            Grid
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-13 col-sm-16 col-xs-16">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-16">
+
+                            <div class="panel shadowless borderless">
+                                <div class="breadcrumb">
+                                    <a href="../" class="item">Punica</a>
+                                    <a href="" class="item">Base</a>
+                                    <a href="" class="item active">Grid</a>
+                                </div>
+                            </div>
+
+                            <!-- info -->
+                            <div class="panel shadowless borderless">
+                                <div class="header">
+                                    <div class="title">Grid</div>
+                                </div>
+                                <div class="content">
+                                    <div class="headline">
+                                        Punica CSS Grid system offers a grid-based layout system.
+                                    </div>
+
+                                    <blockquote>
+                                        <p>CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system.</p>
+                                        <cite><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS-Tricks</a></cite>
+                                    </blockquote>
+
+                                    <div class="row mt-30">
+                                        <div class="col-lg-16 col-sm-16 col-xs-16">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 50%;">Info</th>
+                                                        <th>Default Value</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Grid Size</td>
+                                                        <td><code>16</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Grid Gap</td>
+                                                        <td><code>6px</code></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 50%;">Props</th>
+                                                        <th>Default Class Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Container</td>
+                                                        <td><code>.container</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Row</td>
+                                                        <td><code>.row</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Column</td>
+                                                        <td><code>.col-</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Offset</td>
+                                                        <td><code>.offset-</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Equal Height</td>
+                                                        <td><code>.equal</code></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel shadowless borderless">
+                                <div class="content">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-16 bg-primary color-white">16</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-1 col-sm-16 col-xs-16 bg-grey color-white">1</div>
+                                            <div class="col-15 col-sm-16 col-xs-16 bg-primary color-white">15</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2 col-sm-16 col-xs-16 bg-grey color-white">2</div>
+                                            <div class="col-14 col-sm-16 col-xs-16 bg-primary color-white">14</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3 col-sm-16 col-xs-16 bg-grey color-white">3</div>
+                                            <div class="col-13 col-sm-16 col-xs-16 bg-primary color-white">13</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 col-sm-16 col-xs-16 bg-grey color-white">4</div>
+                                            <div class="col-12 col-sm-16 col-xs-16 bg-primary color-white">12</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5 col-sm-16 col-xs-16 bg-grey color-white">5</div>
+                                            <div class="col-11 col-sm-16 col-xs-16 bg-primary color-white">11</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 col-sm-16 col-xs-16 bg-grey color-white">6</div>
+                                            <div class="col-10 col-sm-16 col-xs-16 bg-primary color-white">10</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-7 col-sm-16 col-xs-16 bg-grey color-white">7</div>
+                                            <div class="col-9 col-sm-16 col-xs-16 bg-primary color-white">9</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-8 col-sm-16 col-xs-16 bg-grey color-white">8</div>
+                                            <div class="col-8 col-sm-16 col-xs-16 bg-primary color-white">8</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-9 col-sm-16 col-xs-16 bg-grey color-white">9</div>
+                                            <div class="col-7 col-sm-16 col-xs-16 bg-primary color-white">7</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-10 col-sm-16 col-xs-16 bg-grey color-white">10</div>
+                                            <div class="col-6 col-sm-16 col-xs-16 bg-primary color-white">6</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-11 col-sm-16 col-xs-16 bg-grey color-white">11</div>
+                                            <div class="col-5 col-sm-16 col-xs-16 bg-primary color-white">5</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-16 col-xs-16 bg-grey color-white">12</div>
+                                            <div class="col-4 col-sm-16 col-xs-16 bg-primary color-white">4</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-13 col-sm-16 col-xs-16 bg-grey color-white">13</div>
+                                            <div class="col-3 col-sm-16 col-xs-16 bg-primary color-white">3</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-14 col-sm-16 col-xs-16 bg-grey color-white">14</div>
+                                            <div class="col-2 col-sm-16 col-xs-16 bg-primary color-white">2</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-15 col-sm-16 col-xs-16 bg-grey color-white">15</div>
+                                            <div class="col-1 col-sm-16 col-xs-16 bg-primary color-white">1</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-16 bg-primary color-white">16</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-16">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 33%;">Breakpoints</th>
+                                                            <th style="width: 33%;">Default Class</th>
+                                                            <th>Default Value</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Extra Small</td>
+                                                            <td><code>xs</code></td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Small</td>
+                                                            <td><code>sm</code></td>
+                                                            <td><code>500px</code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Medium</td>
+                                                            <td><code>md</code></td>
+                                                            <td><code>768px</code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Large</td>
+                                                            <td><code>lg</code></td>
+                                                            <td><code>992px</code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Extra Large</td>
+                                                            <td><code>xl</code></td>
+                                                            <td><code>1260px</code></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel shadowless borderless">
+                                <div class="header">
+                                    <div class="title">Standard Columns</div>
+                                </div>
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-4 col-sm-16 col-xs-16 bg-grey color-white">
+                                            Lorem ipsum dolor sit amet, ex timeam dissentiet definitionem ius, no vix nihil iriure.
+                                        </div>
+                                        <div class="col-4 col-sm-16 col-xs-16 bg-primary color-white">col-4</div>
+                                        <div class="col-4 col-sm-16 col-xs-16 bg-grey color-white">
+                                            Lorem ipsum dolor sit amet, ex timeam dissentiet definitionem ius, no vix nihil iriure. Mel ad quodsi nonumes
+                                            vulputate, sed cibo incorrupte ad, no nam atqui accusam.
+                                        </div>
+                                        <div class="col-4 col-sm-16 col-xs-16 bg-primary color-white">col-4</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel shadowless borderless">
+                                <div class="header">
+                                    <div class="title">Equal Height Columns</div>
+                                </div>
+                                <div class="content">
+                                    <div class="row equal">
+                                        <div class="col-4 col-sm-16 col-xs-16 bg-grey color-white">
+                                            Lorem ipsum dolor sit amet, ex timeam dissentiet definitionem ius, no vix nihil iriure.
+                                        </div>
+                                        <div class="col-4 col-sm-16 col-xs-16 bg-primary color-white">col-4</div>
+                                        <div class="col-4 col-sm-16 col-xs-16 bg-grey color-white">
+                                            Lorem ipsum dolor sit amet, ex timeam dissentiet definitionem ius, no vix nihil iriure. Mel ad quodsi
+                                            nonumes
+                                            vulputate, sed cibo incorrupte ad, no nam atqui accusam.
+                                        </div>
+                                        <div class="col-4 col-sm-16 col-xs-16 bg-primary color-white">col-4</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel shadowless borderless">
+                                <div class="header">
+                                    <div class="title">
+                                        Offset
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-sm-16 col-xs-16 bg-grey color-white">col-lg-6</div>
+                                        <div class="col-sm-16 col-xs-16 col-lg-3 offset-lg-9 bg-primary color-white">offset-lg-9</div>
+                                        <div class="col-sm-16 col-xs-16 col-lg-4 offset-lg-13 bg-grey color-white">offset-lg-13</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
