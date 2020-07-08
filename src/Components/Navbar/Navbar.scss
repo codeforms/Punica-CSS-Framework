@@ -17,35 +17,59 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 			display: flex;
 			width: $navbar-container-width;
 		}
-		.#{$navbar-section} {
-			display: flex;
-			flex: 1 0 0;
-			align-items: center;
-			&:not(:first-child):last-child {
-				justify-content: flex-end;
-			}
-		}
-		.#{$navbar-center} {
-			align-items: center;
-			display: flex;
-			flex: 0 0 auto;
-		}
+		// navbar brand
 		.#{$navbar-brand} {
-			font-size: $navbar-font-size;
-			text-decoration: none;
 			padding: $navbar-brand-padding;
 			display: flex;
 			justify-content: center;
-		    min-height: 100%;
-		    align-items: center;
-		    img {
-		    	max-height: $navbar-min-height - 20px;
-		    	padding: ($navbar-min-height / 10);
-		    }
+			min-height: 100%;
+			align-items: center;
+			img {
+				max-height: $navbar-min-height - 20px;
+				padding: ($navbar-min-height / 10);
+			}
+			a,
+			a:visited {
+				font-size: $navbar-font-size;
+				text-decoration: none;
+				color: $navbar-color;
+				display: flex;
+			}
 		}
-		a.#{$navbar-brand},
-		a.#{$navbar-brand}:visited {
-			color: $navbar-color;
+		// navbar burger
+		input[type=checkbox]##{$navbar-burger},
+		.#{$navbar-burger} {
+			display: none;
+		}
+		.#{$navbar-burger} {
+			&::before {
+				content: "dehaze";
+				font-family: "Material Icons";
+				font-size: 2.459rem;
+				display: none;
+				min-height: $navbar-min-height;
+				min-width: $navbar-min-height;
+				position: absolute;
+				cursor: pointer;
+				right: 0;
+				top: 0;
+			}
+		}
+		// navbar links
+		section.#{$navbar-links} {
+			display: flex;
+			flex: 1 0 0;
+			align-items: center;
+			// navbar sections
+			div.#{$navbar-section} {
+				flex: 1 0 0;
+				display: flex;
+				height: 100%;
+				align-items: center;
+				&:not(:first-child):last-child {
+					justify-content: flex-end;
+				}
+			}
 		}
 		&.#{$navbar-fixed} {
 			position: fixed;
@@ -59,6 +83,21 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 		&.#{$navbar-shadowed} {
 			box-shadow: $navbar-shadow;
 		}
+		.#{$button-class-group} {
+			height: 100%;
+			min-height: 100%;
+			box-shadow: none;
+			.#{$button-class} {
+				background: transparent;
+				border-color: transparent;
+				border: none;
+				color: $navbar-color;
+				min-height: 100%;
+				i, span.material-icons {
+					color: $navbar-color;
+				}
+			}
+		}
 		.#{$button-class},
 		.#{$dropdown-name} .#{$button-class} {
 			font-size: $navbar-font-size;
@@ -66,5 +105,74 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 	}
 	.#{$navbar-spacer} {
 		margin-top: $navbar-spacer-top;
+	}
+
+	@include breakpoints($breakpoints-medium, 'max-width') {
+		.#{$navbar-name} {
+			.#{$navbar-brand} {
+				padding: 0 10px;
+			}
+			section.#{$navbar-links} {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 0;
+				top: $navbar-min-height;
+				left: 0;
+				overflow-x: auto;
+				overflow-y: hidden;
+				background: $main-secondary-bg;
+				z-index: 1;
+				box-shadow: $navbar-shadow;
+				.#{$navbar-section},
+				.#{$navbar-section} .#{$button-class-group},
+				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name},
+				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$menu-name},
+				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$menu-name} .#{$button-class},
+				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$button-class},
+				.#{$navbar-section} .#{$button-class-group} .#{$button-class} {
+					display: block !important;
+					width: 100%;
+					text-align: left;
+					position: relative;
+				}
+				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$button-class},
+				.#{$navbar-section} .#{$button-class-group} .#{$button-class} {
+					color: $main-font-color;
+					i, span.material-icons {
+						display: none;
+					}
+				}
+				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$menu-name} {
+					max-height: 100%;
+					box-shadow: none;
+				}
+			}
+			.#{$navbar-burger} {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: $navbar-min-height;
+				min-width: $navbar-min-height;
+				&::before {
+					content: "clear";
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+			input[type=checkbox]##{$navbar-burger}:not(:checked) ~ section.#{$navbar-links} {
+				height: 0;
+			}
+			input[type=checkbox]##{$navbar-burger}:checked ~ section.#{$navbar-links} {
+				height: auto;
+			}
+			input[type=checkbox]##{$navbar-burger}:not(:checked) ~ .#{$navbar-burger}::before {
+				content: "dehaze";
+			}
+			input[type=checkbox]##{$navbar-burger}:checked ~ .#{$navbar-burger}::before {
+				content: "clear";
+			}
+		}
 	}
 }

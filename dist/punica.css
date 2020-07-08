@@ -6030,39 +6030,7 @@ a.label.error, .label.error {
   width: 80%;
 }
 
-.navbar .section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navbar .section:not(:first-child):last-child {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.navbar .center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-
 .navbar .brand {
-  font-size: 1.1em;
-  text-decoration: none;
   padding: 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6081,8 +6049,61 @@ a.label.error, .label.error {
   padding: 8px;
 }
 
-.navbar a.brand, .navbar a.brand:visited {
+.navbar .brand a, .navbar .brand a:visited {
+  font-size: 1.1em;
+  text-decoration: none;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar input[type=checkbox]#burger, .navbar .burger {
+  display: none;
+}
+
+.navbar .burger::before {
+  content: "dehaze";
+  font-family: "Material Icons";
+  font-size: 2.459rem;
+  display: none;
+  min-height: 80px;
+  min-width: 80px;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+}
+
+.navbar section.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar section.links div.section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar section.links div.section:not(:first-child):last-child {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .navbar.fixed {
@@ -6101,12 +6122,105 @@ a.label.error, .label.error {
           box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.23);
 }
 
+.navbar .buttons {
+  height: 100%;
+  min-height: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar .buttons .button {
+  background: transparent;
+  border-color: transparent;
+  border: none;
+  color: #fff;
+  min-height: 100%;
+}
+
+.navbar .buttons .button i, .navbar .buttons .button span.material-icons {
+  color: #fff;
+}
+
 .navbar .button, .navbar .dropdown .button {
   font-size: 1.1em;
 }
 
 .navbar-spacer {
   margin-top: 110px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar .brand {
+    padding: 0 10px;
+  }
+  .navbar section.links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    top: 80px;
+    left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #e6e6e6;
+    z-index: 1;
+    -webkit-box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.23);
+            box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.23);
+  }
+  .navbar section.links .section, .navbar section.links .section .buttons, .navbar section.links .section .buttons .dropdown, .navbar section.links .section .buttons .dropdown .menu, .navbar section.links .section .buttons .dropdown .menu .button, .navbar section.links .section .buttons .dropdown .button, .navbar section.links .section .buttons .button {
+    display: block !important;
+    width: 100%;
+    text-align: left;
+    position: relative;
+  }
+  .navbar section.links .section .buttons .dropdown .button, .navbar section.links .section .buttons .button {
+    color: #3f4143;
+  }
+  .navbar section.links .section .buttons .dropdown .button i, .navbar section.links .section .buttons .dropdown .button span.material-icons, .navbar section.links .section .buttons .button i, .navbar section.links .section .buttons .button span.material-icons {
+    display: none;
+  }
+  .navbar section.links .section .buttons .dropdown .menu {
+    max-height: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 80px;
+    min-width: 80px;
+  }
+  .navbar .burger::before {
+    content: "clear";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar input[type=checkbox]#burger:not(:checked) ~ section.links {
+    height: 0;
+  }
+  .navbar input[type=checkbox]#burger:checked ~ section.links {
+    height: auto;
+  }
+  .navbar input[type=checkbox]#burger:not(:checked) ~ .burger::before {
+    content: "dehaze";
+  }
+  .navbar input[type=checkbox]#burger:checked ~ .burger::before {
+    content: "clear";
+  }
 }
 
 .display-flex {

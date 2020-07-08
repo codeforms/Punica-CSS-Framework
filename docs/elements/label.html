@@ -9,62 +9,68 @@
 </head>
 <body>
 	<header class="navbar shadowed">
-		<section class="section">
-			<a href="../" class="brand" title="Punica CSS">
+		<input type="checkbox" id="burger">
+		<section class="brand">
+			<a href="../" title="Punica CSS">
 				<img src="../images/punica.png">
 			</a>
-			<div class="buttons force">
-				<div class="dropdown large">
-					<a class="button link invert toggle" tabindex="0">
-						Base <span class="material-icons">keyboard_arrow_down</span>
-					</a>
-					<ul class="menu">
-						<li class="item"><a href="../base/introduction.html">Introduction</a></li>
-						<li class="item"><a href="../base/grid.html">Grid</a></li>
-					</ul>
+		</section>
+		<section class="links">
+			<div class="section">
+				<div class="buttons">
+					<div class="dropdown large">
+						<a class="button toggle" tabindex="0">
+							Base <span class="material-icons">keyboard_arrow_down</span>
+						</a>
+						<ul class="menu">
+							<li class="item"><a href="../base/introduction.html">Introduction</a></li>
+							<li class="item"><a href="../base/grid.html">Grid</a></li>
+						</ul>
+					</div>
+					<div class="dropdown large">
+						<a class="button toggle" tabindex="0">
+							Elements <span class="material-icons">keyboard_arrow_down</span>
+						</a>
+						<ul class="menu">
+							<li class="item"><a href="./button.html">Button & Dropdown</a></li>
+							<li class="item"><a href="./form.html">Form</a></li>
+							<li class="item"><a href="./icon.html">Icon</a></li>
+							<li class="item"><a href="./label.html">Label</a></li>
+							<li class="item"><a href="./table.html">Table</a></li>
+							<li class="item"><a href="./typography.html">Typography</a></li>
+						</ul>
+					</div>
+					<div class="dropdown large">
+						<a class="button toggle" tabindex="0">
+							Components <span class="material-icons">keyboard_arrow_down</span>
+						</a>
+						<ul class="menu">
+							<li class="item"><a href="../components/alert.html">Alert</a></li>
+							<li class="item"><a href="../components/badge.html">Badge</a></li>
+							<li class="item"><a href="../components/billboard.html">Billboard</a></li>
+							<li class="item"><a href="../components/breadcrumb.html">Breadcrumbs</a></li>
+							<li class="item"><a href="../components/card.html">Card</a></li>
+							<li class="item"><a href="../components/menu.html">Menu</a></li>
+							<li class="item"><a href="../components/navbar.html">Navbar</a></li>
+							<li class="item"><a href="../components/pagination.html">Pagination</a></li>
+							<li class="item"><a href="../components/panel.html">Panel</a></li>
+							<li class="item"><a href="../components/process.html">Process</a></li>
+							<li class="item"><a href="../components/progress.html">Progress</a></li>
+							<li class="item"><a href="../components/timeline.html">Timeline</a></li>
+							<li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="dropdown large">
-					<a class="button link invert toggle" tabindex="0">
-						Elements <span class="material-icons">keyboard_arrow_down</span>
+			</div>
+			<div class="section">
+				<div class="buttons link invert shadowless">
+					<a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank" class="button">
+						<span class="material-icons mr-5">launch</span> Github
 					</a>
-					<ul class="menu">
-						<li class="item"><a href="./button.html">Button & Dropdown</a></li>
-						<li class="item"><a href="./form.html">Form</a></li>
-						<li class="item"><a href="./icon.html">Icon</a></li>
-						<li class="item"><a href="./label.html">Label</a></li>
-						<li class="item"><a href="./table.html">Table</a></li>
-						<li class="item"><a href="./typography.html">Typography</a></li>
-					</ul>
-				</div>
-				<div class="dropdown large">
-					<a class="button link invert toggle" tabindex="0">
-						Components <span class="material-icons">keyboard_arrow_down</span>
-					</a>
-					<ul class="menu">
-						<li class="item"><a href="../components/alert.html">Alert</a></li>
-						<li class="item"><a href="../components/badge.html">Badge</a></li>
-						<li class="item"><a href="../components/billboard.html">Billboard</a></li>
-						<li class="item"><a href="../components/breadcrumb.html">Breadcrumbs</a></li>
-						<li class="item"><a href="../components/card.html">Card</a></li>
-						<li class="item"><a href="../components/menu.html">Menu</a></li>
-						<li class="item"><a href="../components/navbar.html">Navbar</a></li>
-						<li class="item"><a href="../components/pagination.html">Pagination</a></li>
-						<li class="item"><a href="../components/panel.html">Panel</a></li>
-						<li class="item"><a href="../components/process.html">Process</a></li>
-						<li class="item"><a href="../components/progress.html">Progress</a></li>
-						<li class="item"><a href="../components/timeline.html">Timeline</a></li>
-						<li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
-					</ul>
 				</div>
 			</div>
 		</section>
-		<section class="section mr-20">
-			<div class="buttons force link invert shadowless">
-				<a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank" class="button">
-					<span class="material-icons mr-5">launch</span> Github
-				</a>
-			</div>
-		</section>
+		<label for="burger" class="burger"></label>
 	</header>
 
 	<div class="container">

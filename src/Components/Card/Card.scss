@@ -73,7 +73,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 			}
 		}
 	}
-	@include breakpoints(768px, 'max-width') {
+	@include breakpoints($breakpoints-medium, 'max-width') {
 		.#{$card-name},
 		.#{$cards-name} > .#{$card-name} {
 			flex: 0 0 100% !important;
