@@ -177,6 +177,11 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					margin-left: -1px;
 				}
 			}
+
+			@include breakpoints($breakpoints-medium, 'max-width') {
+				//button-class-group
+				box-shadow: none;
+			}
 		}
 	}
 	// if dropdown is enable
@@ -226,6 +231,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			@if $elements-button-sizes {
 				@include button-sizes-by();
 			}
+		}
+		@include breakpoints($breakpoints-medium, 'max-width') {
+			//
 		}
 	}
 }

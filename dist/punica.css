@@ -4628,6 +4628,13 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
   margin-left: -1px;
 }
 
+@media only screen and (max-width: 768px) {
+  .buttons {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .dropdown {
   display: inline-block;
   position: relative;
@@ -5111,7 +5118,7 @@ sup {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v52/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+  src: url(https://fonts.gstatic.com/s/materialicons/v53/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
 }
 
 .material-icons {
@@ -5137,6 +5144,7 @@ a.label, .label {
   font-weight: 700;
   line-height: 1.2;
   padding: 0.28rem 0.9rem;
+  margin: 0.1rem 0.05rem;
   border-radius: 4px;
   text-decoration: none;
   border: 1px solid #c6c6c6;
@@ -5181,6 +5189,7 @@ a.label.error, .label.error {
   padding: .6rem;
   margin: 0 0 8px;
   width: 100%;
+  font-weight: 700;
 }
 
 .alert.primary {
@@ -5634,7 +5643,7 @@ a.label.error, .label.error {
 .breadcrumb .item::after {
   content: "\203A";
   color: #000;
-  padding: 0 0.6em;
+  padding: 0 0.45em;
   vertical-align: sub;
   font-size: 1.8rem;
 }
@@ -5650,6 +5659,16 @@ a.label.error, .label.error {
 
 .breadcrumb .item.active::after {
   content: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .breadcrumb .item {
+    display: block;
+  }
+  .breadcrumb .item:after {
+    font-size: 1rem;
+    vertical-align: middle;
+  }
 }
 
 .timeline .item {
@@ -5897,7 +5916,7 @@ a.label.error, .label.error {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  margin: 2em 0;
+  margin: 1em 0 5em;
   width: 100%;
   list-style: none;
 }
@@ -5906,15 +5925,28 @@ a.label.error, .label.error {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  min-height: 2rem;
-  text-align: center;
+  min-height: 4rem;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 150px;
+  min-width: 150px;
+  word-break: break-word;
+  line-height: 1.3;
+  text-align: center;
 }
 
 .process .item:not(:first-child)::before {
   background: #0a8fff;
   content: "";
-  height: 1px;
+  height: 6px;
   left: -50%;
   position: absolute;
   top: 0;
@@ -5922,10 +5954,11 @@ a.label.error, .label.error {
 }
 
 .process .item a {
-  color: black;
+  color: #3f4143;
   display: inline-block;
   padding: 10px 10px 0;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .process .item a::before {
@@ -5934,13 +5967,28 @@ a.label.error, .label.error {
   background: #0a8fff;
   top: 0;
   left: 50%;
-  height: .5rem;
-  width: 1px;
+  height: .8rem;
+  width: 3px;
   z-index: 1;
 }
 
+.process .item a:first-child::before {
+  left: calc(50% - (3px - 1px));
+}
+
 .process .item.active a {
-  font-weight: bold;
+  color: #0a8fff;
+  font-weight: 700;
+}
+
+.process .item.active a::after {
+  content: "beenhere";
+  font-family: "Material Icons";
+  position: absolute;
+  top: calc(-15px - 1.8rem);
+  left: calc(50% - ((3px * 10) / 2));
+  color: #0a8fff;
+  font-size: 1.8rem;
 }
 
 .process .item.active ~ .item::before {
@@ -5957,6 +6005,113 @@ a.label.error, .label.error {
 
 .process .item.active ~ .item a::before {
   background: #c6c6c6;
+}
+
+.process.vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.25em 2em 1.25em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.process.vertical .item {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  min-width: 100%;
+  border-bottom: 1px solid #c6c6c6;
+  border-right: 1px solid #c6c6c6;
+  padding-left: 20px;
+}
+
+.process.vertical .item:first-child {
+  border-top: 1px solid #c6c6c6;
+}
+
+.process.vertical .item:not(:first-child)::before {
+  width: 3px;
+  height: 100%;
+  left: 0;
+}
+
+.process.vertical .item a::before {
+  width: 9px;
+}
+
+.process.vertical .item a:first-child::before {
+  left: 0;
+  height: 100%;
+}
+
+.process.vertical .item.active a {
+  font-weight: bold;
+}
+
+.process.vertical .item.active a::after {
+  top: 15px;
+  left: calc(-15px - 1.8rem);
+}
+
+@media only screen and (max-width: 768px) {
+  .process {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1.25em 2em 1.25em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .process .item {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    min-width: 100%;
+    border-bottom: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+    padding-left: 20px;
+  }
+  .process .item:first-child {
+    border-top: 1px solid #c6c6c6;
+  }
+  .process .item:not(:first-child)::before {
+    width: 3px;
+    height: 100%;
+    left: 0;
+  }
+  .process .item a::before {
+    width: 9px;
+  }
+  .process .item a:first-child::before {
+    left: 0;
+    height: 100%;
+  }
+  .process .item.active a {
+    font-weight: bold;
+  }
+  .process .item.active a::after {
+    top: 15px;
+    left: calc(-15px - 1.8rem);
+  }
 }
 
 .tooltip {

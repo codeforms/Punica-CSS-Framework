@@ -12,6 +12,7 @@ PUNICA CSS > COMPONENTS : ALERT **********************/
 		padding: $alert-padding;
 		margin: $alert-margin;
 		width: 100%;
+		font-weight: $alert-font-weight;
 		@each $type, $color in $alert-types {
 		    &.#{$type} {
 				@include alert-types($color, $main-invert-color);

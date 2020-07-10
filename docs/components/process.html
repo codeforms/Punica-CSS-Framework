@@ -193,6 +193,28 @@
 														<td>Active Item</td>
 														<td><code>.active</code></td>
 													</tr>
+													<tr>
+														<td>Vertical Style</td>
+														<td><code>.vertical</code></td>
+													</tr>
+												</tbody>
+											</table>
+											<table class="table">
+												<thead>
+													<tr>
+														<th style="width: 50%;">Positions</th>
+														<th>Default Class Name</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Horizontal (default)</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td>Vertical</td>
+														<td><code>.vertical</code></td>
+													</tr>
 												</tbody>
 											</table>
 										</div>
@@ -204,22 +226,44 @@
 								<div class="content">
 									<div class="process">
 										<div class="item">
-											<a href="javascript:">Step 1</a>
+											<a href="javascript:">Planning</a>
+										</div>
+										<div class="item">
+											<a href="javascript:">Design</a>
+										</div>
+										<div class="item">
+											<a href="javascript:">Content</a>
+										</div>
+										<div class="item">
+											<a href="javascript:">Coding</a>
 										</div>
 										<div class="item active">
-											<a href="javascript:">Step 2</a>
+											<a href="javascript:">Testing</a>
 										</div>
 										<div class="item">
-											<a href="javascript:">Step 3</a>
+											<a href="javascript:">Maintenance</a>
+										</div>
+									</div>
+								</div>
+								<div class="content">
+									<div class="process">
+										<div class="item">
+											<a href="javascript:">Prewriting</a>
+										</div>
+										<div class="item active">
+											<a href="javascript:">Research</a>
 										</div>
 										<div class="item">
-											<a href="javascript:">Step 4</a>
+											<a href="javascript:">Drafting</a>
 										</div>
 										<div class="item">
-											<a href="javascript:">Step 5</a>
+											<a href="javascript:">Revising</a>
 										</div>
 										<div class="item">
-											<a href="javascript:">Step 6</a>
+											<a href="javascript:">Editing</a>
+										</div>
+										<div class="item">
+											<a href="javascript:">Publishing</a>
 										</div>
 									</div>
 								</div>
@@ -254,7 +298,8 @@
 																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
 																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
 																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"item&nbsp;active"</code><code class="xml plain">&gt;</code></div>
+																	class="xml string">"item&nbsp;active"</code><code class="xml plain">&gt;</code>
+															</div>
 															<div class="line number6 index5 alt1"><code
 																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
 																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
@@ -278,6 +323,93 @@
 												</tr>
 											</tbody>
 										</table>
+									</div>
+								</div>
+								<div class="content">
+									<h4>Vertical Process</h4>
+									<p>
+										Also, just add the <code>.vertical</code> class to <code>.process</code> to make it vertical process style. It's that easy! Vertical Process style is also used for mobile devices.
+									</p>
+									<div class="row">
+										<div class="col-sm-16 col-xs-16 col-lg-8">
+											<div class="process vertical">
+												<div class="item">
+													<a href="javascript:">Planning</a>
+												</div>
+												<div class="item">
+													<a href="javascript:">Design</a>
+												</div>
+												<div class="item">
+													<a href="javascript:">Content</a>
+												</div>
+												<div class="item">
+													<a href="javascript:">Coding</a>
+												</div>
+												<div class="item active">
+													<a href="javascript:">Testing</a>
+												</div>
+												<div class="item">
+													<a href="javascript:">Maintenance</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-16 col-xs-16 col-lg-8">
+											<div id="highlighter_645869" class="syntaxhighlighter nogutter  xml">
+												<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tbody>
+														<tr>
+															<td class="code">
+																<div class="container">
+																	<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																			class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																			class="xml plain">=</code><code class="xml string">"process vertical"</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number2 index1 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"item"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number3 index2 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																			class="xml color1">href</code><code class="xml plain">=</code><code
+																			class="xml string">""</code><code class="xml plain">&gt;Step&nbsp;1&lt;/</code><code
+																			class="xml keyword">a</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number4 index3 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number5 index4 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"item&nbsp;active"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number6 index5 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																			class="xml color1">href</code><code class="xml plain">=</code><code
+																			class="xml string">""</code><code class="xml plain">&gt;Step&nbsp;2&lt;/</code><code
+																			class="xml keyword">a</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number7 index6 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number8 index7 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">...</code>
+																	</div>
+																	<div class="line number9 index8 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">...</code>
+																	</div>
+																	<div class="line number10 index9 alt1"><code class="xml plain">&lt;/</code><code
+																			class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

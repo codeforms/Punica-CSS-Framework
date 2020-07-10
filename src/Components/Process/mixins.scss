@@ -1,0 +1,43 @@
+/******************************************************** 
+PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
+@mixin process-vertical() {
+	display: flex;
+	padding: $timeline-padding;
+	flex-direction: column;
+	align-items: flex-start;
+	.#{$process-item} {
+		justify-content: flex-start;
+		align-items: center;
+		max-width: 100%;
+		min-width: 100%;
+		border-bottom: $main-border-width $main-border-style $main-border-color;
+		border-right: $main-border-width $main-border-style $main-border-color;
+		padding-left: 20px;
+		&:first-child {
+			border-top: $main-border-width $main-border-style $main-border-color;
+		}
+		&:not(:first-child)::before {
+			width: $process-stage-stick-width;
+			height: 100%;
+			left: 0;
+		}
+		a {
+			&::before {
+				width: $process-vertical-stick-width;
+			}
+			&:first-child::before {
+				left: 0;
+				height: 100%;
+			}
+		}
+		&.#{$process-active} {
+			a {
+				font-weight: bold;
+				&::after {
+					top: 15px;
+					left: calc(-15px - #{$process-current-icon-size});
+				}
+			}
+		}
+	}
+}
