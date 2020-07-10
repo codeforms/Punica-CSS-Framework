@@ -6007,6 +6007,66 @@ a.label.error, .label.error {
   background: #c6c6c6;
 }
 
+.process.success .item:not(:first-child)::before {
+  background: #2ec4b6;
+}
+
+.process.success .item a::before {
+  background: #2ec4b6;
+}
+
+.process.success .item.active a {
+  color: #2ec4b6;
+}
+
+.process.success .item.active a::after {
+  color: #2ec4b6;
+}
+
+.process.success .item.active ~ .item::before {
+  background: #c6c6c6;
+}
+
+.process.warning .item:not(:first-child)::before {
+  background: #de9e36;
+}
+
+.process.warning .item a::before {
+  background: #de9e36;
+}
+
+.process.warning .item.active a {
+  color: #de9e36;
+}
+
+.process.warning .item.active a::after {
+  color: #de9e36;
+}
+
+.process.warning .item.active ~ .item::before {
+  background: #c6c6c6;
+}
+
+.process.error .item:not(:first-child)::before {
+  background: #d62828;
+}
+
+.process.error .item a::before {
+  background: #d62828;
+}
+
+.process.error .item.active a {
+  color: #d62828;
+}
+
+.process.error .item.active a::after {
+  color: #d62828;
+}
+
+.process.error .item.active ~ .item::before {
+  background: #c6c6c6;
+}
+
 .process.vertical {
   display: -webkit-box;
   display: -ms-flexbox;

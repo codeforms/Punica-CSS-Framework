@@ -7,6 +7,11 @@ $process-name				    : 'process';
 $process-item				    : 'item';
 $process-active				    : 'active';
 $process-vertical			    : 'vertical';
+$process-styles	: (
+	"success": $success-color,
+	"warning": $warning-color,
+	"error": $error-color,
+);
 
 $process-item-min-width		    : 150px;
 $process-margin				    : 1em 0 5em;

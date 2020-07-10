@@ -1,5 +1,30 @@
 /******************************************************** 
 PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
+@mixin process-styles($color: $primary-color) {
+	.#{$process-item} {
+		&:not(:first-child)::before {
+			background: $color;
+		}
+		a {
+			&::before {
+				background: $color;
+			}
+		}
+		&.#{$process-active} {
+			a {
+				color: $color;
+				&::after {
+					color: $color;
+				}
+			}
+			&~.#{$process-item} {
+				&::before {
+					background: $main-border-color;
+				}
+			}
+		}
+	}
+}
 @mixin process-vertical() {
 	display: flex;
 	padding: $timeline-padding;

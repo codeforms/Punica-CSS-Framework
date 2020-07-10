@@ -81,6 +81,11 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 				}
 			}
 		}
+		@each $type, $bg-color in $process-styles {
+			&.#{$type} {
+				@include process-styles($bg-color);
+			}
+		}
 		&.#{$process-vertical} {
 			@include process-vertical();
 		}
