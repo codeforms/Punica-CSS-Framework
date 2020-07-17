@@ -30,6 +30,7 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 				display: flex;
 				width: $timeline-type-width;
 				height: $timeline-type-width;
+				top: 10px;
 				left: -(($timeline-type-width / 2px) - $timeline-border-width);
 				align-items: center;
 				background-color: $main-secondary-bg;
@@ -51,7 +52,9 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 			}
 			.#{$timeline-author},
 			.#{$timeline-body},
-			.#{$timeline-date} {
+			.#{$timeline-date},
+			.#{$timeline-actions},
+			.#{$timeline-media} {
 				min-width: 0;
 				max-width: 100%;
 				color: $main-font-color;
@@ -61,6 +64,13 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 			.#{$timeline-date} {
 				font-size: .9em;
 				opacity: .6;
+			}
+			.#{$timeline-media} {
+				margin-top: 10px;
+				@include embedded-media();
+			}
+			.#{$timeline-actions} {
+				margin-top: 10px;
 			}
 			&:last-child::before {
 				background: linear-gradient(180deg, $main-border-color 45%, rgba(255,255,255,0) 100%);

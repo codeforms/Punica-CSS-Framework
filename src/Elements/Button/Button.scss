@@ -149,9 +149,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			// Button Force
 			@include button-force();
 
-			// Button Sizes By
+			// Button Sizes for groups
 			@if $elements-button-sizes {
-				@include button-sizes-by();
+				@include button-sizes(true);
 			}
 
 			// Button Link
@@ -193,7 +193,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				animation: slide-down .15s ease 1;
 				display: none;
 				left: 0;
-				max-height: 30vh;
+				max-height: 45vh;
 				overflow-y: auto;
 				position: absolute;
 				top: 100%;
@@ -212,7 +212,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				}
 			}
 			&.#{$menu-item-active} .#{$menu-name},
+			.#{$dropdown-toggle}:focus + .#{$menu-name},
 			.#{$dropdown-toggle}:hover + .#{$menu-name},
+			.#{$menu-name}:focus,
 			.#{$menu-name}:hover {
 				display: block;
 			}
@@ -227,9 +229,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			}
 			// Button Force
 			@include button-force();
-			// Button Sizes By
+			// Button Sizes for dropdown
 			@if $elements-button-sizes {
-				@include button-sizes-by();
+				@include button-sizes(true);
 			}
 		}
 		@include breakpoints($breakpoints-medium, 'max-width') {

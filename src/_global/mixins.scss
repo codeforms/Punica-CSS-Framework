@@ -1,0 +1,28 @@
+/*****************************************************
+*** GLOBAL MIXINS ************************************/
+@mixin embedded-media {
+    // References;
+    // https://css-tricks.com/fluid-width-video/
+	position: relative; 
+	padding-bottom: 56.25% !important; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+	iframe, 
+	object, 
+	embed { 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%;
+		padding-left: 0;
+    }
+    video {
+        max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+}

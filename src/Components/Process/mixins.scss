@@ -6,6 +6,7 @@ PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
 			background: $color;
 		}
 		a {
+			padding: 10px;
 			&::before {
 				background: $color;
 			}

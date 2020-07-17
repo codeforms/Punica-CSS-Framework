@@ -4,11 +4,13 @@ PUNICA CSS > COMPONENTS : TIMELINE > VARIABLES *******/
 /* 
 NAMING ***********************************************/
 $timeline-container		: 'timeline';
-$timeline-item			: 'item';
+$timeline-item			: 'activity';
 $timeline-author		: 'author';
 $timeline-body			: 'body';
 $timeline-type			: 'type';
 $timeline-date			: 'date';
+$timeline-media			: 'media';
+$timeline-actions		: 'actions';
 
 $timeline-types: (
 	"primary": $primary-color,

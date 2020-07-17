@@ -91,11 +91,13 @@ dl {
 }
 /* embedded content */
 img,
+canvas,
 embed,
 object,
 video {
     max-width: 100%;
-    height: auto;
+	height: auto;
+	box-sizing: border-box;
 }
 img {
   border-style: none;

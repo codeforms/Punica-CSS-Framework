@@ -165,7 +165,7 @@
                         <div class="col-16">
                             <h1>Timeline</h1>
                             <p>
-                                Add a container element with the <code>.timeline</code> class and add <code>.item</code> class for child elements.
+                                Add a container element with the <code>.timeline</code> class and add <code>.activity</code> class for child elements.
                             </p>
 
                             <!-- info -->
@@ -187,7 +187,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Timeline Item</td>
-                                                        <td><code>.item</code></td>
+                                                        <td><code>.activity</code></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Activity by</td>
@@ -204,6 +204,14 @@
                                                     <tr>
                                                         <td>Activity Date</td>
                                                         <td><code>.date</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Activity Media</td>
+                                                        <td><code>.media</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Activity Actions</td>
+                                                        <td><code>.actions</code></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -247,7 +255,7 @@
                                     <div class="row">
                                         <div class="col-sm-16 col-xs-16 col-lg-6">
                                             <div class="timeline">
-                                                <div class="item">
+                                                <div class="activity">
                                                     <div class="type">
                                                         <span class="material-icons">lock</span>
                                                     </div>
@@ -257,7 +265,7 @@
                                                         Te vidisse cotidieque est, in adhuc honestatis his.
                                                     </div>
                                                 </div>
-                                                <div class="item">
+                                                <div class="activity">
                                                     <div class="type primary">
                                                         <span class="material-icons">lock</span>
                                                     </div>
@@ -267,7 +275,7 @@
                                                         Te vidisse cotidieque est, in adhuc honestatis his.
                                                     </div>
                                                 </div>
-                                                <div class="item">
+                                                <div class="activity">
                                                     <div class="type success">
                                                         <span class="material-icons">wifi_protected_setup</span>
                                                     </div>
@@ -276,7 +284,7 @@
                                                         <a href="#2">debitis eos.</a>
                                                     </div>
                                                 </div>
-                                                <div class="item">
+                                                <div class="activity">
                                                     <div class="type warning">
                                                         <span class="material-icons">extension</span>
                                                     </div>
@@ -286,7 +294,7 @@
                                                     </div>
                                                     <div class="date">12.12.2020</div>
                                                 </div>
-                                                <div class="item">
+                                                <div class="activity">
                                                     <div class="type error">
                                                         <span class="material-icons">build</span>
                                                     </div>
@@ -314,7 +322,7 @@
                                                                             class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
                                                                             class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
                                                                             class="xml color1">class</code><code class="xml plain">=</code><code
-                                                                            class="xml string">"item"</code><code class="xml plain">&gt;</code></div>
+                                                                            class="xml string">"activity"</code><code class="xml plain">&gt;</code></div>
                                                                     <div class="line number3 index2 alt2"><code
                                                                             class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
                                                                             class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
@@ -378,6 +386,79 @@
                                         </div>
                                     </div>
                                     
+                                </div>
+                            </div>
+                            <div class="panel shadowless borderless">
+                                <div class="header">
+                                    <div class="title">
+                                        Media & Actions
+                                    </div>
+                                </div>
+                                <div class="content mb-50">
+                                    <p>
+                                        Also, you can add the media elements or actions to Timeline component with the <code>.media</code> and <code>.actions</code> classes. 
+                                    </p>
+                                    <div class="row mt-50">
+                                        <div class="col-sm-16 col-xs-16 col-lg-8">
+                                            <div class="timeline">
+                                                <div class="activity">
+                                                    <div class="type success">
+                                                        <span class="material-icons">photo</span>
+                                                    </div>
+                                                    <div class="author">Bryson Hawes</div>
+                                                    <div class="body">
+                                                        Et equidem ponderum posidonium ius, eu eum modo dictas impetus. Omnes voluptaria ea nam, vis ut ullum hendrerit.
+                                                    </div>
+                                                    <div class="date">2 weeks ago</div>
+                                                    <div class="media">
+                                                        <img src="https://source.unsplash.com/user/josilito/800x600">
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons link mini">
+                                                            <button class="button">
+                                                                <span class="material-icons">thumb_up</span>
+                                                            </button>
+                                                            <button class="button inactive">2342</button>
+                                                            <button class="button">
+                                                                <span class="material-icons">thumb_down</span>
+                                                            </button>
+                                                            <button class="button inactive">46</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-16 col-xs-16 col-lg-8">
+                                            <div class="timeline">
+                                                <div class="activity">
+                                                    <div class="type warning">
+                                                        <span class="material-icons">play_arrow</span>
+                                                    </div>
+                                                    <div class="author">Kate Fitzgerald</div>
+                                                    <div class="body">
+                                                        Et equidem ponderum posidonium ius, eu eum modo dictas impetus. Omnes voluptaria ea nam, vis ut ullum hendrerit.
+                                                    </div>
+                                                    <div class="date">2 hours ago</div>
+                                                    <div class="media">
+                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FQlAEiCb8m0" frameborder="0"
+                                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons link mini">
+                                                            <button class="button">
+                                                                <span class="material-icons">thumb_up</span>
+                                                            </button>
+                                                            <button class="button inactive">256K</button>
+                                                            <button class="button">
+                                                                <span class="material-icons">thumb_down</span>
+                                                            </button>
+                                                            <button class="button inactive">3,4K</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
