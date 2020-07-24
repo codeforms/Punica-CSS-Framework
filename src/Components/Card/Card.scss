@@ -64,7 +64,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 					}
 				}
 				.#{$card-content} {
-					flex-shrink: 5;
+					flex: 1;
 				}
 				.#{$card-title},
 				.#{$card-action} {
@@ -78,6 +78,14 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		.#{$cards-name} > .#{$card-name} {
 			flex: 0 0 100% !important;
 			width: 100%; // for single card
+		}
+		@if $components-card-horizontal {
+			.#{$card-name}.#{$card-horizontal} {
+				flex-direction: column;
+				.#{$card-media} img	{
+					width: fit-content;
+				}
+			}
 		}
 	}
 }

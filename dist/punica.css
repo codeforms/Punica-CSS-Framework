@@ -4257,6 +4257,9 @@ a.button, .button {
   text-decoration: none;
   white-space: nowrap;
   outline: none;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   text-shadow: 0 1px 1px #fff;
   background: #fff;
   background-image: none;
@@ -4300,9 +4303,8 @@ a.button:focus, a.button:active, a.button:hover, .button:focus, .button:active, 
   transition: .2s;
 }
 
-a.button:focus i, a.button:focus [class^="material-icons"], a.button:active i, a.button:active [class^="material-icons"], a.button:hover i, a.button:hover [class^="material-icons"], .button:focus i, .button:focus [class^="material-icons"], .button:active i, .button:active [class^="material-icons"], .button:hover i, .button:hover [class^="material-icons"] {
-  color: #3f4143;
-  text-shadow: none;
+a.button:focus > i, a.button:focus > [class^="material-icons"], .button:focus > i, .button:focus > [class^="material-icons"] {
+  color: #0a8fff;
 }
 
 a.button.active, .button.active {
@@ -4435,7 +4437,7 @@ a.button.link.invert .button, a.button.link.invert i, a.button.link.invert [clas
 
 a.button.mini, .button.mini {
   font-size: .839em;
-  padding: 0.445rem 0.9rem;
+  padding: 0.445rem 0.7rem;
   font-weight: 400;
 }
 
@@ -4465,7 +4467,7 @@ a.button.block, .button.block {
 a.button i, a.button [class^="material-icons"], .button i, .button [class^="material-icons"] {
   vertical-align: middle;
   font-size: 1.35em;
-  color: #7a7e80;
+  color: #3f4143;
   text-shadow: none;
 }
 
@@ -4576,7 +4578,7 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 
 .buttons.mini > .button {
   font-size: .839em;
-  padding: 0.445rem 0.9rem;
+  padding: 0.445rem 0.7rem;
   font-weight: 400;
 }
 
@@ -4697,7 +4699,7 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 
 .dropdown.mini > .button {
   font-size: .839em;
-  padding: 0.445rem 0.9rem;
+  padding: 0.445rem 0.7rem;
   font-weight: 400;
 }
 
@@ -4986,46 +4988,118 @@ input[type='checkbox'], input[type='radio'] {
   content: "radio_button_checked";
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   margin-top: 0;
   color: inherit;
   line-height: 2;
-  font-weight: 900;
   margin-bottom: 1em;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, .h1 {
+  font-size: 2rem;
   font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  h1, .h1 {
+    font-size: 1.7rem;
+  }
+}
+
+h2 {
+  margin-top: 0;
+  color: inherit;
+  line-height: 2;
+  margin-bottom: 1em;
+}
+
+h2, .h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  h2, .h2 {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  margin-top: 0;
+  color: inherit;
+  line-height: 2;
+  margin-bottom: 1em;
+}
+
+h3, .h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  h3, .h3 {
+    font-size: 1.3rem;
+  }
+}
+
+h4 {
+  margin-top: 0;
+  color: inherit;
+  line-height: 2;
+  margin-bottom: 1em;
+}
+
+h4, .h4 {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  h4, .h4 {
+    font-size: 1.1rem;
+  }
+}
+
+h5 {
+  margin-top: 0;
+  color: inherit;
+  line-height: 2;
+  margin-bottom: 1em;
+}
+
+h5, .h5 {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  h5, .h5 {
+    font-size: .9rem;
+  }
+}
+
+h6 {
+  margin-top: 0;
+  color: inherit;
+  line-height: 2;
+  margin-bottom: 1em;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  h6, .h6 {
+    font-size: inherit;
+  }
 }
 
 h1.bordered, h2.bordered, h3.bordered, h4.bordered, h5.bordered, h6.bordered, .h1.bordered, .h2.bordered, .h3.bordered, .h4.bordered, .h5.bordered, .h6.bordered {
   border-bottom: 1px solid #c6c6c6;
   padding-bottom: 10px;
   margin-bottom: 20px;
-}
-
-h1, .h1 {
-  font-size: 2rem;
-}
-
-h2, .h2 {
-  font-size: 1.6rem;
-}
-
-h3, .h3 {
-  font-size: 1.4rem;
-}
-
-h4, .h4 {
-  font-size: 1.2rem;
-}
-
-h5, .h5 {
-  font-size: 1rem;
-}
-
-h6, .h6 {
-  font-size: .8rem;
 }
 
 p {
@@ -5450,8 +5524,9 @@ a.label.error, .label.error {
 }
 
 .card.horizontal .description {
-  -ms-flex-negative: 5;
-      flex-shrink: 5;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .card.horizontal .title, .card.horizontal .actions {
@@ -5464,6 +5539,17 @@ a.label.error, .label.error {
         -ms-flex: 0 0 100% !important;
             flex: 0 0 100% !important;
     width: 100%;
+  }
+  .card.horizontal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card.horizontal .media img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
@@ -5603,16 +5689,23 @@ a.label.error, .label.error {
   padding: 0.1rem .9rem;
   text-decoration: none;
   font-size: 1em;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
-.menu .item > a:focus, .menu .item > a:hover {
+.menu .item > a:hover {
   background: #f0f0f0;
   color: #292a2b;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
-.menu .item > a:active, .menu .item > a.active {
+.menu .item > a:active, .menu .item > a:focus, .menu .item > a.active {
   background: #f0f0f0;
   color: #606265;
+  font-weight: 900;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
 .menu .item + .item {
@@ -5620,9 +5713,10 @@ a.label.error, .label.error {
 }
 
 .menu .item i, .menu .item span.material-icons {
-  color: #7a7e80;
-  font-size: 1.1rem;
-  margin-right: 6px;
+  color: #0a8fff;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  vertical-align: sub;
 }
 
 .menu .badge {
@@ -5636,10 +5730,20 @@ a.label.error, .label.error {
   position: absolute;
   right: 0;
   top: 0;
+  background: none;
+  color: #606265;
+  font-weight: 400;
+  font-size: .9em;
 }
 
 .menu.small > .item a {
   font-size: .879em;
+}
+
+.menu.pure {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
 }
 
 .breadcrumb {
@@ -5686,7 +5790,7 @@ a.label.error, .label.error {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.25em 2em 1.25em;
+  padding: 1.25em 2em 2.85em;
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -5722,7 +5826,7 @@ a.label.error, .label.error {
   display: flex;
   width: 32px;
   height: 32px;
-  top: 10px;
+  top: 13px;
   left: -15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -5763,10 +5867,6 @@ a.label.error, .label.error {
   border-color: #c12424;
 }
 
-.timeline .activity .author {
-  font-weight: bold;
-}
-
 .timeline .activity .author, .timeline .activity .body, .timeline .activity .date, .timeline .activity .actions, .timeline .activity .media {
   min-width: 0;
   max-width: 100%;
@@ -5775,6 +5875,13 @@ a.label.error, .label.error {
       -ms-flex: auto;
           flex: auto;
   margin-left: 10px;
+  width: 100%;
+}
+
+.timeline .activity .author {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #212223;
 }
 
 .timeline .activity .date {
@@ -5783,7 +5890,7 @@ a.label.error, .label.error {
 }
 
 .timeline .activity .media {
-  margin-top: 10px;
+  margin-top: 16px;
   position: relative;
   padding-bottom: 56.25% !important;
   height: 0;
@@ -5811,7 +5918,7 @@ a.label.error, .label.error {
 }
 
 .timeline .activity .actions {
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .timeline .activity:last-child::before {
@@ -5839,32 +5946,32 @@ a.label.error, .label.error {
       -ms-flex-align: center;
           align-items: center;
   padding: 4.5rem 2.5rem;
-  background: #fff;
+  background-color: #fff;
   border-color: #f4f4f4;
   color: #3f4143;
   border: 1px solid #c6c6c6;
 }
 
 .billboard.primary {
-  background: #0a8fff;
+  background-color: #0a8fff;
   border-color: #0083f2;
   color: #fff;
 }
 
 .billboard.success {
-  background: #2ec4b6;
+  background-color: #2ec4b6;
   border-color: #2ab1a5;
   color: #fff;
 }
 
 .billboard.warning {
-  background: #de9e36;
+  background-color: #de9e36;
   border-color: #d99424;
   color: #fff;
 }
 
 .billboard.error {
-  background: #d62828;
+  background-color: #d62828;
   border-color: #c32424;
   color: #fff;
 }
@@ -5877,16 +5984,16 @@ a.label.error, .label.error {
   padding: 2.5rem 1.5rem;
 }
 
+.billboard.small p {
+  font-size: 1em;
+}
+
 .billboard.large {
   padding: 7.5rem 4rem;
 }
 
 .billboard.large .body {
   padding: 7.5rem 4rem;
-}
-
-.billboard.small p {
-  font-size: 1em;
 }
 
 .billboard.large p {
@@ -5904,15 +6011,60 @@ a.label.error, .label.error {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cover {
   min-height: 100vh;
+  max-height: 100%;
   min-width: 100%;
   border: 0;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .billboard {
+    padding: 2.5rem 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .billboard .media img {
+    width: 100%;
+  }
+  .billboard .body {
+    padding: 2.5rem 1rem;
+  }
+  .billboard.small {
+    padding: 1rem;
+  }
+  .billboard.small .body {
+    padding: 1rem;
+  }
+  .billboard.small p {
+    font-size: 1em;
+  }
+  .billboard.large {
+    padding: 1rem;
+  }
+  .billboard.large .body {
+    padding: 1rem;
+  }
+  .billboard.large p {
+    font-size: 1.358em;
+  }
 }
 
 .progress {
@@ -6127,7 +6279,7 @@ a.label.error, .label.error {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.25em 2em 1.25em;
+  padding: 1.25em 2em 2.85em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -6184,7 +6336,7 @@ a.label.error, .label.error {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 1.25em 2em 1.25em;
+    padding: 1.25em 2em 2.85em;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

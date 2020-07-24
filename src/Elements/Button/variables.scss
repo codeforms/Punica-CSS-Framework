@@ -26,7 +26,7 @@ $dropdown-toggle			: 'toggle';
 $menu-secondary				: 'secondary';
 // sizes (name, font-size, padding, font-weight)
 $button-sizes: (
-    ("mini", .839em, .445rem .9rem, 400),
+    ("mini", .839em, .445rem .7rem, 400),
     ("small", .859em, .645rem 1.2rem, 700),
     ("large", 1em, 1.15rem 1.9rem, 700),
     ("huge", 1.25em, 1.3rem 2.2rem, 700)
@@ -50,7 +50,7 @@ $button-group-shadow 		: 0 0.155em 0 0 rgba(0, 0, 0, 0.095);
 $button-bg-image			: none;
 $button-bg-hover-image		: none;
 // button icon
-$button-icon-color			: $menu-item-icon-color;
+$button-icon-color			: $button-text-color;
 $button-icon-shadow			: none; 
 /*
 LINE HEIGHT & WEIGHT *********************************/

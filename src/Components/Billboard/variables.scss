@@ -13,14 +13,16 @@ $billboard-types	: (
 	"warning": $warning-color,
 	"error": $error-color,
 );
-$billboard-sizes	: (
-	"small": 2.5rem 1.5rem,
-	"large": 7.5rem 4rem
-);
-$billboard-text-sizes: (
-	"small": 1em,
-	"large": 1.6em
-);
 /* 
 PREFERENCES ******************************************/
-$billboard-default-padding	: 4.5rem 2.5rem;
+$billboard-default-padding		: 4.5rem 2.5rem;
+$billboard-responsive-padding	: 2.5rem 1rem;
+// sizes (name, padding, font-weight)
+$billboard-sizes	: ( 
+	("small", 2.5rem 1.5rem, 1em),
+	("large", 7.5rem 4rem, 1.6em)
+);
+$billboard-responsive-sizes	: ( 
+	("small", 1rem, 1em),
+	("large", 1rem, 1.358em)
+);

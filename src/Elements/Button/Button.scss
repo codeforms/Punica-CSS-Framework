@@ -13,6 +13,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		text-decoration: none;
 		white-space: nowrap;
 		outline: none;
+		width: min-content;
 		text-shadow: $button-text-shadow;
 		background: $button-bg-color;
 		background-image: $button-bg-image;
@@ -41,9 +42,11 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			text-decoration: none;
 			z-index: 1;
 			transition: .2s;
-			i, [class^="material-icons"] {
-				color: $button-hover-text-color;
-				text-shadow: $button-icon-shadow; 
+		}
+		&:focus {
+			> i, 
+			> [class^="material-icons"] {
+				color: $primary-color;
 			}
 		}
 		&.#{$button-class-active} {

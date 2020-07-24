@@ -4,6 +4,7 @@ PUNICA CSS > COMPONENTS : MENU > VARIABLES ***********/
 /* 
 NAMING ***********************************************/
 $menu-name 					: 'menu';
+$menu-pure 					: 'pure';
 $menu-small 				: 'small';
 $menu-title 				: 'title';
 $menu-item 					: 'item';
@@ -35,6 +36,7 @@ $menu-small-item-padding	: .1rem $menu-padding;
 $menu-item-color			: #606265;
 $menu-item-hover-bg			: darken($menu-bg, 6%);
 // icon
-$menu-item-icon-color		: #7a7e80;
-$menu-item-icon-size		: 1.1rem;
-$menu-item-icon-mr			: 6px; // margin-right
+$menu-item-icon-color		: $primary-color;
+$menu-item-icon-size		: 1.2rem;
+$menu-item-icon-mr			: 10px; // margin-right
+$menu-item-icon-va			: sub; // vertical-align

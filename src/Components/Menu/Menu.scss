@@ -32,15 +32,19 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 				padding: $menu-item-padding;
 				text-decoration: none;
 				font-size: $menu-font-size;
-				&:focus,
+				transition: .15s;
 				&:hover {
 					background: $menu-item-hover-bg;
 					color: darken($menu-item-color, 22%);
+					transition: .15s;
 				}
 				&:active,
+				&:focus,
 				&.#{$menu-item-active} {
 					background: $menu-item-hover-bg;
 					color: $menu-item-color;
+					font-weight: 900;
+					transition: .15s;
 				}
 			}
 			& + .#{$menu-item} {
@@ -51,6 +55,7 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 				color: $menu-item-icon-color;
 				font-size: $menu-item-icon-size;
 				margin-right: $menu-item-icon-mr;
+				vertical-align: $menu-item-icon-va;
 			}
 		}
 		.#{$menu-badge} {
@@ -60,9 +65,17 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 			position: absolute;
 			right: 0;
 			top: 0;
+			background: none;
+			color: $menu-item-color;
+			font-weight: 400;
+    		font-size: .9em;
 		}
 		&.#{$menu-small} > .#{$menu-item} a {
 			font-size: $menu-small-font-size;
+		}
+		&.#{$menu-pure} {
+			box-shadow: none;
+			background: none;
 		}
 	}
 }

@@ -17,17 +17,15 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 				@include billboard-types($main-invert-color, $bg-color);
 			}
 		}
-		@each $size, $padding in $billboard-sizes {
+		@each $size, $padding, $font-size in $billboard-sizes {
 			&.#{$size} {
 				padding: $padding;
 				.#{$billboard-body} {
 					padding: $padding;
 				}
-			}
-		}
-		@each $size-name, $font-size in $billboard-text-sizes {
-			&.#{$size-name} p {
-				font-size: $font-size;
+				p {
+					font-size: $font-size;
+				}
 			}
 		}
 		.#{$billboard-media} {
@@ -36,14 +34,44 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 		.#{$billboard-body} {
 			padding: $billboard-default-padding;
 			flex: 1 1 auto;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
 		}
     }
 	&.#{$billboard-cover} {
 		min-height: 100vh;
+		max-height: 100%;
 		min-width: 100%;
 		border: 0;
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
+	}
+
+	@include breakpoints($breakpoints-medium, 'max-width') {
+		.#{$billboard-name} {
+			padding: $billboard-responsive-padding;
+			flex-direction: column;
+			.#{$billboard-media} {
+				img {
+					width: 100%;
+				}
+			}
+			.#{$billboard-body} {
+				padding: $billboard-responsive-padding;
+			}
+			@each $size, $padding, $font-size in $billboard-responsive-sizes {
+				&.#{$size} {
+					padding: $padding;
+					.#{$billboard-body} {
+						padding: $padding;
+					}
+					p {
+						font-size: $font-size;
+					}
+				}
+			}
+		}
 	}
 }

@@ -80,7 +80,7 @@
         <div class="row">
 
             <div class="col-lg-3 col-sm-16 col-xs-16">
-                <div class="menu transparent shadowless">
+                <div class="menu pure">
                     <div class="title">Components</div>
                     <div class="item">
                         <a href="./alert.html">
@@ -186,6 +186,10 @@
                                                         <td><code>.menu</code></td>
                                                     </tr>
                                                     <tr>
+                                                        <td>Pure Menu</td>
+                                                        <td><code>.pure</code></td>
+                                                    </tr>
+                                                    <tr>
                                                         <td>Menu Item</td>
                                                         <td><code>.item</code></td>
                                                     </tr>
@@ -197,6 +201,10 @@
                                                         <td>Active Item</td>
                                                         <td><code>.active</code></td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Menu Badge</td>
+                                                        <td><code>.badge</code></td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -205,24 +213,61 @@
                             </div>
                             <div class="panel shadowless borderless">
                                 <div class="content">
-                                    <div class="menu">
-                                        <div class="title">Links</div>
-                                        <div class="item">
-                                            <a href="javascript:" class="active">
-                                                My profile
-                                            </a>
+                                    <div class="row">
+                                        <div class="col-sm-16 col-xs-16 col-lg-8">
+                                            <div class="menu">
+                                                <div class="title">Menu</div>
+                                                <div class="item">
+                                                    <a href="javascript:" class="active">
+                                                        <span class="material-icons">person</span> My profile
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="javascript:">
+                                                        <span class="material-icons">email</span> Mail
+                                                    </a>
+                                                    <div class="badge">
+                                                        63
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="javascript:">
+                                                        <span class="material-icons">notifications_active</span> Notifications
+                                                    </a>
+                                                    <div class="badge">
+                                                        85
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="item">
-                                            <a href="javascript:">
-                                                Badge
-                                            </a>
-                                        </div>
-                                        <div class="item">
-                                            <a href="javascript:">
-                                                Billboard
-                                            </a>
+                                        <div class="col-sm-16 col-xs-16 col-lg-8">
+                                            <div class="pure menu">
+                                                <div class="title">Pure Menu</div>
+                                                <div class="item">
+                                                    <a href="javascript:" class="active">
+                                                        <span class="material-icons">person</span> My profile
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="javascript:">
+                                                        <span class="material-icons">email</span> Mail
+                                                    </a>
+                                                    <div class="badge">
+                                                        63
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="javascript:">
+                                                        <span class="material-icons">notifications_active</span> Notifications
+                                                    </a>
+                                                    <div class="badge">
+                                                        85
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="content">
                                     <div id="highlighter_268895" class="syntaxhighlighter nogutter  xml">
@@ -240,7 +285,7 @@
                                                                     class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
                                                                     class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
                                                                     class="xml color1">class</code><code class="xml plain">=</code><code
-                                                                    class="xml string">"title"</code><code class="xml plain">&gt;Links&lt;/</code><code
+                                                                    class="xml string">"title"</code><code class="xml plain">&gt;Menu&lt;/</code><code
                                                                     class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
                                                             <div class="line number3 index2 alt2"><code
                                                                     class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
@@ -256,7 +301,7 @@
                                                                     class="xml plain">&gt;</code></div>
                                                             <div class="line number5 index4 alt2"><code
                                                                     class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-                                                                    class="xml plain">My&nbsp;profile</code></div>
+                                                                    class="xml plain">Item</code></div>
                                                             <div class="line number6 index5 alt1"><code
                                                                     class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
                                                                     class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
@@ -277,7 +322,7 @@
                                                                     class="xml string">""</code><code class="xml plain">&gt;</code></div>
                                                             <div class="line number10 index9 alt1"><code
                                                                     class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-                                                                    class="xml plain">Badge</code></div>
+                                                                    class="xml plain">Item</code></div>
                                                             <div class="line number11 index10 alt2"><code
                                                                     class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
                                                                     class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
@@ -298,7 +343,7 @@
                                                                     class="xml string">""</code><code class="xml plain">&gt;</code></div>
                                                             <div class="line number15 index14 alt2"><code
                                                                     class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-                                                                    class="xml plain">Billboard</code></div>
+                                                                    class="xml plain">Item</code></div>
                                                             <div class="line number16 index15 alt1"><code
                                                                     class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
                                                                     class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
