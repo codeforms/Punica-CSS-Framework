@@ -1,8 +1,8 @@
 /*****************************************************
 *** GLOBAL MIXINS ************************************/
 @mixin embedded-media {
-    // References;
-    // https://css-tricks.com/fluid-width-video/
+	// References;
+	// https://css-tricks.com/fluid-width-video/
 	position: relative; 
 	padding-bottom: 56.25% !important; 
 	height: 0; 
@@ -19,10 +19,10 @@
 		width: 100%; 
 		height: 100%;
 		padding-left: 0;
-    }
-    video {
-        max-width: 100%;
-        height: auto;
-        box-sizing: border-box;
-    }
+	}
+	video {
+		max-width: 100%;
+		height: auto;
+		box-sizing: border-box;
+	}
 }

@@ -3,22 +3,22 @@ PUNICA CSS > COMPONENTS : PROCESS > VARIABLES ********/
 
 /* 
 NAMING ***********************************************/
-$process-name				    : 'process';
-$process-item				    : 'item';
-$process-active				    : 'active';
-$process-vertical			    : 'vertical';
+$process-name					: 'process';
+$process-item					: 'item';
+$process-active					: 'active';
+$process-vertical				: 'vertical';
 $process-styles	: (
 	"success": $success-color,
 	"warning": $warning-color,
 	"error": $error-color,
 );
 
-$process-item-min-width		    : 150px;
-$process-margin				    : 1em 0 5em;
-$process-item-min-height	    : 4rem;
-$process-stick-height   	    : 6px;
-$process-stage-stick-width	    : 3px;
-$process-stage-stick-height	    : .8rem;
-$process-current-icon-size	    : 1.8rem;
+$process-item-min-width			: 150px;
+$process-margin					: 1em 0 5em;
+$process-item-min-height		: 4rem;
+$process-stick-height			: 6px;
+$process-stage-stick-width		: 3px;
+$process-stage-stick-height		: .8rem;
+$process-current-icon-size		: 1.8rem;
 // vertical
-$process-vertical-stick-width   : 9px;
+$process-vertical-stick-width	: 9px;

@@ -3,26 +3,9 @@ PUNICA CSS > ELEMENTS : ICON *************************/
 
 // if icon is enable
 @if $elements-icon {
-	@font-face {
-		font-family: 'Material Icons';
-		font-style: normal;
-		font-weight: 400;
-		src: url(https://fonts.gstatic.com/s/materialicons/v53/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-	}
 	.material-icons {
-		font-family: 'Material Icons';
-		font-weight: normal;
-		font-style: normal;
 		font-size: 1.1rem;
 		line-height: 1;
-		letter-spacing: normal;
-		text-transform: none;
-		display: inline-block;
-		white-space: nowrap;
-		word-wrap: normal;
-		direction: ltr;
 		vertical-align: middle;
-		-webkit-font-feature-settings: 'liga';
-		-webkit-font-smoothing: antialiased;
 	}
 }

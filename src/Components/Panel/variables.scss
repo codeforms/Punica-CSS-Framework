@@ -9,6 +9,7 @@ $panel-title					: 'title';
 $panel-headline					: 'headline';
 $panel-bottom					: 'bottom';
 $panel-content					: 'content';
+$panel-media					: 'media';
 $panel-title-actions			: 'actions';
 $panel-pure						: 'pure';
 /*
@@ -22,17 +23,18 @@ $panel-border-radius			: 4px;
 $panel-border-color				: $main-border-color;
 $panel-border-style				: $main-border-style;
 // header & title
-$panel-title-font-size			: 1.2rem;
+$panel-title-font-size			: 1.358rem;
 $panel-title-font-weight		: 900;
 $panel-title-bottom-border		: 1px $panel-border-style $panel-border-color;
 $panel-title-min-height			: 50px;
 $panel-title-padding			: 24px;
 // headline
-$panel-headline-font-size		: 1.48em;
+$panel-headline-font-size		: 1.58em;
 $panel-headline-line-height		: 1.5;
 $panel-headline-margin-bottom	: 32px;
 $panel-headline-color			: darken($main-font-color, 16%);
-$panel-content-p-size			: 1.1649em;
+$panel-headline-letter-spacing	: -.0258em;
+$panel-content-p-size			: 1.3249em;
 // bottom
 $panel-bottom-min-height		: 50px;
 $panel-bottom-border			: 1px $panel-border-style $panel-border-color;

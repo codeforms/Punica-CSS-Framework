@@ -8,13 +8,16 @@ $breadcrumb-item				: 'item';
 $breadcrumb-active				: 'active';
 /* 
 PREFERENCES ******************************************/
-$breadcrumb-padding-x			: .8em;
-$breadcrumb-padding-y			: 0;
+// size, font-size, seperator-size, seperator-padding, seperator-size
+$breadcrumb-sizes               : (
+    ('small', .9589em, 1.4rem, .25em, 1.6rem),
+    ('large', 1.1rem, 1.9rem, .55em, 2rem)
+);
 /* 
 SEPARATOR ********************************************/
 $breadcrumb-seperator			: '\203A'; // [1]
 $breadcrumb-seperator-color		: black;
-$breadcrumb-seperator-padding	: $breadcrumb-padding-y .45em;
+$breadcrumb-seperator-padding	: 0 .45em;
 $breadcrumb-seperator-vertical	: sub;
 $breadcrumb-seperator-size		: 1.8rem;
 /* 

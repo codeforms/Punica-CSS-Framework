@@ -36,6 +36,14 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 			flex: 1 1 auto;
 			padding: $panel-padding;
 			height: auto;
+			&>.#{$panel-media} {
+				min-width: 0;
+				max-width: 100%;
+				flex: auto;
+				margin-bottom: 32px;
+				width: 100%;
+				@include embedded-media();
+			}
 			p {
 				font-size: $panel-content-p-size;
 			}
@@ -45,6 +53,7 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 				line-height: $panel-headline-line-height;
 				margin-bottom: $panel-headline-margin-bottom;
 				color: $panel-headline-color;
+				letter-spacing: $panel-headline-letter-spacing;
 			}
 		}
 		.#{$panel-bottom} {

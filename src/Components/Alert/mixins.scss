@@ -5,4 +5,7 @@ PUNICA CSS > COMPONENT : ALERT > MIXINS **************/
 	background: $theme;
 	border-color: $theme;
 	color: $text-color;
+	a {
+		color: $text-color;
+	}
 }

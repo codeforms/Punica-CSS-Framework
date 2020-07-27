@@ -8,6 +8,7 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 		white-space: nowrap;
 		.#{$breadcrumb-item} {
 			text-decoration: none;
+			font-size: inherit;
 			&::after {
 				content: $breadcrumb-seperator;
 				color: $breadcrumb-seperator-color;
@@ -22,7 +23,19 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 				color: $main-font-color;
 				font-weight: bold;
 				&::after {
-				content: none;
+					content: none;
+				}
+			}
+		}
+		// size, font-size, seperator-size, seperator-padding, seperator-size
+		@each $size, $font-size, $seperator-size, $seperator-padding, $seperator-size in $breadcrumb-sizes {
+			&.#{$size} {
+				.#{$breadcrumb-item} {
+					font-size: $font-size;
+					&::after {
+						padding: $seperator-padding;
+						font-size: $seperator-size;
+					}
 				}
 			}
 		}

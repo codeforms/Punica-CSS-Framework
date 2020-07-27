@@ -188,6 +188,14 @@
 												<td><code>.cards</code></td>
 											</tr>
 											<tr>
+												<td>Body</td>
+												<td><code>.body</code></td>
+											</tr>
+											<tr>
+												<td>Title</td>
+												<td><code>.title</code></td>
+											</tr>
+											<tr>
 												<td>Subtitle</td>
 												<td><code>.subtitle</code></td>
 											</tr>
@@ -249,7 +257,6 @@
 										</div>
 										<div class="col-sm-16 col-xs-16 col-lg-10 offset-lg-7">
 											<div id="highlighter_21387" class="syntaxhighlighter nogutter  xml">
-												<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
 												<table border="0" cellpadding="0" cellspacing="0">
 													<tbody>
 														<tr>
@@ -351,7 +358,6 @@
 										</div>
 										<div class="col-sm-16 col-xs-16 col-lg-10 offset-lg-7">
 											<div id="highlighter_951809" class="syntaxhighlighter nogutter  xml">
-												<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
 												<table border="0" cellpadding="0" cellspacing="0">
 													<tbody>
 														<tr>
@@ -506,7 +512,6 @@
 										</div>
 										<div class="col-sm-16 col-xs-16 col-lg-10 offset-lg-7">
 											<div id="highlighter_654920" class="syntaxhighlighter nogutter  xml">
-												<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
 												<table border="0" cellpadding="0" cellspacing="0">
 													<tbody>
 														<tr>
@@ -592,7 +597,6 @@
 										</div>
 										<div class="col-sm-16 col-xs-16 col-lg-10 offset-lg-7">
 											<div id="highlighter_654137" class="syntaxhighlighter nogutter  xml">
-												<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
 												<table border="0" cellpadding="0" cellspacing="0">
 													<tbody>
 														<tr>
@@ -713,7 +717,6 @@
 								</div>
 								<div class="content">
 									<div id="highlighter_707671" class="syntaxhighlighter nogutter  xml">
-										<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
 										<table border="0" cellpadding="0" cellspacing="0">
 											<tbody>
 												<tr>
@@ -803,33 +806,11 @@
 							<h4 class="bordered">
 								Horizontal Cards
 							</h4>
+							<p>
+								Just add the <code>.horizontal</code> class to <code>.card</code> container class.
+							</p>
 							<div class="alert">
-								<code>.title</code> and <code>.actions</code> classes are not used in horizontal cards. All content is used within the
-								<code>.description</code> class.
-							</div>
-
-							<!-- info -->
-							<div class="panel shadowless borderless">
-								<div class="content">
-									<table class="table">
-										<thead>
-											<tr>
-												<th style="width: 50%;">Parts</th>
-												<th>Class</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Description</td>
-												<td><code>.description</code></td>
-											</tr>
-											<tr>
-												<td>Media</td>
-												<td><code>.media</code></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+								<code>.title</code>, <code>.subtitle</code> and <code>.description</code> classes should be used in <code>.body</code> container class in horizontal cards.
 							</div>
 							
 							<div class="panel shadowless borderless">
@@ -839,17 +820,27 @@
 											<div class="media">
 												<img src="https://source.unsplash.com/user/josilito/800x600" width="200">
 											</div>
-											<div class="description">
-												<div class="h5">Card Title</div>
-												Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat temporibus vix, ei probo velit
-												debitis eos.
+											<div class="body">
+												<div class="title">
+													<div class="h5">Card Title</div>
+													<div class="subtitle">Card Subtitle</div>
+												</div>
+												<div class="description">
+													Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat temporibus vix, ei probo velit
+													debitis eos.
+												</div>
 											</div>
 										</div>
 										<div class="card horizontal">
-											<div class="description">
-												<div class="h5">Card Title</div>
-												Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat temporibus vix, ei probo velit
-												debitis eos.
+											<div class="body">
+												<div class="title">
+													<div class="h5">Card Title</div>
+													<div class="subtitle">Card Subtitle</div>
+												</div>
+												<div class="description">
+													Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat temporibus vix, ei probo velit
+													debitis eos.
+												</div>
 											</div>
 											<div class="media">
 												<img src="https://source.unsplash.com/user/aahubs/800x600" width="200">
@@ -858,60 +849,169 @@
 									</div>
 								</div>
 								<div class="content">
-									<div id="highlighter_302142" class="syntaxhighlighter nogutter  xml">
-										<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
-										<table border="0" cellpadding="0" cellspacing="0">
-											<tbody>
-												<tr>
-													<td class="code">
-														<div class="container">
-															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"card&nbsp;horizontal"</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number2 index1 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"media"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number3 index2 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">img</code>&nbsp;<code
-																	class="xml color1">src</code><code class="xml plain">=</code><code
-																	class="xml string">""</code>&nbsp;<code class="xml color1">width</code><code
-																	class="xml plain">=</code><code class="xml string">"200"</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number4 index3 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number5 index4 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"description"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number6 index5 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"h4"</code><code
-																	class="xml plain">&gt;Card&nbsp;Title&lt;/</code><code
-																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
-															<div class="line number7 index6 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet...</code></div>
-															<div class="line number8 index7 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number9 index8 alt2"><code class="xml plain">&lt;/</code><code
-																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="row">
+										<div class="col-lg-8 col-xs-16 col-sm-16">
+											<div id="highlighter_99111" class="syntaxhighlighter nogutter  xml">
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tbody>
+														<tr>
+															<td class="code">
+																<div class="container">
+																	<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																			class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																			class="xml plain">=</code><code class="xml string">"card&nbsp;horizontal"</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number2 index1 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"media"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number3 index2 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">img</code>&nbsp;<code
+																			class="xml color1">src</code><code class="xml plain">=</code><code
+																			class="xml string">""</code>&nbsp;<code class="xml color1">width</code><code
+																			class="xml plain">=</code><code class="xml string">"200"</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number4 index3 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number5 index4 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"body"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number6 index5 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"title"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number7 index6 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"h5"</code><code
+																			class="xml plain">&gt;Card&nbsp;Title&lt;/</code><code
+																			class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number8 index7 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"subtitle"</code><code
+																			class="xml plain">&gt;Card&nbsp;Subtitle&lt;/</code><code
+																			class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number9 index8 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number10 index9 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"description"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number11 index10 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet..</code></div>
+																	<div class="line number12 index11 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number13 index12 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number14 index13 alt1"><code class="xml plain">&lt;/</code><code
+																			class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="col-lg-8 col-xs-16 col-sm-16">
+											<div id="highlighter_182790" class="syntaxhighlighter nogutter  xml">
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tbody>
+														<tr>
+															<td class="code">
+																<div class="container">
+																	<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																			class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																			class="xml plain">=</code><code class="xml string">"card&nbsp;horizontal"</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number2 index1 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"body"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number3 index2 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"title"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number4 index3 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"h5"</code><code
+																			class="xml plain">&gt;Card&nbsp;Title&lt;/</code><code
+																			class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number5 index4 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"subtitle"</code><code
+																			class="xml plain">&gt;Card&nbsp;Subtitle&lt;/</code><code
+																			class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number6 index5 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number7 index6 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"description"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number8 index7 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet..</code></div>
+																	<div class="line number9 index8 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number10 index9 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number11 index10 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																			class="xml color1">class</code><code class="xml plain">=</code><code
+																			class="xml string">"media"</code><code class="xml plain">&gt;</code></div>
+																	<div class="line number12 index11 alt1"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;</code><code class="xml keyword">img</code>&nbsp;<code
+																			class="xml color1">src</code><code class="xml plain">=</code><code
+																			class="xml string">""</code>&nbsp;<code class="xml color1">width</code><code
+																			class="xml plain">=</code><code class="xml string">"200"</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number13 index12 alt2"><code
+																			class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																			class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																			class="xml plain">&gt;</code></div>
+																	<div class="line number14 index13 alt1"><code class="xml plain">&lt;/</code><code
+																			class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
 									</div>
+									
 								</div>
 							</div>
 						</div>

@@ -26,6 +26,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		width: calc(33% - (2 * #{$card-margin}));
 		height: 100%;
 		overflow: hidden;
+		>.#{$card-body} .#{$card-title},
 		.#{$card-title} {
 			color: darken($main-font-color, 15%);
 			line-height: initial;
@@ -35,15 +36,15 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 			}
 		}
 		.#{$card-title},
-		.#{$card-content},
+		.#{$card-description},
 		.#{$card-action} {
 			padding: $card-padding;
 		}
-		.#{$card-content} {
+		.#{$card-description} {
 			flex: 1 1 auto;
 			color: $main-font-color;
 		}
-		.#{$card-media} {
+		&>.#{$card-media} {
 			img {
 				display: block;
 				height: auto;
@@ -56,19 +57,22 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 				width: 100%;
 				align-items: center;
 				margin-bottom: 15px;
-				.#{$card-media} {
+				>.#{$card-media} {
 					flex-flow: row nowrap;
 					flex-shrink: unset;
+					flex: 0 0 auto;
 					img	{
 						flex-shrink: 0;
 					}
 				}
-				.#{$card-content} {
-					flex: 1;
-				}
-				.#{$card-title},
-				.#{$card-action} {
-					display: none;
+				>.#{$card-body} {
+					.#{$card-title},
+					.#{$card-description} {
+						padding: calc(#{$card-padding} / 2) $card-padding;
+					}
+					.#{$card-description} {
+						flex: 1;
+					}
 				}
 			}
 		}
@@ -82,7 +86,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		@if $components-card-horizontal {
 			.#{$card-name}.#{$card-horizontal} {
 				flex-direction: column;
-				.#{$card-media} img	{
+				&>.#{$card-media} img	{
 					width: fit-content;
 				}
 			}

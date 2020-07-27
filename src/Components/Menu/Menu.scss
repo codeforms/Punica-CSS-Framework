@@ -46,6 +46,9 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 					font-weight: 900;
 					transition: .15s;
 				}
+				&:focus {
+					font-weight: inherit;
+				}
 			}
 			& + .#{$menu-item} {
 				margin-top: .2rem;
