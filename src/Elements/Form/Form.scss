@@ -31,6 +31,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 		outline-offset: -$form-outline-width;
 		padding: .4rem .5rem;
 		width: 100%;
+		font-family: inherit;
+		color: $main-font-color;
+		font-size: $form-input-size;
 		&:focus {
 			outline: $form-outline-width solid $form-outline-color;
 			outline-offset: -$form-outline-width;
@@ -66,6 +69,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 	input[type='radio'] {
 		display: inline;
 	}
+	input:disabled {
+	  opacity: .5;
+	}
 	.#{$form-name} {
 		position: relative;
 		max-width: 100%;
@@ -82,7 +88,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			width: 100%;
 			max-width: 100%;
 			position: relative;
-			overflow: hidden;
+			//overflow: hidden;
 			align-items: flex-start;
 			&>label {
 				margin: 0 0 .15rem 0;
@@ -99,7 +105,41 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				top: 0;
 				left: 0;
 				height: 100%;
-				cursor: pointer;
+				cursor: default;
+			}
+			// form group
+			.#{$form-group} {
+				display: flex;
+			    width: 100%;
+				&>* {
+					flex: 1 1 auto;
+					&:last-child {
+		    			margin-left: -1px;
+					}
+					&:not(:first-child):not(:last-child) {
+	    			    margin-left: -1px;
+	    				margin-right: 0;
+					}
+				}
+				&>.#{$button-class-group} {
+					box-shadow: none;
+				}
+				&>.#{$button-class},
+				&>.#{$button-class-group} > .#{$button-class},
+				&>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class} {
+					height: $form-input-height;
+					font-size: $button-font-size;
+					padding: $button-padding;
+					font-weight: $button-font-weight;
+					&:first-child {
+						border-bottom-right-radius: 0;
+		    			border-top-right-radius: 0;
+					}
+					&:last-child:not(:first-child) {
+						border-bottom-left-radius: 0;
+		    			border-top-left-radius: 0;
+					}
+				}
 			}
 		}
 		@each $name, $number in $grids {

@@ -237,9 +237,10 @@
 									</form>
 								</div>
 							</div>
+
 							<div class="panel borderless shadowless">
 								<div class="header">
-									<div class="title">Form groups</div>
+									<div class="title">Form Items</div>
 								</div>
 								<div class="content">
 									<p>
@@ -277,7 +278,6 @@
 								</div>
 								<div class="content">
 									<div id="highlighter_827093" class="syntaxhighlighter nogutter  xml">
-										<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
 										<table border="0" cellpadding="0" cellspacing="0">
 											<tbody>
 												<tr>
@@ -391,6 +391,130 @@
 																	class="xml plain">&gt;</code></div>
 															<div class="line number21 index20 alt2"><code class="xml plain">&lt;/</code><code
 																	class="xml keyword">form</code><code class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel borderless shadowless">
+								<div class="header">
+									<div class="title">Form Groups</div>
+								</div>
+								<div class="content">
+									<p>You can attach select or button along with an input. Just add the <code>.group</code> class to a container class in the <code>.item</code> container.</p>
+									<div class="form mt-50">
+										<div class="item">
+											<div class="group">
+												<input type="text" name="query" placeholder="search..." id="query">
+												<button class="button primary">
+													<i class="material-icons">search</i>
+												</button>
+											</div>
+										</div>
+										<div class="item">
+											<div class="group">
+												<div class="button inactive">
+													<span class="material-icons">call</span>
+												</div>
+												<input type="text" name="phone" placeholder="phone...">
+											</div>
+										</div>
+										<div class="item">
+											<label>Your Full Name</label>
+											<div class="group">
+												<select name="title">
+													<option value="mr">Mr.</option>
+													<option value="mrs">Mrs.</option>
+												</select>
+												<input type="text" name="name" placeholder="name..." autocomplete="off">
+												<input type="text" name="middle" placeholder="middle..." autocomplete="off">
+												<input type="text" name="surname" placeholder="surname..." autocomplete="off">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="content">
+									<div id="highlighter_455959" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"form"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"item"</code><code class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">label</code><code
+																	class="xml plain">&gt;Your&nbsp;Full&nbsp;Name&lt;/</code><code
+																	class="xml keyword">label</code><code class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"group"</code><code class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">select</code>&nbsp;<code
+																	class="xml color1">name</code><code class="xml plain">=</code><code
+																	class="xml string">"title"</code><code class="xml plain">&gt;</code></div>
+															<div class="line number6 index5 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">option</code>&nbsp;<code
+																	class="xml color1">value</code><code class="xml plain">=</code><code
+																	class="xml string">"mr"</code><code class="xml plain">&gt;Mr.&lt;/</code><code
+																	class="xml keyword">option</code><code class="xml plain">&gt;</code></div>
+															<div class="line number7 index6 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">option</code>&nbsp;<code
+																	class="xml color1">value</code><code class="xml plain">=</code><code
+																	class="xml string">"mrs"</code><code class="xml plain">&gt;Mrs.&lt;/</code><code
+																	class="xml keyword">option</code><code class="xml plain">&gt;</code></div>
+															<div class="line number8 index7 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">select</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number9 index8 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">input</code>&nbsp;<code
+																	class="xml color1">type</code><code class="xml plain">=</code><code
+																	class="xml string">"text"</code>&nbsp;<code class="xml color1">name</code><code
+																	class="xml plain">=</code><code class="xml string">"name"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number10 index9 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">input</code>&nbsp;<code
+																	class="xml color1">type</code><code class="xml plain">=</code><code
+																	class="xml string">"text"</code>&nbsp;<code class="xml color1">name</code><code
+																	class="xml plain">=</code><code class="xml string">"middle"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number11 index10 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">input</code>&nbsp;<code
+																	class="xml color1">type</code><code class="xml plain">=</code><code
+																	class="xml string">"text"</code>&nbsp;<code class="xml color1">name</code><code
+																	class="xml plain">=</code><code class="xml string">"surname"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number12 index11 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number13 index12 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number14 index13 alt1"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
 														</div>
 													</td>
 												</tr>

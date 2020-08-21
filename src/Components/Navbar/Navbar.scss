@@ -69,6 +69,10 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				&:not(:first-child):last-child {
 					justify-content: flex-end;
 				}
+				input[type='text'] {
+					background-color: $navbar-color;
+					border-color: darken($navbar-bg, 13%);
+				}
 			}
 		}
 		&.#{$navbar-fixed} {

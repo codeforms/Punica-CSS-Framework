@@ -4735,6 +4735,9 @@ input[type='color'], input[type='date'], input[type='datetime'], input[type='dat
   outline-offset: -2px;
   padding: .4rem .5rem;
   width: 100%;
+  font-family: inherit;
+  color: #3f4143;
+  font-size: 1.088em;
 }
 
 input[type='color']:focus, input[type='date']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='month']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, input[type='week']:focus, input[type='file']:focus, input:not([type]):focus, textarea:focus, select:focus {
@@ -4775,6 +4778,10 @@ input[type='checkbox'], input[type='radio'] {
   display: inline;
 }
 
+input:disabled {
+  opacity: .5;
+}
+
 .form {
   position: relative;
   max-width: 100%;
@@ -4800,7 +4807,6 @@ input[type='checkbox'], input[type='radio'] {
   width: 100%;
   max-width: 100%;
   position: relative;
-  overflow: hidden;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -4824,7 +4830,51 @@ input[type='checkbox'], input[type='radio'] {
   top: 0;
   left: 0;
   height: 100%;
-  cursor: pointer;
+  cursor: default;
+}
+
+.form .item .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.form .item .group > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.form .item .group > *:last-child {
+  margin-left: -1px;
+}
+
+.form .item .group > *:not(:first-child):not(:last-child) {
+  margin-left: -1px;
+  margin-right: 0;
+}
+
+.form .item .group > .buttons {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form .item .group > .button, .form .item .group > .buttons > .button, .form .item .group > .buttons > .dropdown > .button {
+  height: 2.5rem;
+  font-size: .9338em;
+  padding: 0.935rem 1.4rem;
+  font-weight: 700;
+}
+
+.form .item .group > .button:first-child, .form .item .group > .buttons > .button:first-child, .form .item .group > .buttons > .dropdown > .button:first-child {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form .item .group > .button:last-child:not(:first-child), .form .item .group > .buttons > .button:last-child:not(:first-child), .form .item .group > .buttons > .dropdown > .button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .form .one.items > .item {
@@ -5699,7 +5749,7 @@ a.label.error, .label.error {
   border-radius: 0;
   list-style: none;
   margin: 0;
-  min-width: 180px;
+  min-width: 200px;
   padding: .9rem;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
@@ -6590,6 +6640,11 @@ a.label.error, .label.error {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.navbar section.links div.section input[type='text'] {
+  background-color: #fff;
+  border-color: #006cc7;
 }
 
 .navbar.fixed {
