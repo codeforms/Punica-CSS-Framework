@@ -10,10 +10,13 @@ $navbar-shadowed		: 'shadowed';
 $navbar-brand			: 'brand';
 $navbar-links			: 'links';
 $navbar-burger			: 'burger';
+$navbar-light-theme		: 'light';
 $navbar-spacer			: 'navbar-spacer'; // if nav is fixed
 
 $navbar-bg				: $primary-color;
+$navbar-light-bg		: $main-bg;
 $navbar-color			: $main-invert-color;
+$navbar-light-color		: $main-font-color;
 $navbar-min-height		: 80px;
 $navbar-brand-padding	: 0 50px;
 $navbar-font-size		: 1.1em;

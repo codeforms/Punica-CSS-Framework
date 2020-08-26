@@ -406,6 +406,10 @@
 								</div>
 								<div class="content">
 									<p>You can attach select or button along with an input. Just add the <code>.group</code> class to a container class in the <code>.item</code> container.</p>
+									<div class="alert">
+										<span class="material-icons color-warning mr-10">info</span> All <code>.group</code> classes should be used in
+										<code>.form</code> or <code>.form > .item</code> container class.
+									</div>
 									<div class="form mt-50">
 										<div class="item">
 											<div class="group">
@@ -520,6 +524,82 @@
 												</tr>
 											</tbody>
 										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel borderless shadowless">
+								<div class="header">
+									<div class="title">Horizontal Forms</div>
+								</div>
+								<div class="content">
+									<p>
+										If you want to have a horizontal form, you can use the Punica's <a href="../base/grid.html">Grid</a> system.
+									</p>
+									<div class="form mt-50">
+										<div class="row">
+											<div class="col-xs-16 col-lg-4">
+												<label>Full Name</label>
+											</div>
+											<div class="col-xs-16 col-lg-12">
+												<div class="group">
+													<select name="title">
+														<option value="mr">Mr.</option>
+														<option value="mrs">Mrs.</option>
+													</select>
+													<input type="text" name="name">
+													<input type="text" name="middle">
+													<input type="text" name="surname">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-16 col-lg-4">
+												<label>Email</label>
+											</div>
+											<div class="col-xs-16 col-lg-12">
+												<input type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-16 col-lg-4">
+												<label>Color</label>
+											</div>
+											<div class="col-xs-16 col-lg-12">
+												<div class="radio">
+													<input id="blue" name="color" type="radio" checked>
+													<label for="blue">Blue</label>
+												</div>
+												<div class="radio">
+													<input id="green" name="color" type="radio">
+													<label for="green">Green</label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-16 col-lg-4">
+												<label>Message</label>
+											</div>
+											<div class="col-xs-16 col-lg-12">
+												<textarea></textarea>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-16 col-lg-4">
+												<label>Notification</label>
+											</div>
+											<div class="col-xs-16 col-lg-12">
+												<div class="checkbox">
+													<input id="notification" type="checkbox">
+													<label for="notification">Yeah, send me an email !</label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-16 col-lg-12 offset-lg-5">
+												<button class="button large primary">Submit</button>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

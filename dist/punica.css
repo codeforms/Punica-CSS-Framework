@@ -4322,7 +4322,7 @@ a.button.active i, a.button.active [class^="material-icons"], .button.active i, 
 
 a.button[disabled], a.button:disabled, a.button.disabled, .button[disabled], .button:disabled, .button.disabled {
   cursor: default;
-  opacity: .5;
+  opacity: .59;
   pointer-events: none;
 }
 
@@ -4779,7 +4779,7 @@ input[type='checkbox'], input[type='radio'] {
 }
 
 input:disabled {
-  opacity: .5;
+  opacity: .59;
 }
 
 .form {
@@ -4812,7 +4812,7 @@ input:disabled {
           align-items: flex-start;
 }
 
-.form .item > label {
+.form label, .form .item > label {
   margin: 0 0 .15rem 0;
   color: #000;
   font-size: 1.138em;
@@ -4833,46 +4833,46 @@ input:disabled {
   cursor: default;
 }
 
-.form .item .group {
+.form .group, .form .item > .group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.form .item .group > * {
+.form .group > *, .form .item > .group > * {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
 
-.form .item .group > *:last-child {
+.form .group > *:last-child, .form .item > .group > *:last-child {
   margin-left: -1px;
 }
 
-.form .item .group > *:not(:first-child):not(:last-child) {
+.form .group > *:not(:first-child):not(:last-child), .form .item > .group > *:not(:first-child):not(:last-child) {
   margin-left: -1px;
   margin-right: 0;
 }
 
-.form .item .group > .buttons {
+.form .group > .buttons, .form .item > .group > .buttons {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.form .item .group > .button, .form .item .group > .buttons > .button, .form .item .group > .buttons > .dropdown > .button {
+.form .group > .button, .form .group > .buttons > .button, .form .group > .buttons > .dropdown > .button, .form .item > .group > .button, .form .item > .group > .buttons > .button, .form .item > .group > .buttons > .dropdown > .button {
   height: 2.5rem;
   font-size: .9338em;
   padding: 0.935rem 1.4rem;
   font-weight: 700;
 }
 
-.form .item .group > .button:first-child, .form .item .group > .buttons > .button:first-child, .form .item .group > .buttons > .dropdown > .button:first-child {
+.form .group > .button:first-child, .form .group > .buttons > .button:first-child, .form .group > .buttons > .dropdown > .button:first-child, .form .item > .group > .button:first-child, .form .item > .group > .buttons > .button:first-child, .form .item > .group > .buttons > .dropdown > .button:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.form .item .group > .button:last-child:not(:first-child), .form .item .group > .buttons > .button:last-child:not(:first-child), .form .item .group > .buttons > .dropdown > .button:last-child:not(:first-child) {
+.form .group > .button:last-child:not(:first-child), .form .group > .buttons > .button:last-child:not(:first-child), .form .group > .buttons > .dropdown > .button:last-child:not(:first-child), .form .item > .group > .button:last-child:not(:first-child), .form .item > .group > .buttons > .button:last-child:not(:first-child), .form .item > .group > .buttons > .dropdown > .button:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4987,6 +4987,7 @@ input:disabled {
       -ms-user-select: none;
           user-select: none;
   padding-top: 0;
+  font-weight: 400;
 }
 
 .radio input, .checkbox input {
@@ -5751,8 +5752,8 @@ a.label.error, .label.error {
   margin: 0;
   min-width: 200px;
   padding: .9rem;
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
   z-index: 300;
 }
 
@@ -6592,6 +6593,7 @@ a.label.error, .label.error {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-weight: bold;
 }
 
 .navbar input[type=checkbox]#burger, .navbar .burger {
@@ -6644,7 +6646,6 @@ a.label.error, .label.error {
 
 .navbar section.links div.section input[type='text'] {
   background-color: #fff;
-  border-color: #006cc7;
 }
 
 .navbar.fixed {
@@ -6684,6 +6685,29 @@ a.label.error, .label.error {
 
 .navbar .button, .navbar .dropdown .button {
   font-size: 1.1em;
+}
+
+.navbar.light {
+  background: #fff;
+  color: #3f4143;
+}
+
+.navbar.light .buttons .button {
+  color: #3f4143;
+  min-height: 100%;
+}
+
+.navbar.light .buttons .button i, .navbar.light .buttons .button span.material-icons {
+  color: #3f4143;
+}
+
+.navbar.light .brand a, .navbar.light .brand a:visited {
+  color: #3f4143;
+}
+
+.navbar.light section.links div.section input[type='text'] {
+  background-color: #fff;
+  border-color: #dedede;
 }
 
 .navbar-spacer {
@@ -7222,6 +7246,21 @@ a.label.error, .label.error {
 
 .bg-error {
   background-color: #d62828 !important;
+}
+
+.bg-grid {
+  height: 100%;
+  background-color: #fff;
+  background-position: center center;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(16%, rgba(0, 0, 0, 0.075)), color-stop(16%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(16%, rgba(0, 0, 0, 0.075)), color-stop(16%, transparent));
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.075) 16%, transparent 16%), linear-gradient(rgba(0, 0, 0, 0.075) 16%, transparent 16%);
+  background-size: 10px 10px;
+}
+
+.bg-stripe {
+  height: 100%;
+  background-image: linear-gradient(#fff, #fff 7px, #dbdbdb 4px, #dbdbdb);
+  background-size: 100% 8px;
 }
 
 .centered {

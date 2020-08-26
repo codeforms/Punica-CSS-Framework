@@ -64,7 +64,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		&:disabled,
 		&.#{$button-class-disabled} {
 			cursor: default;
-			opacity: .5;
+			opacity: .59;
 			pointer-events: none;
 		}
 		@if $elements-button-types {

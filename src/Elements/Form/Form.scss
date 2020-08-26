@@ -70,7 +70,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 		display: inline;
 	}
 	input:disabled {
-	  opacity: .5;
+	  opacity: .59;
 	}
 	.#{$form-name} {
 		position: relative;
@@ -90,6 +90,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			position: relative;
 			//overflow: hidden;
 			align-items: flex-start;
+			@at-root .#{$form-name} label,
 			&>label {
 				margin: 0 0 .15rem 0;
 				color: $form-label-color;
@@ -108,7 +109,8 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				cursor: default;
 			}
 			// form group
-			.#{$form-group} {
+			@at-root .#{$form-name} .#{$form-group},
+			&>.#{$form-group} {
 				display: flex;
 			    width: 100%;
 				&>* {
@@ -160,6 +162,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			cursor: pointer;
 			user-select: none;
 			padding-top: 0;
+			font-weight: 400;
 		}
 		input {
 			left: 0;

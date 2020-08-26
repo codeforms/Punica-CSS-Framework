@@ -1,5 +1,10 @@
 /*****************************************************
 *** GLOBAL MIXINS ************************************/
+@mixin breakpoints($size, $width: 'min-width') {
+	@media only screen and ($width: $size) {
+		@content;
+	}
+}
 @mixin embedded-media {
 	// References;
 	// https://css-tricks.com/fluid-width-video/

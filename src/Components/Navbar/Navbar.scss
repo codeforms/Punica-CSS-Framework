@@ -34,6 +34,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				text-decoration: none;
 				color: $navbar-color;
 				display: flex;
+				font-weight: bold;
 			}
 		}
 		// navbar burger
@@ -71,7 +72,6 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				}
 				input[type='text'] {
 					background-color: $navbar-color;
-					border-color: darken($navbar-bg, 13%);
 				}
 			}
 		}
@@ -105,6 +105,34 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 		.#{$button-class},
 		.#{$dropdown-name} .#{$button-class} {
 			font-size: $navbar-font-size;
+		}
+		// light theme
+		&.#{$navbar-light-theme} {
+			background: $navbar-light-bg;
+			color: $navbar-light-color;
+			.#{$button-class-group} {
+				.#{$button-class} {
+					color: $navbar-light-color;
+					min-height: 100%;
+					i, span.material-icons {
+						color: $navbar-light-color;
+					}
+				}
+			}
+			.#{$navbar-brand} {
+				a,
+				a:visited {
+					color: $navbar-light-color;
+				}
+			}
+			section.#{$navbar-links} {
+				div.#{$navbar-section} {
+					input[type='text'] {
+						background-color: $navbar-light-bg;
+						border-color: darken($navbar-light-bg, 13%);
+					}
+				}
+			}
 		}
 	}
 	.#{$navbar-spacer} {

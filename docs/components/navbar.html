@@ -169,8 +169,100 @@
 								A navigation bar (or navigation system) is a section of a graphical user interface intended to aid visitors in accessing site/app contents. The navbar component can include logo brand, nav links or buttons, search box or any combination of those elements. Each section with the <code>.section</code> class will be evenly distributed in the container. And the last <code>.section</code> item in the navbar is always to the right.
 							</p>
 
-							<div class="alert success">
+							<div class="alert center align">
 								To see the responsive hamburger menu, please check the main menu of the page.
+							</div>
+
+							<div class="panel shadowless borderless">
+								<div class="header">
+									<div class="title">Default Navbar</div>
+								</div>
+								<div class="content bg-grid">
+									<header class="navbar">
+										<section class="brand">
+											<a href="javascript:">
+												Punica
+											</a>
+										</section>
+										<section class="links">
+											<div class="section">
+												<div class="buttons">
+													<div class="dropdown large">
+														<a class="button toggle" tabindex="0">
+															Menu 1 <span class="material-icons">keyboard_arrow_down</span>
+														</a>
+														<ul class="menu">
+															<li class="item"><a href="javascript:">Link 1</a></li>
+															<li class="item"><a href="javascript:">Link 2</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="section">
+												<div class="buttons">
+													<a href="javascript:" class="button">
+														<span class="material-icons">person</span>
+													</a>
+												</div>
+												<div class="form mr-20">
+													<div class="group">
+														<input type="text" name="query" placeholder="search..." id="query">
+														<button class="button">
+															<i class="material-icons">search</i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</section>
+									</header>
+								</div>
+								<div class="header">
+									<div class="title">Light Navbar</div>
+								</div>
+								<div class="content">
+									<p>
+										If you want a light navbar, just add the <code>.light</code> class to <code>.navbar</code>.
+									</p>
+								</div>
+								<div class="content bg-grid">
+									<header class="navbar light">
+										<section class="brand">
+											<a href="javascript:">
+												Punica
+											</a>
+										</section>
+										<section class="links">
+											<div class="section">
+												<div class="buttons">
+													<div class="dropdown large">
+														<a class="button toggle" tabindex="0">
+															Menu 1 <span class="material-icons">keyboard_arrow_down</span>
+														</a>
+														<ul class="menu">
+															<li class="item"><a href="javascript:">Link 1</a></li>
+															<li class="item"><a href="javascript:">Link 2</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="section">
+												<div class="buttons">
+													<a href="javascript:" class="button">
+														<span class="material-icons">person</span>
+													</a>
+												</div>
+												<div class="form mr-20">
+													<div class="group">
+														<input type="text" name="query" placeholder="search..." id="query">
+														<button class="button primary">
+															<i class="material-icons">search</i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</section>
+									</header>
+								</div>
 							</div>
 
 							<!-- info -->
@@ -189,6 +281,10 @@
 													<tr>
 														<td>Container</td>
 														<td><code>.navbar</code></td>
+													</tr>
+													<tr>
+														<td>Navbar Light</td>
+														<td><code>.light</code></td>
 													</tr>
 													<tr>
 														<td>Fixed Navbar</td>
@@ -229,214 +325,6 @@
 												</tbody>
 											</table>
 										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="panel shadowless borderless">
-								<div class="content">
-									<header class="navbar">
-										<section class="brand">
-											<a href="">
-												<img src="../images/punica.png">
-											</a>
-										</section>
-										<section class="links">
-											<div class="section">
-												<div class="buttons">
-													<div class="dropdown large">
-														<a class="button toggle" tabindex="0">
-															Menu 1 <span class="material-icons">keyboard_arrow_down</span>
-														</a>
-														<ul class="menu">
-															<li class="item"><a href="javascript:">Link 1</a></li>
-															<li class="item"><a href="javascript:">Link 2</a></li>
-														</ul>
-													</div>
-												</div>
-											</div>
-											<div class="section">
-												<div class="buttons">
-													<a href="javascript:" class="button">
-														Menu 2
-													</a>
-												</div>
-											</div>
-										</section>
-									</header>
-								</div>
-								<div class="content">
-									<div id="highlighter_731769" class="syntaxhighlighter nogutter  xml">
-										<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
-										<table border="0" cellpadding="0" cellspacing="0">
-											<tbody>
-												<tr>
-													<td class="code">
-														<div class="container">
-															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">header</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"navbar"</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number2 index1 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">input</code>&nbsp;<code
-																	class="xml color1">type</code><code class="xml plain">=</code><code
-																	class="xml string">"checkbox"</code>&nbsp;<code class="xml color1">id</code><code
-																	class="xml plain">=</code><code class="xml string">"burger"</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number3 index2 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">section</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"brand"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number4 index3 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																	class="xml color1">href</code><code class="xml plain">=</code><code
-																	class="xml string">""</code><code class="xml plain">&gt;</code></div>
-															<div class="line number5 index4 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">img</code>&nbsp;<code
-																	class="xml color1">src</code><code class="xml plain">=</code><code
-																	class="xml string">""</code><code class="xml plain">&gt;</code></div>
-															<div class="line number6 index5 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number7 index6 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">section</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number8 index7 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">section</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"links"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number9 index8 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"section"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number10 index9 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"buttons"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number11 index10 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"dropdown&nbsp;large"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number12 index11 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"button&nbsp;toggle"</code>&nbsp;<code
-																	class="xml color1">tabindex</code><code class="xml plain">=</code><code
-																	class="xml string">"0"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number13 index12 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">Menu&nbsp;1&nbsp;&lt;</code><code
-																	class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"material-icons"</code><code
-																	class="xml plain">&gt;keyboard_arrow_down&lt;/</code><code
-																	class="xml keyword">span</code><code class="xml plain">&gt;</code></div>
-															<div class="line number14 index13 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number15 index14 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">ul</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"menu"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number16 index15 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">li</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"item"</code><code class="xml plain">&gt;&lt;</code><code
-																	class="xml keyword">a</code>&nbsp;<code class="xml color1">href</code><code
-																	class="xml plain">=</code><code class="xml string">""</code><code
-																	class="xml plain">&gt;Link&nbsp;1&lt;/</code><code class="xml keyword">a</code><code
-																	class="xml plain">&gt;&lt;/</code><code class="xml keyword">li</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number17 index16 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">li</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"item"</code><code class="xml plain">&gt;&lt;</code><code
-																	class="xml keyword">a</code>&nbsp;<code class="xml color1">href</code><code
-																	class="xml plain">=</code><code class="xml string">""</code><code
-																	class="xml plain">&gt;Link&nbsp;2&lt;/</code><code class="xml keyword">a</code><code
-																	class="xml plain">&gt;&lt;/</code><code class="xml keyword">li</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number18 index17 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">ul</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number19 index18 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number20 index19 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number21 index20 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number22 index21 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"section"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number23 index22 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code
-																	class="xml color1">class</code><code class="xml plain">=</code><code
-																	class="xml string">"buttons"</code><code class="xml plain">&gt;</code></div>
-															<div class="line number24 index23 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																	class="xml color1">href</code><code class="xml plain">=</code><code
-																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"button"</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number25 index24 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">Menu&nbsp;2</code></div>
-															<div class="line number26 index25 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number27 index26 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number28 index27 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number29 index28 alt2"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;/</code><code class="xml keyword">section</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number30 index29 alt1"><code
-																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																	class="xml plain">&lt;</code><code class="xml keyword">label</code>&nbsp;<code
-																	class="xml color1">for</code><code class="xml plain">=</code><code
-																	class="xml string">"burger"</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"burger"</code><code
-																	class="xml plain">&gt;&lt;/</code><code class="xml keyword">label</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number31 index30 alt2"><code class="xml plain">&lt;/</code><code
-																	class="xml keyword">header</code><code class="xml plain">&gt;</code></div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
 									</div>
 								</div>
 							</div>
