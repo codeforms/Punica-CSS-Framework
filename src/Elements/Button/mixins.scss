@@ -1,28 +1,33 @@
 /***************************************************** 
 PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
-@mixin button-types($color: $primary-color, $background: none, $bg-hover: none) {
-	background: $color;
-	color: $main-invert-color;
-	text-shadow: 0 1px 1px darken($color, 6%);
-	background-image: $background;
+@mixin button-types(
+	$bg-color: $primary-color,
+	$text-color: $main-invert-color, 
+	$bg-img: none, 
+	$bg-img-hover: none
+) {
+	background: $bg-color;
+	color: $text-color;
+	text-shadow: 0 1px 1px darken($bg-color, 6%);
+	background-image: $bg-img;
 	border-color: transparent;
 	&:focus,
 	&:hover {
-		background: lighten($color, 7.5%);
-		color: $main-invert-color;
-		background-image: $bg-hover;
+		background: lighten($bg-color, 7.5%);
+		color: $text-color;
+		background-image: $bg-img-hover;
 		border-color: transparent;
 	}
 	&:active,
 	&.#{$button-class-active} {
-		background: $color;
-		color: $main-invert-color;
+		background: $bg-color;
+		color: $text-color;
 	}
 	&.#{$button-class-inactive} {
-		border-left-color: darken($color, 6%);
+		border-left-color: darken($bg-color, 6%);
 	}
 	i, [class^="material-icons"] {
-		color: $main-invert-color;
+		color: $text-color;
 		text-shadow: $button-icon-shadow;
 	}
 }

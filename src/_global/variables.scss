@@ -17,7 +17,7 @@ $main-secondary-bg		: #e6e6e6; // Platinum
 $main-font-color		: #3f4143; // Onyx
 $main-invert-color		: white;
 $main-grey-color		: #77878b; // Roman Silver
-$form-color-schema		: #414552; // Charcoal
+$main-dark-color		: #414552; // Charcoal
 /*
 THEME COLORS *****************************************/
 $primary-color			: #0a8fff; // Dodger Blue
@@ -34,7 +34,7 @@ $main-border-radius		: 4px;
 SCROLLBAR ********************************************/
 $scrollbar-width		: 4px;
 $scrollbar-bg			: $main-secondary-bg;
-$scrollbar-color		: $form-color-schema;
+$scrollbar-color		: $main-dark-color;
 /*
 MAIN GRID NAMING 
 It is used in card and form.

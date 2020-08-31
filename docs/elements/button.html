@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="../css/punica.css">
 </head>
 <body>
-	<header class="navbar shadowed">
+	<header class="navbar light fixed shadowed">
 		<input type="checkbox" id="burger">
 		<section class="brand">
 			<a href="../" title="Punica CSS">
-				<img src="../images/punica.png">
+				<img src="../images/punica.png" class="filter-invert">
 			</a>
 		</section>
 		<section class="links">
@@ -51,6 +51,7 @@
 							<li class="item"><a href="../components/billboard.html">Billboard</a></li>
 							<li class="item"><a href="../components/breadcrumb.html">Breadcrumbs</a></li>
 							<li class="item"><a href="../components/card.html">Card</a></li>
+							<li class="item"><a href="../components/list.html">List</a></li>
 							<li class="item"><a href="../components/menu.html">Menu</a></li>
 							<li class="item"><a href="../components/navbar.html">Navbar</a></li>
 							<li class="item"><a href="../components/pagination.html">Pagination</a></li>
@@ -74,7 +75,7 @@
 		<label for="burger" class="burger"></label>
 	</header>
 
-	<div class="container">
+	<div class="container navbar-spacer">
 		<div class="row">
 
 			<div class="col-lg-3 col-sm-16 col-xs-16">
@@ -117,7 +118,7 @@
 				<div class="container">
 					<div class="row">
 
-						<div class="panel shadowless borderless">
+						<div class="panel pure reset">
 							<div class="breadcrumb">
 				                <a href="../" class="item">Punica</a>
 				                <a href="javascript:" class="item">Elements</a>
@@ -135,12 +136,13 @@
 									There are several style modifiers available.
 								</p>
 
-								<div class="panel borderless shadowless">
+								<div class="panel pure">
 									<div class="content bg-grid align center">
 										<div class="button">Default</div>
 										<button class="button primary">Primary</button>
 										<a class="button success">Success</a>
 										<div class="button error">Error</div>
+										<div class="button dark">Dark</div>
 										<div class="button disabled">Disabled</div>
 										<div class="button link">Link</div>
 										<div class="button secondary">Secondary</div>
@@ -207,7 +209,7 @@
 									Add the <code>.mini, .small, .large</code> or <code>.huge</code> class to a button to make it smaller or larger. Also, you can add the <code>.block</code> class for a full-width button.
 								</p>
 
-								<div class="panel borderless shadowless">
+								<div class="panel pure">
 									<div class="content bg-grid align center">
 										<button class="button mini mr-5">Mini</button>
 										<button class="button small mr-5">Small</button>
@@ -275,7 +277,7 @@
 									To create a button group, add the <code>.buttons</code> class to a <code>div</code> element around the buttons.
 								</p>
 
-								<div class="panel borderless shadowless">
+								<div class="panel pure">
 									<div class="content bg-grid align center">
 										<div class="buttons mr-20">
 											<button class="button">
@@ -401,7 +403,7 @@
 									Also, add the <code>.mini, .small, .large</code> or <code>.huge</code> class to <code>.buttons</code> to make it smaller or larger group buttons.
 								</P>
 
-								<div class="panel borderless shadowless">
+								<div class="panel pure">
 									<div class="content bg-grid align center">
 										<div class="buttons mini mr-20">
 											<a href="javascript:" class="button">
@@ -517,7 +519,7 @@
 									And you can add the <code>.block</code> class to <code>.buttons</code> for a full-width button group.
 								</p>
 
-								<div class="panel borderless shadowless">
+								<div class="panel pure">
 									<div class="content bg-grid align center">
 										<div class="buttons mini block">
 											<a href="javascript:" class="button">
@@ -641,7 +643,7 @@
 									You can add the <code>.secondary</code> class to a <code>.button</code> or <code>.buttons</code> to change the style as secondary.
 								</p>
 
-								<div class="panel borderless shadowless">
+								<div class="panel pure">
 									<div class="content bg-grid align center">
 										<button class="button secondary mini mr-10"><span class="material-icons">person</span></button>
 										<button class="button secondary small mr-10"><span class="material-icons">person</span></button>
@@ -693,7 +695,7 @@
 									</table>
 								</div>
 								
-								<div class="panel borderless shadowless">
+								<div class="panel pure">
 									<div class="content bg-grid align center">
 										<div class="buttons mini secondary mr-20">
 											<a href="javascript:" class="button active">
@@ -814,7 +816,7 @@
 								<p>
 									A button can be used to trigger a dropdown menu.
 								</p>
-								<div class="panel borderless shadowless">
+								<div class="panel pure">
 									<div class="content bg-grid align center">
 										<div class="buttons">
 											<div class="dropdown small">

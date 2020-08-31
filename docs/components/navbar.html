@@ -12,11 +12,11 @@
 </head>
 
 <body>
-	<header class="navbar shadowed">
+	<header class="navbar fixed light shadowed">
 		<input type="checkbox" id="burger">
 		<section class="brand">
 			<a href="../" title="Punica CSS">
-				<img src="../images/punica.png">
+				<img src="../images/punica.png" class="filter-invert">
 			</a>
 		</section>
 		<section class="links">
@@ -54,6 +54,7 @@
 							<li class="item"><a href="./billboard.html">Billboard</a></li>
 							<li class="item"><a href="./breadcrumb.html">Breadcrumbs</a></li>
 							<li class="item"><a href="./card.html">Card</a></li>
+							<li class="item"><a href="./list.html">List</a></li>
 							<li class="item"><a href="./menu.html">Menu</a></li>
 							<li class="item"><a href="./navbar.html">Navbar</a></li>
 							<li class="item"><a href="./pagination.html">Pagination</a></li>
@@ -77,7 +78,7 @@
 		<label for="burger" class="burger"></label>
 	</header>
 
-	<div class="container">
+	<div class="container navbar-spacer">
 		<div class="row">
 
 			<div class="col-lg-3 col-sm-16 col-xs-16">
@@ -106,6 +107,11 @@
 					<div class="item">
 						<a href="./card.html">
 							Card
+						</a>
+					</div>
+					<div class="item">
+						<a href="./list.html">
+							List
 						</a>
 					</div>
 					<div class="item">
@@ -155,7 +161,7 @@
 				<div class="container">
 					<div class="row">
 
-						<div class="panel shadowless borderless">
+						<div class="panel pure reset">
 							<div class="breadcrumb">
 								<a href="../" class="item">Punica</a>
 								<a href="" class="item">Components</a>
@@ -173,7 +179,7 @@
 								To see the responsive hamburger menu, please check the main menu of the page.
 							</div>
 
-							<div class="panel shadowless borderless">
+							<div class="panel pure">
 								<div class="header">
 									<div class="title">Default Navbar</div>
 								</div>
@@ -181,7 +187,7 @@
 									<header class="navbar">
 										<section class="brand">
 											<a href="javascript:">
-												Punica
+												<img src="../images/punica.png">
 											</a>
 										</section>
 										<section class="links">
@@ -217,18 +223,18 @@
 									</header>
 								</div>
 								<div class="header">
-									<div class="title">Light Navbar</div>
+									<div class="title">Light & Dark Navbar</div>
 								</div>
 								<div class="content">
 									<p>
-										If you want a light navbar, just add the <code>.light</code> class to <code>.navbar</code>.
+										If you want a light or dark navbar, just add the <code>.light</code> or <code>.dark</code> class to <code>.navbar</code>.
 									</p>
 								</div>
 								<div class="content bg-grid">
-									<header class="navbar light">
+									<header class="navbar light shadowed">
 										<section class="brand">
 											<a href="javascript:">
-												Punica
+												<img src="../images/punica.png" class="filter-invert">
 											</a>
 										</section>
 										<section class="links">
@@ -254,7 +260,46 @@
 												<div class="form mr-20">
 													<div class="group">
 														<input type="text" name="query" placeholder="search..." id="query">
-														<button class="button primary">
+														<button class="button dark">
+															<i class="material-icons">search</i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</section>
+									</header>
+								</div>
+								<div class="content bg-grid">
+									<header class="navbar dark shadowed">
+										<section class="brand">
+											<a href="javascript:">
+												<img src="../images/punica.png">
+											</a>
+										</section>
+										<section class="links">
+											<div class="section">
+												<div class="buttons">
+													<div class="dropdown large">
+														<a class="button toggle" tabindex="0">
+															Menu 1 <span class="material-icons">keyboard_arrow_down</span>
+														</a>
+														<ul class="menu">
+															<li class="item"><a href="javascript:">Link 1</a></li>
+															<li class="item"><a href="javascript:">Link 2</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="section">
+												<div class="buttons">
+													<a href="javascript:" class="button">
+														<span class="material-icons">person</span>
+													</a>
+												</div>
+												<div class="form mr-20">
+													<div class="group">
+														<input type="text" name="query" placeholder="search..." id="query">
+														<button class="button dark">
 															<i class="material-icons">search</i>
 														</button>
 													</div>
@@ -266,7 +311,7 @@
 							</div>
 
 							<!-- info -->
-							<div class="panel shadowless borderless">
+							<div class="panel pure">
 								<div class="content">
 									<div class="row">
 										<div class="col-lg-16 col-sm-16 col-xs-16">
@@ -281,18 +326,6 @@
 													<tr>
 														<td>Container</td>
 														<td><code>.navbar</code></td>
-													</tr>
-													<tr>
-														<td>Navbar Light</td>
-														<td><code>.light</code></td>
-													</tr>
-													<tr>
-														<td>Fixed Navbar</td>
-														<td><code>.fixed</code></td>
-													</tr>
-													<tr>
-														<td>Navbar with Shadow</td>
-														<td><code>.shadowed</code></td>
 													</tr>
 													<tr>
 														<td>Navbar Sections</td>
@@ -321,6 +354,33 @@
 													<tr>
 														<td>Navbar Spacer (if navbar is fixed)</td>
 														<td><code>.navbar-spacer</code></td>
+													</tr>
+												</tbody>
+											</table>
+
+											<table class="table">
+												<thead>
+													<tr>
+														<th style="width: 50%;">Styles & States</th>
+														<th>Default Class Name</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Light Navbar</td>
+														<td><code>.light</code></td>
+													</tr>
+													<tr>
+														<td>Dark Navbar</td>
+														<td><code>.dark</code></td>
+													</tr>
+													<tr>
+														<td>Fixed Navbar</td>
+														<td><code>.fixed</code></td>
+													</tr>
+													<tr>
+														<td>Navbar with Shadow</td>
+														<td><code>.shadowed</code></td>
 													</tr>
 												</tbody>
 											</table>

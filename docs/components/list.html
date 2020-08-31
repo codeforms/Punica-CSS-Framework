@@ -1,0 +1,454 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Alert - Components : Punica CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='../css/syntaxhighlighter.css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/punica.css">
+</head>
+
+<body>
+    <header class="navbar light fixed shadowed">
+        <input type="checkbox" id="burger">
+        <section class="brand">
+            <a href="../" title="Punica CSS">
+                <img src="../images/punica.png" class="filter-invert">
+            </a>
+        </section>
+        <section class="links">
+            <div class="section">
+                <div class="buttons">
+                    <div class="dropdown large">
+                        <a class="button toggle" tabindex="0">
+                            Base <span class="material-icons">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="../base/introduction.html">Introduction</a></li>
+                            <li class="item"><a href="../base/grid.html">Grid</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown large">
+                        <a class="button toggle" tabindex="0">
+                            Elements <span class="material-icons">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="../elements/button.html">Button & Dropdown</a></li>
+                            <li class="item"><a href="../elements/form.html">Form</a></li>
+                            <li class="item"><a href="../elements/icon.html">Icon</a></li>
+                            <li class="item"><a href="../elements/label.html">Label</a></li>
+                            <li class="item"><a href="../elements/table.html">Table</a></li>
+                            <li class="item"><a href="../elements/typography.html">Typography</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown large">
+                        <a class="button toggle" tabindex="0">
+                            Components <span class="material-icons">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="./alert.html">Alert</a></li>
+                            <li class="item"><a href="./badge.html">Badge</a></li>
+                            <li class="item"><a href="./billboard.html">Billboard</a></li>
+                            <li class="item"><a href="./breadcrumb.html">Breadcrumbs</a></li>
+                            <li class="item"><a href="./card.html">Card</a></li>
+                            <li class="item"><a href="./menu.html">Menu</a></li>
+                            <li class="item"><a href="./list.html">List</a></li>
+                            <li class="item"><a href="./navbar.html">Navbar</a></li>
+                            <li class="item"><a href="./pagination.html">Pagination</a></li>
+                            <li class="item"><a href="./panel.html">Panel</a></li>
+                            <li class="item"><a href="./process.html">Process</a></li>
+                            <li class="item"><a href="./progress.html">Progress</a></li>
+                            <li class="item"><a href="./timeline.html">Timeline</a></li>
+                            <li class="item"><a href="./tooltip.html">Tooltip</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="buttons link invert shadowless">
+                    <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank" class="button">
+                        <span class="material-icons mr-5">launch</span> Github
+                    </a>
+                </div>
+            </div>
+        </section>
+        <label for="burger" class="burger"></label>
+    </header>
+
+    <div class="container navbar-spacer">
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-16 col-xs-16">
+                <div class="menu pure">
+                    <div class="title">Components</div>
+                    <div class="item">
+                        <a href="./alert.html">
+                            Alert
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./badge.html">
+                            Badge
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./billboard.html">
+                            Billboard
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./breadcrumb.html">
+                            Breadcrumb
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./card.html">
+                            Card
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./list.html" class="active">
+                            List
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./menu.html">
+                            Menu
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./navbar.html">
+                            Navbar
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./pagination.html">
+                            Pagination
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./panel.html">
+                            Panel
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./process.html">
+                            Process
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./progress.html">
+                            Progress
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./timeline.html">
+                            Timeline
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./tooltip.html">
+                            Tooltip
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-13 col-sm-16 col-xs-16">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="panel pure reset">
+                            <div class="breadcrumb">
+                                <a href="../" class="item">Punica</a>
+                                <a href="" class="item">Components</a>
+                                <a href="" class="item active">List</a>
+                            </div>
+                        </div>
+
+                        <div class="col-16">
+                            <h1>List</h1>
+                            <p>
+                                To apply this component, add the <code>.list</code> class to an unordered/ordered list or even <code>div</code> element. And also, use the <code>.item</code> class for each list items.
+                            </p>
+
+                            <!-- info -->
+                            <div class="panel pure">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-lg-16 col-sm-16 col-xs-16">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 50%;">Props</th>
+                                                        <th>Default Class Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Container</td>
+                                                        <td><code>.list</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>List Items</td>
+                                                        <td><code>.item</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>List Item Body</td>
+                                                        <td><code>.body</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>List Item Title</td>
+                                                        <td><code>.title</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>List Item Actions</td>
+                                                        <td><code>.actions</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Divided List</td>
+                                                        <td><code>.bordered</code></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel pure">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-16 col-8">
+                                            <div class="h5">
+                                                Default List
+                                            </div>
+                                            <ul class="list">
+                                                <li class="item">
+                                                    Lorem ipsum dolor sit amet
+                                                </li>
+                                                <li class="item">
+                                                    Lorem ipsum dolor sit amet
+                                                </li>
+                                                <li class="item">
+                                                    Lorem ipsum dolor sit amet
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-16 col-8">
+                                            <div class="list bordered">
+                                                <div class="h5">
+                                                    Bordered List
+                                                </div>
+                                                <div class="item">
+                                                    Lorem ipsum dolor sit amet
+                                                </div>
+                                                <div class="item">
+                                                    Lorem ipsum dolor sit amet
+                                                </div>
+                                                <div class="item">
+                                                    Lorem ipsum dolor sit amet
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-xs-16 col-lg-7">
+                                            <div class="two columns list bordered">
+                                                <div class="h5">
+                                                    List with Icon
+                                                </div>
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-16 col-lg-7 offset-lg-9">
+                                            <div class="two columns list bordered">
+                                                <div class="h5">
+                                                    List with actions
+                                                </div>
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons mini">
+                                                            <a href="javascript:" class="button">
+                                                                <span class="material-icons">edit</span>
+                                                            </a>
+                                                            <a href="javascript:" class="button">
+                                                                <span class="material-icons">delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons mini">
+                                                            <a href="javascript:" class="button">
+                                                                <span class="material-icons">edit</span>
+                                                            </a>
+                                                            <a href="javascript:" class="button">
+                                                                <span class="material-icons">delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons mini">
+                                                            <a href="javascript:" class="button">
+                                                                <span class="material-icons">edit</span>
+                                                            </a>
+                                                            <a href="javascript:" class="button">
+                                                                <span class="material-icons">delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-xs-16 col-lg-7">
+                                            <div class="two columns list bordered">
+                                                <div class="h5">
+                                                    Media List
+                                                </div>
+                                                <div class="item">
+                                                    <img src="https://source.unsplash.com/user/josilito/800x600">
+                                                    <div class="body">
+                                                        <span class="title">Title</span>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisl quis massa vulputate
+                                                        adipiscing.
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="https://source.unsplash.com/user/cosmictimetraveler/800x600">
+                                                    <div class="body">
+                                                        <span class="title">Title</span>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisl quis massa vulputate
+                                                        adipiscing.
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="https://source.unsplash.com/user/aahubs/800x600">
+                                                    <div class="body">
+                                                        <span class="title">Title</span>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisl quis massa vulputate
+                                                        adipiscing.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-16 col-lg-7 offset-lg-9">
+                                            <div class="two columns list bordered">
+                                                <div class="h5">
+                                                    Media List with actions
+                                                </div>
+                                                <div class="item">
+                                                    <img src="https://source.unsplash.com/user/josilito/800x600">
+                                                    <div class="body">
+                                                        <a href="javascript:" class="title">Title</a>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons mini">
+                                                            <div class="dropdown right mini">
+                                                                <a tabindex="0" class="button toggle">
+                                                                    <span class="material-icons">keyboard_arrow_down</span>
+                                                                </a>
+                                                                <ul class="menu">
+                                                                    <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                                                    <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                                                    <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="https://source.unsplash.com/user/cosmictimetraveler/800x600">
+                                                    <div class="body">
+                                                        <a href="javascript:" class="title">Title</a>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons mini">
+                                                            <div class="dropdown right mini">
+                                                                <a tabindex="0" class="button toggle">
+                                                                    <span class="material-icons">keyboard_arrow_down</span>
+                                                                </a>
+                                                                <ul class="menu">
+                                                                    <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                                                    <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                                                    <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="https://source.unsplash.com/user/aahubs/800x600">
+                                                    <div class="body">
+                                                        <a href="javascript:" class="title">Title</a>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons mini">
+                                                            <div class="dropdown right mini">
+                                                                <a tabindex="0" class="button toggle">
+                                                                    <span class="material-icons">keyboard_arrow_down</span>
+                                                                </a>
+                                                                <ul class="menu">
+                                                                    <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                                                    <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                                                    <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

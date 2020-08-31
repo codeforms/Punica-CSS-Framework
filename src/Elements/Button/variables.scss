@@ -4,10 +4,7 @@ PUNICA CSS > ELEMENTS : BUTTON > VARIABLES ***********/
 /* 
 NAMING ***********************************************/
 $button-class				: 'button'; 
-// styles
-$button-class-primary		: 'primary';
-$button-class-success		: 'success';
-$button-class-error			: 'error';
+// static button styles
 $button-class-link			: 'link';
 $button-secondary			: 'secondary';
 // active & disabled
@@ -30,6 +27,14 @@ $button-sizes: (
     ("small", .859em, .645rem 1.2rem, 700),
     ("large", 1em, 1.15rem 1.9rem, 700),
     ("huge", 1.25em, 1.3rem 2.2rem, 700)
+);
+// dynamic button styles
+// theme name, bg color, text color, bg image, bg img hover
+$button-styles: (
+	('primary', $primary-color),
+	('success', $success-color),
+	('error', $error-color),
+	('dark', $main-dark-color)
 );
 /* 
 TEXT & FONT SIZE *************************************/

@@ -25,6 +25,7 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 			padding: $menu-item-padding;
 			position: relative;
 			text-decoration: none;
+		    text-align: left;
 			& > a {
 				color: $menu-item-color;
 				display: block;

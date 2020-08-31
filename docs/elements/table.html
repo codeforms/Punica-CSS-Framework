@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="../css/punica.css">
 </head>
 <body>
-    <header class="navbar shadowed">
+    <header class="navbar light fixed shadowed">
         <input type="checkbox" id="burger">
         <section class="brand">
             <a href="../" title="Punica CSS">
-                <img src="../images/punica.png">
+                <img src="../images/punica.png" class="filter-invert">
             </a>
         </section>
         <section class="links">
@@ -51,6 +51,7 @@
                             <li class="item"><a href="../components/billboard.html">Billboard</a></li>
                             <li class="item"><a href="../components/breadcrumb.html">Breadcrumbs</a></li>
                             <li class="item"><a href="../components/card.html">Card</a></li>
+                            <li class="item"><a href="../components/list.html">List</a></li>
                             <li class="item"><a href="../components/menu.html">Menu</a></li>
                             <li class="item"><a href="../components/navbar.html">Navbar</a></li>
                             <li class="item"><a href="../components/pagination.html">Pagination</a></li>
@@ -74,7 +75,7 @@
         <label for="burger" class="burger"></label>
     </header>
 
-	<div class="container">
+	<div class="container navbar-spacer">
 		<div class="row">
 
 			<div class="col-lg-3 col-sm-16 col-xs-16">
@@ -117,7 +118,7 @@
 				<div class="container">
 					<div class="row">
 
-                        <div class="panel shadowless borderless">
+                        <div class="panel pure reset">
                             <div class="breadcrumb">
                                 <a href="../" class="item">Punica</a>
                                 <a href="" class="item">Elements</a>
@@ -131,7 +132,7 @@
                                 Add the <code>.table</code> class to any <code>table</code> element. The class will add padding, border and emphasized table header.
                             </p>
 
-                            <div class="panel borderless shadowless">
+                            <div class="panel pure">
                                 <div class="content">
                                     <table class="table">
                                         <thead>
@@ -248,7 +249,7 @@
                             <p>
                                 Add zebra-striping to a table by adding the <code>.striped</code> class.
                             </p>
-                            <div class="panel borderless shadowless">
+                            <div class="panel pure">
                                 <div class="content">
                                     <table class="table striped">
                                         <thead>
@@ -365,7 +366,7 @@
                             <p>
                                 Add the <code>.hovered</code> class to display a hover state on table rows.
                             </p>
-                            <div class="panel borderless shadowless">
+                            <div class="panel pure">
                                 <div class="content">
                                     <table class="table hovered">
                                         <thead>

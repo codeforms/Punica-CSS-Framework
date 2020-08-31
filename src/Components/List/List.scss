@@ -1,0 +1,44 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : LIST ***********************/
+
+// if list is enable
+@if $components-list {
+	.#{$list-name} {
+		list-style: none;
+		margin: $list-margin-spacer 0;
+		>.#{$list-item} {
+		    display: flex;
+		    align-items: center;
+		    padding: $list-item-padding;
+		    margin: 0;
+		    >img {
+			    width: $list-media-width;
+		    }
+		    >img,
+		    >.material-icons,
+		    >i {
+		    	margin-right: $list-margin-spacer;
+		    }
+		    >.#{$list-body} {
+		    	flex: 1;
+		    	line-height: $list-body-line-height;
+		    	text-align: left;
+		    	>.#{$list-title} {
+		    		display: block;
+		    		font-size: $list-title-size;
+    				font-weight: $main-title-weight;
+		    	}
+		    }
+		    >.#{$list-actions} {
+	    		margin-left: auto;
+    		    width: auto;
+    		    margin-left: $list-margin-spacer;
+	    	}
+		}
+		&.#{$list-bordered} {
+			>.#{$list-item} {
+				border-bottom: $main-border-width $main-border-style $main-border-color;
+			}
+		}
+	}
+}

@@ -67,17 +67,13 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			opacity: .59;
 			pointer-events: none;
 		}
+		// button styles
 		@if $elements-button-types {
-			// Button Variants
-			&.#{$button-class-primary} {
-				@include button-types($primary-color);
-			}
-			&.#{$button-class-success} {
-				@include button-types($success-color);
-			}
-			&.#{$button-class-error} {
-				@include button-types($error-color);
-			}
+			@each $theme-name, $theme-color in $button-styles {
+				&.#{$theme-name} {
+					@include button-types($theme-color);
+				}
+			} 
 		}
 		// Button Link
 		@include link-button();

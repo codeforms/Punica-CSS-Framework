@@ -1,5 +1,6 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : NAVBAR *********************/
+@import "mixins";
 
 // if navbar is enable
 @if $components-navbar {
@@ -106,32 +107,10 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 		.#{$dropdown-name} .#{$button-class} {
 			font-size: $navbar-font-size;
 		}
-		// light theme
-		&.#{$navbar-light-theme} {
-			background: $navbar-light-bg;
-			color: $navbar-light-color;
-			.#{$button-class-group} {
-				.#{$button-class} {
-					color: $navbar-light-color;
-					min-height: 100%;
-					i, span.material-icons {
-						color: $navbar-light-color;
-					}
-				}
-			}
-			.#{$navbar-brand} {
-				a,
-				a:visited {
-					color: $navbar-light-color;
-				}
-			}
-			section.#{$navbar-links} {
-				div.#{$navbar-section} {
-					input[type='text'] {
-						background-color: $navbar-light-bg;
-						border-color: darken($navbar-light-bg, 13%);
-					}
-				}
+		// navbar themes
+		@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color in $navbar-themes {
+			&.#{$theme-name} {
+				@include navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color);
 			}
 		}
 	}
