@@ -4762,16 +4762,18 @@ input[type='color'], input[type='date'], input[type='datetime'], input[type='dat
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
   outline-offset: -2px;
-  padding: .4rem .5rem;
+  padding: 0.4rem 0.5rem;
   width: 100%;
   font-family: inherit;
-  color: #3f4143;
+  color: #414552;
   font-size: 1.088em;
 }
 
 input[type='color']:focus, input[type='date']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='month']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, input[type='week']:focus, input[type='file']:focus, input:not([type]):focus, textarea:focus, select:focus {
   outline: 2px solid #414552;
   outline-offset: -2px;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
 select {
@@ -4814,6 +4816,7 @@ input:disabled {
 .form {
   position: relative;
   max-width: 100%;
+  padding: 0 16px;
 }
 
 .form .items {
@@ -4844,7 +4847,7 @@ input:disabled {
 .form label, .form .item > label {
   margin: 0 0 .15rem 0;
   color: #000;
-  font-size: 1.138em;
+  font-size: 1.1129em;
   font-weight: 600;
   text-transform: none;
   width: 100%;
@@ -5002,6 +5005,36 @@ input:disabled {
           flex: 0 0 calc(100% * (1 / 16) - (2 * 6px 6px 0.75em));
 }
 
+.form.small input[type='color'], .form.small input[type='date'], .form.small input[type='datetime'], .form.small input[type='datetime-local'], .form.small input[type='email'], .form.small input[type='month'], .form.small input[type='number'], .form.small input[type='password'], .form.small input[type='search'], .form.small input[type='tel'], .form.small input[type='text'], .form.small input[type='url'], .form.small input[type='week'], .form.small input[type='file'], .form.small input:not([type]), .form.small textarea, .form.small select {
+  height: 1.9rem;
+  font-size: 1em;
+}
+
+.form.small .group > .button, .form.small .group > .buttons > .button, .form.small .group > .buttons > .dropdown > .button {
+  height: 1.9rem;
+  font-size: 1em;
+  padding: 0.645rem 1.2rem;
+}
+
+.form.small label, .form.small > .items > .item > label, .form.small > .item > label {
+  font-size: 1em;
+}
+
+.form.large input[type='color'], .form.large input[type='date'], .form.large input[type='datetime'], .form.large input[type='datetime-local'], .form.large input[type='email'], .form.large input[type='month'], .form.large input[type='number'], .form.large input[type='password'], .form.large input[type='search'], .form.large input[type='tel'], .form.large input[type='text'], .form.large input[type='url'], .form.large input[type='week'], .form.large input[type='file'], .form.large input:not([type]), .form.large textarea, .form.large select {
+  height: 2.9rem;
+  font-size: 1.2em;
+}
+
+.form.large .group > .button, .form.large .group > .buttons > .button, .form.large .group > .buttons > .dropdown > .button {
+  height: 2.9rem;
+  font-size: 1.2em;
+  padding: 1.15rem 1.9rem;
+}
+
+.form.large label, .form.large > .items > .item > label, .form.large > .item > label {
+  font-size: 1.2em;
+}
+
 .radio, .checkbox {
   position: relative;
   margin: .4rem 0;
@@ -5036,7 +5069,7 @@ input:disabled {
   text-transform: none;
   color: #414552;
   font-size: 1.5rem;
-  top: -6px;
+  top: -9px;
   left: 0;
 }
 

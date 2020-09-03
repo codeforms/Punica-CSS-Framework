@@ -133,6 +133,74 @@
 							<p>
 								Forms provide the most common control styles used in forms, including input, textarea, select, checkbox and radio.
 							</p>
+
+							<!-- info -->
+							<div class="panel pure">
+								<div class="content">
+									<div class="row">
+										<div class="col-lg-16 col-sm-16 col-xs-16">
+											<table class="table">
+												<thead>
+													<tr>
+														<th style="width: 50%;">Props</th>
+														<th>Default Class Name</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Container</td>
+														<td><code>.form</code></td>
+													</tr>
+													<tr>
+														<td>Form Items</td>
+														<td><code>.items</code></td>
+													</tr>
+													<tr>
+														<td>Form Item</td>
+														<td><code>.item</code></td>
+													</tr>
+													<tr>
+														<td>Form Group</td>
+														<td><code>.group</code></td>
+													</tr>
+													<tr>
+														<td>Punica's Checkbox</td>
+														<td><code>.checkbox</code></td>
+													</tr>
+													<tr>
+														<td>Punica's Radio</td>
+														<td><code>.radio</code></td>
+													</tr>
+												</tbody>
+											</table>
+											<table class="table">
+												<thead>
+													<tr>
+														<th style="width: 50%;">Sizes</th>
+														<th>Default Class Name</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Default</td>
+														<td>-</td>
+													</tr>
+												<tbody>
+													<tr>
+														<td>Small</td>
+														<td><code>.small</code></td>
+													</tr>
+													<tr>
+														<td>Large</td>
+														<td><code>.large</code></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
 							<div class="panel pure">
 								<div class="content">
 									<form class="form" autocomplete="off">
@@ -406,7 +474,7 @@
 									<div class="title">Form Groups</div>
 								</div>
 								<div class="content">
-									<p>You can attach select or button along with an input. Just add the <code>.group</code> class to a container class in the <code>.item</code> container.</p>
+									<p>You can attach select, input or button along with an input. Just add the <code>.group</code> class to a container class in the <code>.item</code> container.</p>
 									<div class="alert">
 										<span class="material-icons color-warning mr-10">info</span> All <code>.group</code> classes should be used in
 										<code>.form</code> or <code>.form > .item</code> container class.
@@ -418,6 +486,15 @@
 												<button class="button primary">
 													<i class="material-icons">search</i>
 												</button>
+											</div>
+										</div>
+										<div class="item">
+											<div class="group">
+												<input type="text" placeholder="key...">
+												<input type="text" placeholder="value...">
+												<a class="button error">
+													<i class="material-icons">clear</i>
+												</a>
 											</div>
 										</div>
 										<div class="item">
@@ -599,6 +676,68 @@
 										<div class="row">
 											<div class="col-xs-16 col-lg-12 offset-lg-5">
 												<button class="button large primary">Submit</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel pure">
+								<div class="header">
+									<div class="title">Form Input Sizes</div>
+								</div>
+								<div class="content">
+									<p>
+										Add the <code>.small</code> or <code>.large</code> class to <code>.form</code> class to make it smaller or larger inputs or buttons.
+									</p>
+									<div class="form small mt-50">
+										<div class="item">
+											<label>Small Size</label>
+											<div class="group">
+												<select name="title">
+													<option value="mr">Mr.</option>
+													<option value="mrs">Mrs.</option>
+												</select>
+												<input type="text" name="name" placeholder="name..." autocomplete="off">
+												<input type="text" name="middle" placeholder="middle..." autocomplete="off">
+												<input type="text" name="surname" placeholder="surname..." autocomplete="off">
+												<button class="button primary">
+													<i class="material-icons">search</i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form">
+										<div class="item">
+											<label>Default Size</label>
+											<div class="group">
+												<select name="title">
+													<option value="mr">Mr.</option>
+													<option value="mrs">Mrs.</option>
+												</select>
+												<input type="text" name="name" placeholder="name..." autocomplete="off">
+												<input type="text" name="middle" placeholder="middle..." autocomplete="off">
+												<input type="text" name="surname" placeholder="surname..." autocomplete="off">
+												<button class="button primary">
+													<i class="material-icons">search</i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form large">
+										<div class="item">
+											<label>Large Size</label>
+											<div class="group">
+												<select name="title">
+													<option value="mr">Mr.</option>
+													<option value="mrs">Mrs.</option>
+												</select>
+												<input type="text" name="name" placeholder="name..." autocomplete="off">
+												<input type="text" name="middle" placeholder="middle..." autocomplete="off">
+												<input type="text" name="surname" placeholder="surname..." autocomplete="off">
+												<button class="button primary">
+													<i class="material-icons">search</i>
+												</button>
 											</div>
 										</div>
 									</div>

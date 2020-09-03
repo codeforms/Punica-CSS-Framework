@@ -1,25 +1,10 @@
 /***************************************************** 
 PUNICA CSS > ELEMENTS : FORM *************************/
+@import "mixins";
 
 // if form is enable
 @if $elements-form {
-	input[type='color'],
-	input[type='date'],
-	input[type='datetime'],
-	input[type='datetime-local'],
-	input[type='email'],
-	input[type='month'],
-	input[type='number'],
-	input[type='password'],
-	input[type='search'],
-	input[type='tel'],
-	input[type='text'],
-	input[type='url'],
-	input[type='week'],
-	input[type='file'],
-	input:not([type]),
-	textarea,
-	select {
+	@include form-inputs() {
 		-webkit-appearance: none;
 		background-color: transparent;
 		border: $main-border-width $main-border-style $main-border-color;
@@ -29,16 +14,17 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 		box-shadow: none;
 		box-sizing: inherit;
 		outline-offset: -$form-outline-width;
-		padding: .4rem .5rem;
+		padding: $form-input-padding;
 		width: 100%;
 		font-family: inherit;
-		color: $main-font-color;
+		color: $form-input-color;
 		font-size: $form-input-size;
 		&:focus {
 			outline: $form-outline-width solid $form-outline-color;
 			outline-offset: -$form-outline-width;
+			transition: .15s;
 		}
-	}
+	};
 	select {
 		padding-right: 3.0rem;
 		text-indent: 5px;
@@ -75,6 +61,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 	.#{$form-name} {
 		position: relative;
 		max-width: 100%;
+		padding: $form-padding;
 		.#{$form-items} {
 			margin: $form-items-spacer;
 			display: flex;
@@ -88,7 +75,6 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			width: 100%;
 			max-width: 100%;
 			position: relative;
-			//overflow: hidden;
 			align-items: flex-start;
 			@at-root .#{$form-name} label,
 			&>label {
@@ -113,7 +99,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			&>.#{$form-group} {
 				display: flex;
 			    width: 100%;
-				&>* {
+				>* {
 					flex: 1 1 auto;
 					&:last-child {
 		    			margin-left: -1px;
@@ -123,12 +109,12 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 	    				margin-right: 0;
 					}
 				}
-				&>.#{$button-class-group} {
+				>.#{$button-class-group} {
 					box-shadow: none;
 				}
-				&>.#{$button-class},
-				&>.#{$button-class-group} > .#{$button-class},
-				&>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class} {
+				>.#{$button-class},
+				>.#{$button-class-group} > .#{$button-class},
+				>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class} {
 					height: $form-input-height;
 					font-size: $button-font-size;
 					padding: $button-padding;
@@ -146,8 +132,31 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 		}
 		@each $name, $number in $grids {
 			.#{$name}.#{$form-items} {
-				&>.#{$form-item} {
+				>.#{$form-item} {
 					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{$form-item-spacer}));
+				}
+			}
+		}
+		// input sizes
+		@each $size-name, $font-size, $input-height, $button-padding in $form-input-sizes {
+			&.#{$size-name} {
+				@include form-inputs() {
+					height: $input-height;
+					font-size: $font-size;
+				}
+				.#{$form-group} {
+					>.#{$button-class},
+					>.#{$button-class-group} > .#{$button-class},
+					>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class} {
+						height: $input-height;
+						font-size: $font-size;
+						padding: $button-padding;
+					}
+				}
+				@at-root .#{$form-name}.#{$size-name} label,
+				&>.#{$form-items}>.#{$form-item}>label,
+				&>.#{$form-item}>label {
+					font-size: $font-size;
 				}
 			}
 		}
