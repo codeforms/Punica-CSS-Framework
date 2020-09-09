@@ -33,5 +33,9 @@ PUNICA CSS > COMPONENTS : ALERT **********************/
 				margin-bottom: 0;
 			}
 		}
+		>i,
+		>.material-icons {
+			vertical-align: text-top;
+		}
 	}
 }

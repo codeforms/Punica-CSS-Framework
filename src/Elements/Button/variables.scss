@@ -1,13 +1,13 @@
 /***************************************************** 
 PUNICA CSS > ELEMENTS : BUTTON > VARIABLES ***********/
 
-/* 
-NAMING ***********************************************/
+/***************************************************** 
+CLASS NAMING *****************************************/
 $button-class				: 'button'; 
-// static button styles
+/* Static Button Styles */
 $button-class-link			: 'link';
 $button-secondary			: 'secondary';
-// active & disabled
+/* State of Active & Disabled */
 $button-class-active		: 'active';
 $button-class-disabled		: 'disabled';
 $button-class-inactive		: 'inactive';
@@ -15,66 +15,65 @@ $button-class-block			: 'block';
 $button-class-group			: 'buttons';
 $button-class-invert		: 'invert';
 $button-force				: 'force';
-// dropdown
+/* Dropdown */
 $dropdown-name				: 'dropdown';
 $dropdown-right				: 'right';
 $dropdown-top				: 'top';
 $dropdown-toggle			: 'toggle';
 $menu-secondary				: 'secondary';
-// sizes (name, font-size, padding, font-weight)
+
+/***************************************************** 
+SIZES ************************************************/
+// name, font-size, padding, font-weight
 $button-sizes: (
     ("mini", .839em, .445rem .7rem, 400),
     ("small", .859em, .645rem 1.2rem, 700),
     ("large", 1em, 1.15rem 1.9rem, 700),
     ("huge", 1.25em, 1.3rem 2.2rem, 700)
 );
-// dynamic button styles
-// theme name, bg color, text color, bg image, bg img hover
+/***************************************************** 
+STYLES ***********************************************/
+// name, bg color, text color, bg image, bg img hover
 $button-styles: (
 	('primary', $primary-color),
 	('success', $success-color),
 	('error', $error-color),
 	('dark', $main-dark-color)
 );
-/* 
-TEXT & FONT SIZE *************************************/
+
+/***************************************************** 
+PREFERENCES ******************************************/
+/* Text & Font Size */
 $button-font-family			: $main-font-family;
 $button-font-size			: .9338em;
-/* 
-COLOR & BACKGROUND ***********************************/
+/* Color & Background */
 $button-bg-color			: #fff;
 $button-text-color			: $main-font-color;
 $button-bg-hover			: $button-bg-color;
 $button-hover-text-color	: $button-text-color;
 $button-bg-active			: $main-grey-color;
-// shadow
+/* Shadow */
 $button-text-shadow 		: 0 1px 1px #fff;
 $button-shadow 				: none;
 $button-group-shadow 		: 0 0.155em 0 0 rgba(0, 0, 0, 0.095);
-// bg image
+/* Bg Image */
 $button-bg-image			: none;
 $button-bg-hover-image		: none;
-// button icon
+/* Button Icon */
 $button-icon-color			: $button-text-color;
 $button-icon-shadow			: none; 
-/*
-LINE HEIGHT & WEIGHT *********************************/
+/* Line Height & Weight */
 $button-line-height			: 1;
 $button-font-weight			: 700;
-/* 
-BORDER ***********************************************/
+/* Border */
 $button-border-width		: 1px;
 $button-border-color		: #ccc;
-/*
-BORDER RADIUS ****************************************/
 $button-border-radius		: 3px;
 $button-group-border-radius	: $button-border-radius;
-/* 
-PADDING **********************************************/
+/* Padding */
 $button-padding				: .935rem 1.4rem;
 $button-padding-inactive	: .45rem !important;
-/* 
-SECONDARY ********************************************/
+/* Secondary Button */
 $button-secondary-text-color	: $main-font-color;
 $button-secondary-hover-color	: $main-font-color;
 $button-secondary-bg-img		: linear-gradient(to bottom, #ffffff 0%,#ededed 60%,#e6e6e6 100%);

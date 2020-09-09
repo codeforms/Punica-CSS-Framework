@@ -11,14 +11,12 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 		width: 100%;
 		list-style: none;
 		.#{$process-item} {
-			flex: 1 1 auto;
+			flex: 1 1 0;
 			min-height: $process-item-min-height;
 			position: relative;
 			align-items: center;
 			justify-content: center;
 			display: flex;
-			max-width: $process-item-min-width;
-			min-width: $process-item-min-width;
 			word-break: break-word;
 			line-height: 1.3;
 			text-align: center;

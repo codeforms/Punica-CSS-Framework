@@ -1,8 +1,8 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : MENU > VARIABLES ***********/
 
-/* 
-NAMING ***********************************************/
+/*****************************************************
+CLASS NAMING *****************************************/
 $menu-name 					: 'menu';
 $menu-pure 					: 'pure';
 $menu-small 				: 'small';
@@ -11,7 +11,8 @@ $menu-item 					: 'item';
 $menu-item-active			: 'active';
 $menu-badge					: 'badge';
 $menu-secondary				: 'secondary';
-/*
+
+/***************************************************** 
 PREFERENCES ******************************************/
 $menu-bg					: #fff;
 $menu-font-size				: 1em;
@@ -22,20 +23,20 @@ $menu-padding 				: .9rem;
 $menu-z-index				: 300;
 $menu-box-shadow			: 0 7px 10px rgba(0, 0, 0, 0.15);
 $menu-box-shadow-top		: 0 -3px 10px rgba(0, 0, 0, 0.15);
-// title
+/* Title */
 $menu-title-font-size		: 1.25em;
 $menu-title-min-height		: 2rem;
 $menu-title-color			: #999;
 $menu-title-font-weight		: 300;
 $menu-title-padding			: .6rem 0;
 $menu-title-spacing			: -.015rem;
-// item
+/* Menu Item */
 $menu-item-margin-top		: 0;
 $menu-item-padding			: .1rem $menu-padding;
 $menu-small-item-padding	: .1rem $menu-padding;
 $menu-item-color			: #606265;
 $menu-item-hover-bg			: darken($menu-bg, 6%);
-// icon
+/* Menu Item Icon */
 $menu-item-icon-color		: $primary-color;
 $menu-item-icon-size		: 1.2rem;
 $menu-item-icon-mr			: 10px; // margin-right

@@ -4,12 +4,15 @@ https://github.com/codeforms/Punica-CSS-Framework
 ****************************************************** 
 DEFAULT SETUP PREFERENCES
 ******************************************************/
-// Layout
+
+/***************************************************** 
+LAYOUT ***********************************************/
 $layout-grid 						: true;
 /**/$layout-grid-equal				: true;
 /**/$layout-grid-offset				: true;
 
-// Components
+/***************************************************** 
+COMPONENTS *******************************************/
 $components-alert 					: true;
 $components-badge					: true;
 $components-billboard				: true;
@@ -25,7 +28,8 @@ $components-progress				: true;
 $components-timeline				: true;
 $components-tooltip					: true;
 
-// Elements
+/***************************************************** 
+ELEMENTS *********************************************/
 $elements-button					: true;
 /**/$elements-button-group			: true;
 /**/$elements-button-types			: true;

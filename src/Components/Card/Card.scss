@@ -47,8 +47,6 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		&>.#{$card-media} {
 			img {
 				display: block;
-				height: auto;
-				max-width: 100%;
 			}
 		}
 		@if $components-card-horizontal {

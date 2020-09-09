@@ -6,7 +6,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 @if $elements-form {
 	@include form-inputs() {
 		-webkit-appearance: none;
-		background-color: transparent;
+		background-color: $form-input-bg;
 		border: $main-border-width $main-border-style $main-border-color;
 		height: $form-input-height;
 		border-radius: $form-input-radius;
@@ -22,7 +22,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 		&:focus {
 			outline: $form-outline-width solid $form-outline-color;
 			outline-offset: -$form-outline-width;
-			transition: .15s;
+			transition: .35s;
 		}
 	};
 	select {
@@ -112,9 +112,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				>.#{$button-class-group} {
 					box-shadow: none;
 				}
-				>.#{$button-class},
-				>.#{$button-class-group} > .#{$button-class},
-				>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class} {
+				>.#{$button-class} {
 					height: $form-input-height;
 					font-size: $button-font-size;
 					padding: $button-padding;
@@ -138,20 +136,16 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			}
 		}
 		// input sizes
-		@each $size-name, $font-size, $input-height, $button-padding in $form-input-sizes {
+		@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in $form-input-sizes {
 			&.#{$size-name} {
 				@include form-inputs() {
 					height: $input-height;
 					font-size: $font-size;
 				}
-				.#{$form-group} {
-					>.#{$button-class},
-					>.#{$button-class-group} > .#{$button-class},
-					>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class} {
-						height: $input-height;
-						font-size: $font-size;
-						padding: $button-padding;
-					}
+				.#{$button-class} {
+					height: $input-height !important;
+					font-size: $button-font-size !important;
+					padding: $button-padding !important;
 				}
 				@at-root .#{$form-name}.#{$size-name} label,
 				&>.#{$form-items}>.#{$form-item}>label,

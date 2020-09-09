@@ -1,17 +1,19 @@
 /***************************************************** 
 PUNICA CSS > ELEMENTS : FORM > VARIABLES *************/
 
-/* 
-NAMING ***********************************************/
+/*****************************************************
+CLASS NAMING *****************************************/
 $form-name						: 'form';
 $form-items						: 'items';
 $form-item						: 'item';
 $form-checkbox					: 'checkbox';
 $form-radio						: 'radio';
 $form-group						: 'group';
-/* 
+
+/*****************************************************
 PREFERENCES ******************************************/
 $form-padding					: 0 16px;
+$form-input-bg					: $main-bg;
 $form-input-color				: $main-dark-color;
 $form-input-height				: 2.5rem;
 $form-input-radius				: 0;
@@ -25,23 +27,26 @@ $form-radio-checkbox-size		: 20px;
 $form-items-spacer				: 6px 0 .75em;
 $form-item-spacer				: 6px 6px .75em;
 
-// input sizes
-// size name, font-size, input height, button padding (referenced from button variables)
+/*****************************************************
+SIZES ************************************************/
+// name, font-size, input height, button padding[*], button font size[*]
+// [*] referenced from button variables 
 $form-input-sizes: (
-	('small', 1em, 1.9rem, .645rem 1.2rem),
-	('large', 1.2em, 2.9rem, 1.15rem 1.9rem)
+	('small', 1em, 1.9rem, .645rem 1.2rem, .859em),
+	('large', 1.2em, 2.9rem, 1.15rem 1.9rem, 1em)
 );
 
-// checkbox & radio
+/***************************************************** 
+PREFERENCES ******************************************/
+/* Checkbox & Radio */
 $form-icon-font-family			: 'Material Icons';
 $form-radio-checkbox-color		: $main-dark-color;
 $form-radio-checkbox-size		: 1.5rem;
 $form-radio-checkbox-top		: -9px;
 $form-radio-checkbox-left		: 0;
-
-// checkbox (material icons)
+/* Checkbox (material icons) */
 $form-checkbox-before-content	: "check_box_outline_blank";
 $form-checkbox-after-content	: "check_box";
-// radio (material icons)
+/* Radio (material icons) */
 $form-radio-before-content		: "radio_button_unchecked";
 $form-radio-after-content		: "radio_button_checked";

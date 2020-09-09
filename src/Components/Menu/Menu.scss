@@ -44,7 +44,7 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 				&.#{$menu-item-active} {
 					background: $menu-item-hover-bg;
 					color: $menu-item-color;
-					font-weight: 900;
+					font-weight: 700;
 					transition: .15s;
 				}
 				&:focus {

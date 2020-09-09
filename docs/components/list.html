@@ -54,7 +54,7 @@
                             <li class="item"><a href="./breadcrumb.html">Breadcrumbs</a></li>
                             <li class="item"><a href="./card.html">Card</a></li>
                             <li class="item"><a href="./menu.html">Menu</a></li>
-                            <li class="item"><a href="./list.html">List</a></li>
+                            <li class="item"><a href="./list.html" class="active">List</a></li>
                             <li class="item"><a href="./navbar.html">Navbar</a></li>
                             <li class="item"><a href="./pagination.html">Pagination</a></li>
                             <li class="item"><a href="./panel.html">Panel</a></li>
@@ -211,6 +211,14 @@
                                                         <td>Divided List</td>
                                                         <td><code>.bordered</code></td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Hovered List</td>
+                                                        <td><code>.hovered</code></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Striped List</td>
+                                                        <td><code>.striped</code></td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -260,12 +268,24 @@
                                 </div>
 
                                 <div class="header">
-                                    <div class="title">List with icons</div>
+                                    <div class="title">Striped & Hovered List</div>
                                 </div>
                                 <div class="content">
+                                    <p>
+                                        You can add the zebra-striping to a list by adding the <code>.striped</code> class and add the <code>.hovered</code> class to display a hover state on list items.
+                                    </p>
                                     <div class="row">
                                         <div class="col-xs-16 col-lg-7">
-                                            <div class="list bordered">
+                                            <div class="list striped bordered">
+                                                <div class="h5">
+                                                    Striped List
+                                                </div>
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
                                                 <div class="item">
                                                     <i class="material-icons">reorder</i>
                                                     <div class="body">
@@ -287,7 +307,10 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-16 col-lg-7 offset-lg-9">
-                                            <div class="list bordered">
+                                            <div class="list hovered bordered">
+                                                <div class="h5">
+                                                    Hovered List
+                                                </div>
                                                 <div class="item">
                                                     <i class="material-icons">reorder</i>
                                                     <div class="body">
@@ -345,9 +368,28 @@
                                     <div class="title">List with inputs</div>
                                 </div>
                                 <div class="content">
+                                    <p>
+                                        Lists can contain variety of form inputs.
+                                    </p>
                                     <div class="row">
                                         <div class="col-xs-16 col-lg-7">
-                                            <div class="list">
+                                            <div class="list bordered hovered">
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        <div class="form reset small">
+                                                            <div class="item reset">
+                                                                <div class="group">
+                                                                    <input type="text" placeholder="key...">
+                                                                    <input type="text" placeholder="value...">
+                                                                    <a class="button error">
+                                                                        <i class="material-icons">clear</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="item">
                                                     <i class="material-icons">reorder</i>
                                                     <div class="body">
@@ -383,7 +425,30 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-16 col-lg-7 offset-lg-9">
-                                            <div class="list">
+                                            <div class="list bordered">
+                                                <div class="item">
+                                                    <i class="material-icons">reorder</i>
+                                                    <div class="body">
+                                                        <div class="form reset small">
+                                                            <div class="item reset">
+                                                                <div class="group">
+                                                                    <input type="text" placeholder="key...">
+                                                                    <input type="text" placeholder="value...">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="buttons mini">
+                                                            <a href="javascript:" class="button">
+                                                                <span class="material-icons">edit</span>
+                                                            </a>
+                                                            <a href="javascript:" class="button">
+                                                                <span class="material-icons">delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="item">
                                                     <i class="material-icons">reorder</i>
                                                     <div class="body">
@@ -439,6 +504,9 @@
                                     <div class="title">Media List</div>
                                 </div>
                                 <div class="content">
+                                    <p>
+                                        Also, Lists can contain variety of media elements and actions buttons.
+                                    </p>
                                     <div class="row">
                                         <div class="col-xs-16 col-lg-7">
                                             <div class="list bordered">
@@ -542,6 +610,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="row align center mt-50 mb-50">
+        <div class="col-16">
+            Designed and developed by <a href="https://github.com/codeforms" class="fw-900" target="_blank">CodeForms</a>.
+            Punica CSS is
+            licensed under the <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"
+                target="_blank">MIT License</a>.
         </div>
     </div>
 </body>

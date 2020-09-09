@@ -22,5 +22,9 @@ PUNICA CSS > ELEMENTS : LABEL ************************/
 				@include label-types($main-invert-color, $bg-color, darken($bg-color, 7%));
 			}
 		}
+		>i,
+		>.material-icons {
+			vertical-align: text-top;
+		}
 	}
 }

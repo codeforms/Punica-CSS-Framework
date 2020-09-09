@@ -1,8 +1,8 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : TIMELINE > VARIABLES *******/
 
-/* 
-NAMING ***********************************************/
+/***************************************************** 
+CLASS NAMING *****************************************/
 $timeline-container		: 'timeline';
 $timeline-item			: 'activity';
 $timeline-author		: 'author';
@@ -12,6 +12,8 @@ $timeline-date			: 'date';
 $timeline-media			: 'media';
 $timeline-actions		: 'actions';
 
+/***************************************************** 
+STYLES ***********************************************/
 $timeline-types: (
 	"primary": $primary-color,
 	"success": $success-color,
@@ -19,6 +21,8 @@ $timeline-types: (
 	"error": $error-color,
 );
 
+/***************************************************** 
+PREFERENCES ******************************************/
 $timeline-type-width	: 32px;
 $timeline-border-width	: 1px;
 $timeline-padding		: 1.25em 2em 2.85em;

@@ -4752,7 +4752,7 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 
 input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='week'], input[type='file'], input:not([type]), textarea, select {
   -webkit-appearance: none;
-  background-color: transparent;
+  background-color: #fff;
   border: 1px solid #c6c6c6;
   height: 2.5rem;
   border-radius: 0;
@@ -4772,8 +4772,8 @@ input[type='color'], input[type='date'], input[type='datetime'], input[type='dat
 input[type='color']:focus, input[type='date']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='month']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, input[type='week']:focus, input[type='file']:focus, input:not([type]):focus, textarea:focus, select:focus {
   outline: 2px solid #414552;
   outline-offset: -2px;
-  -webkit-transition: .15s;
-  transition: .15s;
+  -webkit-transition: .35s;
+  transition: .35s;
 }
 
 select {
@@ -4892,19 +4892,19 @@ input:disabled {
           box-shadow: none;
 }
 
-.form .group > .button, .form .group > .buttons > .button, .form .group > .buttons > .dropdown > .button, .form .item > .group > .button, .form .item > .group > .buttons > .button, .form .item > .group > .buttons > .dropdown > .button {
+.form .group > .button, .form .item > .group > .button {
   height: 2.5rem;
   font-size: .9338em;
   padding: 0.935rem 1.4rem;
   font-weight: 700;
 }
 
-.form .group > .button:first-child, .form .group > .buttons > .button:first-child, .form .group > .buttons > .dropdown > .button:first-child, .form .item > .group > .button:first-child, .form .item > .group > .buttons > .button:first-child, .form .item > .group > .buttons > .dropdown > .button:first-child {
+.form .group > .button:first-child, .form .item > .group > .button:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.form .group > .button:last-child:not(:first-child), .form .group > .buttons > .button:last-child:not(:first-child), .form .group > .buttons > .dropdown > .button:last-child:not(:first-child), .form .item > .group > .button:last-child:not(:first-child), .form .item > .group > .buttons > .button:last-child:not(:first-child), .form .item > .group > .buttons > .dropdown > .button:last-child:not(:first-child) {
+.form .group > .button:last-child:not(:first-child), .form .item > .group > .button:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5010,10 +5010,10 @@ input:disabled {
   font-size: 1em;
 }
 
-.form.small .group > .button, .form.small .group > .buttons > .button, .form.small .group > .buttons > .dropdown > .button {
-  height: 1.9rem;
-  font-size: 1em;
-  padding: 0.645rem 1.2rem;
+.form.small .button {
+  height: 1.9rem !important;
+  font-size: .859em !important;
+  padding: 0.645rem 1.2rem !important;
 }
 
 .form.small label, .form.small > .items > .item > label, .form.small > .item > label {
@@ -5025,10 +5025,10 @@ input:disabled {
   font-size: 1.2em;
 }
 
-.form.large .group > .button, .form.large .group > .buttons > .button, .form.large .group > .buttons > .dropdown > .button {
-  height: 2.9rem;
-  font-size: 1.2em;
-  padding: 1.15rem 1.9rem;
+.form.large .button {
+  height: 2.9rem !important;
+  font-size: 1em !important;
+  padding: 1.15rem 1.9rem !important;
 }
 
 .form.large label, .form.large > .items > .item > label, .form.large > .item > label {
@@ -5276,11 +5276,11 @@ sup {
 }
 
 .table.striped tr.active, .table.striped tbody tr.active {
-  background: #e6e6e6;
+  background: #f0f0f0;
 }
 
 .table.striped tr:nth-of-type(odd), .table.striped tbody tr:nth-of-type(odd) {
-  background: #f5f6f7;
+  background: #f0f0f0;
 }
 
 .table.striped thead tr {
@@ -5288,7 +5288,7 @@ sup {
 }
 
 .table.hovered tr:hover, .table.hovered tbody tr:hover {
-  background: #e6e6e6;
+  background: #f0f0f0;
 }
 
 .table.hovered thead tr {
@@ -5296,7 +5296,7 @@ sup {
 }
 
 .table td, .table th {
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #dedede;
   padding: 5px 7px;
   text-align: inherit;
 }
@@ -5307,9 +5307,9 @@ sup {
 
 .table thead tr th {
   border-bottom-width: 1px;
-  border-top: 1px solid #e6e6e6;
+  border-bottom-color: #c6c6c6;
   font-weight: 400;
-  color: #b7b7b7;
+  color: #9d9d9d;
 }
 
 .material-icons {
@@ -5357,6 +5357,10 @@ a.label.error, .label.error {
   background: #d62828;
   color: #fff;
   border-color: #b82222;
+}
+
+a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
+  vertical-align: text-top;
 }
 
 .alert {
@@ -5427,6 +5431,10 @@ a.label.error, .label.error {
 
 .alert p:last-child {
   margin-bottom: 0;
+}
+
+.alert > i, .alert > .material-icons {
+  vertical-align: text-top;
 }
 
 .badge {
@@ -5823,8 +5831,6 @@ a.label.error, .label.error {
 
 .card > .media img {
   display: block;
-  height: auto;
-  max-width: 100%;
 }
 
 .card.horizontal {
@@ -5898,8 +5904,10 @@ a.label.error, .label.error {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.55em 0;
+  padding: .55em;
   margin: 0;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
 .list > .item > img {
@@ -5932,6 +5940,16 @@ a.label.error, .label.error {
 
 .list.bordered > .item {
   border-bottom: 1px solid #c6c6c6;
+}
+
+.list.striped > .item:nth-of-type(odd) {
+  background: #f0f0f0;
+}
+
+.list.hovered > .item:hover {
+  background: #f0f0f0;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
 .menu {
@@ -5984,7 +6002,7 @@ a.label.error, .label.error {
 .menu .item > a:active, .menu .item > a:focus, .menu .item > a.active {
   background: #f0f0f0;
   color: #606265;
-  font-weight: 900;
+  font-weight: 700;
   -webkit-transition: .15s;
   transition: .15s;
 }
@@ -6430,8 +6448,8 @@ a.label.error, .label.error {
 
 .process .item {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
   min-height: 4rem;
   position: relative;
   -webkit-box-align: center;
@@ -6443,8 +6461,6 @@ a.label.error, .label.error {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 150px;
-  min-width: 150px;
   word-break: break-word;
   line-height: 1.3;
   text-align: center;

@@ -11,6 +11,7 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 		    align-items: center;
 		    padding: $list-item-padding;
 		    margin: 0;
+		    transition: .15s;
 		    >img {
 			    width: $list-media-width;
 		    }
@@ -38,6 +39,21 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 		&.#{$list-bordered} {
 			>.#{$list-item} {
 				border-bottom: $main-border-width $main-border-style $main-border-color;
+			}
+		}
+		&.#{$list-striped} {
+			>.#{$list-item} {
+				&:nth-of-type(odd) {
+					background: $main-striped-bg;
+				}
+			}
+		}
+		&.#{$list-hovered} {
+			>.#{$list-item} {
+				&:hover {
+					background: $main-hovered-bg;
+					transition: .15s;
+				}
 			}
 		}
 	}

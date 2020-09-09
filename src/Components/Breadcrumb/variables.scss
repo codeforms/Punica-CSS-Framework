@@ -1,20 +1,23 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : BREADCRUMB > VARIABLES *****/
 
-/* 
-NAMING ***********************************************/
+/*****************************************************
+CLASS NAMING *****************************************/
 $breadcrumb-name				: 'breadcrumb';
 $breadcrumb-item				: 'item';
 $breadcrumb-active				: 'active';
-/* 
-PREFERENCES ******************************************/
-// size, font-size, seperator-size, seperator-padding, seperator-size
+
+/*****************************************************
+SIZES ************************************************/
+// name, font-size, seperator-size, seperator-padding, seperator-size
 $breadcrumb-sizes               : (
     ('small', .9589em, 1.4rem, .25em, 1.6rem),
     ('large', 1.1rem, 1.9rem, .55em, 2rem)
 );
-/* 
-SEPARATOR ********************************************/
+
+/***************************************************** 
+PREFERENCES ******************************************/
+/* Seperator */
 $breadcrumb-seperator			: '\203A'; // [1]
 $breadcrumb-seperator-color		: black;
 $breadcrumb-seperator-padding	: 0 .45em;

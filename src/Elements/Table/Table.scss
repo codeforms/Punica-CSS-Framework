@@ -22,10 +22,10 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 				tr,
 				tbody tr {
 					&.#{$table-class-active} {
-						background: $main-secondary-bg; 
+						background: $main-striped-bg;
 					}
 					&:nth-of-type(odd) {
-						background: $table-nth-bg;
+						background: $main-striped-bg;
 					}
 				}
 				thead tr {
@@ -39,7 +39,7 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 				tr,
 				tbody tr {
 					&:hover {
-						background: $main-secondary-bg;
+						background: $main-hovered-bg;
 					}
 				}
 				thead tr {
@@ -57,7 +57,7 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 			background: $table-thead-bg;
 			th {
 				border-bottom-width: $table-bottom-border-width;
-				border-top: $table-top-border-width solid $table-border-color;
+				border-bottom-color: $main-border-color;
 				font-weight: $table-th-weight;
 				color: $table-th-color;
 			}
