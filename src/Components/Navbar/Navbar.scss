@@ -119,7 +119,13 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 	}
 
 	@include breakpoints($breakpoints-medium, 'max-width') {
+		.#{$navbar-spacer} {
+			margin-top: 0;
+		}
 		.#{$navbar-name} {
+			&.#{$navbar-fixed} {
+				position: relative;
+			}
 			.#{$navbar-brand} {
 				padding: 0 10px;
 			}

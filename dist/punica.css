@@ -6246,6 +6246,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar-spacer {
+    margin-top: 0;
+  }
+  .navbar.fixed {
+    position: relative;
+  }
   .navbar .brand {
     padding: 0 10px;
   }
