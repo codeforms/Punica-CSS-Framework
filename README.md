@@ -1,5 +1,5 @@
 # Punica CSS Framework
-Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable Pure CSS Framework based on SASS/SCSS.
+Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable (even class names) Pure CSS Framework based on SASS/SCSS.
 
 [Documentation](https://codeforms.github.io/Punica-CSS-Framework/) | [Changelogs](https://github.com/codeforms/Punica-CSS-Framework/releases)
 
