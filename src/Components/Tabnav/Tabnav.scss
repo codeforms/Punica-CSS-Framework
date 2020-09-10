@@ -15,7 +15,9 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 			border-radius: 0;
 		}
 		.#{$button-class},
-		.#{$dropdown-name} .#{$button-class} {
+		a.#{$button-class},
+		.#{$dropdown-name} .#{$button-class},
+		.#{$dropdown-name} a.#{$button-class} {
 			background: transparent;
 			border: none;
 		    border-bottom: $tabnav-border-bottom-width solid transparent;
@@ -24,8 +26,11 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 	        line-height: initial;
 	        font-weight: initial;
             font-size: $tabnav-item-button-size;
+            transition: .15s;
 			&:hover {
-				color: $primary-color;
+				color: darken($main-font-color, 8%);
+				border-bottom-color: darken($main-secondary-bg, 16%);
+				transition: .15s;
 			}
 			&.#{$tabnav-active} {
 				color: $primary-color;

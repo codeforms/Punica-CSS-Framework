@@ -6777,7 +6777,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   border-radius: 0;
 }
 
-.tab .button, .tab .dropdown .button {
+.tab .button, .tab a.button, .tab .dropdown .button, .tab .dropdown a.button {
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
@@ -6786,18 +6786,23 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   line-height: initial;
   font-weight: initial;
   font-size: 1.025em;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
-.tab .button:hover, .tab .dropdown .button:hover {
-  color: #0a8fff;
+.tab .button:hover, .tab a.button:hover, .tab .dropdown .button:hover, .tab .dropdown a.button:hover {
+  color: #2b2d2e;
+  border-bottom-color: #bdbdbd;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
-.tab .button.active, .tab .dropdown .button.active {
+.tab .button.active, .tab a.button.active, .tab .dropdown .button.active, .tab .dropdown a.button.active {
   color: #0a8fff;
   border-bottom-color: #0a8fff;
 }
 
-.tab .button.active i, .tab .button.active [class^="material-icons"], .tab .dropdown .button.active i, .tab .dropdown .button.active [class^="material-icons"] {
+.tab .button.active i, .tab .button.active [class^="material-icons"], .tab a.button.active i, .tab a.button.active [class^="material-icons"], .tab .dropdown .button.active i, .tab .dropdown .button.active [class^="material-icons"], .tab .dropdown a.button.active i, .tab .dropdown a.button.active [class^="material-icons"] {
   color: initial;
 }
 
