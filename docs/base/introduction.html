@@ -60,6 +60,7 @@
 							<li class="item"><a href="../components/panel.html">Panel</a></li>
 							<li class="item"><a href="../components/process.html">Process</a></li>
 							<li class="item"><a href="../components/progress.html">Progress</a></li>
+							<li class="item"><a href="../components/tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="../components/timeline.html">Timeline</a></li>
 							<li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
 						</ul>
@@ -96,7 +97,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-13 col-sm-16 col-xs-16">
+			<div class="col-lg-11 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
 
@@ -161,12 +162,17 @@
 								<div class="content">
 									<div class="row">
 										<div class="col-lg-16 col-sm-16 col-xs-16">
-											<table class="table hovered">
+											<!-- Coolors Palette Widget -->
+											<script src="https://coolors.co/palette-widget/widget.js"></script>
+											<script
+												data-id="047434481201707857">new CoolorsPaletteWidget("047434481201707857", ["414552", "3f4143", "77878b", "c6c6c6", "e6e6e6", "f0f0f0", "0a8fff", "2ec4b6", "de9e36", "d62828"], "Punica CSS - Color Palettes"); </script>
+											<table class="table hovered mt-30">
 												<thead>
 													<tr>
 														<th>Info</th>
 														<th></th>
 														<th>Color Name</th>
+														<th># HEX</th>
 														<th>Helper Class</th>
 													</tr>
 												</thead>
@@ -177,6 +183,7 @@
 															<input type="color" id="color" value="#ffffff">
 														</td>
 														<td class="fw-700">White</td>
+														<td class="fw-700">ffffff</td>
 														<td><code>.bg-white</code></td>
 													</tr>
 													<tr>
@@ -185,6 +192,7 @@
 															<input type="color" id="color" value="#3f4143">
 														</td>
 														<td class="fw-700">Onyx</td>
+														<td class="fw-700">3f4143</td>
 														<td>-</td>
 													</tr>
 													<tr>
@@ -193,6 +201,7 @@
 															<input type="color" id="color" value="#c6c6c6">
 														</td>
 														<td class="fw-700">Silver Sand</td>
+														<td class="fw-700">c6c6c6</td>
 														<td>-</td>
 													</tr>
 													<tr>
@@ -201,6 +210,7 @@
 															<input type="color" id="color" value="#414552">
 														</td>
 														<td class="fw-700">Charcoal</td>
+														<td class="fw-700">414552</td>
 														<td>-</td>
 													</tr>
 													<tr>
@@ -209,6 +219,7 @@
 															<input type="color" id="color" value="#77878b">
 														</td>
 														<td class="fw-700">Light Slate Gray</td>
+														<td class="fw-700">77878b</td>
 														<td><code>.bg-grey</code></td>
 													</tr>
 													<tr>
@@ -217,6 +228,7 @@
 															<input type="color" id="color" value="#f0f0f0">
 														</td>
 														<td class="fw-700">Cultured</td>
+														<td class="fw-700">f0f0f0</td>
 														<td></td>
 													</tr>
 													<tr>
@@ -225,6 +237,7 @@
 															<input type="color" id="color" value="#f0f0f0">
 														</td>
 														<td class="fw-700">Cultured</td>
+														<td class="fw-700">f0f0f0</td>
 														<td></td>
 													</tr>
 													<tr>
@@ -233,6 +246,7 @@
 															<input type="color" id="color" value="#e6e6e6">
 														</td>
 														<td class="fw-700">Platinum</td>
+														<td class="fw-700">e6e6e6</td>
 														<td><code>.bg-secondary</code></td>
 													</tr>
 													<tr>
@@ -241,6 +255,7 @@
 															<input type="color" id="color" value="#0a8fff">
 														</td>
 														<td class="fw-700">Dodger Blue</td>
+														<td class="fw-700">0a8fff</td>
 														<td><code>.bg-primary</code></td>
 													</tr>
 													<tr>
@@ -249,6 +264,7 @@
 															<input type="color" id="color" value="#2ec4b6">
 														</td>
 														<td class="fw-700">Tiffany Blue</td>
+														<td class="fw-700">2ec4b6</td>
 														<td><code>.bg-success</code></td>
 													</tr>
 													<tr>
@@ -257,6 +273,7 @@
 															<input type="color" id="color" value="#de9e36">
 														</td>
 														<td class="fw-700">Gamboge</td>
+														<td class="fw-700">de9e36</td>
 														<td><code>.bg-warning</code></td>
 													</tr>
 													<tr>
@@ -265,6 +282,7 @@
 															<input type="color" id="color" value="#d62828">
 														</td>
 														<td class="fw-700">Maximum Red</td>
+														<td class="fw-700">d62828</td>
 														<td><code>.bg-error</code></td>
 													</tr>
 												</tbody>
@@ -353,6 +371,10 @@
 											</tr>
 											<tr>
 												<td class="pl-30">Progress</td>
+												<td><code>true</code></td>
+											</tr>
+											<tr>
+												<td class="pl-30">Tabnav</td>
 												<td><code>true</code></td>
 											</tr>
 											<tr>

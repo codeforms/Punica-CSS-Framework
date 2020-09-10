@@ -58,6 +58,7 @@
 							<li class="item"><a href="../components/panel.html">Panel</a></li>
 							<li class="item"><a href="../components/process.html">Process</a></li>
 							<li class="item"><a href="../components/progress.html">Progress</a></li>
+							<li class="item"><a href="../components/tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="../components/timeline.html">Timeline</a></li>
 							<li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
 						</ul>
@@ -114,758 +115,775 @@
 				</div>
 			</div>
 
-			<div class="col-lg-13 col-sm-16 col-xs-16">
+			<div class="col-lg-10 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
-
-						<div class="panel pure reset">
-							<div class="breadcrumb">
-				                <a href="../" class="item">Punica</a>
-				                <a href="javascript:" class="item">Elements</a>
-				                <a href="javascript:" class="item active">Button</a>
-				            </div>
-			            </div>
-
 						<div class="col-16">
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="javascript:" class="item">Elements</a>
+									<a href="javascript:" class="item active">Button</a>
+								</div>
+							</div>
+							
+							<div class="panel pure">
+								<div class="content reset">
+									<div class="h1">Button & Dropdown</div>
+								</div>
+								<div class="content">
+									<div class="tab">
+										<div class="button active">Info</div>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Button/Button.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">code</i> Code
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Button/variables.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">settings</i> Variables
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Button/mixins.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">toys</i> Mixins
+										</a>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										There are several style modifiers available.
+									</p>
+								</div>
+								<div class="content bg-grid align center">
+									<div class="button">Default</div>
+									<button class="button primary">Primary</button>
+									<a class="button success">Success</a>
+									<div class="button error">Error</div>
+									<div class="button dark">Dark</div>
+									<div class="button disabled">Disabled</div>
+									<div class="button link">Link</div>
+									<div class="button secondary">Secondary</div>
+								</div>
+								<div class="content">
+									<div id="highlighter_295520" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;Default&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;primary"</code><code
+																	class="xml plain">&gt;Primary&lt;/</code><code class="xml keyword">button</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">a</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;success"</code><code
+																	class="xml plain">&gt;Success&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;error"</code><code
+																	class="xml plain">&gt;Error&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;disabled"</code><code
+																	class="xml plain">&gt;Disabled&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number6 index5 alt1"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;link"</code><code
+																	class="xml plain">&gt;Link&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;secondary"</code><code
+																	class="xml plain">&gt;Secondary&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
 
-							<h1>Button & Dropdown</h1>
+								<!-- BUTTON SIZES -->
+								<div class="content">
+									<h3 class="bordered">
+										Button Sizes
+									</h3>
+									<p>
+										Add the <code>.mini, .small, .large</code> or <code>.huge</code> class to a button to make it smaller or larger.
+										Also, you can add the <code>.block</code> class for a full-width button.
+									</p>
+								
+									<div class="panel pure">
+										<div class="content bg-grid align center">
+											<button class="button mini mr-5">Mini</button>
+											<button class="button small mr-5">Small</button>
+											<button class="button mr-5">Default</button>
+											<button class="button large mr-5">Large</button>
+											<button class="button huge">Huge</button>
+											<p></p>
+											<button class="button block">Block Button</button>
+										</div>
+									</div>
+									<div id="highlighter_121566" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;mini"</code><code
+																	class="xml plain">&gt;Mini&lt;/</code><code class="xml keyword">button</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;small"</code><code
+																	class="xml plain">&gt;Small&lt;/</code><code class="xml keyword">button</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;Default&lt;/</code><code
+																	class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;large"</code><code
+																	class="xml plain">&gt;Large&lt;/</code><code class="xml keyword">button</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;huge"</code><code
+																	class="xml plain">&gt;Huge&lt;/</code><code class="xml keyword">button</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number6 index5 alt1">&nbsp;</div>
+															<div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;block"</code><code
+																	class="xml plain">&gt;Block&nbsp;Button&lt;/</code><code
+																	class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
 
-							<!-- BUTTON STYLES -->
-							<div class="col-16" id="styles">
-								<p>
-									There are several style modifiers available.
-								</p>
-
-								<div class="panel pure">
-									<div class="content bg-grid align center">
-										<div class="button">Default</div>
-										<button class="button primary">Primary</button>
-										<a class="button success">Success</a>
-										<div class="button error">Error</div>
-										<div class="button dark">Dark</div>
-										<div class="button disabled">Disabled</div>
-										<div class="button link">Link</div>
-										<div class="button secondary">Secondary</div>
+								<!-- BUTTON GROUPS -->
+								<div class="content">
+									<h3 class="bordered">
+										Button Groups
+									</h3>
+									<p>
+										To create a button group, add the <code>.buttons</code> class to a <code>div</code> element around the buttons.
+									</p>
+								
+									<div class="panel pure">
+										<div class="content bg-grid align center">
+											<div class="buttons mr-20">
+												<button class="button">
+													Button
+												</button>
+												<a href="javascript:" class="button active">
+													Button
+												</a>
+												<button class="button">
+													Button
+												</button>
+											</div>
+											<div class="buttons secondary">
+												<button class="button">
+													Secondary Button
+												</button>
+												<a href="javascript:" class="button active">
+													Secondary Button
+												</a>
+												<button class="button">
+													Secondary Button
+												</button>
+											</div>
+											<p></p>
+											<div class="buttons secondary mini">
+												<a href="javascript:" class="button">
+													<span class="material-icons">person</span>
+												</a>
+												<div class="button inactive">254</div>
+											</div>
+											<div class="buttons mini ml-20">
+												<a href="javascript:" class="button">
+													<span class="material-icons">launch</span>
+												</a>
+												<div class="button inactive">458</div>
+											</div>
+											<div class="buttons mini ml-20">
+												<a href="javascript:" class="button active">
+													<span class="material-icons">thumb_up</span>
+												</a>
+												<div class="button inactive">276</div>
+											</div>
+											<div class="buttons mini ml-20">
+												<a href="javascript:" class="button primary">
+													<span class="material-icons">lock</span>
+												</a>
+												<div class="button inactive">63</div>
+											</div>
+											<div class="buttons mini ml-20">
+												<a href="javascript:" class="button success">
+													<span class="material-icons">input</span>
+												</a>
+												<div class="button inactive">395</div>
+											</div>
+										</div>
+									</div>
+								
+									<div id="highlighter_532922" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"buttons"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">button</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"button"</code><code class="xml plain">&gt;&lt;/</code><code
+																	class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"button&nbsp;active"</code><code
+																	class="xml plain">&gt;&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">button</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"button"</code><code class="xml plain">&gt;&lt;/</code><code
+																	class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+															<div class="line number6 index5 alt1">&nbsp;</div>
+															<div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code
+																	class="xml string">"buttons&nbsp;secondary"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number8 index7 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">button</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"button"</code><code class="xml plain">&gt;&lt;/</code><code
+																	class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
+															<div class="line number9 index8 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"button&nbsp;active"</code><code
+																	class="xml plain">&gt;&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number10 index9 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">button</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"button"</code><code class="xml plain">&gt;&lt;/</code><code
+																	class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
+															<div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<P>
+										Also, add the <code>.mini, .small, .large</code> or <code>.huge</code> class to <code>.buttons</code> to make it
+										smaller or larger group buttons.
+									</P>
+								
+									<div class="panel pure">
+										<div class="content bg-grid align center">
+											<div class="buttons mini mr-20">
+												<a href="javascript:" class="button">
+													<span class="material-icons">launch</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">person</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">directions_run</span>
+												</a>
+											</div>
+											<div class="buttons small mr-20">
+												<a href="javascript:" class="button">
+													<span class="material-icons">launch</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">person</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">directions_run</span>
+												</a>
+											</div>
+											<div class="buttons">
+												<a href="javascript:" class="button">
+													<span class="material-icons">launch</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">person</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">directions_run</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								
+									<div id="highlighter_230996" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"buttons&nbsp;huge"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;launch&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number6 index5 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number7 index6 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number8 index7 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number9 index8 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;directions_run&lt;/</code><code
+																	class="xml keyword">span</code><code class="xml plain">&gt;</code></div>
+															<div class="line number10 index9 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								
+									<p>
+										And you can add the <code>.block</code> class to <code>.buttons</code> for a full-width button group.
+									</p>
+								
+									<div class="panel pure">
+										<div class="content bg-grid align center">
+											<div class="buttons mini block">
+												<a href="javascript:" class="button">
+													Button
+												</a>
+												<a href="javascript:" class="button">
+													Button
+												</a>
+												<a href="javascript:" class="button">
+													Button
+												</a>
+											</div>
+											<p></p>
+											<div class="buttons small block">
+												<a href="javascript:" class="button">
+													Button
+												</a>
+												<a href="javascript:" class="button">
+													Button
+												</a>
+												<a href="javascript:" class="button">
+													Button
+												</a>
+											</div>
+											<p></p>
+											<div class="buttons block">
+												<a href="javascript:" class="button">
+													<span class="material-icons">launch</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">person</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">directions_run</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								
+									<div id="highlighter_544847" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"buttons&nbsp;block"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;launch&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number6 index5 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number7 index6 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number8 index7 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number9 index8 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;directions_run&lt;/</code><code
+																	class="xml keyword">span</code><code class="xml plain">&gt;</code></div>
+															<div class="line number10 index9 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
 								</div>
 								
-								<div id="highlighter_295520" class="syntaxhighlighter nogutter  xml">
-									<table border="0" cellpadding="0" cellspacing="0">
-										<tbody>
-											<tr>
-												<td class="code">
-													<div class="container">
-														<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;Default&lt;/</code><code class="xml keyword">div</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;primary"</code><code
-																class="xml plain">&gt;Primary&lt;/</code><code class="xml keyword">button</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">a</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;success"</code><code
-																class="xml plain">&gt;Success&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;error"</code><code
-																class="xml plain">&gt;Error&lt;/</code><code class="xml keyword">div</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;disabled"</code><code
-																class="xml plain">&gt;Disabled&lt;/</code><code class="xml keyword">div</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number6 index5 alt1"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;link"</code><code
-																class="xml plain">&gt;Link&lt;/</code><code class="xml keyword">div</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;secondary"</code><code
-																class="xml plain">&gt;Secondary&lt;/</code><code class="xml keyword">div</code><code
-																class="xml plain">&gt;</code></div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-							</div>
-
-							<!-- BUTTON SIZES -->
-							<div class="col-16" id="sizes">
-								<h3 class="bordered">
-									Button Sizes
-								</h3>
-								<p>
-									Add the <code>.mini, .small, .large</code> or <code>.huge</code> class to a button to make it smaller or larger. Also, you can add the <code>.block</code> class for a full-width button.
-								</p>
-
-								<div class="panel pure">
-									<div class="content bg-grid align center">
-										<button class="button mini mr-5">Mini</button>
-										<button class="button small mr-5">Small</button>
-										<button class="button mr-5">Default</button>
-										<button class="button large mr-5">Large</button>
-										<button class="button huge">Huge</button>
-										<p></p>
-										<button class="button block">Block Button</button>
-									</div>
-								</div>
-
-								<div id="highlighter_121566" class="syntaxhighlighter nogutter  xml">
-									<table border="0" cellpadding="0" cellspacing="0">
-										<tbody>
-											<tr>
-												<td class="code">
-													<div class="container">
-														<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;mini"</code><code
-																class="xml plain">&gt;Mini&lt;/</code><code class="xml keyword">button</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;small"</code><code
-																class="xml plain">&gt;Small&lt;/</code><code class="xml keyword">button</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;Default&lt;/</code><code class="xml keyword">button</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;large"</code><code
-																class="xml plain">&gt;Large&lt;/</code><code class="xml keyword">button</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;huge"</code><code
-																class="xml plain">&gt;Huge&lt;/</code><code class="xml keyword">button</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number6 index5 alt1">&nbsp;</div>
-														<div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;block"</code><code
-																class="xml plain">&gt;Block&nbsp;Button&lt;/</code><code
-																class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-							</div>
-
-							<!-- BUTTON GROUPS -->
-							<div class="col-16" id="groups">
-								<h3 class="bordered">
-									Button Groups
-								</h3>
-								<p>
-									To create a button group, add the <code>.buttons</code> class to a <code>div</code> element around the buttons.
-								</p>
-
-								<div class="panel pure">
-									<div class="content bg-grid align center">
-										<div class="buttons mr-20">
-											<button class="button">
-												Button
-											</button>
-											<a href="javascript:" class="button active">
-												Button
-											</a>
-											<button class="button">
-												Button
-											</button>
-										</div>
-										<div class="buttons secondary">
-											<button class="button">
-												Secondary Button
-											</button>
-											<a href="javascript:" class="button active">
-												Secondary Button
-											</a>
-											<button class="button">
-												Secondary Button
-											</button>
-										</div>
-										<p></p>
-										<div class="buttons secondary mini">
-											<a href="javascript:" class="button">
-												<span class="material-icons">person</span>
-											</a>
-											<div class="button inactive">254</div>
-										</div>
-										<div class="buttons mini ml-20">
-											<a href="javascript:" class="button">
-												<span class="material-icons">launch</span>
-											</a>
-											<div class="button inactive">458</div>
-										</div>
-										<div class="buttons mini ml-20">
-											<a href="javascript:" class="button active">
-												<span class="material-icons">thumb_up</span>
-											</a>
-											<div class="button inactive">276</div>
-										</div>
-										<div class="buttons mini ml-20">
-											<a href="javascript:" class="button primary">
-												<span class="material-icons">lock</span>
-											</a>
-											<div class="button inactive">63</div>
-										</div>
-										<div class="buttons mini ml-20">
-											<a href="javascript:" class="button success">
-												<span class="material-icons">input</span>
-											</a>
-											<div class="button inactive">395</div>
+								<!-- Secondary -->
+								<div class="content">
+									<h3 class="bordered">
+										Secondary Button
+									</h3>
+									<p>
+										You can add the <code>.secondary</code> class to a <code>.button</code> or <code>.buttons</code> to change the
+										style as secondary.
+									</p>
+								
+									<div class="panel pure">
+										<div class="content bg-grid align center">
+											<button class="button secondary mini mr-10"><span class="material-icons">person</span></button>
+											<button class="button secondary small mr-10"><span class="material-icons">person</span></button>
+											<button class="button secondary mr-10"><span class="material-icons">person</span></button>
+											<button class="button secondary large mr-10"><span class="material-icons">person</span></button>
+											<button class="button secondary huge mr-10"><span class="material-icons">person</span></button>
 										</div>
 									</div>
-								</div>
-
-								<div id="highlighter_532922" class="syntaxhighlighter nogutter  xml">
-									<table border="0" cellpadding="0" cellspacing="0">
-										<tbody>
-											<tr>
-												<td class="code">
-													<div class="container">
-														<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"buttons"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number2 index1 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">button</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"button"</code><code class="xml plain">&gt;&lt;/</code><code
-																class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
-														<div class="line number3 index2 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"button&nbsp;active"</code><code
-																class="xml plain">&gt;&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number4 index3 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">button</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"button"</code><code class="xml plain">&gt;&lt;/</code><code
-																class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
-														<div class="line number5 index4 alt2"><code class="xml plain">&lt;/</code><code
-																class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
-														<div class="line number6 index5 alt1">&nbsp;</div>
-														<div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"buttons&nbsp;secondary"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number8 index7 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">button</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"button"</code><code class="xml plain">&gt;&lt;/</code><code
-																class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
-														<div class="line number9 index8 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"button&nbsp;active"</code><code
-																class="xml plain">&gt;&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number10 index9 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">button</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"button"</code><code class="xml plain">&gt;&lt;/</code><code
-																class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
-														<div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code
-																class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<P>
-									Also, add the <code>.mini, .small, .large</code> or <code>.huge</code> class to <code>.buttons</code> to make it smaller or larger group buttons.
-								</P>
-
-								<div class="panel pure">
-									<div class="content bg-grid align center">
-										<div class="buttons mini mr-20">
-											<a href="javascript:" class="button">
-												<span class="material-icons">launch</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">person</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">directions_run</span>
-											</a>
-										</div>
-										<div class="buttons small mr-20">
-											<a href="javascript:" class="button">
-												<span class="material-icons">launch</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">person</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">directions_run</span>
-											</a>
-										</div>
-										<div class="buttons">
-											<a href="javascript:" class="button">
-												<span class="material-icons">launch</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">person</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">directions_run</span>
-											</a>
+								
+									<div id="highlighter_946536" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code
+																	class="xml string">"button&nbsp;secondary&nbsp;mini"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code
+																	class="xml string">"button&nbsp;secondary&nbsp;small"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number6 index5 alt1"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								
+									<div class="panel pure">
+										<div class="content bg-grid align center">
+											<div class="buttons mini secondary mr-20">
+												<a href="javascript:" class="button active">
+													<span class="material-icons">launch</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">person</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">directions_run</span>
+												</a>
+											</div>
+											<div class="buttons small secondary mr-20">
+												<a href="javascript:" class="button">
+													<span class="material-icons">launch</span>
+												</a>
+												<a href="javascript:" class="button active">
+													<span class="material-icons">person</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">directions_run</span>
+												</a>
+											</div>
+											<div class="buttons secondary mr-20">
+												<a href="javascript:" class="button">
+													<span class="material-icons">launch</span>
+												</a>
+												<a href="javascript:" class="button">
+													<span class="material-icons">person</span>
+												</a>
+												<a href="javascript:" class="button active">
+													<span class="material-icons">directions_run</span>
+												</a>
+											</div>
 										</div>
 									</div>
-								</div>
-
-								<div id="highlighter_230996" class="syntaxhighlighter nogutter  xml">
-									<table border="0" cellpadding="0" cellspacing="0">
-										<tbody>
-											<tr>
-												<td class="code">
-													<div class="container">
-														<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"buttons&nbsp;huge"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number2 index1 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number3 index2 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;launch&lt;/</code><code class="xml keyword">span</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number4 index3 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number5 index4 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number6 index5 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number7 index6 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number8 index7 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number9 index8 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;directions_run&lt;/</code><code
-																class="xml keyword">span</code><code class="xml plain">&gt;</code></div>
-														<div class="line number10 index9 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code
-																class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-								<p>
-									And you can add the <code>.block</code> class to <code>.buttons</code> for a full-width button group.
-								</p>
-
-								<div class="panel pure">
-									<div class="content bg-grid align center">
-										<div class="buttons mini block">
-											<a href="javascript:" class="button">
-												Button
-											</a>
-											<a href="javascript:" class="button">
-												Button
-											</a>
-											<a href="javascript:" class="button">
-												Button
-											</a>
-										</div>
-										<p></p>
-										<div class="buttons small block">
-											<a href="javascript:" class="button">
-												Button
-											</a>
-											<a href="javascript:" class="button">
-												Button
-											</a>
-											<a href="javascript:" class="button">
-												Button
-											</a>
-										</div>
-										<p></p>
-										<div class="buttons block">
-											<a href="javascript:" class="button">
-												<span class="material-icons">launch</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">person</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">directions_run</span>
-											</a>
-										</div>
+								
+									<div id="highlighter_510452" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code
+																	class="xml string">"buttons&nbsp;secondary"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;launch&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number6 index5 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number7 index6 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number8 index7 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"button&nbsp;active"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number9 index8 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
+																	class="xml color1">class</code><code class="xml plain">=</code><code
+																	class="xml string">"material-icons"</code><code
+																	class="xml plain">&gt;directions_run&lt;/</code><code
+																	class="xml keyword">span</code><code class="xml plain">&gt;</code></div>
+															<div class="line number10 index9 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
-								</div>
-
-								<div id="highlighter_544847" class="syntaxhighlighter nogutter  xml">
-									<table border="0" cellpadding="0" cellspacing="0">
-										<tbody>
-											<tr>
-												<td class="code">
-													<div class="container">
-														<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"buttons&nbsp;block"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number2 index1 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number3 index2 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;launch&lt;/</code><code class="xml keyword">span</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number4 index3 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number5 index4 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number6 index5 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number7 index6 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number8 index7 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number9 index8 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;directions_run&lt;/</code><code
-																class="xml keyword">span</code><code class="xml plain">&gt;</code></div>
-														<div class="line number10 index9 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code
-																class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-
-							<!-- Secondary -->
-							<div class="col-16" id="secondary">
-								<h3 class="bordered">
-									Secondary Button
-								</h3>
-								<p>
-									You can add the <code>.secondary</code> class to a <code>.button</code> or <code>.buttons</code> to change the style as secondary.
-								</p>
-
-								<div class="panel pure">
-									<div class="content bg-grid align center">
-										<button class="button secondary mini mr-10"><span class="material-icons">person</span></button>
-										<button class="button secondary small mr-10"><span class="material-icons">person</span></button>
-										<button class="button secondary mr-10"><span class="material-icons">person</span></button>
-										<button class="button secondary large mr-10"><span class="material-icons">person</span></button>
-										<button class="button secondary huge mr-10"><span class="material-icons">person</span></button>
-									</div>
-								</div>
-
-								<div id="highlighter_946536" class="syntaxhighlighter nogutter  xml">
-									<table border="0" cellpadding="0" cellspacing="0">
-										<tbody>
-											<tr>
-												<td class="code">
-													<div class="container">
-														<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code
-																class="xml string">"button&nbsp;secondary&nbsp;mini"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number2 index1 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number3 index2 alt2"><code class="xml plain">&lt;/</code><code
-																class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
-														<div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
-																class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code
-																class="xml string">"button&nbsp;secondary&nbsp;small"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number5 index4 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number6 index5 alt1"><code class="xml plain">&lt;/</code><code
-																class="xml keyword">button</code><code class="xml plain">&gt;</code></div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
 								</div>
 								
-								<div class="panel pure">
-									<div class="content bg-grid align center">
-										<div class="buttons mini secondary mr-20">
-											<a href="javascript:" class="button active">
-												<span class="material-icons">launch</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">person</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">directions_run</span>
-											</a>
-										</div>
-										<div class="buttons small secondary mr-20">
-											<a href="javascript:" class="button">
-												<span class="material-icons">launch</span>
-											</a>
-											<a href="javascript:" class="button active">
-												<span class="material-icons">person</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">directions_run</span>
-											</a>
-										</div>
-										<div class="buttons secondary mr-20">
-											<a href="javascript:" class="button">
-												<span class="material-icons">launch</span>
-											</a>
-											<a href="javascript:" class="button">
-												<span class="material-icons">person</span>
-											</a>
-											<a href="javascript:" class="button active">
-												<span class="material-icons">directions_run</span>
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<div id="highlighter_510452" class="syntaxhighlighter nogutter  xml">
-									<table border="0" cellpadding="0" cellspacing="0">
-										<tbody>
-											<tr>
-												<td class="code">
-													<div class="container">
-														<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"buttons&nbsp;secondary"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number2 index1 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number3 index2 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;launch&lt;/</code><code class="xml keyword">span</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number4 index3 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number5 index4 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number6 index5 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;person&lt;/</code><code class="xml keyword">span</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number7 index6 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number8 index7 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-																class="xml color1">href</code><code class="xml plain">=</code><code
-																class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-																class="xml plain">=</code><code class="xml string">"button&nbsp;active"</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number9 index8 alt2"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code
-																class="xml color1">class</code><code class="xml plain">=</code><code
-																class="xml string">"material-icons"</code><code
-																class="xml plain">&gt;directions_run&lt;/</code><code
-																class="xml keyword">span</code><code class="xml plain">&gt;</code></div>
-														<div class="line number10 index9 alt1"><code
-																class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-																class="xml plain">&lt;/</code><code class="xml keyword">a</code><code
-																class="xml plain">&gt;</code></div>
-														<div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code
-																class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-
-							<!-- Dropdown -->
-							<div class="col-16 pb-50" id="dropdown">
-								<h3 class="bordered">
-									Button with Dropdown
-								</h3>
-								<p>
-									A button can be used to trigger a dropdown menu.
-								</p>
-								<div class="panel pure">
-									<div class="content bg-grid align center">
-										<div class="buttons">
-											<div class="dropdown small">
-												<a tabindex="0" class="button toggle">
-													Dropdown <span class="material-icons">keyboard_arrow_down</span>
-												</a>
-												<ul class="menu">
-													<li class="item"><a href="#">Dropdown 1</a></li>
-													<li class="item"><a href="#">Dropdown 2</a></li>
-													<li class="item"><a href="#">Dropdown 3</a></li>
-												</ul>
+								<!-- Dropdown -->
+								<div class="content">
+									<h3 class="bordered">
+										Button with Dropdown
+									</h3>
+									<p>
+										A button can be used to trigger a dropdown menu.
+									</p>
+									<div class="panel pure">
+										<div class="content bg-grid align center">
+											<div class="buttons">
+												<div class="dropdown small">
+													<a tabindex="0" class="button toggle">
+														Dropdown <span class="material-icons">keyboard_arrow_down</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
 											</div>
-										</div>
-										<div class="buttons secondary small ml-20">
-											<div class="button">Dropdown</div>
-											<div class="dropdown right small">
-												<a tabindex="0" class="button toggle">
-													<span class="material-icons">keyboard_arrow_down</span>
-												</a>
-												<ul class="menu">
-													<li class="item"><a href="#">Dropdown 1</a></li>
-													<li class="item"><a href="#">Dropdown 2</a></li>
-													<li class="item"><a href="#">Dropdown 3</a></li>
-												</ul>
+											<div class="buttons secondary small ml-20">
+												<div class="button">Dropdown</div>
+												<div class="dropdown right small">
+													<a tabindex="0" class="button toggle">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
 											</div>
-										</div>
-										<div class="buttons small ml-20">
-											<div class="button">
-												<span class="material-icons">drafts</span>
+											<div class="buttons small ml-20">
+												<div class="button">
+													<span class="material-icons">drafts</span>
+												</div>
+												<div class="button inactive">254</div>
+												<div class="dropdown right top small">
+													<a tabindex="0" class="button toggle">
+														<span class="material-icons">keyboard_arrow_up</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
 											</div>
-											<div class="button inactive">254</div>
-											<div class="dropdown right top small">
-												<a tabindex="0" class="button toggle">
-													<span class="material-icons">keyboard_arrow_up</span>
-												</a>
-												<ul class="menu">
-													<li class="item"><a href="#">Dropdown 1</a></li>
-													<li class="item"><a href="#">Dropdown 2</a></li>
-													<li class="item"><a href="#">Dropdown 3</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="buttons small ml-20">
-											<div class="dropdown small">
-												<a tabindex="0" class="button toggle">
-													<span class="material-icons">keyboard_arrow_down</span>
-												</a>
-												<ul class="menu">
-													<li class="item"><a href="#">Dropdown 1</a></li>
-													<li class="item"><a href="#">Dropdown 2</a></li>
-													<li class="item"><a href="#">Dropdown 3</a></li>
-												</ul>
-											</div>
-											<div class="button inactive">254</div>
-											<div class="button secondary">
-												<span class="material-icons">drafts</span>
+											<div class="buttons small ml-20">
+												<div class="dropdown small">
+													<a tabindex="0" class="button toggle">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
+												<div class="button inactive">254</div>
+												<div class="button secondary">
+													<span class="material-icons">drafts</span>
+												</div>
 											</div>
 										</div>
 									</div>

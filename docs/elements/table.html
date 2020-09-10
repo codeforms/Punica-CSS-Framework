@@ -58,6 +58,7 @@
 							<li class="item"><a href="../components/panel.html">Panel</a></li>
 							<li class="item"><a href="../components/process.html">Process</a></li>
 							<li class="item"><a href="../components/progress.html">Progress</a></li>
+							<li class="item"><a href="../components/tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="../components/timeline.html">Timeline</a></li>
 							<li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
 						</ul>
@@ -114,27 +115,45 @@
 				</div>
 			</div>
 
-			<div class="col-lg-10 col-sm-16 col-xs-16">
+			<div class="col-lg-11 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
-
-						<div class="panel pure reset">
-							<div class="breadcrumb">
-								<a href="../" class="item">Punica</a>
-								<a href="" class="item">Elements</a>
-								<a href="" class="item active">Table</a>
-							</div>
-						</div>
-
 						<div class="col-16">
-							<h1>Table</h1>
-							<p>
-								Just add the <code>.table</code> class to any <code>table</code> element. The class will add padding, border and emphasized table header.
-							</p>
+
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="" class="item">Elements</a>
+									<a href="" class="item active">Table</a>
+								</div>
+							</div>
 
 							<div class="panel pure">
+								<div class="content reset">
+									<div class="h1">Table</div>
+								</div>
 								<div class="content">
-									<table class="table">
+									<div class="tab">
+										<div class="button active">Info</div>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Table/Table.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">code</i> Code
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Table/variables.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">settings</i> Variables
+										</a>
+										<button class="disabled button">
+											<i class="material-icons mr-5">toys</i> Mixins
+										</button>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										Just add the <code>.table</code> class to any <code>table</code> element. The class will add padding, border and
+										emphasized table header.
+									</p>
+									<table class="table mt-50">
 										<thead>
 											<tr>
 												<th>Table Heading</th>
@@ -161,145 +180,153 @@
 										</tbody>
 									</table>
 								</div>
-							</div>
 
-							<h3 class="bordered">Striped Tables</h3>
-							<p>
-								Add zebra-striping to a table by adding the <code>.striped</code> class.
-							</p>
-							<div class="panel pure">
+								<!-- Striped Tables-->
 								<div class="content">
-									<table class="striped table">
-										<thead>
-											<tr>
-												<th>Table Heading</th>
-												<th>Table Heading</th>
-												<th>Table Heading</th>
-												<th></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td class="center align">
-													<div class="buttons mini">
-														<a href="javascript:" class="button">
-															<span class="material-icons">edit</span>
-														</a>
-														<a href="javascript:" class="button">
-															<span class="material-icons">delete</span>
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td class="center align">
-													<div class="buttons mini">
-														<a href="javascript:" class="button">
-															<span class="material-icons">edit</span>
-														</a>
-														<a href="javascript:" class="button">
-															<span class="material-icons">delete</span>
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td class="center align">
-													<div class="buttons mini">
-														<a href="javascript:" class="button">
-															<span class="material-icons">edit</span>
-														</a>
-														<a href="javascript:" class="button">
-															<span class="material-icons">delete</span>
-														</a>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+									<h3 class="bordered">
+										Striped Tables
+									</h3>
+									<p>
+										Add zebra-striping to a table by adding the <code>.striped</code> class.
+									</p>
+									<div class="panel pure">
+										<div class="content">
+											<table class="striped table">
+												<thead>
+													<tr>
+														<th>Table Heading</th>
+														<th>Table Heading</th>
+														<th>Table Heading</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td class="center align">
+															<div class="buttons mini">
+																<a href="javascript:" class="button">
+																	<span class="material-icons">edit</span>
+																</a>
+																<a href="javascript:" class="button">
+																	<span class="material-icons">delete</span>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td class="center align">
+															<div class="buttons mini">
+																<a href="javascript:" class="button">
+																	<span class="material-icons">edit</span>
+																</a>
+																<a href="javascript:" class="button">
+																	<span class="material-icons">delete</span>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td class="center align">
+															<div class="buttons mini">
+																<a href="javascript:" class="button">
+																	<span class="material-icons">edit</span>
+																</a>
+																<a href="javascript:" class="button">
+																	<span class="material-icons">delete</span>
+																</a>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</div>
-							</div>
 
-							<h3 class="bordered">Hovered Tables</h3>
-							<p>
-								Add the <code>.hovered</code> class to display a hover state on table rows.
-							</p>
-							<div class="panel pure">
+								<!-- Hovered Tables-->
 								<div class="content">
-									<table class="hovered table">
-										<thead>
-											<tr>
-												<th>Table Heading</th>
-												<th>Table Heading</th>
-												<th>Table Heading</th>
-												<th></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td class="center align">
-													<div class="buttons mini">
-														<a href="javascript:" class="button">
-															<span class="material-icons">edit</span>
-														</a>
-														<a href="javascript:" class="button">
-															<span class="material-icons">delete</span>
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td class="center align">
-													<div class="buttons mini">
-														<a href="javascript:" class="button">
-															<span class="material-icons">edit</span>
-														</a>
-														<a href="javascript:" class="button">
-															<span class="material-icons">delete</span>
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td>Table Data</td>
-												<td class="center align">
-													<div class="buttons mini">
-														<a href="javascript:" class="button">
-															<span class="material-icons">edit</span>
-														</a>
-														<a href="javascript:" class="button">
-															<span class="material-icons">delete</span>
-														</a>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+									<h3 class="bordered">
+										Hovered Tables
+									</h3>
+									<p>
+										Add the <code>.hovered</code> class to display a hover state on table rows.
+									</p>
+									<div class="panel pure">
+										<div class="content">
+											<table class="hovered table">
+												<thead>
+													<tr>
+														<th>Table Heading</th>
+														<th>Table Heading</th>
+														<th>Table Heading</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td class="center align">
+															<div class="buttons mini">
+																<a href="javascript:" class="button">
+																	<span class="material-icons">edit</span>
+																</a>
+																<a href="javascript:" class="button">
+																	<span class="material-icons">delete</span>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td class="center align">
+															<div class="buttons mini">
+																<a href="javascript:" class="button">
+																	<span class="material-icons">edit</span>
+																</a>
+																<a href="javascript:" class="button">
+																	<span class="material-icons">delete</span>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td>Table Data</td>
+														<td class="center align">
+															<div class="buttons mini">
+																<a href="javascript:" class="button">
+																	<span class="material-icons">edit</span>
+																</a>
+																<a href="javascript:" class="button">
+																	<span class="material-icons">delete</span>
+																</a>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="col-lg-3 col-sm-16 col-xs-16"></div>
 		</div>
 	</div>
 

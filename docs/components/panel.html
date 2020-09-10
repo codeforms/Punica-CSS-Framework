@@ -60,6 +60,7 @@
 							<li class="item"><a href="./panel.html" class="active">Panel</a></li>
 							<li class="item"><a href="./process.html">Process</a></li>
 							<li class="item"><a href="./progress.html">Progress</a></li>
+							<li class="item"><a href="./tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="./timeline.html">Timeline</a></li>
 							<li class="item"><a href="./tooltip.html">Tooltip</a></li>
 						</ul>
@@ -144,6 +145,11 @@
 						</a>
 					</div>
 					<div class="item">
+						<a href="./tabnav.html">
+							Tabnav
+						</a>
+					</div>
+					<div class="item">
 						<a href="./timeline.html">
 							Timeline
 						</a>
@@ -156,74 +162,90 @@
 				</div>
 			</div>
 
-			<div class="col-lg-13 col-sm-16 col-xs-16">
+			<div class="col-lg-11 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
-
-						<div class="panel pure reset">
-							<div class="breadcrumb">
-								<a href="../" class="item">Punica</a>
-								<a href="" class="item">Components</a>
-								<a href="" class="item active">Panel</a>
-							</div>
-						</div>
-
 						<div class="col-16">
-							<h1>Panel</h1>
 
-							<!-- info -->
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="" class="item">Components</a>
+									<a href="" class="item active">Panel</a>
+								</div>
+							</div>
+
 							<div class="panel pure">
+								<div class="content reset">
+									<div class="h1">Panel</div>
+								</div>
 								<div class="content">
-									<div class="row">
-										<div class="col-lg-16 col-sm-16 col-xs-16">
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Props</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Container</td>
-														<td><code>.panel</code></td>
-													</tr>
-													<tr>
-														<td>Pure Panel (No border and shadow)</td>
-														<td><code>.pure</code></td>
-													</tr>
-													<tr>
-														<td>Panel Header</td>
-														<td><code>.header</code></td>
-													</tr>
-													<tr>
-														<td>Panel Title</td>
-														<td><code>.title</code></td>
-													</tr>
-													<tr>
-														<td>Panel Content</td>
-														<td><code>.content</code></td>
-													</tr>
-													<tr>
-														<td>Panel Media</td>
-														<td><code>.media</code></td>
-													</tr>
-													<tr>
-														<td>Panel Headline</td>
-														<td><code>.headline</code></td>
-													</tr>
-													<tr>
-														<td>Panel Bottom</td>
-														<td><code>.bottom</code></td>
-													</tr>
-													<tr>
-														<td>Panel Title & Bottom Actions</td>
-														<td><code>.actions</code></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
+									<div class="tab">
+										<div class="button active">Info</div>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Panel/Panel.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">code</i> Code
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Panel/variables.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">settings</i> Variables
+										</a>
+										<button class="disabled button">
+											<i class="material-icons mr-5">toys</i> Mixins
+										</button>
 									</div>
+								</div>
+								<div class="content">
+									<p>
+										Panels can be used to separate the content of a page. To apply this component, just add the <code>.panel</code>
+										class to a container element.
+									</p>
+									<table class="table mt-50">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Props</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Container</td>
+												<td><code>.panel</code></td>
+											</tr>
+											<tr>
+												<td>Pure Panel (No border and shadow)</td>
+												<td><code>.pure</code></td>
+											</tr>
+											<tr>
+												<td>Panel Header</td>
+												<td><code>.header</code></td>
+											</tr>
+											<tr>
+												<td>Panel Title</td>
+												<td><code>.title</code></td>
+											</tr>
+											<tr>
+												<td>Panel Content</td>
+												<td><code>.content</code></td>
+											</tr>
+											<tr>
+												<td>Panel Media</td>
+												<td><code>.media</code></td>
+											</tr>
+											<tr>
+												<td>Panel Headline</td>
+												<td><code>.headline</code></td>
+											</tr>
+											<tr>
+												<td>Panel Bottom</td>
+												<td><code>.bottom</code></td>
+											</tr>
+											<tr>
+												<td>Panel Title & Bottom Actions</td>
+												<td><code>.actions</code></td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 
@@ -232,10 +254,7 @@
 									<div class="title">Default Panel</div>
 								</div>
 								<div class="content">
-									<p>
-										Panels can be used to separate the content of a page. To apply this component, just add the <code>.panel</code>
-										class to a container element.
-									</p>
+									
 									<div class="row">
 										<div class="col-sm-16 col-xs-16 col-lg-6">
 											<div class="panel">
@@ -254,11 +273,11 @@
 												</div>
 												<div class="content">
 													<div class="headline">
-														Lorem ipsum dolor sit amet, eu duo inermis vocibus similique, vix ei facer mediocrem voluptaria, lorem everti ad pro.
+														Lorem ipsum dolor sit amet, eu duo inermis vocibus similique.
 													</div>
 													<p>
 														Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal <code>integre</code> est cu, sea tacimates percipitur adversarium ei,
-														justo volumus assentior cu nec. Ut facilisi consequat duo, te ius eleifend sadipscing scriptorem.
+														justo volumus assentior cu nec.
 													</p>
 												</div>
 												<div class="bottom borderless">
@@ -268,7 +287,6 @@
 										</div>
 										<div class="col-sm-16 col-xs-16 col-lg-10">
 											<div id="highlighter_69643" class="syntaxhighlighter nogutter  xml">
-												<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
 												<table border="0" cellpadding="0" cellspacing="0">
 													<tbody>
 														<tr>
@@ -435,13 +453,12 @@
 												</div>
 												<div class="content">
 													<div class="headline">
-														Lorem ipsum dolor sit amet, eu duo inermis vocibus similique, vix ei facer mediocrem voluptaria, lorem
-														everti ad pro.
+														Lorem ipsum dolor sit amet, eu duo inermis vocibus similique, vix ei facer mediocrem.
 													</div>
 													<p>
 														Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal <code>integre</code> est cu, sea tacimates
 														percipitur adversarium ei,
-														justo volumus assentior cu nec. Ut facilisi consequat duo, te ius eleifend sadipscing scriptorem.
+														justo volumus assentior cu nec.
 													</p>
 												</div>
 												<div class="bottom">
@@ -473,13 +490,12 @@
 												</div>
 												<div class="content">
 													<div class="headline">
-														Lorem ipsum dolor sit amet, eu duo inermis vocibus similique, vix ei facer mediocrem voluptaria, lorem
-														everti ad pro.
+														Lorem ipsum dolor sit amet, eu duo inermis vocibus similique, vix ei facer mediocrem voluptaria
 													</div>
 													<p>
 														Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal <code>integre</code> est cu, sea tacimates
 														percipitur adversarium ei,
-														justo volumus assentior cu nec. Ut facilisi consequat duo, te ius eleifend sadipscing scriptorem.
+														justo volumus assentior cu nec.
 													</p>
 												</div>
 											</div>

@@ -60,6 +60,7 @@
 							<li class="item"><a href="./panel.html">Panel</a></li>
 							<li class="item"><a href="./process.html">Process</a></li>
 							<li class="item"><a href="./progress.html">Progress</a></li>
+							<li class="item"><a href="./tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="./timeline.html">Timeline</a></li>
 							<li class="item"><a href="./tooltip.html">Tooltip</a></li>
 						</ul>
@@ -144,6 +145,11 @@
 						</a>
 					</div>
 					<div class="item">
+						<a href="./tabnav.html">
+							Tabnav
+						</a>
+					</div>
+					<div class="item">
 						<a href="./timeline.html">
 							Timeline
 						</a>
@@ -156,72 +162,85 @@
 				</div>
 			</div>
 
-			<div class="col-lg-10 col-sm-16 col-xs-16">
+			<div class="col-lg-11 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
-
-						<div class="panel pure reset">
-							<div class="breadcrumb">
-								<a href="../" class="item">Punica</a>
-								<a href="" class="item">Components</a>
-								<a href="" class="item active">Breadcrumb</a>
-							</div>
-						</div>
-
 						<div class="col-16">
-							<h1>Breadcrumb</h1>
-							<p>
-								Breadcrumbs are used to show navigational hierarchies between contents. To apply this component, add a container element with the <code>.breadcrumb</code> class and add child elements with the <code>.item</code> class.
-							</p>
 
-							<!-- info -->
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="" class="item">Components</a>
+									<a href="" class="item active">Breadcrumb</a>
+								</div>
+							</div>
+
 							<div class="panel pure">
+								<div class="content reset">
+									<div class="h1">Breadcrumb</div>
+								</div>
 								<div class="content">
-									<div class="row">
-										<div class="col-lg-16 col-sm-16 col-xs-16">
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Props</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Container</td>
-														<td><code>.breadcrumb</code></td>
-													</tr>
-													<tr>
-														<td>Breadcrumb Item</td>
-														<td><code>.item</code></td>
-													</tr>
-													<tr>
-														<td>Active Item</td>
-														<td><code>.active</code></td>
-													</tr>
-												</tbody>
-											</table>
-
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Sizes</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Small</td>
-														<td><code>.small</code></td>
-													</tr>
-													<tr>
-														<td>Large</td>
-														<td><code>.large</code></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
+									<div class="tab">
+										<div class="button active">Info</div>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Breadcrumb/Breadcrumb.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">code</i> Code
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Breadcrumb/variables.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">settings</i> Variables
+										</a>
+										<button class="disabled button">
+											<i class="material-icons mr-5">toys</i> Mixins
+										</button>
 									</div>
+								</div>
+								<div class="content">
+									<p>
+										Breadcrumbs are used to show navigational hierarchies between contents. To apply this component, add a container
+										element with the <code>.breadcrumb</code> class and add child elements with the <code>.item</code> class.
+									</p>
+									<table class="table mt-50">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Props</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Container</td>
+												<td><code>.breadcrumb</code></td>
+											</tr>
+											<tr>
+												<td>Breadcrumb Item</td>
+												<td><code>.item</code></td>
+											</tr>
+											<tr>
+												<td>Active Item</td>
+												<td><code>.active</code></td>
+											</tr>
+										</tbody>
+									</table>
+										
+									<table class="table">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Sizes</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Small</td>
+												<td><code>.small</code></td>
+											</tr>
+											<tr>
+												<td>Large</td>
+												<td><code>.large</code></td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 
@@ -233,60 +252,57 @@
 										<a href="javascript:" class="item">Web Development</a>
 										<a href="javascript:" class="item active">SPA</a>
 									</div>
-								</div>
-							</div>
 
-							<div id="highlighter_855827" class="syntaxhighlighter nogutter  xml">
-								<div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
-								<table border="0" cellpadding="0" cellspacing="0">
-									<tbody>
-										<tr>
-											<td class="code">
-												<div class="container">
-													<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-															class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-															class="xml plain">=</code><code class="xml string">"breadcrumb"</code><code
-															class="xml plain">&gt;</code></div>
-													<div class="line number2 index1 alt1"><code
-															class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-															class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-															class="xml color1">href</code><code class="xml plain">=</code><code
-															class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-															class="xml plain">=</code><code class="xml string">"item"</code><code
-															class="xml plain">&gt;Punica&lt;/</code><code class="xml keyword">a</code><code
-															class="xml plain">&gt;</code></div>
-													<div class="line number3 index2 alt2"><code
-															class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-															class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-															class="xml color1">href</code><code class="xml plain">=</code><code
-															class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-															class="xml plain">=</code><code class="xml string">"item"</code><code
-															class="xml plain">&gt;Components&lt;/</code><code class="xml keyword">a</code><code
-															class="xml plain">&gt;</code></div>
-													<div class="line number4 index3 alt1"><code
-															class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
-															class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
-															class="xml color1">href</code><code class="xml plain">=</code><code
-															class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
-															class="xml plain">=</code><code class="xml string">"item&nbsp;active"</code><code
-															class="xml plain">&gt;Breadcrumb&lt;/</code><code class="xml keyword">a</code><code
-															class="xml plain">&gt;</code></div>
-													<div class="line number5 index4 alt2"><code class="xml plain">&lt;/</code><code
-															class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+									<div id="highlighter_855827" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"breadcrumb"</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"item"</code><code
+																	class="xml plain">&gt;Punica&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"item"</code><code
+																	class="xml plain">&gt;Components&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code
+																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+																	class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code
+																	class="xml color1">href</code><code class="xml plain">=</code><code
+																	class="xml string">""</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"item&nbsp;active"</code><code
+																	class="xml plain">&gt;Breadcrumb&lt;/</code><code class="xml keyword">a</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code class="xml plain">&lt;/</code><code
+																	class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
 							</div>
 
 							<div class="panel pure">
-								<div class="header">
-									<div class="h4">
-										Sizes
-									</div>
-								</div>
 								<div class="content">
+									<h3 class="bordered">
+										Sizes
+									</h3>
 									<p>
 										Add the <code>.small</code> and <code>.large</code> class to a breadcrumb to make it smaller or larger.
 									</p>
@@ -320,8 +336,6 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="col-lg-3 col-sm-16 col-xs-16"></div>
 		</div>
 	</div>
 

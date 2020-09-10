@@ -61,6 +61,7 @@
 							<li class="item"><a href="./panel.html">Panel</a></li>
 							<li class="item"><a href="./process.html">Process</a></li>
 							<li class="item"><a href="./progress.html">Progress</a></li>
+							<li class="item"><a href="./tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="./timeline.html">Timeline</a></li>
 							<li class="item"><a href="./tooltip.html">Tooltip</a></li>
 						</ul>
@@ -145,6 +146,11 @@
 						</a>
 					</div>
 					<div class="item">
+						<a href="./tabnav.html">
+							Tabnav
+						</a>
+					</div>
+					<div class="item">
 						<a href="./timeline.html">
 							Timeline
 						</a>
@@ -157,26 +163,119 @@
 				</div>
 			</div>
 
-			<div class="col-lg-13 col-sm-16 col-xs-16">
+			<div class="col-lg-11 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
-
-						<div class="panel pure reset">
-							<div class="breadcrumb">
-								<a href="../" class="item">Punica</a>
-								<a href="" class="item">Components</a>
-								<a href="" class="item active">Navbar</a>
-							</div>
-						</div>
-
 						<div class="col-16">
-							<h1>Navbar</h1>
-							<p>
-								A navigation bar (or navigation system) is a section of a graphical user interface intended to aid visitors in accessing site/app contents. The navbar component can include logo brand, nav links or buttons, search box or any combination of those elements. Each section with the <code>.section</code> class will be evenly distributed in the container. And the last <code>.section</code> item in the navbar is always to the right.
-							</p>
 
-							<div class="alert center align">
-								To see the responsive hamburger menu, please check the main menu of the page.
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="" class="item">Components</a>
+									<a href="" class="item active">Navbar</a>
+								</div>
+							</div>
+
+							<div class="panel pure">
+								<div class="content reset">
+									<div class="h1">Navbar</div>
+								</div>
+								<div class="content">
+									<div class="tab">
+										<div class="button active">Info</div>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Navbar/Navbar.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">code</i> Code
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Navbar/variables.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">settings</i> Variables
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Navbar/mixins.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">toys</i> Mixins
+										</a>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										A navigation bar (or navigation system) is a section of a graphical user interface intended to aid visitors in
+										accessing site/app contents. The navbar component can include logo brand, nav links or buttons, search box or any
+										combination of those elements. Each section with the <code>.section</code> class will be evenly distributed in the
+										container. And the last <code>.section</code> item in the navbar is always to the right.
+									</p>
+									<div class="alert center align">
+										To see the responsive hamburger menu, please check the main menu of the page.
+									</div>
+									<table class="table mt-50">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Props</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Container</td>
+												<td><code>.navbar</code></td>
+											</tr>
+											<tr>
+												<td>Navbar Sections</td>
+												<td><code>.section</code></td>
+											</tr>
+											<tr>
+												<td>Navbar Links</td>
+												<td><code>.links</code></td>
+											</tr>
+											<tr>
+												<td>Navbar Link Items</td>
+												<td><code>.buttons</code> or <code>.button</code></td>
+											</tr>
+											<tr>
+												<td>Navbar Brand</td>
+												<td><code>.brand</code></td>
+											</tr>
+											<tr>
+												<td>Navbar Dropdown Item</td>
+												<td><code>.dropdown</code></td>
+											</tr>
+											<tr>
+												<td>Navbar Burger Menu</td>
+												<td><code>.burger</code></td>
+											</tr>
+											<tr>
+												<td>Navbar Spacer (if navbar is fixed)</td>
+												<td><code>.navbar-spacer</code></td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="table">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Styles & States</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Light Navbar</td>
+												<td><code>.light</code></td>
+											</tr>
+											<tr>
+												<td>Dark Navbar</td>
+												<td><code>.dark</code></td>
+											</tr>
+											<tr>
+												<td>Fixed Navbar</td>
+												<td><code>.fixed</code></td>
+											</tr>
+											<tr>
+												<td>Navbar with Shadow</td>
+												<td><code>.shadowed</code></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 
 							<div class="panel pure">
@@ -307,85 +406,6 @@
 											</div>
 										</section>
 									</header>
-								</div>
-							</div>
-
-							<!-- info -->
-							<div class="panel pure">
-								<div class="content">
-									<div class="row">
-										<div class="col-lg-16 col-sm-16 col-xs-16">
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Props</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Container</td>
-														<td><code>.navbar</code></td>
-													</tr>
-													<tr>
-														<td>Navbar Sections</td>
-														<td><code>.section</code></td>
-													</tr>
-													<tr>
-														<td>Navbar Links</td>
-														<td><code>.links</code></td>
-													</tr>
-													<tr>
-														<td>Navbar Link Items</td>
-														<td><code>.buttons</code> or <code>.button</code></td>
-													</tr>
-													<tr>
-														<td>Navbar Brand</td>
-														<td><code>.brand</code></td>
-													</tr>
-													<tr>
-														<td>Navbar Dropdown Item</td>
-														<td><code>.dropdown</code></td>
-													</tr>
-													<tr>
-														<td>Navbar Burger Menu</td>
-														<td><code>.burger</code></td>
-													</tr>
-													<tr>
-														<td>Navbar Spacer (if navbar is fixed)</td>
-														<td><code>.navbar-spacer</code></td>
-													</tr>
-												</tbody>
-											</table>
-
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Styles & States</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Light Navbar</td>
-														<td><code>.light</code></td>
-													</tr>
-													<tr>
-														<td>Dark Navbar</td>
-														<td><code>.dark</code></td>
-													</tr>
-													<tr>
-														<td>Fixed Navbar</td>
-														<td><code>.fixed</code></td>
-													</tr>
-													<tr>
-														<td>Navbar with Shadow</td>
-														<td><code>.shadowed</code></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>

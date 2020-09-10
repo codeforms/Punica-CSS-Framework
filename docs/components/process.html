@@ -60,6 +60,7 @@
 							<li class="item"><a href="./panel.html">Panel</a></li>
 							<li class="item"><a href="./process.html" class="active">Process</a></li>
 							<li class="item"><a href="./progress.html">Progress</a></li>
+							<li class="item"><a href="./tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="./timeline.html">Timeline</a></li>
 							<li class="item"><a href="./tooltip.html">Tooltip</a></li>
 						</ul>
@@ -144,6 +145,11 @@
 						</a>
 					</div>
 					<div class="item">
+						<a href="./tabnav.html">
+							Tabnav
+						</a>
+					</div>
+					<div class="item">
 						<a href="./timeline.html">
 							Timeline
 						</a>
@@ -156,106 +162,118 @@
 				</div>
 			</div>
 
-			<div class="col-lg-13 col-sm-16 col-xs-16">
+			<div class="col-lg-11 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
-
-						<div class="panel pure reset">
-							<div class="breadcrumb">
-								<a href="../" class="item">Punica</a>
-								<a href="" class="item">Components</a>
-								<a href="" class="item active">Process</a>
-							</div>
-						</div>
-
 						<div class="col-16">
-							<h1>
-								Process
-							</h1>
-							<p>
-								Add a container element with the <code>.process</code> class and add child elements with the <code>.item</code> class. Also through the <code>.active</code> class will be highlighted items and indicate the current state of process.
-							</p>
 
-							<!-- info -->
-							<div class="panel pure">
-								<div class="content">
-									<div class="row">
-										<div class="col-lg-16 col-sm-16 col-xs-16">
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Props</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Container</td>
-														<td><code>.process</code></td>
-													</tr>
-													<tr>
-														<td>Process Item</td>
-														<td><code>.item</code></td>
-													</tr>
-													<tr>
-														<td>Active Item</td>
-														<td><code>.active</code></td>
-													</tr>
-													<tr>
-														<td>Vertical Style</td>
-														<td><code>.vertical</code></td>
-													</tr>
-												</tbody>
-											</table>
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Positions</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Horizontal (default)</td>
-														<td>-</td>
-													</tr>
-													<tr>
-														<td>Vertical</td>
-														<td><code>.vertical</code></td>
-													</tr>
-												</tbody>
-											</table>
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Styles</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Primary (default)</td>
-														<td>-</td>
-													</tr>
-													<tr>
-														<td>Success</td>
-														<td><code>.success</code></td>
-													</tr>
-													<tr>
-														<td>Warning</td>
-														<td><code>.warning</code></td>
-													</tr>
-													<tr>
-														<td>Error</td>
-														<td><code>.error</code></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="" class="item">Components</a>
+									<a href="" class="item active">Process</a>
 								</div>
 							</div>
 
+							<div class="panel pure">
+								<div class="content reset">
+									<div class="h1">Process</div>
+								</div>
+								<div class="content">
+									<div class="tab">
+										<div class="button active">Info</div>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Progress/Progress.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">code</i> Code
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Progress/variables.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">settings</i> Variables
+										</a>
+										<button class="disabled button">
+											<i class="material-icons mr-5">toys</i> Mixins
+										</button>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										Add a container element with the <code>.process</code> class and add child elements with the <code>.item</code>
+										class. Also through the <code>.active</code> class will be highlighted items and indicate the current state of
+										process.
+									</p>
+									<table class="table mt-50">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Props</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Container</td>
+												<td><code>.process</code></td>
+											</tr>
+											<tr>
+												<td>Process Item</td>
+												<td><code>.item</code></td>
+											</tr>
+											<tr>
+												<td>Active Item</td>
+												<td><code>.active</code></td>
+											</tr>
+											<tr>
+												<td>Vertical Style</td>
+												<td><code>.vertical</code></td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="table">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Positions</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Horizontal (default)</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>Vertical</td>
+												<td><code>.vertical</code></td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="table">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Styles</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Primary (default)</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>Success</td>
+												<td><code>.success</code></td>
+											</tr>
+											<tr>
+												<td>Warning</td>
+												<td><code>.warning</code></td>
+											</tr>
+											<tr>
+												<td>Error</td>
+												<td><code>.error</code></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							
 							<div class="panel pure">
 								<div class="content">
 									<div class="process">

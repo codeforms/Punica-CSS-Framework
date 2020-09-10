@@ -5235,6 +5235,8 @@ blockquote {
   border-left: 0.1rem dotted #77878b;
   margin-left: 0;
   padding: .4rem .8rem;
+  font-style: italic;
+  color: #77878b;
 }
 
 small {
@@ -6752,6 +6754,51 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 
 .progress.error::-webkit-progress-value {
   background: #d62828;
+}
+
+.tab {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 2px solid #e6e6e6;
+  background: #fff;
+  padding: 0;
+}
+
+.tab .buttons {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+}
+
+.tab .button, .tab .dropdown .button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  margin-bottom: -2px;
+  line-height: initial;
+  font-weight: initial;
+  font-size: 1.025em;
+}
+
+.tab .button:hover, .tab .dropdown .button:hover {
+  color: #0a8fff;
+}
+
+.tab .button.active, .tab .dropdown .button.active {
+  color: #0a8fff;
+  border-bottom-color: #0a8fff;
+}
+
+.tab .button.active i, .tab .button.active [class^="material-icons"], .tab .dropdown .button.active i, .tab .dropdown .button.active [class^="material-icons"] {
+  color: initial;
 }
 
 .timeline .activity {

@@ -60,6 +60,7 @@
 							<li class="item"><a href="../components/panel.html">Panel</a></li>
 							<li class="item"><a href="../components/process.html">Process</a></li>
 							<li class="item"><a href="../components/progress.html">Progress</a></li>
+							<li class="item"><a href="../components/tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="../components/timeline.html">Timeline</a></li>
 							<li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
 						</ul>
@@ -116,92 +117,105 @@
 				</div>
 			</div>
 
-			<div class="col-lg-10 col-sm-16 col-xs-16">
+			<div class="col-lg-11 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
-
-						<div class="panel pure reset">
-							<div class="breadcrumb">
-								<a href="../" class="item">Punica</a>
-								<a href="" class="item">Elements</a>
-								<a href="" class="item active">Form</a>
-							</div>
-						</div>
-
 						<div class="col-16">
-							<h1>Form</h1>
-							<p>
-								Forms provide the most common control styles used in forms, including input, textarea, select, checkbox and radio.
-							</p>
 
-							<!-- info -->
-							<div class="panel pure">
-								<div class="content">
-									<div class="row">
-										<div class="col-lg-16 col-sm-16 col-xs-16">
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Props</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Container</td>
-														<td><code>.form</code></td>
-													</tr>
-													<tr>
-														<td>Form Items</td>
-														<td><code>.items</code></td>
-													</tr>
-													<tr>
-														<td>Form Item</td>
-														<td><code>.item</code></td>
-													</tr>
-													<tr>
-														<td>Form Group</td>
-														<td><code>.group</code></td>
-													</tr>
-													<tr>
-														<td>Punica's Checkbox</td>
-														<td><code>.checkbox</code></td>
-													</tr>
-													<tr>
-														<td>Punica's Radio</td>
-														<td><code>.radio</code></td>
-													</tr>
-												</tbody>
-											</table>
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Sizes</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Default</td>
-														<td>-</td>
-													</tr>
-												<tbody>
-													<tr>
-														<td>Small</td>
-														<td><code>.small</code></td>
-													</tr>
-													<tr>
-														<td>Large</td>
-														<td><code>.large</code></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="" class="item">Elements</a>
+									<a href="" class="item active">Form</a>
 								</div>
 							</div>
-
+							
 							<div class="panel pure">
+								<div class="content reset">
+									<div class="h1">Form</div>
+								</div>
+								<div class="content">
+									<div class="tab">
+										<div class="button active">Info</div>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Form/Form.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">code</i> Code
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Form/variables.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">settings</i> Variables
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Form/mixins.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">toys</i> Mixins
+										</a>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										Forms provide the most common control styles used in forms, including input, textarea, select, checkbox and
+										radio.
+									</p>
+									<table class="table mt-50">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Props</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Container</td>
+												<td><code>.form</code></td>
+											</tr>
+											<tr>
+												<td>Form Items</td>
+												<td><code>.items</code></td>
+											</tr>
+											<tr>
+												<td>Form Item</td>
+												<td><code>.item</code></td>
+											</tr>
+											<tr>
+												<td>Form Group</td>
+												<td><code>.group</code></td>
+											</tr>
+											<tr>
+												<td>Punica's Checkbox</td>
+												<td><code>.checkbox</code></td>
+											</tr>
+											<tr>
+												<td>Punica's Radio</td>
+												<td><code>.radio</code></td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="table">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Sizes</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Default</td>
+												<td>-</td>
+											</tr>
+										<tbody>
+											<tr>
+												<td>Small</td>
+												<td><code>.small</code></td>
+											</tr>
+											<tr>
+												<td>Large</td>
+												<td><code>.large</code></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<!-- Form Groups -->
 								<div class="content">
 									<form class="form" autocomplete="off">
 										<div class="item">
@@ -301,17 +315,16 @@
 												<button type="button" class="button">Cancel</button>
 												<button type="button" class="button dark">Submit</button>
 											</div>
-											
+								
 										</div>
 									</form>
 								</div>
-							</div>
 
-							<div class="panel pure">
-								<div class="header">
-									<div class="title">Form Items</div>
-								</div>
+								<!-- Form Items -->
 								<div class="content">
+									<div class="h3 bordered">
+										Form Items
+									</div>
 									<p>
 										Form inputs are designed to be flexible to your form elements. You can choose an arbitrary column count per
 										row. Default
@@ -320,7 +333,8 @@
 										and the fourth item dynamically moves to the second row.
 									</p>
 									<div class="alert">
-										<span class="material-icons color-warning mr-10">info</span> All <code>.items</code> group classes should be used in <code>.form</code> container class.
+										<span class="material-icons color-warning mr-10">info</span> All <code>.items</code> group classes should be used in
+										<code>.form</code> container class.
 									</div>
 									<form class="form mt-50">
 										<div class="three items">
@@ -334,7 +348,7 @@
 											</div>
 											<div class="item">
 												<label for="colors">Choose a color:</label>
-							
+									
 												<select name="colors" id="colors">
 													<option value="black">Black</option>
 													<option value="white">White</option>
@@ -344,8 +358,6 @@
 											</div>
 										</div>
 									</form>
-								</div>
-								<div class="content">
 									<div id="highlighter_827093" class="syntaxhighlighter nogutter  xml">
 										<table border="0" cellpadding="0" cellspacing="0">
 											<tbody>
@@ -422,29 +434,25 @@
 																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
 																	class="xml plain">&lt;</code><code class="xml keyword">option</code>&nbsp;<code
 																	class="xml color1">value</code><code class="xml plain">=</code><code
-																	class="xml string">"black"</code><code
-																	class="xml plain">&gt;Black&lt;/</code><code
+																	class="xml string">"black"</code><code class="xml plain">&gt;Black&lt;/</code><code
 																	class="xml keyword">option</code><code class="xml plain">&gt;</code></div>
 															<div class="line number15 index14 alt2"><code
 																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
 																	class="xml plain">&lt;</code><code class="xml keyword">option</code>&nbsp;<code
 																	class="xml color1">value</code><code class="xml plain">=</code><code
-																	class="xml string">"white"</code><code
-																	class="xml plain">&gt;White&lt;/</code><code
+																	class="xml string">"white"</code><code class="xml plain">&gt;White&lt;/</code><code
 																	class="xml keyword">option</code><code class="xml plain">&gt;</code></div>
 															<div class="line number16 index15 alt1"><code
 																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
 																	class="xml plain">&lt;</code><code class="xml keyword">option</code>&nbsp;<code
 																	class="xml color1">value</code><code class="xml plain">=</code><code
-																	class="xml string">"blue"</code><code
-																	class="xml plain">&gt;Blue&lt;/</code><code
+																	class="xml string">"blue"</code><code class="xml plain">&gt;Blue&lt;/</code><code
 																	class="xml keyword">option</code><code class="xml plain">&gt;</code></div>
 															<div class="line number17 index16 alt2"><code
 																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
 																	class="xml plain">&lt;</code><code class="xml keyword">option</code>&nbsp;<code
 																	class="xml color1">value</code><code class="xml plain">=</code><code
-																	class="xml string">"orange"</code><code
-																	class="xml plain">&gt;Orange&lt;/</code><code
+																	class="xml string">"orange"</code><code class="xml plain">&gt;Orange&lt;/</code><code
 																	class="xml keyword">option</code><code class="xml plain">&gt;</code></div>
 															<div class="line number18 index17 alt1"><code
 																	class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
@@ -467,14 +475,14 @@
 										</table>
 									</div>
 								</div>
-							</div>
 
-							<div class="panel pure">
-								<div class="header">
-									<div class="title">Form Groups</div>
-								</div>
+								<!-- Form Groups -->
 								<div class="content">
-									<p>You can attach select, input or button along with an input. Just add the <code>.group</code> class to a container class in the <code>.item</code> container.</p>
+									<div class="h3 bordered">
+										Form Groups
+									</div>
+									<p>You can attach select, input or button along with an input. Just add the <code>.group</code> class to a container
+										class in the <code>.item</code> container.</p>
 									<div class="alert">
 										<span class="material-icons color-warning mr-10">info</span> All <code>.group</code> classes should be used in
 										<code>.form</code> or <code>.form > .item</code> container class.
@@ -518,8 +526,6 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="content">
 									<div id="highlighter_455959" class="syntaxhighlighter nogutter  xml">
 										<table border="0" cellpadding="0" cellspacing="0">
 											<tbody>
@@ -604,13 +610,12 @@
 										</table>
 									</div>
 								</div>
-							</div>
 
-							<div class="panel pure">
-								<div class="header">
-									<div class="title">Horizontal Forms</div>
-								</div>
+								<!-- Horizontal Forms -->
 								<div class="content">
+									<div class="h3 bordered">
+										Horizontal Forms
+									</div>
 									<p>
 										If you want to have a horizontal form, you can use the Punica's <a href="../base/grid.html">Grid</a> system.
 									</p>
@@ -680,15 +685,15 @@
 										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="panel pure">
-								<div class="header">
-									<div class="title">Form Input Sizes</div>
-								</div>
+								<!-- Form Input Sizes -->
 								<div class="content">
+									<div class="h3 bordered">
+										Form Input Sizes
+									</div>
 									<p>
-										Add the <code>.small</code> or <code>.large</code> class to <code>.form</code> class to make it smaller or larger inputs or buttons.
+										Add the <code>.small</code> or <code>.large</code> class to <code>.form</code> class to make it smaller or larger
+										inputs or buttons.
 									</p>
 									<div class="form small mt-50">
 										<div class="item">
@@ -747,8 +752,6 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="col-lg-3 col-sm-16 col-xs-16"></div>
 		</div>
 	</div>
 

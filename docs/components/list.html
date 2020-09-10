@@ -60,6 +60,7 @@
                             <li class="item"><a href="./panel.html">Panel</a></li>
                             <li class="item"><a href="./process.html">Process</a></li>
                             <li class="item"><a href="./progress.html">Progress</a></li>
+                            <li class="item"><a href="./tabnav.html">Tabnav</a></li>
                             <li class="item"><a href="./timeline.html">Timeline</a></li>
                             <li class="item"><a href="./tooltip.html">Tooltip</a></li>
                         </ul>
@@ -144,6 +145,11 @@
                         </a>
                     </div>
                     <div class="item">
+                        <a href="./tabnav.html">
+                            Tabnav
+                        </a>
+                    </div>
+                    <div class="item">
                         <a href="./timeline.html">
                             Timeline
                         </a>
@@ -156,73 +162,86 @@
                 </div>
             </div>
 
-            <div class="col-lg-13 col-sm-16 col-xs-16">
+            <div class="col-lg-11 col-sm-16 col-xs-16">
                 <div class="container">
                     <div class="row">
-
-                        <div class="panel pure reset">
-                            <div class="breadcrumb">
-                                <a href="../" class="item">Punica</a>
-                                <a href="" class="item">Components</a>
-                                <a href="" class="item active">List</a>
-                            </div>
-                        </div>
-
                         <div class="col-16">
-                            <h1>List</h1>
-                            <p>
-                                To apply this component, add the <code>.list</code> class to an unordered/ordered list or even <code>div</code> element. And also, use the <code>.item</code> class for each list items.
-                            </p>
 
-                            <!-- info -->
+                            <div class="panel pure reset">
+                                <div class="breadcrumb">
+                                    <a href="../" class="item">Punica</a>
+                                    <a href="" class="item">Components</a>
+                                    <a href="" class="item active">List</a>
+                                </div>
+                            </div>
+
                             <div class="panel pure">
+                                <div class="content reset">
+                                    <div class="h1">List</div>
+                                </div>
                                 <div class="content">
-                                    <div class="row">
-                                        <div class="col-lg-16 col-sm-16 col-xs-16">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th style="width: 50%;">Props</th>
-                                                        <th>Default Class Name</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Container</td>
-                                                        <td><code>.list</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>List Items</td>
-                                                        <td><code>.item</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>List Item Body</td>
-                                                        <td><code>.body</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>List Item Title</td>
-                                                        <td><code>.title</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>List Item Actions</td>
-                                                        <td><code>.actions</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Divided List</td>
-                                                        <td><code>.bordered</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Hovered List</td>
-                                                        <td><code>.hovered</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Striped List</td>
-                                                        <td><code>.striped</code></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                    <div class="tab">
+                                        <div class="button active">Info</div>
+                                        <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/List/List.scss"
+                                            target="_blank" class="button">
+                                            <i class="material-icons mr-5">code</i> Code
+                                        </a>
+                                        <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/List/variables.scss"
+                                            target="_blank" class="button">
+                                            <i class="material-icons mr-5">settings</i> Variables
+                                        </a>
+                                        <button class="disabled button">
+                                            <i class="material-icons mr-5">toys</i> Mixins
+                                        </button>
                                     </div>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        To apply this component, add the <code>.list</code> class to an unordered/ordered list or even <code>div</code>
+                                        element. And also, use the <code>.item</code> class for each list items.
+                                    </p>
+                                    <table class="table mt-50">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 50%;">Props</th>
+                                                <th>Default Class Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Container</td>
+                                                <td><code>.list</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>List Items</td>
+                                                <td><code>.item</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>List Item Body</td>
+                                                <td><code>.body</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>List Item Title</td>
+                                                <td><code>.title</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>List Item Actions</td>
+                                                <td><code>.actions</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Divided List</td>
+                                                <td><code>.bordered</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hovered List</td>
+                                                <td><code>.hovered</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Striped List</td>
+                                                <td><code>.striped</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
 

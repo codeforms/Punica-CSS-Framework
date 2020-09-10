@@ -60,6 +60,7 @@
                             <li class="item"><a href="./panel.html">Panel</a></li>
                             <li class="item"><a href="./process.html">Process</a></li>
                             <li class="item"><a href="./progress.html">Progress</a></li>
+                            <li class="item"><a href="./tabnav.html">Tabnav</a></li>
                             <li class="item"><a href="./timeline.html" class="active">Timeline</a></li>
                             <li class="item"><a href="./tooltip.html">Tooltip</a></li>
                         </ul>
@@ -144,6 +145,11 @@
                         </a>
                     </div>
                     <div class="item">
+                        <a href="./tabnav.html">
+                            Tabnav
+                        </a>
+                    </div>
+                    <div class="item">
                         <a href="./timeline.html" class="active">
                             Timeline
                         </a>
@@ -159,100 +165,113 @@
             <div class="col-lg-13 col-sm-16 col-xs-16">
                 <div class="container">
                     <div class="row">
-
-                        <div class="panel pure reset">
-                            <div class="breadcrumb">
-                                <a href="../" class="item">Punica</a>
-                                <a href="" class="item">Components</a>
-                                <a href="" class="item active">Timeline</a>
-                            </div>
-                        </div>
-
                         <div class="col-16">
-                            <h1>Timeline</h1>
-                            <p>
-                                To apply this component, add a container element with the <code>.timeline</code> class and add <code>.activity</code> class for child elements.
-                            </p>
 
-                            <!-- info -->
+                            <div class="panel pure reset">
+                                <div class="breadcrumb">
+                                    <a href="../" class="item">Punica</a>
+                                    <a href="" class="item">Components</a>
+                                    <a href="" class="item active">Timeline</a>
+                                </div>
+                            </div>
+
                             <div class="panel pure">
+                                <div class="content reset">
+                                    <div class="h1">Timeline</div>
+                                </div>
                                 <div class="content">
-                                    <div class="row">
-                                        <div class="col-lg-16 col-sm-16 col-xs-16">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th style="width: 50%;">Props</th>
-                                                        <th>Default Class Name</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Container</td>
-                                                        <td><code>.timeline</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Timeline Item</td>
-                                                        <td><code>.activity</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Activity by</td>
-                                                        <td><code>.author</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Activity Detail</td>
-                                                        <td><code>.body</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Activity Type</td>
-                                                        <td><code>.type</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Activity Date</td>
-                                                        <td><code>.date</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Activity Media</td>
-                                                        <td><code>.media</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Activity Actions</td>
-                                                        <td><code>.actions</code></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th style="width: 50%;">Styles</th>
-                                                        <th>Default Class Name</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Default</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Primary</td>
-                                                        <td><code>.primary</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Success</td>
-                                                        <td><code>.success</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Warning</td>
-                                                        <td><code>.warning</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Error</td>
-                                                        <td><code>.error</code></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                    <div class="tab">
+                                        <div class="button active">Info</div>
+                                        <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Timeline/Timeline.scss"
+                                            target="_blank" class="button">
+                                            <i class="material-icons mr-5">code</i> Code
+                                        </a>
+                                        <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Components/Timeline/variables.scss"
+                                            target="_blank" class="button">
+                                            <i class="material-icons mr-5">settings</i> Variables
+                                        </a>
+                                        <button class="disabled button">
+                                            <i class="material-icons mr-5">toys</i> Mixins
+                                        </button>
                                     </div>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        To apply this component, add a container element with the <code>.timeline</code> class and add
+                                        <code>.activity</code> class for child elements.
+                                    </p>
+                                    <table class="table mt-50">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 50%;">Props</th>
+                                                <th>Default Class Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Container</td>
+                                                <td><code>.timeline</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Timeline Item</td>
+                                                <td><code>.activity</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activity by</td>
+                                                <td><code>.author</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activity Detail</td>
+                                                <td><code>.body</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activity Type</td>
+                                                <td><code>.type</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activity Date</td>
+                                                <td><code>.date</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activity Media</td>
+                                                <td><code>.media</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activity Actions</td>
+                                                <td><code>.actions</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 50%;">Styles</th>
+                                                <th>Default Class Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Default</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Primary</td>
+                                                <td><code>.primary</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Success</td>
+                                                <td><code>.success</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Warning</td>
+                                                <td><code>.warning</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Error</td>
+                                                <td><code>.error</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
 
@@ -314,7 +333,6 @@
                                         </div>
                                         <div class="col-sm-16 col-xs-16 col-lg-10">
                                             <div id="highlighter_635366" class="syntaxhighlighter nogutter  xml">
-                                                <div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
                                                 <table border="0" cellpadding="0" cellspacing="0">
                                                     <tbody>
                                                         <tr>
@@ -394,6 +412,7 @@
                                     
                                 </div>
                             </div>
+
                             <div class="panel pure">
                                 <div class="header">
                                     <div class="title">

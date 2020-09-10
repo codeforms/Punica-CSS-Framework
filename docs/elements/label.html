@@ -58,6 +58,7 @@
 							<li class="item"><a href="../components/panel.html">Panel</a></li>
 							<li class="item"><a href="../components/process.html">Process</a></li>
 							<li class="item"><a href="../components/progress.html">Progress</a></li>
+							<li class="item"><a href="../components/tabnav.html">Tabnav</a></li>
 							<li class="item"><a href="../components/timeline.html">Timeline</a></li>
 							<li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
 						</ul>
@@ -114,131 +115,146 @@
 				</div>
 			</div>
 
-			<div class="col-lg-10 col-sm-16 col-xs-16">
+			<div class="col-lg-11 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
 
-						<div class="panel pure reset">
-                            <div class="breadcrumb">
-                                <a href="../" class="item">Punica</a>
-                                <a href="" class="item">Elements</a>
-                                <a href="" class="item active">Label</a>
-                            </div>
-                        </div>
-
 						<div class="col-16">
-							<h1>Label</h1>
-                            <p>
-                                Just add the <code>.label</code> class to a <code>span</code> or <code>div</code> element to create a label.
-							</p>
-							
-							<!-- info -->
-							<div class="panel pure">
-								<div class="content">
-									<div class="row">
-										<div class="col-lg-16 col-sm-16 col-xs-16">
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Props</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Container</td>
-														<td><code>.label</code></td>
-													</tr>
-												</tbody>
-											</table>
-											<table class="table">
-												<thead>
-													<tr>
-														<th style="width: 50%;">Styles</th>
-														<th>Default Class Name</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Default</td>
-														<td>-</td>
-													</tr>
-													<tr>
-														<td>Primary</td>
-														<td><code>.primary</code></td>
-													</tr>
-													<tr>
-														<td>Success</td>
-														<td><code>.success</code></td>
-													</tr>
-													<tr>
-														<td>Warning</td>
-														<td><code>.warning</code></td>
-													</tr>
-													<tr>
-														<td>Error</td>
-														<td><code>.error</code></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
+
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="" class="item">Elements</a>
+									<a href="" class="item active">Label</a>
 								</div>
 							</div>
 
+							<div class="panel pure">
+								<div class="content reset">
+									<div class="h1">Label</div>
+								</div>
+								<div class="content">
+									<div class="tab">
+										<div class="button active">Info</div>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Label/Label.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">code</i> Code
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Label/variables.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">settings</i> Variables
+										</a>
+										<a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Elements/Label/mixins.scss"
+											target="_blank" class="button">
+											<i class="material-icons mr-5">toys</i> Mixins
+										</a>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										Just add the <code>.label</code> class to a <code>span</code> or <code>div</code> element to create a label.
+									</p>
+								</div>
+								<div class="content">
+									<table class="table">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Props</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Container</td>
+												<td><code>.label</code></td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="table">
+										<thead>
+											<tr>
+												<th style="width: 50%;">Styles</th>
+												<th>Default Class Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Default</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>Primary</td>
+												<td><code>.primary</code></td>
+											</tr>
+											<tr>
+												<td>Success</td>
+												<td><code>.success</code></td>
+											</tr>
+											<tr>
+												<td>Warning</td>
+												<td><code>.warning</code></td>
+											</tr>
+											<tr>
+												<td>Error</td>
+												<td><code>.error</code></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+                            
                             <div class="panel pure">
                                 <div class="content bg-stripe">
                                     <span class="label">Default</span>
                                     <div class="label primary">Primary</div>
                                     <div class="label success">Success</div>
                                     <div class="label warning">Warning</div>
-                                    <div class="label error">Error</div>
-                                </div>
-                            </div>
-
-                            <div id="highlighter_822992" class="syntaxhighlighter nogutter  xml">
-                                <table border="0" cellpadding="0" cellspacing="0">
-                                    <tbody>
-                                        <tr>
-                                            <td class="code">
-                                                <div class="container">
-                                                    <div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-                                                            class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code
-                                                            class="xml plain">=</code><code class="xml string">"label"</code><code
-                                                            class="xml plain">&gt;Default&lt;/</code><code class="xml keyword">span</code><code
-                                                            class="xml plain">&gt;</code></div>
-                                                    <div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code
-                                                            class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-                                                            class="xml plain">=</code><code class="xml string">"label&nbsp;primary"</code><code
-                                                            class="xml plain">&gt;Primary&lt;/</code><code class="xml keyword">div</code><code
-                                                            class="xml plain">&gt;</code></div>
-                                                    <div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code
-                                                            class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-                                                            class="xml plain">=</code><code class="xml string">"label&nbsp;success"</code><code
-                                                            class="xml plain">&gt;Success&lt;/</code><code class="xml keyword">div</code><code
-                                                            class="xml plain">&gt;</code></div>
-                                                    <div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
-                                                            class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-                                                            class="xml plain">=</code><code class="xml string">"label&nbsp;warning"</code><code
-                                                            class="xml plain">&gt;Warning&lt;/</code><code class="xml keyword">div</code><code
-                                                            class="xml plain">&gt;</code></div>
-                                                    <div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code
-                                                            class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-                                                            class="xml plain">=</code><code class="xml string">"label&nbsp;error"</code><code
-                                                            class="xml plain">&gt;Error&lt;/</code><code class="xml keyword">div</code><code
-                                                            class="xml plain">&gt;</code></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+									<div class="label error">Error</div>
+								</div>
+								<div class="content">
+									<div id="highlighter_822992" class="syntaxhighlighter nogutter  xml">
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td class="code">
+														<div class="container">
+															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"label"</code><code
+																	class="xml plain">&gt;Default&lt;/</code><code class="xml keyword">span</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"label&nbsp;primary"</code><code
+																	class="xml plain">&gt;Primary&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"label&nbsp;success"</code><code
+																	class="xml plain">&gt;Success&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"label&nbsp;warning"</code><code
+																	class="xml plain">&gt;Warning&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+															<div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code
+																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
+																	class="xml plain">=</code><code class="xml string">"label&nbsp;error"</code><code
+																	class="xml plain">&gt;Error&lt;/</code><code class="xml keyword">div</code><code
+																	class="xml plain">&gt;</code></div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
                             </div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="col-lg-3 col-sm-16 col-xs-16"></div>
 		</div>
 	</div>
 

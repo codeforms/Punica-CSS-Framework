@@ -1,0 +1,39 @@
+/***************************************************** 
+PUNICA CSS > COMPONENTS : TABNAV *********************/
+
+@if $components-tabnav {
+	.#{$tabnav-name} {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		border-bottom: $tabnav-border-bottom-width $main-border-style $main-secondary-bg;
+		background: $main-bg;
+		padding: 0;
+		.#{$button-class-group} {
+			box-shadow: none;
+			border-radius: 0;
+		}
+		.#{$button-class},
+		.#{$dropdown-name} .#{$button-class} {
+			background: transparent;
+			border: none;
+		    border-bottom: $tabnav-border-bottom-width solid transparent;
+		    border-radius: 0;
+	        margin-bottom: -$tabnav-border-bottom-width;
+	        line-height: initial;
+	        font-weight: initial;
+            font-size: $tabnav-item-button-size;
+			&:hover {
+				color: $primary-color;
+			}
+			&.#{$tabnav-active} {
+				color: $primary-color;
+				border-bottom-color: $primary-color;
+				i, [class^="material-icons"] {
+					color: initial;
+				}
+			}
+		}
+	}
+}
