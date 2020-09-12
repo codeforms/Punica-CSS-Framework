@@ -41,7 +41,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			border-color: darken($button-border-color, 20%);
 			text-decoration: none;
 			z-index: 1;
-			transition: .2s;
+			transition: background .2s, color .2s;
 		}
 		&:focus {
 			> i, 

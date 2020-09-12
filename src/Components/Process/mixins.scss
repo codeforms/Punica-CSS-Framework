@@ -29,6 +29,7 @@ PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
 @mixin process-vertical() {
 	display: flex;
 	padding: $timeline-padding;
+	margin: $process-vertical-margin;
 	flex-direction: column;
 	align-items: flex-start;
 	.#{$process-item} {
@@ -63,6 +64,17 @@ PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
 					top: 15px;
 					left: calc(-15px - #{$process-current-icon-size});
 				}
+			}
+		}
+	}
+	&.#{$process-vertical-reversed} {
+		flex-direction: column-reverse;
+		.#{$process-item} {
+			&:last-child {
+				border-top: $main-border-width $main-border-style $main-border-color;
+			}
+			&:first-child {
+				border-top: none;
 			}
 		}
 	}

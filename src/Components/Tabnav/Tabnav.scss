@@ -26,11 +26,11 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 	        line-height: initial;
 	        font-weight: initial;
             font-size: $tabnav-item-button-size;
-            transition: .15s;
+            transition: border-bottom-color .15s;
 			&:hover {
 				color: darken($main-font-color, 8%);
 				border-bottom-color: darken($main-secondary-bg, 16%);
-				transition: .15s;
+				transition: border-bottom-color .15s;
 			}
 			&.#{$tabnav-active} {
 				color: $primary-color;

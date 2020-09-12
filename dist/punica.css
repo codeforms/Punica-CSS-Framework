@@ -4299,8 +4299,8 @@ a.button:focus, a.button:active, a.button:hover, .button:focus, .button:active, 
   border-color: #999;
   text-decoration: none;
   z-index: 1;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: background .2s, color .2s;
+  transition: background .2s, color .2s;
 }
 
 a.button:focus > i, a.button:focus > [class^="material-icons"], .button:focus > i, .button:focus > [class^="material-icons"] {
@@ -6615,6 +6615,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   display: -ms-flexbox;
   display: flex;
   padding: 1.25em 2em 2.85em;
+  margin: 1em 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -6666,12 +6667,28 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   left: calc(-15px - 1.8rem);
 }
 
+.process.vertical.reversed {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.process.vertical.reversed .item:last-child {
+  border-top: 1px solid #c6c6c6;
+}
+
+.process.vertical.reversed .item:first-child {
+  border-top: none;
+}
+
 @media only screen and (max-width: 768px) {
   .process {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 1.25em 2em 2.85em;
+    margin: 1em 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -6714,6 +6731,18 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   .process .item.active a::after {
     top: 15px;
     left: calc(-15px - 1.8rem);
+  }
+  .process.reversed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .process.reversed .item:last-child {
+    border-top: 1px solid #c6c6c6;
+  }
+  .process.reversed .item:first-child {
+    border-top: none;
   }
 }
 
@@ -6786,15 +6815,15 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   line-height: initial;
   font-weight: initial;
   font-size: 1.025em;
-  -webkit-transition: .15s;
-  transition: .15s;
+  -webkit-transition: border-bottom-color .15s;
+  transition: border-bottom-color .15s;
 }
 
 .tab .button:hover, .tab a.button:hover, .tab .dropdown .button:hover, .tab .dropdown a.button:hover {
   color: #2b2d2e;
   border-bottom-color: #bdbdbd;
-  -webkit-transition: .15s;
-  transition: .15s;
+  -webkit-transition: border-bottom-color .15s;
+  transition: border-bottom-color .15s;
 }
 
 .tab .button.active, .tab a.button.active, .tab .dropdown .button.active, .tab .dropdown a.button.active {
