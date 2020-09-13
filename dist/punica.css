@@ -59,7 +59,7 @@ html, body {
 }
 
 a {
-  color: #0a8fff;
+  color: #3f4143;
   outline: none;
   text-decoration: none;
 }
@@ -70,7 +70,7 @@ a:focus, a:hover, a:active, a.active {
 }
 
 a:visited {
-  color: #0a8fff;
+  color: #3f4143;
 }
 
 hr {
@@ -5600,12 +5600,21 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   white-space: nowrap;
 }
 
-.breadcrumb .item {
+.breadcrumb a.item, .breadcrumb .item {
   text-decoration: none;
   font-size: inherit;
+  color: #0a8fff;
 }
 
-.breadcrumb .item::after {
+.breadcrumb a.item:focus, .breadcrumb a.item:hover, .breadcrumb a.item:active, .breadcrumb a.item.active, .breadcrumb .item:focus, .breadcrumb .item:hover, .breadcrumb .item:active, .breadcrumb .item.active {
+  color: #007ae0;
+}
+
+.breadcrumb a.item:visited, .breadcrumb .item:visited {
+  color: #0a8fff;
+}
+
+.breadcrumb a.item::after, .breadcrumb .item::after {
   content: "\203A";
   color: #000;
   padding: 0 0.45em;
@@ -5613,16 +5622,16 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   font-size: 1.8rem;
 }
 
-.breadcrumb .item:first-child {
+.breadcrumb a.item:first-child, .breadcrumb .item:first-child {
   margin-left: 0;
 }
 
-.breadcrumb .item.active {
+.breadcrumb a.item.active, .breadcrumb .item.active {
   color: #3f4143;
   font-weight: bold;
 }
 
-.breadcrumb .item.active::after {
+.breadcrumb a.item.active::after, .breadcrumb .item.active::after {
   content: none;
 }
 
@@ -5959,7 +5968,9 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   border-radius: 0;
   list-style: none;
   margin: 0;
-  min-width: 200px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   padding: .9rem;
   -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
@@ -6018,10 +6029,14 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .menu .item i, .menu .item span.material-icons {
-  color: #0a8fff;
+  color: #77878b;
   font-size: 1.2rem;
   margin-right: 10px;
   vertical-align: sub;
+}
+
+.menu .item .menu {
+  padding: .4rem;
 }
 
 .menu .badge {

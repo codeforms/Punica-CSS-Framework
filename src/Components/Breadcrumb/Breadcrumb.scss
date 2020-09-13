@@ -6,9 +6,20 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 	.#{$breadcrumb-name} {
 		display: inline-block;
 		white-space: nowrap;
+		a.#{$breadcrumb-item},
 		.#{$breadcrumb-item} {
 			text-decoration: none;
 			font-size: inherit;
+			color: $primary-color;
+			&:focus,
+			&:hover,
+			&:active,
+			&.active {
+				color: darken($primary-color, 8%);
+			}
+			&:visited {
+				color: $primary-color;
+			}
 			&::after {
 				content: $breadcrumb-seperator;
 				color: $breadcrumb-seperator-color;

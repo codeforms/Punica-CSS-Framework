@@ -61,6 +61,9 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 				margin-right: $menu-item-icon-mr;
 				vertical-align: $menu-item-icon-va;
 			}
+			.#{$menu-name} {
+				padding: $menu-padding-nested;
+			}
 		}
 		.#{$menu-badge} {
 			align-items: center;

@@ -46,7 +46,7 @@ html, body {
 	color: $main-invert-color;
 }
 a {
-	color: $primary-color;
+	color: $main-font-color;
 	outline: none;
 	text-decoration: none;
 	&:focus,
@@ -57,7 +57,7 @@ a {
 		text-decoration: underline;
 	}
 	&:visited {
-		color: $primary-color;
+		color: $main-font-color;
 	}
 }
 hr {
