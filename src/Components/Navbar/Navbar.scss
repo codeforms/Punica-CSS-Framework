@@ -85,9 +85,6 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 			transform: translateY(0px);
 			z-index: 5;
 		}
-		&.#{$navbar-shadowed} {
-			box-shadow: $navbar-shadow;
-		}
 		.#{$button-class-group} {
 			height: 100%;
 			min-height: 100%;
@@ -140,7 +137,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				overflow-y: hidden;
 				background: $main-secondary-bg;
 				z-index: 1;
-				box-shadow: $navbar-shadow;
+				@include shadow();
 				.#{$navbar-section},
 				.#{$navbar-section} .#{$button-class-group},
 				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name},

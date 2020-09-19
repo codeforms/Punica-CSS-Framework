@@ -4527,8 +4527,8 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
   -ms-flex-negative: 0;
       flex-shrink: 0;
   border-radius: 3px;
-  -webkit-box-shadow: 0 0.155em 0 0 rgba(0, 0, 0, 0.095);
-          box-shadow: 0 0.155em 0 0 rgba(0, 0, 0, 0.095);
+  -webkit-box-shadow: 0 0.155em 0 rgba(0, 0, 0, 0.095);
+          box-shadow: 0 0.155em 0 rgba(0, 0, 0, 0.095);
 }
 
 .buttons .button:first-child:not(:last-child) {
@@ -4698,8 +4698,8 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 .dropdown.top .menu {
   bottom: 100%;
   top: auto;
-  -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15) 3px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15) 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .dropdown.active .menu, .dropdown .toggle:focus + .menu, .dropdown .toggle:hover + .menu, .dropdown .menu:focus, .dropdown .menu:hover {
@@ -5330,8 +5330,8 @@ a.label, .label {
   border-radius: 4px;
   text-decoration: none;
   border: 1px solid #c6c6c6;
-  -webkit-box-shadow: 0 0.155em 0 0 rgba(0, 0, 0, 0.095);
-          box-shadow: 0 0.155em 0 0 rgba(0, 0, 0, 0.095);
+  -webkit-box-shadow: 0 0.155em 0 rgba(0, 0, 0, 0.095);
+          box-shadow: 0 0.155em 0 rgba(0, 0, 0, 0.095);
   background: #fff;
   color: #3f4143;
   border-color: #c6c6c6;
@@ -6001,23 +6001,23 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 0.1rem .9rem;
   text-decoration: none;
   font-size: 1em;
-  -webkit-transition: .15s;
-  transition: .15s;
+  -webkit-transition: background .15s, color .15s;
+  transition: background .15s, color .15s;
 }
 
 .menu .item > a:hover {
   background: #f0f0f0;
   color: #292a2b;
-  -webkit-transition: .15s;
-  transition: .15s;
+  -webkit-transition: background .15s, color .15s;
+  transition: background .15s, color .15s;
 }
 
 .menu .item > a:active, .menu .item > a:focus, .menu .item > a.active {
   background: #f0f0f0;
   color: #606265;
   font-weight: 700;
-  -webkit-transition: .15s;
-  transition: .15s;
+  -webkit-transition: background .15s, color .15s;
+  transition: background .15s, color .15s;
 }
 
 .menu .item > a:focus {
@@ -6183,11 +6183,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   z-index: 5;
 }
 
-.navbar.shadowed {
-  -webkit-box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.23);
-          box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.23);
-}
-
 .navbar .buttons {
   height: 100%;
   min-height: 100%;
@@ -6283,8 +6278,8 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
     overflow-y: hidden;
     background: #e6e6e6;
     z-index: 1;
-    -webkit-box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.23);
-            box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   }
   .navbar section.links .section, .navbar section.links .section .buttons, .navbar section.links .section .buttons .dropdown, .navbar section.links .section .buttons .dropdown .menu, .navbar section.links .section .buttons .dropdown .menu .button, .navbar section.links .section .buttons .dropdown .button, .navbar section.links .section .buttons .button {
     display: block !important;
@@ -6352,8 +6347,8 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
           flex-direction: column;
   border: 1px solid #c6c6c6;
   border-radius: 4px;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   background: #fff;
   margin: 24px 0;
 }
@@ -6903,8 +6898,8 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
           justify-content: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-box-shadow: 0 0.255em 0 0 rgba(0, 0, 0, 0.145);
-          box-shadow: 0 0.255em 0 0 rgba(0, 0, 0, 0.145);
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .timeline .activity .type.primary {
@@ -7541,14 +7536,14 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   height: 100%;
   background-color: #fff;
   background-position: center center;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(16%, rgba(0, 0, 0, 0.075)), color-stop(16%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(16%, rgba(0, 0, 0, 0.075)), color-stop(16%, transparent));
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.075) 16%, transparent 16%), linear-gradient(rgba(0, 0, 0, 0.075) 16%, transparent 16%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(1%, #0a8fff), color-stop(16%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #0a8fff), color-stop(16%, transparent));
+  background-image: linear-gradient(90deg, #0a8fff 1%, transparent 16%), linear-gradient(#0a8fff 1%, transparent 16%);
   background-size: 10px 10px;
 }
 
 .bg-stripe {
   height: 100%;
-  background-image: linear-gradient(#fff, #fff 7px, #dbdbdb 4px, #dbdbdb);
+  background-image: linear-gradient(#fff, #fff 7px, #0a8fff 4px, #dbdbdb);
   background-size: 100% 8px;
 }
 
@@ -7645,8 +7640,17 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   border: none !important;
 }
 
+.rounded {
+  border-radius: 4px;
+}
+
 .radiusless {
   border-radius: 0 !important;
+}
+
+.shadowed {
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .shadowless {
@@ -7657,4 +7661,16 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 .filter-invert {
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatar {
+  display: inline-block;
+  border-radius: 50%;
 }

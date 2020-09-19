@@ -53,7 +53,7 @@
 .m-50 {
 	margin: 50px !important;
 }
-
+/* margin-top */
 .mt-0 {
 	margin-top: 0 !important;
 }
@@ -78,7 +78,7 @@
 .mt-50 {
 	margin-top: 50px !important;
 }
-
+/* margin-bottom */
 .mb-0 {
 	margin-bottom: 0 !important;
 }
@@ -103,7 +103,7 @@
 .mb-50 {
 	margin-bottom: 50px !important;
 }
-
+/* margin-right */
 .mr-0 {
 	margin-right: 0 !important;
 }
@@ -128,7 +128,7 @@
 .mr-50 {
 	margin-right: 50px !important;
 }
-
+/* margin-left */
 .ml-0 {
 	margin-left: 0 !important;
 }
@@ -179,7 +179,7 @@
 .p-50 {
 	padding: 50px !important;
 }
-
+/* padding-top */
 .pt-0 {
 	padding-top: 0 !important;
 }
@@ -204,7 +204,7 @@
 .pt-50 {
 	padding-top: 50px !important;
 }
-
+/* padding-bottom */
 .pb-0 {
 	padding-bottom: 0 !important;
 }
@@ -229,7 +229,7 @@
 .pb-50 {
 	padding-bottom: 50px !important;
 }
-
+/* padding-right */
 .pr-0 {
 	padding-right: 0 !important;
 }
@@ -254,7 +254,7 @@
 .pr-50 {
 	padding-right: 50px !important;
 }
-
+/* padding-left */
 .pl-0 {
 	padding-left: 0 !important;
 }
@@ -383,13 +383,13 @@
     height: 100%;
 	background-color: $main-bg;
     background-position: center center;
-	background-image: linear-gradient(90deg, rgba(0,0,0,.075) 16%, transparent 16%),
-	linear-gradient(rgba(0,0,0,.075) 16%, transparent 16%);
+	background-image: linear-gradient(90deg, $primary-color 1%, transparent 16%),
+	linear-gradient($primary-color 1%, transparent 16%);
 	background-size: 10px 10px;
 }
 .bg-stripe {
     height: 100%;
-	background-image: linear-gradient($main-bg, $main-bg 7px, darken($main-bg, 14%) 4px, darken($main-bg, 14%));
+	background-image: linear-gradient($main-bg, $main-bg 7px, $primary-color 4px, darken($main-bg, 14%));
     background-size: 100% 8px;
 }
 /* Alignment */
@@ -459,12 +459,29 @@
 .borderless {
 	border: none !important;
 }
+.rounded {
+	border-radius: $main-border-radius;
+}
 .radiusless {
 	border-radius:0 !important;
+}
+.shadowed {
+	@include shadow();
 }
 .shadowless {
 	box-shadow:none !important;
 }
 .filter-invert {
 	filter: invert(100%);
+}
+.truncate {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Media */
+.avatar {
+    display: inline-block;
+    border-radius: 50%;
 }

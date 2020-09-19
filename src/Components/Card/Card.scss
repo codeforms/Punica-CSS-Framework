@@ -20,7 +20,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		background: $card-bg;
 		border: $main-border-width $main-border-style $main-border-color;
 		border-radius: $main-border-radius;
-		box-shadow: $card-shadow;
+		@include shadow()
 		display: flex;
 		flex-direction: column;
 		width: calc(33% - (2 * #{$card-margin}));

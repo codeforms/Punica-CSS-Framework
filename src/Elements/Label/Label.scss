@@ -15,7 +15,7 @@ PUNICA CSS > ELEMENTS : LABEL ************************/
 		border-radius: $label-border-radius;
 		text-decoration: none;
 		border: $main-border-width solid $main-border-color;
-		box-shadow: $label-shadow;
+		@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
 		@include label-types();
 		@each $type, $bg-color in $label-types {
 			&.#{$type} {

@@ -38,7 +38,7 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 				border-radius: 50%;
 				justify-content: center;
 				flex-shrink: 0;
-				box-shadow: $timeline-type-shadow;
+				@include shadow();
 				@each $type, $color in $timeline-types {
 				    &.#{$type} {
 						background-color: $color;

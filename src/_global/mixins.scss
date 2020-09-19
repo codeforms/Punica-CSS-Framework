@@ -5,6 +5,14 @@
 		@content;
 	}
 }
+@mixin shadow(
+	$h-offset: 0, 
+	$v-offset: 3px, 
+	$blur: 10px, 
+	$color: rgba(0, 0, 0, 0.15)
+) {
+	box-shadow: $h-offset $v-offset $blur $color;
+}
 @mixin embedded-media {
 	// References;
 	// https://css-tricks.com/fluid-width-video/
