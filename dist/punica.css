@@ -4698,8 +4698,8 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 .dropdown.top .menu {
   bottom: 100%;
   top: auto;
-  -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15) 3px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15) 3px 10px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .dropdown.active .menu, .dropdown .toggle:focus + .menu, .dropdown .toggle:hover + .menu, .dropdown .menu:focus, .dropdown .menu:hover {
