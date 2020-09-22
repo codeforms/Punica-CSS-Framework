@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap);@charset "UTF-8";
-*, *:after, *:before {
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap);*, *:after, *:before {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -4292,15 +4291,21 @@ a.button, .button {
   text-align: center;
 }
 
-a.button:focus, a.button:active, a.button:hover, .button:focus, .button:active, .button:hover {
+a.button:focus, a.button:hover, .button:focus, .button:hover {
   color: #3f4143;
-  background: #fff;
+  background: #ededed;
   background-image: none;
-  border-color: #999;
-  text-decoration: none;
-  z-index: 1;
   -webkit-transition: background .2s, color .2s;
   transition: background .2s, color .2s;
+}
+
+a.button:active, .button:active {
+  color: #3f4143;
+  background: #fff;
+}
+
+a.button:focus, .button:focus {
+  background: #fff;
 }
 
 a.button:focus > i, a.button:focus > [class^="material-icons"], .button:focus > i, .button:focus > [class^="material-icons"] {
@@ -4311,7 +4316,6 @@ a.button.active, .button.active {
   color: #fff;
   background: #77878b;
   background-image: none;
-  border-color: #647275;
   text-decoration: none;
 }
 
@@ -4331,14 +4335,13 @@ a.button.primary, .button.primary {
   color: #fff;
   text-shadow: 0 1px 1px #007fea;
   background-image: none;
-  border-color: transparent;
+  border: none;
 }
 
 a.button.primary:focus, a.button.primary:hover, .button.primary:focus, .button.primary:hover {
   background: #30a0ff;
   color: #fff;
   background-image: none;
-  border-color: transparent;
 }
 
 a.button.primary:active, a.button.primary.active, .button.primary:active, .button.primary.active {
@@ -4360,14 +4363,13 @@ a.button.success, .button.success {
   color: #fff;
   text-shadow: 0 1px 1px #28ab9f;
   background-image: none;
-  border-color: transparent;
+  border: none;
 }
 
 a.button.success:focus, a.button.success:hover, .button.success:focus, .button.success:hover {
   background: #45d3c6;
   color: #fff;
   background-image: none;
-  border-color: transparent;
 }
 
 a.button.success:active, a.button.success.active, .button.success:active, .button.success.active {
@@ -4389,14 +4391,13 @@ a.button.error, .button.error {
   color: #fff;
   text-shadow: 0 1px 1px #bc2323;
   background-image: none;
-  border-color: transparent;
+  border: none;
 }
 
 a.button.error:focus, a.button.error:hover, .button.error:focus, .button.error:hover {
   background: #dd4848;
   color: #fff;
   background-image: none;
-  border-color: transparent;
 }
 
 a.button.error:active, a.button.error.active, .button.error:active, .button.error.active {
@@ -4418,14 +4419,13 @@ a.button.dark, .button.dark {
   color: #fff;
   text-shadow: 0 1px 1px #333741;
   background-image: none;
-  border-color: transparent;
+  border: none;
 }
 
 a.button.dark:focus, a.button.dark:hover, .button.dark:focus, .button.dark:hover {
   background: #525767;
   color: #fff;
   background-image: none;
-  border-color: transparent;
 }
 
 a.button.dark:active, a.button.dark.active, .button.dark:active, .button.dark.active {
@@ -4584,7 +4584,6 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 .buttons .inactive {
   padding-left: 0.45rem !important;
   padding-right: 0.45rem !important;
-  border-left: 1px solid #ccc;
   pointer-events: none;
   cursor: default;
   background-image: none !important;
@@ -5286,7 +5285,7 @@ sup {
 }
 
 .table.striped thead tr {
-  background: #fff !important;
+  background: rgba(0, 0, 0, 0) !important;
 }
 
 .table.hovered tr:hover, .table.hovered tbody tr:hover {
@@ -5294,7 +5293,7 @@ sup {
 }
 
 .table.hovered thead tr {
-  background: #fff !important;
+  background: rgba(0, 0, 0, 0) !important;
 }
 
 .table td, .table th {
@@ -5304,7 +5303,7 @@ sup {
 }
 
 .table thead tr {
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
 }
 
 .table thead tr th {
@@ -5615,11 +5614,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .breadcrumb a.item::after, .breadcrumb .item::after {
-  content: "\203A";
+  font-family: 'Material Icons';
+  content: "keyboard_arrow_right";
   color: #000;
-  padding: 0 0.45em;
-  vertical-align: sub;
-  font-size: 1.8rem;
+  padding: 0 0.25em;
+  vertical-align: middle;
+  font-size: 1.4rem;
 }
 
 .breadcrumb a.item:first-child, .breadcrumb .item:first-child {
@@ -5640,8 +5640,8 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .breadcrumb.small .item::after {
-  padding: .25em;
-  font-size: 1.6rem;
+  padding: .15em;
+  font-size: 1.25rem;
 }
 
 .breadcrumb.large .item {
@@ -5649,8 +5649,8 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .breadcrumb.large .item::after {
-  padding: .55em;
-  font-size: 2rem;
+  padding: .45em;
+  font-size: 1.8rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -6451,6 +6451,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  background: none;
 }
 
 .process {
@@ -6806,7 +6807,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
       -ms-flex-align: start;
           align-items: flex-start;
   border-bottom: 2px solid #e6e6e6;
-  background: #fff;
   padding: 0;
 }
 
@@ -6820,7 +6820,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
-  border-radius: 0;
+  border-radius: 0 !important;
   margin-bottom: -2px;
   line-height: initial;
   font-weight: initial;
@@ -7536,8 +7536,8 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   height: 100%;
   background-color: #fff;
   background-position: center center;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(1%, #0a8fff), color-stop(16%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #0a8fff), color-stop(16%, transparent));
-  background-image: linear-gradient(90deg, #0a8fff 1%, transparent 16%), linear-gradient(#0a8fff 1%, transparent 16%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(1%, #8ac9ff), color-stop(16%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #8ac9ff), color-stop(16%, transparent));
+  background-image: linear-gradient(90deg, #8ac9ff 1%, transparent 16%), linear-gradient(#8ac9ff 1%, transparent 16%);
   background-size: 10px 10px;
 }
 
@@ -7661,6 +7661,11 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 .filter-invert {
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+.filter-gray {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .truncate {

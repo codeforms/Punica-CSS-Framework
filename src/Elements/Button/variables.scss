@@ -49,7 +49,7 @@ $button-font-size			: .9338em;
 /* Color & Background */
 $button-bg-color			: #fff;
 $button-text-color			: $main-font-color;
-$button-bg-hover			: $button-bg-color;
+$button-bg-hover			: darken($button-bg-color, 7%);
 $button-hover-text-color	: $button-text-color;
 $button-bg-active			: $main-grey-color;
 /* Shadow */

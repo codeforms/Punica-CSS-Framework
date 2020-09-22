@@ -8,7 +8,6 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 		flex-wrap: wrap;
 		align-items: flex-start;
 		border-bottom: $tabnav-border-bottom-width $main-border-style $main-secondary-bg;
-		background: $main-bg;
 		padding: 0;
 		.#{$button-class-group} {
 			box-shadow: none;
@@ -21,7 +20,7 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 			background: transparent;
 			border: none;
 		    border-bottom: $tabnav-border-bottom-width solid transparent;
-		    border-radius: 0;
+		    border-radius: 0 !important;
 	        margin-bottom: -$tabnav-border-bottom-width;
 	        line-height: initial;
 	        font-weight: initial;

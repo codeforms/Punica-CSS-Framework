@@ -383,8 +383,8 @@
     height: 100%;
 	background-color: $main-bg;
     background-position: center center;
-	background-image: linear-gradient(90deg, $primary-color 1%, transparent 16%),
-	linear-gradient($primary-color 1%, transparent 16%);
+	background-image: linear-gradient(90deg, lighten($primary-color, 25%) 1%, transparent 16%),
+	linear-gradient(lighten($primary-color, 25%) 1%, transparent 16%);
 	background-size: 10px 10px;
 }
 .bg-stripe {
@@ -471,8 +471,12 @@
 .shadowless {
 	box-shadow:none !important;
 }
+/* Filters */
 .filter-invert {
 	filter: invert(100%);
+}
+.filter-gray {
+	filter: grayscale(100%);
 }
 .truncate {
     display: block;

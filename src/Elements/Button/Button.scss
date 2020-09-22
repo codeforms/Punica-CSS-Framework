@@ -19,7 +19,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		background-image: $button-bg-image;
 		border: $button-border-width solid $button-border-color;
 		appearance: none;
-		color: $main-font-color;
+		color: $button-text-color;
 		border-radius: $button-border-radius;
 		box-sizing: border-box;
 		cursor: pointer;
@@ -33,17 +33,18 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		overflow: visible;
 		text-align: center;
 		&:focus,
-		&:active,
 		&:hover {
 			color: $button-hover-text-color;
 			background: $button-bg-hover;
 			background-image: $button-bg-hover-image;
-			border-color: darken($button-border-color, 20%);
-			text-decoration: none;
-			z-index: 1;
 			transition: background .2s, color .2s;
 		}
+		&:active {
+			color: $button-text-color;
+			background: $button-bg-color;
+		}
 		&:focus {
+			background: $button-bg-color;
 			> i, 
 			> [class^="material-icons"] {
 				color: $primary-color;
@@ -53,7 +54,6 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			color: $main-invert-color;
 			background: $button-bg-active;
 			background-image: $button-bg-hover-image;
-			border-color: darken($button-bg-active, 8%);
 			text-decoration: none;
 			i, [class^="material-icons"] {
 				color: $main-invert-color;
@@ -140,7 +140,6 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			.#{$button-class-inactive} {
 				padding-left: $button-padding-inactive;
 				padding-right: $button-padding-inactive;
-				border-left: $button-border-width solid $button-border-color;
 				pointer-events: none;
 				cursor: default;
 				background-image: none !important;

@@ -9,22 +9,22 @@ $breadcrumb-active				: 'active';
 
 /*****************************************************
 SIZES ************************************************/
-// name, font-size, seperator-size, seperator-padding, seperator-size
+// name, font-size, seperator-padding, seperator-size
 $breadcrumb-sizes               : (
-    ('small', .9589em, 1.4rem, .25em, 1.6rem),
-    ('large', 1.1rem, 1.9rem, .55em, 2rem)
+    ('small', .9589em, .15em, 1.25rem),
+    ('large', 1.1rem, .45em, 1.8rem)
 );
 
 /***************************************************** 
 PREFERENCES ******************************************/
 /* Seperator */
-$breadcrumb-seperator			: '\203A'; // [1]
+$breadcrumb-seperator			: 'keyboard_arrow_right'; // [1]
 $breadcrumb-seperator-color		: black;
-$breadcrumb-seperator-padding	: 0 .45em;
-$breadcrumb-seperator-vertical	: sub;
-$breadcrumb-seperator-size		: 1.8rem;
+$breadcrumb-seperator-padding	: 0 .25em;
+$breadcrumb-seperator-vertical	: middle;
+$breadcrumb-seperator-size		: 1.4rem;
 /* 
 REFERENCES ******************************************
-[1] HTML Symbols : https://www.toptal.com/designers/htmlarrows/
+[1] https://material.io/resources/icons/
 *****************************************************/
 

@@ -10,13 +10,12 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 	color: $text-color;
 	text-shadow: 0 1px 1px darken($bg-color, 6%);
 	background-image: $bg-img;
-	border-color: transparent;
+	border: none;
 	&:focus,
 	&:hover {
 		background: lighten($bg-color, 7.5%);
 		color: $text-color;
 		background-image: $bg-img-hover;
-		border-color: transparent;
 	}
 	&:active,
 	&.#{$button-class-active} {
