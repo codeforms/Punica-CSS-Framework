@@ -1,0 +1,122 @@
+/***************************************************** 
+PUNICA CSS > UTILITIES : HELPERS > VARIABLES *********/
+
+/***************************************************** 
+PREFERENCES ******************************************/
+$helper-pm-ranges	: 0,5,10,15,20,30,40,50;
+$helper-fw-ranges	: 100,200,300,400,500,600,700,800,900;
+/* Margin Helpers */
+$margin-helpers: (
+	// class-name, property
+    ("m-", "margin"),
+    ("mt-", "margin-top"),
+    ("mr-", "margin-right"),
+    ("mb-", "margin-bottom"),
+    ("ml-", "margin-left")
+);
+/* Padding Helpers */
+$padding-helpers: (
+	// class-name, property, value-type
+    ("p-", "padding"),
+    ("pt-", "padding-top"),
+    ("pr-", "padding-right"),
+    ("pb-", "padding-bottom"),
+    ("pl-", "padding-left")
+);
+/* Font Weight Helpers */
+$font-weights: (
+	"fw-": "font-weight"
+);
+/* Font Size Helpers */
+$font-sizes: (
+	// prefix, property, value
+	("mini-", "font-size", 60%),
+	("tiny-", "font-size", 73%),
+	("small-", "font-size", 85%),
+	("large-", "font-size", 120%),
+	("big-", "font-size", 175%),
+	("huge-", "font-size", 200%),
+	("giant-", "font-size", 350%)
+);
+/* Text Colors */
+$text-colors: (
+	// suffix, property, value
+	("grey", "color", $main-grey-color),
+	("white", "color", white),
+	("black", "color", black),
+	("primary", "color", $primary-color),
+	("success", "color", $success-color),
+	("warning", "color", $warning-color),
+	("error", "color", $error-color)
+);
+/* Bg Colors */
+$bg-colors: (
+	// suffix, property, value
+	("grey", "background-color", $main-grey-color),
+	("secondary", "background-color", $main-secondary-bg),
+	("white", "background-color", white),
+	("black", "background-color", $main-font-color),
+	("dark", "background-color", $main-dark-color),
+	("primary", "background-color", $primary-color),
+	("success", "background-color", $success-color),
+	("warning", "background-color", $warning-color),
+	("error", "background-color", $error-color)
+);
+/* Cursors */
+$cursors: (
+	// suffix, property, value
+	("alias", "cursor", alias),
+	("default", "cursor", default),
+	("grab", "cursor", grab),
+	("help", "cursor", help),
+	("move", "cursor", move),
+	("pointer", "cursor", pointer),
+	("wait", "cursor", wait),
+	("zoom-in", "cursor", zoom-in),
+	("zoom-out", "cursor", zoom-out)
+);
+/* Display Properties */
+$display-properties: (
+	// suffix, property, value
+	("inline", "display", inline),
+	("flex", "display", flex),
+	("inline-flex", "display", inline-flex),
+	("grid", "display", grid),
+	("inline-grid", "display", inline-grid),
+	("block", "display", block),
+	("inline-block", "display", inline-block),
+	("table", "display", table),
+	("inline-table", "display", inline-table),
+	("table-row", "display", table-row),
+	("table-column", "display", table-column),
+	("table-cell", "display", table-cell)
+);
+$align-items: (
+	// suffix, property, value
+	("baseline", "align-items", baseline),
+	("flex-start", "align-items", flex-start),
+	("flex-end", "align-items", flex-end),
+	("center", "align-items", center),
+	("stretch", "align-items", stretch),
+);
+$align-self: (
+	// suffix, property, value
+	("baseline", "align-self", baseline),
+	("flex-start", "align-self", flex-start),
+	("flex-end", "align-self", flex-end),
+	("center", "align-self", center),
+	("stretch", "align-self", stretch),
+);
+/* Filters */
+$display-filters: (
+	// suffix, property, value
+	("invert", "filter", invert(100%)),
+	("gray", "filter", grayscale(100%))
+);
+/* Text Transforms */
+$text-transforms: (
+	// suffix, property, value
+	("uppercase", "text-transform", uppercase),
+	("lowercase", "text-transform", lowercase),
+	("capitalize", "text-transform", capitalize)
+);

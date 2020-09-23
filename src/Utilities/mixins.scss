@@ -1,0 +1,29 @@
+/***************************************************** 
+PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
+
+@mixin setHelperListWithRange(
+	$helpers, 
+	$range, 
+	$value-type: null,
+	$specificity: null) {
+	@each $class, $property in $helpers {
+		@each $value in $range {
+			.#{$class}#{$value} {
+				#{$property}: #{$value}#{$value-type} #{$specificity};
+			}
+		}
+	}
+}
+@mixin setHelperList($list, $slug: null, $reverse: false, $specificity: null) {
+	@each $class, $property, $value in $list {
+		@if $reverse {
+			.#{$slug}#{$class} {
+				#{$property}: #{$value} #{$specificity};
+			}
+		} @else {
+			.#{$class}#{$slug} {
+				#{$property}: #{$value} #{$specificity};
+			}
+		}
+	}
+}

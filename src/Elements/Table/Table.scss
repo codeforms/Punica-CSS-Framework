@@ -13,9 +13,6 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 		overflow: hidden;
 		flex: 1;
 		margin-bottom: 1.5rem;
-		tr {
-			transition: all 0.3s;
-		}
 		// if table striped is enable
 		@if $elements-table-striped {
 			&.#{$table-class-striped} {
@@ -40,11 +37,20 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 				tbody tr {
 					&:hover {
 						background: $main-hovered-bg;
+						color: $main-font-color;
 					}
 				}
 				thead tr {
 					background: $table-thead-bg !important;
 				}
+			}
+		}
+		tr,
+		tbody tr {
+			transition: all 0.3s;
+			&.#{$table-class-active},
+			&.#{$table-class-active}:hover {
+				background: $main-secondary-bg;
 			}
 		}
 		td,

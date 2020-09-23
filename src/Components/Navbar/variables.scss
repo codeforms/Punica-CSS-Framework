@@ -20,7 +20,7 @@ $navbar-color			: $main-invert-color;
 // theme name, bg color, text color, input bg, input color, input border color
 $navbar-themes: ( 
 	("light", $main-bg, $main-font-color, $main-bg, $main-font-color),
-	("dark", darken(#414552, 5%), $main-invert-color, lighten(#414552, 7%), $main-invert-color, lighten(#414552, 7%))
+	("dark", darken($main-dark-color, 5%), $main-invert-color, lighten($main-dark-color, 7%), $main-invert-color, lighten($main-dark-color, 7%))
 );
 
 /***************************************************** 
