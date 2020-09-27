@@ -1,5 +1,6 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : BADGE **********************/
+@import "mixins";
 
 // if badge is enable
 @if $components-badge {
@@ -9,11 +10,29 @@ PUNICA CSS > COMPONENTS : BADGE **********************/
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
-		background: $badge-bg;
-		color: $badge-color;
-		font-size: $badge-font-size;
 		font-weight: $badge-font-weight;
 		border-radius: $badge-border-radius;
-		padding: $badge-padding-y $badge-padding-x;
+		@include badge-sizes();
+		@include badge-types();
+
+		// if badge style is enable
+		@if $components-badge-types {
+			// badge types
+			@each $type-name, $bg-color in $badge-types {
+				&.#{$type-name} {
+					@include badge-types($bg-color, $main-invert-color, false);
+				}
+			}
+		}
+
+		// if badge size is enable
+		@if ($components-badge-sizes) {
+			// badge sizes
+			@each $size, $font-size, $padding in $badge-sizes {
+				&.#{$size} {
+					@include badge-sizes($padding, $font-size);
+				}
+			}
+		}
 	}
 }

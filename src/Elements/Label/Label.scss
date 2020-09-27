@@ -7,21 +7,35 @@ PUNICA CSS > ELEMENTS : LABEL ************************/
 	a.#{$label-name},
 	.#{$label-name} {
 		display: inline-block;
-		font-size: $label-font-size;
 		font-weight: $label-font-weight;
 		line-height: $label-line-height;
-		padding: $label-padding;
 		margin: $label-margin;
 		border-radius: $label-border-radius;
 		text-decoration: none;
 		border: $main-border-width solid $main-border-color;
 		@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
 		@include label-types();
-		@each $type, $bg-color in $label-types {
-			&.#{$type} {
-				@include label-types($main-invert-color, $bg-color, darken($bg-color, 7%));
+		@include label-sizes();
+
+		// if label style is enable
+		@if ($elements-label-types) {
+			@each $type, $bg-color in $label-types {
+				&.#{$type} {
+					@include label-types($main-invert-color, $bg-color, darken($bg-color, 7%));
+				}
 			}
 		}
+
+		// if badge size is enable
+		@if ($elements-label-sizes) {
+			// label sizes
+			@each $size, $padding, $font-size in $label-sizes {
+				&.#{$size} {
+					@include label-sizes($padding, $font-size);
+				}
+			}
+		}
+
 		>i,
 		>.material-icons {
 			vertical-align: text-top;

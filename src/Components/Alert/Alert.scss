@@ -13,11 +13,16 @@ PUNICA CSS > COMPONENTS : ALERT **********************/
 		margin: $alert-margin;
 		width: 100%;
 		font-weight: $alert-font-weight;
-		@each $type, $color in $alert-types {
-			&.#{$type} {
-				@include alert-types($color, $main-invert-color);
+
+		// if alert types is enable
+		@if($components-alert-types) {
+			@each $type, $color in $alert-types {
+				&.#{$type} {
+					@include alert-types($color, $main-invert-color);
+				}
 			}
 		}
+		
 		a {
 			color: $primary-color;
 			text-decoration: underline;

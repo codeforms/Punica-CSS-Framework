@@ -5326,10 +5326,8 @@ sup {
 
 a.label, .label {
   display: inline-block;
-  font-size: .9195em;
   font-weight: 700;
   line-height: 1.2;
-  padding: 0.28rem 0.9rem;
   margin: 0.1rem 0.05rem;
   border-radius: 4px;
   text-decoration: none;
@@ -5339,6 +5337,8 @@ a.label, .label {
   background: #fff;
   color: #3f4143;
   border-color: #c6c6c6;
+  padding: 0.28rem 0.9rem;
+  font-size: .9195em;
 }
 
 a.label.primary, .label.primary {
@@ -5363,6 +5363,16 @@ a.label.error, .label.error {
   background: #d62828;
   color: #fff;
   border-color: #b82222;
+}
+
+a.label.small, .label.small {
+  padding: 0.18rem 0.85rem;
+  font-size: .8195em;
+}
+
+a.label.large, .label.large {
+  padding: 0.415rem 1.159rem;
+  font-size: 1em;
 }
 
 a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
@@ -5455,12 +5465,47 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #0a8fff;
-  color: #fff;
-  font-size: 1em;
   font-weight: 700;
   border-radius: 500px;
   padding: 2px 8px;
+  font-size: 1em;
+  background: #fff;
+  color: #3f4143;
+  border: 1px solid #c6c6c6;
+}
+
+.badge.primary {
+  background: #0a8fff;
+  color: #fff;
+  border: none;
+}
+
+.badge.success {
+  background: #2ec4b6;
+  color: #fff;
+  border: none;
+}
+
+.badge.warning {
+  background: #de9e36;
+  color: #fff;
+  border: none;
+}
+
+.badge.error {
+  background: #d62828;
+  color: #fff;
+  border: none;
+}
+
+.badge.small {
+  padding: 1px 6px;
+  font-size: .859em;
+}
+
+.badge.large {
+  padding: 4px 12px;
+  font-size: 1em;
 }
 
 .billboard {

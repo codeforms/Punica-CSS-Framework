@@ -5,9 +5,26 @@ PUNICA CSS > COMPONENTS : BADGE > VARIABLES **********/
 CLASS NAMING *****************************************/
 $badge-name 			: 'badge';
 
+/*****************************************************
+STYLES ***********************************************/
+$badge-types: (
+	"primary": $primary-color,
+	"success": $success-color,
+	"warning": $warning-color,
+	"error": $error-color,
+);
+
+/***************************************************** 
+SIZES ************************************************/
+// name, font-size, padding
+$badge-sizes: (
+    ("small", .859em, 1px 6px),
+    ("large", 1em, 4px 12px)
+);
+
 /***************************************************** 
 PREFERENCES ******************************************/
-$badge-bg				: $primary-color;
+$badge-bg				: $primary-color; // default style
 $badge-color			: $main-invert-color;
 $badge-font-size		: 1em;
 $badge-font-weight		: 700;

@@ -2,9 +2,19 @@
 PUNICA CSS > ELEMENTS : LABEL > MIXINS ***************/
 
 @mixin label-types(
-	$color: $main-font-color, $bg-color: $main-bg, $border-color: $main-border-color
+	$color: $main-font-color, 
+	$bg-color: $main-bg, 
+	$border-color: $main-border-color
 ) {
 	background: $bg-color;
 	color: $color;
 	border-color: $border-color;
+}
+
+@mixin label-sizes(
+	$padding: $label-padding, 
+	$font-size: $label-font-size,
+) {
+	padding: $padding;
+	font-size: $font-size;
 }

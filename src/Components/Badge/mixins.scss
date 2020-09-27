@@ -1,0 +1,24 @@
+/***************************************************** 
+PUNICA CSS > COMPONENT : BADGE > MIXINS **************/
+
+@mixin badge-types(
+	$bg-color: $main-bg,
+	$color: $main-font-color,
+	$border: true
+) {
+	background: $bg-color;
+	color: $color;
+	@if($border) {
+		border: $main-border-width $main-border-style $main-border-color;
+	} @else {
+		border: none;
+	}
+}
+
+@mixin badge-sizes(
+	$padding: $badge-padding-y $badge-padding-x, 
+	$font-size: $badge-font-size,
+) {
+	padding: $padding;
+	font-size: $font-size;
+}

@@ -14,7 +14,10 @@ $layout-grid 						: true;
 /***************************************************** 
 COMPONENTS *******************************************/
 $components-alert 					: true;
+/**/$components-alert-types			: true;
 $components-badge					: true;
+/**/$components-badge-types			: true;
+/**/$components-badge-sizes			: true;
 $components-billboard				: true;
 $components-breadcrumb				: true;
 $components-card					: true;
@@ -43,6 +46,8 @@ $elements-table						: true;
 /**/$elements-table-hovered			: true;
 /**/$elements-table-striped			: true;
 $elements-label						: true;
+/**/$elements-label-types			: true;
+/**/$elements-label-sizes			: true;
 
 /***************************************************** 
 LAUNCHER *********************************************/
