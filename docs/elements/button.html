@@ -158,60 +158,13 @@
 									<div class="button">Default</div>
 									<button class="button primary">Primary</button>
 									<a class="button success">Success</a>
+									<div class="button warning">Warning</div>
 									<div class="button error">Error</div>
 									<div class="button dark">Dark</div>
+									<div class="button active">Active</div>
 									<div class="button disabled">Disabled</div>
 									<div class="button link">Link</div>
 									<div class="button secondary">Secondary</div>
-								</div>
-								<div class="content">
-									<div id="highlighter_295520" class="syntaxhighlighter nogutter  xml">
-										<table border="0" cellpadding="0" cellspacing="0">
-											<tbody>
-												<tr>
-													<td class="code">
-														<div class="container">
-															<div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"button"</code><code
-																	class="xml plain">&gt;Default&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">button</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"button&nbsp;primary"</code><code
-																	class="xml plain">&gt;Primary&lt;/</code><code class="xml keyword">button</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">a</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"button&nbsp;success"</code><code
-																	class="xml plain">&gt;Success&lt;/</code><code class="xml keyword">a</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"button&nbsp;error"</code><code
-																	class="xml plain">&gt;Error&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"button&nbsp;disabled"</code><code
-																	class="xml plain">&gt;Disabled&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number6 index5 alt1"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"button&nbsp;link"</code><code
-																	class="xml plain">&gt;Link&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-															<div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code
-																	class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code
-																	class="xml plain">=</code><code class="xml string">"button&nbsp;secondary"</code><code
-																	class="xml plain">&gt;Secondary&lt;/</code><code class="xml keyword">div</code><code
-																	class="xml plain">&gt;</code></div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
 								</div>
 
 								<!-- BUTTON SIZES -->
@@ -261,13 +214,13 @@
 											</div>
 											<div class="buttons secondary">
 												<button class="button">
-													Secondary Button
+													Secondary
 												</button>
 												<a href="javascript:" class="button active">
-													Secondary Button
+													Secondary
 												</a>
 												<button class="button">
-													Secondary Button
+													Secondary
 												</button>
 											</div>
 											<p></p>
@@ -648,11 +601,11 @@
 										A button can be used to trigger a dropdown menu.
 									</p>
 									<div class="panel pure">
-										<div class="content bg-grid align center">
+										<div class="content">
 											<div class="buttons">
-												<div class="dropdown small">
+												<div class="dropdown">
 													<a tabindex="0" class="button toggle">
-														Dropdown <span class="material-icons">keyboard_arrow_down</span>
+														Default Dropdown <span class="material-icons">keyboard_arrow_down</span>
 													</a>
 													<ul class="menu">
 														<li class="item"><a href="#">Dropdown 1</a></li>
@@ -662,8 +615,8 @@
 												</div>
 											</div>
 											<div class="buttons secondary small ml-20">
-												<div class="button">Dropdown</div>
-												<div class="dropdown right small">
+												<div class="button">Small Dropdown</div>
+												<div class="dropdown right">
 													<a tabindex="0" class="button toggle">
 														<span class="material-icons">keyboard_arrow_down</span>
 													</a>
@@ -674,12 +627,12 @@
 													</ul>
 												</div>
 											</div>
-											<div class="buttons small ml-20">
-												<div class="button">
-													<span class="material-icons">drafts</span>
+											<div class="buttons mini ml-20">
+												<div class="button primary">
+													<span class="material-icons mr-5">drafts</span> Mini
 												</div>
 												<div class="button inactive">254</div>
-												<div class="dropdown right top small">
+												<div class="dropdown right top">
 													<a tabindex="0" class="button toggle">
 														<span class="material-icons">keyboard_arrow_up</span>
 													</a>
@@ -690,8 +643,24 @@
 													</ul>
 												</div>
 											</div>
-											<div class="buttons small ml-20">
-												<div class="dropdown small">
+											<div class="buttons mini ml-20">
+												<div class="dropdown">
+													<a tabindex="0" class="button toggle">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
+												<div class="button inactive">254</div>
+												<div class="button secondary">
+													<span class="material-icons">drafts</span>
+												</div>
+											</div>
+											<div class="buttons primary mini ml-20">
+												<div class="dropdown">
 													<a tabindex="0" class="button toggle">
 														<span class="material-icons">keyboard_arrow_down</span>
 													</a>

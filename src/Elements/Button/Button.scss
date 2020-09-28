@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > ELEMENTS : BUTTON ***********************/
 @import "mixins";
 
@@ -45,18 +45,23 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		}
 		&:focus {
 			background: $button-bg-color;
-			> i, 
+			> i,
 			> [class^="material-icons"] {
 				color: $primary-color;
 			}
 		}
 		&.#{$button-class-active} {
-			color: $main-invert-color;
+			color: $button-text-color;
 			background: $button-bg-active;
 			background-image: $button-bg-hover-image;
 			text-decoration: none;
+			&:focus,
+			&:hover {
+				color: $button-hover-text-color;
+				background: $button-bg-hover;
+			}
 			i, [class^="material-icons"] {
-				color: $main-invert-color;
+				color: $button-text-color;
 				text-shadow: $button-icon-shadow;
 			}
 		}
@@ -73,7 +78,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				&.#{$theme-name} {
 					@include button-types($theme-color);
 				}
-			} 
+			}
 		}
 		// Button Link
 		@include link-button();
@@ -152,6 +157,17 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				@include button-sizes(true);
 			}
 
+			// button styles
+			@if $elements-button-types {
+				@each $theme-name, $theme-color in $button-styles {
+					&.#{$theme-name} > .#{$button-class},
+					&.#{$theme-name} > .#{$dropdown-name} > .#{$button-class} {
+						@include button-types($theme-color);
+						border: $button-border-width solid darken($theme-color, 6%);
+					}
+				}
+			}
+
 			// Button Link
 			@include link-button();
 
@@ -160,14 +176,14 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			@if $elements-button-dropdown {
 				.#{$dropdown-name}:last-child:not(:first-child),
 				.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class} {
-					border-bottom-left-radius: 0; 
+					border-bottom-left-radius: 0;
 					border-top-left-radius: 0;
 					margin-left: -1px;
 				}
 				.#{$dropdown-name}:last-child,
 				.#{$dropdown-name}:last-child > .#{$button-class}:first-child,
 				.#{$dropdown-name}:last-child > .#{$button-class}:last-child {
-					border-bottom-right-radius: $button-border-radius; 
+					border-bottom-right-radius: $button-border-radius;
 					border-top-right-radius: $button-border-radius;
 				}
 				.#{$dropdown-name}:not(:first-child):not(:last-child) > .#{$button-class} {
@@ -216,7 +232,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			.#{$menu-name}:hover {
 				display: block;
 			}
-			// if button groups is enable 
+			// if button groups is enable
 			@if $elements-button-group {
 				.#{$button-class-group} {
 					.#{$dropdown-toggle}:nth-last-child(2) {

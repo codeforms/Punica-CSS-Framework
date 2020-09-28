@@ -1,9 +1,9 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 @mixin button-types(
 	$bg-color: $primary-color,
-	$text-color: $main-invert-color, 
-	$bg-img: none, 
+	$text-color: $main-invert-color,
+	$bg-img: none,
 	$bg-img-hover: none
 ) {
 	background: $bg-color;
@@ -11,7 +11,6 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 	text-shadow: 0 1px 1px darken($bg-color, 6%);
 	background-image: $bg-img;
 	border: none;
-	&:focus,
 	&:hover {
 		background: lighten($bg-color, 7.5%);
 		color: $text-color;
@@ -19,11 +18,11 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 	}
 	&:active,
 	&.#{$button-class-active} {
-		background: $bg-color;
+		background: lighten($bg-color, 7.5%);
 		color: $text-color;
 	}
 	&.#{$button-class-inactive} {
-		border-left-color: darken($bg-color, 6%);
+		background: darken($bg-color, 7.5%);
 	}
 	i, [class^="material-icons"] {
 		color: $text-color;
@@ -36,7 +35,7 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 	background-image: $button-secondary-bg-img;
 	&:focus,
 	&:hover,
-	&:active, 
+	&:active,
 	&.#{$button-class-active} {
 		color: $button-secondary-text-color;
 		background-image: $button-secondary-bg-img-hover;
@@ -77,7 +76,8 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 @mixin button-sizes($class-name: false) {
 	@each $name, $font-size, $padding, $font-weight in $button-sizes {
 		@if $class-name {
-			&.#{$name} > .#{$button-class} {
+			&.#{$name} > .#{$button-class},
+			&.#{$name} > .#{$dropdown-name} > .#{$button-class} {
 				font-size: $font-size;
 				padding: $padding;
 				font-weight: $font-weight;

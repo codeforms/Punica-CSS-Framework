@@ -26,7 +26,7 @@ PUNICA CSS > ELEMENTS : LABEL ************************/
 			}
 		}
 
-		// if badge size is enable
+		// if label size is enable
 		@if ($elements-label-sizes) {
 			// label sizes
 			@each $size, $padding, $font-size in $label-sizes {

@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > COMPONENTS : TABNAV *********************/
 
 @if $components-tabnav {
@@ -23,17 +23,22 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 		    border-radius: 0 !important;
 	        margin-bottom: -$tabnav-border-bottom-width;
 	        line-height: initial;
-	        font-weight: initial;
             font-size: $tabnav-item-button-size;
-            transition: border-bottom-color .15s;
+			font-weight: initial;
+            transition: border-bottom-color, color .2s;
+			color: darken($main-grey-color, 5%);
 			&:hover {
 				color: darken($main-font-color, 8%);
 				border-bottom-color: darken($main-secondary-bg, 16%);
-				transition: border-bottom-color .15s;
+				transition: border-bottom-color, color .2s;
+			}
+			&.#{$button-class-disabled} {
+				opacity: .45;
 			}
 			&.#{$tabnav-active} {
 				color: $primary-color;
 				border-bottom-color: $primary-color;
+				font-weight: 700;
 				i, [class^="material-icons"] {
 					color: initial;
 				}
