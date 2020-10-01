@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > COMPONENTS : PANEL **********************/
 
 // if panel is enable
@@ -60,11 +60,6 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 			min-height: $panel-bottom-min-height;
 			border-top: $panel-bottom-border;
 			padding: $panel-bottom-padding;
-		}
-		&.#{$panel-pure} {
-			border: none;
-			box-shadow: none;
-			background: none;
 		}
 	}
 }

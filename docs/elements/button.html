@@ -116,7 +116,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-13 col-sm-16 col-xs-16">
+			<div class="col-lg-10 col-sm-16 col-xs-16">
 				<div class="container">
 					<div class="row">
 						<div class="col-16">
@@ -156,15 +156,17 @@
 								</div>
 								<div class="content">
 									<div class="button">Default</div>
+									<div class="button active">Active</div>
+									<div class="button disabled">Disabled</div>
+									<div class="button link">Link</div>
+									<div class="button secondary">Secondary</div>
+								</div>
+								<div class="content">
 									<button class="button primary">Primary</button>
 									<a class="button success">Success</a>
 									<div class="button warning">Warning</div>
 									<div class="button error">Error</div>
 									<div class="button dark">Dark</div>
-									<div class="button active">Active</div>
-									<div class="button disabled">Disabled</div>
-									<div class="button link">Link</div>
-									<div class="button secondary">Secondary</div>
 								</div>
 
 								<!-- BUTTON SIZES -->
@@ -176,18 +178,15 @@
 										Add the <code>.mini, .small, .large</code> or <code>.huge</code> class to a button to make it smaller or larger.
 										Also, you can add the <code>.block</code> class for a full-width button.
 									</p>
-								
-									<div class="panel pure">
-										<div class="content bg-grid align center">
-											<a class="button mini mr-5">Mini</a>
-											<a class="button small mr-5">Small</a>
-											<a class="button mr-5">Default</a>
-											<a class="button large mr-5">Large</a>
-											<a class="button huge">Huge</a>
-											<p></p>
-											<a class="button block">Block Button</a>
-										</div>
-									</div>
+								</div>
+								<div class="content">
+									<a class="button mini mr-5">Mini</a>
+									<a class="button small mr-5">Small</a>
+									<a class="button mr-5">Default</a>
+									<a class="button large mr-5">Large</a>
+									<a class="button huge">Huge</a>
+									<p></p>
+									<a class="button block">Block Button</a>
 								</div>
 
 								<!-- BUTTON GROUPS -->
@@ -428,15 +427,11 @@
 										style as secondary.
 									</p>
 								
-									<div class="panel pure">
-										<div class="content bg-grid align center">
-											<button class="button secondary mini mr-10"><span class="material-icons">person</span></button>
-											<button class="button secondary small mr-10"><span class="material-icons">person</span></button>
-											<button class="button secondary mr-10"><span class="material-icons">person</span></button>
-											<button class="button secondary large mr-10"><span class="material-icons">person</span></button>
-											<button class="button secondary huge mr-10"><span class="material-icons">person</span></button>
-										</div>
-									</div>
+									<button class="button secondary mini mr-10"><span class="material-icons">person</span></button>
+									<button class="button secondary small mr-10"><span class="material-icons">person</span></button>
+									<button class="button secondary mr-10"><span class="material-icons">person</span></button>
+									<button class="button secondary large mr-10"><span class="material-icons">person</span></button>
+									<button class="button secondary huge mr-10"><span class="material-icons">person</span></button>
 								
 									<div id="highlighter_946536" class="syntaxhighlighter nogutter  xml">
 										<table border="0" cellpadding="0" cellspacing="0">
@@ -479,42 +474,38 @@
 										</table>
 									</div>
 								
-									<div class="panel pure">
-										<div class="content bg-grid align center">
-											<div class="buttons mini secondary mr-20">
-												<a href="javascript:" class="button active">
-													<span class="material-icons">launch</span>
-												</a>
-												<a href="javascript:" class="button">
-													<span class="material-icons">person</span>
-												</a>
-												<a href="javascript:" class="button">
-													<span class="material-icons">directions_run</span>
-												</a>
-											</div>
-											<div class="buttons small secondary mr-20">
-												<a href="javascript:" class="button">
-													<span class="material-icons">launch</span>
-												</a>
-												<a href="javascript:" class="button active">
-													<span class="material-icons">person</span>
-												</a>
-												<a href="javascript:" class="button">
-													<span class="material-icons">directions_run</span>
-												</a>
-											</div>
-											<div class="buttons secondary mr-20">
-												<a href="javascript:" class="button">
-													<span class="material-icons">launch</span>
-												</a>
-												<a href="javascript:" class="button">
-													<span class="material-icons">person</span>
-												</a>
-												<a href="javascript:" class="button active">
-													<span class="material-icons">directions_run</span>
-												</a>
-											</div>
-										</div>
+									<div class="buttons mini secondary mr-20">
+										<a href="javascript:" class="button active">
+											<span class="material-icons">launch</span>
+										</a>
+										<a href="javascript:" class="button">
+											<span class="material-icons">person</span>
+										</a>
+										<a href="javascript:" class="button">
+											<span class="material-icons">directions_run</span>
+										</a>
+									</div>
+									<div class="buttons small secondary mr-20">
+										<a href="javascript:" class="button">
+											<span class="material-icons">launch</span>
+										</a>
+										<a href="javascript:" class="button active">
+											<span class="material-icons">person</span>
+										</a>
+										<a href="javascript:" class="button">
+											<span class="material-icons">directions_run</span>
+										</a>
+									</div>
+									<div class="buttons secondary mr-20">
+										<a href="javascript:" class="button">
+											<span class="material-icons">launch</span>
+										</a>
+										<a href="javascript:" class="button">
+											<span class="material-icons">person</span>
+										</a>
+										<a href="javascript:" class="button active">
+											<span class="material-icons">directions_run</span>
+										</a>
 									</div>
 								
 									<div id="highlighter_510452" class="syntaxhighlighter nogutter  xml">
@@ -614,7 +605,7 @@
 													</ul>
 												</div>
 											</div>
-											<div class="buttons secondary small ml-20">
+											<div class="buttons small ml-20">
 												<div class="button">Small Dropdown</div>
 												<div class="dropdown right">
 													<a tabindex="0" class="button toggle">
@@ -643,7 +634,9 @@
 													</ul>
 												</div>
 											</div>
-											<div class="buttons mini ml-20">
+										</div>
+										<div class="content">
+											<div class="buttons mini">
 												<div class="dropdown">
 													<a tabindex="0" class="button toggle">
 														<span class="material-icons">keyboard_arrow_down</span>

@@ -6288,12 +6288,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   font-size: .879em;
 }
 
-.menu.pure {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: none;
-}
-
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6673,13 +6667,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   min-height: 50px;
   border-top: 1px solid #c6c6c6;
   padding: 6px;
-}
-
-.panel.pure {
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: none;
 }
 
 .process {
@@ -7077,6 +7064,26 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 
 .tab .button.active i, .tab .button.active [class^="material-icons"], .tab a.button.active i, .tab a.button.active [class^="material-icons"], .tab .dropdown .button.active i, .tab .dropdown .button.active [class^="material-icons"], .tab .dropdown a.button.active i, .tab .dropdown a.button.active [class^="material-icons"] {
   color: initial;
+}
+
+.tab.success .button.active, .tab.success a.button.active, .tab.success .dropdown .button.active, .tab.success .dropdown a.button.active {
+  color: #2ec4b6;
+  border-bottom-color: #2ec4b6;
+}
+
+.tab.warning .button.active, .tab.warning a.button.active, .tab.warning .dropdown .button.active, .tab.warning .dropdown a.button.active {
+  color: #de9e36;
+  border-bottom-color: #de9e36;
+}
+
+.tab.error .button.active, .tab.error a.button.active, .tab.error .dropdown .button.active, .tab.error .dropdown a.button.active {
+  color: #d62828;
+  border-bottom-color: #d62828;
+}
+
+.tab.dark .button.active, .tab.dark a.button.active, .tab.dark .dropdown .button.active, .tab.dark .dropdown a.button.active {
+  color: #414552;
+  border-bottom-color: #414552;
 }
 
 .timeline .activity {
@@ -7975,16 +7982,22 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   direction: rtl;
 }
 
-.transparent {
-  background-color: transparent !important;
-  background: transparent !important;
-}
-
 .truncate {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.transparent {
+  background: transparent !important;
+}
+
+.pure, .pure > div {
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .borderless {

@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > COMPONENTS : MENU ***********************/
 
 // if menu is enable
@@ -80,9 +80,9 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 		&.#{$menu-small} > .#{$menu-item} a {
 			font-size: $menu-small-font-size;
 		}
-		&.#{$menu-pure} {
+		/*&.#{$menu-pure} {
 			box-shadow: none;
 			background: none;
-		}
+		}*/
 	}
 }

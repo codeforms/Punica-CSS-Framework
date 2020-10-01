@@ -44,5 +44,22 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 				}
 			}
 		}
+		// if tabnav style is enable
+		@if $components-tabnav-types {
+			// badge types
+			@each $type-name, $bg-color in $tabnav-types {
+				&.#{$type-name} {
+					.#{$button-class},
+					a.#{$button-class},
+					.#{$dropdown-name} .#{$button-class},
+					.#{$dropdown-name} a.#{$button-class} {
+						&.#{$tabnav-active} {
+							color: $bg-color;
+							border-bottom-color: $bg-color;
+						}
+					}
+				}
+			}
+		}
 	}
 }
