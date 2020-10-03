@@ -5543,6 +5543,12 @@ a.label.error, .label.error {
   border-color: #b82222;
 }
 
+a.label.dark, .label.dark {
+  background: #414552;
+  color: #fff;
+  border-color: #31343e;
+}
+
 a.label.small, .label.small {
   padding: 0.18rem 0.85rem;
   font-size: .8195em;
@@ -5614,6 +5620,16 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   color: #fff;
 }
 
+.alert.dark {
+  background: #414552;
+  border-color: #414552;
+  color: #fff;
+}
+
+.alert.dark a {
+  color: #fff;
+}
+
 .alert a {
   color: #0a8fff;
   text-decoration: underline;
@@ -5676,6 +5692,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   border: none;
 }
 
+.badge.dark {
+  background: #414552;
+  color: #fff;
+  border: none;
+}
+
 .badge.small {
   padding: 1px 6px;
   font-size: .859em;
@@ -5728,6 +5750,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 .billboard.error {
   background-color: #d62828;
   border-color: #c32424;
+  color: #fff;
+}
+
+.billboard.dark {
+  background-color: #414552;
+  border-color: #373a45;
   color: #fff;
 }
 
@@ -6836,6 +6864,30 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   background: #c6c6c6;
 }
 
+.process.dark .item:not(:first-child)::before {
+  background: #414552;
+}
+
+.process.dark .item a {
+  padding: 10px;
+}
+
+.process.dark .item a::before {
+  background: #414552;
+}
+
+.process.dark .item.active a {
+  color: #414552;
+}
+
+.process.dark .item.active a::after {
+  color: #414552;
+}
+
+.process.dark .item.active ~ .item::before {
+  background: #c6c6c6;
+}
+
 .process.vertical {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7011,6 +7063,10 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   background: #d62828;
 }
 
+.progress.dark::-webkit-progress-value {
+  background: #414552;
+}
+
 .tab {
   position: relative;
   display: -webkit-box;
@@ -7165,6 +7221,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   background-color: #d62828;
   color: #fff;
   border-color: #c12424;
+}
+
+.timeline .activity .type.dark {
+  background-color: #414552;
+  color: #fff;
+  border-color: #363944;
 }
 
 .timeline .activity .author, .timeline .activity .body, .timeline .activity .date, .timeline .activity .actions, .timeline .activity .media {
