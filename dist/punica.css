@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap);*, *:after, *:before {
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&display=swap);*, *:after, *:before {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -4252,7 +4252,7 @@ a.button, .button {
   display: inline-flex;
   font-family: "Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
   outline: none;
@@ -4500,25 +4500,25 @@ a.button.link.invert .button, a.button.link.invert i, a.button.link.invert [clas
 a.button.mini, .button.mini {
   font-size: .909em;
   padding: 0.445rem 0.9rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 a.button.small, .button.small {
   font-size: .979em;
   padding: 0.645rem 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 a.button.large, .button.large {
   font-size: 1.25em;
   padding: 1.15rem 2.1rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 a.button.huge, .button.huge {
   font-size: 1.45em;
   padding: 1.3rem 2.4rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 a.button.block, .button.block {
@@ -4640,25 +4640,25 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 .buttons.mini > .button, .buttons.mini > .dropdown > .button {
   font-size: .909em;
   padding: 0.445rem 0.9rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .buttons.small > .button, .buttons.small > .dropdown > .button {
   font-size: .979em;
   padding: 0.645rem 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .buttons.large > .button, .buttons.large > .dropdown > .button {
   font-size: 1.25em;
   padding: 1.15rem 2.1rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .buttons.huge > .button, .buttons.huge > .dropdown > .button {
   font-size: 1.45em;
   padding: 1.3rem 2.4rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .buttons.primary > .button, .buttons.primary > .dropdown > .button {
@@ -4906,25 +4906,25 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 .dropdown.mini > .button, .dropdown.mini > .dropdown > .button {
   font-size: .909em;
   padding: 0.445rem 0.9rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .dropdown.small > .button, .dropdown.small > .dropdown > .button {
   font-size: .979em;
   padding: 0.645rem 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .dropdown.large > .button, .dropdown.large > .dropdown > .button {
   font-size: 1.25em;
   padding: 1.15rem 2.1rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .dropdown.huge > .button, .dropdown.huge > .dropdown > .button {
   font-size: 1.45em;
   padding: 1.3rem 2.4rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='week'], input[type='file'], input:not([type]), textarea, select {
@@ -5073,7 +5073,7 @@ input:disabled {
   height: 2.5rem;
   font-size: 1em;
   padding: 0.935rem 1.6rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .form .group > .button:first-child, .form .item > .group > .button:first-child {
