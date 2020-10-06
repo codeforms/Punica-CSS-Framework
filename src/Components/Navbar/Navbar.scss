@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > COMPONENTS : NAVBAR *********************/
 @import "mixins";
 
@@ -103,6 +103,8 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 		.#{$button-class},
 		.#{$dropdown-name} .#{$button-class} {
 			font-size: $navbar-font-size;
+			padding: .935rem 1.4rem;
+			font-weight: 700;
 		}
 		// navbar themes
 		@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color in $navbar-themes {

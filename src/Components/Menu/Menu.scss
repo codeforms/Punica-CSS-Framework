@@ -66,16 +66,11 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 			}
 		}
 		.#{$menu-badge} {
-			align-items: center;
-			display: flex;
-			height: 100%;
 			position: absolute;
 			right: 0;
-			top: 0;
-			background: none;
-			color: $menu-item-color;
-			font-weight: 400;
-    		font-size: .9em;
+			top: 4px;
+			padding: 0 4px;
+			font-size: .93em;
 		}
 		&.#{$menu-small} > .#{$menu-item} a {
 			font-size: $menu-small-font-size;

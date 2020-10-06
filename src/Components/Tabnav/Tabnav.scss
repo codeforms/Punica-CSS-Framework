@@ -27,6 +27,7 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 			font-weight: initial;
             transition: border-bottom-color, color .2s;
 			color: darken($main-grey-color, 5%);
+			padding: .935rem 1.4rem;
 			&:hover {
 				color: darken($main-font-color, 8%);
 				border-bottom-color: darken($main-secondary-bg, 16%);
