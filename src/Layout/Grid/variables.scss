@@ -1,7 +1,7 @@
-/****************************************************************** 
+/******************************************************************
 PUNICA CSS > LAYOUT : GRID > VARIABLES ****************************/
 
-/***************************************************** 
+/*****************************************************
 ENABLE / DISABLE FEATURES ****************************/
 $equal-feature 				: $layout-grid-equal;
 $offset-feature 			: $layout-grid-offset;
@@ -20,10 +20,12 @@ $medium 					: 'md';
 $large 						: 'lg';
 $extra-large 				: 'xl';
 
-/***************************************************** 
+/*****************************************************
 PREFERENCES ******************************************/
 $grid 						: 16;
 $gutter						: 6px;
+$container-width 			: 100%;
+$container-padding			: 40px;
 /* Column */
 $column-padding				: .3rem;
 $column-min-height			: .125rem;
@@ -36,8 +38,8 @@ $breakpoints-extra-large	: 1260px;
 /* Viewports */
 $viewports					: (
 	($extra-small, $breakpoints-extra-small),
-	($small, $breakpoints-small), 
-	($medium, $breakpoints-medium), 
-	($large, $breakpoints-large), 
+	($small, $breakpoints-small),
+	($medium, $breakpoints-medium),
+	($large, $breakpoints-large),
 	($extra-large, $breakpoints-extra-large)
 );

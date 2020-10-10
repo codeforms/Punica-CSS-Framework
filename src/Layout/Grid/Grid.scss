@@ -1,25 +1,26 @@
 /******************************************************************
 PUNICA CSS > LAYOUT : GRID ****************************************/
-@import "variables";
 
 // if grid is enable
 @if $layout-grid {
 	.#{$container} {
-		width: 95%;
+		width: $container-width;
 		margin: 0 auto;
+		padding-left: $container-padding;
+		padding-right: $container-padding;
 	}
 	.#{$row} {
 		display: grid;
 		grid-gap: $gutter;
 		grid-template-columns: repeat($grid, 1fr);
-		&> [class^="#{$column}"] { 
+		&> [class^="#{$column}"] {
 			height: fit-content;
 			padding: $column-padding;
-			min-height: $column-min-height;	
+			min-height: $column-min-height;
 		}
 		@if $equal-feature {
-			&.#{$equal} > [class^="#{$column}"] { 
-				height: auto;	
+			&.#{$equal} > [class^="#{$column}"] {
+				height: auto;
 			}
 		}
 	}
@@ -39,5 +40,5 @@ PUNICA CSS > LAYOUT : GRID ****************************************/
 				}
 			}
 		}
-	}	
+	}
 }

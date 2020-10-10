@@ -1,17 +1,17 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS
 https://github.com/codeforms/Punica-CSS-Framework
-****************************************************** 
+******************************************************
 DEFAULT SETUP PREFERENCES
 ******************************************************/
 
-/***************************************************** 
+/*****************************************************
 LAYOUT ***********************************************/
 $layout-grid 						: true;
 /**/$layout-grid-equal				: true;
 /**/$layout-grid-offset				: true;
 
-/***************************************************** 
+/*****************************************************
 COMPONENTS *******************************************/
 $components-alert 					: true;
 /**/$components-alert-types			: true;
@@ -33,7 +33,7 @@ $components-tabnav					: true;
 $components-timeline				: true;
 $components-tooltip					: true;
 
-/***************************************************** 
+/*****************************************************
 ELEMENTS *********************************************/
 $elements-button					: true;
 /**/$elements-button-group			: true;
@@ -50,10 +50,11 @@ $elements-label						: true;
 /**/$elements-label-types			: true;
 /**/$elements-label-sizes			: true;
 
-/***************************************************** 
+/*****************************************************
 LAUNCHER *********************************************/
 @import "_global/variables";
 @import "_global/mixins";
+@import "Layout/variables";
 @import "Components/variables";
 @import "Elements/variables";
 @import "Utilities/variables";

@@ -25,6 +25,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 			justify-content: center;
 			min-height: 100%;
 			align-items: center;
+			margin-right: 1rem;
 			img {
 				max-height: $navbar-min-height - 20px;
 				padding: ($navbar-min-height / 10);

@@ -104,6 +104,7 @@ Others ***********************************************/
 }
 .transparent {background: transparent !important;}
 .pure, .pure > div {background: transparent; border: none; box-shadow: none}
+.bordered {border: $main-border-width $main-border-style $main-border-color !important;}
 .borderless {border: none !important;}
 .rounded {border-radius: $main-border-radius;}
 .radiusless {border-radius:0 !important;}

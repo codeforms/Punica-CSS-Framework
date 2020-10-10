@@ -23,26 +23,6 @@ $dropdown-toggle			: 'toggle';
 $menu-secondary				: 'secondary';
 
 /*****************************************************
-SIZES ************************************************/
-// name, font-size, padding, font-weight
-$button-sizes: (
-    ("mini", .909em, .445rem .9rem, 600),
-    ("small", .979em, .645rem 1.4rem, 600),
-    ("large", 1.25em, 1.15rem 2.1rem, 600),
-    ("huge", 1.45em, 1.3rem 2.4rem, 600)
-);
-/*****************************************************
-STYLES ***********************************************/
-// name, bg color, text color, bg image, bg img hover
-$button-styles: (
-	('primary', $primary-color),
-	('success', $success-color),
-	('warning', $warning-color),
-	('error', $error-color),
-	('dark', $main-dark-color)
-);
-
-/*****************************************************
 PREFERENCES ******************************************/
 /* Text & Font Size */
 $button-font-family			: $main-font-family;
@@ -78,3 +58,23 @@ $button-secondary-text-color	: $main-font-color;
 $button-secondary-hover-color	: $main-font-color;
 $button-secondary-bg-img		: linear-gradient(to bottom, #ffffff 0%,#ededed 60%,#e6e6e6 100%);
 $button-secondary-bg-img-hover	: linear-gradient(to bottom, #e1e1e1 0%,#e1e1e1 11%,#e8e8e8 22%,#eeeeee 43%,#fafafa 100%);
+
+/*****************************************************
+SIZES ************************************************/
+// name, font-size, padding, font-weight
+$button-sizes: (
+		("mini", .909em, .445rem .9rem, $button-font-weight),
+		("small", .979em, .645rem 1.4rem, $button-font-weight),
+		("large", 1.25em, 1.15rem 2.1rem, $button-font-weight),
+		("huge", 1.45em, 1.3rem 2.4rem, $button-font-weight)
+);
+/*****************************************************
+STYLES ***********************************************/
+// name, bg color, text color, bg image, bg img hover
+$button-styles: (
+		('primary', $primary-color),
+		('success', $success-color),
+		('warning', $warning-color),
+		('error', $error-color),
+		('dark', $main-dark-color)
+);
