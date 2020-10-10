@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > ELEMENTS : FORM *************************/
 @import "mixins";
 
@@ -28,11 +28,11 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 	select {
 		padding-right: 3.0rem;
 		text-indent: 5px;
-		background-image: 
+		background-image:
 		url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=");
 		background-repeat: no-repeat;
 		background-position: right 10px center;
-		&[multiple] { 
+		&[multiple] {
 			background: none;
 			height: auto;
 		}
@@ -78,10 +78,10 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			align-items: flex-start;
 			@at-root .#{$form-name} label,
 			&>label {
-				margin: 0 0 .15rem 0;
+				margin: $form-label-margin;
 				color: $form-label-color;
 				font-size: $form-label-size;
-				font-weight: 600;
+				font-weight: $form-label-weight;
 				text-transform: none;
 				width: 100%;
 				height: fit-content;

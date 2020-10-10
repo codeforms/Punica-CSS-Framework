@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > ELEMENTS : FORM > VARIABLES *************/
 
 /*****************************************************
@@ -21,22 +21,25 @@ $form-input-padding				: .4rem .5rem;
 $form-input-size				: 1.088em;
 $form-outline-width				: 2px;
 $form-outline-color				: $main-dark-color;
-$form-label-color				: black;
-$form-label-size				: 1.1129em;
 $form-radio-checkbox-size		: 20px;
 $form-items-spacer				: 6px 0 .75em;
 $form-item-spacer				: 6px 6px .75em;
+/* Label */
+$form-label-color				: black;
+$form-label-size				: 1.1129em;
+$form-label-weight				: 700;
+$form-label-margin				: 0 0 .15rem 0;
 
 /*****************************************************
 SIZES ************************************************/
 // name, font-size, input height, button padding[*], button font size[*]
-// [*] referenced from button variables 
+// [*] referenced from button variables
 $form-input-sizes: (
-	('small', 1em, 1.9rem, .645rem 1.2rem, .859em),
-	('large', 1.2em, 2.9rem, 1.15rem 1.9rem, 1em)
+	('small', 1em, 1.9rem, .645rem 1.4rem, .979em),
+	('large', 1.2em, 2.9rem, 1.15rem 2.1rem, 1.25em)
 );
 
-/***************************************************** 
+/*****************************************************
 PREFERENCES ******************************************/
 /* Checkbox & Radio */
 $form-icon-font-family			: 'Material Icons';

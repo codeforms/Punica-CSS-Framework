@@ -5031,10 +5031,10 @@ input:disabled {
 }
 
 .form label, .form .item > label {
-  margin: 0 0 .15rem 0;
+  margin: 0 0 0.15rem 0;
   color: #000;
   font-size: 1.1129em;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: none;
   width: 100%;
   height: -webkit-fit-content;
@@ -5198,8 +5198,8 @@ input:disabled {
 
 .form.small .button {
   height: 1.9rem !important;
-  font-size: .859em !important;
-  padding: 0.645rem 1.2rem !important;
+  font-size: .979em !important;
+  padding: 0.645rem 1.4rem !important;
 }
 
 .form.small label, .form.small > .items > .item > label, .form.small > .item > label {
@@ -5213,8 +5213,8 @@ input:disabled {
 
 .form.large .button {
   height: 2.9rem !important;
-  font-size: 1em !important;
-  padding: 1.15rem 1.9rem !important;
+  font-size: 1.25em !important;
+  padding: 1.15rem 2.1rem !important;
 }
 
 .form.large label, .form.large > .items > .item > label, .form.large > .item > label {
