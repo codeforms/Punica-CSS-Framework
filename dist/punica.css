@@ -153,6 +153,13 @@ iframe {
   height: auto;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 13.33333px;
+    padding-right: 13.33333px;
+  }
+}
+
 @media only screen and (min-width: 0) {
   .col-1, .col-xs-1 {
     grid-column: span 1;
@@ -6507,11 +6514,11 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   .navbar-spacer {
     margin-top: 0;
   }
+  .navbar .container {
+    padding: 0;
+  }
   .navbar.fixed {
     position: relative;
-  }
-  .navbar .brand {
-    padding: 0 10px;
   }
   .navbar section.links {
     position: absolute;
@@ -6524,6 +6531,8 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
     overflow-y: hidden;
     background: #e6e6e6;
     z-index: 1;
+    margin: 0 !important;
+    padding: 0 !important;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   }

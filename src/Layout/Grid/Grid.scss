@@ -24,6 +24,12 @@ PUNICA CSS > LAYOUT : GRID ****************************************/
 			}
 		}
 	}
+	@include breakpoints($breakpoints-medium, 'max-width') {
+		.#{$container} {
+			padding-left: $container-padding / 3;
+			padding-right: $container-padding / 3;
+		}
+	}
 	@each $label, $breakpoint in $viewports {
 		@include breakpoints($breakpoint) {
 			@for $id from 1 through $grid {

@@ -123,11 +123,11 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 			margin-top: 0;
 		}
 		.#{$navbar-name} {
+			.#{$container} {
+				padding: 0;
+			}
 			&.#{$navbar-fixed} {
 				position: relative;
-			}
-			.#{$navbar-brand} {
-				padding: 0 10px;
 			}
 			section.#{$navbar-links} {
 				position: absolute;
@@ -140,6 +140,8 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				overflow-y: hidden;
 				background: $main-secondary-bg;
 				z-index: 1;
+				margin: 0 !important;
+				padding: 0 !important;
 				@include shadow();
 				.#{$navbar-section},
 				.#{$navbar-section} .#{$button-class-group},
