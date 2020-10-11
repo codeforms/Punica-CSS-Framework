@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > COMPONENTS : CARD ***********************/
 
 // if card is enable
@@ -20,10 +20,10 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		background: $card-bg;
 		border: $main-border-width $main-border-style $main-border-color;
 		border-radius: $main-border-radius;
-		@include shadow()
+		@include shadow();
 		display: flex;
 		flex-direction: column;
-		width: calc(33% - (2 * #{$card-margin}));
+		width: $card-default-width; // for only a single card
 		height: 100%;
 		overflow: hidden;
 		>.#{$card-body} .#{$card-title},
@@ -79,7 +79,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		.#{$card-name},
 		.#{$cards-name} > .#{$card-name} {
 			flex: 0 0 100% !important;
-			width: 100%; // for single card
+			width: 100%; // for only a single card
 		}
 		@if $components-card-horizontal {
 			.#{$card-name}.#{$card-horizontal} {

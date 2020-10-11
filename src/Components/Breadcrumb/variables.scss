@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > COMPONENTS : BREADCRUMB > VARIABLES *****/
 
 /*****************************************************
@@ -12,18 +12,19 @@ SIZES ************************************************/
 // name, font-size, seperator-padding, seperator-size
 $breadcrumb-sizes               : (
     ('small', .9589em, .15em, 1.25rem),
-    ('large', 1.1rem, .45em, 1.8rem)
+    ('large', 1.18em, .18em, 1.7rem)
 );
 
-/***************************************************** 
+/*****************************************************
 PREFERENCES ******************************************/
+$breadcrumb-active-color		: darken($primary-color, 8%);
 /* Seperator */
 $breadcrumb-seperator			: 'keyboard_arrow_right'; // [1]
-$breadcrumb-seperator-color		: black;
-$breadcrumb-seperator-padding	: 0 .25em;
+$breadcrumb-seperator-color		: $breadcrumb-active-color;
+$breadcrumb-seperator-padding	: 0 .25em; // default padding
 $breadcrumb-seperator-vertical	: middle;
-$breadcrumb-seperator-size		: 1.4rem;
-/* 
+$breadcrumb-seperator-size		: 1.4rem; // default size
+/*
 REFERENCES ******************************************
 [1] https://material.io/resources/icons/
 *****************************************************/

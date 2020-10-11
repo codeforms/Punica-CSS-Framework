@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 
 // if breadcrumb is enable
@@ -10,15 +10,11 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 		.#{$breadcrumb-item} {
 			text-decoration: none;
 			font-size: inherit;
-			color: $primary-color;
 			&:focus,
 			&:hover,
 			&:active,
 			&.active {
-				color: darken($primary-color, 8%);
-			}
-			&:visited {
-				color: $primary-color;
+				color: $breadcrumb-active-color;
 			}
 			&::after {
 				font-family: 'Material Icons';
@@ -32,7 +28,7 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 				margin-left: 0;
 			}
 			&.#{$breadcrumb-active} {
-				color: $main-font-color;
+				color: $breadcrumb-active-color;
 				font-weight: bold;
 				&::after {
 					content: none;

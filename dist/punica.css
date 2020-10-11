@@ -5867,21 +5867,16 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 .breadcrumb a.item, .breadcrumb .item {
   text-decoration: none;
   font-size: inherit;
-  color: #0a8fff;
 }
 
 .breadcrumb a.item:focus, .breadcrumb a.item:hover, .breadcrumb a.item:active, .breadcrumb a.item.active, .breadcrumb .item:focus, .breadcrumb .item:hover, .breadcrumb .item:active, .breadcrumb .item.active {
   color: #007ae0;
 }
 
-.breadcrumb a.item:visited, .breadcrumb .item:visited {
-  color: #0a8fff;
-}
-
 .breadcrumb a.item::after, .breadcrumb .item::after {
   font-family: 'Material Icons';
   content: "keyboard_arrow_right";
-  color: #000;
+  color: #007ae0;
   padding: 0 0.25em;
   vertical-align: middle;
   font-size: 1.4rem;
@@ -5892,7 +5887,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .breadcrumb a.item.active, .breadcrumb .item.active {
-  color: #3f4143;
+  color: #007ae0;
   font-weight: bold;
 }
 
@@ -5910,12 +5905,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .breadcrumb.large .item {
-  font-size: 1.1rem;
+  font-size: 1.18em;
 }
 
 .breadcrumb.large .item::after {
-  padding: .45em;
-  font-size: 1.8rem;
+  padding: .18em;
+  font-size: 1.7rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -6077,7 +6072,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: calc(33% - (2 * 10px));
+  width: 240px;
   height: 100%;
   overflow: hidden;
 }
