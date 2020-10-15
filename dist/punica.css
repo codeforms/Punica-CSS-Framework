@@ -4876,6 +4876,10 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
   top: 100%;
 }
 
+.dropdown .menu .item > a {
+  padding: 0.1rem .9rem;
+}
+
 .dropdown.right .menu {
   left: auto;
   right: 0;
@@ -6228,6 +6232,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   border-radius: 0;
   list-style: none;
   margin: 0;
+  width: 100%;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
@@ -6247,8 +6252,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .menu .item {
-  margin-top: 0;
-  padding: 0.1rem .9rem;
+  padding: 0;
   position: relative;
   text-decoration: none;
   text-align: left;
@@ -6257,8 +6261,8 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 .menu .item > a {
   color: #606265;
   display: block;
-  margin: 0 -.9rem;
-  padding: 0.1rem .9rem;
+  width: 100%;
+  padding: 0.28rem .9rem;
   text-decoration: none;
   font-size: 1em;
   -webkit-transition: background .15s, color .15s;
@@ -6284,15 +6288,11 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   font-weight: inherit;
 }
 
-.menu .item + .item {
-  margin-top: .2rem;
-}
-
 .menu .item i, .menu .item span.material-icons {
   color: #77878b;
   font-size: 1.2rem;
   margin-right: 10px;
-  vertical-align: sub;
+  vertical-align: text-bottom;
 }
 
 .menu .item .menu {
@@ -6309,6 +6309,14 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 
 .menu.small > .item a {
   font-size: .879em;
+}
+
+.menu.divided .item {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.menu.divided .item:last-child {
+  border-bottom: none;
 }
 
 .navbar {
@@ -6677,10 +6685,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.panel .content p {
-  font-size: 1.3249em;
 }
 
 .panel .content .headline, .panel .content p.headline {
@@ -7847,55 +7851,55 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .display-inline {
-  display: inline;
+  display: inline !important;
 }
 
 .display-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .display-inline-flex {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
 }
 
 .display-grid {
-  display: grid;
+  display: grid !important;
 }
 
 .display-inline-grid {
-  display: inline-grid;
+  display: inline-grid !important;
 }
 
 .display-block {
-  display: block;
+  display: block !important;
 }
 
 .display-inline-block {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .display-table {
-  display: table;
+  display: table !important;
 }
 
 .display-inline-table {
-  display: inline-table;
+  display: inline-table !important;
 }
 
 .display-table-row {
-  display: table-row;
+  display: table-row !important;
 }
 
 .display-table-column {
-  display: table-column;
+  display: table-column !important;
 }
 
 .display-table-cell {
-  display: table-cell;
+  display: table-cell !important;
 }
 
 .align-items-baseline {
@@ -7928,27 +7932,27 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
           align-items: stretch;
 }
 
-.align-items-baseline {
+.align-self-baseline {
   -ms-flex-item-align: baseline;
       align-self: baseline;
 }
 
-.align-items-flex-start {
+.align-self-flex-start {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-.align-items-flex-end {
+.align-self-flex-end {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-.align-items-center {
+.align-self-center {
   -ms-flex-item-align: center;
       align-self: center;
 }
 
-.align-items-stretch {
+.align-self-stretch {
   -ms-flex-item-align: stretch;
       align-self: stretch;
 }

@@ -8,6 +8,7 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 		border-radius: $menu-border-radius;
 		list-style: none;
 		margin: 0;
+		width: 100%;
 		min-width: $menu-min-width;
 		padding: $menu-padding;
 		@include shadow(0, 7px, 10px, rgba(0, 0, 0, 0.15));
@@ -21,15 +22,14 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 			letter-spacing: $menu-title-spacing;
 		}
 		.#{$menu-item} {
-			margin-top: 0;
-			padding: $menu-item-padding;
+			padding: 0;
 			position: relative;
 			text-decoration: none;
 		    text-align: left;
 			& > a {
 				color: $menu-item-color;
 				display: block;
-				margin: 0 (-$menu-padding);
+				width: 100%;
 				padding: $menu-item-padding;
 				text-decoration: none;
 				font-size: $menu-font-size;
@@ -52,7 +52,8 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 				}
 			}
 			& + .#{$menu-item} {
-				margin-top: .2rem;
+				//margin-top: .2rem;
+				//margin-bottom: .3rem;
 			}
 			i,
 			span.material-icons {
@@ -75,9 +76,13 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 		&.#{$menu-small} > .#{$menu-item} a {
 			font-size: $menu-small-font-size;
 		}
-		/*&.#{$menu-pure} {
-			box-shadow: none;
-			background: none;
-		}*/
+		&.#{$menu-divided} {
+			.#{$menu-item} {
+				border-bottom: $main-border-width $main-border-style $menu-divided-color;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
 	}
 }

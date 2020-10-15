@@ -211,6 +211,11 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				overflow-y: auto;
 				position: absolute;
 				top: 100%;
+				.#{$menu-item} {
+					& > a {
+						padding: .1rem $menu-padding;
+					}
+				}
 			}
 			&.#{$dropdown-right} {
 				.#{$menu-name} {

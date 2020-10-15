@@ -44,9 +44,6 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 				width: 100%;
 				@include embedded-media();
 			}
-			p {
-				font-size: $panel-content-p-size;
-			}
 			.#{$panel-headline},
 			p.#{$panel-headline} {
 				font-size: $panel-headline-font-size;

@@ -10,6 +10,7 @@ $menu-item 					: 'item';
 $menu-item-active			: 'active';
 $menu-badge					: 'badge';
 $menu-secondary				: 'secondary';
+$menu-divided				: 'divided';
 
 /*****************************************************
 PREFERENCES ******************************************/
@@ -21,6 +22,7 @@ $menu-min-width				: max-content;
 $menu-padding 				: .9rem;
 $menu-padding-nested		: .4rem;
 $menu-z-index				: 300;
+$menu-divided-color			: $main-secondary-bg;
 /* Title */
 $menu-title-font-size		: 1.25em;
 $menu-title-min-height		: 2rem;
@@ -29,13 +31,11 @@ $menu-title-font-weight		: 300;
 $menu-title-padding			: .6rem 0;
 $menu-title-spacing			: -.015rem;
 /* Menu Item */
-$menu-item-margin-top		: 0;
-$menu-item-padding			: .1rem $menu-padding;
-$menu-small-item-padding	: .1rem $menu-padding;
+$menu-item-padding			: .28rem $menu-padding;
 $menu-item-color			: #606265;
 $menu-item-hover-bg			: darken($menu-bg, 6%);
 /* Menu Item Icon */
 $menu-item-icon-color		: $main-grey-color;
 $menu-item-icon-size		: 1.2rem;
 $menu-item-icon-mr			: 10px; // margin-right
-$menu-item-icon-va			: sub; // vertical-align
+$menu-item-icon-va			: text-bottom; // vertical-align

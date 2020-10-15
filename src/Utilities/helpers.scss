@@ -43,9 +43,9 @@ Cursors **********************************************/
 
 /*****************************************************
 Display Properties ***********************************/
-@include setHelperList($display-properties, "display-", true);
+@include setHelperList($display-properties, "display-", true, "!important");
 @include setHelperList($align-items, "align-items-", true);
-@include setHelperList($align-self, "align-items-", true);
+@include setHelperList($align-self, "align-self-", true);
 
 /*****************************************************
 Filters **********************************************/
