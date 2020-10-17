@@ -56,14 +56,15 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 				align-items: center;
 				margin-bottom: 15px;
 				>.#{$card-media} {
-					flex-flow: row nowrap;
-					flex-shrink: unset;
-					flex: 0 0 auto;
+					display: flex;
+					align-self: normal;
 					img	{
-						flex-shrink: 0;
+						width: auto;
+						object-fit: cover
 					}
 				}
 				>.#{$card-body} {
+					flex: inherit;
 					.#{$card-title},
 					.#{$card-description} {
 						padding: calc(#{$card-padding} / 2) $card-padding;
@@ -80,13 +81,11 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		.#{$cards-name} > .#{$card-name} {
 			flex: 0 0 100% !important;
 			width: 100%; // for only a single card
+			height: fit-content !important;
 		}
 		@if $components-card-horizontal {
 			.#{$card-name}.#{$card-horizontal} {
 				flex-direction: column;
-				&>.#{$card-media} img	{
-					width: fit-content;
-				}
 			}
 		}
 	}
