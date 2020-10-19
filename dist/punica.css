@@ -4954,6 +4954,7 @@ input[type='color'], input[type='date'], input[type='datetime'], input[type='dat
   outline-offset: -2px;
   padding: 0.4rem 0.5rem;
   width: 100%;
+  max-width: 100%;
   font-family: inherit;
   color: #414552;
   font-size: 1.088em;
@@ -6186,10 +6187,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   transition: .15s;
 }
 
-.list > .item > img {
-  width: 70px;
-}
-
 .list > .item > img, .list > .item > .material-icons, .list > .item > i {
   margin-right: 1rem;
 }
@@ -6202,10 +6199,21 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   text-align: left;
 }
 
-.list > .item > .body > .title {
+.list > .item > .body > .title, .list > .item > .body > .subtitle {
   display: block;
+}
+
+.list > .item > .body > .title {
   font-size: 1.28rem;
   font-weight: 900;
+  line-height: 1;
+}
+
+.list > .item > .body > .subtitle {
+  font-size: .889em;
+  font-weight: 400;
+  color: #77878b;
+  margin-bottom: 7px;
 }
 
 .list > .item > .actions {
@@ -6218,6 +6226,10 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   border-bottom: 1px solid #c6c6c6;
 }
 
+.list.divided > .item:last-child {
+  border-bottom: none;
+}
+
 .list.striped > .item:nth-of-type(odd) {
   background: #f0f0f0;
 }
@@ -6226,6 +6238,15 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   background: #f0f0f0;
   -webkit-transition: .15s;
   transition: .15s;
+}
+
+@media only screen and (max-width: 768px) {
+  .list > .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .menu {
@@ -7670,39 +7691,39 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 }
 
 .fw-100 {
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 
 .fw-200 {
-  font-weight: 200;
+  font-weight: 200 !important;
 }
 
 .fw-300 {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 
 .fw-400 {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .fw-500 {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .fw-600 {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .fw-700 {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .fw-800 {
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 
 .fw-900 {
-  font-weight: 900;
+  font-weight: 900 !important;
 }
 
 .mini-text {

@@ -1,4 +1,4 @@
-/***************************************************** 
+/*****************************************************
 PUNICA CSS > COMPONENTS : LIST ***********************/
 
 // if list is enable
@@ -12,9 +12,6 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 		    padding: $list-item-padding;
 		    margin: 0;
 		    transition: .15s;
-		    >img {
-			    width: $list-media-width;
-		    }
 		    >img,
 		    >.material-icons,
 		    >i {
@@ -24,11 +21,21 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 		    	flex: 1;
 		    	line-height: $list-body-line-height;
 		    	text-align: left;
+		    	>.#{$list-title},
+		    	>.#{$list-subtitle} {
+					display: block;
+				}
 		    	>.#{$list-title} {
-		    		display: block;
 		    		font-size: $list-title-size;
     				font-weight: $main-title-weight;
+					line-height: 1;
 		    	}
+				>.#{$list-subtitle} {
+					font-size: $list-subtitle-size;
+					font-weight: 400;
+					color: $main-grey-color;
+					margin-bottom: 7px;
+				}
 		    }
 		    >.#{$list-actions} {
 	    		margin-left: auto;
@@ -39,6 +46,9 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 		&.#{$list-bordered} {
 			>.#{$list-item} {
 				border-bottom: $main-border-width $main-border-style $main-border-color;
+				&:last-child {
+					border-bottom: none;
+				}
 			}
 		}
 		&.#{$list-striped} {
@@ -54,6 +64,13 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 					background: $main-hovered-bg;
 					transition: .15s;
 				}
+			}
+		}
+	}
+	@include breakpoints($breakpoints-medium, 'max-width') {
+		.#{$list-name} {
+			>.#{$list-item} {
+				flex-direction: column;
 			}
 		}
 	}

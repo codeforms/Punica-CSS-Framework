@@ -16,6 +16,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 		outline-offset: -$form-outline-width;
 		padding: $form-input-padding;
 		width: 100%;
+		max-width: 100%;
 		font-family: inherit;
 		color: $form-input-color;
 		font-size: $form-input-size;

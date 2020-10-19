@@ -10,7 +10,7 @@ Padding & Margin Helpers *****************************/
 
 /*****************************************************
 Font Weights *****************************************/
-@include setHelperListWithRange($font-weights, $helper-fw-ranges);
+@include setHelperListWithRange($font-weights, $helper-fw-ranges, null, "!important");
 
 /*****************************************************
 Font Sizes *******************************************/
