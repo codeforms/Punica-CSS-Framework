@@ -8,10 +8,12 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable (even cla
 
 [Documentation](https://codeforms.github.io/Punica-CSS-Framework/) | [Changelogs](https://github.com/codeforms/Punica-CSS-Framework/releases)
 
+---
+
 ### Install From CDN
 If you want to quickly add Punica to your project, you can use the JsDelivr CDN;
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework/dist/punica.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.4.495/dist/punica.min.css" crossorigin="anonymous">
 ```
 
 ### HTML Markup
