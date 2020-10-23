@@ -149,9 +149,6 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				cursor: default;
 				background-image: none !important;
 			}
-			// Button Force
-			@include button-force();
-
 			// Button Sizes for groups
 			@if $elements-button-sizes {
 				@include button-sizes(true);
@@ -246,8 +243,6 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					}
 				}
 			}
-			// Button Force
-			@include button-force();
 			// Button Sizes for dropdown
 			@if $elements-button-sizes {
 				@include button-sizes(true);

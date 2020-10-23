@@ -40,6 +40,14 @@ $form-input-sizes: (
 );
 
 /*****************************************************
+STYLES ***********************************************/
+// name, color
+$input-styles: (
+	('success', $success-color),
+	('error', $error-color)
+);
+
+/*****************************************************
 PREFERENCES ******************************************/
 /* Checkbox & Radio */
 $form-icon-font-family			: 'Material Icons';

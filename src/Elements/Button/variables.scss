@@ -14,7 +14,6 @@ $button-class-inactive		: 'inactive';
 $button-class-block			: 'block';
 $button-class-group			: 'buttons';
 $button-class-invert		: 'invert';
-$button-force				: 'force';
 /* Dropdown */
 $dropdown-name				: 'dropdown';
 $dropdown-right				: 'right';
@@ -44,7 +43,7 @@ $button-icon-color			: $button-text-color;
 $button-icon-shadow			: none;
 /* Line Height & Weight */
 $button-line-height			: 1;
-$button-font-weight			: 600; // default button
+$button-font-weight			: 700; // default button
 /* Border */
 $button-border-width		: 1px;
 $button-border-color		: #ccc;
@@ -63,18 +62,19 @@ $button-secondary-bg-img-hover	: linear-gradient(to bottom, #e1e1e1 0%,#e1e1e1 1
 SIZES ************************************************/
 // name, font-size, padding, font-weight
 $button-sizes: (
-		("mini", .909em, .445rem .9rem, $button-font-weight),
-		("small", .979em, .645rem 1.4rem, $button-font-weight),
-		("large", 1.25em, 1.15rem 2.1rem, $button-font-weight),
-		("huge", 1.45em, 1.3rem 2.4rem, $button-font-weight)
+	("tiny", .809em, .265rem .5rem, $button-font-weight),
+	("mini", .909em, .445rem .9rem, $button-font-weight),
+	("small", .979em, .645rem 1.4rem, $button-font-weight),
+	("large", 1.25em, 1.15rem 2.1rem, $button-font-weight),
+	("huge", 1.45em, 1.3rem 2.4rem, $button-font-weight)
 );
 /*****************************************************
 STYLES ***********************************************/
 // name, bg color, text color, bg image, bg img hover
 $button-styles: (
-		('primary', $primary-color),
-		('success', $success-color),
-		('warning', $warning-color),
-		('error', $error-color),
-		('dark', $main-dark-color)
+	('primary', $primary-color),
+	('success', $success-color),
+	('warning', $warning-color),
+	('error', $error-color),
+	('dark', $main-dark-color)
 );

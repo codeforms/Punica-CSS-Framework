@@ -91,18 +91,3 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 		}
 	}
 }
-// Button Force (height 100%)
-@mixin button-force() {
-	&.#{$button-force} {
-		height: 100%;
-		min-height: 100%;
-		box-shadow: none;
-		.#{$button-class} {
-			height: 100%;
-			min-height: 100%;
-			border-radius: 0;
-			border-top-width: 0;
-			border-bottom-width: 0;
-		}
-	}
-}

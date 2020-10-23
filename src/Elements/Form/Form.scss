@@ -25,6 +25,12 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			outline-offset: -$form-outline-width;
 			transition: .35s;
 		}
+		@each $style-name, $style-color in $input-styles {
+			&.#{$style-name} {
+				color: $style-color;
+				outline-color: $style-color;
+			}
+		}
 	};
 	select {
 		padding-right: 3.0rem;

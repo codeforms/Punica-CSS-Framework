@@ -4261,7 +4261,7 @@ a.button, .button {
   display: inline-flex;
   font-family: "Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
   outline: none;
@@ -4506,28 +4506,34 @@ a.button.link.invert .button, a.button.link.invert i, a.button.link.invert [clas
   color: #fff;
 }
 
+a.button.tiny, .button.tiny {
+  font-size: .809em;
+  padding: 0.265rem 0.5rem;
+  font-weight: 700;
+}
+
 a.button.mini, .button.mini {
   font-size: .909em;
   padding: 0.445rem 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 a.button.small, .button.small {
   font-size: .979em;
   padding: 0.645rem 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 a.button.large, .button.large {
   font-size: 1.25em;
   padding: 1.15rem 2.1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 a.button.huge, .button.huge {
   font-size: 1.45em;
   padding: 1.3rem 2.4rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 a.button.block, .button.block {
@@ -4631,43 +4637,34 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
   background-image: none !important;
 }
 
-.buttons.force {
-  height: 100%;
-  min-height: 100%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.buttons.force .button {
-  height: 100%;
-  min-height: 100%;
-  border-radius: 0;
-  border-top-width: 0;
-  border-bottom-width: 0;
+.buttons.tiny > .button, .buttons.tiny > .dropdown > .button {
+  font-size: .809em;
+  padding: 0.265rem 0.5rem;
+  font-weight: 700;
 }
 
 .buttons.mini > .button, .buttons.mini > .dropdown > .button {
   font-size: .909em;
   padding: 0.445rem 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .buttons.small > .button, .buttons.small > .dropdown > .button {
   font-size: .979em;
   padding: 0.645rem 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .buttons.large > .button, .buttons.large > .dropdown > .button {
   font-size: 1.25em;
   padding: 1.15rem 2.1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .buttons.huge > .button, .buttons.huge > .dropdown > .button {
   font-size: 1.45em;
   padding: 1.3rem 2.4rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .buttons.primary > .button, .buttons.primary > .dropdown > .button {
@@ -4901,43 +4898,34 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
   border-top-right-radius: 3px;
 }
 
-.dropdown.force {
-  height: 100%;
-  min-height: 100%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.dropdown.force .button {
-  height: 100%;
-  min-height: 100%;
-  border-radius: 0;
-  border-top-width: 0;
-  border-bottom-width: 0;
+.dropdown.tiny > .button, .dropdown.tiny > .dropdown > .button {
+  font-size: .809em;
+  padding: 0.265rem 0.5rem;
+  font-weight: 700;
 }
 
 .dropdown.mini > .button, .dropdown.mini > .dropdown > .button {
   font-size: .909em;
   padding: 0.445rem 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .dropdown.small > .button, .dropdown.small > .dropdown > .button {
   font-size: .979em;
   padding: 0.645rem 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .dropdown.large > .button, .dropdown.large > .dropdown > .button {
   font-size: 1.25em;
   padding: 1.15rem 2.1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .dropdown.huge > .button, .dropdown.huge > .dropdown > .button {
   font-size: 1.45em;
   padding: 1.3rem 2.4rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='week'], input[type='file'], input:not([type]), textarea, select {
@@ -4965,6 +4953,16 @@ input[type='color']:focus, input[type='date']:focus, input[type='datetime']:focu
   outline-offset: -2px;
   -webkit-transition: .35s;
   transition: .35s;
+}
+
+input[type='color'].success, input[type='date'].success, input[type='datetime'].success, input[type='datetime-local'].success, input[type='email'].success, input[type='month'].success, input[type='number'].success, input[type='password'].success, input[type='search'].success, input[type='tel'].success, input[type='text'].success, input[type='url'].success, input[type='week'].success, input[type='file'].success, input:not([type]).success, textarea.success, select.success {
+  color: #2ec4b6;
+  outline-color: #2ec4b6;
+}
+
+input[type='color'].error, input[type='date'].error, input[type='datetime'].error, input[type='datetime-local'].error, input[type='email'].error, input[type='month'].error, input[type='number'].error, input[type='password'].error, input[type='search'].error, input[type='tel'].error, input[type='text'].error, input[type='url'].error, input[type='week'].error, input[type='file'].error, input:not([type]).error, textarea.error, select.error {
+  color: #d62828;
+  outline-color: #d62828;
 }
 
 select {
@@ -5087,7 +5085,7 @@ input:disabled {
   height: 2.5rem;
   font-size: 1em;
   padding: 0.935rem 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .form .group > .button:first-child, .form .item > .group > .button:first-child {
