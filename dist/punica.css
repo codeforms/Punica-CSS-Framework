@@ -4508,7 +4508,7 @@ a.button.link.invert .button, a.button.link.invert i, a.button.link.invert [clas
 
 a.button.tiny, .button.tiny {
   font-size: .809em;
-  padding: 0.265rem 0.5rem;
+  padding: 0.415rem 0.5rem;
   font-weight: 700;
 }
 
@@ -4639,7 +4639,7 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 
 .buttons.tiny > .button, .buttons.tiny > .dropdown > .button {
   font-size: .809em;
-  padding: 0.265rem 0.5rem;
+  padding: 0.415rem 0.5rem;
   font-weight: 700;
 }
 
@@ -4871,6 +4871,7 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
   overflow-y: auto;
   position: absolute;
   top: 100%;
+  z-index: 301;
 }
 
 .dropdown .menu .item > a {
@@ -4900,7 +4901,7 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
 
 .dropdown.tiny > .button, .dropdown.tiny > .dropdown > .button {
   font-size: .809em;
-  padding: 0.265rem 0.5rem;
+  padding: 0.415rem 0.5rem;
   font-weight: 700;
 }
 
@@ -5096,12 +5097,6 @@ input:disabled {
 .form .group > .button:last-child:not(:first-child), .form .item > .group > .button:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-}
-
-.form .one.items > .item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(100% * (1 / 1) - (2 * 6px 6px 0.75em));
-          flex: 0 0 calc(100% * (1 / 1) - (2 * 6px 6px 0.75em));
 }
 
 .form .two.items > .item {
@@ -5934,14 +5929,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
       flex-wrap: wrap;
 }
 
-.cards.one > .card {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(100% * (1 / 1) - (2 * 10px));
-          flex: 0 0 calc(100% * (1 / 1) - (2 * 10px));
-  height: auto;
-  margin: 10px;
-}
-
 .cards.two > .card {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 2) - (2 * 10px));
@@ -6681,6 +6668,11 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
           flex: auto;
   margin-bottom: 32px;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   padding-bottom: 56.25% !important;
   height: 0;
@@ -6705,6 +6697,231 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.panel .content .media.two {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.two > div, .panel .content .media.two > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 2));
+          flex: 0 0 calc(100% * (1 / 2));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.three {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.three > div, .panel .content .media.three > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 3));
+          flex: 0 0 calc(100% * (1 / 3));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.four {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.four > div, .panel .content .media.four > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 4));
+          flex: 0 0 calc(100% * (1 / 4));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.five {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.five > div, .panel .content .media.five > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 5));
+          flex: 0 0 calc(100% * (1 / 5));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.six {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.six > div, .panel .content .media.six > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 6));
+          flex: 0 0 calc(100% * (1 / 6));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.seven {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.seven > div, .panel .content .media.seven > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 7));
+          flex: 0 0 calc(100% * (1 / 7));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.eight {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.eight > div, .panel .content .media.eight > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 8));
+          flex: 0 0 calc(100% * (1 / 8));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.nine {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.nine > div, .panel .content .media.nine > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 9));
+          flex: 0 0 calc(100% * (1 / 9));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.ten {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.ten > div, .panel .content .media.ten > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 10));
+          flex: 0 0 calc(100% * (1 / 10));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.eleven {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.eleven > div, .panel .content .media.eleven > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 11));
+          flex: 0 0 calc(100% * (1 / 11));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.twelve {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.twelve > div, .panel .content .media.twelve > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 12));
+          flex: 0 0 calc(100% * (1 / 12));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.thirteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.thirteen > div, .panel .content .media.thirteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 13));
+          flex: 0 0 calc(100% * (1 / 13));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.fourteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.fourteen > div, .panel .content .media.fourteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 14));
+          flex: 0 0 calc(100% * (1 / 14));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.fifteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.fifteen > div, .panel .content .media.fifteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 15));
+          flex: 0 0 calc(100% * (1 / 15));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.panel .content .media.sixteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.panel .content .media.sixteen > div, .panel .content .media.sixteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 16));
+          flex: 0 0 calc(100% * (1 / 16));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
 }
 
 .panel .content .headline, .panel .content p.headline {
@@ -7278,6 +7495,11 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 
 .timeline .activity .media {
   margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   padding-bottom: 56.25% !important;
   height: 0;
@@ -7302,6 +7524,231 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.timeline .activity .media.two {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.two > div, .timeline .activity .media.two > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 2));
+          flex: 0 0 calc(100% * (1 / 2));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.three {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.three > div, .timeline .activity .media.three > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 3));
+          flex: 0 0 calc(100% * (1 / 3));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.four {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.four > div, .timeline .activity .media.four > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 4));
+          flex: 0 0 calc(100% * (1 / 4));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.five {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.five > div, .timeline .activity .media.five > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 5));
+          flex: 0 0 calc(100% * (1 / 5));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.six {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.six > div, .timeline .activity .media.six > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 6));
+          flex: 0 0 calc(100% * (1 / 6));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.seven {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.seven > div, .timeline .activity .media.seven > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 7));
+          flex: 0 0 calc(100% * (1 / 7));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.eight {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.eight > div, .timeline .activity .media.eight > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 8));
+          flex: 0 0 calc(100% * (1 / 8));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.nine {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.nine > div, .timeline .activity .media.nine > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 9));
+          flex: 0 0 calc(100% * (1 / 9));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.ten {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.ten > div, .timeline .activity .media.ten > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 10));
+          flex: 0 0 calc(100% * (1 / 10));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.eleven {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.eleven > div, .timeline .activity .media.eleven > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 11));
+          flex: 0 0 calc(100% * (1 / 11));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.twelve {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.twelve > div, .timeline .activity .media.twelve > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 12));
+          flex: 0 0 calc(100% * (1 / 12));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.thirteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.thirteen > div, .timeline .activity .media.thirteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 13));
+          flex: 0 0 calc(100% * (1 / 13));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.fourteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.fourteen > div, .timeline .activity .media.fourteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 14));
+          flex: 0 0 calc(100% * (1 / 14));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.fifteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.fifteen > div, .timeline .activity .media.fifteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 15));
+          flex: 0 0 calc(100% * (1 / 15));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
+}
+
+.timeline .activity .media.sixteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.timeline .activity .media.sixteen > div, .timeline .activity .media.sixteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 16));
+          flex: 0 0 calc(100% * (1 / 16));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1px;
 }
 
 .timeline .activity .actions {
@@ -7524,6 +7971,26 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   margin-left: 50px !important;
 }
 
+.m-auto {
+  margin: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
 .p-0 {
   padding: 0px !important;
 }
@@ -7682,6 +8149,26 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 
 .pl-50 {
   padding-left: 50px !important;
+}
+
+.p-auto {
+  padding: auto !important;
+}
+
+.pt-auto {
+  padding-top: auto !important;
+}
+
+.pr-auto {
+  padding-right: auto !important;
+}
+
+.pb-auto {
+  padding-bottom: auto !important;
+}
+
+.pl-auto {
+  padding-left: auto !important;
 }
 
 .centered {
