@@ -1,8 +1,9 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : PROCESS ********************/
 @import "mixins";
-
+//
 // if process is enable
+//
 @if $components-process {
 	.#{$process-name} {
 		display: flex;
@@ -79,9 +80,14 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 				}
 			}
 		}
-		@each $type, $bg-color in $process-styles {
-			&.#{$type} {
-				@include process-styles($bg-color);
+		//
+		// STYLES
+		//
+		@if $components-process-styles {
+			@each $type, $bg-color in $process-styles {
+				&.#{$type} {
+					@include process-styles($bg-color);
+				}
 			}
 		}
 		&.#{$process-vertical} {

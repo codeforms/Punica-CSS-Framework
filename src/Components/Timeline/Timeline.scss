@@ -1,7 +1,8 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : TIMELINE *******************/
-
+//
 // if timeline is enable
+//
 @if $components-timeline {
 	.#{$timeline-container} {
 		.#{$timeline-item} {
@@ -39,11 +40,16 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 				justify-content: center;
 				flex-shrink: 0;
 				@include shadow();
-				@each $type, $color in $timeline-types {
-				    &.#{$type} {
-						background-color: $color;
-						color: $main-invert-color;
-						border-color: darken($color, 5%);
+				//
+				// STYLES
+				//
+				@if $components-timeline-styles {
+					@each $type, $color in $timeline-styles {
+					    &.#{$type} {
+							background-color: $color;
+							color: $main-invert-color;
+							border-color: darken($color, 5%);
+						}
 					}
 				}
 			}
@@ -68,9 +74,32 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 				font-size: .9em;
 				opacity: .6;
 			}
-			.#{$timeline-media} {
-				margin-top: 16px;
-				@include embedded-media();
+			//
+			// MEDIA
+			//
+			@if $components-timeline-media {
+				.#{$timeline-media} {
+					margin-top: 16px;
+					display: flex;
+					flex-wrap: wrap;
+					@include embedded-media();
+				}
+				//
+				// > MEDIA GROUP
+				//
+				@if $components-timeline-media-group {
+					@each $name, $number in $grids {
+						.#{$timeline-media}.#{$name} {
+							padding-bottom: initial !important;
+							height: auto;
+							&>div, &>a {
+								flex: 0 0 calc(100% * (1 / #{$number}));
+								flex-grow: 1;
+								padding: 1px;
+							}
+						}
+					}
+				}
 			}
 			.#{$timeline-actions} {
 				margin-top: 16px;

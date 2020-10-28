@@ -1,24 +1,26 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : ALERT **********************/
 @import "mixins";
-
+//
 // if alert is enable
+//
 @if $components-alert {
 	.#{$alert-name} {
 		display: block;
-		@include alert-types();
+		@include alert-styles();
 		border: $main-border-width $main-border-style $main-border-color;
 		border-radius: $alert-border-radius;
 		padding: $alert-padding;
 		margin: $alert-margin;
 		width: 100%;
 		font-weight: $alert-font-weight;
-
-		// if alert types is enable
-		@if($components-alert-types) {
-			@each $type, $color in $alert-types {
+		//
+		// STYLES
+		//
+		@if($components-alert-styles) {
+			@each $type, $color in $alert-styles {
 				&.#{$type} {
-					@include alert-types($color, $main-invert-color);
+					@include alert-styles($color, $main-invert-color);
 				}
 			}
 		}

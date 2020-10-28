@@ -1,8 +1,9 @@
 /***************************************************** 
 PUNICA CSS > ELEMENTS : LABEL ************************/
 @import "mixins";
-
+//
 // if label is enable
+//
 @if $elements-label {
 	a.#{$label-name},
 	.#{$label-name} {
@@ -14,28 +15,28 @@ PUNICA CSS > ELEMENTS : LABEL ************************/
 		text-decoration: none;
 		border: $main-border-width solid $main-border-color;
 		@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
-		@include label-types();
+		@include label-styles();
 		@include label-sizes();
-
-		// if label style is enable
-		@if ($elements-label-types) {
-			@each $type, $bg-color in $label-types {
+		//
+		// STYLES
+		//
+		@if ($elements-label-styles) {
+			@each $type, $bg-color in $label-styles {
 				&.#{$type} {
-					@include label-types($main-invert-color, $bg-color, darken($bg-color, 7%));
+					@include label-styles($main-invert-color, $bg-color, darken($bg-color, 7%));
 				}
 			}
 		}
-
-		// if label size is enable
+		//
+		// SIZES
+		//
 		@if ($elements-label-sizes) {
-			// label sizes
 			@each $size, $padding, $font-size in $label-sizes {
 				&.#{$size} {
 					@include label-sizes($padding, $font-size);
 				}
 			}
 		}
-
 		>i,
 		>.material-icons {
 			vertical-align: text-top;

@@ -1,8 +1,9 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 @import "mixins";
-
+//
 // if billboard is enable
+//
 @if $components-billboard {
 	.#{$billboard-name} {
 		display: flex;
@@ -10,21 +11,31 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 		justify-content: space-between;
 		align-items: center;
 		padding: $billboard-default-padding;
-		@include billboard-types();
+		@include billboard-styles();
 		border: $main-border-width $main-border-style $main-border-color;
-		@each $type, $bg-color in $billboard-types {
-			&.#{$type} {
-				@include billboard-types($main-invert-color, $bg-color);
+		//
+		// STYLES
+		//
+		@if $components-billboard-styles {
+			@each $type, $bg-color in $billboard-styles {
+				&.#{$type} {
+					@include billboard-styles($main-invert-color, $bg-color);
+				}
 			}
 		}
-		@each $size, $padding, $font-size in $billboard-sizes {
-			&.#{$size} {
-				padding: $padding;
-				.#{$billboard-body} {
+		//
+		// SIZES
+		//
+		@if $components-billboard-sizes {
+			@each $size, $padding, $font-size in $billboard-sizes {
+				&.#{$size} {
 					padding: $padding;
-				}
-				p {
-					font-size: $font-size;
+					.#{$billboard-body} {
+						padding: $padding;
+					}
+					p {
+						font-size: $font-size;
+					}
 				}
 			}
 		}
@@ -39,14 +50,19 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 			flex-direction: column;
 		}
     }
-	&.#{$billboard-cover} {
-		min-height: 100vh;
-		max-height: 100%;
-		min-width: 100%;
-		border: 0;
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
+    //
+    // COVER
+    //
+    @if $components-billboard-cover {
+		&.#{$billboard-cover} {
+			min-height: 100vh;
+			max-height: 100%;
+			min-width: 100%;
+			border: 0;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
 	}
 
 	@include breakpoints($breakpoints-medium, 'max-width') {
@@ -61,14 +77,19 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 			.#{$billboard-body} {
 				padding: $billboard-responsive-padding;
 			}
-			@each $size, $padding, $font-size in $billboard-responsive-sizes {
-				&.#{$size} {
-					padding: $padding;
-					.#{$billboard-body} {
+			//
+			// SIZES
+			//
+			@if $components-billboard-sizes {
+				@each $size, $padding, $font-size in $billboard-responsive-sizes {
+					&.#{$size} {
 						padding: $padding;
-					}
-					p {
-						font-size: $font-size;
+						.#{$billboard-body} {
+							padding: $padding;
+						}
+						p {
+							font-size: $font-size;
+						}
 					}
 				}
 			}

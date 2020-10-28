@@ -7,48 +7,64 @@ DEFAULT SETUP PREFERENCES
 
 /*****************************************************
 LAYOUT ***********************************************/
-$layout-grid 						: true;
-/**/$layout-grid-equal				: true;
-/**/$layout-grid-offset				: true;
+$layout-grid 								: true;
+/**/$layout-grid-equal						: true;
+/**/$layout-grid-offset						: true; // [!] increases the size
 
 /*****************************************************
 COMPONENTS *******************************************/
-$components-alert 					: true;
-/**/$components-alert-types			: true;
-$components-badge					: true;
-/**/$components-badge-types			: true;
-/**/$components-badge-sizes			: true;
-$components-billboard				: true;
-$components-breadcrumb				: true;
-$components-card					: true;
-/**/$components-card-horizontal		: true;
-$components-list					: true;
-$components-menu					: true;
-$components-navbar					: true;
-$components-panel					: true;
-$components-process					: true;
-$components-progress				: true;
-$components-tabnav					: true;
-/**/$components-tabnav-types		: true;
-$components-timeline				: true;
-$components-tooltip					: true;
+$components-alert 							: true;
+/**/$components-alert-styles				: true;
+$components-badge							: true;
+/**/$components-badge-styles				: true;
+/**/$components-badge-sizes					: true;
+$components-billboard						: true;
+/**/$components-billboard-styles			: true;
+/**/$components-billboard-sizes				: true;
+/**/$components-billboard-cover				: true;
+$components-breadcrumb						: true;
+/**/$components-breadcrumb-sizes			: true;
+$components-card							: true;
+/**/$components-card-groups					: true;
+/**/$components-card-horizontal				: true;
+$components-list							: true;
+/**/$components-list-divided				: true;
+/**/$components-list-hovered				: true;
+/**/$components-list-striped				: true;
+$components-menu							: true;
+$components-navbar							: true;
+/**/$components-navbar-themes				: true;
+$components-panel							: true;
+/**/$components-panel-media					: true;
+/**//**/$components-panel-media-group		: true;
+$components-process							: true;
+/**/$components-process-styles				: true;
+$components-progress						: true;
+/**/$components-progress-styles				: true;
+$components-tabnav							: true;
+/**/$components-tabnav-styles				: true;
+$components-timeline						: true;
+/**/$components-timeline-styles				: true;
+/**/$components-timeline-media				: true;
+/**//**/$components-timeline-media-group	: true;
+$components-tooltip							: true;
 
 /*****************************************************
 ELEMENTS *********************************************/
-$elements-button					: true;
-/**/$elements-button-group			: true;
-/**/$elements-button-types			: true;
-/**/$elements-button-sizes			: true;
-/**/$elements-button-secondary		: true;
-/**/$elements-button-dropdown		: true;
-$elements-form						: true;
-$elements-icon						: true;
-$elements-table						: true;
-/**/$elements-table-hovered			: true;
-/**/$elements-table-striped			: true;
-$elements-label						: true;
-/**/$elements-label-types			: true;
-/**/$elements-label-sizes			: true;
+$elements-button							: true;
+/**/$elements-button-group					: true;
+/**/$elements-button-styles					: true;
+/**/$elements-button-sizes					: true;
+/**/$elements-button-secondary				: true;
+/**/$elements-button-dropdown				: true;
+$elements-form								: true;
+$elements-icon								: true;
+$elements-table								: true;
+/**/$elements-table-hovered					: true;
+/**/$elements-table-striped					: true;
+$elements-label								: true;
+/**/$elements-label-styles					: true;
+/**/$elements-label-sizes					: true;
 
 /*****************************************************
 LAUNCHER *********************************************/

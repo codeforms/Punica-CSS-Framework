@@ -1,7 +1,8 @@
 /***************************************************** 
 PUNICA CSS > ELEMENTS : TABLE ************************/
-
+//
 // if table is enable
+//
 @if $elements-table {
 	.#{$table-class} {
 		position: relative;
@@ -13,7 +14,9 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 		overflow: hidden;
 		flex: 1;
 		margin-bottom: 1.5rem;
-		// if table striped is enable
+		//
+		// STRIPED
+		//
 		@if $elements-table-striped {
 			&.#{$table-class-striped} {
 				tr,
@@ -30,7 +33,9 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 				}
 			}
 		}
-		// if table hovered is enable
+		// 
+		// HOVERED
+		//
 		@if $elements-table-hovered {
 			&.#{$table-class-hovered} {
 				tr,

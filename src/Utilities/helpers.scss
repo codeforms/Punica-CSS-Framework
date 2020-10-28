@@ -5,7 +5,9 @@ PUNICA CSS > UTILITIES : HELPERS *********************/
 /*****************************************************
 Padding & Margin Helpers *****************************/
 @include setHelperListWithRange($margin-helpers, $helper-pm-ranges, "px", "!important");
+@include setHelperListWithRange($margin-helpers, auto, null, "!important"); // margin auto
 @include setHelperListWithRange($padding-helpers, $helper-pm-ranges, "px", "!important");
+@include setHelperListWithRange($padding-helpers, auto, null, "!important"); // padding auto
 .centered {margin: 0 auto;}
 
 /*****************************************************

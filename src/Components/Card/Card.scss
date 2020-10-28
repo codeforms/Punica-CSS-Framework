@@ -1,18 +1,24 @@
 /*****************************************************
 PUNICA CSS > COMPONENTS : CARD ***********************/
-
+//
 // if card is enable
+//
 @if $components-card {
 	.#{$cards-name} {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	@each $name, $number in $grids {
-		.#{$cards-name}.#{$name} {
-			&>.#{$card-name} {
-				flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{$card-margin}));
-				height: auto;
-				margin: $card-margin;
+	//
+	// CARD GROUPS
+	//
+	@if $components-card-groups {
+		@each $name, $number in $grids {
+			.#{$cards-name}.#{$name} {
+				&>.#{$card-name} {
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{$card-margin}));
+					height: auto;
+					margin: $card-margin;
+				}
 			}
 		}
 	}
@@ -49,6 +55,9 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 				display: block;
 			}
 		}
+		//
+		// HORIZONTAL CARDS
+		//
 		@if $components-card-horizontal {
 			&.#{$card-horizontal} {
 				flex-direction: row;
@@ -83,6 +92,9 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 			width: 100%; // for only a single card
 			height: fit-content !important;
 		}
+		//
+		// HORIZONTAL CARDS
+		//
 		@if $components-card-horizontal {
 			.#{$card-name}.#{$card-horizontal} {
 				flex-direction: column;

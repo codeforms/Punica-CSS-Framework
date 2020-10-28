@@ -1,8 +1,9 @@
 /*****************************************************
 PUNICA CSS > ELEMENTS : FORM *************************/
 @import "mixins";
-
+//
 // if form is enable
+//
 @if $elements-form {
 	@include form-inputs() {
 		-webkit-appearance: none;

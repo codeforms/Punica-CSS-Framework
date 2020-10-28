@@ -1,8 +1,9 @@
 /*****************************************************
 PUNICA CSS > COMPONENTS : NAVBAR *********************/
 @import "mixins";
-
+//
 // if navbar is enable
+//
 @if $components-navbar {
 	.#{$navbar-name} {
 		display: flex;
@@ -107,10 +108,14 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 			padding: .935rem 1.4rem;
 			font-weight: 700;
 		}
-		// navbar themes
-		@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color in $navbar-themes {
-			&.#{$theme-name} {
-				@include navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color);
+		// 
+		// THEMES
+		//
+		@if $components-navbar-themes {
+			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color in $navbar-themes {
+				&.#{$theme-name} {
+					@include navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color);
+				}
 			}
 		}
 	}

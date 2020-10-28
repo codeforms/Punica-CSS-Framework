@@ -1,8 +1,9 @@
 /*****************************************************
 PUNICA CSS > ELEMENTS : BUTTON ***********************/
 @import "mixins";
-
+//
 // if button is enable
+//
 @if $elements-button {
 	a.#{$button-class},
 	.#{$button-class} {
@@ -72,18 +73,21 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			opacity: .59;
 			pointer-events: none;
 		}
-		// button styles
-		@if $elements-button-types {
+		//
+		// STYLES
+		//
+		@if $elements-button-styles {
 			@each $theme-name, $theme-color in $button-styles {
 				&.#{$theme-name} {
-					@include button-types($theme-color);
+					@include button-styles($theme-color);
 				}
 			}
 		}
 		// Button Link
 		@include link-button();
-
-		// Button Sizes
+		//
+		// SIZES
+		//
 		@if $elements-button-sizes {
 			@include button-sizes();
 		}
@@ -98,15 +102,18 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			color: $button-icon-color;
 			text-shadow: $button-icon-shadow;
 		}
-		// secondary button
+		//
+		// SECONDARY BUTTON
+		//
 		@if $elements-button-secondary {
 			&.#{$button-secondary} {
 				@include secondary-button();
 			}
 		}
 	}
-
-	// if button groups is enable
+	//
+	// BUTTON GROUPS
+	//
 	@if $elements-button-group {
 		.#{$button-class-group} {
 			display: inline-flex;
@@ -129,7 +136,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					margin-left: -$button-border-width;
 				}
 			}
-			// if secondary button is enable
+			//
+			// SECONDARY BUTTON
+			//
 			@if $elements-button-secondary {
 				&.#{$button-secondary} > .#{$button-class} {
 					@include secondary-button();
@@ -149,27 +158,29 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				cursor: default;
 				background-image: none !important;
 			}
-			// Button Sizes for groups
+			//
+			// SIZES
+			// 
 			@if $elements-button-sizes {
 				@include button-sizes(true);
 			}
-
-			// button styles
-			@if $elements-button-types {
+			//
+			// STYLES
+			//
+			@if $elements-button-styles {
 				@each $theme-name, $theme-color in $button-styles {
 					&.#{$theme-name} > .#{$button-class},
 					&.#{$theme-name} > .#{$dropdown-name} > .#{$button-class} {
-						@include button-types($theme-color);
+						@include button-styles($theme-color);
 						border: $button-border-width solid darken($theme-color, 6%);
 					}
 				}
 			}
-
 			// Button Link
 			@include link-button();
-
-			//	dropdown for button groups
-			// if dropdown is enable
+			//
+			// DROPDOWN
+			//
 			@if $elements-button-dropdown {
 				.#{$dropdown-name}:last-child:not(:first-child),
 				.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class} {
@@ -188,14 +199,15 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					margin-left: -1px;
 				}
 			}
-
 			@include breakpoints($breakpoints-medium, 'max-width') {
 				//button-class-group
 				box-shadow: none;
 			}
 		}
 	}
-	// if dropdown is enable
+	//
+	// DROPDOWN
+	//
 	@if $elements-button-dropdown {
 		.#{$dropdown-name} {
 			display: inline-block;
@@ -208,6 +220,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				overflow-y: auto;
 				position: absolute;
 				top: 100%;
+				z-index: $menu-z-index + 1;
 				.#{$menu-item} {
 					& > a {
 						padding: .1rem $menu-padding;
@@ -234,7 +247,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			.#{$menu-name}:hover {
 				display: block;
 			}
-			// if button groups is enable
+			//
+			// BUTTON GROUPS
+			//
 			@if $elements-button-group {
 				.#{$button-class-group} {
 					.#{$dropdown-toggle}:nth-last-child(2) {
@@ -243,13 +258,12 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					}
 				}
 			}
-			// Button Sizes for dropdown
+			//
+			// SIZES
+			//
 			@if $elements-button-sizes {
 				@include button-sizes(true);
 			}
-		}
-		@include breakpoints($breakpoints-medium, 'max-width') {
-			//
 		}
 	}
 }

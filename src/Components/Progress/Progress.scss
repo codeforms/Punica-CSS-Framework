@@ -1,7 +1,8 @@
 /*****************************************************
 PUNICA CSS > COMPONENTS : PROGRESS *******************/
-
+//
 // if progress is enable
+//
 @if $components-progress {
 	.#{$progress-name} {
 		width: $progress-width;
@@ -22,9 +23,14 @@ PUNICA CSS > COMPONENTS : PROGRESS *******************/
 			background: $primary-color;
 			border-radius: $progress-border-radius;
 		}
-		@each $type, $color in $progress-types {
-			&.#{$type}::-webkit-progress-value {
-				background: $color;
+		//
+		// STYLES
+		//
+		@if $components-progress-styles {
+			@each $type, $color in $progress-styles {
+				&.#{$type}::-webkit-progress-value {
+					background: $color;
+				}
 			}
 		}
 	}

@@ -3,8 +3,8 @@ PUNICA CSS > UTILITIES : HELPERS > VARIABLES *********/
 
 /***************************************************** 
 PREFERENCES ******************************************/
-$helper-pm-ranges	: 0,5,10,15,20,30,40,50;
-$helper-fw-ranges	: 100,200,300,400,500,600,700,800,900;
+$helper-pm-ranges	: 0,5,10,15,20,30,40,50; // pm: padding/margin
+$helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font weight
 /* Margin Helpers */
 $margin-helpers: (
 	// class-name, property

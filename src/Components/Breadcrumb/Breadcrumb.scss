@@ -1,7 +1,8 @@
 /*****************************************************
 PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
-
+//
 // if breadcrumb is enable
+//
 @if $components-breadcrumb {
 	.#{$breadcrumb-name} {
 		display: inline-block;
@@ -35,14 +36,19 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 				}
 			}
 		}
-		// size, font-size, seperator-padding, seperator-size
-		@each $size, $font-size, $seperator-padding, $seperator-size in $breadcrumb-sizes {
-			&.#{$size} {
-				.#{$breadcrumb-item} {
-					font-size: $font-size;
-					&::after {
-						padding: $seperator-padding;
-						font-size: $seperator-size;
+		//
+		// SIZES
+		//
+		@if $components-breadcrumb-sizes {
+			// size, font-size, seperator-padding, seperator-size
+			@each $size, $font-size, $seperator-padding, $seperator-size in $breadcrumb-sizes {
+				&.#{$size} {
+					.#{$breadcrumb-item} {
+						font-size: $font-size;
+						&::after {
+							padding: $seperator-padding;
+							font-size: $seperator-size;
+						}
 					}
 				}
 			}

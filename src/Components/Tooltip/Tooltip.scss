@@ -1,7 +1,8 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : TOOLTIP ********************/
-
+//
 // if tooltip is enable
+//
 @if $components-tooltip {
 	.#{$tooltip-name} {
 		display: inline-flex;

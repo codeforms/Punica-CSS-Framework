@@ -62,7 +62,7 @@ $button-secondary-bg-img-hover	: linear-gradient(to bottom, #e1e1e1 0%,#e1e1e1 1
 SIZES ************************************************/
 // name, font-size, padding, font-weight
 $button-sizes: (
-	("tiny", .809em, .265rem .5rem, $button-font-weight),
+	("tiny", .809em, .415rem .5rem, $button-font-weight),
 	("mini", .909em, .445rem .9rem, $button-font-weight),
 	("small", .979em, .645rem 1.4rem, $button-font-weight),
 	("large", 1.25em, 1.15rem 2.1rem, $button-font-weight),

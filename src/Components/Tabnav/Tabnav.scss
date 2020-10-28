@@ -1,6 +1,8 @@
 /*****************************************************
 PUNICA CSS > COMPONENTS : TABNAV *********************/
-
+//
+// if tabnav is enable
+//
 @if $components-tabnav {
 	.#{$tabnav-name} {
 		position: relative;
@@ -45,10 +47,11 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 				}
 			}
 		}
-		// if tabnav style is enable
-		@if $components-tabnav-types {
-			// badge types
-			@each $type-name, $bg-color in $tabnav-types {
+		//
+		// STYLES
+		//
+		@if $components-tabnav-styles {
+			@each $type-name, $bg-color in $tabnav-styles {
 				&.#{$type-name} {
 					.#{$button-class},
 					a.#{$button-class},

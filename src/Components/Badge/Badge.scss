@@ -1,8 +1,9 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : BADGE **********************/
 @import "mixins";
-
+//
 // if badge is enable
+//
 @if $components-badge {
 	.#{$badge-name} {
 		position: relative;
@@ -13,19 +14,20 @@ PUNICA CSS > COMPONENTS : BADGE **********************/
 		font-weight: $badge-font-weight;
 		border-radius: $badge-border-radius;
 		@include badge-sizes();
-		@include badge-types();
-
-		// if badge style is enable
-		@if $components-badge-types {
-			// badge types
-			@each $type-name, $bg-color in $badge-types {
+		@include badge-styles();
+		//
+		// STYLES
+		//
+		@if $components-badge-styles {
+			@each $type-name, $bg-color in $badge-styles {
 				&.#{$type-name} {
-					@include badge-types($bg-color, $main-invert-color, false);
+					@include badge-styles($bg-color, $main-invert-color, false);
 				}
 			}
 		}
-
-		// if badge size is enable
+		//
+		// SIZES
+		//
 		@if ($components-badge-sizes) {
 			// badge sizes
 			@each $size, $font-size, $padding in $badge-sizes {
