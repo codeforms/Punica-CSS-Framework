@@ -5,118 +5,194 @@ PUNICA CSS > UTILITIES : HELPERS > VARIABLES *********/
 PREFERENCES ******************************************/
 $helper-pm-ranges	: 0,5,10,15,20,30,40,50; // pm: padding/margin
 $helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font weight
-/* Margin Helpers */
+$helper-z-indexes	: 0,1,10,20,30,40,50,100,999,9999;
+
+/* 
+Margin ************************************/
 $margin-helpers: (
-	// class-name, property
+	// class name (prefix), property
     ("m-", "margin"),
     ("mt-", "margin-top"),
     ("mr-", "margin-right"),
     ("mb-", "margin-bottom"),
     ("ml-", "margin-left")
 );
-/* Padding Helpers */
+
+/* 
+Padding ************************************/
 $padding-helpers: (
-	// class-name, property, value-type
+	// class name (prefix), property, value-type
     ("p-", "padding"),
     ("pt-", "padding-top"),
     ("pr-", "padding-right"),
     ("pb-", "padding-bottom"),
     ("pl-", "padding-left")
 );
-/* Font Weight Helpers */
+
+/* 
+Font Weight ************************************/
 $font-weights: (
 	"fw-": "font-weight"
 );
-/* Font Size Helpers */
+
+/* 
+Font Size ************************************/
 $font-sizes: (
-	// prefix, property, value
-	("mini-", "font-size", 60%),
-	("tiny-", "font-size", 73%),
-	("small-", "font-size", 85%),
-	("large-", "font-size", 120%),
-	("big-", "font-size", 175%),
-	("huge-", "font-size", 200%),
-	("giant-", "font-size", 350%)
+	// class name, property, value
+	("mini-text", "font-size", 60%),
+	("tiny-text", "font-size", 73%),
+	("small-text", "font-size", 85%),
+	("large-text", "font-size", 120%),
+	("big-text", "font-size", 175%),
+	("huge-text", "font-size", 200%),
+	("giant-text", "font-size", 350%)
 );
-/* Text Colors */
-$text-colors: (
-	// suffix, property, value
-	("grey", "color", $main-grey-color),
-	("white", "color", white),
-	("black", "color", black),
-	("primary", "color", $primary-color),
-	("success", "color", $success-color),
-	("warning", "color", $warning-color),
-	("error", "color", $error-color)
+
+/* 
+Text Colors ************************************/
+$text-colors		: (
+	// class name, property, value
+	("color-grey", "color", $main-grey-color),
+	("color-white", "color", white),
+	("color-black", "color", black),
+	("color-primary", "color", $primary-color),
+	("color-success", "color", $success-color),
+	("color-warning", "color", $warning-color),
+	("color-error", "color", $error-color)
 );
-/* Bg Colors */
-$bg-colors: (
-	// suffix, property, value
-	("grey", "background-color", $main-grey-color),
-	("secondary", "background-color", $main-secondary-bg),
-	("white", "background-color", white),
-	("black", "background-color", $main-font-color),
-	("dark", "background-color", $main-dark-color),
-	("primary", "background-color", $primary-color),
-	("success", "background-color", $success-color),
-	("warning", "background-color", $warning-color),
-	("error", "background-color", $error-color)
+
+/* 
+Bg Colors ************************************/
+$bg-colors			: (
+	// class name, property, value
+	("bg-grey", "background-color", $main-grey-color),
+	("bg-secondary", "background-color", $main-secondary-bg),
+	("bg-white", "background-color", white),
+	("bg-black", "background-color", $main-font-color),
+	("bg-dark", "background-color", $main-dark-color),
+	("bg-primary", "background-color", $primary-color),
+	("bg-success", "background-color", $success-color),
+	("bg-warning", "background-color", $warning-color),
+	("bg-error", "background-color", $error-color)
 );
-/* Cursors */
+
+/* 
+Cursors ************************************/
 $cursors: (
-	// suffix, property, value
-	("alias", "cursor", alias),
-	("default", "cursor", default),
-	("grab", "cursor", grab),
-	("help", "cursor", help),
-	("move", "cursor", move),
-	("pointer", "cursor", pointer),
-	("wait", "cursor", wait),
-	("zoom-in", "cursor", zoom-in),
-	("zoom-out", "cursor", zoom-out)
+	// class name, property, value
+	("cursor-alias", "cursor", alias),
+	("cursor-default", "cursor", default),
+	("cursor-grab", "cursor", grab),
+	("cursor-help", "cursor", help),
+	("cursor-move", "cursor", move),
+	("cursor-pointer", "cursor", pointer),
+	("cursor-wait", "cursor", wait),
+	("cursor-zoom-in", "cursor", zoom-in),
+	("cursor-zoom-out", "cursor", zoom-out)
 );
-/* Display Properties */
+
+/* 
+Display Properties ************************************/
 $display-properties: (
 	// suffix, property, value
-	("inline", "display", inline),
-	("flex", "display", flex),
-	("inline-flex", "display", inline-flex),
-	("grid", "display", grid),
-	("inline-grid", "display", inline-grid),
-	("block", "display", block),
-	("inline-block", "display", inline-block),
-	("table", "display", table),
-	("inline-table", "display", inline-table),
-	("table-row", "display", table-row),
-	("table-column", "display", table-column),
-	("table-cell", "display", table-cell)
+	("display-inline", "display", inline),
+	("display-flex", "display", flex),
+	("display-inline-flex", "display", inline-flex),
+	("display-grid", "display", grid),
+	("display-inline-grid", "display", inline-grid),
+	("display-block", "display", block),
+	("display-inline-block", "display", inline-block),
+	("display-table", "display", table),
+	("display-inline-table", "display", inline-table),
+	("display-table-row", "display", table-row),
+	("display-table-column", "display", table-column),
+	("display-table-cell", "display", table-cell)
 );
+
+/*
+Alignment ************************************/
 $align-items: (
 	// suffix, property, value
-	("baseline", "align-items", baseline),
-	("flex-start", "align-items", flex-start),
-	("flex-end", "align-items", flex-end),
-	("center", "align-items", center),
-	("stretch", "align-items", stretch),
+	("align-items-baseline", "align-items", baseline),
+	("align-items-flex-start", "align-items", flex-start),
+	("align-items-lex-end", "align-items", flex-end),
+	("align-items-center", "align-items", center),
+	("align-items-stretch", "align-items", stretch),
+	("align-items-initial", "align-items", initial),
+	("align-items-inherit", "align-items", inherit)
 );
 $align-self: (
 	// suffix, property, value
-	("baseline", "align-self", baseline),
-	("flex-start", "align-self", flex-start),
-	("flex-end", "align-self", flex-end),
-	("center", "align-self", center),
-	("stretch", "align-self", stretch),
+	("align-self-auto", "align-self", auto),
+	("align-self-baseline", "align-self", baseline),
+	("align-self-flex-start", "align-self", flex-start),
+	("align-self-flex-end", "align-self", flex-end),
+	("align-self-center", "align-self", center),
+	("align-self-stretch", "align-self", stretch),
+	("align-self-initial", "align-self", initial),
+	("align-self-inherit", "align-self", inherit)
 );
-/* Filters */
+$justify-content: (
+	// class name, property, value
+	("justify-content-center", "justify-content", center),
+	("justify-content-flex-start", "justify-content", flex-start),
+	("justify-content-flex-end", "justify-content", flex-end),
+	("justify-content-baseline", "justify-content", baseline),
+	("justify-content-space-between", "justify-content", space-between),
+	("justify-content-space-around", "justify-content", space-around),
+	("justify-content-initial", "justify-content", initial),
+	("justify-content-inherit", "justify-content", inherit)
+);
+
+/* 
+Filters ************************************/
 $display-filters: (
-	// suffix, property, value
-	("invert", "filter", invert(100%)),
-	("gray", "filter", grayscale(100%))
+	// class name, property, value
+	("filter-invert", "filter", invert(100%)),
+	("filter-gray", "filter", grayscale(100%))
 );
-/* Text Transforms */
+
+/* 
+Text Transforms ************************************/
 $text-transforms: (
-	// suffix, property, value
-	("uppercase", "text-transform", uppercase),
-	("lowercase", "text-transform", lowercase),
-	("capitalize", "text-transform", capitalize)
+	// class name, property, value
+	("text-uppercase", "text-transform", uppercase),
+	("text-lowercase", "text-transform", lowercase),
+	("text-capitalize", "text-transform", capitalize)
+);
+
+/* 
+Overflow Properties ************************************/
+$overflow-properties: (
+	// class name, property, value
+	("overflow-auto", "overflow", auto),
+	("overflow-hidden", "overflow", hidden),
+	("overflow-visible", "overflow", visible),
+	("overflow-x-auto", "overflow-x", auto),
+	("overflow-y-auto", "overflow-y", auto),
+	("overflow-x-hidden", "overflow-x", hidden),
+	("overflow-y-hidden", "overflow-y", hidden),
+	("overflow-x-visible", "overflow-x", visible),
+	("overflow-y-visible", "overflow-y", visible),
+	("overflow-x-scroll", "overflow-x", scroll),
+	("overflow-y-scroll", "overflow-y", scroll)
+);
+
+/* 
+Position Properties ************************************/
+$position-properties: (
+	// class name, property, value
+	("position-static", "position", static),
+	("position-absolute", "position", absolute),
+	("position-fixed", "position", fixed),
+	("position-relative", "position", relative),
+	("position-sticky", "position", sticky),
+	("position-initial", "position", initial),
+	("position-inherit", "position", inherit)
+);
+
+/* 
+Stack Order (z-index) **********************************/
+$z-indexes: (
+	"z-": "z-index"
 );

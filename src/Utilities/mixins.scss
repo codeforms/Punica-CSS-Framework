@@ -5,7 +5,8 @@ PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 	$helpers, 
 	$range, 
 	$value-type: null,
-	$specificity: null) {
+	$specificity: null
+) {
 	@each $class, $property in $helpers {
 		@each $value in $range {
 			.#{$class}#{$value} {
@@ -14,16 +15,13 @@ PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 		}
 	}
 }
-@mixin setHelperList($list, $slug: null, $reverse: false, $specificity: null) {
+@mixin setHelperList(
+	$list, 
+	$specificity: null
+) {
 	@each $class, $property, $value in $list {
-		@if $reverse {
-			.#{$slug}#{$class} {
-				#{$property}: #{$value} #{$specificity};
-			}
-		} @else {
-			.#{$class}#{$slug} {
-				#{$property}: #{$value} #{$specificity};
-			}
+		.#{$class} {
+			#{$property}: #{$value} #{$specificity};
 		}
 	}
 }

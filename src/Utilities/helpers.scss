@@ -2,113 +2,145 @@
 PUNICA CSS > UTILITIES : HELPERS *********************/
 @import "mixins";
 
-/*****************************************************
-Padding & Margin Helpers *****************************/
-@include setHelperListWithRange($margin-helpers, $helper-pm-ranges, "px", "!important");
-@include setHelperListWithRange($margin-helpers, auto, null, "!important"); // margin auto
-@include setHelperListWithRange($padding-helpers, $helper-pm-ranges, "px", "!important");
-@include setHelperListWithRange($padding-helpers, auto, null, "!important"); // padding auto
-.centered {margin: 0 auto;}
+@if $helpers {
+	/*****************************************************
+	Padding & Margin Helpers *****************************/
+	@include setHelperListWithRange($margin-helpers, $helper-pm-ranges, "px", "!important");
+	@include setHelperListWithRange($margin-helpers, auto, null, "!important"); // margin auto
+	@include setHelperListWithRange($padding-helpers, $helper-pm-ranges, "px", "!important");
+	@include setHelperListWithRange($padding-helpers, auto, null, "!important"); // padding auto
+	.centered {margin: 0 auto;}
 
-/*****************************************************
-Font Weights *****************************************/
-@include setHelperListWithRange($font-weights, $helper-fw-ranges, null, "!important");
+	/*****************************************************
+	Font Weights *****************************************/
+	@include setHelperListWithRange($font-weights, $helper-fw-ranges, null, "!important");
 
-/*****************************************************
-Font Sizes *******************************************/
-@include setHelperList($font-sizes, "text", false, "!important");
+	/*****************************************************
+	Font Sizes *******************************************/
+	@include setHelperList($font-sizes, "!important");
 
-/*****************************************************
-Text Colors ******************************************/
-@include setHelperList($text-colors, "color-", true, "!important");
+	/*****************************************************
+	Text Colors ******************************************/
+	@include setHelperList($text-colors, "!important");
 
-/*****************************************************
-Background Colors ************************************/
-@include setHelperList($bg-colors, "bg-", true, "!important");
-.bg-grid {
-    height: 100%;
-	background-color: $main-bg;
-    background-position: center center;
-	background-image: linear-gradient(90deg, lighten($primary-color, 25%) 1%, transparent 16%),
-	linear-gradient(lighten($primary-color, 25%) 1%, transparent 16%);
-	background-size: 10px 10px;
-}
-.bg-stripe {
-    height: 100%;
-	background-image: linear-gradient($main-bg, $main-bg 7px, $primary-color 4px, darken($main-bg, 14%));
-    background-size: 100% 8px;
-}
+	/*****************************************************
+	Background Colors ************************************/
+	@include setHelperList($bg-colors, "!important");
+	.bg-grid {
+	    height: 100%;
+		background-color: $main-bg;
+	    background-position: center center;
+		background-image: linear-gradient(90deg, lighten($primary-color, 25%) 1%, transparent 16%),
+		linear-gradient(lighten($primary-color, 25%) 1%, transparent 16%);
+		background-size: 10px 10px;
+	}
+	.bg-stripe {
+	    height: 100%;
+		background-image: linear-gradient($main-bg, $main-bg 7px, $primary-color 4px, darken($main-bg, 14%));
+	    background-size: 100% 8px;
+	}
 
-/*****************************************************
-Cursors **********************************************/
-@include setHelperList($cursors, "cursor-", true, "!important");
+	/*****************************************************
+	Cursors **********************************************/
+	@include setHelperList($cursors, "!important");
 
-/*****************************************************
-Display Properties ***********************************/
-@include setHelperList($display-properties, "display-", true, "!important");
-@include setHelperList($align-items, "align-items-", true);
-@include setHelperList($align-self, "align-self-", true);
+	/*****************************************************
+	Display Properties ***********************************/
+	@include setHelperList($display-properties, "!important");
+	@include setHelperList($align-items);
+	@include setHelperList($align-self);
 
-/*****************************************************
-Filters **********************************************/
-@include setHelperList($display-filters, "filter-", true);
+	/*****************************************************
+	Alignment ********************************************/
+	@include setHelperList($align-items);
+	@include setHelperList($align-self);
+	@include setHelperList($justify-content);
 
-/*****************************************************
-Text Transform Properties ****************************/
-@include setHelperList($text-transforms, "text-", true);
+	/*****************************************************
+	Filters **********************************************/
+	@include setHelperList($display-filters);
 
-/*****************************************************
-Others ***********************************************/
-.align.right {text-align: right !important;}
-.align.left {text-align: left !important;}
-.align.center {text-align: center !important;}
-.align.justify {text-align: justify !important;}
-.float.right {float: right;}
-.float.left {float: left;}
-.full.width {
-	width: 100%;
-	max-width: 100%;
-	min-width: 100%;
+	/*****************************************************
+	Text Transform Properties ****************************/
+	@include setHelperList($text-transforms);
+
+	/*****************************************************
+	Overflow Properties **********************************/
+	@include setHelperList($overflow-properties);
+
+	/*****************************************************
+	Position Properties **********************************/
+	@include setHelperList($position-properties);
+
+	/*****************************************************
+	Stack Order ******************************************/
+	@include setHelperListWithRange($z-indexes, $helper-z-indexes, null, "!important");
+
+	/*****************************************************
+	Others ***********************************************/
+	.align.right {text-align: right !important;}
+	.align.left {text-align: left !important;}
+	.align.center {text-align: center !important;}
+	.align.justify {text-align: justify !important;}
+	.float.right {float: right;}
+	.float.left {float: left;}
+	.full.width {
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+	.full.height {
+		height: 100%;
+		min-height: 100%;
+		max-height: 100%;
+	}
+	.fade {opacity: 0;}
+	.hide {display: none;}
+	/* seperator for flex */
+	.spacer {
+		flex-grow: 1!important;
+		outline: none;
+	}
+	.avatar {
+	    display: inline-block;
+	    border-radius: 50%;
+	}
+	.reset {
+		padding: 0 !important;
+		margin : 0 !important;
+	}
+	.reverse {
+		-webkit-transform:rotateY(180deg);
+		-moz-transform:rotateY(180deg);
+		-o-transform:rotateY(180deg);
+		-ms-transform:rotateY(180deg);
+		unicode-bidi:bidi-override;
+		direction:rtl;
+	}
+	.truncate {
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.transparent {background: transparent !important;}
+	.pure, .pure > div {background: transparent; border: none; box-shadow: none}
+	.bordered {border: $main-border-width $main-border-style $main-border-color !important;}
+	.borderless {border: none !important;}
+	.rounded {border-radius: $main-border-radius;}
+	.radiusless {border-radius:0 !important;}
+	.shadowed {@include shadow();}
+	.shadowless {box-shadow:none !important;}
+	.inset-0 {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.inset-auto {
+		top: auto;
+		right: auto;
+		bottom: auto;
+		left: auto;
+	}
 }
-.full.height {
-	height: 100%;
-	min-height: 100%;
-	max-height: 100%;
-}
-.fade {opacity: 0;}
-.hide {display: none;}
-/* seperator for flex */
-.spacer {
-	flex-grow: 1!important;
-	outline: none;
-}
-.avatar {
-    display: inline-block;
-    border-radius: 50%;
-}
-.reset {
-	padding: 0 !important;
-	margin : 0 !important;
-}
-.reverse {
-	-webkit-transform:rotateY(180deg);
-	-moz-transform:rotateY(180deg);
-	-o-transform:rotateY(180deg);
-	-ms-transform:rotateY(180deg);
-	unicode-bidi:bidi-override;
-	direction:rtl;
-}
-.truncate {
-	display: block;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.transparent {background: transparent !important;}
-.pure, .pure > div {background: transparent; border: none; box-shadow: none}
-.bordered {border: $main-border-width $main-border-style $main-border-color !important;}
-.borderless {border: none !important;}
-.rounded {border-radius: $main-border-radius;}
-.radiusless {border-radius:0 !important;}
-.shadowed {@include shadow();}
-.shadowless {box-shadow:none !important;}
