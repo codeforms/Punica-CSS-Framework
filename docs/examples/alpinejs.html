@@ -1,0 +1,247 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Alpine.js - Examples : Punica CSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' type='text/css' href='../css/syntaxhighlighter.css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.5.20/dist/punica.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+	<header class="navbar fixed light shadowed">
+		<div class="container">
+			<input type="checkbox" id="burger">
+			<section class="brand mr-50 ml-20">
+				<a href="../" title="Punica CSS">
+					<img src="../images/logo.png">
+				</a>
+			</section>
+			<section class="links ml-50">
+				<div class="section">
+					<div class="buttons">
+						<div class="dropdown">
+							<a class="button toggle" tabindex="0">
+								Base <span class="material-icons">keyboard_arrow_down</span>
+							</a>
+							<ul class="menu">
+								<li class="item"><a href="../base/introduction.html">Introduction</a></li>
+								<li class="item"><a href="../base/colors.html"">Color Palette</a></li>
+								<li class="item"><a href="../base/grid.html">Grid</a></li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<a class="button toggle" tabindex="0">
+								Elements <span class="material-icons">keyboard_arrow_down</span>
+							</a>
+							<ul class="menu">
+								<li class="item"><a href="../elements/button.html">Button & Dropdown</a></li>
+								<li class="item"><a href="../elements/form.html">Form</a></li>
+								<li class="item"><a href="../elements/icon.html">Icon</a></li>
+								<li class="item"><a href="../elements/label.html">Label</a></li>
+								<li class="item"><a href="../elements/table.html">Table</a></li>
+								<li class="item"><a href="../elements/typography.html">Typography</a></li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<a class="button toggle" tabindex="0">
+								Components <span class="material-icons">keyboard_arrow_down</span>
+							</a>
+							<ul class="menu">
+								<li class="item"><a href="../components/alert.html">Alert</a></li>
+								<li class="item"><a href="../components/badge.html">Badge</a></li>
+								<li class="item"><a href="../components/billboard.html">Billboard</a></li>
+								<li class="item"><a href="../components/breadcrumb.html">Breadcrumbs</a></li>
+								<li class="item"><a href="../components/card.html">Card</a></li>
+								<li class="item"><a href="../components/list.html">List</a></li>
+								<li class="item"><a href="../components/menu.html">Menu</a></li>
+								<li class="item"><a href="../components/navbar.html">Navbar</a></li>
+								<li class="item"><a href="../components/pagination.html">Pagination</a></li>
+								<li class="item"><a href="../components/panel.html">Panel</a></li>
+								<li class="item"><a href="../components/process.html">Process</a></li>
+								<li class="item"><a href="../components/progress.html">Progress</a></li>
+								<li class="item"><a href="../components/tabnav.html">Tabnav</a></li>
+								<li class="item"><a href="../components/timeline.html">Timeline</a></li>
+								<li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="buttons">
+						<div class="dropdown right">
+							<a class="button toggle active" tabindex="0">
+								<i class="material-icons mr-5 color-primary">toys</i> Examples <span class="material-icons">keyboard_arrow_down</span>
+							</a>
+							<ul class="menu">
+								<li class="item"><a href="./alpinejs.html" class="active">Alpine.js</a></li>
+								<li class="item"><a href="./pages.html">Pages</a></li>
+							</ul>
+						</div>
+						<a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank" class="button">
+							Changelog
+						</a>
+						<a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank" class="button">
+							Github
+						</a>
+					</div>
+				</div>
+			</section>
+			<label for="burger" class="burger"></label>
+		</div>
+	</header>
+
+	<div class="container navbar-spacer">
+		<div class="row">
+
+			<div class="col-lg-3 col-sm-16 col-xs-16">
+                <div class="divided pure menu">
+					<div class="title">Examples</div>
+					<div class="item">
+						<a href="./alpinejs.html" class="active">
+							<i class="material-icons">mic</i> Alpine.js
+						</a>
+					</div>
+					<div class="item">
+						<a href="./pages.html">
+							<i class="material-icons">format_paint</i> Pages
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-11 col-sm-16 col-xs-16">
+				<div class="container">
+					<div class="row">
+						<div class="col-16">
+
+							<div class="panel pure reset">
+								<div class="breadcrumb">
+									<a href="../" class="item">Punica</a>
+									<a href="" class="item">Examples</a>
+									<a href="" class="item active">Alpine.js</a>
+								</div>
+							</div>
+
+							<div class="panel pure">
+								<div class="content reset">
+									<div>
+										<span class="h1">
+											<i class="material-icons large-text mr-10">toys</i> Alpine.js Integration
+										</span> 
+										<span class="label small">
+											<i class="material-icons color-warning mr-5">error_outline</i> Optional
+										</span>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										You can easily integrate the <span class="fw-700">Punica</span> with the <a href="https://github.com/alpinejs/alpine" target="_blank" class="fw-700">Alpine.js</a> for javascript interactivities. Alpine.js is a rugged, minimal frontend development framework for adding JavaScript behavior to HTML markups.
+									</p>
+									<p>
+										If you want to add Alpine.js to your project, add the following script tag to the <head> section of your layout file.
+									</p>
+								</div>
+								<div class="header">
+									<div class="title">
+										HTML Markup
+									</div>
+								</div>
+								<div class="content">
+									<div id="highlighter_305594" class="syntaxhighlighter nogutter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;!DOCTYPE&nbsp;html&gt;</code></div><div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;Title&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">charset</code><code class="xml plain">=</code><code class="xml string">"utf-8"</code><code class="xml plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"viewport"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"width=device-width,&nbsp;initial-scale=1"</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">link</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"<a href="https://fonts.googleapis.com/icon?family=Material">https://fonts.googleapis.com/icon?family=Material</a>+Icons"</code>&nbsp;<code class="xml color1">rel</code><code class="xml plain">=</code><code class="xml string">"stylesheet"</code><code class="xml plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">link</code>&nbsp;<code class="xml color1">rel</code><code class="xml plain">=</code><code class="xml string">"stylesheet"</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"<a href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.5.20/dist/punica.min.css">https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.5.20/dist/punica.min.css</a>"</code>&nbsp;<code class="xml color1">crossorigin</code><code class="xml plain">=</code><code class="xml string">"anonymous"</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">script</code>&nbsp;<code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"<a href="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js">https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js</a>"</code>&nbsp;<code class="xml plain">defer&gt;&lt;/</code><code class="xml keyword">script</code><code class="xml plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div>
+								</div>
+							</div>
+
+							<div class="panel pure">
+                                <div class="header">
+                                    <div class="title">
+                                        Tab
+                                    </div>
+                                </div>
+								<div class="content">
+									<p>
+										Here's an example of using AlpineJS for "tab" functionality inside a Punica component's view.
+									</p>
+                                    <div x-data="{tab: 1}">
+										<div class="tab">
+											<a :class="{'active': tab == 1}" @click.prevent="tab = 1" href="#" class="button">Tab 1</a>
+											<a :class="{'active': tab == 2}" @click.prevent="tab = 2;" href="#" class="button">Tab 2</a>
+										</div>
+										<div class="panel pure reset full width">
+											<div class="content">
+												<div x-show="tab == 1">
+													Tab 1 Content
+												</div>
+												<div x-show="tab == 2">
+													Tab 2 Content
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="content reset">
+									<div id="highlighter_650522" class="syntaxhighlighter nogutter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-data</code><code class="xml plain">=</code><code class="xml string">"{tab:&nbsp;1}"</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"tab"</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">:class</code><code class="xml plain">=</code><code class="xml string">"{'active':&nbsp;tab&nbsp;==&nbsp;1}"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click.prevent</code><code class="xml plain">=</code><code class="xml string">"tab&nbsp;=&nbsp;1"</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"#"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"button"</code><code class="xml plain">&gt;Tab&nbsp;1&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">:class</code><code class="xml plain">=</code><code class="xml string">"{'active':&nbsp;tab&nbsp;==&nbsp;2}"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click.prevent</code><code class="xml plain">=</code><code class="xml string">"tab&nbsp;=&nbsp;2;"</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"#"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"button"</code><code class="xml plain">&gt;Tab&nbsp;2&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"panel&nbsp;pure&nbsp;reset&nbsp;full&nbsp;width"</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"content"</code><code class="xml plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"tab&nbsp;==&nbsp;1"</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Tab&nbsp;1&nbsp;Content</code></div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"tab&nbsp;==&nbsp;2"</code><code class="xml plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Tab&nbsp;2&nbsp;Content</code></div><div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number16 index15 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div>
+								</div>
+								<div class="header">
+                                    <div class="title">
+                                        Accordion
+                                    </div>
+                                </div>
+								<div class="content">
+									<div class="list divided" x-data="{selected:null}">
+										<div class="item cursor-pointer" @click="selected !== 0 ? selected = 0 : selected = null">
+											<div class="body">
+												<span class="h6 user-select-none">
+													Accordion Item 1
+												</span>
+											</div>
+										</div>
+										<div x-show="selected == 0" class="p-10 mb-30">
+											Accordion Item 1 Content
+										</div>
+										<div class="item cursor-pointer" @click="selected !== 1 ? selected = 1 : selected = null">
+											<div class="body">
+												<span class="h6 user-select-none">
+													Accordion Item 2
+												</span>
+											</div>
+										</div>
+										<div x-show="selected == 1" class="p-10 mb-30">
+											Accordion Item 2 Content
+										</div>
+										<div class="item cursor-pointer" @click="selected !== 2 ? selected = 2 : selected = null">
+											<div class="body">
+												<span class="h6 user-select-none">
+													Accordion Item 3
+												</span>
+											</div>
+										</div>
+										<div x-show="selected == 2" class="p-10 mb-30">
+											Accordion Item 3 Content
+										</div>
+									</div>
+								</div>
+								<div class="content reset">
+									<div id="highlighter_672821" class="syntaxhighlighter nogutter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"list&nbsp;divided"</code>&nbsp;<code class="xml color1">x-data</code><code class="xml plain">=</code><code class="xml string">"{selected:null}"</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"item&nbsp;cursor-pointer"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;!==&nbsp;0&nbsp;?&nbsp;selected&nbsp;=&nbsp;0&nbsp;:&nbsp;selected&nbsp;=&nbsp;null"</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"body"</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"h6&nbsp;user-select-none"</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;1</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">span</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;==&nbsp;0"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"p-10&nbsp;mb-30"</code><code class="xml plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;1&nbsp;Content</code></div><div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"item&nbsp;cursor-pointer"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;!==&nbsp;1&nbsp;?&nbsp;selected&nbsp;=&nbsp;1&nbsp;:&nbsp;selected&nbsp;=&nbsp;null"</code><code class="xml plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"body"</code><code class="xml plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"h6&nbsp;user-select-none"</code><code class="xml plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;2</code></div><div class="line number16 index15 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">span</code><code class="xml plain">&gt;</code></div><div class="line number17 index16 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number18 index17 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number19 index18 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;==&nbsp;1"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"p-10&nbsp;mb-30"</code><code class="xml plain">&gt;</code></div><div class="line number20 index19 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;2&nbsp;Content</code></div><div class="line number21 index20 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number22 index21 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"item&nbsp;cursor-pointer"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;!==&nbsp;2&nbsp;?&nbsp;selected&nbsp;=&nbsp;2&nbsp;:&nbsp;selected&nbsp;=&nbsp;null"</code><code class="xml plain">&gt;</code></div><div class="line number23 index22 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"body"</code><code class="xml plain">&gt;</code></div><div class="line number24 index23 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"h6&nbsp;user-select-none"</code><code class="xml plain">&gt;</code></div><div class="line number25 index24 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;3</code></div><div class="line number26 index25 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">span</code><code class="xml plain">&gt;</code></div><div class="line number27 index26 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number28 index27 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number29 index28 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;==&nbsp;2"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"p-10&nbsp;mb-30"</code><code class="xml plain">&gt;</code></div><div class="line number30 index29 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;3&nbsp;Content</code></div><div class="line number31 index30 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number32 index31 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row align center mt-50 mb-50">
+		<div class="col-16">
+			Designed and developed by <a href="https://github.com/codeforms" class="fw-900" target="_blank">CodeForms</a>. Punica CSS is
+			licensed under the <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"
+				target="_blank">MIT License</a>.
+		</div>
+	</div>
+</body>
+
+</html>

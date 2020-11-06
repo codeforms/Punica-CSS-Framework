@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='stylesheet' type='text/css' href='../css/syntaxhighlighter.css' />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.5.0/dist/punica.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.5.20/dist/punica.min.css">
 </head>
 
 <body>
@@ -71,6 +71,15 @@
 				</div>
 				<div class="section">
 					<div class="buttons">
+						<div class="dropdown right">
+							<a class="button toggle" tabindex="0">
+								<i class="material-icons mr-5 color-primary">toys</i> Examples <span class="material-icons">keyboard_arrow_down</span>
+							</a>
+							<ul class="menu">
+								<li class="item"><a href="../examples/alpinejs.html">AlpineJS</a></li>
+								<li class="item"><a href="../examples/pages.html">Pages</a></li>
+							</ul>
+						</div>
 						<a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank" class="button">
 							Changelog
 						</a>
@@ -222,7 +231,7 @@
 									</table>
 								</div>
 
-								<!-- Form Groups -->
+								<!-- Form -->
 								<div class="content">
 									<form class="form" autocomplete="off">
 										<div class="item">
@@ -239,22 +248,17 @@
 												<input id="phone" name="phone" type="text" placeholder="two items">
 											</div>
 											<div class="item">
-												<label for="colors">Choose a color:</label>
-												<select name="colors" id="colors">
-													<option value="black">Black</option>
-													<option value="white">White</option>
-													<option value="blue">Blue</option>
-													<option value="orange">Orange</option>
-												</select>
+												<label for="bdaymonth">Month</label>
+												<input type="month" id="bdaymonth" name="bdaymonth">
 											</div>
 										</div>
 										<div class="three items">
 											<div class="item">
-												<label for="phone">Phone</label>
-												<input id="phone" name="phone" type="text" placeholder="three items">
+												<label for="birthdaytime">Datetime Local</label>
+												<input type="datetime-local" id="birthdaytime" name="birthdaytime">
 											</div>
 											<div class="item">
-												<label for="colors">Choose a color:</label>
+												<label for="colors">Select</label>
 												<select name="colors" id="colors">
 													<option value="black">Black</option>
 													<option value="white">White</option>
@@ -267,22 +271,22 @@
 												<input type="color" id="color" value="#2ec4b6">
 											</div>
 										</div>
-										<div class="four items">
+										<div class="two items">
 											<div class="item">
-												<label for="firstname">First Name</label>
-												<input type="text" name="firstname" placeholder="four items" id="firstname">
+												<label for="appt">Time</label>
+												<input type="time" id="appt" name="appt">
 											</div>
 											<div class="item">
-												<label for="middle">Middle</label>
-												<input type="text" name="middle" placeholder="four items" id="middle">
+												<label for="birthday">Date</label>
+												<input type="date" id="birthday" name="birthday">
 											</div>
 											<div class="item">
-												<label for="lastname">Last Name</label>
-												<input type="text" name="lastname" placeholder="four items" id="lastname">
+												<label for="week">Week</label>
+												<input type="week" id="week" name="week">
 											</div>
 											<div class="item">
-												<label for="phone_number">Last Name</label>
-												<input type="text" name="phone_number" placeholder="four items" id="phone_number">
+												<label for="quantity">Number</label>
+												<input type="number" id="quantity" name="quantity" min="1" max="5">
 											</div>
 										</div>
 										<div class="two items">

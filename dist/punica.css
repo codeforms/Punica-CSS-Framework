@@ -4929,7 +4929,7 @@ a.button.secondary:focus i, a.button.secondary:focus [class^="material-icons"], 
   font-weight: 700;
 }
 
-input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='week'], input[type='file'], input:not([type]), textarea, select {
+input[type='color'], input[type='date'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='week'], input[type='file'], input:not([type]), textarea, select {
   -webkit-appearance: none;
   background-color: #fff;
   border: 1px solid #c6c6c6;
@@ -4949,19 +4949,19 @@ input[type='color'], input[type='date'], input[type='datetime'], input[type='dat
   font-size: 1.088em;
 }
 
-input[type='color']:focus, input[type='date']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='month']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, input[type='week']:focus, input[type='file']:focus, input:not([type]):focus, textarea:focus, select:focus {
+input[type='color']:focus, input[type='date']:focus, input[type='time']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='month']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, input[type='week']:focus, input[type='file']:focus, input:not([type]):focus, textarea:focus, select:focus {
   outline: 2px solid #414552;
   outline-offset: -2px;
   -webkit-transition: .35s;
   transition: .35s;
 }
 
-input[type='color'].success, input[type='date'].success, input[type='datetime'].success, input[type='datetime-local'].success, input[type='email'].success, input[type='month'].success, input[type='number'].success, input[type='password'].success, input[type='search'].success, input[type='tel'].success, input[type='text'].success, input[type='url'].success, input[type='week'].success, input[type='file'].success, input:not([type]).success, textarea.success, select.success {
+input[type='color'].success, input[type='date'].success, input[type='time'].success, input[type='datetime'].success, input[type='datetime-local'].success, input[type='email'].success, input[type='month'].success, input[type='number'].success, input[type='password'].success, input[type='search'].success, input[type='tel'].success, input[type='text'].success, input[type='url'].success, input[type='week'].success, input[type='file'].success, input:not([type]).success, textarea.success, select.success {
   color: #2ec4b6;
   outline-color: #2ec4b6;
 }
 
-input[type='color'].error, input[type='date'].error, input[type='datetime'].error, input[type='datetime-local'].error, input[type='email'].error, input[type='month'].error, input[type='number'].error, input[type='password'].error, input[type='search'].error, input[type='tel'].error, input[type='text'].error, input[type='url'].error, input[type='week'].error, input[type='file'].error, input:not([type]).error, textarea.error, select.error {
+input[type='color'].error, input[type='date'].error, input[type='time'].error, input[type='datetime'].error, input[type='datetime-local'].error, input[type='email'].error, input[type='month'].error, input[type='number'].error, input[type='password'].error, input[type='search'].error, input[type='tel'].error, input[type='text'].error, input[type='url'].error, input[type='week'].error, input[type='file'].error, input:not([type]).error, textarea.error, select.error {
   color: #d62828;
   outline-color: #d62828;
 }
@@ -5189,7 +5189,7 @@ input:disabled {
           flex: 0 0 calc(100% * (1 / 16) - (2 * 6px 6px 0.75em));
 }
 
-.form.small input[type='color'], .form.small input[type='date'], .form.small input[type='datetime'], .form.small input[type='datetime-local'], .form.small input[type='email'], .form.small input[type='month'], .form.small input[type='number'], .form.small input[type='password'], .form.small input[type='search'], .form.small input[type='tel'], .form.small input[type='text'], .form.small input[type='url'], .form.small input[type='week'], .form.small input[type='file'], .form.small input:not([type]), .form.small textarea, .form.small select {
+.form.small input[type='color'], .form.small input[type='date'], .form.small input[type='time'], .form.small input[type='datetime'], .form.small input[type='datetime-local'], .form.small input[type='email'], .form.small input[type='month'], .form.small input[type='number'], .form.small input[type='password'], .form.small input[type='search'], .form.small input[type='tel'], .form.small input[type='text'], .form.small input[type='url'], .form.small input[type='week'], .form.small input[type='file'], .form.small input:not([type]), .form.small textarea, .form.small select {
   height: 1.9rem;
   font-size: 1em;
 }
@@ -5204,7 +5204,7 @@ input:disabled {
   font-size: 1em;
 }
 
-.form.large input[type='color'], .form.large input[type='date'], .form.large input[type='datetime'], .form.large input[type='datetime-local'], .form.large input[type='email'], .form.large input[type='month'], .form.large input[type='number'], .form.large input[type='password'], .form.large input[type='search'], .form.large input[type='tel'], .form.large input[type='text'], .form.large input[type='url'], .form.large input[type='week'], .form.large input[type='file'], .form.large input:not([type]), .form.large textarea, .form.large select {
+.form.large input[type='color'], .form.large input[type='date'], .form.large input[type='time'], .form.large input[type='datetime'], .form.large input[type='datetime-local'], .form.large input[type='email'], .form.large input[type='month'], .form.large input[type='number'], .form.large input[type='password'], .form.large input[type='search'], .form.large input[type='tel'], .form.large input[type='text'], .form.large input[type='url'], .form.large input[type='week'], .form.large input[type='file'], .form.large input:not([type]), .form.large textarea, .form.large select {
   height: 2.9rem;
   font-size: 1.2em;
 }
@@ -5878,6 +5878,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 0 0.25em;
   vertical-align: middle;
   font-size: 1.4rem;
+  cursor: auto;
 }
 
 .breadcrumb a.item:first-child, .breadcrumb .item:first-child {
@@ -8171,10 +8172,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding-left: auto !important;
 }
 
-.centered {
-  margin: 0 auto;
-}
-
 .fw-100 {
   font-weight: 100 !important;
 }
@@ -8421,7 +8418,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
           align-items: flex-start;
 }
 
-.align-items-flex-end {
+.align-items-lex-end {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -8437,6 +8434,23 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+}
+
+.align-items-initial {
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+.align-items-inherit {
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
+.align-self-auto {
+  -ms-flex-item-align: auto;
+      align-self: auto;
 }
 
 .align-self-baseline {
@@ -8464,6 +8478,145 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
       align-self: stretch;
 }
 
+.align-self-initial {
+  -ms-flex-item-align: initial;
+      align-self: initial;
+}
+
+.align-self-inherit {
+  -ms-flex-item-align: inherit;
+      align-self: inherit;
+}
+
+.align-items-baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.align-items-flex-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.align-items-lex-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.align-items-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.align-items-initial {
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+.align-items-inherit {
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
+.align-self-auto {
+  -ms-flex-item-align: auto;
+      align-self: auto;
+}
+
+.align-self-baseline {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+.align-self-flex-start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.align-self-flex-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.align-self-center {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.align-self-stretch {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.align-self-initial {
+  -ms-flex-item-align: initial;
+      align-self: initial;
+}
+
+.align-self-inherit {
+  -ms-flex-item-align: inherit;
+      align-self: inherit;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-content-flex-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify-content-flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.justify-content-baseline {
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+}
+
+.justify-content-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-content-space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify-content-initial {
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+}
+
+.justify-content-inherit {
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+}
+
 .filter-invert {
   -webkit-filter: invert(100%);
           filter: invert(100%);
@@ -8484,6 +8637,197 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 
 .text-capitalize {
   text-transform: capitalize;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.position-static {
+  position: static;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.position-initial {
+  position: initial;
+}
+
+.position-inherit {
+  position: inherit;
+}
+
+.z--1 {
+  z-index: -1 !important;
+}
+
+.z-0 {
+  z-index: 0 !important;
+}
+
+.z-1 {
+  z-index: 1 !important;
+}
+
+.z-10 {
+  z-index: 10 !important;
+}
+
+.z-20 {
+  z-index: 20 !important;
+}
+
+.z-30 {
+  z-index: 30 !important;
+}
+
+.z-40 {
+  z-index: 40 !important;
+}
+
+.z-50 {
+  z-index: 50 !important;
+}
+
+.z-100 {
+  z-index: 100 !important;
+}
+
+.z-999 {
+  z-index: 999 !important;
+}
+
+.z-9999 {
+  z-index: 9999 !important;
+}
+
+.flex-direction-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.flex-direction-initial {
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+}
+
+.flex-direction-inherit {
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
+}
+
+.user-select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.user-select-auto {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+}
+
+.user-select-text {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.user-select-all {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all;
+}
+
+.centered {
+  margin: 0 auto;
 }
 
 .align.right {
@@ -8598,4 +8942,18 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
 .shadowless {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.inset-auto {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
 }
