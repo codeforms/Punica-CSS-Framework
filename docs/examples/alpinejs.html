@@ -8,7 +8,8 @@
 	<link rel='stylesheet' type='text/css' href='../css/syntaxhighlighter.css' />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.5.20/dist/punica.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </head>
 
 <body>
@@ -165,25 +166,15 @@
 									<p>
 										Here's an example of using AlpineJS for "tab" functionality inside a Punica component's view.
 									</p>
-                                    <div x-data="{tab: 1}">
-										<div class="tab">
-											<a :class="{'active': tab == 1}" @click.prevent="tab = 1" href="#" class="button">Tab 1</a>
-											<a :class="{'active': tab == 2}" @click.prevent="tab = 2;" href="#" class="button">Tab 2</a>
-										</div>
-										<div class="panel pure reset full width">
-											<div class="content">
-												<div x-show="tab == 1">
-													Tab 1 Content
-												</div>
-												<div x-show="tab == 2">
-													Tab 2 Content
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="content reset">
-									<div id="highlighter_650522" class="syntaxhighlighter nogutter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-data</code><code class="xml plain">=</code><code class="xml string">"{tab:&nbsp;1}"</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"tab"</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">:class</code><code class="xml plain">=</code><code class="xml string">"{'active':&nbsp;tab&nbsp;==&nbsp;1}"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click.prevent</code><code class="xml plain">=</code><code class="xml string">"tab&nbsp;=&nbsp;1"</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"#"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"button"</code><code class="xml plain">&gt;Tab&nbsp;1&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">:class</code><code class="xml plain">=</code><code class="xml string">"{'active':&nbsp;tab&nbsp;==&nbsp;2}"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click.prevent</code><code class="xml plain">=</code><code class="xml string">"tab&nbsp;=&nbsp;2;"</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"#"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"button"</code><code class="xml plain">&gt;Tab&nbsp;2&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"panel&nbsp;pure&nbsp;reset&nbsp;full&nbsp;width"</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"content"</code><code class="xml plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"tab&nbsp;==&nbsp;1"</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Tab&nbsp;1&nbsp;Content</code></div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"tab&nbsp;==&nbsp;2"</code><code class="xml plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Tab&nbsp;2&nbsp;Content</code></div><div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number16 index15 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div>
+									<p class="codepen" data-height="480" data-theme-id="dark" data-default-tab="result" data-user="underlinewords"
+										data-slug-hash="WNxaNRO"
+										style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+										data-pen-title="Punica CSS + Alpine.js Tab">
+										<span>See the Pen <a href="https://codepen.io/underlinewords/pen/WNxaNRO">
+												Punica CSS + Alpine.js Tab</a> by Fatih Kececi (<a
+												href="https://codepen.io/underlinewords">@underlinewords</a>)
+											on <a href="https://codepen.io">CodePen</a>.</span>
+									</p>
 								</div>
 								<div class="header">
                                     <div class="title">
@@ -191,41 +182,31 @@
                                     </div>
                                 </div>
 								<div class="content">
-									<div class="list divided" x-data="{selected:null}">
-										<div class="item cursor-pointer" @click="selected !== 0 ? selected = 0 : selected = null">
-											<div class="body">
-												<span class="h6 user-select-none">
-													Accordion Item 1
-												</span>
-											</div>
-										</div>
-										<div x-show="selected == 0" class="p-10 mb-30">
-											Accordion Item 1 Content
-										</div>
-										<div class="item cursor-pointer" @click="selected !== 1 ? selected = 1 : selected = null">
-											<div class="body">
-												<span class="h6 user-select-none">
-													Accordion Item 2
-												</span>
-											</div>
-										</div>
-										<div x-show="selected == 1" class="p-10 mb-30">
-											Accordion Item 2 Content
-										</div>
-										<div class="item cursor-pointer" @click="selected !== 2 ? selected = 2 : selected = null">
-											<div class="body">
-												<span class="h6 user-select-none">
-													Accordion Item 3
-												</span>
-											</div>
-										</div>
-										<div x-show="selected == 2" class="p-10 mb-30">
-											Accordion Item 3 Content
-										</div>
+									<p class="codepen" data-height="480" data-theme-id="dark" data-default-tab="result" data-user="underlinewords"
+										data-slug-hash="LYZgYyK"
+										style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+										data-pen-title="Punica CSS + Alpine.js Accordion">
+										<span>See the Pen <a href="https://codepen.io/underlinewords/pen/LYZgYyK">
+												Punica CSS + Alpine.js Accordion</a> by Fatih Kececi (<a
+												href="https://codepen.io/underlinewords">@underlinewords</a>)
+											on <a href="https://codepen.io">CodePen</a>.</span>
+									</p>
+								</div>
+								<div class="header">
+									<div class="title">
+										Modal
 									</div>
 								</div>
-								<div class="content reset">
-									<div id="highlighter_672821" class="syntaxhighlighter nogutter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"list&nbsp;divided"</code>&nbsp;<code class="xml color1">x-data</code><code class="xml plain">=</code><code class="xml string">"{selected:null}"</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"item&nbsp;cursor-pointer"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;!==&nbsp;0&nbsp;?&nbsp;selected&nbsp;=&nbsp;0&nbsp;:&nbsp;selected&nbsp;=&nbsp;null"</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"body"</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"h6&nbsp;user-select-none"</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;1</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">span</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;==&nbsp;0"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"p-10&nbsp;mb-30"</code><code class="xml plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;1&nbsp;Content</code></div><div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"item&nbsp;cursor-pointer"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;!==&nbsp;1&nbsp;?&nbsp;selected&nbsp;=&nbsp;1&nbsp;:&nbsp;selected&nbsp;=&nbsp;null"</code><code class="xml plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"body"</code><code class="xml plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"h6&nbsp;user-select-none"</code><code class="xml plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;2</code></div><div class="line number16 index15 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">span</code><code class="xml plain">&gt;</code></div><div class="line number17 index16 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number18 index17 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number19 index18 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;==&nbsp;1"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"p-10&nbsp;mb-30"</code><code class="xml plain">&gt;</code></div><div class="line number20 index19 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;2&nbsp;Content</code></div><div class="line number21 index20 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number22 index21 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"item&nbsp;cursor-pointer"</code>&nbsp;<code class="xml plain">@</code><code class="xml color1">click</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;!==&nbsp;2&nbsp;?&nbsp;selected&nbsp;=&nbsp;2&nbsp;:&nbsp;selected&nbsp;=&nbsp;null"</code><code class="xml plain">&gt;</code></div><div class="line number23 index22 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"body"</code><code class="xml plain">&gt;</code></div><div class="line number24 index23 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">span</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"h6&nbsp;user-select-none"</code><code class="xml plain">&gt;</code></div><div class="line number25 index24 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;3</code></div><div class="line number26 index25 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">span</code><code class="xml plain">&gt;</code></div><div class="line number27 index26 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number28 index27 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number29 index28 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">x-show</code><code class="xml plain">=</code><code class="xml string">"selected&nbsp;==&nbsp;2"</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"p-10&nbsp;mb-30"</code><code class="xml plain">&gt;</code></div><div class="line number30 index29 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Accordion&nbsp;Item&nbsp;3&nbsp;Content</code></div><div class="line number31 index30 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number32 index31 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div>
+								<div class="content">
+									<p class="codepen" data-height="480" data-theme-id="dark" data-default-tab="result" data-user="underlinewords"
+										data-slug-hash="WNxaNNR"
+										style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+										data-pen-title="Punica CSS + Alpine.js Modal">
+										<span>See the Pen <a href="https://codepen.io/underlinewords/pen/WNxaNNR">
+												Punica CSS + Alpine.js Modal</a> by Fatih Kececi (<a
+												href="https://codepen.io/underlinewords">@underlinewords</a>)
+											on <a href="https://codepen.io">CodePen</a>.</span>
+									</p>
 								</div>
 							</div>
 						</div>
