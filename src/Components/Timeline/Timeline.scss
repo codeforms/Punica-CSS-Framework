@@ -83,22 +83,15 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 					display: flex;
 					flex-wrap: wrap;
 					@include embedded-media();
+					img {
+						display: block;
+					}
 				}
 				//
-				// > MEDIA GROUP
+				// MEDIA GROUP
 				//
 				@if $components-timeline-media-group {
-					@each $name, $number in $grids {
-						.#{$timeline-media}.#{$name} {
-							padding-bottom: initial !important;
-							height: auto;
-							&>div, &>a {
-								flex: 0 0 calc(100% * (1 / #{$number}));
-								flex-grow: 1;
-								padding: 1px;
-							}
-						}
-					}
+					@include media-group-specs($timeline-media);
 				}
 			}
 			.#{$timeline-actions} {

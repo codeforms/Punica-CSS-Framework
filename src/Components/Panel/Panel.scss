@@ -56,22 +56,15 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 					flex-wrap: wrap;
 					display: flex;
 					@include embedded-media();
+					img {
+						display: block;
+					}
 				}
 				//
 				// MEDIA GROUP
 				//
 				@if $components-panel-media-group {
-					@each $name, $number in $grids {
-						.#{$panel-media}.#{$name} {
-							padding-bottom: initial !important;
-							height: auto;
-							&>div, &>a {
-								flex: 0 0 calc(100% * (1 / #{$number}));
-								flex-grow: 1;
-								padding: 1px;
-							}
-						}
-					}
+					@include media-group-specs($panel-media);
 				}
 			}
 			.#{$panel-headline},

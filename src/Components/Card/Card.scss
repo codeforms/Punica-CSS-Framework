@@ -50,9 +50,23 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 			flex: 1 1 auto;
 			color: $main-font-color;
 		}
-		&>.#{$card-media} {
-			img {
-				display: block;
+		//
+		// MEDIA
+		//
+		@if $components-card-media {
+			&>.#{$card-media} {
+				flex-wrap: wrap;
+				display: flex;
+				@include embedded-media();
+				img {
+					display: block;
+				}
+			}
+			//
+			// MEDIA GROUP
+			//
+			@if $components-card-media-group {
+				@include media-group-specs($card-media, 0px);
 			}
 		}
 		//
@@ -64,12 +78,17 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 				width: 100%;
 				align-items: center;
 				margin-bottom: 15px;
-				>.#{$card-media} {
-					display: flex;
-					align-self: normal;
-					img	{
-						width: auto;
-						object-fit: cover
+				//
+				// MEDIA
+				//
+				@if $components-card-media {
+					>.#{$card-media} {
+						display: flex;
+						align-self: normal;
+						img	{
+							width: auto;
+							object-fit: cover
+						}
 					}
 				}
 				>.#{$card-body} {

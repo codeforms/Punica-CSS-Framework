@@ -60,7 +60,7 @@ $button-secondary-bg-img-hover	: linear-gradient(to bottom, #e1e1e1 0%,#e1e1e1 1
 
 /*****************************************************
 SIZES ************************************************/
-// name, font-size, padding, font-weight
+// size name, font-size, padding, font-weight
 $button-sizes: (
 	("tiny", .809em, .415rem .5rem, $button-font-weight),
 	("mini", .909em, .445rem .9rem, $button-font-weight),
@@ -70,7 +70,7 @@ $button-sizes: (
 );
 /*****************************************************
 STYLES ***********************************************/
-// name, bg color, text color, bg image, bg img hover
+// name, color
 $button-styles: (
 	('primary', $primary-color),
 	('success', $success-color),
