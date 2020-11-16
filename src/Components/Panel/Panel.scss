@@ -28,6 +28,12 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 			min-height: $panel-title-min-height;
 			border-bottom: $panel-title-bottom-border;
 			padding: $panel-title-padding;
+			&.dashed {
+				border-bottom-style: dashed;
+			}
+			&.dotted {
+				border-bottom-style: dotted;
+			}
 			.#{$panel-title} {
 				font-size: $panel-title-font-size;
 				font-weight: $panel-title-font-weight;

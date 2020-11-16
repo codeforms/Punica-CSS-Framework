@@ -42,7 +42,10 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 	    		margin-left: auto;
     		    width: auto;
     		    margin-left: $list-margin-spacer;
-	    	}
+			}
+			&.#{$list-active} {
+				background: $menu-item-hover-bg;
+			}
 		}
 		//
 		// DIVIDED
