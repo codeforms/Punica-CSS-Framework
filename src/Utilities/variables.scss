@@ -21,7 +21,7 @@ $margin-helpers: (
 /* 
 Padding ************************************/
 $padding-helpers: (
-	// class name (prefix), property, value-type
+	// class name (prefix), property
     ("p-", "padding"),
     ("pt-", "padding-top"),
     ("pr-", "padding-right"),
@@ -32,6 +32,7 @@ $padding-helpers: (
 /* 
 Font Weight ************************************/
 $font-weights: (
+	// class name (prefix), property
 	"fw-": "font-weight"
 );
 
@@ -194,6 +195,7 @@ $position-properties: (
 /* 
 Stack Order (z-index) **********************************/
 $z-indexes: (
+	// class name, property
 	"z-": "z-index"
 );
 

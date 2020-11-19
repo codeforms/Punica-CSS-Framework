@@ -57,7 +57,6 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 			&>.#{$card-media} {
 				flex-wrap: wrap;
 				display: flex;
-				@include embedded-media();
 				img {
 					display: block;
 				}
@@ -66,7 +65,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 			// MEDIA GROUP
 			//
 			@if $components-card-media-group {
-				@include media-group-specs($card-media, 0px);
+				@include media-group-specs($card-media, 0);
 			}
 		}
 		//
@@ -85,6 +84,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 					>.#{$card-media} {
 						display: flex;
 						align-self: normal;
+						width: 100%;
 						img	{
 							width: auto;
 							object-fit: cover

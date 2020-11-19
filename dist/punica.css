@@ -5009,18 +5009,9 @@ input:disabled {
   padding: 0 16px;
 }
 
-.form .items {
-  margin: 6px 0 0.75em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .form .item {
   height: auto;
-  margin: 6px 6px 0.75em;
+  margin: 6px 0 0.75em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -5097,6 +5088,19 @@ input:disabled {
 .form .group > .button:last-child:not(:first-child), .form .item > .group > .button:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+}
+
+.form .items {
+  margin: 6px 0 0.75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form .items > .item {
+  margin: 6px 6px 0.75em;
 }
 
 .form .two.items > .item {
@@ -6091,8 +6095,241 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   color: #3f4143;
 }
 
+.card > .media {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .card > .media img {
   display: block;
+}
+
+.card > .media.two {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.two > div, .card > .media.two > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 2));
+          flex: 0 0 calc(100% * (1 / 2));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.three {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.three > div, .card > .media.three > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 3));
+          flex: 0 0 calc(100% * (1 / 3));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.four {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.four > div, .card > .media.four > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 4));
+          flex: 0 0 calc(100% * (1 / 4));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.five {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.five > div, .card > .media.five > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 5));
+          flex: 0 0 calc(100% * (1 / 5));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.six {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.six > div, .card > .media.six > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 6));
+          flex: 0 0 calc(100% * (1 / 6));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.seven {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.seven > div, .card > .media.seven > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 7));
+          flex: 0 0 calc(100% * (1 / 7));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.eight {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.eight > div, .card > .media.eight > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 8));
+          flex: 0 0 calc(100% * (1 / 8));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.nine {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.nine > div, .card > .media.nine > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 9));
+          flex: 0 0 calc(100% * (1 / 9));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.ten {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.ten > div, .card > .media.ten > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 10));
+          flex: 0 0 calc(100% * (1 / 10));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.eleven {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.eleven > div, .card > .media.eleven > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 11));
+          flex: 0 0 calc(100% * (1 / 11));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.twelve {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.twelve > div, .card > .media.twelve > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 12));
+          flex: 0 0 calc(100% * (1 / 12));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.thirteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.thirteen > div, .card > .media.thirteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 13));
+          flex: 0 0 calc(100% * (1 / 13));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.fourteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.fourteen > div, .card > .media.fourteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 14));
+          flex: 0 0 calc(100% * (1 / 14));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.fifteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.fifteen > div, .card > .media.fifteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 15));
+          flex: 0 0 calc(100% * (1 / 15));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.card > .media.sixteen {
+  padding-bottom: initial !important;
+  height: auto;
+}
+
+.card > .media.sixteen > div, .card > .media.sixteen > a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% * (1 / 16));
+          flex: 0 0 calc(100% * (1 / 16));
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
 }
 
 .card.horizontal {
@@ -6113,6 +6350,7 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   display: flex;
   -ms-flex-item-align: normal;
       align-self: normal;
+  width: 100%;
 }
 
 .card.horizontal > .media img {
@@ -6206,6 +6444,10 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   margin-left: auto;
   width: auto;
   margin-left: 1rem;
+}
+
+.list > .item.active {
+  background: #f0f0f0;
 }
 
 .list.divided > .item {
@@ -6648,6 +6890,14 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 24px;
 }
 
+.panel .header.dashed {
+  border-bottom-style: dashed;
+}
+
+.panel .header.dotted {
+  border-bottom-style: dotted;
+}
+
 .panel .header .title {
   font-size: 1.358rem;
   font-weight: 900;
@@ -6690,7 +6940,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-left: 0;
 }
 
 .panel .content > .media video {
@@ -6700,12 +6949,16 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
           box-sizing: border-box;
 }
 
-.panel .content .media.two {
+.panel .content > .media img {
+  display: block;
+}
+
+.panel .content > .media.two {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.two > div, .panel .content .media.two > a {
+.panel .content > .media.two > div, .panel .content > .media.two > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 2));
           flex: 0 0 calc(100% * (1 / 2));
@@ -6715,12 +6968,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.three {
+.panel .content > .media.three {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.three > div, .panel .content .media.three > a {
+.panel .content > .media.three > div, .panel .content > .media.three > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 3));
           flex: 0 0 calc(100% * (1 / 3));
@@ -6730,12 +6983,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.four {
+.panel .content > .media.four {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.four > div, .panel .content .media.four > a {
+.panel .content > .media.four > div, .panel .content > .media.four > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 4));
           flex: 0 0 calc(100% * (1 / 4));
@@ -6745,12 +6998,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.five {
+.panel .content > .media.five {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.five > div, .panel .content .media.five > a {
+.panel .content > .media.five > div, .panel .content > .media.five > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 5));
           flex: 0 0 calc(100% * (1 / 5));
@@ -6760,12 +7013,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.six {
+.panel .content > .media.six {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.six > div, .panel .content .media.six > a {
+.panel .content > .media.six > div, .panel .content > .media.six > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 6));
           flex: 0 0 calc(100% * (1 / 6));
@@ -6775,12 +7028,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.seven {
+.panel .content > .media.seven {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.seven > div, .panel .content .media.seven > a {
+.panel .content > .media.seven > div, .panel .content > .media.seven > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 7));
           flex: 0 0 calc(100% * (1 / 7));
@@ -6790,12 +7043,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.eight {
+.panel .content > .media.eight {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.eight > div, .panel .content .media.eight > a {
+.panel .content > .media.eight > div, .panel .content > .media.eight > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 8));
           flex: 0 0 calc(100% * (1 / 8));
@@ -6805,12 +7058,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.nine {
+.panel .content > .media.nine {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.nine > div, .panel .content .media.nine > a {
+.panel .content > .media.nine > div, .panel .content > .media.nine > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 9));
           flex: 0 0 calc(100% * (1 / 9));
@@ -6820,12 +7073,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.ten {
+.panel .content > .media.ten {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.ten > div, .panel .content .media.ten > a {
+.panel .content > .media.ten > div, .panel .content > .media.ten > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 10));
           flex: 0 0 calc(100% * (1 / 10));
@@ -6835,12 +7088,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.eleven {
+.panel .content > .media.eleven {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.eleven > div, .panel .content .media.eleven > a {
+.panel .content > .media.eleven > div, .panel .content > .media.eleven > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 11));
           flex: 0 0 calc(100% * (1 / 11));
@@ -6850,12 +7103,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.twelve {
+.panel .content > .media.twelve {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.twelve > div, .panel .content .media.twelve > a {
+.panel .content > .media.twelve > div, .panel .content > .media.twelve > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 12));
           flex: 0 0 calc(100% * (1 / 12));
@@ -6865,12 +7118,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.thirteen {
+.panel .content > .media.thirteen {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.thirteen > div, .panel .content .media.thirteen > a {
+.panel .content > .media.thirteen > div, .panel .content > .media.thirteen > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 13));
           flex: 0 0 calc(100% * (1 / 13));
@@ -6880,12 +7133,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.fourteen {
+.panel .content > .media.fourteen {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.fourteen > div, .panel .content .media.fourteen > a {
+.panel .content > .media.fourteen > div, .panel .content > .media.fourteen > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 14));
           flex: 0 0 calc(100% * (1 / 14));
@@ -6895,12 +7148,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.fifteen {
+.panel .content > .media.fifteen {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.fifteen > div, .panel .content .media.fifteen > a {
+.panel .content > .media.fifteen > div, .panel .content > .media.fifteen > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 15));
           flex: 0 0 calc(100% * (1 / 15));
@@ -6910,12 +7163,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.panel .content .media.sixteen {
+.panel .content > .media.sixteen {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.panel .content .media.sixteen > div, .panel .content .media.sixteen > a {
+.panel .content > .media.sixteen > div, .panel .content > .media.sixteen > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 16));
           flex: 0 0 calc(100% * (1 / 16));
@@ -7517,7 +7770,6 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-left: 0;
 }
 
 .timeline .activity .media video {
@@ -7527,12 +7779,16 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
           box-sizing: border-box;
 }
 
-.timeline .activity .media.two {
+.timeline .activity .media img {
+  display: block;
+}
+
+.timeline .activity > .media.two {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.two > div, .timeline .activity .media.two > a {
+.timeline .activity > .media.two > div, .timeline .activity > .media.two > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 2));
           flex: 0 0 calc(100% * (1 / 2));
@@ -7542,12 +7798,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.three {
+.timeline .activity > .media.three {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.three > div, .timeline .activity .media.three > a {
+.timeline .activity > .media.three > div, .timeline .activity > .media.three > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 3));
           flex: 0 0 calc(100% * (1 / 3));
@@ -7557,12 +7813,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.four {
+.timeline .activity > .media.four {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.four > div, .timeline .activity .media.four > a {
+.timeline .activity > .media.four > div, .timeline .activity > .media.four > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 4));
           flex: 0 0 calc(100% * (1 / 4));
@@ -7572,12 +7828,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.five {
+.timeline .activity > .media.five {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.five > div, .timeline .activity .media.five > a {
+.timeline .activity > .media.five > div, .timeline .activity > .media.five > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 5));
           flex: 0 0 calc(100% * (1 / 5));
@@ -7587,12 +7843,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.six {
+.timeline .activity > .media.six {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.six > div, .timeline .activity .media.six > a {
+.timeline .activity > .media.six > div, .timeline .activity > .media.six > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 6));
           flex: 0 0 calc(100% * (1 / 6));
@@ -7602,12 +7858,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.seven {
+.timeline .activity > .media.seven {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.seven > div, .timeline .activity .media.seven > a {
+.timeline .activity > .media.seven > div, .timeline .activity > .media.seven > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 7));
           flex: 0 0 calc(100% * (1 / 7));
@@ -7617,12 +7873,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.eight {
+.timeline .activity > .media.eight {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.eight > div, .timeline .activity .media.eight > a {
+.timeline .activity > .media.eight > div, .timeline .activity > .media.eight > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 8));
           flex: 0 0 calc(100% * (1 / 8));
@@ -7632,12 +7888,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.nine {
+.timeline .activity > .media.nine {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.nine > div, .timeline .activity .media.nine > a {
+.timeline .activity > .media.nine > div, .timeline .activity > .media.nine > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 9));
           flex: 0 0 calc(100% * (1 / 9));
@@ -7647,12 +7903,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.ten {
+.timeline .activity > .media.ten {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.ten > div, .timeline .activity .media.ten > a {
+.timeline .activity > .media.ten > div, .timeline .activity > .media.ten > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 10));
           flex: 0 0 calc(100% * (1 / 10));
@@ -7662,12 +7918,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.eleven {
+.timeline .activity > .media.eleven {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.eleven > div, .timeline .activity .media.eleven > a {
+.timeline .activity > .media.eleven > div, .timeline .activity > .media.eleven > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 11));
           flex: 0 0 calc(100% * (1 / 11));
@@ -7677,12 +7933,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.twelve {
+.timeline .activity > .media.twelve {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.twelve > div, .timeline .activity .media.twelve > a {
+.timeline .activity > .media.twelve > div, .timeline .activity > .media.twelve > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 12));
           flex: 0 0 calc(100% * (1 / 12));
@@ -7692,12 +7948,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.thirteen {
+.timeline .activity > .media.thirteen {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.thirteen > div, .timeline .activity .media.thirteen > a {
+.timeline .activity > .media.thirteen > div, .timeline .activity > .media.thirteen > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 13));
           flex: 0 0 calc(100% * (1 / 13));
@@ -7707,12 +7963,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.fourteen {
+.timeline .activity > .media.fourteen {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.fourteen > div, .timeline .activity .media.fourteen > a {
+.timeline .activity > .media.fourteen > div, .timeline .activity > .media.fourteen > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 14));
           flex: 0 0 calc(100% * (1 / 14));
@@ -7722,12 +7978,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.fifteen {
+.timeline .activity > .media.fifteen {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.fifteen > div, .timeline .activity .media.fifteen > a {
+.timeline .activity > .media.fifteen > div, .timeline .activity > .media.fifteen > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 15));
           flex: 0 0 calc(100% * (1 / 15));
@@ -7737,12 +7993,12 @@ a.label > i, a.label > .material-icons, .label > i, .label > .material-icons {
   padding: 1px;
 }
 
-.timeline .activity .media.sixteen {
+.timeline .activity > .media.sixteen {
   padding-bottom: initial !important;
   height: auto;
 }
 
-.timeline .activity .media.sixteen > div, .timeline .activity .media.sixteen > a {
+.timeline .activity > .media.sixteen > div, .timeline .activity > .media.sixteen > a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% * (1 / 16));
           flex: 0 0 calc(100% * (1 / 16));
