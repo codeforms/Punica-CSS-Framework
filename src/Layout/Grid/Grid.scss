@@ -7,8 +7,7 @@ PUNICA CSS > LAYOUT : GRID ****************************************/
 	.#{$container} {
 		width: $container-width;
 		margin: 0 auto;
-		padding-left: $container-padding;
-		padding-right: $container-padding;
+		padding: 0 $container-padding;
 	}
 	.#{$row} {
 		display: grid;
@@ -30,8 +29,7 @@ PUNICA CSS > LAYOUT : GRID ****************************************/
 	}
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		.#{$container} {
-			padding-left: $container-padding / 3;
-			padding-right: $container-padding / 3;
+			padding: 0 ($container-padding / 3);
 		}
 	}
 	@each $label, $breakpoint in $viewports {
@@ -45,7 +43,7 @@ PUNICA CSS > LAYOUT : GRID ****************************************/
 				// OFFSET
 				//
 				@if $offset-feature {
-					@for $offset-id from 1 through $grid {
+					@for $offset-id from 2 through $grid {
 						.#{$column}-#{$label}-#{$id}.#{$offset}-#{$label}-#{$offset-id} {
 							grid-column: #{$offset-id} / span #{$id};
 						}
