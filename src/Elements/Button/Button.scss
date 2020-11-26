@@ -212,7 +212,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		.#{$dropdown-name} {
 			display: inline-block;
 			position: relative;
-			.#{$menu-name} {
+			&>.#{$menu-name} {
 				animation: slide-down .15s ease 1;
 				display: none;
 				left: 0;
@@ -221,38 +221,38 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				position: absolute;
 				top: 100%;
 				z-index: $menu-z-index + 1;
-				.#{$menu-item} {
+				&>.#{$menu-item} {
 					& > a {
 						padding: .1rem $menu-padding;
 					}
 				}
 			}
 			&.#{$dropdown-right} {
-				.#{$menu-name} {
+				&>.#{$menu-name} {
 					left: auto;
 					right: 0;
 				}
 			}
 			&.#{$dropdown-top} {
-				.#{$menu-name} {
+				&>.#{$menu-name} {
 					bottom: 100%;
 					top: auto;
 					@include shadow(0, -3px, 10px, rgba(0, 0, 0, 0.15));
 				}
 			}
-			&.#{$menu-item-active} .#{$menu-name},
-			.#{$dropdown-toggle}:focus + .#{$menu-name},
-			.#{$dropdown-toggle}:hover + .#{$menu-name},
-			.#{$menu-name}:focus,
-			.#{$menu-name}:hover {
+			&.#{$menu-item-active} > .#{$menu-name},
+			&>.#{$dropdown-toggle}:focus + .#{$menu-name},
+			&>.#{$dropdown-toggle}:hover + .#{$menu-name},
+			&>.#{$menu-name}:focus,
+			&>.#{$menu-name}:hover {
 				display: block;
 			}
 			//
 			// BUTTON GROUPS
 			//
 			@if $elements-button-group {
-				.#{$button-class-group} {
-					.#{$dropdown-toggle}:nth-last-child(2) {
+				&>.#{$button-class-group} {
+					&>.#{$dropdown-toggle}:nth-last-child(2) {
 						border-bottom-right-radius: $button-border-radius;
 						border-top-right-radius: $button-border-radius;
 					}
