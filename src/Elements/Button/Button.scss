@@ -148,7 +148,6 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				display: flex;
 				.#{$button-class} {
 					flex: 1 0 0;
-					flex-flow: column;
 				}
 			}
 			.#{$button-class-inactive} {
@@ -203,6 +202,52 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				//button-class-group
 				box-shadow: none;
 			}
+			//
+			// VERTICAL BUTTONS
+			//
+			@if $elements-button-group-vertical {
+				&.#{$button-class-group-vertical} {
+					flex-flow: column;
+					>.#{$button-class},
+					&.#{$button-class-block},
+					&.#{$button-class-block} > .#{$button-class},
+					&>.#{$dropdown-name} >.#{$button-class} {
+						width: 100%;
+					}
+					>.#{$button-class} {
+						border-radius: 0;
+						&:last-child:not(:first-child),
+						&:not(:first-child):not(:last-child) {
+							margin: -$button-border-width 0 0;
+						}
+					}
+					&.#{$button-class-block} {
+						display: inline-flex;
+					}
+					//
+					// DROPDOWN FOR VERTICAL BUTTONS
+					//
+					@if $elements-button-dropdown {
+						&>.#{$dropdown-name}:last-child:not(:first-child),
+						&>.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class},
+						&>.#{$dropdown-name}:not(:first-child):not(:last-child) > .#{$button-class} {
+							margin: -$button-border-width 0 0;
+							border-radius: 0;
+						}
+					}
+					//
+					// STYLES
+					//
+					@if $elements-button-styles {
+						@each $theme-name, $theme-color in $button-styles {
+							&>.#{$theme-name}.#{$button-class},
+							&>.#{$dropdown-name} > .#{$theme-name}.#{$button-class} {
+								border: $button-border-width solid darken($theme-color, 6%);
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	//
@@ -221,23 +266,68 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				position: absolute;
 				top: 100%;
 				z-index: $menu-z-index + 1;
+				width: auto;
 				&>.#{$menu-item} {
 					& > a {
 						padding: .1rem $menu-padding;
 					}
 				}
 			}
+			&.#{$dropdown-right},
+			&.#{$dropdown-left} {
+				&>.#{$menu-name} {
+					top: 0;
+				}
+			}
 			&.#{$dropdown-right} {
 				&>.#{$menu-name} {
+					left: 100%;
+					right: auto;
+				}
+			}
+			&.#{$dropdown-left} {
+				&>.#{$menu-name} {
 					left: auto;
-					right: 0;
+					right: 100%;
+				}
+			}
+			&.#{$dropdown-top}.#{$dropdown-left} {
+				&>.#{$menu-name} {
+					right: auto !important;
+					left: 0 !important;
+				}
+			}
+			&.#{$dropdown-top}.#{$dropdown-right} {
+				&>.#{$menu-name} {
+					right: 0 !important;
+					left: auto !important;
 				}
 			}
 			&.#{$dropdown-top} {
 				&>.#{$menu-name} {
 					bottom: 100%;
 					top: auto;
+					right: 0;
+					left: auto;
 					@include shadow(0, -3px, 10px, rgba(0, 0, 0, 0.15));
+				}
+			}
+			&.#{$dropdown-bottom}.#{$dropdown-left},
+			&.#{$dropdown-bottom}.#{$dropdown-right} {
+				&>.#{$menu-name} {
+					top: 100%;
+				}
+			}
+			&.#{$dropdown-bottom}.#{$dropdown-left} {
+				&>.#{$menu-name} {
+					right: auto !important;
+					left: 0 !important;
+				}
+			}
+			&.#{$dropdown-bottom}.#{$dropdown-right} {
+				&>.#{$menu-name} {
+					right: 0 !important;
+					left: auto !important;
 				}
 			}
 			&.#{$menu-item-active} > .#{$menu-name},

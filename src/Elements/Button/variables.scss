@@ -3,55 +3,58 @@ PUNICA CSS > ELEMENTS : BUTTON > VARIABLES ***********/
 
 /*****************************************************
 CLASS NAMING *****************************************/
-$button-class				: 'button';
+$button-class					: 'button';
 /* Static Button Styles */
-$button-class-link			: 'link';
-$button-secondary			: 'secondary';
+$button-class-link				: 'link';
+$button-secondary				: 'secondary';
 /* State of Active & Disabled */
-$button-class-active		: 'active';
-$button-class-disabled		: 'disabled';
-$button-class-inactive		: 'inactive';
-$button-class-block			: 'block';
-$button-class-group			: 'buttons';
-$button-class-invert		: 'invert';
+$button-class-active			: 'active';
+$button-class-disabled			: 'disabled';
+$button-class-inactive			: 'inactive';
+$button-class-block				: 'block';
+$button-class-group				: 'buttons';
+$button-class-group-vertical	: 'vertical';
+$button-class-invert			: 'invert';
 /* Dropdown */
-$dropdown-name				: 'dropdown';
-$dropdown-right				: 'right';
-$dropdown-top				: 'top';
-$dropdown-toggle			: 'toggle';
-$menu-secondary				: 'secondary';
+$dropdown-name					: 'dropdown';
+$dropdown-right					: 'right';
+$dropdown-left					: 'left';
+$dropdown-top					: 'top';
+$dropdown-bottom				: 'bottom';
+$dropdown-toggle				: 'toggle';
+$menu-secondary					: 'secondary';
 
 /*****************************************************
 PREFERENCES ******************************************/
 /* Text & Font Size */
-$button-font-family			: $main-font-family;
-$button-font-size			: 1em;
+$button-font-family				: $main-font-family;
+$button-font-size				: 1em;
 /* Color & Background */
-$button-bg-color			: #fff;
-$button-text-color			: $main-font-color;
-$button-bg-hover			: $main-hovered-bg;
-$button-hover-text-color	: $button-text-color;
-$button-bg-active			: $main-secondary-bg;
+$button-bg-color				: #fff;
+$button-text-color				: $main-font-color;
+$button-bg-hover				: $main-hovered-bg;
+$button-hover-text-color		: $button-text-color;
+$button-bg-active				: $main-secondary-bg;
 /* Shadow */
-$button-text-shadow 		: 0 1px 1px #fff;
-$button-shadow 				: none;
+$button-text-shadow 			: 0 1px 1px #fff;
+$button-shadow 					: none;
 /* Bg Image */
-$button-bg-image			: none;
-$button-bg-hover-image		: none;
+$button-bg-image				: none;
+$button-bg-hover-image			: none;
 /* Button Icon */
-$button-icon-color			: $button-text-color;
-$button-icon-shadow			: none;
+$button-icon-color				: $button-text-color;
+$button-icon-shadow				: none;
 /* Line Height & Weight */
-$button-line-height			: 1;
-$button-font-weight			: 700; // default button
+$button-line-height				: 1;
+$button-font-weight				: 700; // default button
 /* Border */
-$button-border-width		: 1px;
-$button-border-color		: #ccc;
-$button-border-radius		: 3px;
-$button-group-border-radius	: $button-border-radius;
+$button-border-width			: 1px;
+$button-border-color			: #ccc;
+$button-border-radius			: 3px;
+$button-group-border-radius		: $button-border-radius;
 /* Padding */
-$button-padding				: .935rem 1.6rem;
-$button-padding-inactive	: .45rem !important;
+$button-padding					: .935rem 1.6rem;
+$button-padding-inactive		: .45rem !important;
 /* Secondary Button */
 $button-secondary-text-color	: $main-font-color;
 $button-secondary-hover-color	: $main-font-color;
