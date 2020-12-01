@@ -13,7 +13,7 @@ Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable (even cla
 ### Install From CDN
 If you want to quickly add Punica to your project, you can use the JsDelivr CDN;
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.6.0/dist/punica.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.7.0/dist/punica.min.css" crossorigin="anonymous">
 ```
 
 ### HTML Markup
