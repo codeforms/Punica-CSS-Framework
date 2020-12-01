@@ -12,8 +12,8 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 		@include shadow();
 		background: $main-bg;
 		margin: $panel-margin;
-		.#{$panel-header},
-		.#{$panel-bottom} {
+		&>.#{$panel-header},
+		&>.#{$panel-bottom} {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -24,7 +24,7 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 				}
 			}
 		}
-		.#{$panel-header} {
+		&>.#{$panel-header} {
 			min-height: $panel-title-min-height;
 			border-bottom: $panel-title-bottom-border;
 			padding: $panel-title-padding;
@@ -39,7 +39,7 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 				font-weight: $panel-title-font-weight;
 			}
 		}
-		.#{$panel-content} {
+		&>.#{$panel-content} {
 			flex: 1 1 auto;
 			padding: $panel-padding;
 			height: auto;
@@ -76,7 +76,7 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 				letter-spacing: $panel-headline-letter-spacing;
 			}
 		}
-		.#{$panel-bottom} {
+		&>.#{$panel-bottom} {
 			min-height: $panel-bottom-min-height;
 			border-top: $panel-bottom-border;
 			padding: $panel-bottom-padding;
