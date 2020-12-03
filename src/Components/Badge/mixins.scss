@@ -3,16 +3,11 @@ PUNICA CSS > COMPONENT : BADGE > MIXINS **************/
 
 @mixin badge-styles(
 	$bg-color: $main-bg,
-	$color: $main-font-color,
-	$border: true
+	$color: $main-font-color
 ) {
 	background: $bg-color;
 	color: $color;
-	@if($border) {
-		border: $main-border-width $main-border-style $main-border-color;
-	} @else {
-		border: none;
-	}
+	border: $main-border-width $main-border-style darken($bg-color, 20%); 
 }
 
 @mixin badge-sizes(

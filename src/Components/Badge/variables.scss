@@ -19,16 +19,15 @@ $badge-styles: (
 SIZES ************************************************/
 // size name, font-size, padding
 $badge-sizes: (
-    ("small", .859em, 1px 6px),
-    ("large", 1em, 4px 12px)
+    ("tiny", .659rem, 0 4px),
+    ("small", .749rem, 1px 4px),
+    ("large", 1.1rem, 2px 8px)
 );
 
 /***************************************************** 
 PREFERENCES ******************************************/
-$badge-bg				: $primary-color; // default style
-$badge-color			: $main-invert-color;
-$badge-font-size		: 1em;
+$badge-font-size		: .854rem;
 $badge-font-weight		: 700;
-$badge-border-radius	: 500px;
-$badge-padding-y		: 2px;
-$badge-padding-x		: 8px;
+$badge-border-radius	: 6px;
+$badge-padding-y		: 1px;
+$badge-padding-x		: 6px;

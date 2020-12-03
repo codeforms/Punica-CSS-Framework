@@ -21,7 +21,7 @@ PUNICA CSS > COMPONENTS : BADGE **********************/
 		@if $components-badge-styles {
 			@each $type-name, $bg-color in $badge-styles {
 				&.#{$type-name} {
-					@include badge-styles($bg-color, $main-invert-color, false);
+					@include badge-styles($bg-color, $main-invert-color);
 				}
 			}
 		}

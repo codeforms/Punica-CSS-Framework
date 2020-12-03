@@ -8,7 +8,7 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
-		align-items: flex-start;
+		align-items: flex-end;
 		border-bottom: $tabnav-border-bottom-width $main-border-style $main-secondary-bg;
 		padding: 0;
 		&>.#{$button-class-group} {
@@ -16,12 +16,12 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 			border-radius: 0;
 		}
 		&>.#{$button-class},
-		&>.#{$button-class-group} > .#{$button-class},
 		&>a.#{$button-class},
+		&>.#{$button-class-group} > .#{$button-class},
 		&>.#{$button-class-group} > a.#{$button-class},
 		&>.#{$dropdown-name} > .#{$button-class},
-		&>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class},
 		&>.#{$dropdown-name} > a.#{$button-class},
+		&>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class},
 		&>.#{$button-class-group} > .#{$dropdown-name} > a.#{$button-class} {
 			background: transparent;
 			border: none;
