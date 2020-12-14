@@ -71,7 +71,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 		max-width: 100%;
 		padding: $form-padding;
 		.#{$form-item} {
-			height: auto;
+			height: fit-content;
 			margin: $form-items-spacer;
 			display: inline-flex;
 			flex-wrap: wrap;
