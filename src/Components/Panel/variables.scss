@@ -14,7 +14,7 @@ $panel-title-actions			: 'actions';
 
 /*****************************************************
 PREFERENCES ******************************************/
-$panel-padding					: 24px;
+$panel-padding					: 16px;
 $panel-border-width				: 1px;
 $panel-margin					: $panel-padding 0;
 /* Border */
@@ -25,8 +25,7 @@ $panel-border-style				: $main-border-style;
 $panel-title-font-size			: 1.358rem;
 $panel-title-font-weight		: 900;
 $panel-title-bottom-border		: 1px $panel-border-style $panel-border-color;
-$panel-title-min-height			: 50px;
-$panel-title-padding			: 24px;
+$panel-title-padding			: 12px;
 /* Headline */
 $panel-headline-font-size		: 1.58em;
 $panel-headline-line-height		: 1.5;

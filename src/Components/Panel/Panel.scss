@@ -25,7 +25,6 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 			}
 		}
 		&>.#{$panel-header} {
-			min-height: $panel-title-min-height;
 			border-bottom: $panel-title-bottom-border;
 			padding: $panel-title-padding;
 			&.dashed {
