@@ -7,7 +7,7 @@ $helper-pm-ranges	: 0,5,10,15,20,30,40,50; // pm: padding/margin
 $helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font-weight
 $helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999;
 $helper-lh-ranges	: 0,1,2,3,4,5; // lh: line-height
-$helper-br-ranges	: 4,8,10,12,14; // br: border-radius
+$helper-br-ranges	: 4,8,10,12,14; // br: border-radius /* TODO */
 
 /* 
 Margin ************************************/
@@ -225,6 +225,7 @@ $user-selects: (
 
 /*
 Positioned Elements **************************/
+/* TODO */
 $inset: (
 	("inset-")
 );
