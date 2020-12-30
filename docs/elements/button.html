@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='stylesheet' type='text/css' href='../css/syntaxhighlighter.css' />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.7.0/dist/punica.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.7.4/dist/punica.min.css">
 </head>
 <body>
 	<header class="navbar light fixed shadowed">
@@ -187,7 +187,7 @@
 
 								<!-- BUTTON SIZES -->
 								<div class="header">
-									<span class="title">
+									<span class="h3">
 										Button Sizes
 									</span>
 								</div>
@@ -210,7 +210,7 @@
 
 								<!-- BUTTON GROUPS -->
 								<div class="header">
-									<span class="title">
+									<span class="h3">
 										Button Groups
 									</span>
 								</div>
@@ -356,7 +356,7 @@
 								
 								<!-- Secondary -->
 								<div class="header">
-									<span class="title">
+									<span class="h3">
 										Secondary Button
 									</span>
 								</div>
@@ -394,7 +394,7 @@
 								
 								<!-- Dropdown -->
 								<div class="header">
-									<span class="title">
+									<span class="h3">
 										Button with Dropdown
 									</span>
 								</div>
@@ -476,9 +476,88 @@
 											</div>
 										</div>
 									</div>
+									<div class="row">
+										<div class="col-16 mt-30">
+											<div class="buttons">
+												<div class="dropdown">
+													<a tabindex="0" class="button toggle">
+														Default Dropdown <span class="material-icons">keyboard_arrow_down</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="buttons small ml-20">
+												<div class="button">Small Dropdown</div>
+												<div class="dropdown right bottom">
+													<a tabindex="0" class="button toggle">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="buttons mini ml-20">
+												<div class="button primary">
+													<span class="material-icons mr-5">drafts</span> Mini
+												</div>
+												<div class="button inactive">254</div>
+												<div class="dropdown right top">
+													<a tabindex="0" class="button toggle">
+														<span class="material-icons">keyboard_arrow_up</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-16 mt-10">
+											<div class="buttons mini">
+												<div class="dropdown top left">
+													<a tabindex="0" class="button toggle">
+														<span class="material-icons">keyboard_arrow_up</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
+												<div class="button inactive">254</div>
+												<div class="button secondary">
+													<span class="material-icons">drafts</span>
+												</div>
+											</div>
+											<div class="buttons primary mini ml-20">
+												<div class="dropdown">
+													<a tabindex="0" class="button toggle">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+													<ul class="menu">
+														<li class="item"><a href="#">Dropdown 1</a></li>
+														<li class="item"><a href="#">Dropdown 2</a></li>
+														<li class="item"><a href="#">Dropdown 3</a></li>
+													</ul>
+												</div>
+												<div class="button inactive">254</div>
+												<div class="button secondary">
+													<span class="material-icons">drafts</span>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="header">
-									<div class="title">
+									<div class="h3">
 										Vertical Button Groups
 									</div>
 								</div>
@@ -487,190 +566,113 @@
 										Also, just add the <code>.vertical</code> class to <code>.buttons</code> to make it vertical button group.
 									</p>
 								</div>
-								<div class="content center align">
-									<div class="buttons tiny vertical">
-										<button class="button">
-											<i class="material-icons">group_work</i>
-										</button>
-										<button class="button">
-											<i class="material-icons">verified_user</i>
-										</button>
-										<button class="button">
-											<i class="material-icons">settings</i>
-										</button>
-									</div>
-									<div class="buttons mini primary vertical">
-										<button class="button">
-											<i class="material-icons">group_work</i>
-										</button>
-										<button class="button">
-											<i class="material-icons">verified_user</i>
-										</button>
-										<button class="button">
-											<i class="material-icons">settings</i>
-										</button>
-									</div>
-									<div class="buttons small success vertical">
-										<button class="button">
-											<i class="material-icons">group_work</i>
-										</button>
-										<button class="button">
-											<i class="material-icons">verified_user</i>
-										</button>
-										<button class="button">
-											<i class="material-icons">settings</i>
-										</button>
-									</div>
-									<div class="buttons warning vertical">
-										<button class="button">
-											<i class="material-icons">group_work</i>
-										</button>
-										<div class="dropdown left">
-											<a tabindex="0" class="button toggle">
-												<span class="material-icons mr-5">keyboard_arrow_left</span> <i class="material-icons">verified_user</i>
-											</a>
-											<ul class="menu">
-												<li class="item"><a href="#">Dropdown 1</a></li>
-												<li class="item"><a href="#">Dropdown 2</a></li>
-												<li class="item"><a href="#">Dropdown 3</a></li>
-											</ul>
+									<div class="content center align">
+										<div class="buttons tiny vertical">
+											<button class="button">
+												<i class="material-icons">group_work</i>
+											</button>
+											<button class="button">
+												<i class="material-icons">verified_user</i>
+											</button>
+											<button class="button">
+												<i class="material-icons">settings</i>
+											</button>
 										</div>
-										<div class="dropdown right">
-											<a tabindex="0" class="button toggle">
-												<i class="material-icons">settings</i> <span class="material-icons ml-5">keyboard_arrow_right</span>
-											</a>
-											<ul class="menu">
-												<li class="item"><a href="#">Dropdown 1</a></li>
-												<li class="item"><a href="#">Dropdown 2</a></li>
-												<li class="item"><a href="#">Dropdown 3</a></li>
-											</ul>
+										<div class="buttons mini primary vertical">
+											<button class="button">
+												<i class="material-icons">group_work</i>
+											</button>
+											<button class="button">
+												<i class="material-icons">verified_user</i>
+											</button>
+											<button class="button">
+												<i class="material-icons">settings</i>
+											</button>
+										</div>
+										<div class="buttons small success vertical">
+											<button class="button">
+												<i class="material-icons">group_work</i>
+											</button>
+											<button class="button">
+												<i class="material-icons">verified_user</i>
+											</button>
+											<button class="button">
+												<i class="material-icons">settings</i>
+											</button>
+										</div>
+										<div class="buttons warning vertical">
+											<button class="button">
+												<i class="material-icons">group_work</i>
+											</button>
+											<div class="dropdown left">
+												<a tabindex="0" class="button toggle">
+													<span class="material-icons mr-5">keyboard_arrow_left</span> <i class="material-icons">verified_user</i>
+												</a>
+												<ul class="menu">
+													<li class="item"><a href="#">Dropdown 1</a></li>
+													<li class="item"><a href="#">Dropdown 2</a></li>
+													<li class="item"><a href="#">Dropdown 3</a></li>
+												</ul>
+											</div>
+											<div class="dropdown right">
+												<a tabindex="0" class="button toggle">
+													<i class="material-icons">settings</i> <span class="material-icons ml-5">keyboard_arrow_right</span>
+												</a>
+												<ul class="menu">
+													<li class="item"><a href="#">Dropdown 1</a></li>
+													<li class="item"><a href="#">Dropdown 2</a></li>
+													<li class="item"><a href="#">Dropdown 3</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="buttons large error vertical">
+											<button class="button">
+												<i class="material-icons">group_work</i>
+											</button>
+											<button class="button">
+												<i class="material-icons">verified_user</i>
+											</button>
+											<button class="button">
+												<i class="material-icons">settings</i>
+											</button>
 										</div>
 									</div>
-									<div class="buttons large error vertical">
-										<button class="button">
-											<i class="material-icons">group_work</i>
-										</button>
-										<button class="button">
-											<i class="material-icons">verified_user</i>
-										</button>
-										<button class="button">
-											<i class="material-icons">settings</i>
-										</button>
-									</div>
-								</div>
-								<div class="content">
-									<div class="row">
-										<div class="col-8 align right">
-											<div class="buttons block vertical">
-												<button class="button">Account Info</button>
-												<button class="button">Privacy Preferences</button>
-												<div class="dropdown left">
-													<a tabindex="0" class="button toggle">
-														<span class="material-icons mr-5">keyboard_arrow_left</span> Scheduled Reminders
-													</a>
-													<ul class="menu">
-														<li class="item"><a href="#">Dropdown 1</a></li>
-														<li class="item"><a href="#">Dropdown 2</a></li>
-														<li class="item"><a href="#">Dropdown 3</a></li>
-													</ul>
+									<div class="content">
+										<div class="row">
+											<div class="col-8 align right">
+												<div class="buttons block vertical">
+													<button class="button">Account Info</button>
+													<button class="button">Privacy Preferences</button>
+													<div class="dropdown left">
+														<a tabindex="0" class="button toggle">
+															<span class="material-icons mr-5">keyboard_arrow_left</span> Scheduled Reminders
+														</a>
+														<ul class="menu">
+															<li class="item"><a href="#">Dropdown 1</a></li>
+															<li class="item"><a href="#">Dropdown 2</a></li>
+															<li class="item"><a href="#">Dropdown 3</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="col-8 align right">
+												<div class="buttons primary block vertical">
+													<button class="button">Account Info</button>
+													<button class="button">Privacy Preferences</button>
+													<div class="dropdown right">
+														<a tabindex="0" class="button toggle">
+															Scheduled Reminders <span class="material-icons ml-5">keyboard_arrow_right</span>
+														</a>
+														<ul class="menu">
+															<li class="item"><a href="#">Dropdown 1</a></li>
+															<li class="item"><a href="#">Dropdown 2</a></li>
+															<li class="item"><a href="#">Dropdown 3</a></li>
+														</ul>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-8 align right">
-											<div class="buttons primary block vertical">
-												<button class="button">Account Info</button>
-												<button class="button">Privacy Preferences</button>
-												<div class="dropdown right">
-													<a tabindex="0" class="button toggle">
-														Scheduled Reminders <span class="material-icons ml-5">keyboard_arrow_right</span>
-													</a>
-													<ul class="menu">
-														<li class="item"><a href="#">Dropdown 1</a></li>
-														<li class="item"><a href="#">Dropdown 2</a></li>
-														<li class="item"><a href="#">Dropdown 3</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
 									</div>
-								</div>
-								<div class="content">
-									<div class="buttons">
-										<div class="dropdown">
-											<a tabindex="0" class="button toggle">
-												Default Dropdown <span class="material-icons">keyboard_arrow_down</span>
-											</a>
-											<ul class="menu">
-												<li class="item"><a href="#">Dropdown 1</a></li>
-												<li class="item"><a href="#">Dropdown 2</a></li>
-												<li class="item"><a href="#">Dropdown 3</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="buttons small ml-20">
-										<div class="button">Small Dropdown</div>
-										<div class="dropdown right bottom">
-											<a tabindex="0" class="button toggle">
-												<span class="material-icons">keyboard_arrow_down</span>
-											</a>
-											<ul class="menu">
-												<li class="item"><a href="#">Dropdown 1</a></li>
-												<li class="item"><a href="#">Dropdown 2</a></li>
-												<li class="item"><a href="#">Dropdown 3</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="buttons mini ml-20">
-										<div class="button primary">
-											<span class="material-icons mr-5">drafts</span> Mini
-										</div>
-										<div class="button inactive">254</div>
-										<div class="dropdown right top">
-											<a tabindex="0" class="button toggle">
-												<span class="material-icons">keyboard_arrow_up</span>
-											</a>
-											<ul class="menu">
-												<li class="item"><a href="#">Dropdown 1</a></li>
-												<li class="item"><a href="#">Dropdown 2</a></li>
-												<li class="item"><a href="#">Dropdown 3</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="content">
-									<div class="buttons mini">
-										<div class="dropdown top left">
-											<a tabindex="0" class="button toggle">
-												<span class="material-icons">keyboard_arrow_up</span>
-											</a>
-											<ul class="menu">
-												<li class="item"><a href="#">Dropdown 1</a></li>
-												<li class="item"><a href="#">Dropdown 2</a></li>
-												<li class="item"><a href="#">Dropdown 3</a></li>
-											</ul>
-										</div>
-										<div class="button inactive">254</div>
-										<div class="button secondary">
-											<span class="material-icons">drafts</span>
-										</div>
-									</div>
-									<div class="buttons primary mini ml-20">
-										<div class="dropdown">
-											<a tabindex="0" class="button toggle">
-												<span class="material-icons">keyboard_arrow_down</span>
-											</a>
-											<ul class="menu">
-												<li class="item"><a href="#">Dropdown 1</a></li>
-												<li class="item"><a href="#">Dropdown 2</a></li>
-												<li class="item"><a href="#">Dropdown 3</a></li>
-											</ul>
-										</div>
-										<div class="button inactive">254</div>
-										<div class="button secondary">
-											<span class="material-icons">drafts</span>
-										</div>
-									</div>
-								</div>
 								</div>
 							</div>
 						</div>
