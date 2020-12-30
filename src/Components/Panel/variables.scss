@@ -22,16 +22,16 @@ $panel-border-radius			: $main-border-radius;
 $panel-border-color				: $main-border-color;
 $panel-border-style				: $main-border-style;
 /* Header & Title */
-$panel-title-font-size			: 1.358rem;
+$panel-title-font-size			: 1.185rem;
 $panel-title-font-weight		: 900;
 $panel-title-bottom-border		: 1px $panel-border-style $panel-border-color;
-$panel-title-padding			: 12px;
+$panel-title-padding			: 12px $panel-padding;
 /* Headline */
-$panel-headline-font-size		: 1.58em;
+$panel-headline-font-size		: 1.39em;
 $panel-headline-line-height		: 1.5;
-$panel-headline-margin-bottom	: 32px;
+$panel-headline-margin-bottom	: 26px;
 $panel-headline-color			: darken($main-font-color, 16%);
-$panel-headline-letter-spacing	: -.0258em;
+$panel-headline-letter-spacing	: -.0158em;
 /* Bottom */
 $panel-bottom-min-height		: 50px;
 $panel-bottom-border			: 1px $panel-border-style $panel-border-color;

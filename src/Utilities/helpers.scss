@@ -72,6 +72,10 @@ PUNICA CSS > UTILITIES : HELPERS *********************/
 	@include setHelperList($user-selects);
 
 	/*****************************************************
+	Line Height Properties *******************************/
+	@include setHelperListWithRange($line-heights, $helper-lh-ranges, null, "!important");
+
+	/*****************************************************
 	Others ***********************************************/
 	@include otherHelpers();
 }
