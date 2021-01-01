@@ -1,9 +1,8 @@
 <p align="center"><img src="https://codeforms.github.io/Punica-CSS-Framework/images/logo.png"></p>
 
 <p align="center">
-    <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework"></a>
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codeforms/Punica-CSS-Framework"></a>
     <a href="https://github.com/codeforms/Punica-CSS-Framework/releases"><img src="https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework"></a>
-    <a href="https://github.com/codeforms/Punica-CSS-Framework"><img src="http://badges.github.io/stability-badges/dist/stable.svg"></a>
 </p>
 
 ## Introduction
