@@ -1,10 +1,13 @@
-![Punica CSS](https://codeforms.github.io/Punica-CSS-Framework/images/logo.png)
+<p align="center"><img src="https://codeforms.github.io/Punica-CSS-Framework/images/logo.png"></p>
 
-[![GitHub license](https://img.shields.io/github/license/codeforms/Punica-CSS-Framework)](https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework)
-![stable](http://badges.github.io/stability-badges/dist/stable.svg)
+<p align="center">
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework"></a>
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/releases"><img src="https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework"></a>
+    <a href="https://github.com/codeforms/Punica-CSS-Framework"><img src="http://badges.github.io/stability-badges/dist/stable.svg"></a>
+</p>
 
-Punica CSS is a Lightweight, Responsive, Modern and Fully Customizable (even class names) Pure CSS Framework based on SASS/SCSS.
+## Introduction
+Punica CSS is a clean, lightweight, responsive, modern and fully customizable (even class names) pure CSS Framework based on SASS/SCSS.
 
 [Documentation](https://codeforms.github.io/Punica-CSS-Framework/) | [Changelogs](https://github.com/codeforms/Punica-CSS-Framework/releases)
 
