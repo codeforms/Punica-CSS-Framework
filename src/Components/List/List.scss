@@ -86,11 +86,4 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 			}
 		}
 	}
-	@include breakpoints($breakpoints-medium, 'max-width') {
-		.#{$list-name} {
-			>.#{$list-item} {
-				flex-direction: column;
-			}
-		}
-	}
 }
