@@ -1,24 +1,28 @@
 <p align="center"><img src="https://codeforms.github.io/Punica-CSS-Framework/images/logo.png"></p>
 
+<h3 align="center">Punica CSS</h3>
+
 <p align="center">
-    <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codeforms/Punica-CSS-Framework"></a>
-    <a href="https://github.com/codeforms/Punica-CSS-Framework/releases"><img src="https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework"></a>
+    Clean, lightweight, responsive, modern and fully customizable.<br>
+    <a href="https://codeforms.github.io/Punica-CSS-Framework">Documentation</a> | 
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelogs</a>
 </p>
 
 ## Introduction
 Punica CSS is a clean, lightweight, responsive, modern and fully customizable (even class names) pure CSS Framework based on SASS/SCSS.
 
-[Documentation](https://codeforms.github.io/Punica-CSS-Framework/) | [Changelogs](https://github.com/codeforms/Punica-CSS-Framework/releases)
+<p>
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codeforms/Punica-CSS-Framework"></a>
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/releases"><img src="https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework"></a>
+</p>
 
----
-
-### Install From CDN
+## Install From CDN
 If you want to quickly add Punica to your project, you can use the JsDelivr CDN;
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.7.4/dist/punica.min.css" crossorigin="anonymous">
 ```
 
-### HTML Markup
+## HTML Markup
 For your default setup, add the Punica CSS file to the <head> element of your HTML5 document. Also include the Material Icons library. That's it!
 ```html
 <!DOCTYPE html>
