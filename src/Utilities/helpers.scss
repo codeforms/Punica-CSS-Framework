@@ -16,40 +16,38 @@ PUNICA CSS > UTILITIES : HELPERS *********************/
 
 	/*****************************************************
 	Font Sizes *******************************************/
-	@include setHelperList($font-sizes, "!important");
+	@include setHelperList($font-sizes, "font-size", "!important");
 
 	/*****************************************************
 	Text Colors ******************************************/
-	@include setHelperList($text-colors, "!important");
+	@include setHelperList($text-colors, "color", "!important");
 
 	/*****************************************************
 	Background Colors ************************************/
-	@include setHelperList($bg-colors, "!important");
+	@include setHelperList($bg-colors, "background-color", "!important");
 	@include customBackgrounds();
 
 	/*****************************************************
 	Cursors **********************************************/
-	@include setHelperList($cursors, "!important");
+	@include setHelperList($cursors, "cursor", "!important");
 
 	/*****************************************************
 	Display Properties ***********************************/
-	@include setHelperList($display-properties, "!important");
-	@include setHelperList($align-items);
-	@include setHelperList($align-self);
+	@include setHelperList($display-properties, "display", "!important");
 
 	/*****************************************************
 	Alignment ********************************************/
-	@include setHelperList($align-items);
-	@include setHelperList($align-self);
-	@include setHelperList($justify-content);
+	@include setHelperList($align-items, "align-items");
+	@include setHelperList($align-self, "align-self");
+	@include setHelperList($justify-content, "justify-content");
 
 	/*****************************************************
 	Filters **********************************************/
-	@include setHelperList($display-filters);
+	@include setHelperList($display-filters, "filter");
 
 	/*****************************************************
 	Text Transform Properties ****************************/
-	@include setHelperList($text-transforms);
+	@include setHelperList($text-transforms, "text-transform");
 
 	/*****************************************************
 	Overflow Properties **********************************/
@@ -57,7 +55,7 @@ PUNICA CSS > UTILITIES : HELPERS *********************/
 
 	/*****************************************************
 	Position Properties **********************************/
-	@include setHelperList($position-properties);
+	@include setHelperList($position-properties, "position");
 
 	/*****************************************************
 	Stack Order ******************************************/
@@ -65,15 +63,23 @@ PUNICA CSS > UTILITIES : HELPERS *********************/
 
 	/*****************************************************
 	Direction of the flexible items **********************/
-	@include setHelperList($flex-directions);
+	@include setHelperList($flex-directions, "flex-direction");
 
 	/*****************************************************
 	User Select Properties *******************************/
-	@include setHelperList($user-selects);
+	@include setHelperList($user-selects, "user-select");
+
+	/*****************************************************
+	Insets *******************************/
+	@include setNestedHelperList($insets);
 
 	/*****************************************************
 	Line Height Properties *******************************/
 	@include setHelperListWithRange($line-heights, $helper-lh-ranges, null, "!important");
+
+	/*****************************************************
+	Border Radius ****************************************/
+	@include setHelperListWithRange($border-radius, $helper-br-ranges, "px", "!important");
 
 	/*****************************************************
 	Others ***********************************************/

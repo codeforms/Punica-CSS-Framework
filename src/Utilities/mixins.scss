@@ -1,30 +1,67 @@
 /***************************************************** 
 PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 
+/**
+ *	
+ */
 @mixin setHelperListWithRange(
-	$helpers, 
-	$range, 
-	$value-type: null,
-	$specificity: null
+	$helpers, $range, $value-type: null, $specificity: null
 ) {
 	@each $class, $property in $helpers {
 		@each $value in $range {
 			.#{$class}#{$value} {
-				#{$property}: #{$value}#{$value-type} #{$specificity};
+				@include setProperties($property, $value, $value-type, $specificity);
 			}
 		}
 	}
 }
+
+/**
+ *	
+ */
 @mixin setHelperList(
-	$list, 
-	$specificity: null
+	$list, $property-name: null, $specificity: null
 ) {
-	@each $class, $property, $value in $list {
-		.#{$class} {
-			#{$property}: #{$value} #{$specificity};
+	@if $property-name {
+		@each $class, $value in $list {
+			.#{$class} {
+				@include setProperties($property-name, $value, null, $specificity);
+			}
+		}
+	} @else {
+		@each $class, $property, $value in $list {
+			.#{$class} {
+				@include setProperties($property, $value, null, $specificity);
+			}
 		}
 	}
 }
+
+/**
+ *	
+ */
+@mixin setNestedHelperList($list) {
+	@each $class-name, $values in $list {
+		@each $value in $values {
+			.#{$class-name}-#{$value} {
+				@include setProperties($class-name, $value);
+			}
+		}
+	}
+}
+
+/**
+ *	
+ */
+@mixin setProperties(
+	$property, $value, $value-type: null, $specificity: null
+) {
+	#{$property}: #{$value}#{$value-type} #{$specificity};
+}
+
+/**
+ *	
+ */
 @mixin customBackgrounds() {
 	.bg-grid {
 	    height: 100%;
@@ -40,6 +77,10 @@ PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 	    background-size: 100% 8px;
 	}
 }
+
+/**
+ *	
+ */
 @mixin otherHelpers() {
 	.centered {margin: 0 auto;}
 	.align.right {text-align: right !important;}

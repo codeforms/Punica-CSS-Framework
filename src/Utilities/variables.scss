@@ -7,7 +7,7 @@ $helper-pm-ranges	: 0,5,10,15,20,30,40,50; // pm: padding/margin
 $helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font-weight
 $helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999;
 $helper-lh-ranges	: 0,1,2,3,4,5; // lh: line-height
-$helper-br-ranges	: 4,8,10,12,14; // br: border-radius /* TODO */
+$helper-br-ranges	: 4,8,10,12,14; // br: border-radius
 
 /* 
 Margin ************************************/
@@ -41,127 +41,127 @@ $font-weights: (
 /* 
 Font Size ************************************/
 $font-sizes: (
-	// class name, property, value
-	("mini-text", "font-size", 60%),
-	("tiny-text", "font-size", 73%),
-	("small-text", "font-size", 85%),
-	("large-text", "font-size", 120%),
-	("big-text", "font-size", 175%),
-	("huge-text", "font-size", 200%),
-	("giant-text", "font-size", 350%)
+	// class name, value
+	("mini-text", 60%),
+	("tiny-text", 73%),
+	("small-text", 85%),
+	("large-text", 120%),
+	("big-text", 175%),
+	("huge-text", 200%),
+	("giant-text", 350%)
 );
 
 /* 
 Text Colors ************************************/
 $text-colors		: (
-	// class name, property, value
-	("color-grey", "color", $main-grey-color),
-	("color-white", "color", white),
-	("color-black", "color", black),
-	("color-primary", "color", $primary-color),
-	("color-success", "color", $success-color),
-	("color-warning", "color", $warning-color),
-	("color-error", "color", $error-color)
+	// class name, value
+	("color-grey", $main-grey-color),
+	("color-white", white),
+	("color-black", black),
+	("color-primary", $primary-color),
+	("color-success", $success-color),
+	("color-warning", $warning-color),
+	("color-error", $error-color)
 );
 
 /* 
 Bg Colors ************************************/
 $bg-colors			: (
-	// class name, property, value
-	("bg-grey", "background-color", $main-grey-color),
-	("bg-secondary", "background-color", $main-secondary-bg),
-	("bg-white", "background-color", white),
-	("bg-black", "background-color", $main-font-color),
-	("bg-dark", "background-color", $main-dark-color),
-	("bg-primary", "background-color", $primary-color),
-	("bg-success", "background-color", $success-color),
-	("bg-warning", "background-color", $warning-color),
-	("bg-error", "background-color", $error-color)
+	// class name, value
+	("bg-grey", $main-grey-color),
+	("bg-secondary", $main-secondary-bg),
+	("bg-white", white),
+	("bg-black", $main-font-color),
+	("bg-dark", $main-dark-color),
+	("bg-primary", $primary-color),
+	("bg-success", $success-color),
+	("bg-warning", $warning-color),
+	("bg-error", $error-color)
 );
 
 /* 
 Cursors ************************************/
 $cursors: (
-	// class name, property, value
-	("cursor-alias", "cursor", alias),
-	("cursor-default", "cursor", default),
-	("cursor-grab", "cursor", grab),
-	("cursor-help", "cursor", help),
-	("cursor-move", "cursor", move),
-	("cursor-pointer", "cursor", pointer),
-	("cursor-wait", "cursor", wait),
-	("cursor-zoom-in", "cursor", zoom-in),
-	("cursor-zoom-out", "cursor", zoom-out)
+	// class name, value
+	("cursor-alias", alias),
+	("cursor-default", default),
+	("cursor-grab", grab),
+	("cursor-help", help),
+	("cursor-move", move),
+	("cursor-pointer", pointer),
+	("cursor-wait", wait),
+	("cursor-zoom-in", zoom-in),
+	("cursor-zoom-out", zoom-out)
 );
 
 /* 
 Display Properties ************************************/
 $display-properties: (
-	// suffix, property, value
-	("display-inline", "display", inline),
-	("display-flex", "display", flex),
-	("display-inline-flex", "display", inline-flex),
-	("display-grid", "display", grid),
-	("display-inline-grid", "display", inline-grid),
-	("display-block", "display", block),
-	("display-inline-block", "display", inline-block),
-	("display-table", "display", table),
-	("display-inline-table", "display", inline-table),
-	("display-table-row", "display", table-row),
-	("display-table-column", "display", table-column),
-	("display-table-cell", "display", table-cell)
+	// suffix, value
+	("display-inline", inline),
+	("display-flex", flex),
+	("display-inline-flex", inline-flex),
+	("display-grid", grid),
+	("display-inline-grid", inline-grid),
+	("display-block", block),
+	("display-inline-block", inline-block),
+	("display-table", table),
+	("display-inline-table", inline-table),
+	("display-table-row", table-row),
+	("display-table-column", table-column),
+	("display-table-cell", table-cell)
 );
 
 /*
 Alignment ************************************/
 $align-items: (
-	// suffix, property, value
-	("align-items-baseline", "align-items", baseline),
-	("align-items-flex-start", "align-items", flex-start),
-	("align-items-lex-end", "align-items", flex-end),
-	("align-items-center", "align-items", center),
-	("align-items-stretch", "align-items", stretch),
-	("align-items-initial", "align-items", initial),
-	("align-items-inherit", "align-items", inherit)
+	// suffix, value
+	("align-items-baseline", baseline),
+	("align-items-flex-start", flex-start),
+	("align-items-lex-end", flex-end),
+	("align-items-center", center),
+	("align-items-stretch", stretch),
+	("align-items-initial", initial),
+	("align-items-inherit", inherit)
 );
 $align-self: (
-	// suffix, property, value
-	("align-self-auto", "align-self", auto),
-	("align-self-baseline", "align-self", baseline),
-	("align-self-flex-start", "align-self", flex-start),
-	("align-self-flex-end", "align-self", flex-end),
-	("align-self-center", "align-self", center),
-	("align-self-stretch", "align-self", stretch),
-	("align-self-initial", "align-self", initial),
-	("align-self-inherit", "align-self", inherit)
+	// suffix, value
+	("align-self-auto", auto),
+	("align-self-baseline", baseline),
+	("align-self-flex-start", flex-start),
+	("align-self-flex-end", flex-end),
+	("align-self-center", center),
+	("align-self-stretch", stretch),
+	("align-self-initial", initial),
+	("align-self-inherit", inherit)
 );
 $justify-content: (
-	// class name, property, value
-	("justify-content-center", "justify-content", center),
-	("justify-content-flex-start", "justify-content", flex-start),
-	("justify-content-flex-end", "justify-content", flex-end),
-	("justify-content-baseline", "justify-content", baseline),
-	("justify-content-space-between", "justify-content", space-between),
-	("justify-content-space-around", "justify-content", space-around),
-	("justify-content-initial", "justify-content", initial),
-	("justify-content-inherit", "justify-content", inherit)
+	// class name, value
+	("justify-content-center", center),
+	("justify-content-flex-start", flex-start),
+	("justify-content-flex-end", flex-end),
+	("justify-content-baseline", baseline),
+	("justify-content-space-between", space-between),
+	("justify-content-space-around", space-around),
+	("justify-content-initial", initial),
+	("justify-content-inherit", inherit)
 );
 
 /* 
 Filters ************************************/
 $display-filters: (
-	// class name, property, value
-	("filter-invert", "filter", invert(100%)),
-	("filter-gray", "filter", grayscale(100%))
+	// class name, value
+	("filter-invert", invert(100%)),
+	("filter-gray", grayscale(100%))
 );
 
 /* 
 Text Transforms ************************************/
 $text-transforms: (
-	// class name, property, value
-	("text-uppercase", "text-transform", uppercase),
-	("text-lowercase", "text-transform", lowercase),
-	("text-capitalize", "text-transform", capitalize)
+	// class name, value
+	("text-uppercase", uppercase),
+	("text-lowercase", lowercase),
+	("text-capitalize", capitalize)
 );
 
 /* 
@@ -184,14 +184,14 @@ $overflow-properties: (
 /* 
 Position Properties ************************************/
 $position-properties: (
-	// class name, property, value
-	("position-static", "position", static),
-	("position-absolute", "position", absolute),
-	("position-fixed", "position", fixed),
-	("position-relative", "position", relative),
-	("position-sticky", "position", sticky),
-	("position-initial", "position", initial),
-	("position-inherit", "position", inherit)
+	// class name, value
+	("position-static", static),
+	("position-absolute", absolute),
+	("position-fixed", fixed),
+	("position-relative", relative),
+	("position-sticky", sticky),
+	("position-initial", initial),
+	("position-inherit", inherit)
 );
 
 /* 
@@ -202,32 +202,35 @@ $z-indexes: (
 );
 
 /* 
-Direction of the flexible items (flex-direction) **********************************/
+Direction of the flexible items (flex-direction) *******/
 $flex-directions: (
-	// class name, property, value
-	("flex-direction-row", "flex-direction", row),
-	("flex-direction-row-reverse", "flex-direction", row-reverse),
-	("flex-direction-column", "flex-direction", column),
-	("flex-direction-column-reverse", "flex-direction", column-reverse),
-	("flex-direction-initial", "flex-direction", initial),
-	("flex-direction-inherit", "flex-direction", inherit)
+	// class name, value
+	("flex-direction-row", row),
+	("flex-direction-row-reverse", row-reverse),
+	("flex-direction-column", column),
+	("flex-direction-column-reverse", column-reverse),
+	("flex-direction-initial", initial),
+	("flex-direction-inherit", inherit)
 );
 
 /* 
 User Select **********************************/
 $user-selects: (
-	// class name, property, value
-	("user-select-none", "user-select", none),
-	("user-select-auto", "user-select", auto),
-	("user-select-text", "user-select", text),
-	("user-select-all", "user-select", all)
+	// class name, value
+	("user-select-none", none),
+	("user-select-auto", auto),
+	("user-select-text", text),
+	("user-select-all", all)
 );
 
 /*
 Positioned Elements **************************/
-/* TODO */
-$inset: (
-	("inset-")
+$insets: (
+	// class name, [values]
+	'top'(0, auto),
+	'bottom'(0, auto),
+	'left'(0, auto),
+	'right'(0, auto),
 );
 
 /* 
@@ -235,4 +238,11 @@ Line Height *********************************/
 $line-heights: (
 	// class name (prefix), property
 	"line-height-": "line-height"
+);
+
+/* 
+Border Radius *******************************/
+$border-radius: (
+	// class name (prefix), property
+	"radius-": "border-radius"
 );
