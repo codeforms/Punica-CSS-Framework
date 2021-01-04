@@ -28,6 +28,7 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 		color: $text-color;
 		text-shadow: $button-icon-shadow;
 	}
+	@content;
 }
 // Secondary Button
 @mixin secondary-button() {
@@ -48,28 +49,13 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 }
 // Link Button
 @mixin link-button() {
-	&.#{$button-class-link},
+	&.#{$button-class-link}.#{$button-class},
 	&.#{$button-class-link} > .#{$button-class} {
-		background: transparent;
-		border-color: transparent;
-		color: $main-font-color;
-	    //min-height: 100%;
-    	border: none;
-		&:focus,
-		&:hover,
-		&:active,
-		&.#{$button-class-active} {
-			color: darken($main-font-color, 8%);
-		}
-		&.#{$button-class-invert} {
-			color: $main-invert-color;
-			.#{$button-class},
-			i, [class^="material-icons"] {
-				background: transparent;
-				border-color: transparent;
-				color: $main-invert-color;
+		@include button-styles(transparent, $main-font-color) {
+			&:hover {
+				background: $button-bg-active;
 			}
-		}
+		};
 	}
 }
 // Button Sizes
