@@ -82,7 +82,6 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 				//
 				@if $components-card-media {
 					>.#{$card-media} {
-						//display: flex;
 						align-self: normal;
 						width: 100%;
 						img	{

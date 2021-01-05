@@ -7,13 +7,7 @@ PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 @mixin setHelperListWithRange(
 	$helpers, $range, $value-type: null, $specificity: null
 ) {
-	@each $class, $property in $helpers {
-		@each $value in $range {
-			.#{$class}#{$value} {
-				@include setProperties($property, $value, $value-type, $specificity);
-			}
-		}
-	}
+	@include setNestedHelperList($helpers, $range, $value-type, $specificity);
 }
 
 /**
@@ -40,11 +34,23 @@ PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 /**
  *	
  */
-@mixin setNestedHelperList($list) {
-	@each $class-name, $values in $list {
-		@each $value in $values {
-			.#{$class-name}-#{$value} {
-				@include setProperties($class-name, $value);
+@mixin setNestedHelperList(
+	$list, $second_list: null, $value-type: null, $specificity: null
+) {
+	@if $second_list {
+		@each $class-name, $property in $list {
+			@each $value in $second_list {
+				.#{$class-name}#{$value} {
+					@include setProperties($property, $value, $value-type, $specificity);
+				}
+			}
+		}
+	} @else {
+		@each $class-name, $values in $list {
+			@each $value in $values {
+				.#{$class-name}-#{$value} {
+					@include setProperties($class-name, $value);
+				}
 			}
 		}
 	}

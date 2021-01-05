@@ -145,7 +145,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			@include breakpoints($breakpoints-medium, 'max-width') {
 				.#{$name}.#{$form-items} {
 					>.#{$form-item} {
-						flex: 0 0 100%; 
+						flex: 0 0 100%;
 					}
 				}
 			}

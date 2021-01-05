@@ -58,7 +58,6 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		.#{$breadcrumb-name} {
 			.#{$breadcrumb-item} {
-				//display: block;
 				&:after {
 					font-size: 1rem;
 					vertical-align: middle;

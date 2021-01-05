@@ -97,7 +97,7 @@ $cursors: (
 /* 
 Display Properties ************************************/
 $display-properties: (
-	// suffix, value
+	// class name, value
 	("display-inline", inline),
 	("display-flex", flex),
 	("display-inline-flex", inline-flex),
@@ -115,7 +115,7 @@ $display-properties: (
 /*
 Alignment ************************************/
 $align-items: (
-	// suffix, value
+	// class name, value
 	("align-items-baseline", baseline),
 	("align-items-flex-start", flex-start),
 	("align-items-lex-end", flex-end),
@@ -125,7 +125,7 @@ $align-items: (
 	("align-items-inherit", inherit)
 );
 $align-self: (
-	// suffix, value
+	// class name, value
 	("align-self-auto", auto),
 	("align-self-baseline", baseline),
 	("align-self-flex-start", flex-start),
