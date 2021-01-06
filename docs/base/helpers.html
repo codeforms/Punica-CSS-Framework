@@ -1,0 +1,942 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Helpers : Punica CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='../css/syntaxhighlighter.css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.7.5/dist/punica.min.css">
+</head>
+
+<body>
+    <header class="navbar light fixed shadowed">
+        <div class="container">
+            <input type="checkbox" id="burger">
+            <section class="brand mr-50 ml-20">
+                <a href="../" title="Punica CSS">
+                    <img src="../images/logo.png">
+                </a>
+            </section>
+            <section class="links ml-50">
+                <div class="section">
+                    <div class="buttons">
+                        <div class="dropdown">
+                            <a class="button toggle" tabindex="0">
+                                Base <span class="material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="./introduction.html">Introduction</a></li>
+                                <li class="item"><a href="./colors.html">Color Palette</a></li>
+                                <li class="item"><a href="./grid.html">Grid</a></li>
+                                <li class="item"><a href="./helpers.html" class="active">Helpers</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <a class="button toggle" tabindex="0">
+                                Elements <span class="material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="../elements/button.html">Button & Dropdown</a></li>
+                                <li class="item"><a href="../elements/form.html">Form</a></li>
+                                <li class="item"><a href="../elements/icon.html">Icon</a></li>
+                                <li class="item"><a href="../elements/label.html">Label</a></li>
+                                <li class="item"><a href="../elements/table.html">Table</a></li>
+                                <li class="item"><a href="../elements/typography.html">Typography</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <a class="button toggle" tabindex="0">
+                                Components <span class="material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="../components/alert.html">Alert</a></li>
+                                <li class="item"><a href="../components/badge.html">Badge</a></li>
+                                <li class="item"><a href="../components/billboard.html">Billboard</a></li>
+                                <li class="item"><a href="../components/breadcrumb.html">Breadcrumbs</a></li>
+                                <li class="item"><a href="../components/card.html">Card</a></li>
+                                <li class="item"><a href="../components/list.html">List</a></li>
+                                <li class="item"><a href="../components/menu.html">Menu</a></li>
+                                <li class="item"><a href="../components/navbar.html">Navbar</a></li>
+                                <li class="item"><a href="../components/pagination.html">Pagination</a></li>
+                                <li class="item"><a href="../components/panel.html">Panel</a></li>
+                                <li class="item"><a href="../components/process.html">Process</a></li>
+                                <li class="item"><a href="../components/progress.html">Progress</a></li>
+                                <li class="item"><a href="../components/tabnav.html">Tabnav</a></li>
+                                <li class="item"><a href="../components/timeline.html">Timeline</a></li>
+                                <li class="item"><a href="../components/tooltip.html">Tooltip</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="buttons">
+                        <div class="dropdown bottom right">
+                            <a class="button toggle" tabindex="0">
+                                <i class="material-icons mr-5 color-primary">toys</i> Examples <span
+                                    class="material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="../examples/alpinejs.html">AlpineJS</a></li>
+                                <li class="item"><a href="../examples/pages.html">Pages</a></li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank"
+                            class="button">
+                            Changelog
+                        </a>
+                        <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank" class="button">
+                            Github
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <label for="burger" class="burger"></label>
+        </div>
+    </header>
+
+    <div class="container navbar-spacer">
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-16 col-xs-16">
+                <div class="divided pure menu">
+                    <div class="title">Base</div>
+                    <div class="item">
+                        <a href="./introduction.html">
+                            <i class="material-icons">mic</i> Introduction
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./colors.html">
+                            <i class="material-icons">format_paint</i> Color Palette
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./grid.html">
+                            <i class="material-icons">border_clear</i> Grid
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="./helpers.html" class="active">
+                            <i class="material-icons">emoji_people</i> Helpers
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-11 col-sm-16 col-xs-16">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-16">
+
+                            <div class="panel pure reset">
+                                <div class="breadcrumb">
+                                    <a href="../" class="item">Punica</a>
+                                    <a href="" class="item">Base</a>
+                                    <a href="" class="item active">Helpers</a>
+                                </div>
+                            </div>
+
+                            <div class="panel pure">
+                                <div class="content reset">
+                                    <div>
+                                        <span class="h1">
+                                            <i class="material-icons large-text mr-10">emoji_people</i> Helpers
+                                        </span>
+                                        <span class="label small">
+                                            <i class="material-icons color-warning mr-5">error_outline</i> not yet completed.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="tab">
+                                        <div class="button active">Info</div>
+                                        <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Utilities/helpers.scss"
+                                            target="_blank" class="button">
+                                            <i class="material-icons mr-5">code</i> Source
+                                        </a>
+                                        <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Utilities/variables.scss"
+                                            target="_blank" class="button">
+                                            <i class="material-icons mr-5">settings</i> Variables
+                                        </a>
+                                        <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Utilities/mixins.scss" target="_blank" class="button">
+                                            <i class="material-icons mr-5">toys</i> Mixins
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        There are many set of CSS helper classes available in Punica. Each helper class is responsible for doing one job.
+                                    </p>
+                                </div>
+                                <div class="content">
+
+                                    <!-- font sizes -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Font sizes
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default class/prefix</th>
+                                                <th>Default value(s)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>font-size</td>
+                                                <td><code>.mini-text</code></td>
+                                                <td><code>60%</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>font-size</td>
+                                                <td><code>.tiny-text</code></td>
+                                                <td><code>73%</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>font-size</td>
+                                                <td><code>.small-text</code></td>
+                                                <td><code>85%</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>font-size</td>
+                                                <td><code>.large-text</code></td>
+                                                <td><code>120%</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>font-size</td>
+                                                <td><code>.big-text</code></td>
+                                                <td><code>175%</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>font-size</td>
+                                                <td><code>.huge-text</code></td>
+                                                <td><code>200%</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>font-size</td>
+                                                <td><code>.giant-text</code></td>
+                                                <td><code>350%</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- text colors -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Text colors
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default class/prefix</th>
+                                                <th>Default variable</th>
+                                                <th class="center align">#Hex</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>color</td>
+                                                <td><code>.color-grey</code></td>
+                                                <td><code>$main-grey-color</code></td>
+                                                <td class="center align"><code>#77878b</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>color</td>
+                                                <td><code>.color-white</code></td>
+                                                <td><code>white</code></td>
+                                                <td class="center align"><code>#ffffff</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>color</td>
+                                                <td><code>.color-black</code></td>
+                                                <td><code>black</code></td>
+                                                <td class="center align"><code>#000000</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>color</td>
+                                                <td><code>.color-primary</code></td>
+                                                <td><code>$primary-color</code></td>
+                                                <td class="center align"><code>#0a8fff</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>color</td>
+                                                <td><code>.color-success</code></td>
+                                                <td><code>$success-color</code></td>
+                                                <td class="center align"><code>#2ec4b6</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>color</td>
+                                                <td><code>.color-warning</code></td>
+                                                <td><code>$warning-color</code></td>
+                                                <td class="center align"><code>#de9e36</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>color</td>
+                                                <td><code>.color-error</code></td>
+                                                <td><code>$error-color</code></td>
+                                                <td class="center align"><code>#d62828</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- bg colors -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Background colors
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default class/prefix</th>
+                                                <th>Default variable</th>
+                                                <th>#Hex</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-grey</code></td>
+                                                <td><code>$main-grey-color</code></td>
+                                                <td><code>#77878b</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-secondary</code></td>
+                                                <td><code>$main-secondary-bg</code></td>
+                                                <td><code>#e6e6e6</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-white</code></td>
+                                                <td><code>white</code></td>
+                                                <td><code>#ffffff</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-black</code></td>
+                                                <td><code>$main-font-color</code></td>
+                                                <td><code>#3f4143</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-dark</code></td>
+                                                <td><code>$main-dark-color</code></td>
+                                                <td><code>#414552</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-primary</code></td>
+                                                <td><code>$primary-color</code></td>
+                                                <td><code>#0a8fff</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-success</code></td>
+                                                <td><code>$success-color</code></td>
+                                                <td><code>#2ec4b6</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-warning</code></td>
+                                                <td><code>$warning-color</code></td>
+                                                <td><code>#de9e36</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>background-color</td>
+                                                <td><code>.bg-error</code></td>
+                                                <td><code>$error-color</code></td>
+                                                <td><code>#d62828</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- font weights -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Font weights
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default class/prefix</th>
+                                                <th>Default value(s)</th>
+                                                <th>Example usage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>font-weight</td>
+                                                <td><code>.fw-</code></td>
+                                                <td><code>100,200,300,400,500,600,700,800,900</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"fw-600"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- text transform -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Text Transform
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default class/prefix</th>
+                                                <th>Default variable</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>text-transform</td>
+                                                <td><code>.text-uppercase</code></td>
+                                                <td><code>uppercase</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>text-transform</td>
+                                                <td><code>.text-lowercase</code></td>
+                                                <td><code>lowercase</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>text-transform</td>
+                                                <td><code>.text-capitalize</code></td>
+                                                <td><code>capitalize</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- line height -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Line Height
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default class/prefix</th>
+                                                <th>Default Value(s)</th>
+                                                <th>Example usage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>line-height</td>
+                                                <td><code>.line-height-</code></td>
+                                                <td><code>0,1,2,3,4,5</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"line-height-2"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- margin -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Margin
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default class/prefix</th>
+                                                <th>Default value(s)</th>
+                                                <th>Example usage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>margin</td>
+                                                <td><code>.m-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"m-auto"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>margin-top</td>
+                                                <td><code>.mt-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"mt-15"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>margin-right</td>
+                                                <td><code>.mr-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"mr-15"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>margin-bottom</td>
+                                                <td><code>.mb-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"mb-15"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>margin-left</td>
+                                                <td><code>.ml-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"ml-15"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- padding -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Padding
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default class/prefix</th>
+                                                <th>Default value(s)</th>
+                                                <th>Example usage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>padding</td>
+                                                <td><code>.p-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"p-10"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>padding-top</td>
+                                                <td><code>.pt-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"pt-20"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>padding-right</td>
+                                                <td><code>.pr-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"pr-30"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>padding-bottom</td>
+                                                <td><code>.pb-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"pb-40"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>padding-left</td>
+                                                <td><code>.pl-</code></td>
+                                                <td><code>auto,0,5,10,15,20,30,40,50</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"pl-50"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- display -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Display
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default Value</th>
+                                                <th>Default class</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>inline</code></td>
+                                                <td><code>.display-inline</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>flex</code></td>
+                                                <td><code>.display-flex</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>inline-flex</code></td>
+                                                <td><code>.display-inline-flex</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>grid</code></td>
+                                                <td><code>.display-grid</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>inline-grid</code></td>
+                                                <td><code>.display-inline-grid</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>block</code></td>
+                                                <td><code>.display-block</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>inline-block</code></td>
+                                                <td><code>.display-inline-block</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>table</code></td>
+                                                <td><code>.display-table</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>inline-table</code></td>
+                                                <td><code>.display-inline-table</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>table-row</code></td>
+                                                <td><code>.display-table-row</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>table-column</code></td>
+                                                <td><code>.display-table-column</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>display</td>
+                                                <td><code>table-cell</code></td>
+                                                <td><code>.display-table-cell</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- position -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Position
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default Value</th>
+                                                <th>Default class</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>position</td>
+                                                <td><code>static</code></td>
+                                                <td><code>.position-static</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>position</td>
+                                                <td><code>absolute</code></td>
+                                                <td><code>.position-absolute</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>position</td>
+                                                <td><code>fixed</code></td>
+                                                <td><code>.position-fixed</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>position</td>
+                                                <td><code>relative</code></td>
+                                                <td><code>.position-relative</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>position</td>
+                                                <td><code>sticky</code></td>
+                                                <td><code>.position-sticky</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>position</td>
+                                                <td><code>initial</code></td>
+                                                <td><code>.position-initial</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>position</td>
+                                                <td><code>inherit</code></td>
+                                                <td><code>.position-inherit</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- positioned elements -->
+                                    <div class="h6 mb-20 mt-20">
+                                        <i class="material-icons color-primary mr-5">adjust</i> Positioned Elements
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Default Value(s)</th>
+                                                <th>Default class</th>
+                                                <th>Example usage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>top</td>
+                                                <td><code>0,auto</code></td>
+                                                <td><code>.top-</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"top-0"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>bottom</td>
+                                                <td><code>0,auto</code></td>
+                                                <td><code>.bottom-</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"bottom-auto"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>left</td>
+                                                <td><code>0,auto</code></td>
+                                                <td><code>.left-</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"left-0"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>right</td>
+                                                <td><code>0,auto</code></td>
+                                                <td><code>.right-</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"right-0"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>top,bottom,left,right</td>
+                                                <td><code>0,auto</code></td>
+                                                <td><code>.inset-</code></td>
+                                                <td>
+                                                    <div class="syntaxhighlighter nogutter  xml reset">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="code">
+                                                                        <div class="line number1 index0 alt2">&nbsp;<code class="xml color1">class</code><code
+                                                                                class="xml plain">=</code><code class="xml string">"inset-0"</code></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row align center mt-50 mb-50">
+        <div class="col-16">
+            Designed and developed by <a href="https://github.com/codeforms" class="fw-900"
+                target="_blank">CodeForms</a>.
+            Punica CSS is
+            licensed under the <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"
+                target="_blank">MIT License</a>.
+        </div>
+    </div>
+</body>
+
+</html>
