@@ -9,7 +9,7 @@ $helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999;
 $helper-lh-ranges	: 0,1,2,3,4,5; // lh: line-height
 $helper-br-ranges	: 4,8,10,12,14; // br: border-radius
 
-/* 
+/*
 Margin ************************************/
 $margin-helpers: (
 	// class name (prefix), property
@@ -20,7 +20,7 @@ $margin-helpers: (
     ("ml-", "margin-left")
 );
 
-/* 
+/*
 Padding ************************************/
 $padding-helpers: (
 	// class name (prefix), property
@@ -31,14 +31,14 @@ $padding-helpers: (
     ("pl-", "padding-left")
 );
 
-/* 
+/*
 Font Weight ************************************/
 $font-weights: (
 	// class name (prefix), property
 	"fw-": "font-weight"
 );
 
-/* 
+/*
 Font Size ************************************/
 $font-sizes: (
 	// class name, value
@@ -51,7 +51,7 @@ $font-sizes: (
 	("giant-text", 350%)
 );
 
-/* 
+/*
 Text Colors ************************************/
 $text-colors		: (
 	// class name, value
@@ -64,7 +64,7 @@ $text-colors		: (
 	("color-error", $error-color)
 );
 
-/* 
+/*
 Bg Colors ************************************/
 $bg-colors			: (
 	// class name, value
@@ -79,7 +79,7 @@ $bg-colors			: (
 	("bg-error", $error-color)
 );
 
-/* 
+/*
 Cursors ************************************/
 $cursors: (
 	// class name, value
@@ -94,7 +94,7 @@ $cursors: (
 	("cursor-zoom-out", zoom-out)
 );
 
-/* 
+/*
 Display Properties ************************************/
 $display-properties: (
 	// class name, value
@@ -118,7 +118,7 @@ $align-items: (
 	// class name, value
 	("align-items-baseline", baseline),
 	("align-items-flex-start", flex-start),
-	("align-items-lex-end", flex-end),
+	("align-items-flex-end", flex-end),
 	("align-items-center", center),
 	("align-items-stretch", stretch),
 	("align-items-initial", initial),
@@ -137,17 +137,17 @@ $align-self: (
 );
 $justify-content: (
 	// class name, value
-	("justify-content-center", center),
+	("justify-content-baseline", baseline),
 	("justify-content-flex-start", flex-start),
 	("justify-content-flex-end", flex-end),
-	("justify-content-baseline", baseline),
+	("justify-content-center", center),
 	("justify-content-space-between", space-between),
 	("justify-content-space-around", space-around),
 	("justify-content-initial", initial),
 	("justify-content-inherit", inherit)
 );
 
-/* 
+/*
 Filters ************************************/
 $display-filters: (
 	// class name, value
@@ -155,7 +155,7 @@ $display-filters: (
 	("filter-gray", grayscale(100%))
 );
 
-/* 
+/*
 Text Transforms ************************************/
 $text-transforms: (
 	// class name, value
@@ -164,7 +164,7 @@ $text-transforms: (
 	("text-capitalize", capitalize)
 );
 
-/* 
+/*
 Overflow Properties ************************************/
 $overflow-properties: (
 	// class name, property, value
@@ -172,16 +172,16 @@ $overflow-properties: (
 	("overflow-hidden", "overflow", hidden),
 	("overflow-visible", "overflow", visible),
 	("overflow-x-auto", "overflow-x", auto),
-	("overflow-y-auto", "overflow-y", auto),
 	("overflow-x-hidden", "overflow-x", hidden),
-	("overflow-y-hidden", "overflow-y", hidden),
 	("overflow-x-visible", "overflow-x", visible),
-	("overflow-y-visible", "overflow-y", visible),
 	("overflow-x-scroll", "overflow-x", scroll),
+	("overflow-y-auto", "overflow-y", auto),
+	("overflow-y-hidden", "overflow-y", hidden),
+	("overflow-y-visible", "overflow-y", visible),
 	("overflow-y-scroll", "overflow-y", scroll)
 );
 
-/* 
+/*
 Position Properties ************************************/
 $position-properties: (
 	// class name, value
@@ -194,14 +194,14 @@ $position-properties: (
 	("position-inherit", inherit)
 );
 
-/* 
+/*
 Stack Order (z-index) **********************************/
 $z-indexes: (
 	// class name, property
 	"z-": "z-index"
 );
 
-/* 
+/*
 Direction of the flexible items (flex-direction) *******/
 $flex-directions: (
 	// class name, value
@@ -213,7 +213,7 @@ $flex-directions: (
 	("flex-direction-inherit", inherit)
 );
 
-/* 
+/*
 User Select **********************************/
 $user-selects: (
 	// class name, value
@@ -233,14 +233,14 @@ $insets: (
 	'right'(0, auto),
 );
 
-/* 
+/*
 Line Height *********************************/
 $line-heights: (
 	// class name (prefix), property
 	"line-height-": "line-height"
 );
 
-/* 
+/*
 Border Radius *******************************/
 $border-radius: (
 	// class name (prefix), property
