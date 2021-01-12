@@ -1,19 +1,6 @@
 /***************************************************** 
 PUNICA CSS > COMPONENT : BADGE > MIXINS **************/
 
-@mixin badge-styles(
-	$bg-color: $main-bg,
-	$color: $main-font-color
-) {
-	background: $bg-color;
-	color: $color;
-	border: $main-border-width $main-border-style darken($bg-color, 20%); 
-}
-
-@mixin badge-sizes(
-	$padding: $badge-padding-y $badge-padding-x, 
-	$font-size: $badge-font-size,
-) {
-	padding: $padding;
-	font-size: $font-size;
-}
+/**
+	It will be deleted in v1.8.0 release.
+*/

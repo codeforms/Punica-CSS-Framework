@@ -7,7 +7,12 @@ PUNICA CSS > COMPONENTS : ALERT **********************/
 @if $components-alert {
 	.#{$alert-name} {
 		display: block;
-		@include alert-styles();
+		@include set-style($main-bg, $main-font-color) {
+			border-color: $main-bg;
+			a {
+				color: $main-font-color;
+			}
+		};
 		border: $main-border-width $main-border-style $main-border-color;
 		border-radius: $alert-border-radius;
 		padding: $alert-padding;
@@ -18,10 +23,17 @@ PUNICA CSS > COMPONENTS : ALERT **********************/
 		// STYLES
 		//
 		@if($components-alert-styles) {
-			@each $type, $color in $alert-styles {
-				&.#{$type} {
-					@include alert-styles($color, $main-invert-color);
-				}
+			@each $style-name, $bg-color in $alert-styles {
+				@include set-style($bg-color, $main-invert-color, $style-name);
+			}
+		}
+		//
+		// SIZES
+		//
+		@if ($components-alert-sizes) {
+			// badge sizes
+			@each $size-name, $font-size, $padding in $alert-sizes {
+				@include set-size($font-size, $padding, $size-name);
 			}
 		}
 		a {

@@ -1,10 +1,19 @@
 /*****************************************************
 *** GLOBAL MIXINS ************************************/
-@mixin breakpoints($size, $width: 'min-width') {
+/**
+ *	
+ */
+@mixin breakpoints(
+	$size, $width: 'min-width'
+) {
 	@media only screen and ($width: $size) {
 		@content;
 	}
 }
+
+/**
+ *	
+ */
 @mixin shadow(
 	$h-offset: 0,
 	$v-offset: 1px,
@@ -13,6 +22,68 @@
 ) {
 	box-shadow: $h-offset $v-offset $blur $color;
 }
+
+/**
+ *	
+ */
+@mixin media-group-specs(
+	$item-name, $padding: 1px
+) {
+	@each $name, $number in $grids {
+		&>.#{$item-name}.#{$name} {
+			padding-bottom: initial !important;
+			height: auto;
+			&>div, &>a {
+				flex: 0 0 calc(100% * (1 / #{$number}));
+				flex-grow: 1;
+				padding: $padding;
+			}
+		}
+	}
+}
+
+/**
+ *	
+ */
+@mixin set-size(
+	$font-size, $padding, $size-name: null
+) {
+	@if $size-name {
+		&.#{$size-name} {
+			padding: $padding;
+			font-size: $font-size;
+			@content;
+		}
+	} @else {
+		padding: $padding;
+		font-size: $font-size;
+		@content;
+	}
+	
+}
+
+/**
+ *	
+ */
+@mixin set-style(
+	$bg-color, $color, $style-name: null
+) {
+	@if $style-name {
+		&.#{$style-name} {
+			background-color: $bg-color;
+			color: $color;
+			@content;
+		}
+	} @else {
+		background-color: $bg-color;
+		color: $color;
+		@content;
+	}
+}
+
+/**
+ *	
+ */
 @mixin embedded-media {
 	// References;
 	// https://css-tricks.com/fluid-width-video/
@@ -36,21 +107,5 @@
 		max-width: 100%;
 		height: auto;
 		box-sizing: border-box;
-	}
-}
-@mixin media-group-specs(
-	$item-name, 
-	$padding: 1px
-) {
-	@each $name, $number in $grids {
-		&>.#{$item-name}.#{$name} {
-			padding-bottom: initial !important;
-			height: auto;
-			&>div, &>a {
-				flex: 0 0 calc(100% * (1 / #{$number}));
-				flex-grow: 1;
-				padding: $padding;
-			}
-		}
 	}
 }

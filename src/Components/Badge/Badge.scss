@@ -13,16 +13,14 @@ PUNICA CSS > COMPONENTS : BADGE **********************/
 		align-items: center;
 		font-weight: $badge-font-weight;
 		border-radius: $badge-border-radius;
-		@include badge-sizes();
-		@include badge-styles();
+		@include set-size($badge-font-size, $badge-padding);
+		@include set-style($main-bg, $main-font-color);
 		//
 		// STYLES
 		//
 		@if $components-badge-styles {
-			@each $type-name, $bg-color in $badge-styles {
-				&.#{$type-name} {
-					@include badge-styles($bg-color, $main-invert-color);
-				}
+			@each $name, $bg-color in $badge-styles {
+				@include set-style($bg-color, $main-invert-color, $name);
 			}
 		}
 		//
@@ -30,10 +28,8 @@ PUNICA CSS > COMPONENTS : BADGE **********************/
 		//
 		@if ($components-badge-sizes) {
 			// badge sizes
-			@each $size, $font-size, $padding in $badge-sizes {
-				&.#{$size} {
-					@include badge-sizes($padding, $font-size);
-				}
+			@each $size-name, $font-size, $padding in $badge-sizes {
+				@include set-size($font-size, $padding, $size-name);
 			}
 		}
 	}

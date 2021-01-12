@@ -11,32 +11,31 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 		justify-content: space-between;
 		align-items: center;
 		padding: $billboard-default-padding;
-		@include billboard-styles();
+		@include set-style($main-bg, $main-font-color) {
+			border-color: darken($main-bg, 4.5%);
+		};
 		border: $main-border-width $main-border-style $main-border-color;
 		//
 		// STYLES
 		//
 		@if $components-billboard-styles {
-			@each $type, $bg-color in $billboard-styles {
-				&.#{$type} {
-					@include billboard-styles($main-invert-color, $bg-color);
-				}
+			@each $style-name, $bg-color in $billboard-styles {
+				@include set-style($bg-color, $main-invert-color, $style-name);
 			}
 		}
 		//
 		// SIZES
 		//
 		@if $components-billboard-sizes {
-			@each $size, $padding, $font-size in $billboard-sizes {
-				&.#{$size} {
-					padding: $padding;
+			@each $size-name, $padding, $font-size in $billboard-sizes {
+				@include set-size($font-size, $padding, $size-name) {
 					.#{$billboard-body} {
 						padding: $padding;
 					}
 					p {
 						font-size: $font-size;
 					}
-				}
+				};
 			}
 		}
 		.#{$billboard-media} {

@@ -1,11 +1,6 @@
 /***************************************************** 
 PUNICA CSS > COMPONENT : ALERT > MIXINS **************/
 
-@mixin alert-styles($theme: $main-bg, $text-color: $main-font-color) {
-	background: $theme;
-	border-color: $theme;
-	color: $text-color;
-	a {
-		color: $text-color;
-	}
-}
+/**
+	It will be deleted in v1.8.0 release.
+*/

@@ -1,8 +1,6 @@
 /***************************************************** 
 PUNICA CSS > COMPONENT : BILLBOARD > MIXINS **********/
 
-@mixin billboard-styles($text-color: $main-font-color, $theme: $main-bg) {
-	background-color: $theme;
-	border-color: darken($theme, 4.5%);
-	color: $text-color;
-}
+/**
+	It will be deleted in v1.8.0 release.
+*/
