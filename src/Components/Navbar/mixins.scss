@@ -15,7 +15,7 @@ PUNICA CSS > COMPONENT : NAVBAR > MIXINS *************/
 		.#{$button-class} {
 			color: $text-color;
 			min-height: 100%;
-			i, span.material-icons {
+			i, span.#{$icon-font-class-name} {
 				color: $text-color;
 			}
 		}

@@ -47,8 +47,8 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 		}
 		.#{$navbar-burger} {
 			&::before {
-				content: "dehaze";
-				font-family: "Material Icons";
+				content: "#{$icon-navbar-open}"; // [*]
+				font-family: "#{$icon-font-name}"; // [*]
 				font-size: 2.459rem;
 				display: none;
 				min-height: $navbar-min-height;
@@ -97,7 +97,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				border: none;
 				color: $navbar-color;
 				min-height: 100%;
-				i, span.material-icons {
+				i, span.#{$icon-font-class-name} {
 					color: $navbar-color;
 				}
 			}
@@ -163,7 +163,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$button-class},
 				.#{$navbar-section} .#{$button-class-group} .#{$button-class} {
 					color: $main-font-color;
-					i, span.material-icons {
+					i, span.#{$icon-font-class-name} {
 						display: none;
 					}
 				}
@@ -179,7 +179,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				min-height: $navbar-min-height;
 				min-width: $navbar-min-height;
 				&::before {
-					content: "clear";
+					content: "#{$icon-navbar-close}"; // [*]
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -192,11 +192,16 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				height: auto;
 			}
 			input[type=checkbox]##{$navbar-burger}:not(:checked) ~ .#{$navbar-burger}::before {
-				content: "dehaze";
+				content: "#{$icon-navbar-open}"; // [*]
 			}
 			input[type=checkbox]##{$navbar-burger}:checked ~ .#{$navbar-burger}::before {
-				content: "clear";
+				content: "#{$icon-navbar-close}"; // [*]
 			}
 		}
 	}
 }
+/*
+REFERENCES ******************************************
+[*] Defined at Elements -> Icon -> variables.scss
+https://material.io/resources/icons/
+*****************************************************/

@@ -52,7 +52,7 @@ PUNICA CSS > COMPONENTS : ALERT **********************/
 			}
 		}
 		>i,
-		>.material-icons {
+		>.#{$icon-font-class-name} {
 			vertical-align: text-top;
 		}
 	}

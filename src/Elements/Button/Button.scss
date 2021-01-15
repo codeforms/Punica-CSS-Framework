@@ -47,7 +47,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		&:focus {
 			background: $button-bg-color;
 			> i,
-			> [class^="material-icons"] {
+			> [class^="#{$icon-font-class-name}"] {
 				color: $primary-color;
 			}
 		}
@@ -61,7 +61,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				color: $button-hover-text-color;
 				background: $button-bg-hover;
 			}
-			i, [class^="material-icons"] {
+			i, [class^="#{$icon-font-class-name}"] {
 				color: $button-text-color;
 				text-shadow: $button-icon-shadow;
 			}
@@ -96,9 +96,8 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			display: block;
 			width: 100%;
 		}
-		i, [class^="material-icons"] {
-			vertical-align: middle;
-			font-size: 1.35em;
+		i, [class^="#{$icon-font-class-name}"] {
+			font-size: 1.35em; 
 			color: $button-icon-color;
 			text-shadow: $button-icon-shadow;
 		}

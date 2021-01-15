@@ -52,7 +52,7 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 					font-weight: inherit;
 				}
 			}
-			i, span.material-icons {
+			i, span.#{$icon-font-class-name} {
 				color: $menu-item-icon-color;
 				font-size: $menu-item-icon-size;
 				margin-right: $menu-item-icon-mr;

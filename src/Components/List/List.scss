@@ -14,7 +14,7 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 		    margin: 0;
 		    transition: .15s;
 		    >img,
-		    >.material-icons,
+		    >.#{$icon-font-class-name},
 		    >i {
 		    	margin-right: $list-margin-spacer;
 		    }

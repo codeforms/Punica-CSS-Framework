@@ -1,0 +1,32 @@
+/*****************************************************
+PUNICA CSS > ELEMENTS : ICON > VARIABLES *************
+======================================================
+All icons are defined from this file. Please take
+a look at https://material.io/resources/icons/ for
+more information. You can also define any other font 
+library you want from this file.
+======================================================/
+
+/*****************************************************
+DEFINITIONS ******************************************/
+$icon-font-name				: 'Material Icons';
+$icon-font-class-name		: 'material-icons';
+// elements -> form -> checkbox
+$icon-checkbox-before		: "check_box_outline_blank";
+$icon-checkbox-after		: "check_box";
+// elements-> form -> radio
+$icon-radio-before			: "radio_button_unchecked";
+$icon-radio-after			: "radio_button_checked";
+// components -> breadcrumb
+$icon-breadcrumb-seperator	: "keyboard_arrow_right";
+// components -> navbar
+$icon-navbar-open			: "dehaze";
+$icon-navbar-close			: "close";
+// components -> process
+$icon-process-current		: "beenhere";
+
+/*****************************************************
+PREFERENCES ******************************************/
+$icon-font-size				: 1.1rem;
+$icon-line-height			: 1;
+$icon-vertical-align		: middle;

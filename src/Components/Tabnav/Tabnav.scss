@@ -46,7 +46,7 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
 				color: $primary-color;
 				border-bottom-color: $primary-color;
 				font-weight: 700;
-				i, [class^="material-icons"] {
+				i, [class^="#{$icon-font-class-name}"] {
 					color: initial;
 				}
 			}

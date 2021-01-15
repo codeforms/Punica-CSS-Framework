@@ -55,8 +55,8 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 					color: $primary-color;
 					font-weight: 700;
 					&::after {
-						content: "beenhere";
-						font-family: "Material Icons";
+						content: "#{$icon-process-current}"; // [*]
+						font-family: "#{$icon-font-name}"; // [*]
 						position: absolute;
 						top: calc(-15px - #{$process-current-icon-size});
 						left: calc(50% - ((#{$process-stage-stick-width} * 10) / 2));
@@ -98,3 +98,8 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 		}
 	}
 }
+/*
+REFERENCES ******************************************
+[*] Defined at Elements -> Icon -> variables.scss
+https://material.io/resources/icons/
+*****************************************************/

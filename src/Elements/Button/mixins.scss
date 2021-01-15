@@ -24,7 +24,7 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 	&.#{$button-class-inactive} {
 		background: darken($bg-color, 7.5%);
 	}
-	i, [class^="material-icons"] {
+	i, [class^="#{$icon-font-class-name}"] {
 		color: $text-color;
 		text-shadow: $button-icon-shadow;
 	}
@@ -42,7 +42,7 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 		background-image: $button-secondary-bg-img-hover;
 		z-index: 1;
 		border-color: $main-border-color;
-		i, [class^="material-icons"] {
+		i, [class^="#{$icon-font-class-name}"] {
 			color: $button-secondary-text-color;
 		}
 	}
