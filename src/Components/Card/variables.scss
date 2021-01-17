@@ -2,6 +2,11 @@
 PUNICA CSS > COMPONENTS : CARD > VARIABLES ***********/
 
 /*****************************************************
+STYLE OPTIONS ****************************************/
+$has-card-shadow	: true;
+$has-card-border	: true;
+
+/*****************************************************
 CLASS NAMING *****************************************/
 $card-name			: 'card';
 $cards-name			: 'cards';

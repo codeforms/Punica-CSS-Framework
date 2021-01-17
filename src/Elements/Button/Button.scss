@@ -329,12 +329,23 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					left: auto !important;
 				}
 			}
+			// dropdown hover (default)
 			&.#{$menu-item-active} > .#{$menu-name},
 			&>.#{$dropdown-toggle}:focus + .#{$menu-name},
 			&>.#{$dropdown-toggle}:hover + .#{$menu-name},
 			&>.#{$menu-name}:focus,
 			&>.#{$menu-name}:hover {
 				display: block;
+			}
+			// clickable dropdown
+			&.#{$dropdown-click} {
+				&>.#{$dropdown-toggle}:hover + .#{$menu-name} {
+					display: none;
+				}
+				&>.#{$dropdown-toggle}:focus ~ .#{$menu-name},
+				&>.#{$dropdown-toggle}:active ~ .#{$menu-name} {
+					display: block;
+				}
 			}
 			//
 			// BUTTON GROUPS

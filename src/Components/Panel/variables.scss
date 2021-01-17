@@ -2,6 +2,11 @@
 PUNICA CSS > COMPONENT : PANEL > VARIABLES ***********/
 
 /*****************************************************
+STYLE OPTIONS ****************************************/
+$has-panel-shadow				: true;
+$has-panel-border				: true;
+
+/*****************************************************
 CLASS NAMING *****************************************/
 $panel-name						: 'panel';
 $panel-header					: 'header';
@@ -24,7 +29,7 @@ $panel-border-style				: $main-border-style;
 /* Header & Title */
 $panel-title-font-size			: 1.185rem;
 $panel-title-font-weight		: 900;
-$panel-title-bottom-border		: 1px $panel-border-style $panel-border-color;
+$panel-title-bottom-border		: $panel-border-width $panel-border-style $panel-border-color;
 $panel-title-padding			: 12px $panel-padding;
 /* Headline */
 $panel-headline-font-size		: 1.39em;
@@ -34,5 +39,5 @@ $panel-headline-color			: darken($main-font-color, 16%);
 $panel-headline-letter-spacing	: -.0158em;
 /* Bottom */
 $panel-bottom-min-height		: 50px;
-$panel-bottom-border			: 1px $panel-border-style $panel-border-color;
+$panel-bottom-border			: $panel-border-width $panel-border-style $panel-border-color;
 $panel-bottom-padding			: 6px;

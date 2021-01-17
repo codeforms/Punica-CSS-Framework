@@ -61,6 +61,7 @@ $components-panel							: true;
 /* Process =========================================*/
 $components-process							: true;
 /**/$components-process-styles				: true;
+/**/$components-process-vertical			: true;
 
 /* Progress =========================================*/
 $components-progress						: true;
@@ -92,6 +93,10 @@ $elements-button							: true;
 
 /* Form =============================================*/
 $elements-form								: true;
+/**/$elements-form-group					: true;
+/**/$elements-form-input-sizes				: true;
+/**/$elements-form-validation-styles		: true;
+/**/$elements-form-checkbox-radio			: true;
 
 /* Icon =============================================*/
 $elements-icon								: true;

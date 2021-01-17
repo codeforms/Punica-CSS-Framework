@@ -24,9 +24,18 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 	}
 	.#{$card-name} {
 		background: $card-bg;
-		border: $main-border-width $main-border-style $main-border-color;
-		border-radius: $main-border-radius;
-		@include shadow();
+
+		// has card border?
+		@if $has-card-border {
+			border: $main-border-width $main-border-style $main-border-color;
+			border-radius: $main-border-radius;
+		}
+
+		// has card shadow?
+		@if $has-card-shadow {
+			@include shadow();
+		}
+		
 		display: flex;
 		flex-direction: column;
 		width: $card-default-width; // for only a single card

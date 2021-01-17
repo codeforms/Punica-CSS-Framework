@@ -7,9 +7,18 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 	.#{$panel-name} {
 		display: flex;
 		flex-direction: column;
-		border: $panel-border-width $panel-border-style $panel-border-color;
-		border-radius: $panel-border-radius;
-		@include shadow();
+
+		// has panel border?
+		@if $has-panel-border {
+			border: $panel-border-width $panel-border-style $panel-border-color;
+			border-radius: $panel-border-radius;
+		}
+
+		// has panel shadow?
+		@if $has-panel-shadow {
+			@include shadow();
+		}
+
 		background: $main-bg;
 		margin: $panel-margin;
 		&>.#{$panel-header},

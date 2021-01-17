@@ -26,10 +26,15 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			outline-offset: -$form-outline-width;
 			transition: .35s;
 		}
-		@each $style-name, $style-color in $form-input-styles {
-			&.#{$style-name} {
-				color: $style-color;
-				outline-color: $style-color;
+		//
+		// VALIDATION STYLES
+		//
+		@if $elements-form-validation-styles {
+			@each $style-name, $style-color in $form-input-styles {
+				&.#{$style-name} {
+					color: $style-color;
+					outline-color: $style-color;
+				}
 			}
 		}
 	};
@@ -94,36 +99,40 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				height: 100%;
 				cursor: default;
 			}
-			// form group
-			@at-root .#{$form-name} .#{$form-group},
-			&>.#{$form-group} {
-				display: flex;
-			    width: 100%;
-				>* {
-					flex: 1 1 auto;
-					&:last-child {
-		    			margin-left: -1px;
+			//
+			// FORM GROUPS
+			//
+			@if $elements-form-group {
+				@at-root .#{$form-name} .#{$form-group},
+				&>.#{$form-group} {
+					display: flex;
+				    width: 100%;
+					>* {
+						flex: 1 1 auto;
+						&:last-child {
+			    			margin-left: -1px;
+						}
+						&:not(:first-child):not(:last-child) {
+		    			    margin-left: -1px;
+		    				margin-right: 0;
+						}
 					}
-					&:not(:first-child):not(:last-child) {
-	    			    margin-left: -1px;
-	    				margin-right: 0;
+					>.#{$button-class-group} {
+						box-shadow: none;
 					}
-				}
-				>.#{$button-class-group} {
-					box-shadow: none;
-				}
-				>.#{$button-class} {
-					height: $form-input-height;
-					font-size: $button-font-size;
-					padding: $button-padding;
-					font-weight: $button-font-weight;
-					&:first-child {
-						border-bottom-right-radius: 0;
-		    			border-top-right-radius: 0;
-					}
-					&:last-child:not(:first-child) {
-						border-bottom-left-radius: 0;
-		    			border-top-left-radius: 0;
+					>.#{$button-class} {
+						height: $form-input-height;
+						font-size: $button-font-size;
+						padding: $button-padding;
+						font-weight: $button-font-weight;
+						&:first-child {
+							border-bottom-right-radius: 0;
+			    			border-top-right-radius: 0;
+						}
+						&:last-child:not(:first-child) {
+							border-bottom-left-radius: 0;
+			    			border-top-left-radius: 0;
+						}
 					}
 				}
 			}
@@ -150,79 +159,88 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				}
 			}
 		}
-		// input sizes
-		@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in $form-input-sizes {
-			&.#{$size-name} {
-				@include form-inputs() {
-					height: $input-height;
-					font-size: $font-size;
-				}
-				.#{$button-class} {
-					height: $input-height !important;
-					font-size: $button-font-size !important;
-					padding: $button-padding !important;
-				}
-				@at-root .#{$form-name}.#{$size-name} label,
-				&>.#{$form-items}>.#{$form-item}>label,
-				&>.#{$form-item}>label {
-					font-size: $font-size;
+		//
+		// INPUT SIZES
+		//
+		@if $elements-form-input-sizes {
+			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in $form-input-sizes {
+				&.#{$size-name} {
+					@include form-inputs() {
+						height: $input-height;
+						font-size: $font-size;
+					}
+					.#{$button-class} {
+						height: $input-height !important;
+						font-size: $button-font-size !important;
+						padding: $button-padding !important;
+					}
+					@at-root .#{$form-name}.#{$size-name} label,
+					&>.#{$form-items}>.#{$form-item}>label,
+					&>.#{$form-item}>label {
+						font-size: $font-size;
+					}
 				}
 			}
 		}
 	}
-	.#{$form-radio},
-	.#{$form-checkbox} {
-		position: relative;
-		label {
-			padding: $form-checkbox-label-padding;
-			cursor: pointer;
-			user-select: none;
-			font-weight: 400;
-			margin: 0;
+	//
+	// CHECKBOX & RADIO
+	//
+	@if $elements-form-checkbox-radio {
+		.#{$form-radio},
+		.#{$form-checkbox} {
+			position: relative;
+			label {
+				padding: $form-checkbox-label-padding;
+				cursor: pointer;
+				user-select: none;
+				font-weight: 400;
+				margin: 0;
+			}
+			input {
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+			}
+			input + label::before,
+			input + label::after {
+				position: absolute;
+				transition: opacity 0.11s ease-in-out;
+				font-family: $form-icon-font-family;
+				font-style: normal;
+				font-weight: normal;
+				text-transform: none;
+				color: $form-radio-checkbox-color;
+				font-size: $form-radio-checkbox-size;
+				top: $form-radio-checkbox-top;
+				left: $form-radio-checkbox-left;
+			}
+			input + label::before {
+				opacity: 1;
+			}
+			input + label::after {
+				opacity: 0;
+			}
+			input:checked + label::after {
+				opacity: 1;
+			}
 		}
-		input {
-			left: 0;
-			opacity: 0;
-			position: absolute;
-			top: 0;
+		.#{$form-checkbox} {
+			input + label::before {
+				content: $form-checkbox-before-content;
+			}
+			input + label::after {
+				content: $form-checkbox-after-content;
+			}
 		}
-		input + label::before,
-		input + label::after {
-			position: absolute;
-			transition: opacity 0.11s ease-in-out;
-			font-family: $form-icon-font-family;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none;
-			color: $form-radio-checkbox-color;
-			font-size: $form-radio-checkbox-size;
-			top: $form-radio-checkbox-top;
-			left: $form-radio-checkbox-left;
-		}
-		input + label::before {
-			opacity: 1;
-		}
-		input + label::after {
-			opacity: 0;
-		}
-		input:checked + label::after {
-			opacity: 1;
-		}
-	}
-	.#{$form-checkbox} {
-		input + label::before {
-			content: $form-checkbox-before-content;
-		}
-		input + label::after {
-			content: $form-checkbox-after-content;
-		}
-	}
-	.#{$form-radio} {
-		input + label::before {
-			content: $form-radio-before-content;
-		}
-		input + label::after {
-			content: $form-radio-after-content;
+		.#{$form-radio} {
+			input + label::before {
+				content: $form-radio-before-content;
+			}
+			input + label::after {
+				content: $form-radio-after-content;
+			}
 		}
 	}
 }
