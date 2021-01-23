@@ -1,6 +1,5 @@
 /***************************************************** 
 PUNICA CSS > COMPONENTS : ALERT **********************/
-@import "mixins";
 //
 // if alert is enable
 //
@@ -24,7 +23,9 @@ PUNICA CSS > COMPONENTS : ALERT **********************/
 		//
 		@if($components-alert-styles) {
 			@each $style-name, $bg-color in $alert-styles {
-				@include set-style($bg-color, $main-invert-color, $style-name);
+				@include set-style($bg-color, $main-invert-color, $style-name) {
+					border-color: darken($bg-color, 5%);
+				};
 			}
 		}
 		//

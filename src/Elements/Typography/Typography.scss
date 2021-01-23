@@ -33,7 +33,7 @@ h6.bordered,
 .h4.bordered, 
 .h5.bordered, 
 .h6.bordered {
-	border-bottom: $main-border-width $main-border-style $main-border-color;
+	border-width: 0 0 $main-border-width 0 !important;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
 }

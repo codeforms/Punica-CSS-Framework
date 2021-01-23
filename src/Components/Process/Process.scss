@@ -97,9 +97,11 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 			&.#{$process-vertical} {
 				@include process-vertical();
 			}
-			@include breakpoints($breakpoints-medium, 'max-width') {
-				@include process-vertical();
-			}
+		}
+
+		// vertical style is setted "true" for mobile devices
+		@include breakpoints($breakpoints-medium, 'max-width') {
+			@include process-vertical();
 		}
 	}
 }
