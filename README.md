@@ -1,6 +1,6 @@
 <p align="center"><img src="https://codeforms.github.io/Punica-CSS-Framework/images/logo.png"></p>
 
-<h3 align="center">Punica CSS</h3>
+<h3 align="center">Punica CSS v2.0 Beta</h3>
 
 <p align="center">
     Clean, lightweight, responsive, modern and fully customizable.<br>
