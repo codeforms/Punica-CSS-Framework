@@ -5,8 +5,8 @@
 ///
 ///
 ///
-@mixin get-theme() { 
-	$current-theme : map-get($punica-themes, $active-theme);
+@mixin get-theme($theme: $active-theme) { 
+	$current-theme : map-get($punica-themes, $theme);
 	$theme-map: $current-theme !global;
 	@content;
 	$theme-map: null !global;

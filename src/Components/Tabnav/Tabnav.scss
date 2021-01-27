@@ -48,7 +48,7 @@
 				border-bottom-color: theme('primary-color');
 				font-weight: 700;
 				i, [class^="#{$icon-font-class-name}"] {
-					color: initial;
+					color: inherit;
 				}
 			}
 		}

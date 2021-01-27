@@ -47,9 +47,9 @@ $form-input-styles: (
 /// PREFERENCES (Checkbox & Radio) ======================
 /* Checkbox & Radio */
 $form-icon-font-family			: '#{$icon-font-name}';
-$form-radio-checkbox-color		: theme('text-color');
-$form-radio-checkbox-size		: 1.15rem;
-$form-radio-checkbox-top		: -5px;
+$form-radio-checkbox-color		: theme('color-dark');
+$form-radio-checkbox-size		: 1.35rem;
+$form-radio-checkbox-top		: -8px;
 $form-radio-checkbox-left		: 0;
 /* Checkbox (material icons) */
 $form-checkbox-before-content	: $icon-checkbox-before;

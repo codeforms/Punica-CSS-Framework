@@ -14,7 +14,7 @@
 		font-weight: $badge-font-weight;
 		border-radius: $badge-border-radius;
 		@include set-size($badge-font-size, $badge-padding);
-		@include set-style('main-bg', 'text-color');
+		@include set-style(theme('background-color'), theme('text-color'));
 		///
 		/// STYLES
 		///

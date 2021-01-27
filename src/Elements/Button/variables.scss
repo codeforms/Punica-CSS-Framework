@@ -64,8 +64,8 @@ $button-padding-inactive		: .45rem !important;
 /* Secondary Button */
 $button-secondary-text-color	: theme('text-color');
 $button-secondary-hover-color	: theme('text-color');
-$button-secondary-bg-img		: theme('button-secondary-bg-img');
-$button-secondary-bg-img-hover	: theme('button-secondary-bg-img-hover');
+$button-secondary-bg-img		: theme('button-secondary-bg');
+$button-secondary-bg-img-hover	: theme('button-secondary-bg-hover');
 
 // SIZES ================================================
 $button-sizes: (
