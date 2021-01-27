@@ -1,9 +1,10 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : PROCESS ********************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : PROCESS
+/////////////////////////////////////////////////////////
 @import "mixins";
-//
-// if process is enable
-//
+///
+/// if process is enable
+///
 @if $components-process {
 	.#{$process-name} {
 		display: flex;
@@ -22,7 +23,7 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 			line-height: 1.3;
 			text-align: center;
 			&:not(:first-child)::before {
-				background: $primary-color;
+				background: theme('primary-color');
 				content: "";
 				height: $process-stick-height;
 				left: -50%;
@@ -31,7 +32,7 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 				width: 100%;
 			}
 			a {
-				color: $main-font-color;
+				color: theme('text-color');
 				display: inline-block;
 				padding: 10px 10px 0;
 				text-decoration: none;
@@ -39,7 +40,7 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 				&::before {
 					position: absolute;
 					content: "";
-					background: $primary-color;
+					background: theme('primary-color');
 					top: 0;
 					left: 50%;
 					height: $process-stage-stick-height;
@@ -52,7 +53,7 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 			}
 			&.#{$process-active} {
 				a {
-					color: $primary-color;
+					color: theme('primary-color');
 					font-weight: 700;
 					&::after {
 						content: "#{$icon-process-current}"; // [*]
@@ -60,29 +61,29 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 						position: absolute;
 						top: calc(-15px - #{$process-current-icon-size});
 						left: calc(50% - ((#{$process-stage-stick-width} * 10) / 2));
-						color: $primary-color;
+						color: theme('primary-color');
 						font-size: $process-current-icon-size;
 					}
 				}
 				&~.#{$process-item} {
 					&::before {
-						background: $main-border-color;
+						background: theme('border-color');
 					}
 					a {
-						color: $main-grey-color;
+						color: theme('text-color');
 						&:hover {
-							color: darken($main-grey-color, 45%);
+							color: theme('primary-color');
 						}
 						&::before {
-							background: $main-border-color;
+							background: theme('border-color');
 						}
 					}
 				}
 			}
 		}
-		//
-		// STYLES
-		//
+		///
+		/// STYLES
+		///
 		@if $components-process-styles {
 			@each $type, $bg-color in $process-styles {
 				&.#{$type} {
@@ -90,9 +91,9 @@ PUNICA CSS > COMPONENTS : PROCESS ********************/
 				}
 			}
 		}
-		//
-		// VERTICAL PROCESS
-		//
+		///
+		/// VERTICAL PROCESS
+		///
 		@if $components-process-vertical {
 			&.#{$process-vertical} {
 				@include process-vertical();

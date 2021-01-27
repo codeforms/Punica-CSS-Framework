@@ -1,18 +1,19 @@
-/***************************************************** 
-PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > UTILITIES : HELPERS > MIXINS
+/////////////////////////////////////////////////////////
 
-/**
- *	
- */
+///
+///
+///
 @mixin setHelperListWithRange(
 	$helpers, $range, $value-type: null, $specificity: null
 ) {
 	@include setNestedHelperList($helpers, $range, $value-type, $specificity);
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin setHelperList(
 	$list, $property-name: null, $specificity: null
 ) {
@@ -31,9 +32,9 @@ PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 	}
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin setNestedHelperList(
 	$list, $second_list: null, $value-type: null, $specificity: null
 ) {
@@ -56,37 +57,37 @@ PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 	}
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin setProperties(
 	$property, $value, $value-type: null, $specificity: null
 ) {
 	#{$property}: #{$value}#{$value-type} #{$specificity};
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin customBackgrounds() {
 	.bg-grid {
 	    height: 100%;
-		background-color: $main-bg;
+		background-color: theme('background-color');
 	    background-position: center center;
-		background-image: linear-gradient(90deg, lighten($primary-color, 25%) 1%, transparent 16%),
-		linear-gradient(lighten($primary-color, 25%) 1%, transparent 16%);
+		background-image: linear-gradient(90deg, lighten(theme('primary-color'), 25%) 1%, transparent 16%),
+		linear-gradient(lighten(theme('primary-color'), 25%) 1%, transparent 16%);
 		background-size: 10px 10px;
 	}
 	.bg-stripe {
 	    height: 100%;
-		background-image: linear-gradient($main-bg, $main-bg 7px, $primary-color 4px, darken($main-bg, 14%));
+		background-image: linear-gradient(theme('background-color'), theme('background-color') 7px, theme('primary-color') 4px, darken(theme('background-color'), 14%));
 	    background-size: 100% 8px;
 	}
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin otherHelpers() {
 	.centered {margin: 0 auto;}
 	.align.right {text-align: right !important;}
@@ -136,9 +137,9 @@ PUNICA CSS > UTILITIES : HELPERS > MIXINS ************/
 	}
 	.transparent {background: transparent !important;}
 	.pure, .pure > div {background: transparent; border: none; box-shadow: none}
-	.bordered {border: $main-border-width $main-border-style $main-border-color !important;}
+	.bordered {border: theme('border-width') theme('border-style') theme('border-color') !important;}
 	.borderless {border: none !important;}
-	.rounded {border-radius: $main-border-radius;}
+	.rounded {border-radius: theme('border-radius');}
 	.radiusless {border-radius:0 !important;}
 	.shadowed {@include shadow();}
 	.shadowless {box-shadow:none !important;}

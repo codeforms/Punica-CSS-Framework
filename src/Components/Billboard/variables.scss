@@ -1,36 +1,34 @@
-/***************************************************** 
-PUNICA CSS > ELEMENTS : BILLBOARD > VARIABLES ********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : BILLBOARD > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
+/// CLASS NAMING ========================================
 $billboard-name		: 'billboard';
 $billboard-media	: 'media';
 $billboard-body		: 'body';
 $billboard-cover	: 'cover';
 
-/*****************************************************
-STYLES ***********************************************/
+/// STYLES ==============================================
 $billboard-styles	: (
-	"primary": $primary-color,
-	"success": $success-color,
-	"warning": $warning-color,
-	"error": $error-color,
-	"dark": $main-dark-color,
+	"primary"	: theme('primary-color'),
+	"success"	: theme('success-color'),
+	"warning"	: theme('warning-color'),
+	"error"		: theme('error-color'),
+	"dark"		: theme('text-color'),
 );
 
-/*****************************************************
-SIZES ************************************************/
-// size name, padding, font-size
+/// SIZES ===============================================
 $billboard-sizes	: ( 
+	// size name, padding, font-size
 	("small", 2.5rem 1.5rem, 1em),
 	("large", 7.5rem 4rem, 1.6em)
 );
 $billboard-responsive-sizes	: ( 
+	// size name, padding, font-size
 	("small", 1rem, 1em),
 	("large", 1rem, 1.358em)
 );
 
-/***************************************************** 
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $billboard-default-padding		: 4.5rem 2.5rem;
 $billboard-responsive-padding	: 2.5rem 1rem;

@@ -1,31 +1,28 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : BADGE > VARIABLES **********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : BADGE > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
-$badge-name 			: 'badge';
+/// CLASS NAMING ========================================
+$badge-name : 'badge';
 
-/*****************************************************
-STYLES ***********************************************/
+/// STYLES ==============================================
 $badge-styles: (
-	"primary": $primary-color,
-	"success": $success-color,
-	"warning": $warning-color,
-	"error": $error-color,
-	"dark": $main-dark-color,
+	"primary"	: theme('primary-color'),
+	"success"	: theme('success-color'),
+	"warning"	: theme('warning-color'),
+	"error"		: theme('error-color'),
+	"dark"		: theme('color-dark'),
 );
 
-/***************************************************** 
-SIZES ************************************************/
-// size name, font-size, padding
+/// SIZES ===============================================
 $badge-sizes: (
+	// size name, font-size, padding
     ("tiny", .659rem, 0 4px),
     ("small", .749rem, 1px 4px),
     ("large", 1.1rem, 2px 8px)
 );
 
-/***************************************************** 
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $badge-font-size		: .854rem;
 $badge-font-weight		: 700;
 $badge-border-radius	: 500px;

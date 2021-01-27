@@ -1,9 +1,9 @@
 /*****************************************************
 PUNICA CSS > ELEMENTS : BUTTON ***********************/
 @import "mixins";
-//
-// if button is enable
-//
+///
+/// if button is enable
+///
 @if $elements-button {
 	a.#{$button-class},
 	.#{$button-class} {
@@ -15,7 +15,6 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		white-space: nowrap;
 		outline: none;
 		width: min-content;
-		text-shadow: $button-text-shadow;
 		background: $button-bg-color;
 		background-image: $button-bg-image;
 		border: $button-border-width solid $button-border-color;
@@ -48,7 +47,7 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			background: $button-bg-color;
 			> i,
 			> [class^="#{$icon-font-class-name}"] {
-				color: $primary-color;
+				color: theme('primary-color');
 			}
 		}
 		&.#{$button-class-active} {
@@ -73,9 +72,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			opacity: .59;
 			pointer-events: none;
 		}
-		//
-		// STYLES
-		//
+		///
+		/// STYLES
+		///
 		@if $elements-button-styles {
 			@each $theme-name, $theme-color in $button-styles {
 				&.#{$theme-name} {
@@ -85,9 +84,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		}
 		// Button Link
 		@include link-button();
-		//
-		// SIZES
-		//
+		///
+		/// SIZES
+		///
 		@if $elements-button-sizes {
 			@include button-sizes();
 		}
@@ -101,18 +100,18 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			color: $button-icon-color;
 			text-shadow: $button-icon-shadow;
 		}
-		//
-		// SECONDARY BUTTON
-		//
+		///
+		/// SECONDARY BUTTON
+		///
 		@if $elements-button-secondary {
 			&.#{$button-secondary} {
 				@include secondary-button();
 			}
 		}
 	}
-	//
-	// BUTTON GROUPS
-	//
+	///
+	/// BUTTON GROUPS
+	///
 	@if $elements-button-group {
 		.#{$button-class-group} {
 			display: inline-flex;
@@ -135,9 +134,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					margin-left: -$button-border-width;
 				}
 			}
-			//
-			// SECONDARY BUTTON
-			//
+			///
+			/// SECONDARY BUTTON
+			///
 			@if $elements-button-secondary {
 				&.#{$button-secondary} > .#{$button-class} {
 					@include secondary-button();
@@ -156,15 +155,15 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				cursor: default;
 				background-image: none !important;
 			}
-			//
-			// SIZES
-			// 
+			///
+			/// SIZES
+			/// 
 			@if $elements-button-sizes {
 				@include button-sizes(true);
 			}
-			//
-			// STYLES
-			//
+			///
+			/// STYLES
+			///
 			@if $elements-button-styles {
 				@each $theme-name, $theme-color in $button-styles {
 					&.#{$theme-name} > .#{$button-class},
@@ -176,9 +175,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			}
 			// Button Link
 			@include link-button();
-			//
-			// DROPDOWN
-			//
+			///
+			/// DROPDOWN
+			///
 			@if $elements-button-dropdown {
 				.#{$dropdown-name}:last-child:not(:first-child),
 				.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class} {
@@ -201,9 +200,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				//button-class-group
 				box-shadow: none;
 			}
-			//
-			// VERTICAL BUTTONS
-			//
+			///
+			/// VERTICAL BUTTONS
+			///
 			@if $elements-button-group-vertical {
 				&.#{$button-class-group-vertical} {
 					flex-flow: column;
@@ -223,9 +222,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					&.#{$button-class-block} {
 						display: inline-flex;
 					}
-					//
-					// DROPDOWN FOR VERTICAL BUTTONS
-					//
+					///
+					/// DROPDOWN FOR VERTICAL BUTTONS
+					///
 					@if $elements-button-dropdown {
 						&>.#{$dropdown-name}:last-child:not(:first-child),
 						&>.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class},
@@ -234,9 +233,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 							border-radius: 0;
 						}
 					}
-					//
-					// STYLES
-					//
+					///
+					/// STYLES
+					///
 					@if $elements-button-styles {
 						@each $theme-name, $theme-color in $button-styles {
 							&>.#{$theme-name}.#{$button-class},
@@ -249,9 +248,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			}
 		}
 	}
-	//
-	// DROPDOWN
-	//
+	///
+	/// DROPDOWN
+	///
 	@if $elements-button-dropdown {
 		.#{$dropdown-name} {
 			display: inline-block;
@@ -347,9 +346,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					display: block;
 				}
 			}
-			//
-			// BUTTON GROUPS
-			//
+			///
+			/// BUTTON GROUPS
+			///
 			@if $elements-button-group {
 				&>.#{$button-class-group} {
 					&>.#{$dropdown-toggle}:nth-last-child(2) {
@@ -358,9 +357,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 					}
 				}
 			}
-			//
-			// SIZES
-			//
+			///
+			/// SIZES
+			///
 			@if $elements-button-sizes {
 				@include button-sizes(true);
 			}

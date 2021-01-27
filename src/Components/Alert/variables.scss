@@ -1,32 +1,30 @@
-/***************************************************** 
-PUNICA CSS > COMPONENT : ALERT > VARIABLES ***********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENT : ALERT > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
+/// CLASS NAMING ========================================
 $alert-name				: 'alert';
 $alert-active			: 'active';
 
-/*****************************************************
-STYLES ***********************************************/
+/// STYLES ==============================================
 $alert-styles: (
-	"primary": $primary-color,
-	"success": $success-color,
-	"warning": $warning-color,
-	"error": $error-color,
-	"dark": $main-dark-color,
+	// style name, theme variable
+	"primary"	: theme('primary-color'),
+	"success"	: theme('success-color'),
+	"warning"	: theme('warning-color'),
+	"error"		: theme('error-color'),
+	"dark"		: theme('text-color'),
 );
 
-/***************************************************** 
-SIZES ************************************************/
-// size name, font-size, padding
+/// SIZES ===============================================
 $alert-sizes: (
+	// size name, font-size, padding
     ("small", .749rem, .4rem),
     ("large", 1.1rem, .8rem)
 );
 
-/***************************************************** 
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $alert-padding			: .6rem;
 $alert-margin			: 0 0 8px;
-$alert-border-radius 	: $main-border-radius;
+$alert-border-radius 	: theme('border-radius');
 $alert-font-weight		: 700;

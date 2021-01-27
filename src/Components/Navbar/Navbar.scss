@@ -1,9 +1,10 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : NAVBAR *********************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : NAVBAR
+/////////////////////////////////////////////////////////
 @import "mixins";
-//
-// if navbar is enable
-//
+///
+/// if navbar is enable
+///
 @if $components-navbar {
 	.#{$navbar-name} {
 		display: flex;
@@ -108,9 +109,9 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 			padding: .935rem 1.4rem;
 			font-weight: 700;
 		}
-		// 
-		// THEMES
-		//
+		/// 
+		/// NAVBAR THEMES
+		///
 		@if $components-navbar-themes {
 			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color in $navbar-themes {
 				&.#{$theme-name} {
@@ -143,7 +144,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				left: 0;
 				overflow-x: auto;
 				overflow-y: hidden;
-				background: $main-secondary-bg;
+				background: theme('color-secondary');
 				z-index: 1;
 				margin: 0 !important;
 				padding: 0 !important;
@@ -162,7 +163,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				}
 				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$button-class},
 				.#{$navbar-section} .#{$button-class-group} .#{$button-class} {
-					color: $main-font-color;
+					color: theme('text-color');
 					i, span.#{$icon-font-class-name} {
 						display: none;
 					}

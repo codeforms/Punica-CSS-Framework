@@ -1,15 +1,16 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : TABNAV *********************/
-//
-// if tabnav is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : TABNAV
+/////////////////////////////////////////////////////////
+///
+/// if tabnav is enable
+///
 @if $components-tabnav {
 	.#{$tabnav-name} {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-end;
-		border-bottom: $tabnav-border-bottom-width $main-border-style $main-secondary-bg;
+		border-bottom: $tabnav-border-bottom-width theme('border-style') theme('color-secondary');
 		padding: 0;
 		&>.#{$button-class-group} {
 			box-shadow: none;
@@ -32,28 +33,28 @@ PUNICA CSS > COMPONENTS : TABNAV *********************/
             font-size: $tabnav-item-button-size;
 			font-weight: initial;
             transition: border-bottom-color, color .2s;
-			color: darken($main-grey-color, 5%);
+			color: theme('text-color');
 			padding: .935rem 1.4rem;
 			&:hover {
-				color: darken($main-font-color, 8%);
-				border-bottom-color: darken($main-secondary-bg, 16%);
+				color: theme('text-color');
+				border-bottom-color: theme('color-grey');
 				transition: border-bottom-color, color .2s;
 			}
 			&.#{$button-class-disabled} {
 				opacity: .45;
 			}
 			&.#{$tabnav-active} {
-				color: $primary-color;
-				border-bottom-color: $primary-color;
+				color: theme('primary-color');
+				border-bottom-color: theme('primary-color');
 				font-weight: 700;
 				i, [class^="#{$icon-font-class-name}"] {
 					color: initial;
 				}
 			}
 		}
-		//
-		// STYLES
-		//
+		///
+		/// STYLES
+		///
 		@if $components-tabnav-styles {
 			@each $type-name, $bg-color in $tabnav-styles {
 				&.#{$type-name} {

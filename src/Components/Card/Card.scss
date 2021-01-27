@@ -1,16 +1,17 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : CARD ***********************/
-//
-// if card is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : CARD
+/////////////////////////////////////////////////////////
+///
+/// if card is enable
+///
 @if $components-card {
 	.#{$cards-name} {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	//
-	// CARD GROUPS
-	//
+	///
+	/// CARD GROUPS
+	///
 	@if $components-card-groups {
 		@each $name, $number in $grids {
 			.#{$cards-name}.#{$name} {
@@ -27,8 +28,8 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 
 		// has card border?
 		@if $has-card-border {
-			border: $main-border-width $main-border-style $main-border-color;
-			border-radius: $main-border-radius;
+			border: theme('border-width') theme('border-style') theme('border-color');
+			border-radius: theme('border-radius');
 		}
 
 		// has card shadow?
@@ -43,10 +44,10 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		overflow: hidden;
 		>.#{$card-body} .#{$card-title},
 		.#{$card-title} {
-			color: darken($main-font-color, 15%);
+			color: darken(theme('text-color'), 15%);
 			line-height: initial;
 			&>.#{$card-subtitle} {
-				color: grey;
+				color: theme('text-color');
 				flex: 1 1 auto;
 			}
 		}
@@ -57,11 +58,11 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		}
 		.#{$card-description} {
 			flex: 1 1 auto;
-			color: $main-font-color;
+			color: theme('text-color');
 		}
-		//
-		// MEDIA
-		//
+		///
+		/// MEDIA
+		///
 		@if $components-card-media {
 			&>.#{$card-media} {
 				flex-wrap: wrap;
@@ -70,25 +71,25 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 					display: block;
 				}
 			}
-			//
-			// MEDIA GROUP
-			//
+			///
+			/// MEDIA GROUP
+			///
 			@if $components-card-media-group {
 				@include media-group-specs($card-media, 0);
 			}
 		}
-		//
-		// HORIZONTAL CARDS
-		//
+		///
+		/// HORIZONTAL CARDS
+		///
 		@if $components-card-horizontal {
 			&.#{$card-horizontal} {
 				flex-direction: row;
 				width: 100%;
 				align-items: center;
 				margin-bottom: 15px;
-				//
-				// MEDIA
-				//
+				///
+				/// MEDIA
+				///
 				@if $components-card-media {
 					>.#{$card-media} {
 						align-self: normal;
@@ -119,9 +120,9 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 			width: 100%; // for only a single card
 			height: fit-content !important;
 		}
-		//
-		// HORIZONTAL CARDS
-		//
+		///
+		/// HORIZONTAL CARDS
+		///
 		@if $components-card-horizontal {
 			.#{$card-name}.#{$card-horizontal} {
 				flex-direction: column;

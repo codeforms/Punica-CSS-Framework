@@ -1,13 +1,12 @@
-/*****************************************************
-PUNICA CSS > COMPONENT : PANEL > VARIABLES ***********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENT : PANEL > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-STYLE OPTIONS ****************************************/
+/// STYLE OPTIONS =======================================
 $has-panel-shadow				: true;
 $has-panel-border				: true;
 
-/*****************************************************
-CLASS NAMING *****************************************/
+/// CLASS NAMING ========================================
 $panel-name						: 'panel';
 $panel-header					: 'header';
 $panel-title					: 'title';
@@ -17,15 +16,14 @@ $panel-content					: 'content';
 $panel-media					: 'media';
 $panel-title-actions			: 'actions';
 
-/*****************************************************
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $panel-padding					: 16px;
 $panel-border-width				: 1px;
 $panel-margin					: $panel-padding 0;
 /* Border */
-$panel-border-radius			: $main-border-radius;
-$panel-border-color				: $main-border-color;
-$panel-border-style				: $main-border-style;
+$panel-border-radius			: theme('border-radius');
+$panel-border-color				: theme('border-color');
+$panel-border-style				: theme('border-style');
 /* Header & Title */
 $panel-title-font-size			: 1.185rem;
 $panel-title-font-weight		: 900;
@@ -35,7 +33,7 @@ $panel-title-padding			: 12px $panel-padding;
 $panel-headline-font-size		: 1.39em;
 $panel-headline-line-height		: 1.5;
 $panel-headline-margin-bottom	: 26px;
-$panel-headline-color			: darken($main-font-color, 16%);
+$panel-headline-color			: darken(theme('text-color'), 16%);
 $panel-headline-letter-spacing	: -.0158em;
 /* Bottom */
 $panel-bottom-min-height		: 50px;

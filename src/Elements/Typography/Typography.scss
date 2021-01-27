@@ -1,7 +1,9 @@
-/***************************************************** 
-PUNICA CSS > ELEMENTS : TYPOGRAPHY *******************/
-
-// headers
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : TYPOGRAPHY
+/////////////////////////////////////////////////////////
+///
+/// Headers
+///
 @each $header, $font-size, $responsive-size in $typography-headers {
 	#{$header} {
 		margin-top: 0;
@@ -33,7 +35,7 @@ h6.bordered,
 .h4.bordered, 
 .h5.bordered, 
 .h6.bordered {
-	border-width: 0 0 $main-border-width 0 !important;
+	border-width: 0 0 theme('border-width') 0 !important;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
 }
@@ -50,11 +52,11 @@ abbr[title] {
 	text-decoration: none;
 }
 blockquote {
-	border-left: .1rem dotted $main-grey-color;
+	border-left: .1rem dotted theme('color-dark');
 	margin-left: 0;
 	padding: .4rem .8rem;
 	font-style: italic;
-	color: $main-grey-color;
+	color: theme('text-color');
 }
 small {
   font-size: 80%;

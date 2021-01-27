@@ -1,8 +1,9 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : LIST ***********************/
-//
-// if list is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : LIST
+/////////////////////////////////////////////////////////
+///
+/// if list is enable
+///
 @if $components-list {
 	.#{$list-name} {
 		list-style: none;
@@ -34,7 +35,7 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 				>.#{$list-subtitle} {
 					font-size: $list-subtitle-size;
 					font-weight: 400;
-					color: $main-grey-color;
+					color: theme('primary-color');
 					margin-bottom: 7px;
 				}
 		    }
@@ -47,39 +48,39 @@ PUNICA CSS > COMPONENTS : LIST ***********************/
 				background: $menu-item-hover-bg;
 			}
 		}
-		//
-		// DIVIDED
-		//
+		///
+		/// DIVIDED
+		///
 		@if $components-list-divided {
 			&.#{$list-bordered} {
 				>.#{$list-item} {
-					border-bottom: $main-border-width $main-border-style $main-border-color;
+					border-bottom: theme('border-width') theme('border-style') theme('border-color');
 					&:last-child {
 						border-bottom: none;
 					}
 				}
 			}
 		}
-		//
-		// STRIPED
-		//
+		///
+		/// STRIPED
+		///
 		@if $components-list-striped {
 			&.#{$list-striped} {
 				>.#{$list-item} {
 					&:nth-of-type(odd) {
-						background: $main-striped-bg;
+						background: theme('color-secondary');
 					}
 				}
 			}
 		}
-		//
-		// HOVERED
-		//
+		///
+		/// HOVERED
+		///
 		@if $components-list-hovered {
 			&.#{$list-hovered} {
 				>.#{$list-item} {
 					&:hover {
-						background: $main-hovered-bg;
+						background: theme('color-secondary');
 						transition: .15s;
 					}
 				}

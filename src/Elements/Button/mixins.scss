@@ -1,8 +1,13 @@
-/*****************************************************
-PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : BUTTON > MIXINS
+/////////////////////////////////////////////////////////
+
+///
+/// Button Styles
+///
 @mixin button-styles(
-	$bg-color: $primary-color,
-	$text-color: $main-invert-color,
+	$bg-color: theme('primary-color'),
+	$text-color: theme('color-negative'),
 	$bg-img: none,
 	$bg-img-hover: none
 ) {
@@ -30,7 +35,10 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 	}
 	@content;
 }
-// Secondary Button
+
+///
+/// Secondary Button
+///
 @mixin secondary-button() {
 	color: $button-secondary-text-color;
 	background-image: $button-secondary-bg-img;
@@ -41,24 +49,30 @@ PUNICA CSS > ELEMENTS : BUTTON > MIXINS **************/
 		color: $button-secondary-text-color;
 		background-image: $button-secondary-bg-img-hover;
 		z-index: 1;
-		border-color: $main-border-color;
+		border-color: theme('border-color');
 		i, [class^="#{$icon-font-class-name}"] {
 			color: $button-secondary-text-color;
 		}
 	}
 }
-// Link Button
+
+///
+/// Link Button
+///
 @mixin link-button() {
 	&.#{$button-class-link}.#{$button-class},
 	&.#{$button-class-link} > .#{$button-class} {
-		@include button-styles(transparent, $main-font-color) {
+		@include button-styles(transparent, theme('text-color')) {
 			&:hover {
 				background: $button-bg-active;
 			}
 		};
 	}
 }
-// Button Sizes
+
+///
+/// Button Sizes
+///
 @mixin button-sizes($class-name: false) {
 	@each $name, $font-size, $padding, $font-weight in $button-sizes {
 		@if $class-name {

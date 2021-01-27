@@ -1,26 +1,24 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : PROCESS > VARIABLES ********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : PROCESS > VARIABLES
+/////////////////////////////////////////////////////////
 
-/***************************************************** 
-CLASS NAMING *****************************************/
-$process-name					: 'process';
-$process-item					: 'item';
-$process-active					: 'active';
+/// CLASS NAMING ========================================
+$process-name				: 'process';
+$process-item				: 'item';
+$process-active				: 'active';
 /* Vertical */
-$process-vertical				: 'vertical';
-$process-vertical-reversed		: 'reversed';
+$process-vertical			: 'vertical';
+$process-vertical-reversed	: 'reversed';
 
-/***************************************************** 
-STYLES ***********************************************/
+/// STYLES ==============================================
 $process-styles	: (
-	"success": $success-color,
-	"warning": $warning-color,
-	"error": $error-color,
-	"dark": $main-dark-color,
+	"success"	: theme('success-color'),
+	"warning"	: theme('warning-color'),
+	"error"		: theme('error-color'),
+	"dark"		: theme('text-color'),
 );
 
-/***************************************************** 
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $process-margin					: 1em 0 5em;
 $process-item-min-height		: 4rem;
 $process-stick-height			: 6px;

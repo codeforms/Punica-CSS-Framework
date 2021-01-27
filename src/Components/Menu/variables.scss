@@ -1,8 +1,8 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : MENU > VARIABLES ***********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : MENU > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
+/// CLASS NAMING ========================================
 $menu-name 					: 'menu';
 $menu-small 				: 'small';
 $menu-title 				: 'title';
@@ -12,9 +12,8 @@ $menu-badge					: 'badge';
 $menu-secondary				: 'secondary';
 $menu-divided				: 'divided';
 
-/*****************************************************
-PREFERENCES ******************************************/
-$menu-bg					: #fff;
+/// PREFERENCES =========================================
+$menu-bg					: theme('background-color');
 $menu-font-size				: 1em;
 $menu-small-font-size		: .879em;
 $menu-border-radius			: 0;
@@ -22,20 +21,20 @@ $menu-min-width				: max-content;
 $menu-padding 				: .9rem;
 $menu-padding-nested		: .4rem;
 $menu-z-index				: 300;
-$menu-divided-color			: $main-secondary-bg;
+$menu-divided-color			: theme('color-secondary');
 /* Title */
 $menu-title-font-size		: 1.25em;
 $menu-title-min-height		: 2rem;
-$menu-title-color			: #999;
+$menu-title-color			: theme('text-color');
 $menu-title-font-weight		: 300;
 $menu-title-padding			: .6rem 0;
 $menu-title-spacing			: -.015rem;
 /* Menu Item */
 $menu-item-padding			: .28rem $menu-padding;
-$menu-item-color			: #606265;
+$menu-item-color			: theme('text-color');
 $menu-item-hover-bg			: darken($menu-bg, 6%);
 /* Menu Item Icon */
-$menu-item-icon-color		: $main-grey-color;
+$menu-item-icon-color		: theme('color-grey');
 $menu-item-icon-size		: 1.2rem;
 $menu-item-icon-mr			: 10px; // margin-right
 $menu-item-icon-va			: text-bottom; // vertical-align

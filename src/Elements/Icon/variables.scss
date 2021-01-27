@@ -1,14 +1,14 @@
-/*****************************************************
-PUNICA CSS > ELEMENTS : ICON > VARIABLES *************
-======================================================
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : ICON > VARIABLES
+/////////////////////////////////////////////////////////
+/*=======================================================
 All icons are defined from this file. Please take
 a look at https://material.io/resources/icons/ for
 more information. You can also define any other font 
 library you want from here.
-======================================================/
+=======================================================*/
 
-/*****************************************************
-DEFINITIONS ******************************************/
+/// DEFINITIONS =========================================
 $icon-font-name				: 'Material Icons';
 $icon-font-class-name		: 'material-icons';
 // elements -> form -> checkbox
@@ -25,8 +25,7 @@ $icon-navbar-close			: "close";
 // components -> process
 $icon-process-current		: "beenhere";
 
-/*****************************************************
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $icon-font-size				: 1.1rem;
 $icon-line-height			: 1;
 $icon-vertical-align		: middle;

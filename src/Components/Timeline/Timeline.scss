@@ -1,8 +1,9 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : TIMELINE *******************/
-//
-// if timeline is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : TIMELINE
+/////////////////////////////////////////////////////////
+///
+/// if timeline is enable
+///
 @if $components-timeline {
 	.#{$timeline-container} {
 		.#{$timeline-item} {
@@ -19,11 +20,11 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 				bottom: 0;
 				left: 0;
 				width: $timeline-border-width;
-				background-color: $main-border-color;
+				background-color: theme('border-color');
 			}
 			&:target .#{$timeline-type} {
-				border-color: $primary-color;
-				box-shadow: 0 0 0.2em $primary-color;
+				border-color: theme('primary-color');
+				box-shadow: 0 0 0.2em theme('primary-color');
 			}
 			.#{$timeline-type} {
 				position: absolute;
@@ -34,20 +35,20 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 				top: 13px;
 				left: -(($timeline-type-width / 2px) - $timeline-border-width);
 				align-items: center;
-				background-color: $main-secondary-bg;
-				border: 2px $main-border-style $main-border-color;
+				background-color: theme('color-secondary');
+				border: 2px theme('border-style') theme('border-color');
 				border-radius: 50%;
 				justify-content: center;
 				flex-shrink: 0;
 				@include shadow();
-				//
-				// STYLES
-				//
+				///
+				/// STYLES
+				///
 				@if $components-timeline-styles {
 					@each $type, $color in $timeline-styles {
 					    &.#{$type} {
 							background-color: $color;
-							color: $main-invert-color;
+							color: theme('color-negative');
 							border-color: darken($color, 5%);
 						}
 					}
@@ -60,7 +61,7 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 			.#{$timeline-media} {
 				min-width: 0;
 				max-width: 100%;
-				color: $main-font-color;
+				color: theme('text-color');
 				flex: auto;
 				margin-left: 10px;
 				width: 100%;
@@ -68,15 +69,15 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 			.#{$timeline-author} {
 				font-weight: bold;
 				font-size: 1rem;
-				color: darken($main-font-color, 12%);
+				color: darken(theme('text-color'), 12%);
 			}
 			.#{$timeline-date} {
 				font-size: .9em;
 				opacity: .6;
 			}
-			//
-			// MEDIA
-			//
+			///
+			/// MEDIA
+			///
 			@if $components-timeline-media {
 				.#{$timeline-media} {
 					margin-top: 16px;
@@ -87,9 +88,9 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 						display: block;
 					}
 				}
-				//
-				// MEDIA GROUP
-				//
+				///
+				/// MEDIA GROUP
+				///
 				@if $components-timeline-media-group {
 					@include media-group-specs($timeline-media);
 				}
@@ -98,10 +99,10 @@ PUNICA CSS > COMPONENTS : TIMELINE *******************/
 				margin-top: 16px;
 			}
 			&:last-child::before {
-				background: linear-gradient(180deg, $main-border-color 45%, rgba(255,255,255,0) 100%);
+				background: linear-gradient(180deg, theme('border-color') 45%, rgba(255,255,255,0) 100%);
 			}
 			&:first-child::before {
-				background: linear-gradient(0deg, $main-border-color 45%, rgba(255,255,255,0) 100%);
+				background: linear-gradient(0deg, theme('border-color') 45%, rgba(255,255,255,0) 100%);
 			}
 		}
 	}

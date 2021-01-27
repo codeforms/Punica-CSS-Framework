@@ -1,8 +1,9 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : TOOLTIP ********************/
-//
-// if tooltip is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : TOOLTIP
+/////////////////////////////////////////////////////////
+///
+/// if tooltip is enable
+///
 @if $components-tooltip {
 	.#{$tooltip-name} {
 		display: inline-flex;
@@ -16,7 +17,7 @@ PUNICA CSS > COMPONENTS : TOOLTIP ********************/
 			text-align: center;
 			visibility: hidden;
 			background-color: $tooltip-background;
-			border-radius: $main-border-radius;
+			border-radius: theme('border-radius');
 			min-width: $tooltip-min-width;
 			max-width: $tooltip-max-width;
 			padding: $tooltip-padding;

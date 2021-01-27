@@ -1,8 +1,9 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : MENU ***********************/
-//
-// if menu is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : MENU
+/////////////////////////////////////////////////////////
+///
+/// if menu is enable
+///
 @if $components-menu {
 	.#{$menu-name} {
 		background: $menu-bg;
@@ -74,7 +75,7 @@ PUNICA CSS > COMPONENTS : MENU ***********************/
 		}
 		&.#{$menu-divided} {
 			.#{$menu-item} {
-				border-bottom: $main-border-width $main-border-style $menu-divided-color;
+				border-bottom: theme('border-width') theme('border-style') $menu-divided-color;
 				&:last-child {
 					border-bottom: none;
 				}

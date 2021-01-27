@@ -1,36 +1,36 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : ALERT **********************/
-//
-// if alert is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : ALERT
+/////////////////////////////////////////////////////////
+///
+/// if alert is enable
+///
 @if $components-alert {
 	.#{$alert-name} {
 		display: block;
-		@include set-style($main-bg, $main-font-color) {
-			border-color: $main-bg;
+		@include set-style(theme('main-bg'), theme('text-color')) {
 			a {
-				color: $main-font-color;
+				color: theme('text-color');
 			}
-		};
-		border: $main-border-width $main-border-style $main-border-color;
+		}
+		border: theme('border-width') theme('border-style') theme('border-color');
 		border-radius: $alert-border-radius;
 		padding: $alert-padding;
 		margin: $alert-margin;
 		width: 100%;
 		font-weight: $alert-font-weight;
-		//
-		// STYLES
-		//
+		///
+		/// STYLES
+		///
 		@if($components-alert-styles) {
 			@each $style-name, $bg-color in $alert-styles {
-				@include set-style($bg-color, $main-invert-color, $style-name) {
+				@include set-style($bg-color, theme('color-negative'), $style-name) {
 					border-color: darken($bg-color, 5%);
 				};
 			}
 		}
-		//
-		// SIZES
-		//
+		///
+		/// SIZES
+		///
 		@if ($components-alert-sizes) {
 			// badge sizes
 			@each $size-name, $font-size, $padding in $alert-sizes {
@@ -38,7 +38,6 @@ PUNICA CSS > COMPONENTS : ALERT **********************/
 			}
 		}
 		a {
-			color: $primary-color;
 			text-decoration: underline;
 			&:focus,
 			&:hover,

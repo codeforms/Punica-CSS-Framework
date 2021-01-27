@@ -1,0 +1,20 @@
+/////////////////////////////////////////////////////////
+/// THEME MIXINS
+/////////////////////////////////////////////////////////
+
+///
+///
+///
+@mixin get-theme() { 
+	$current-theme : map-get($punica-themes, $active-theme);
+	$theme-map: $current-theme !global;
+	@content;
+	$theme-map: null !global;
+}
+
+///
+///
+///
+@function theme($key) {
+	@return map-get($theme-map, $key);
+}

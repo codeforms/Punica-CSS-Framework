@@ -1,8 +1,9 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : PANEL **********************/
-//
-// if panel is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : PANEL
+/////////////////////////////////////////////////////////
+///
+/// if panel is enable
+///
 @if $components-panel {
 	.#{$panel-name} {
 		display: flex;
@@ -19,7 +20,7 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 			@include shadow();
 		}
 
-		background: $main-bg;
+		background: theme('main-bg');
 		margin: $panel-margin;
 		&>.#{$panel-header},
 		&>.#{$panel-bottom} {
@@ -51,9 +52,9 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 			flex: 1 1 auto;
 			padding: $panel-padding;
 			height: auto;
-			//
-			// MEDIA
-			//
+			///
+			/// MEDIA
+			///
 			@if $components-panel-media {
 				&>.#{$panel-media} {
 					min-width: 0;
@@ -68,9 +69,9 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 						display: block;
 					}
 				}
-				//
-				// MEDIA GROUP
-				//
+				///
+				/// MEDIA GROUP
+				///
 				@if $components-panel-media-group {
 					@include media-group-specs($panel-media);
 				}

@@ -1,56 +1,53 @@
-/*****************************************************
-PUNICA CSS > ELEMENTS : FORM > VARIABLES *************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : FORM > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
-$form-name						: 'form';
-$form-items						: 'items';
-$form-item						: 'item';
-$form-checkbox					: 'checkbox';
-$form-radio						: 'radio';
-$form-group						: 'group';
+/// CLASS NAMING ========================================
+$form-name		: 'form';
+$form-items		: 'items';
+$form-item		: 'item';
+$form-checkbox	: 'checkbox';
+$form-radio		: 'radio';
+$form-group		: 'group';
 
-/*****************************************************
-PREFERENCES ******************************************/
-$form-padding					: 0 16px;
-$form-input-bg					: $main-bg;
-$form-input-color				: $main-dark-color;
-$form-input-height				: 2.5rem;
-$form-input-radius				: 0;
-$form-input-padding				: .4rem .5rem;
-$form-input-size				: 1.088em;
-$form-outline-width				: 2px;
-$form-outline-color				: $main-dark-color;
-$form-items-spacer				: 6px 0 .75em;
-$form-item-spacer				: 6px 6px .75em;
+/// PREFERENCES =========================================
+$form-padding				: 0 16px;
+$form-input-bg				: theme('input-bg');
+$form-input-color			: theme('input-color');
+$form-input-border-color	: theme('input-border-color');
+$form-input-height			: 2.5rem;
+$form-input-radius			: 0;
+$form-input-padding			: .4rem .5rem;
+$form-input-size			: 1.088em;
+$form-outline-width			: 2px;
+$form-outline-color			: theme('input-outline-color');
+$form-items-spacer			: 6px 0 .75em;
+$form-item-spacer			: 6px 6px .75em;
 /* Label */
-$form-label-color				: darken($main-dark-color, 13.85%);
-$form-label-size				: .8579rem;
-$form-label-weight				: 700;
-$form-label-margin				: 0;
+$form-label-color			: theme('text-color');
+$form-label-size			: .8579rem;
+$form-label-weight			: 700;
+$form-label-margin			: 0;
 
-/*****************************************************
-SIZES ************************************************/
-// name, font-size, input height, button padding[*], button font size[*]
-// [*] referenced from button variables
+/// SIZES ===============================================
 $form-input-sizes: (
+	// name, font-size, input height, button padding[*], button font size[*]
+	// [*] referenced from button variables
 	('small', 1em, 1.9rem, .645rem 1.4rem, .979em),
 	('large', 1.2em, 2.9rem, 1.15rem 2.1rem, 1.25em)
 );
 
-/*****************************************************
-STYLES ***********************************************/
-// name, color (for input validations)
+/// STYLES ==============================================
 $form-input-styles: (
-	('success', $success-color),
-	('error', $error-color)
+	// name, color (for input validations)
+	('success', theme('success-color')),
+	('error', theme('error-color'))
 );
 
-/*****************************************************
-PREFERENCES (Checkbox & Radio) ***********************/
+/// PREFERENCES (Checkbox & Radio) ======================
 /* Checkbox & Radio */
 $form-icon-font-family			: '#{$icon-font-name}';
-$form-radio-checkbox-color		: $main-dark-color;
+$form-radio-checkbox-color		: theme('text-color');
 $form-radio-checkbox-size		: 1.15rem;
 $form-radio-checkbox-top		: -5px;
 $form-radio-checkbox-left		: 0;

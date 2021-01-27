@@ -1,13 +1,13 @@
-/***************************************************** 
-PUNICA CSS > ELEMENTS : TYPOGRAPHY > VARIABLES *******/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : TYPOGRAPHY > VARIABLES
+/////////////////////////////////////////////////////////
 
-/***************************************************** 
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $text-h-line-height		: 2;
 $text-p-size			: 1.0495rem; // paragraph
 /* Headers */
-// name, font-size, responsive font-size
 $typography-headers	: ( 
+	// name, font-size, responsive font-size
 	("h1", 2rem, 1.7rem),
 	("h2", 1.8rem, 1.5rem),
 	("h3", 1.6rem, 1.3rem),

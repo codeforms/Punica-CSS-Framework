@@ -1,0 +1,115 @@
+/////////////////////////////////////////////////////////
+/// LAYOUT
+/////////////////////////////////////////////////////////
+	$layout-grid								: true;
+	/**/$layout-grid-equal						: true;
+	/**/$layout-grid-offset						: true; // [!] increases the size
+
+/////////////////////////////////////////////////////////
+/// COMPONENTS
+/////////////////////////////////////////////////////////
+
+/// ALERT =============================================
+	$components-alert							: true;
+	/**/$components-alert-styles				: true;
+	/**/$components-alert-sizes					: true;
+
+/// BADGE =============================================
+	$components-badge							: true;
+	/**/$components-badge-styles				: true;
+	/**/$components-badge-sizes					: true;
+
+/// BILLBOARD =========================================
+	$components-billboard						: true;
+	/**/$components-billboard-styles			: true;
+	/**/$components-billboard-sizes				: true;
+	/**/$components-billboard-cover				: true;
+
+/// BREADCRUMB ========================================
+	$components-breadcrumb						: true;
+	/**/$components-breadcrumb-sizes			: true;
+
+/// CARD ==============================================
+	$components-card							: true;
+	/**/$components-card-groups					: true;
+	/**/$components-card-horizontal				: true;
+	/**/$components-card-media					: true;
+	/**//**/$components-card-media-group		: true;
+
+/// LIST ==============================================
+	$components-list							: true;
+	/**/$components-list-divided				: true;
+	/**/$components-list-hovered				: true;
+	/**/$components-list-striped				: true;
+
+/// MENU ==============================================
+	$components-menu							: true;
+
+/// NAVBAR ============================================
+	$components-navbar							: true;
+	/**/$components-navbar-themes				: true;
+
+/// PANEL =============================================
+	$components-panel							: true;
+	/**/$components-panel-media					: true;
+	/**//**/$components-panel-media-group		: true;
+
+/// PROCESS ===========================================
+	$components-process							: true;
+	/**/$components-process-styles				: true;
+	/**/$components-process-vertical			: true;
+
+/// PROGRESS ==========================================
+	$components-progress						: true;
+	/**/$components-progress-styles				: true;
+
+/// TABNAV ============================================
+	$components-tabnav							: true;
+	/**/$components-tabnav-styles				: true;
+
+/// TIMELINE ==========================================
+	$components-timeline						: true;
+	/**/$components-timeline-styles				: true;
+	/**/$components-timeline-media				: true;
+	/**//**/$components-timeline-media-group	: true;
+
+/// TOOLTIP ===========================================
+	$components-tooltip							: true;
+
+/////////////////////////////////////////////////////////
+/// ELEMENTS
+/////////////////////////////////////////////////////////
+
+/// Button ============================================
+	$elements-button							: true;
+	/**/$elements-button-group					: true;
+	/**/$elements-button-group-vertical			: true;
+	/**/$elements-button-styles					: true;
+	/**/$elements-button-sizes					: true;
+	/**/$elements-button-secondary				: true;
+	/**/$elements-button-dropdown				: true;
+
+/// Form ==============================================
+	$elements-form								: true;
+	/**/$elements-form-group					: true;
+	/**/$elements-form-input-sizes				: true;
+	/**/$elements-form-validation-styles		: true;
+	/**/$elements-form-checkbox-radio			: true;
+
+/// Icon ==============================================
+	$elements-icon								: true;
+
+/// Table =============================================
+	$elements-table								: true;
+	/**/$elements-table-hovered					: true;
+	/**/$elements-table-striped					: true;
+
+/// Label =============================================
+	$elements-label								: true;
+	/**/$elements-label-styles					: true;
+	/**/$elements-label-sizes					: true;
+
+/////////////////////////////////////////////////////////
+/// UTILITIES
+/////////////////////////////////////////////////////////
+	$helpers									: true; 

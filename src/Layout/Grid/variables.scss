@@ -1,27 +1,25 @@
-/******************************************************************
-PUNICA CSS > LAYOUT : GRID > VARIABLES ****************************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > LAYOUT : GRID > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-ENABLE / DISABLE FEATURES ****************************/
+/// ENABLE / DISABLE FEATURES ===========================
 $equal-feature 				: $layout-grid-equal;
 $offset-feature 			: $layout-grid-offset;
 
-/*****************************************************
-CLASS NAMING *****************************************/
-$row						: 'row';
-$container					: 'container';
-$column						: 'col';
-$offset						: 'offset';
-$equal						: 'equal';
+/// CLASS NAMING ========================================
+$row			: 'row';
+$container		: 'container';
+$column			: 'col';
+$offset			: 'offset';
+$equal			: 'equal';
 /* Breakpoints */
-$extra-small 				: 'xs';
-$small 						: 'sm';
-$medium 					: 'md';
-$large 						: 'lg';
-$extra-large 				: 'xl';
+$extra-small 	: 'xs';
+$small			: 'sm';
+$medium 		: 'md';
+$large 			: 'lg';
+$extra-large 	: 'xl';
 
-/*****************************************************
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $grid 						: 16;
 $gutter						: 6px;
 $container-width 			: 100%;

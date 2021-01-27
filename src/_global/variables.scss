@@ -1,67 +1,36 @@
-/*****************************************************
-*** GLOBAL DEFINITIONS ******************************/
+/////////////////////////////////////////////////////////
+/// GLOBAL DEFINITIONS
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-FONT *************************************************/
+///
+/// TYPOGRAPHY
+///
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&display=swap');
-/*****************************************************
-TYPOGRAPHY *******************************************/
-$main-font-family		: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$main-font-weight		: 400;
-$main-font-size			: 13px;
-$main-line-height		: 1.7;
-$main-title-weight		: 900;
+$main-font-family		: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$main-font-weight		: 400 !default;
+$main-font-size			: 13px !default;
+$main-line-height		: 1.7 !default;
+$main-title-weight		: 900 !default;
 
-/*****************************************************
-BASE COLORS ******************************************/
-$main-bg				: white;
-$main-secondary-bg		: #e6e6e6; // Platinum
-$main-font-color		: #3f4143; // Onyx
-$main-invert-color		: white;
-$main-grey-color		: #77878b; // Light Slate Gray
-$main-dark-color		: #414552; // Charcoal
-$main-striped-bg		: #f0f0f0; // Cultured
-$main-hovered-bg		: $main-striped-bg;
-
-/*****************************************************
-THEME COLORS *****************************************/
-$primary-color			: #0a8fff; // Dodger Blue
-$success-color			: #2ec4b6; // Tiffany Blue
-$warning-color			: #de9e36; // Marigold
-$error-color			: #d62828; // Maximum Red
-
-/*****************************************************
-BORDER ***********************************************/
-$main-border-width		: 1px;
-$main-border-style		: solid;
-$main-border-color		: #c6c6c6; // Silver Sand
-$main-border-radius		: 4px;
-
-/*****************************************************
-SCROLLBAR ********************************************/
-$scrollbar-width		: 6px;
-$scrollbar-bg			: $main-secondary-bg;
-$scrollbar-color		: $main-dark-color;
-
-/*****************************************************
-MAIN GRID NAMING
-It's used in card, form and timeline.
-******************************************************/
+///
+/// MAIN GRID NAMING
+/// It's used in card, form and timeline.
+///
 $grids: (
-	//"one": "1",
-	"two": "2",
-	"three": "3",
-	"four": "4",
-	"five": "5",
-	"six": "6",
-	"seven": "7",
-	"eight": "8",
-	"nine": "9",
-	"ten": "10",
-	"eleven": "11",
-	"twelve": "12",
-	"thirteen": "13",
-	"fourteen": "14",
-	"fifteen": "15",
-	"sixteen": "16"
+	//"one"		: "1",
+	"two"		: "2",
+	"three"		: "3",
+	"four"		: "4",
+	"five"		: "5",
+	"six"		: "6",
+	"seven"		: "7",
+	"eight"		: "8",
+	"nine"		: "9",
+	"ten"		: "10",
+	"eleven"	: "11",
+	"twelve"	: "12",
+	"thirteen"	: "13",
+	"fourteen"	: "14",
+	"fifteen"	: "15",
+	"sixteen"	: "16"
 );

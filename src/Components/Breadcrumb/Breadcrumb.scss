@@ -1,8 +1,9 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
-//
-// if breadcrumb is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : BREADCRUMB
+/////////////////////////////////////////////////////////
+///
+/// if breadcrumb is enable
+///
 @if $components-breadcrumb {
 	.#{$breadcrumb-name} {
 		display: inline-block;
@@ -37,9 +38,9 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 				}
 			}
 		}
-		//
-		// SIZES
-		//
+		///
+		/// SIZES
+		///
 		@if $components-breadcrumb-sizes {
 			// size, font-size, seperator-padding, seperator-size
 			@each $size, $font-size, $seperator-padding, $seperator-size in $breadcrumb-sizes {
@@ -55,6 +56,9 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 			}
 		}
 	}
+	///
+	///
+	///
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		.#{$breadcrumb-name} {
 			.#{$breadcrumb-item} {

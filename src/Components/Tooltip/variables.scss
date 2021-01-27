@@ -1,16 +1,15 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : TOOLTIP > VARIABLES ********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : TOOLTIP > VARIABLES
+/////////////////////////////////////////////////////////
 
-/***************************************************** 
-CLASS NAMING *****************************************/
-$tooltip-name			: 'tooltip';
-$tooltip-text			: 'text';
+/// CLASS NAMING ========================================
+$tooltip-name: 'tooltip';
+$tooltip-text: 'text';
 
-/***************************************************** 
-PREFERENCES ******************************************/
-$tooltip-background		: $main-dark-color;
-$tooltip-font-size		: .9em;
-$tooltip-min-width		: 100px;
-$tooltip-max-width		: 180px;
-$tooltip-padding		: 5px;
-$tooltip-color			: $main-invert-color;
+/// PREFERENCES =========================================
+$tooltip-background	: theme('text-color');
+$tooltip-font-size	: .9em;
+$tooltip-min-width	: 100px;
+$tooltip-max-width	: 180px;
+$tooltip-padding	: 5px;
+$tooltip-color		: theme('color-negative');

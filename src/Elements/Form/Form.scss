@@ -1,14 +1,15 @@
-/*****************************************************
-PUNICA CSS > ELEMENTS : FORM *************************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : FORM
+/////////////////////////////////////////////////////////
 @import "mixins";
-//
-// if form is enable
-//
+///
+/// if form is enable
+///
 @if $elements-form {
 	@include form-inputs() {
 		-webkit-appearance: none;
 		background-color: $form-input-bg;
-		border: $main-border-width $main-border-style $main-border-color;
+		border: theme('border-width') theme('border-style') $form-input-border-color;
 		height: $form-input-height;
 		border-radius: $form-input-radius;
 		outline: $form-outline-width solid transparent;
@@ -26,9 +27,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			outline-offset: -$form-outline-width;
 			transition: .35s;
 		}
-		//
-		// VALIDATION STYLES
-		//
+		///
+		/// VALIDATION STYLES
+		///
 		@if $elements-form-validation-styles {
 			@each $style-name, $style-color in $form-input-styles {
 				&.#{$style-name} {
@@ -99,9 +100,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				height: 100%;
 				cursor: default;
 			}
-			//
-			// FORM GROUPS
-			//
+			///
+			/// FORM GROUPS
+			///
 			@if $elements-form-group {
 				@at-root .#{$form-name} .#{$form-group},
 				&>.#{$form-group} {
@@ -159,9 +160,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				}
 			}
 		}
-		//
-		// INPUT SIZES
-		//
+		///
+		/// INPUT SIZES
+		///
 		@if $elements-form-input-sizes {
 			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in $form-input-sizes {
 				&.#{$size-name} {
@@ -183,9 +184,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			}
 		}
 	}
-	//
-	// CHECKBOX & RADIO
-	//
+	///
+	/// CHECKBOX & RADIO
+	///
 	@if $elements-form-checkbox-radio {
 		.#{$form-radio},
 		.#{$form-checkbox} {

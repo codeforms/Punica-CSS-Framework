@@ -1,8 +1,9 @@
-/******************************************************************
-PUNICA CSS > LAYOUT : GRID ****************************************/
-//
-// if grid is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > LAYOUT : GRID
+/////////////////////////////////////////////////////////
+///
+/// if grid is enable
+///
 @if $layout-grid {
 	.#{$container} {
 		width: $container-width;
@@ -18,9 +19,9 @@ PUNICA CSS > LAYOUT : GRID ****************************************/
 			padding: $column-padding;
 			min-height: $column-min-height;
 		}
-		//
-		// EQUAL
-		//
+		///
+		/// EQUAL
+		///
 		@if $equal-feature {
 			&.#{$equal} > [class^="#{$column}"] {
 				height: auto;
@@ -39,9 +40,9 @@ PUNICA CSS > LAYOUT : GRID ****************************************/
 				.#{$column}-#{$label}-#{$id} {
 					grid-column: span #{$id};
 				}
-				//
-				// OFFSET
-				//
+				///
+				/// OFFSET
+				///
 				@if $offset-feature {
 					@for $offset-id from 2 through $grid {
 						.#{$column}-#{$label}-#{$id}.#{$offset}-#{$label}-#{$offset-id} {

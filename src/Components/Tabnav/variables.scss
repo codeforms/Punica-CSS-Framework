@@ -1,21 +1,19 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : MENU > VARIABLES ***********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : MENU > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
+/// CLASS NAMING ========================================
 $tabnav-name: 'tab';
 $tabnav-active: 'active';
 
-/*****************************************************
-STYLES ***********************************************/
+/// STYLES ==============================================
 $tabnav-styles: (
-	"success": $success-color,
-	"warning": $warning-color,
-	"error": $error-color,
-	"dark": $main-dark-color,
+	"success"	: theme('success-color'),
+	"warning"	: theme('warning-color'),
+	"error"		: theme('error-color'),
+	"dark"		: theme('text-color'),
 );
 
-/***************************************************** 
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $tabnav-border-bottom-width: 2px;
 $tabnav-item-button-size: 1.025em;

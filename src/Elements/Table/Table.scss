@@ -1,8 +1,9 @@
-/***************************************************** 
-PUNICA CSS > ELEMENTS : TABLE ************************/
-//
-// if table is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : TABLE
+/////////////////////////////////////////////////////////
+///
+/// if table is enable
+///
 @if $elements-table {
 	.#{$table-class} {
 		position: relative;
@@ -12,18 +13,18 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 		max-width: 100%;
 		text-align: left;
 		margin-bottom: 1.5rem;
-		//
-		// STRIPED
-		//
+		///
+		/// STRIPED
+		///
 		@if $elements-table-striped {
 			&.#{$table-class-striped} {
 				tr,
 				tbody tr {
 					&.#{$table-class-active} {
-						background: $main-striped-bg;
+						background: theme('color-secondary');
 					}
 					&:nth-of-type(odd) {
-						background: $main-striped-bg;
+						background: theme('color-secondary');
 					}
 				}
 				thead tr {
@@ -31,16 +32,16 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 				}
 			}
 		}
-		// 
-		// HOVERED
-		//
+		/// 
+		/// HOVERED
+		///
 		@if $elements-table-hovered {
 			&.#{$table-class-hovered} {
 				tr,
 				tbody tr {
 					&:hover {
-						background: $main-hovered-bg;
-						color: $main-font-color;
+						background: theme('color-secondary');
+						color: theme('text-color');
 					}
 				}
 				thead tr {
@@ -53,7 +54,7 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 			transition: all 0.3s;
 			&.#{$table-class-active},
 			&.#{$table-class-active}:hover {
-				background: $main-secondary-bg;
+				background: theme('color-secondary');
 			}
 		}
 		td,
@@ -66,7 +67,7 @@ PUNICA CSS > ELEMENTS : TABLE ************************/
 			background: $table-thead-bg;
 			th {
 				border-bottom-width: $table-bottom-border-width;
-				border-bottom-color: $main-border-color;
+				border-bottom-color: theme('border-color');
 				font-weight: $table-th-weight;
 				color: $table-th-color;
 			}

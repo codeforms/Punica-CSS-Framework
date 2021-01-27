@@ -1,23 +1,21 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : PROGRESS > VARIABLES *******/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : PROGRESS > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
-$progress-name			: 'progress';
+/// CLASS NAMING ========================================
+$progress-name: 'progress';
 
-/*****************************************************
-STYLES ***********************************************/
+/// STYLES ==============================================
 $progress-styles : (
-	"success": $success-color,
-	"warning": $warning-color,
-	"error": $error-color,
-	"dark": $main-dark-color
+	"success"	: theme('success-color'),
+	"warning"	: theme('warning-color'),
+	"error"		: theme('error-color'),
+	"dark"		: theme('text-color'), 
 );
 
-/*****************************************************
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $progress-height		: 12px;
 $progress-width			: 100%;
-$progress-background	: $main-secondary-bg;
+$progress-background	: theme('color-secondary');
 $progress-border-radius	: 16px;
 $progress-inner-shadow	: 0 1px 2px rgba(0, 0, 0, 0.15) inset;

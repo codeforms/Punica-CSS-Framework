@@ -1,8 +1,10 @@
-/*****************************************************
-*** GLOBAL MIXINS ************************************/
-/**
- *	
- */
+/////////////////////////////////////////////////////////
+/// GLOBAL MIXINS
+/////////////////////////////////////////////////////////
+
+///
+///
+///
 @mixin breakpoints(
 	$size, $width: 'min-width'
 ) {
@@ -11,9 +13,9 @@
 	}
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin shadow(
 	$h-offset: 0,
 	$v-offset: 1px,
@@ -23,9 +25,9 @@
 	box-shadow: $h-offset $v-offset $blur $color;
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin media-group-specs(
 	$item-name, $padding: 1px
 ) {
@@ -42,9 +44,9 @@
 	}
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin set-size(
 	$font-size, $padding, $size-name: null
 ) {
@@ -62,9 +64,9 @@
 	
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin set-style(
 	$bg-color, $color, $style-name: null
 ) {
@@ -81,9 +83,9 @@
 	}
 }
 
-/**
- *	
- */
+///
+///
+///
 @mixin embedded-media {
 	// References;
 	// https://css-tricks.com/fluid-width-video/

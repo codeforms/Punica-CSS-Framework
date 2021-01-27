@@ -1,0 +1,79 @@
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > THEMES
+/////////////////////////////////////////////////////////
+@import "mixins";
+///
+/// BETA
+///
+$punica-themes: (
+	///
+	/// Default Theme (unstable)
+	///
+	light: (
+		///////////////////////////////////////////////////////////
+		'primary-color'					: #0a8fff,
+		'success-color'					: #2ec4b6,
+		'warning-color'					: #de9e36,
+		'error-color'					: #d62828,
+		///////////////////////////////////////////////////////////
+		'background-color'				: white,
+		'text-color'					: #3f4143,
+		//
+		'color-active'					: #dcdcdc,
+		'color-negative'				: white,
+		'color-grey'					: #c3c3c3,
+		'color-secondary'				: #e6e6e6,
+		'color-dark'					: #1b1f23,
+		///////////////////////////////////////////////////////////
+		// border
+		'border-color' 					: #c6c6c6,
+		'border-width'					: 1px,
+		'border-style'					: solid,
+		'border-radius'					: 4px,
+		///////////////////////////////////////////////////////////
+		// inputs
+		'input-bg'						: white,
+		'input-color'					: #3f4143,
+		'input-border-color'			: #c6c6c6,
+		'input-outline-color'			: #3f4143,
+		///////////////////////////////////////////////////////////
+		// button
+		'button-secondary-bg-img'		: linear-gradient(to bottom, #ffffff 0%,#ededed 60%,#e6e6e6 100%),
+		'button-secondary-bg-img-hover'	: linear-gradient(to bottom, #e1e1e1 0%,#e1e1e1 11%,#e8e8e8 22%,#eeeeee 43%,#fafafa 100%)
+	),
+	///
+	/// Dark Theme (unstable)
+	///
+	dark: (
+		///////////////////////////////////////////////////////////
+		'primary-color'					: #2188ff,
+		'success-color'					: #2ec4b6,
+		'warning-color'					: #de9e36,
+		'error-color'					: #d62828,
+		///////////////////////////////////////////////////////////
+		'background-color'				: #1b1f23,
+		'text-color'					: white,
+		//
+		'color-active'					: lighten(#1b1f23, 3.7%),
+		'color-negative'				: white,
+		'color-grey'					: #999fb5,
+		'color-secondary'				: #323337,
+		'color-dark'					: lighten(#1b1f23, 5.7%),
+		///////////////////////////////////////////////////////////
+		// border
+		'border-color' 					: lighten(#1b1f23, 23%),
+		'border-width'					: 1px,
+		'border-style'					: solid,
+		'border-radius'					: 4px,
+		///////////////////////////////////////////////////////////
+		// inputs
+		'input-bg'						: lighten(#1b1f23, 8%),
+		'input-color'					: white,
+		'input-border-color'			: lighten(#1b1f23, 26%),
+		'input-outline-color'			: #2188ff,
+		///////////////////////////////////////////////////////////
+		// button
+		'button-secondary-bg-img'		: linear-gradient(top, #1b1f23 0%,#000000 100%),
+		'button-secondary-bg-img-hover'	: linear-gradient(top, #000000 0%,#1b1f23 100%)
+	),
+);

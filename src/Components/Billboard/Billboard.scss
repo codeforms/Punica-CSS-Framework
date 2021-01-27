@@ -1,8 +1,9 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : BILLBOARD ******************/
-//
-// if billboard is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : BILLBOARD
+/////////////////////////////////////////////////////////
+///
+/// if billboard is enable
+///
 @if $components-billboard {
 	.#{$billboard-name} {
 		display: flex;
@@ -10,21 +11,21 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 		justify-content: space-between;
 		align-items: center;
 		padding: $billboard-default-padding;
-		@include set-style($main-bg, $main-font-color) {
-			border-color: darken($main-bg, 4.5%);
+		@include set-style('bg-color', 'text-color') {
+			border-color: darken(theme('background-color'), 4.5%);
 		};
-		border: $main-border-width $main-border-style $main-border-color;
-		//
-		// STYLES
-		//
+		border: theme('border-width') theme('border-style') theme('border-color');
+		///
+		/// STYLES
+		///
 		@if $components-billboard-styles {
 			@each $style-name, $bg-color in $billboard-styles {
-				@include set-style($bg-color, $main-invert-color, $style-name);
+				@include set-style($bg-color, 'negative-color', $style-name);
 			}
 		}
-		//
-		// SIZES
-		//
+		///
+		/// SIZES
+		///
 		@if $components-billboard-sizes {
 			@each $size-name, $padding, $font-size in $billboard-sizes {
 				@include set-size($font-size, $padding, $size-name) {
@@ -48,9 +49,9 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 			flex-direction: column;
 		}
     }
-    //
-    // COVER
-    //
+    ///
+    /// COVER
+    ///
     @if $components-billboard-cover {
 		&.#{$billboard-cover} {
 			min-height: 100vh;
@@ -62,7 +63,9 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 			background-repeat: no-repeat;
 		}
 	}
-
+	///
+	///
+	///
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		.#{$billboard-name} {
 			padding: $billboard-responsive-padding;
@@ -75,9 +78,9 @@ PUNICA CSS > COMPONENTS : BILLBOARD ******************/
 			.#{$billboard-body} {
 				padding: $billboard-responsive-padding;
 			}
-			//
-			// SIZES
-			//
+			///
+			/// SIZES
+			///
 			@if $components-billboard-sizes {
 				@each $size, $padding, $font-size in $billboard-responsive-sizes {
 					&.#{$size} {
