@@ -11,8 +11,8 @@
 
 		// has panel border?
 		@if $has-panel-border {
-			border: $panel-border-width $panel-border-style $panel-border-color;
-			border-radius: $panel-border-radius;
+			@include border();
+			border-radius: theme('border-radius');
 		}
 
 		// has panel shadow?
@@ -35,7 +35,7 @@
 			}
 		}
 		&>.#{$panel-header} {
-			border-bottom: $panel-title-bottom-border;
+			border-bottom: $panel-inside-border;
 			padding: $panel-title-padding;
 			&.dashed {
 				border-bottom-style: dashed;
@@ -87,7 +87,7 @@
 		}
 		&>.#{$panel-bottom} {
 			min-height: $panel-bottom-min-height;
-			border-top: $panel-bottom-border;
+			border-top: $panel-inside-border;
 			padding: $panel-bottom-padding;
 		}
 	}

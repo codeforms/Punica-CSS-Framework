@@ -13,7 +13,7 @@
 		margin: $label-margin;
 		border-radius: $label-border-radius;
 		text-decoration: none;
-		border: theme('border-width') theme('border-style') theme('border-color');
+		@include border();
 		@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
 		@include set-style(theme('background-color'), theme('text-color')) {
 			border-color: theme('border-color');

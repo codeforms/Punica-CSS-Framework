@@ -16,18 +16,6 @@
 ///
 ///
 ///
-@mixin shadow(
-	$h-offset: 0,
-	$v-offset: 1px,
-	$blur: 5px,
-	$color: rgba(0, 0, 0, 0.15)
-) {
-	box-shadow: $h-offset $v-offset $blur $color;
-}
-
-///
-///
-///
 @mixin media-group-specs(
 	$item-name, $padding: 1px
 ) {

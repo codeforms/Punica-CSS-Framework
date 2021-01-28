@@ -11,16 +11,18 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: $billboard-default-padding;
-		@include set-style('bg-color', 'text-color') {
+		@include set-style(theme('background-color'), theme('text-color')) {
 			border-color: darken(theme('background-color'), 4.5%);
 		};
-		border: theme('border-width') theme('border-style') theme('border-color');
+		@include border();
 		///
 		/// STYLES
 		///
 		@if $components-billboard-styles {
 			@each $style-name, $bg-color in $billboard-styles {
-				@include set-style($bg-color, 'negative-color', $style-name);
+				@include set-style($bg-color, theme('negative-color'), $style-name) {
+					border-color: darken($bg-color, 4.5%);
+				};
 			}
 		}
 		///

@@ -59,14 +59,14 @@
 		}
 		td,
 		th {
-			border-bottom: $table-bottom-border-width solid $table-border-color;
+			border-bottom: theme('border-width') theme('border-style') $table-border-color;
 			padding: $table-padding-y $table-padding-x;
 			text-align: inherit;
 		}
 		thead tr {
 			background: $table-thead-bg;
 			th {
-				border-bottom-width: $table-bottom-border-width;
+				border-bottom-width: theme('border-width');
 				border-bottom-color: theme('border-color');
 				font-weight: $table-th-weight;
 				color: $table-th-color;

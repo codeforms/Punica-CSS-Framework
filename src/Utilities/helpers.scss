@@ -56,7 +56,7 @@
 	///
 	/// Filters
 	///
-	@include setHelperList($display-filters, "filter");
+	@include setHelperList($display-filters);
 
 	///
 	/// Text Transform Properties
@@ -102,6 +102,11 @@
 	/// Border Radius
 	///
 	@include setHelperListWithRange($border-radius, $helper-br-ranges, "px", "!important");
+
+	///
+	/// Backdrop Filters (blur)
+	///
+	@include setHelperListWithRange($backdrops, $helper-backdrops, 'px');
 
 	///
 	/// Others

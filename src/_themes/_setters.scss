@@ -1,0 +1,32 @@
+/////////////////////////////////////////////////////////
+/// THEME SETTERS
+/// Active theme's setters
+/////////////////////////////////////////////////////////
+
+///
+/// Shadow
+///
+@mixin shadow(
+	$h-offset: theme('shadow-horizontal'),
+	$v-offset: theme('shadow-vertical'),
+	$blur: theme('shadow-blur'),
+	$color: theme('shadow-color')
+) {
+	box-shadow: $h-offset $v-offset $blur $color;
+}
+
+//
+// Border
+//
+@mixin border(
+	$width: theme('border-width'),
+	$style: theme('border-style'),
+	$color: theme('border-color'),
+	$specificity: false
+) {
+	@if $specificity {
+		border: $width $style $color !important;
+	} @else {
+		border: $width $style $color;
+	}
+}

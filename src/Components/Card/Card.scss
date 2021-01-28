@@ -28,7 +28,7 @@
 
 		// has card border?
 		@if $has-card-border {
-			border: theme('border-width') theme('border-style') theme('border-color');
+			@include border();
 			border-radius: theme('border-radius');
 		}
 

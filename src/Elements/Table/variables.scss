@@ -9,12 +9,9 @@ $table-class-hovered	: 'hovered';
 $table-class-active		: 'active';
 
 /// STYLES ==============================================
-$table-border-color	: theme('color-secondary');
-$table-thead-bg		: transparent;
-$table-th-color		: theme('color-grey');
-$table-th-weight	: 400;
-
-/// PREFERENCES =========================================
-$table-bottom-border-width	: 1px;
+$table-border-color			: theme('color-secondary');
+$table-thead-bg				: transparent;
+$table-th-color				: theme('color-grey');
+$table-th-weight			: 400;
 $table-padding-y			: 5px;
 $table-padding-x			: 7px;

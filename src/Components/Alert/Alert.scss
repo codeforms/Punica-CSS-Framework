@@ -12,7 +12,7 @@
 				color: theme('text-color');
 			}
 		}
-		border: theme('border-width') theme('border-style') theme('border-color');
+		@include border();
 		border-radius: $alert-border-radius;
 		padding: $alert-padding;
 		margin: $alert-margin;

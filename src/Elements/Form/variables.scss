@@ -19,11 +19,13 @@ $form-input-height			: 2.5rem;
 $form-input-radius			: 0;
 $form-input-padding			: .4rem .5rem;
 $form-input-size			: 1.088em;
-$form-outline-width			: 2px;
+// outline
+$form-outline-width			: theme('input-outline-width');
 $form-outline-color			: theme('input-outline-color');
+// item spacer
 $form-items-spacer			: 6px 0 .75em;
 $form-item-spacer			: 6px 6px .75em;
-/* Label */
+// label
 $form-label-color			: theme('text-color');
 $form-label-size			: .8579rem;
 $form-label-weight			: 700;

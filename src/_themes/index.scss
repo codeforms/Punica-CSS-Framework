@@ -31,11 +31,18 @@ $punica-themes: (
 		'border-style'					: solid,
 		'border-radius'					: 4px,
 		///////////////////////////////////////////////////////////
+		/// shadow
+		'shadow-horizontal'				: 0,
+		'shadow-vertical'				: 4px,
+		'shadow-blur'					: 8px,
+		'shadow-color'					: rgba(0, 0, 0, 0.2),
+		///////////////////////////////////////////////////////////
 		// inputs
 		'input-bg'						: white,
 		'input-color'					: #3f4143,
 		'input-border-color'			: #c6c6c6,
 		'input-outline-color'			: #1b1f23,
+		'input-outline-width'			: 2px,
 		///////////////////////////////////////////////////////////
 		// button
 		'button-secondary-bg'			: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
@@ -66,11 +73,18 @@ $punica-themes: (
 		'border-style'					: solid,
 		'border-radius'					: 4px,
 		///////////////////////////////////////////////////////////
+		/// shadow
+		'shadow-horizontal'				: 0,
+		'shadow-vertical'				: 4px,
+		'shadow-blur'					: 8px,
+		'shadow-color'					: rgba(0, 0, 0, 0.2),
+		///////////////////////////////////////////////////////////
 		// inputs
 		'input-bg'						: lighten(#1b1f23, 8%),
 		'input-color'					: white,
 		'input-border-color'			: lighten(#1b1f23, 26%),
 		'input-outline-color'			: #2188ff,
+		'input-outline-width'			: 2px,
 		///////////////////////////////////////////////////////////
 		// button
 		'button-secondary-bg'			: linear-gradient(to top, #1b1f23 0%,#000000 100%),
