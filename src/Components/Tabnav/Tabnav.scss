@@ -35,6 +35,7 @@
             transition: border-bottom-color, color .2s;
 			color: theme('text-color');
 			padding: .935rem 1.4rem;
+			box-shadow: none;
 			&:hover {
 				color: theme('text-color');
 				border-bottom-color: theme('color-grey');

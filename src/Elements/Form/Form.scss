@@ -212,7 +212,6 @@
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none;
-				color: $form-radio-checkbox-color;
 				font-size: $form-radio-checkbox-size;
 				top: $form-radio-checkbox-top;
 				left: $form-radio-checkbox-left;
@@ -229,18 +228,22 @@
 		}
 		.#{$form-checkbox} {
 			input + label::before {
-				content: $form-checkbox-before-content;
+				content: $icon-checkbox-before;
+				color: theme('text-color');
 			}
 			input + label::after {
-				content: $form-checkbox-after-content;
+				content: $icon-checkbox-after;
+				color: theme('primary-color');
 			}
 		}
 		.#{$form-radio} {
 			input + label::before {
-				content: $form-radio-before-content;
+				content: $icon-radio-before;
+				color: theme('text-color');
 			}
 			input + label::after {
-				content: $form-radio-after-content;
+				content:  $icon-radio-after;
+				color: theme('primary-color');
 			}
 		}
 	}

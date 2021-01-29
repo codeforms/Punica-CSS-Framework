@@ -49,14 +49,7 @@ $form-input-styles: (
 /// PREFERENCES (Checkbox & Radio) ======================
 /* Checkbox & Radio */
 $form-icon-font-family			: '#{$icon-font-name}';
-$form-radio-checkbox-color		: theme('color-dark');
 $form-radio-checkbox-size		: 1.35rem;
 $form-radio-checkbox-top		: -8px;
 $form-radio-checkbox-left		: 0;
-/* Checkbox (material icons) */
-$form-checkbox-before-content	: $icon-checkbox-before;
-$form-checkbox-after-content	: $icon-checkbox-after;
 $form-checkbox-label-padding	: 0 1.2rem 0 1.7rem;
-/* Radio (material icons) */
-$form-radio-before-content		: $icon-radio-before;
-$form-radio-after-content		: $icon-radio-after;

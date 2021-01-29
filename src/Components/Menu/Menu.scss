@@ -6,7 +6,8 @@
 ///
 @if $components-menu {
 	.#{$menu-name} {
-		background: $menu-bg;
+		background-color: $menu-bg;
+		background: $menu-linear-bg;
 		border-radius: $menu-border-radius;
 		list-style: none;
 		margin: 0;
@@ -50,7 +51,7 @@
 					transition: background .15s, color .15s;
 				}
 				&:focus {
-					font-weight: inherit;
+					font-weight: 600;
 				}
 			}
 			i, span.#{$icon-font-class-name} {

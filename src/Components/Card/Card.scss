@@ -24,7 +24,8 @@
 		}
 	}
 	.#{$card-name} {
-		background: $card-bg;
+		background-color: $card-bg;
+		background: $card-linear-bg;
 
 		// has card border?
 		@if $has-card-border {
@@ -44,10 +45,10 @@
 		overflow: hidden;
 		>.#{$card-body} .#{$card-title},
 		.#{$card-title} {
-			color: darken(theme('text-color'), 15%);
+			color: theme('text-color');
 			line-height: initial;
 			&>.#{$card-subtitle} {
-				color: theme('text-color');
+				color: theme('color-grey');
 				flex: 1 1 auto;
 			}
 		}

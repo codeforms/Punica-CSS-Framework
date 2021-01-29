@@ -12,6 +12,7 @@
 	$color: theme('shadow-color')
 ) {
 	box-shadow: $h-offset $v-offset $blur $color;
+	@content;
 }
 
 //
@@ -28,4 +29,5 @@
 	} @else {
 		border: $width $style $color;
 	}
+	@content;
 }

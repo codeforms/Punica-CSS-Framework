@@ -118,8 +118,9 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			flex-wrap: wrap;
 			flex-shrink: 0;
 			border-radius: $button-group-border-radius;
-			@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
+			@include shadow();
 			.#{$button-class} {
+				box-shadow: none;
 				&:first-child:not(:last-child) {
 					border-bottom-right-radius: 0;
 					border-top-right-radius: 0;

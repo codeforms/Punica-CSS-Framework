@@ -11,7 +11,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: $billboard-default-padding;
-		@include set-style(theme('background-color'), theme('text-color')) {
+		@include set-style(theme('component-bg'), theme('text-color')) {
 			border-color: darken(theme('background-color'), 4.5%);
 		};
 		@include border();

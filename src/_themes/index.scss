@@ -2,6 +2,7 @@
 /// PUNICA CSS > THEMES
 /////////////////////////////////////////////////////////
 @import "_getters";
+
 ///
 /// BETA
 ///
@@ -21,9 +22,9 @@ $punica-themes: (
 		//
 		'color-active'					: #dcdcdc,
 		'color-negative'				: white,
-		'color-grey'					: #c3c3c3,
+		'color-grey'					: #a8a8a8,
 		'color-secondary'				: #e6e6e6,
-		'color-dark'					: #1b1f23,
+		'color-dark'					: #26272b,
 		///////////////////////////////////////////////////////////
 		// border
 		'border-color' 					: #c6c6c6,
@@ -41,8 +42,12 @@ $punica-themes: (
 		'input-bg'						: white,
 		'input-color'					: #3f4143,
 		'input-border-color'			: #c6c6c6,
-		'input-outline-color'			: #1b1f23,
+		'input-outline-color'			: #26272b,
 		'input-outline-width'			: 2px,
+		///////////////////////////////////////////////////////////
+		// card, panel & billboard
+		'component-bg'					: white,
+		'component-bg-linear'			: linear-gradient(310deg, #e9e9e9, white),
 		///////////////////////////////////////////////////////////
 		// button
 		'button-secondary-bg'			: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
@@ -53,22 +58,22 @@ $punica-themes: (
 	///
 	dark: (
 		///////////////////////////////////////////////////////////
-		'primary-color'					: #2188ff,
-		'success-color'					: #2ec4b6,
-		'warning-color'					: #de9e36,
-		'error-color'					: #d62828,
+		'primary-color'					: #10a6fa,
+		'success-color'					: #2abc90,
+		'warning-color'					: #b78343,
+		'error-color'					: #d84955,
 		///////////////////////////////////////////////////////////
-		'background-color'				: #1b1f23,
+		'background-color'				: #26272b,
 		'text-color'					: white,
 		//
-		'color-active'					: lighten(#1b1f23, 3.7%),
+		'color-active'					: lighten(#26272b, 3.7%),
 		'color-negative'				: white,
-		'color-grey'					: #999fb5,
-		'color-secondary'				: #323337,
-		'color-dark'					: lighten(#1b1f23, 5.7%),
+		'color-grey'					: #6c6e79,
+		'color-secondary'				: #3d3f43,
+		'color-dark'					: lighten(#26272b, 6.75%),
 		///////////////////////////////////////////////////////////
 		// border
-		'border-color' 					: lighten(#1b1f23, 23%),
+		'border-color' 					: lighten(#26272b, 23%),
 		'border-width'					: 1px,
 		'border-style'					: solid,
 		'border-radius'					: 4px,
@@ -80,14 +85,18 @@ $punica-themes: (
 		'shadow-color'					: rgba(0, 0, 0, 0.2),
 		///////////////////////////////////////////////////////////
 		// inputs
-		'input-bg'						: lighten(#1b1f23, 8%),
+		'input-bg'						: lighten(#26272b, 8%),
 		'input-color'					: white,
-		'input-border-color'			: lighten(#1b1f23, 26%),
-		'input-outline-color'			: #2188ff,
+		'input-border-color'			: lighten(#26272b, 26%),
+		"input-outline-color"			: #10a6fa,
 		'input-outline-width'			: 2px,
 		///////////////////////////////////////////////////////////
+		// card, panel & billboard
+		'component-bg'					: #323337,
+		'component-bg-linear'			: linear-gradient(310deg, #323337, #26272b),
+		///////////////////////////////////////////////////////////
 		// button
-		'button-secondary-bg'			: linear-gradient(to top, #1b1f23 0%,#000000 100%),
-		'button-secondary-bg-hover'		: linear-gradient(to top, #000000 0%,#1b1f23 100%)
+		'button-secondary-bg'			: linear-gradient(to top, #000000 0%,#26272b 100%),
+		'button-secondary-bg-hover'		: linear-gradient(to top, #26272b 0%,#000000 100%)
 	),
 );

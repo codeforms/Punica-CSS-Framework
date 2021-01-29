@@ -18,7 +18,8 @@ $card-horizontal	: 'horizontal';
 $card-action		: 'actions';
 
 /// PREFERENCES =========================================
-$card-bg			: theme('background-color');
+$card-bg			: theme('component-bg');
+$card-linear-bg		: theme('component-bg-linear');
 $card-padding		: 16px;
 $card-margin		: 10px;
 $card-default-width	: 240px; // for only a single card
