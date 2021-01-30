@@ -126,6 +126,7 @@
 						font-size: $button-font-size;
 						padding: $button-padding;
 						font-weight: $button-font-weight;
+						box-shadow: none;
 						&:first-child {
 							border-bottom-right-radius: 0;
 			    			border-top-right-radius: 0;

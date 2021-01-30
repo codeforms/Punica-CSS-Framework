@@ -15,9 +15,9 @@
 	@content;
 }
 
-//
-// Border
-//
+///
+/// Border
+///
 @mixin border(
 	$width: theme('border-width'),
 	$style: theme('border-style'),

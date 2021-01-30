@@ -92,11 +92,60 @@ $punica-themes: (
 		'input-outline-width'			: 2px,
 		///////////////////////////////////////////////////////////
 		// card, panel & billboard
-		'component-bg'					: #323337,
+		'component-bg'					: #26272b,
 		'component-bg-linear'			: linear-gradient(310deg, #323337, #26272b),
 		///////////////////////////////////////////////////////////
 		// button
-		'button-secondary-bg'			: linear-gradient(to top, #000000 0%,#26272b 100%),
-		'button-secondary-bg-hover'		: linear-gradient(to top, #26272b 0%,#000000 100%)
+		'button-secondary-bg'			: linear-gradient(to top, #202125 0%,#26272b 100%),
+		'button-secondary-bg-hover'		: linear-gradient(to top, #26272b 0%,#202125 100%)
 	),
+	///
+	/// Custom Theme
+	/// Apply your own color schema 
+	///
+	/*
+	custom: (
+		///////////////////////////////////////////////////////////
+		'primary-color'					: ,
+		'success-color'					: ,
+		'warning-color'					: ,
+		'error-color'					: ,
+		///////////////////////////////////////////////////////////
+		'background-color'				: ,
+		'text-color'					: ,
+		//
+		'color-active'					: ,
+		'color-negative'				: ,
+		'color-grey'					: ,
+		'color-secondary'				: ,
+		'color-dark'					: ,
+		///////////////////////////////////////////////////////////
+		// border
+		'border-color' 					: ,
+		'border-width'					: ,
+		'border-style'					: ,
+		'border-radius'					: ,
+		///////////////////////////////////////////////////////////
+		/// shadow
+		'shadow-horizontal'				: ,
+		'shadow-vertical'				: ,
+		'shadow-blur'					: ,
+		'shadow-color'					: ,
+		///////////////////////////////////////////////////////////
+		// inputs
+		'input-bg'						: ,
+		'input-color'					: ,
+		'input-border-color'			: ,
+		"input-outline-color"			: ,
+		'input-outline-width'			: ,
+		///////////////////////////////////////////////////////////
+		// card, panel & billboard
+		'component-bg'					: ,
+		'component-bg-linear'			: ,
+		///////////////////////////////////////////////////////////
+		// button
+		'button-secondary-bg'			: ,
+		'button-secondary-bg-hover'		: 
+	),
+	*/
 );

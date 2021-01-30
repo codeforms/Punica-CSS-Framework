@@ -37,7 +37,7 @@ $button-hover-text-color		: $button-text-color;
 $button-bg-active				: theme('color-active');
 
 /* Shadow */
-$button-shadow 					: theme('shadow-horizontal') theme('shadow-vertical') theme('shadow-blur') theme('shadow-color');
+$button-shadow 					: none;
 
 /* Bg Image */
 $button-bg-image				: none;
