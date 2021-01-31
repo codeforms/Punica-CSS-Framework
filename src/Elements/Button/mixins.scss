@@ -336,11 +336,13 @@
 	&.#{$button-class-link}.#{$button-class},
 	&.#{$button-class-link} > .#{$button-class} {
 		@include button-styles(transparent) {
-			&:hover {
-				background: theme('color-active');
-			}
 			box-shadow: none;
 			border: none;
+			color: theme('text-color');
+			&:hover {
+				background: theme('color-active');
+				color: theme('text-color');
+			}
 		};
 	}
 }
