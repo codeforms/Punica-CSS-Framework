@@ -13,7 +13,7 @@ $menu-secondary				: 'secondary';
 $menu-divided				: 'divided';
 
 /// PREFERENCES =========================================
-$menu-bg					: theme('background-color');
+$menu-bg					: theme('component-bg');
 $menu-linear-bg				: theme('component-bg-linear');
 $menu-font-size				: 1em;
 $menu-small-font-size		: .879em;
@@ -22,7 +22,6 @@ $menu-min-width				: max-content;
 $menu-padding 				: .9rem;
 $menu-padding-nested		: .4rem;
 $menu-z-index				: 300;
-$menu-divided-color			: theme('color-secondary');
 /* Title */
 $menu-title-font-size		: 1.25em;
 $menu-title-min-height		: 2rem;

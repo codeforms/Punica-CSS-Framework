@@ -36,10 +36,11 @@
 				padding: $menu-item-padding;
 				text-decoration: none;
 				font-size: $menu-font-size;
+				font-weight: 600;
 				transition: background .15s, color .15s;
 				&:hover {
 					background: $menu-item-hover-bg;
-					color: darken($menu-item-color, 22%);
+					color: $menu-item-color;
 					transition: background .15s, color .15s;
 				}
 				&:active,
@@ -47,11 +48,7 @@
 				&.#{$menu-item-active} {
 					background: $menu-item-hover-bg;
 					color: $menu-item-color;
-					font-weight: 700;
 					transition: background .15s, color .15s;
-				}
-				&:focus {
-					font-weight: 600;
 				}
 			}
 			i, span.#{$icon-font-class-name} {
@@ -76,7 +73,7 @@
 		}
 		&.#{$menu-divided} {
 			.#{$menu-item} {
-				border-bottom: theme('border-width') theme('border-style') $menu-divided-color;
+				border-bottom: theme('border-width') theme('border-style') theme('border-color');
 				&:last-child {
 					border-bottom: none;
 				}

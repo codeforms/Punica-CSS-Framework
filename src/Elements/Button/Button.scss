@@ -8,61 +8,61 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 	a.#{$button-class},
 	.#{$button-class} {
 		display: inline-flex;
-		font-family: $button-font-family;
-		font-size: $button-font-size;
-		font-weight: $button-font-weight;
+		font-family: $main-font-family;
+		font-size: 1em;
+		font-weight: 700;
 		text-decoration: none;
 		white-space: nowrap;
 		outline: none;
 		width: min-content;
-		background: $button-bg-color;
-		background-image: $button-bg-image;
-		border: $button-border-width solid $button-border-color;
+		background: theme('background-color');
+		background-image: none;
+		border: theme('border-width') theme('border-style') theme('border-color');
 		appearance: none;
-		color: $button-text-color;
-		border-radius: $button-border-radius;
+		color: theme('text-color');
+		border-radius: theme('border-radius');
 		box-sizing: border-box;
 		cursor: pointer;
-		line-height: $button-line-height;
-		padding: $button-padding;
+		line-height: 1;
+		padding: .935rem 1.6rem;
 		transition: background .2s, color .2s;
 		user-select: none;
-		box-shadow: $button-shadow;
+		box-shadow: none;
 		align-items: center;
 		justify-content: center;
 		overflow: visible;
 		text-align: center;
 		&:focus,
 		&:hover {
-			color: $button-hover-text-color;
-			background: $button-bg-hover;
-			background-image: $button-bg-hover-image;
+			color: theme('text-color');
+			background: theme('color-secondary');
+			background-image: none;
 			transition: background .2s, color .2s;
 		}
 		&:active {
-			color: $button-text-color;
-			background: $button-bg-color;
+			color: theme('text-color');
+			background: theme('background-color');
 		}
 		&:focus {
-			background: $button-bg-color;
+			background: theme('background-color');
 			> i,
 			> [class^="#{$icon-font-class-name}"] {
 				color: theme('primary-color');
 			}
 		}
 		&.#{$button-class-active} {
-			color: $button-text-color;
-			background: $button-bg-active;
-			background-image: $button-bg-hover-image;
+			color: theme('text-color');
+			background: theme('color-active');
+			background-image: none;
 			text-decoration: none;
 			&:focus,
 			&:hover {
-				color: $button-hover-text-color;
-				background: $button-bg-hover;
+				color: theme('text-color');
+				background: theme('color-secondary');
 			}
 			i, [class^="#{$icon-font-class-name}"] {
-				color: $button-text-color;
-				text-shadow: $button-icon-shadow;
+				color: theme('text-color');
+				text-shadow: none;
 			}
 		}
 		&[disabled],
@@ -72,24 +72,6 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 			opacity: .59;
 			pointer-events: none;
 		}
-		///
-		/// STYLES
-		///
-		@if $elements-button-styles {
-			@each $theme-name, $theme-color in $button-styles {
-				&.#{$theme-name} {
-					@include button-styles($theme-color);
-				}
-			}
-		}
-		// Button Link
-		@include link-button();
-		///
-		/// SIZES
-		///
-		@if $elements-button-sizes {
-			@include button-sizes();
-		}
 		// Button Block
 		&.#{$button-class-block} {
 			display: block;
@@ -97,9 +79,30 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 		}
 		i, [class^="#{$icon-font-class-name}"] {
 			font-size: 1.35em; 
-			color: $button-icon-color;
-			text-shadow: $button-icon-shadow;
+			color: theme('text-color');
+			text-shadow: none;
 		}
+		///
+		/// STYLES
+		///
+		@if $elements-button-styles {
+			@each $theme-name, $theme-color, $border-color in $button-styles {
+				&.#{$theme-name} {
+					@include button-styles($theme-color, $border-color);
+				}
+			}
+		}
+
+		// Button Link
+		@include link-button();
+
+		///
+		/// SIZES
+		///
+		@if $elements-button-sizes {
+			@include button-sizes();
+		}
+		
 		///
 		/// SECONDARY BUTTON
 		///
@@ -113,257 +116,12 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 	/// BUTTON GROUPS
 	///
 	@if $elements-button-group {
-		.#{$button-class-group} {
-			display: inline-flex;
-			flex-wrap: wrap;
-			flex-shrink: 0;
-			border-radius: $button-group-border-radius;
-			@include shadow();
-			.#{$button-class} {
-				box-shadow: none;
-				&:first-child:not(:last-child) {
-					border-bottom-right-radius: 0;
-					border-top-right-radius: 0;
-				}
-				&:not(:first-child):not(:last-child) {
-					border-radius: 0;
-					margin-left: -$button-border-width;
-				}
-				&:last-child:not(:first-child) {
-					border-bottom-left-radius: 0;
-					border-top-left-radius: 0;
-					margin-left: -$button-border-width;
-				}
-			}
-			///
-			/// SECONDARY BUTTON
-			///
-			@if $elements-button-secondary {
-				&.#{$button-secondary} > .#{$button-class} {
-					@include secondary-button();
-				}
-			}
-			&.#{$button-class-block} {
-				display: flex;
-				.#{$button-class} {
-					flex: 1 0 0;
-				}
-			}
-			.#{$button-class-inactive} {
-				padding-left: $button-padding-inactive;
-				padding-right: $button-padding-inactive;
-				pointer-events: none;
-				cursor: default;
-				background-image: none !important;
-			}
-			///
-			/// SIZES
-			/// 
-			@if $elements-button-sizes {
-				@include button-sizes(true);
-			}
-			///
-			/// STYLES
-			///
-			@if $elements-button-styles {
-				@each $theme-name, $theme-color in $button-styles {
-					&.#{$theme-name} > .#{$button-class},
-					&.#{$theme-name} > .#{$dropdown-name} > .#{$button-class} {
-						@include button-styles($theme-color);
-						border: $button-border-width solid darken($theme-color, 6%);
-					}
-				}
-			}
-			// Button Link
-			@include link-button();
-			///
-			/// DROPDOWN
-			///
-			@if $elements-button-dropdown {
-				.#{$dropdown-name}:last-child:not(:first-child),
-				.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class} {
-					border-bottom-left-radius: 0;
-					border-top-left-radius: 0;
-					margin-left: -1px;
-				}
-				.#{$dropdown-name}:last-child,
-				.#{$dropdown-name}:last-child > .#{$button-class}:first-child,
-				.#{$dropdown-name}:last-child > .#{$button-class}:last-child {
-					border-bottom-right-radius: $button-border-radius;
-					border-top-right-radius: $button-border-radius;
-				}
-				.#{$dropdown-name}:not(:first-child):not(:last-child) > .#{$button-class} {
-					border-radius: 0;
-					margin-left: -1px;
-				}
-			}
-			@include breakpoints($breakpoints-medium, 'max-width') {
-				//button-class-group
-				box-shadow: none;
-			}
-			///
-			/// VERTICAL BUTTONS
-			///
-			@if $elements-button-group-vertical {
-				&.#{$button-class-group-vertical} {
-					flex-flow: column;
-					>.#{$button-class},
-					&.#{$button-class-block},
-					&.#{$button-class-block} > .#{$button-class},
-					&>.#{$dropdown-name} >.#{$button-class} {
-						width: 100%;
-					}
-					>.#{$button-class} {
-						border-radius: 0;
-						&:last-child:not(:first-child),
-						&:not(:first-child):not(:last-child) {
-							margin: -$button-border-width 0 0;
-						}
-					}
-					&.#{$button-class-block} {
-						display: inline-flex;
-					}
-					///
-					/// DROPDOWN FOR VERTICAL BUTTONS
-					///
-					@if $elements-button-dropdown {
-						&>.#{$dropdown-name}:last-child:not(:first-child),
-						&>.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class},
-						&>.#{$dropdown-name}:not(:first-child):not(:last-child) > .#{$button-class} {
-							margin: -$button-border-width 0 0;
-							border-radius: 0;
-						}
-					}
-					///
-					/// STYLES
-					///
-					@if $elements-button-styles {
-						@each $theme-name, $theme-color in $button-styles {
-							&>.#{$theme-name}.#{$button-class},
-							&>.#{$dropdown-name} > .#{$theme-name}.#{$button-class} {
-								border: $button-border-width solid darken($theme-color, 6%);
-							}
-						}
-					}
-				}
-			}
-		}
+		@include button-group();
 	}
 	///
 	/// DROPDOWN
 	///
 	@if $elements-button-dropdown {
-		.#{$dropdown-name} {
-			display: inline-block;
-			position: relative;
-			&>.#{$menu-name} {
-				animation: slide-down .15s ease 1;
-				display: none;
-				left: 0;
-				max-height: 45vh;
-				overflow-y: auto;
-				position: absolute;
-				top: 100%;
-				z-index: $menu-z-index + 1;
-				width: auto;
-				&>.#{$menu-item} {
-					& > a {
-						padding: .1rem $menu-padding;
-					}
-				}
-			}
-			&.#{$dropdown-right},
-			&.#{$dropdown-left} {
-				&>.#{$menu-name} {
-					top: 0;
-				}
-			}
-			&.#{$dropdown-right} {
-				&>.#{$menu-name} {
-					left: 100%;
-					right: auto;
-				}
-			}
-			&.#{$dropdown-left} {
-				&>.#{$menu-name} {
-					left: auto;
-					right: 100%;
-				}
-			}
-			&.#{$dropdown-top}.#{$dropdown-left} {
-				&>.#{$menu-name} {
-					right: auto !important;
-					left: 0 !important;
-				}
-			}
-			&.#{$dropdown-top}.#{$dropdown-right} {
-				&>.#{$menu-name} {
-					right: 0 !important;
-					left: auto !important;
-				}
-			}
-			&.#{$dropdown-top} {
-				&>.#{$menu-name} {
-					bottom: 100%;
-					top: auto;
-					right: 0;
-					left: auto;
-					@include shadow(0, -3px, 10px, rgba(0, 0, 0, 0.15));
-				}
-			}
-			&.#{$dropdown-bottom}.#{$dropdown-left},
-			&.#{$dropdown-bottom}.#{$dropdown-right} {
-				&>.#{$menu-name} {
-					top: 100%;
-				}
-			}
-			&.#{$dropdown-bottom}.#{$dropdown-left} {
-				&>.#{$menu-name} {
-					right: auto !important;
-					left: 0 !important;
-				}
-			}
-			&.#{$dropdown-bottom}.#{$dropdown-right} {
-				&>.#{$menu-name} {
-					right: 0 !important;
-					left: auto !important;
-				}
-			}
-			// dropdown hover (default)
-			&.#{$menu-item-active} > .#{$menu-name},
-			&>.#{$dropdown-toggle}:focus + .#{$menu-name},
-			&>.#{$dropdown-toggle}:hover + .#{$menu-name},
-			&>.#{$menu-name}:focus,
-			&>.#{$menu-name}:hover {
-				display: block;
-			}
-			// clickable dropdown
-			&.#{$dropdown-click} {
-				&>.#{$dropdown-toggle}:hover + .#{$menu-name} {
-					display: none;
-				}
-				&>.#{$dropdown-toggle}:focus ~ .#{$menu-name},
-				&>.#{$dropdown-toggle}:active ~ .#{$menu-name} {
-					display: block;
-				}
-			}
-			///
-			/// BUTTON GROUPS
-			///
-			@if $elements-button-group {
-				&>.#{$button-class-group} {
-					&>.#{$dropdown-toggle}:nth-last-child(2) {
-						border-bottom-right-radius: $button-border-radius;
-						border-top-right-radius: $button-border-radius;
-					}
-				}
-			}
-			///
-			/// SIZES
-			///
-			@if $elements-button-sizes {
-				@include button-sizes(true);
-			}
-		}
+		@include dropdown();
 	}
 }
