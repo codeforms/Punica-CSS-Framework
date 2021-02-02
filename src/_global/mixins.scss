@@ -3,7 +3,9 @@
 /////////////////////////////////////////////////////////
 
 ///
-///
+/// Breakpoints
+/// @param {Size} $size
+/// @param {Size} $width
 ///
 @mixin breakpoints(
 	$size, $width: 'min-width'
@@ -14,7 +16,9 @@
 }
 
 ///
-///
+/// Media Group Specs
+/// @param {String} $item-name
+/// @param {Size} $padding
 ///
 @mixin media-group-specs(
 	$item-name, $padding: 1px
@@ -33,11 +37,10 @@
 }
 
 ///
-///
+/// Reference;
+/// https://css-tricks.com/fluid-width-video/
 ///
 @mixin embedded-media {
-	// References;
-	// https://css-tricks.com/fluid-width-video/
 	position: relative;
 	padding-bottom: 56.25% !important;
 	height: 0;

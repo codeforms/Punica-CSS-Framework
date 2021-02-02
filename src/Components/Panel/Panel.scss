@@ -35,7 +35,7 @@
 			}
 		}
 		&>.#{$panel-header} {
-			border-bottom: $panel-inside-border;
+			border-bottom: theme('border-width') theme('border-style') theme('border-color');
 			padding: $panel-title-padding;
 			&.dashed {
 				border-bottom-style: dashed;
@@ -87,7 +87,7 @@
 		}
 		&>.#{$panel-bottom} {
 			min-height: $panel-bottom-min-height;
-			border-top: $panel-inside-border;
+			border-top: theme('border-width') theme('border-style') theme('border-color');
 			padding: $panel-bottom-padding;
 		}
 	}

@@ -3,7 +3,8 @@
 /////////////////////////////////////////////////////////
 
 ///
-///
+/// Process Styles
+/// @param {Color} $color
 ///
 @mixin process-styles($color: $primary-color) {
 	.#{$process-item} {
@@ -33,7 +34,7 @@
 }
 
 ///
-///
+/// Vertical Process
 ///
 @mixin process-vertical() {
 	display: flex;

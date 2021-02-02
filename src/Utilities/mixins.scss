@@ -3,7 +3,11 @@
 /////////////////////////////////////////////////////////
 
 ///
-///
+/// Set List with Range
+/// @param {List} $helpers
+/// @param {List} $range
+/// @param {String} $value-type
+/// @param {Boolean} $specificity
 ///
 @mixin setHelperListWithRange(
 	$helpers, $range, $value-type: null, $specificity: null
@@ -12,7 +16,10 @@
 }
 
 ///
-///
+/// Set List
+/// @param {List} $helpers
+/// @param {String} $property-name
+/// @param {Boolean} $specificity
 ///
 @mixin setHelperList(
 	$list, $property-name: null, $specificity: null
@@ -33,7 +40,11 @@
 }
 
 ///
-///
+/// Set Nested List
+/// @param {List} $helpers
+/// @param {List} $second_list
+/// @param {String} $value-type
+/// @param {Boolean} $specificity
 ///
 @mixin setNestedHelperList(
 	$list, $second_list: null, $value-type: null, $specificity: null
@@ -58,7 +69,11 @@
 }
 
 ///
-///
+/// Set Properties
+/// @param {Property|String} $property
+/// @param {mixed} $value
+/// @param {String} $value-type
+/// @param {Boolean} $specificity
 ///
 @mixin setProperties(
 	$property, $value, $value-type: null, $specificity: null
@@ -67,7 +82,7 @@
 }
 
 ///
-///
+/// Custom Backgrounds
 ///
 @mixin customBackgrounds() {
 	.bg-grid {
@@ -86,7 +101,7 @@
 }
 
 ///
-///
+/// Other Helpers
 ///
 @mixin otherHelpers() {
 	.centered {margin: 0 auto;}
@@ -137,7 +152,7 @@
 	}
 	.transparent {background: transparent !important;}
 	.pure, .pure > div {background: transparent; border: none; box-shadow: none}
-	.bordered {@include border(true);}
+	.bordered {@include border();}
 	.borderless {border: none !important;}
 	.rounded {border-radius: theme('border-radius');}
 	.radiusless {border-radius:0 !important;}

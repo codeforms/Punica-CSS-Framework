@@ -3,7 +3,12 @@
 /////////////////////////////////////////////////////////
 
 ///
-///
+/// Navbar Themes
+/// @param {Color} $bg-color
+/// @param {Color} $text-color
+/// @param {Color} $input-bg
+/// @param {Color} $input-color
+/// @param {Color} $input-border-color
 ///
 @mixin navbar-themes(
 	$bg-color: $navbar-bg, 

@@ -73,7 +73,7 @@
 		}
 		&.#{$menu-divided} {
 			.#{$menu-item} {
-				border-bottom: theme('border-width') theme('border-style') theme('border-color');
+				border-bottom: theme('border-width') theme('border-style') theme('color-active');
 				&:last-child {
 					border-bottom: none;
 				}

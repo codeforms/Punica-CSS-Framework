@@ -95,8 +95,8 @@
 			&>.#{$dropdown-toggle}:hover + .#{$menu-name} {
 				display: none;
 			}
-			&>.#{$dropdown-toggle}:focus ~ .#{$menu-name},
-			&>.#{$dropdown-toggle}:active ~ .#{$menu-name} {
+			&>.#{$dropdown-toggle}:focus + .#{$menu-name},
+			&>.#{$dropdown-toggle}:active + .#{$menu-name} {
 				display: block;
 			}
 		}
@@ -262,6 +262,8 @@
 
 ///
 /// Button Styles
+/// @param {Color} $bg-color
+/// @param {Color} $border-color
 ///
 @mixin button-styles(
 	$bg-color: theme('primary-color'),
@@ -289,6 +291,7 @@
 
 ///
 /// Button Sizes
+/// @param {Boolean} $class-name
 ///
 @mixin button-sizes($class-name: false) {
 	@each $name, $font-size, $padding, $font-weight in $button-sizes {

@@ -12,8 +12,8 @@
 		align-items: stretch;
 		justify-content: space-between;
 		min-height: $navbar-min-height;
-		background: $navbar-bg;
-		color: $navbar-color;
+		background: theme('primary-color');
+		color: theme('color-negative');
 		width: 100%;
 		// grid container
 		.#{$container} {
@@ -36,7 +36,7 @@
 			a:visited {
 				font-size: $navbar-font-size;
 				text-decoration: none;
-				color: $navbar-color;
+				color: theme('color-negative');
 				display: flex;
 				font-weight: bold;
 			}
@@ -75,7 +75,7 @@
 					justify-content: flex-end;
 				}
 				input[type='text'] {
-					background-color: $navbar-color;
+					background-color: theme('color-negative');
 				}
 			}
 		}
@@ -96,10 +96,10 @@
 				background: transparent;
 				border-color: transparent;
 				border: none;
-				color: $navbar-color;
+				color: theme('color-negative');
 				min-height: 100%;
 				i, span.#{$icon-font-class-name} {
-					color: $navbar-color;
+					color: theme('color-negative');
 				}
 			}
 		}

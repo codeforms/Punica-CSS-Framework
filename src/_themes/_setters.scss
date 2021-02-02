@@ -4,19 +4,33 @@
 
 ///
 /// Shadow
+/// @param {Size} $h-offset - Horizontal offset
+/// @param {Size} $v-offset - Vertical offset
+/// @param {Size} $blur - Blur
+/// @param {Color} $color - Color
+/// @param {Boolean|String} $inset - Inset
 ///
 @mixin shadow(
 	$h-offset: theme('shadow-horizontal'),
 	$v-offset: theme('shadow-vertical'),
 	$blur: theme('shadow-blur'),
-	$color: theme('shadow-color')
+	$color: theme('shadow-color'),
+	$inset: ""
 ) {
-	box-shadow: $h-offset $v-offset $blur $color;
+	@if ($inset != "") {
+		box-shadow: $inset $h-offset $v-offset $blur $color;
+	} @else {
+		box-shadow: $h-offset $v-offset $blur $color;
+	}
 	@content;
 }
 
 ///
 /// Border
+/// @param {Size} $width - Border width
+/// @param {String} $style - Border style
+/// @param {Color} $color - Border color
+/// @param {Boolean} $specificity - Specificity
 ///
 @mixin border(
 	$width: theme('border-width'),
@@ -33,7 +47,9 @@
 }
 
 ///
-///
+/// @param {Size} $font-size
+/// @param {Integer} $padding
+/// @param {String|Boolean} $size-name
 ///
 @mixin set-size(
 	$font-size, $padding, $size-name: null
@@ -53,7 +69,9 @@
 }
 
 ///
-///
+/// @param {Color} $bg-color
+/// @param {Color} $color
+/// @param {String|Boolean} $style-name
 ///
 @mixin set-style(
 	$bg-color, $color, $style-name: null

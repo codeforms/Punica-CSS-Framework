@@ -3,7 +3,8 @@
 /////////////////////////////////////////////////////////
 
 ///
-///
+/// Get Active Theme
+/// @param {String} $theme
 ///
 @mixin get-theme($theme: $active-theme) { 
 	$current-theme : map-get($punica-themes, $theme);
@@ -13,7 +14,8 @@
 }
 
 ///
-///
+/// Get active theme's value by key
+/// @param {String} $key
 ///
 @function theme($key) {
 	@return map-get($theme-map, $key);
