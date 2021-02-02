@@ -8,10 +8,11 @@ $tabnav-active: 'active';
 
 /// STYLES ==============================================
 $tabnav-styles: (
-	"success"	: theme('success-color'),
-	"warning"	: theme('warning-color'),
-	"error"		: theme('error-color'),
-	"dark"		: theme('text-color'),
+	// name, bg color, text color
+	('success', theme('success-color'), theme('success-color')),
+	('warning', theme('warning-color'), theme('warning-color')),
+	('error', theme('error-color'), theme('error-color')),
+	('dark', theme('color-dark'), theme('text-color'))
 );
 
 /// PREFERENCES =========================================

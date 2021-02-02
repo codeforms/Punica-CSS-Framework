@@ -20,7 +20,7 @@
 			@include shadow();
 		}
 
-		background: theme('component-bg');
+		background-color: theme('background-color');
 		margin: $panel-margin;
 		&>.#{$panel-header},
 		&>.#{$panel-bottom} {

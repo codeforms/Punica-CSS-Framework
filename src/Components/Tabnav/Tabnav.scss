@@ -57,14 +57,14 @@
 		/// STYLES
 		///
 		@if $components-tabnav-styles {
-			@each $type-name, $bg-color in $tabnav-styles {
+			@each $type-name, $bg-color, $color in $tabnav-styles {
 				&.#{$type-name} {
 					.#{$button-class},
 					a.#{$button-class},
 					.#{$dropdown-name} .#{$button-class},
 					.#{$dropdown-name} a.#{$button-class} {
 						&.#{$tabnav-active} {
-							color: $bg-color;
+							color: $color;
 							border-bottom-color: $bg-color;
 						}
 					}

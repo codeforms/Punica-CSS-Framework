@@ -45,11 +45,7 @@ $punica-themes: (
 		'input-outline-color'			: #26272b,
 		'input-outline-width'			: 2px,
 		///////////////////////////////////////////////////////////
-		// card, panel, menu & billboard
-		'component-bg'					: #e9e9e9,
-		'component-bg-linear'			: linear-gradient(310deg, white, #e9e9e9),
-		///////////////////////////////////////////////////////////
-		// button
+		// secondary button
 		'button-secondary-bg'			: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
 		'button-secondary-bg-hover'		: linear-gradient(to top, #ffffff 0%,#e6e6e6 100%)
 	),
@@ -91,11 +87,7 @@ $punica-themes: (
 		"input-outline-color"			: white,
 		'input-outline-width'			: 2px,
 		///////////////////////////////////////////////////////////
-		// card, panel, menu & billboard
-		'component-bg'					: #26272b,
-		'component-bg-linear'			: linear-gradient(310deg, #323337, #26272b),
-		///////////////////////////////////////////////////////////
-		// button
+		// secondary button
 		'button-secondary-bg'			: linear-gradient(to top, #202125 0%,#26272b 100%),
 		'button-secondary-bg-hover'		: linear-gradient(to top, #26272b 0%,#202125 100%)
 	),

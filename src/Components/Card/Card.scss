@@ -24,8 +24,7 @@
 		}
 	}
 	.#{$card-name} {
-		background-color: $card-bg;
-		background: $card-linear-bg;
+		background-color: theme('background-color');
 
 		// has card border?
 		@if $has-card-border {
@@ -70,6 +69,7 @@
 				display: flex;
 				img {
 					display: block;
+					width: 100%;
 				}
 			}
 			///

@@ -79,7 +79,7 @@
 	@if $style-name {
 		&.#{$style-name} {
 			background-color: $bg-color;
-			color: $color;
+			color: $color; 
 			@content;
 		}
 	} @else {

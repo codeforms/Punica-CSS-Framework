@@ -38,6 +38,10 @@ html, body {
 	background-color: theme('primary-color');
 	color: theme('color-negative'); 
 }
+::placeholder {
+	color: theme('text-color');
+	opacity: .5;
+}
 a {
 	color: theme('text-color');
 	outline: none;

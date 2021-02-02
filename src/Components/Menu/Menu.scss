@@ -6,8 +6,7 @@
 ///
 @if $components-menu {
 	.#{$menu-name} {
-		background-color: $menu-bg;
-		background: $menu-linear-bg;
+		background-color: theme('background-color');
 		border-radius: $menu-border-radius;
 		list-style: none;
 		margin: 0;
@@ -16,21 +15,23 @@
 		padding: $menu-padding;
 		@include shadow(0, 7px, 10px, rgba(0, 0, 0, 0.15));
 		z-index: $menu-z-index;
+		// menu title
 		.#{$menu-title} {
 			font-size: $menu-title-font-size;
 			min-height: $menu-title-min-height;
-			color: $menu-title-color;
+			color: theme('text-color');
 			padding: $menu-title-padding;
 			font-weight: $menu-title-font-weight;
 			letter-spacing: $menu-title-spacing;
 		}
+		// menu item
 		.#{$menu-item} {
 			padding: 0;
 			position: relative;
 			text-decoration: none;
 		    text-align: left;
 			& > a {
-				color: $menu-item-color;
+				color: theme('text-color');
 				display: block;
 				width: 100%;
 				padding: $menu-item-padding;
@@ -39,20 +40,20 @@
 				font-weight: 600;
 				transition: background .15s, color .15s;
 				&:hover {
-					background: $menu-item-hover-bg;
-					color: $menu-item-color;
+					background: darken(theme('background-color'), 11%);
+					color: theme('text-color');
 					transition: background .15s, color .15s;
 				}
 				&:active,
 				&:focus,
 				&.#{$menu-item-active} {
-					background: $menu-item-hover-bg;
-					color: $menu-item-color;
+					background: darken(theme('background-color'), 11%);
+					color: theme('text-color');
 					transition: background .15s, color .15s;
 				}
 			}
 			i, span.#{$icon-font-class-name} {
-				color: $menu-item-icon-color;
+				color: theme('color-grey');
 				font-size: $menu-item-icon-size;
 				margin-right: $menu-item-icon-mr;
 				vertical-align: $menu-item-icon-va;
@@ -61,6 +62,7 @@
 				padding: $menu-padding-nested;
 			}
 		}
+		// menu badge
 		.#{$menu-badge} {
 			position: absolute;
 			right: 0;
@@ -68,9 +70,11 @@
 			padding: 0 4px;
 			font-size: .93em;
 		}
+		// small menu
 		&.#{$menu-small} > .#{$menu-item} a {
 			font-size: $menu-small-font-size;
 		}
+		// divided menu
 		&.#{$menu-divided} {
 			.#{$menu-item} {
 				border-bottom: theme('border-width') theme('border-style') theme('color-active');

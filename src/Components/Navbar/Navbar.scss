@@ -78,6 +78,9 @@
 					background-color: darken(theme('primary-color'), 7%);
 					color: theme('color-negative');
 					border-color: lighten(theme('primary-color'), 8%);
+					&::placeholder {
+						color: theme('color-negative');
+					}
 					&:focus {
 						outline: theme('input-outline-width') solid lighten(theme('primary-color'), 26%);
 					}

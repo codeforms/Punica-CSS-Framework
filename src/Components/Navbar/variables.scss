@@ -16,7 +16,7 @@ $navbar-spacer			: 'navbar-spacer';
 $navbar-themes: (
 	// theme name, bg color, text color, input bg, input color, input border color
 	("light", white, black, white, black, theme('color-dark')),
-	("dark", darken(theme('color-dark'), 5%), theme('color-negative'), lighten(theme('color-dark'), 7%), theme('color-negative'), lighten(theme('color-dark'), 7%))
+	("dark", darken(theme('color-dark'), 5%), theme('color-negative'), lighten(theme('color-dark'), 7%), theme('color-negative'), lighten(theme('color-dark'), 17%))
 );
 
 /// PREFERENCES =========================================

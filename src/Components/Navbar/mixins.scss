@@ -45,7 +45,7 @@
 					color: $text-color;
 				}
 				&:focus {
-					outline: theme('input-outline-width') solid darken($input-border-color, 14%);
+					outline: theme('input-outline-width') solid lighten($input-border-color, 13%);
 				}
 			}
 		}

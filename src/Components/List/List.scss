@@ -45,7 +45,7 @@
     		    margin-left: $list-margin-spacer;
 			}
 			&.#{$list-active} {
-				background: $menu-item-hover-bg;
+				background: darken(theme('background-color'), 11%);
 			}
 		}
 		///
