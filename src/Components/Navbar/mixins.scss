@@ -41,6 +41,12 @@
 				background-color: $input-bg;
 				border-color: $input-border-color;
 				color: $input-color;
+				&::placeholder {
+					color: $text-color;
+				}
+				&:focus {
+					outline: theme('input-outline-width') solid darken($input-border-color, 14%);
+				}
 			}
 		}
 	}

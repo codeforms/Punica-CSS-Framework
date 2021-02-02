@@ -12,7 +12,7 @@
 		align-items: stretch;
 		justify-content: space-between;
 		min-height: $navbar-min-height;
-		background: theme('primary-color');
+		background: darken(theme('primary-color'), 7%);
 		color: theme('color-negative');
 		width: 100%;
 		// grid container
@@ -75,7 +75,12 @@
 					justify-content: flex-end;
 				}
 				input[type='text'] {
-					background-color: theme('color-negative');
+					background-color: darken(theme('primary-color'), 7%);
+					color: theme('color-negative');
+					border-color: lighten(theme('primary-color'), 8%);
+					&:focus {
+						outline: theme('input-outline-width') solid lighten(theme('primary-color'), 26%);
+					}
 				}
 			}
 		}
