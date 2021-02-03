@@ -4,12 +4,12 @@
 
 <p align="center">
     Clean, lightweight, responsive, modern and fully customizable.<br>
-    <a href="https://codeforms.github.io/Punica-CSS-Framework">Documentation</a> | 
+    <a href="http://punica.site" target="_blank"><strong>Web Site & Documentation</strong></a> |  
     <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelogs</a>
 </p>
 
 ## Introduction
-Punica CSS is a clean, lightweight, responsive, modern and fully customizable (even class names) pure CSS Framework based on SASS/SCSS.
+Punica CSS is a clean, lightweight, responsive, modern and fully customizable (even class names) pure CSS Framework based on SASS/SCSS with multi-theme support.
 
 <p>
     <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codeforms/Punica-CSS-Framework"></a>
