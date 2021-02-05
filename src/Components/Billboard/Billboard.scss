@@ -6,15 +6,15 @@
 ///
 @if $components-billboard {
 	.#{$billboard-name} {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: $billboard-default-padding;
 		@include set-style(theme('background-color'), theme('text-color')) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 4.5rem 2.5rem;
 			border-color: darken(theme('background-color'), 4.5%);
+			@include border();
 		};
-		@include border();
 		///
 		/// STYLES
 		///
@@ -44,7 +44,7 @@
 			flex: 0 0 auto;
 		}
 		.#{$billboard-body} {
-			padding: $billboard-default-padding;
+			padding: 4.5rem 2.5rem;
 			flex: 1 1 auto;
 			display: flex;
 			justify-content: center;
@@ -70,7 +70,7 @@
 	///
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		.#{$billboard-name} {
-			padding: $billboard-responsive-padding;
+			padding: 2.5rem 1rem;
 			flex-direction: column;
 			.#{$billboard-media} {
 				img {
@@ -78,7 +78,7 @@
 				}
 			}
 			.#{$billboard-body} {
-				padding: $billboard-responsive-padding;
+				padding: 2.5rem 1rem;
 			}
 			///
 			/// SIZES

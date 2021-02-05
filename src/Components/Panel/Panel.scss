@@ -44,8 +44,8 @@
 				border-bottom-style: dotted;
 			}
 			.#{$panel-title} {
-				font-size: $panel-title-font-size;
-				font-weight: $panel-title-font-weight;
+				font-size: 1.185rem;
+				font-weight: 900;
 			}
 		}
 		&>.#{$panel-content} {
@@ -78,17 +78,17 @@
 			}
 			.#{$panel-headline},
 			p.#{$panel-headline} {
-				font-size: $panel-headline-font-size;
-				line-height: $panel-headline-line-height;
-				margin-bottom: $panel-headline-margin-bottom;
-				color: $panel-headline-color;
-				letter-spacing: $panel-headline-letter-spacing;
+				font-size: 1.39em;
+				line-height: 1.5;
+				margin-bottom: 26px;
+				color: darken(theme('text-color'), 16%);
+				letter-spacing: -.0158em;
 			}
 		}
 		&>.#{$panel-bottom} {
-			min-height: $panel-bottom-min-height;
+			min-height: 50px;
 			border-top: theme('border-width') theme('border-style') theme('border-color');
-			padding: $panel-bottom-padding;
+			padding: 6px;
 		}
 	}
 }

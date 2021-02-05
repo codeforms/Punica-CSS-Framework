@@ -8,23 +8,23 @@
 @if $elements-form {
 	@include form-inputs() {
 		-webkit-appearance: none;
-		background-color: $form-input-bg;
-		border: theme('border-width') theme('border-style') $form-input-border-color;
+		background-color: theme('input-bg');
+		border: theme('border-width') theme('border-style') theme('input-border-color');
 		height: $form-input-height;
 		border-radius: $form-input-radius;
-		outline: $form-outline-width solid transparent;
+		outline: theme('input-outline-width') solid transparent;
 		box-shadow: none;
 		box-sizing: inherit;
-		outline-offset: -$form-outline-width;
+		outline-offset: -#{theme('input-outline-width')};
 		padding: $form-input-padding;
 		width: 100%;
 		max-width: 100%;
 		font-family: inherit;
-		color: $form-input-color;
+		color: theme('input-color');
 		font-size: $form-input-size;
 		&:focus {
-			outline: $form-outline-width solid $form-outline-color;
-			outline-offset: -$form-outline-width;
+			outline: theme('input-outline-width') solid theme('input-outline-color');
+			outline-offset: -#{theme('input-outline-width')};
 			transition: .35s;
 		}
 		///
@@ -86,7 +86,7 @@
 			@at-root .#{$form-name} label,
 			&>label {
 				margin: $form-label-margin;
-				color: $form-label-color;
+				color: theme('text-color');
 				font-size: $form-label-size;
 				font-weight: $form-label-weight;
 				text-transform: none;
@@ -206,7 +206,7 @@
 			input + label::after {
 				position: absolute;
 				transition: opacity 0.11s ease-in-out;
-				font-family: $form-icon-font-family;
+				font-family: '#{$icon-font-name}';
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none;

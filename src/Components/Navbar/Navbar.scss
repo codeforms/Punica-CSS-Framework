@@ -18,7 +18,7 @@
 		// grid container
 		.#{$container} {
 			display: flex;
-			width: $navbar-container-width;
+			width: $container-width; // layout->grid
 		}
 		// navbar brand
 		.#{$navbar-brand} {

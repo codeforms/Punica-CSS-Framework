@@ -17,11 +17,11 @@
 			overflow-y: auto;
 			position: absolute;
 			top: 100%;
-			z-index: $menu-z-index + 1;
+			z-index: 300 + 1; // menu z-index + 1
 			width: auto;
 			&>.#{$menu-item} {
 				& > a {
-					padding: .1rem $menu-padding;
+					padding: .1rem .9rem;
 				}
 			}
 		}

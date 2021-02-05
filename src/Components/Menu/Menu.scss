@@ -7,22 +7,22 @@
 @if $components-menu {
 	.#{$menu-name} {
 		background-color: theme('background-color');
-		border-radius: $menu-border-radius;
+		border-radius: 0;
 		list-style: none;
 		margin: 0;
 		width: 100%;
-		min-width: $menu-min-width;
-		padding: $menu-padding;
+		min-width: max-content;
+		padding: .9rem;
 		@include shadow(0, 7px, 10px, rgba(0, 0, 0, 0.15));
-		z-index: $menu-z-index;
+		z-index: 300;
 		// menu title
 		.#{$menu-title} {
-			font-size: $menu-title-font-size;
-			min-height: $menu-title-min-height;
+			font-size: 1.25em;
+			min-height: 2rem;
 			color: theme('text-color');
-			padding: $menu-title-padding;
-			font-weight: $menu-title-font-weight;
-			letter-spacing: $menu-title-spacing;
+			padding: .6rem 0;
+			font-weight: 700;
+			letter-spacing: -.015rem;
 		}
 		// menu item
 		.#{$menu-item} {
@@ -34,9 +34,9 @@
 				color: theme('text-color');
 				display: block;
 				width: 100%;
-				padding: $menu-item-padding;
+				padding: .28rem .9rem;
 				text-decoration: none;
-				font-size: $menu-font-size;
+				font-size: 1em;
 				font-weight: 600;
 				transition: background .15s, color .15s;
 				&:hover {
@@ -54,12 +54,12 @@
 			}
 			i, span.#{$icon-font-class-name} {
 				color: theme('color-grey');
-				font-size: $menu-item-icon-size;
-				margin-right: $menu-item-icon-mr;
-				vertical-align: $menu-item-icon-va;
+				font-size: 1.2rem;
+				margin-right: 10px;
+				vertical-align: text-bottom;
 			}
 			.#{$menu-name} {
-				padding: $menu-padding-nested;
+				padding: .4rem;
 			}
 		}
 		// menu badge
@@ -72,7 +72,7 @@
 		}
 		// small menu
 		&.#{$menu-small} > .#{$menu-item} a {
-			font-size: $menu-small-font-size;
+			font-size: .879em;
 		}
 		// divided menu
 		&.#{$menu-divided} {

@@ -28,7 +28,7 @@
 					}
 				}
 				thead tr {
-					background: $table-thead-bg !important;
+					background: transparent !important;
 				}
 			}
 		}
@@ -45,7 +45,7 @@
 					}
 				}
 				thead tr {
-					background: $table-thead-bg !important;
+					background: transparent !important;
 				}
 			}
 		}
@@ -59,17 +59,17 @@
 		}
 		td,
 		th {
-			border-bottom: theme('border-width') theme('border-style') $table-border-color;
-			padding: $table-padding-y $table-padding-x;
+			border-bottom: theme('border-width') theme('border-style') theme('color-secondary');
+			padding: 5px 7px;
 			text-align: inherit;
 		}
 		thead tr {
-			background: $table-thead-bg;
+			background: transparent;
 			th {
 				border-bottom-width: theme('border-width');
 				border-bottom-color: theme('border-color');
-				font-weight: $table-th-weight;
-				color: $table-th-color;
+				font-weight: 400;
+				color: theme('color-grey');
 			}
 		}
 	}

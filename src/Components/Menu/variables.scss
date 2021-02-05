@@ -11,24 +11,3 @@ $menu-item-active			: 'active';
 $menu-badge					: 'badge';
 $menu-secondary				: 'secondary';
 $menu-divided				: 'divided';
-
-/// PREFERENCES =========================================
-$menu-font-size				: 1em;
-$menu-small-font-size		: .879em;
-$menu-border-radius			: 0;
-$menu-min-width				: max-content;
-$menu-padding 				: .9rem;
-$menu-padding-nested		: .4rem;
-$menu-z-index				: 300;
-/* Title */
-$menu-title-font-size		: 1.25em;
-$menu-title-min-height		: 2rem;
-$menu-title-font-weight		: 700;
-$menu-title-padding			: .6rem 0;
-$menu-title-spacing			: -.015rem;
-/* Menu Item */
-$menu-item-padding			: .28rem $menu-padding;
-/* Menu Item Icon */
-$menu-item-icon-size		: 1.2rem;
-$menu-item-icon-mr			: 10px; // margin-right
-$menu-item-icon-va			: text-bottom; // vertical-align

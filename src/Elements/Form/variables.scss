@@ -11,25 +11,18 @@ $form-radio		: 'radio';
 $form-group		: 'group';
 
 /// PREFERENCES =========================================
-$form-padding				: 0 16px;
-$form-input-bg				: theme('input-bg');
-$form-input-color			: theme('input-color');
-$form-input-border-color	: theme('input-border-color');
-$form-input-height			: 2.5rem;
-$form-input-radius			: 0;
-$form-input-padding			: .4rem .5rem;
-$form-input-size			: 1.088em;
-// outline
-$form-outline-width			: theme('input-outline-width');
-$form-outline-color			: theme('input-outline-color');
+$form-padding		: 0 16px;
+$form-input-height	: 2.5rem;
+$form-input-radius	: 0;
+$form-input-padding	: .4rem .5rem;
+$form-input-size	: 1.088em;
 // item spacer
-$form-items-spacer			: 6px 0 .75em;
-$form-item-spacer			: 6px 6px .75em;
+$form-items-spacer	: 6px 0 .75em;
+$form-item-spacer	: 6px 6px .75em;
 // label
-$form-label-color			: theme('text-color');
-$form-label-size			: .8579rem;
-$form-label-weight			: 700;
-$form-label-margin			: 0;
+$form-label-size	: .8579rem;
+$form-label-weight	: 700;
+$form-label-margin	: 0;
 
 /// SIZES ===============================================
 $form-input-sizes: (
@@ -48,7 +41,6 @@ $form-input-styles: (
 
 /// PREFERENCES (Checkbox & Radio) ======================
 /* Checkbox & Radio */
-$form-icon-font-family			: '#{$icon-font-name}';
 $form-radio-checkbox-size		: 1.35rem;
 $form-radio-checkbox-top		: -8px;
 $form-radio-checkbox-left		: 0;

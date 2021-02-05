@@ -14,17 +14,3 @@ $breadcrumb-sizes: (
     ('large', 1.18em, .18em, 1.7rem)
 );
 
-/// PREFERENCES =========================================
-$breadcrumb-active-color		: theme('primary-color');
-/* Seperator */
-$breadcrumb-seperator			: $icon-breadcrumb-seperator; // [*]
-$breadcrumb-seperator-color		: $breadcrumb-active-color;
-$breadcrumb-seperator-padding	: 0 .25em; // default padding
-$breadcrumb-seperator-vertical	: middle;
-$breadcrumb-seperator-size		: 1.4rem; // default size
-/*
-REFERENCES ******************************************
-[*] Defined at Elements -> Icon -> variables.scss
-https://material.io/resources/icons/
-*****************************************************/
-

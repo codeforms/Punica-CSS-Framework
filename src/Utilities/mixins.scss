@@ -19,7 +19,7 @@
 /// Set List
 /// @param {List} $helpers
 /// @param {String} $property-name
-/// @param {Boolean} $specificity
+/// @param {Boolean|String} $specificity
 ///
 @mixin setHelperList(
 	$list, $property-name: null, $specificity: null
@@ -44,7 +44,7 @@
 /// @param {List} $helpers
 /// @param {List} $second_list
 /// @param {String} $value-type
-/// @param {Boolean} $specificity
+/// @param {String} $specificity
 ///
 @mixin setNestedHelperList(
 	$list, $second_list: null, $value-type: null, $specificity: null
@@ -73,31 +73,12 @@
 /// @param {Property|String} $property
 /// @param {mixed} $value
 /// @param {String} $value-type
-/// @param {Boolean} $specificity
+/// @param {String} $specificity
 ///
 @mixin setProperties(
 	$property, $value, $value-type: null, $specificity: null
 ) {
 	#{$property}: #{$value}#{$value-type} #{$specificity};
-}
-
-///
-/// Custom Backgrounds
-///
-@mixin customBackgrounds() {
-	.bg-grid {
-	    height: 100%;
-		background-color: theme('background-color');
-	    background-position: center center;
-		background-image: linear-gradient(90deg, lighten(theme('primary-color'), 25%) 1%, transparent 16%),
-		linear-gradient(lighten(theme('primary-color'), 25%) 1%, transparent 16%);
-		background-size: 10px 10px;
-	}
-	.bg-stripe {
-	    height: 100%;
-		background-image: linear-gradient(theme('background-color'), theme('background-color') 7px, theme('primary-color') 4px, darken(theme('background-color'), 14%));
-	    background-size: 100% 8px;
-	}
 }
 
 ///

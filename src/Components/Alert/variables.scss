@@ -3,8 +3,8 @@
 /////////////////////////////////////////////////////////
 
 /// CLASS NAMING ========================================
-$alert-name				: 'alert';
-$alert-active			: 'active';
+$alert-name		: 'alert';
+$alert-active	: 'active';
 
 /// STYLES ==============================================
 $alert-styles: (
@@ -22,9 +22,3 @@ $alert-sizes: (
     ("small", .749rem, .4rem),
     ("large", 1.1rem, .8rem)
 );
-
-/// PREFERENCES =========================================
-$alert-padding			: .6rem;
-$alert-margin			: 0 0 8px;
-$alert-border-radius 	: theme('border-radius');
-$alert-font-weight		: 700;

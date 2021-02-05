@@ -7,33 +7,33 @@
 @if $components-list {
 	.#{$list-name} {
 		list-style: none;
-		margin: $list-margin-spacer 0;
+		margin: 1rem 0;
 		>.#{$list-item} {
 		    display: flex;
 		    align-items: center;
-		    padding: $list-item-padding;
+		    padding: .55em;
 		    margin: 0;
 		    transition: .15s;
 		    >img,
 		    >.#{$icon-font-class-name},
 		    >i {
-		    	margin-right: $list-margin-spacer;
+		    	margin-right: 1rem;
 		    }
 		    >.#{$list-body} {
 		    	flex: 1;
-		    	line-height: $list-body-line-height;
+		    	line-height: 1.4;
 		    	text-align: left;
 		    	>.#{$list-title},
 		    	>.#{$list-subtitle} {
 					display: block;
 				}
 		    	>.#{$list-title} {
-		    		font-size: $list-title-size;
+		    		font-size: 1.28rem;
     				font-weight: $main-title-weight;
 					line-height: 1;
 		    	}
 				>.#{$list-subtitle} {
-					font-size: $list-subtitle-size;
+					font-size: .889em;
 					font-weight: 400;
 					color: theme('primary-color');
 					margin-bottom: 7px;
@@ -42,7 +42,7 @@
 		    >.#{$list-actions} {
 	    		margin-left: auto;
     		    width: auto;
-    		    margin-left: $list-margin-spacer;
+    		    margin-left: 1rem;
 			}
 			&.#{$list-active} {
 				background: darken(theme('background-color'), 11%);

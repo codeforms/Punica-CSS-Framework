@@ -6,18 +6,34 @@
 ///
 @if $components-alert {
 	.#{$alert-name} {
-		display: block;
 		@include set-style(theme('main-bg'), theme('text-color')) {
+			display: block;
+			@include border();
+			border-radius: theme('border-radius');
+			padding: .6rem;
+			margin: 0 0 8px;
+			width: 100%;
+			font-weight: 700;
 			a {
 				color: theme('text-color');
+				text-decoration: underline;
+				&:focus,
+				&:hover,
+				&:active,
+				&.#{$alert-active} {
+					opacity: .75;
+				}
+			}
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			>i,
+			>.#{$icon-font-class-name} {
+				vertical-align: text-top;
 			}
 		}
-		@include border();
-		border-radius: $alert-border-radius;
-		padding: $alert-padding;
-		margin: $alert-margin;
-		width: 100%;
-		font-weight: $alert-font-weight;
 		///
 		/// STYLES
 		///
@@ -36,24 +52,6 @@
 			@each $size-name, $font-size, $padding in $alert-sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}
-		}
-		a {
-			text-decoration: underline;
-			&:focus,
-			&:hover,
-			&:active,
-			&.#{$alert-active} {
-				opacity: .75;
-			}
-		}
-		p {
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		>i,
-		>.#{$icon-font-class-name} {
-			vertical-align: text-top;
 		}
 	}
 }

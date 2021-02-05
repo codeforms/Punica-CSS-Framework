@@ -12,16 +12,16 @@
 		cursor: default;
 		.#{$tooltip-text} {
 			position: absolute;
-			color: $tooltip-color;
-			font-size: $tooltip-font-size;
-			font-weight: $tooltip-font-weight;
+			color: theme('color-negative');
+			font-size: .9em;
+			font-weight: 600;
 			text-align: center;
 			visibility: hidden;
-			background-color: $tooltip-background;
+			background-color: theme('color-dark');
 			border-radius: theme('border-radius');
-			min-width: $tooltip-min-width;
-			max-width: $tooltip-max-width;
-			padding: $tooltip-padding;
+			min-width: 100px;
+			max-width: 180px;
+			padding: 5px;
 			top: 120%;
 			opacity: 0;
 			transition: opacity 0.18s;
@@ -35,7 +35,7 @@
 				margin-left: -5px;
 				border-width: 5px;
 				border-style: solid;
-				border-color: transparent transparent $tooltip-background transparent;
+				border-color: transparent transparent theme('color-dark') transparent;
 			}
 		}
 		&:hover .#{$tooltip-text} {

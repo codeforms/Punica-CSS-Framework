@@ -34,7 +34,6 @@
 	/// Background Colors
 	///
 	@include setHelperList($bg-colors, "background-color", "!important");
-	@include customBackgrounds();
 
 	///
 	/// Cursors

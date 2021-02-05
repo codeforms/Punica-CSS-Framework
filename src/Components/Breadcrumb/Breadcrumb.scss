@@ -16,22 +16,22 @@
 			&:hover,
 			&:active,
 			&.active {
-				color: $breadcrumb-active-color;
+				color: theme('primary-color');
 			}
 			&::after {
 				font-family: '#{$icon-font-name}';
-				content: $breadcrumb-seperator;
-				color: $breadcrumb-seperator-color;
-				padding: $breadcrumb-seperator-padding;
-			    vertical-align: $breadcrumb-seperator-vertical;
-		        font-size: $breadcrumb-seperator-size;
+				content: $icon-breadcrumb-seperator; // [*]
+				color: theme('primary-color');
+				padding: 0 .25em;
+			    vertical-align: middle;
+		        font-size: 1.4rem;
 				cursor: auto;
 			}
 			&:first-child {
 				margin-left: 0;
 			}
 			&.#{$breadcrumb-active} {
-				color: $breadcrumb-active-color;
+				color: theme('primary-color');
 				font-weight: bold;
 				&::after {
 					content: none;
@@ -70,3 +70,8 @@
 		}
 	}
 }
+/*
+REFERENCES ******************************************
+[*] Defined at Elements -> Icon -> variables.scss
+https://material.io/resources/icons/
+*****************************************************/

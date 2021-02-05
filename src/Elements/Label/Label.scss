@@ -7,18 +7,22 @@
 @if $elements-label {
 	a.#{$label-name},
 	.#{$label-name} {
-		display: inline-block;
-		font-weight: $label-font-weight;
-		line-height: $label-line-height;
-		margin: $label-margin;
-		border-radius: $label-border-radius;
-		text-decoration: none;
-		@include border();
-		@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
 		@include set-style(theme('background-color'), theme('text-color')) {
+			display: inline-block;
+			font-weight: $label-font-weight;
+			line-height: $label-line-height;
+			margin: $label-margin;
+			border-radius: theme('border-radius');
+			text-decoration: none;
+			@include border();
+			@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
 			border-color: theme('border-color');
+			@include set-size($label-font-size, $label-padding);
+			>i,
+			>.material-icons {
+				vertical-align: text-top;
+			}
 		};
-		@include set-size($label-font-size, $label-padding);
 		///
 		/// STYLES
 		///
@@ -36,10 +40,6 @@
 			@each $size-name, $padding, $font-size in $label-sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}
-		}
-		>i,
-		>.material-icons {
-			vertical-align: text-top;
 		}
 	}
 }

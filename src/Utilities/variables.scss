@@ -7,7 +7,7 @@ $helper-pm-ranges	: 0,5,10,15,20,30,40,50; // pm: padding/margin
 $helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font-weight
 $helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999;
 $helper-lh-ranges	: 0,1,2,3,4,5; // lh: line-height
-$helper-br-ranges	: 4,8,10,12,14; // br: border-radius
+$helper-br-ranges	: 4,8,10,12,14,16,500; // br: border-radius
 $helper-backdrops	: 4,7,10,12,16,20; // backdrop-filter (blur)
 
 /// Margin ============================================
@@ -184,7 +184,7 @@ $position-properties: (
 
 /// Stack Order (z-index) ============================
 $z-indexes: (
-	// class name, property
+	// class name (prefix), property
 	"z-": "z-index"
 );
 
