@@ -1,16 +1,16 @@
-/***************************************************** 
-PUNICA CSS > UTILITIES : HELPERS > VARIABLES *********/
+///////////////////////////////////////////////////////
+/// PUNICA CSS > UTILITIES : HELPERS > VARIABLES
+///////////////////////////////////////////////////////
 
-/***************************************************** 
-PREFERENCES ******************************************/
+/// PREFERENCES =======================================
 $helper-pm-ranges	: 0,5,10,15,20,30,40,50; // pm: padding/margin
 $helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font-weight
 $helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999;
 $helper-lh-ranges	: 0,1,2,3,4,5; // lh: line-height
-$helper-br-ranges	: 4,8,10,12,14; // br: border-radius
+$helper-br-ranges	: 4,8,10,12,14,16,500; // br: border-radius
+$helper-backdrops	: 4,7,10,12,16,20; // backdrop-filter (blur)
 
-/*
-Margin ************************************/
+/// Margin ============================================
 $margin-helpers: (
 	// class name (prefix), property
     ("m-", "margin"),
@@ -20,8 +20,7 @@ $margin-helpers: (
     ("ml-", "margin-left")
 );
 
-/*
-Padding ************************************/
+/// Padding ===========================================
 $padding-helpers: (
 	// class name (prefix), property
     ("p-", "padding"),
@@ -31,15 +30,13 @@ $padding-helpers: (
     ("pl-", "padding-left")
 );
 
-/*
-Font Weight ************************************/
+/// Font Weight ======================================
 $font-weights: (
 	// class name (prefix), property
 	"fw-": "font-weight"
 );
 
-/*
-Font Size ************************************/
+/// Font Size ========================================
 $font-sizes: (
 	// class name, value
 	("mini-text", 60%),
@@ -51,36 +48,33 @@ $font-sizes: (
 	("giant-text", 350%)
 );
 
-/*
-Text Colors ************************************/
+/// Text Colors ======================================
 $text-colors		: (
 	// class name, value
-	("color-grey", $main-grey-color),
+	("color-grey", theme('color-grey')),
 	("color-white", white),
 	("color-black", black),
-	("color-primary", $primary-color),
-	("color-success", $success-color),
-	("color-warning", $warning-color),
-	("color-error", $error-color)
+	("color-primary", theme('primary-color')),
+	("color-success", theme('success-color')),
+	("color-warning", theme('warning-color')),
+	("color-error", theme('error-color'))
 );
 
-/*
-Bg Colors ************************************/
+/// Bg Colors ========================================
 $bg-colors			: (
 	// class name, value
-	("bg-grey", $main-grey-color),
-	("bg-secondary", $main-secondary-bg),
+	("bg-grey", theme('color-grey')),
+	("bg-secondary", theme('color-secondary')),
 	("bg-white", white),
-	("bg-black", $main-font-color),
-	("bg-dark", $main-dark-color),
-	("bg-primary", $primary-color),
-	("bg-success", $success-color),
-	("bg-warning", $warning-color),
-	("bg-error", $error-color)
+	("bg-black", black),
+	("bg-dark", theme('color-dark')),
+	("bg-primary", theme('primary-color')),
+	("bg-success", theme('success-color')),
+	("bg-warning", theme('warning-color')),
+	("bg-error", theme('error-color'))
 );
 
-/*
-Cursors ************************************/
+/// Cursors ==========================================
 $cursors: (
 	// class name, value
 	("cursor-alias", alias),
@@ -94,8 +88,7 @@ $cursors: (
 	("cursor-zoom-out", zoom-out)
 );
 
-/*
-Display Properties ************************************/
+/// Display Properties ===============================
 $display-properties: (
 	// class name, value
 	("display-inline", inline),
@@ -112,8 +105,7 @@ $display-properties: (
 	("display-table-cell", table-cell)
 );
 
-/*
-Alignment ************************************/
+/// Alignment ========================================
 $align-items: (
 	// class name, value
 	("align-items-baseline", baseline),
@@ -147,16 +139,14 @@ $justify-content: (
 	("justify-content-inherit", inherit)
 );
 
-/*
-Filters ************************************/
+/// Display Filters ==================================
 $display-filters: (
-	// class name, value
-	("filter-invert", invert(100%)),
-	("filter-gray", grayscale(100%))
+	// class name, property, value
+	("filter-invert", "filter", invert(100%)),
+	("filter-gray", "filter", grayscale(100%)),
 );
 
-/*
-Text Transforms ************************************/
+/// Text Transforms ==================================
 $text-transforms: (
 	// class name, value
 	("text-uppercase", uppercase),
@@ -164,8 +154,7 @@ $text-transforms: (
 	("text-capitalize", capitalize)
 );
 
-/*
-Overflow Properties ************************************/
+/// Overflow Properties ==============================
 $overflow-properties: (
 	// class name, property, value
 	("overflow-auto", "overflow", auto),
@@ -181,8 +170,7 @@ $overflow-properties: (
 	("overflow-y-scroll", "overflow-y", scroll)
 );
 
-/*
-Position Properties ************************************/
+/// Position Properties ==============================
 $position-properties: (
 	// class name, value
 	("position-static", static),
@@ -194,15 +182,13 @@ $position-properties: (
 	("position-inherit", inherit)
 );
 
-/*
-Stack Order (z-index) **********************************/
+/// Stack Order (z-index) ============================
 $z-indexes: (
-	// class name, property
+	// class name (prefix), property
 	"z-": "z-index"
 );
 
-/*
-Direction of the flexible items (flex-direction) *******/
+/// Direction of the flexible items (flex-direction) =
 $flex-directions: (
 	// class name, value
 	("flex-direction-row", row),
@@ -213,8 +199,7 @@ $flex-directions: (
 	("flex-direction-inherit", inherit)
 );
 
-/*
-User Select **********************************/
+/// User Select ======================================
 $user-selects: (
 	// class name, value
 	("user-select-none", none),
@@ -223,8 +208,7 @@ $user-selects: (
 	("user-select-all", all)
 );
 
-/*
-Positioned Elements **************************/
+/// Positioned Elements ==============================
 $insets: (
 	// class name, [values]
 	'top'(0, auto),
@@ -233,16 +217,20 @@ $insets: (
 	'right'(0, auto),
 );
 
-/*
-Line Height *********************************/
+/// Line Height ======================================
 $line-heights: (
 	// class name (prefix), property
 	"line-height-": "line-height"
 );
 
-/*
-Border Radius *******************************/
+/// Border Radius ====================================
 $border-radius: (
 	// class name (prefix), property
 	"radius-": "border-radius"
+);
+
+/// Backdrop Filters =================================
+$backdrops: (
+	// class name (prefix), property
+	"backdrop-": "backdrop-filter"
 );

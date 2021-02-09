@@ -1,8 +1,9 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
-//
-// if breadcrumb is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : BREADCRUMB
+/////////////////////////////////////////////////////////
+///
+/// if breadcrumb is enable
+///
 @if $components-breadcrumb {
 	.#{$breadcrumb-name} {
 		display: inline-block;
@@ -11,35 +12,36 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 		.#{$breadcrumb-item} {
 			text-decoration: none;
 			font-size: inherit;
+			font-weight: 600;
 			&:focus,
 			&:hover,
 			&:active,
 			&.active {
-				color: $breadcrumb-active-color;
+				color: theme('primary-color');
 			}
 			&::after {
 				font-family: '#{$icon-font-name}';
-				content: $breadcrumb-seperator;
-				color: $breadcrumb-seperator-color;
-				padding: $breadcrumb-seperator-padding;
-			    vertical-align: $breadcrumb-seperator-vertical;
-		        font-size: $breadcrumb-seperator-size;
+				content: $icon-breadcrumb-seperator; // [*]
+				color: theme('primary-color');
+				padding: 0 .25em;
+			    vertical-align: middle;
+		        font-size: 1.4rem;
 				cursor: auto;
 			}
 			&:first-child {
 				margin-left: 0;
 			}
 			&.#{$breadcrumb-active} {
-				color: $breadcrumb-active-color;
+				color: theme('primary-color');
 				font-weight: bold;
 				&::after {
 					content: none;
 				}
 			}
 		}
-		//
-		// SIZES
-		//
+		///
+		/// SIZES
+		///
 		@if $components-breadcrumb-sizes {
 			// size, font-size, seperator-padding, seperator-size
 			@each $size, $font-size, $seperator-padding, $seperator-size in $breadcrumb-sizes {
@@ -55,6 +57,9 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 			}
 		}
 	}
+	///
+	///
+	///
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		.#{$breadcrumb-name} {
 			.#{$breadcrumb-item} {
@@ -66,3 +71,8 @@ PUNICA CSS > COMPONENTS : BREADCRUMB *****************/
 		}
 	}
 }
+/*
+REFERENCES ******************************************
+[*] Defined at Elements -> Icon -> variables.scss
+https://material.io/resources/icons/
+*****************************************************/

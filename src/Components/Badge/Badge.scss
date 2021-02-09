@@ -1,32 +1,33 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : BADGE **********************/
-//
-// if badge is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : BADGE
+/////////////////////////////////////////////////////////
+///
+/// if badge is enable
+///
 @if $components-badge {
 	.#{$badge-name} {
-		position: relative;
-		white-space: nowrap;
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		font-weight: $badge-font-weight;
-		border-radius: $badge-border-radius;
-		@include set-size($badge-font-size, $badge-padding);
-		@include set-style($main-bg, $main-font-color);
-		//
-		// STYLES
-		//
+		@include set-style(theme('background-color'), theme('text-color')) {
+			position: relative;
+			white-space: nowrap;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 700;
+			border-radius: 500px;
+		};
+		@include set-size(.854rem, 1px 6px);
+		///
+		/// STYLES
+		///
 		@if $components-badge-styles {
 			@each $name, $bg-color in $badge-styles {
-				@include set-style($bg-color, $main-invert-color, $name);
+				@include set-style($bg-color, theme('color-negative'), $name);
 			}
 		}
-		//
-		// SIZES
-		//
+		///
+		/// SIZES
+		///
 		@if ($components-badge-sizes) {
-			// badge sizes
 			@each $size-name, $font-size, $padding in $badge-sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}

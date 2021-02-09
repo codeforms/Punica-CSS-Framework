@@ -1,5 +1,6 @@
-/****************************************************************** 
-PUNICA CSS > LAYOUT : BASE ****************************************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > LAYOUT : BASE
+/////////////////////////////////////////////////////////
 *,
 *:after,
 *:before {
@@ -23,7 +24,8 @@ body {
 	font-size: $main-font-size;
 	font-weight: $main-font-weight;
 	line-height: $main-line-height;
-	color: $main-font-color;
+	color: theme('text-color');
+	background-color: theme('background-color');
 }
 html, body {
 	min-height: 100%;
@@ -32,38 +34,32 @@ html, body {
 	margin: 0;
 	border: none;
 }
-::-webkit-scrollbar {
-	width: $scrollbar-width;
-}
-::-webkit-scrollbar-track {
-	background: $scrollbar-bg;
-}
-::-webkit-scrollbar-thumb {
-	background: $scrollbar-color;
-}
 ::selection {
-	background-color: $primary-color;
-	color: $main-invert-color;
+	background-color: theme('primary-color');
+	color: theme('color-negative'); 
+}
+::placeholder {
+	color: theme('text-color');
+	opacity: .5;
 }
 a {
-	color: $main-font-color;
+	color: theme('text-color');
 	outline: none;
 	text-decoration: none;
 	&:focus,
 	&:hover,
 	&:active,
 	&.active {
-		color: darken($primary-color, 8%);
+		color: darken(theme('primary-color'), 8%);
 		text-decoration: underline;
 	}
 	&:visited {
-		color: $main-font-color;
+		color: theme('text-color');
 	}
 }
 hr {
 	margin: 15px 0;
-	box-shadow: 0 0.05rem 0.2rem rgba(48,55,66,.3);
-	background-color: #ccc;
+	background-color: theme('border-color');
 	border: none;
 	height: 1px;
 }
@@ -108,7 +104,7 @@ iframe {
 :not(pre)>code, 
 :not(pre)>kbd, 
 :not(pre)>samp {
-	color: $error-color;
+	color: theme('error-color');
 	white-space: nowrap;
 	padding: 2px 6px;
 	font-size: .935em;

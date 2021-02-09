@@ -1,130 +1,31 @@
-/*****************************************************
-PUNICA CSS
-https://github.com/codeforms/Punica-CSS-Framework
-******************************************************
-DEFAULT SETUP PREFERENCES
-******************************************************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-LAYOUT ***********************************************/
-$layout-grid 								: true;
-/**/$layout-grid-equal						: true;
-/**/$layout-grid-offset						: true; // [!] increases the size
+/// Active Theme ========================================
+$active-theme: dark; // light, dark
 
-/*****************************************************
-COMPONENTS *******************************************/
-/* Alert ===========================================*/
-$components-alert 							: true;
-/**/$components-alert-styles				: true;
-/**/$components-alert-sizes					: true;
+/// Options =============================================
+@import "options";
 
-/* Badge ===========================================*/
-$components-badge							: true;
-/**/$components-badge-styles				: true;
-/**/$components-badge-sizes					: true;
+/// Themes ==============================================
+@import "_themes/index";
 
-/* Billboard =======================================*/
-$components-billboard						: true;
-/**/$components-billboard-styles			: true;
-/**/$components-billboard-sizes				: true;
-/**/$components-billboard-cover				: true;
-
-/* Breadcrumb ======================================*/
-$components-breadcrumb						: true;
-/**/$components-breadcrumb-sizes			: true;
-
-/* Card ============================================*/
-$components-card							: true;
-/**/$components-card-groups					: true;
-/**/$components-card-horizontal				: true;
-/**/$components-card-media					: true;
-/**//**/$components-card-media-group		: true;
-
-/* List ============================================*/
-$components-list							: true;
-/**/$components-list-divided				: true;
-/**/$components-list-hovered				: true;
-/**/$components-list-striped				: true;
-
-/* Menu ============================================*/
-$components-menu							: true;
-
-/* Navbar ==========================================*/
-$components-navbar							: true;
-/**/$components-navbar-themes				: true;
-
-/* Panel ===========================================*/
-$components-panel							: true;
-/**/$components-panel-media					: true;
-/**//**/$components-panel-media-group		: true;
-
-/* Process =========================================*/
-$components-process							: true;
-/**/$components-process-styles				: true;
-/**/$components-process-vertical			: true;
-
-/* Progress =========================================*/
-$components-progress						: true;
-/**/$components-progress-styles				: true;
-
-/* Tabnav ===========================================*/
-$components-tabnav							: true;
-/**/$components-tabnav-styles				: true;
-
-/* Timeline =========================================*/
-$components-timeline						: true;
-/**/$components-timeline-styles				: true;
-/**/$components-timeline-media				: true;
-/**//**/$components-timeline-media-group	: true;
-
-/* Tooltip ==========================================*/
-$components-tooltip							: true;
-
-/*****************************************************
-ELEMENTS *********************************************/
-/* Button ===========================================*/
-$elements-button							: true;
-/**/$elements-button-group					: true;
-/**/$elements-button-group-vertical			: true;
-/**/$elements-button-styles					: true;
-/**/$elements-button-sizes					: true;
-/**/$elements-button-secondary				: true;
-/**/$elements-button-dropdown				: true;
-
-/* Form =============================================*/
-$elements-form								: true;
-/**/$elements-form-group					: true;
-/**/$elements-form-input-sizes				: true;
-/**/$elements-form-validation-styles		: true;
-/**/$elements-form-checkbox-radio			: true;
-
-/* Icon =============================================*/
-$elements-icon								: true;
-
-/* Table ============================================*/
-$elements-table								: true;
-/**/$elements-table-hovered					: true;
-/**/$elements-table-striped					: true;
-
-/* Label ============================================*/
-$elements-label								: true;
-/**/$elements-label-styles					: true;
-/**/$elements-label-sizes					: true;
-
-/*****************************************************
-UTILITIES ********************************************/
-$helpers 									: true; 
-
-/*****************************************************
-LAUNCHER *********************************************/
-@import "_global/variables";
+/// Global Mixins & Variables ===========================
 @import "_global/mixins";
-@import "Layout/variables";
-@import "Elements/variables";
-@import "Components/variables";
-@import "Utilities/variables";
-/**/
-@import "Layout/index";
-@import "Elements/index";
-@import "Components/index";
-@import "Utilities/helpers";
+@import "_global/variables";
+
+/// Active Theme ========================================
+@include get-theme() {
+	@import "_themes/_setters";
+	///
+	@import "Layout/variables";
+	@import "Elements/variables";
+	@import "Components/variables";
+	@import "Utilities/variables";
+	///
+	@import "Layout/index";
+	@import "Elements/index";
+	@import "Components/index";
+	@import "Utilities/helpers";
+}

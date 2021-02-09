@@ -1,0 +1,139 @@
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > THEMES
+/////////////////////////////////////////////////////////
+@import "_getters";
+
+///
+///
+///
+$punica-themes: (
+	///
+	/// Default Theme
+	///
+	light: (
+		///////////////////////////////////////////////////////////
+		'primary-color'					: #0a8fff,
+		'success-color'					: #2ec4b6,
+		'warning-color'					: #de9e36,
+		'error-color'					: #d62828,
+		///////////////////////////////////////////////////////////
+		'background-color'				: white,
+		'text-color'					: #3f4143,
+		//
+		'color-active'					: #dcdcdc,
+		'color-negative'				: white,
+		'color-grey'					: #a8a8a8,
+		'color-secondary'				: #e6e6e6,
+		'color-dark'					: #26272b,
+		///////////////////////////////////////////////////////////
+		// border
+		'border-color' 					: #c6c6c6,
+		'border-width'					: 1px,
+		'border-style'					: solid,
+		'border-radius'					: 4px,
+		///////////////////////////////////////////////////////////
+		/// shadow
+		'shadow-horizontal'				: 0,
+		'shadow-vertical'				: 1px,
+		'shadow-blur'					: 5px,
+		'shadow-color'					: rgba(0, 0, 0, 0.15),
+		///////////////////////////////////////////////////////////
+		// inputs
+		'input-bg'						: white,
+		'input-color'					: #3f4143,
+		'input-border-color'			: #c6c6c6,
+		'input-outline-color'			: #26272b,
+		'input-outline-width'			: 2px,
+		///////////////////////////////////////////////////////////
+		// secondary button
+		'button-secondary-bg'			: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
+		'button-secondary-bg-hover'		: linear-gradient(to top, #ffffff 0%,#e6e6e6 100%)
+	),
+	///
+	/// Dark Theme
+	///
+	dark: (
+		///////////////////////////////////////////////////////////
+		'primary-color'					: #10a6fa,
+		'success-color'					: #2abc90,
+		'warning-color'					: #b78343,
+		'error-color'					: #d84955,
+		///////////////////////////////////////////////////////////
+		'background-color'				: #26272b,
+		'text-color'					: white,
+		//
+		'color-active'					: lighten(#26272b, 3.7%),
+		'color-negative'				: white,
+		'color-grey'					: #6c6e79,
+		'color-secondary'				: #2b2d2f,
+		'color-dark'					: lighten(#26272b, 8.5%),
+		///////////////////////////////////////////////////////////
+		// border
+		'border-color' 					: lighten(#26272b, 23%),
+		'border-width'					: 1px,
+		'border-style'					: solid,
+		'border-radius'					: 4px,
+		///////////////////////////////////////////////////////////
+		/// shadow
+		'shadow-horizontal'				: 0,
+		'shadow-vertical'				: 4px,
+		'shadow-blur'					: 8px,
+		'shadow-color'					: rgba(0, 0, 0, 0.2),
+		///////////////////////////////////////////////////////////
+		// inputs
+		'input-bg'						: lighten(#26272b, 8.5%),
+		'input-color'					: white,
+		'input-border-color'			: lighten(#26272b, 26%),
+		"input-outline-color"			: white,
+		'input-outline-width'			: 2px,
+		///////////////////////////////////////////////////////////
+		// secondary button
+		'button-secondary-bg'			: linear-gradient(to top, #202125 0%,#26272b 100%),
+		'button-secondary-bg-hover'		: linear-gradient(to top, #26272b 0%,#202125 100%)
+	),
+	///
+	/// Custom Theme
+	/// Apply your own color schema 
+	///
+	/*
+	custom: (
+		///////////////////////////////////////////////////////////
+		'primary-color'					: ,
+		'success-color'					: ,
+		'warning-color'					: ,
+		'error-color'					: ,
+		///////////////////////////////////////////////////////////
+		'background-color'				: ,
+		'text-color'					: ,
+		//
+		'color-active'					: ,
+		'color-negative'				: ,
+		'color-grey'					: ,
+		'color-secondary'				: ,
+		'color-dark'					: ,
+		///////////////////////////////////////////////////////////
+		// border
+		'border-color' 					: ,
+		'border-width'					: ,
+		'border-style'					: ,
+		'border-radius'					: ,
+		///////////////////////////////////////////////////////////
+		/// shadow
+		'shadow-horizontal'				: ,
+		'shadow-vertical'				: ,
+		'shadow-blur'					: ,
+		'shadow-color'					: ,
+		///////////////////////////////////////////////////////////
+		// inputs
+		'input-bg'						: ,
+		'input-color'					: ,
+		'input-border-color'			: ,
+		"input-outline-color"			: ,
+		'input-outline-width'			: ,
+		///////////////////////////////////////////////////////////
+		// button
+		'button-secondary-bg'			: ,
+		'button-secondary-bg-hover'		: 
+	),
+	*/
+);

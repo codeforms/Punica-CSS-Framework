@@ -1,5 +1,11 @@
-/******************************************************** 
-PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : PROCESS > MIXINS
+/////////////////////////////////////////////////////////
+
+///
+/// Process Styles
+/// @param {Color} $color
+///
 @mixin process-styles($color: $primary-color) {
 	.#{$process-item} {
 		&:not(:first-child)::before {
@@ -20,15 +26,19 @@ PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
 			}
 			&~.#{$process-item} {
 				&::before {
-					background: $main-border-color;
+					background: theme('border-color');
 				}
 			}
 		}
 	}
 }
+
+///
+/// Vertical Process
+///
 @mixin process-vertical() {
 	display: flex;
-	padding: $timeline-padding;
+	padding: 1.25em 2em 2.85em;
 	margin: $process-vertical-margin;
 	flex-direction: column;
 	align-items: flex-start;
@@ -37,11 +47,11 @@ PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
 		align-items: center;
 		max-width: 100%;
 		min-width: 100%;
-		border-bottom: $main-border-width $main-border-style $main-border-color;
-		border-right: $main-border-width $main-border-style $main-border-color;
+		border-bottom: theme('border-width') theme('border-style') theme('border-color');
+		border-right: theme('border-width') theme('border-style') theme('border-color');
 		padding-left: 20px;
 		&:first-child {
-			border-top: $main-border-width $main-border-style $main-border-color;
+			border-top: theme('border-width') theme('border-style') theme('border-color');
 		}
 		&:not(:first-child)::before {
 			width: $process-stage-stick-width;
@@ -71,7 +81,7 @@ PUNICA CSS > COMPONENTS : PROCESS > MIXINS **************/
 		flex-direction: column-reverse;
 		.#{$process-item} {
 			&:last-child {
-				border-top: $main-border-width $main-border-style $main-border-color;
+				border-top: theme('border-width') theme('border-style') theme('border-color');
 			}
 			&:first-child {
 				border-top: none;

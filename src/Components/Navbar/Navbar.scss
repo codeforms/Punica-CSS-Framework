@@ -1,9 +1,10 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : NAVBAR *********************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : NAVBAR
+/////////////////////////////////////////////////////////
 @import "mixins";
-//
-// if navbar is enable
-//
+///
+/// if navbar is enable
+///
 @if $components-navbar {
 	.#{$navbar-name} {
 		display: flex;
@@ -11,13 +12,13 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 		align-items: stretch;
 		justify-content: space-between;
 		min-height: $navbar-min-height;
-		background: $navbar-bg;
-		color: $navbar-color;
+		background: darken(theme('primary-color'), 7%);
+		color: theme('color-negative');
 		width: 100%;
 		// grid container
 		.#{$container} {
 			display: flex;
-			width: $navbar-container-width;
+			width: $container-width; // layout->grid
 		}
 		// navbar brand
 		.#{$navbar-brand} {
@@ -35,7 +36,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 			a:visited {
 				font-size: $navbar-font-size;
 				text-decoration: none;
-				color: $navbar-color;
+				color: theme('color-negative');
 				display: flex;
 				font-weight: bold;
 			}
@@ -74,7 +75,15 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 					justify-content: flex-end;
 				}
 				input[type='text'] {
-					background-color: $navbar-color;
+					background-color: darken(theme('primary-color'), 7%);
+					color: theme('color-negative');
+					border-color: lighten(theme('primary-color'), 8%);
+					&::placeholder {
+						color: theme('color-negative');
+					}
+					&:focus {
+						outline: theme('input-outline-width') solid lighten(theme('primary-color'), 26%);
+					}
 				}
 			}
 		}
@@ -95,10 +104,10 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				background: transparent;
 				border-color: transparent;
 				border: none;
-				color: $navbar-color;
+				color: theme('color-negative');
 				min-height: 100%;
 				i, span.#{$icon-font-class-name} {
-					color: $navbar-color;
+					color: theme('color-negative');
 				}
 			}
 		}
@@ -108,9 +117,9 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 			padding: .935rem 1.4rem;
 			font-weight: 700;
 		}
-		// 
-		// THEMES
-		//
+		/// 
+		/// NAVBAR THEMES
+		///
 		@if $components-navbar-themes {
 			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color in $navbar-themes {
 				&.#{$theme-name} {
@@ -143,7 +152,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				left: 0;
 				overflow-x: auto;
 				overflow-y: hidden;
-				background: $main-secondary-bg;
+				background: theme('color-secondary');
 				z-index: 1;
 				margin: 0 !important;
 				padding: 0 !important;
@@ -162,7 +171,7 @@ PUNICA CSS > COMPONENTS : NAVBAR *********************/
 				}
 				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$button-class},
 				.#{$navbar-section} .#{$button-class-group} .#{$button-class} {
-					color: $main-font-color;
+					color: theme('text-color');
 					i, span.#{$icon-font-class-name} {
 						display: none;
 					}

@@ -1,30 +1,26 @@
-/***************************************************** 
-PUNICA CSS > COMPONENTS : TIMELINE > VARIABLES *******/
+///////////////////////////////////////////////////////// 
+/// PUNICA CSS > COMPONENTS : TIMELINE > VARIABLES
+/////////////////////////////////////////////////////////
 
-/***************************************************** 
-CLASS NAMING *****************************************/
-$timeline-container		: 'timeline';
-$timeline-item			: 'activity';
-$timeline-author		: 'author';
-$timeline-body			: 'body';
-$timeline-type			: 'type';
-$timeline-date			: 'date';
-$timeline-media			: 'media';
-$timeline-actions		: 'actions';
+/// CLASS NAMING ========================================
+$timeline-container	: 'timeline';
+$timeline-item		: 'activity';
+$timeline-author	: 'author';
+$timeline-body		: 'body';
+$timeline-type		: 'type';
+$timeline-date		: 'date';
+$timeline-media		: 'media';
+$timeline-actions	: 'actions';
 
-/***************************************************** 
-STYLES ***********************************************/
+/// STYLES ==============================================
 $timeline-styles: (
-	"primary": $primary-color,
-	"success": $success-color,
-	"warning": $warning-color,
-	"error": $error-color,
-	"dark": $main-dark-color,
+	"primary"	: theme('primary-color'),
+	"success"	: theme('success-color'),
+	"warning"	: theme('warning-color'),
+	"error"		: theme('error-color'),
+	"dark"		: theme('color-dark'),
 );
 
-/***************************************************** 
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $timeline-type-width	: 32px;
 $timeline-border-width	: 1px;
-$timeline-padding		: 1.25em 2em 2.85em;
-$timeline-type-bg		: $main-secondary-bg;

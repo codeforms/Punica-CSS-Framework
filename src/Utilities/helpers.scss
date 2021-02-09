@@ -1,87 +1,114 @@
-/*****************************************************
-PUNICA CSS > UTILITIES : HELPERS *********************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > UTILITIES : HELPERS
+/////////////////////////////////////////////////////////
 @import "mixins";
-
+///
+///
+///
 @if $helpers {
-	/*****************************************************
-	Padding & Margin Helpers *****************************/
+
+	///
+	/// Padding & Margin Helpers
+	///
 	@include setHelperListWithRange($margin-helpers, $helper-pm-ranges, "px", "!important");
 	@include setHelperListWithRange($margin-helpers, auto, null, "!important"); // margin auto
 	@include setHelperListWithRange($padding-helpers, $helper-pm-ranges, "px", "!important");
 	@include setHelperListWithRange($padding-helpers, auto, null, "!important"); // padding auto
 
-	/*****************************************************
-	Font Weights *****************************************/
+	///
+	/// Font Weights
+	///
 	@include setHelperListWithRange($font-weights, $helper-fw-ranges, null, "!important");
 
-	/*****************************************************
-	Font Sizes *******************************************/
+	///
+	/// Font Sizes
+	///
 	@include setHelperList($font-sizes, "font-size", "!important");
 
-	/*****************************************************
-	Text Colors ******************************************/
+	///
+	/// Text Colors
+	///
 	@include setHelperList($text-colors, "color", "!important");
 
-	/*****************************************************
-	Background Colors ************************************/
+	///
+	/// Background Colors
+	///
 	@include setHelperList($bg-colors, "background-color", "!important");
-	@include customBackgrounds();
 
-	/*****************************************************
-	Cursors **********************************************/
+	///
+	/// Cursors
+	///
 	@include setHelperList($cursors, "cursor", "!important");
 
-	/*****************************************************
-	Display Properties ***********************************/
+	///
+	/// Display Properties
+	///
 	@include setHelperList($display-properties, "display", "!important");
 
-	/*****************************************************
-	Alignment ********************************************/
+	///
+	/// Alignment
+	///
 	@include setHelperList($align-items, "align-items");
 	@include setHelperList($align-self, "align-self");
 	@include setHelperList($justify-content, "justify-content");
 
-	/*****************************************************
-	Filters **********************************************/
-	@include setHelperList($display-filters, "filter");
+	///
+	/// Filters
+	///
+	@include setHelperList($display-filters);
 
-	/*****************************************************
-	Text Transform Properties ****************************/
+	///
+	/// Text Transform Properties
+	///
 	@include setHelperList($text-transforms, "text-transform");
 
-	/*****************************************************
-	Overflow Properties **********************************/
+	///
+	/// Overflow Properties
+	///
 	@include setHelperList($overflow-properties);
 
-	/*****************************************************
-	Position Properties **********************************/
+	///
+	/// Position Properties
+	///
 	@include setHelperList($position-properties, "position");
 
-	/*****************************************************
-	Stack Order ******************************************/
+	///
+	/// Stack Order 
+	///
 	@include setHelperListWithRange($z-indexes, $helper-z-indexes, null, "!important");
 
-	/*****************************************************
-	Direction of the flexible items **********************/
+	///
+	/// Direction of the flexible items
+	///
 	@include setHelperList($flex-directions, "flex-direction");
 
-	/*****************************************************
-	User Select Properties *******************************/
+	///
+	/// User Select Properties
+	///
 	@include setHelperList($user-selects, "user-select");
 
-	/*****************************************************
-	Insets *******************************/
+	///
+	/// Insets
+	///
 	@include setNestedHelperList($insets);
 
-	/*****************************************************
-	Line Height Properties *******************************/
+	///
+	/// Line Height Properties
+	///
 	@include setHelperListWithRange($line-heights, $helper-lh-ranges, null, "!important");
 
-	/*****************************************************
-	Border Radius ****************************************/
+	///
+	/// Border Radius
+	///
 	@include setHelperListWithRange($border-radius, $helper-br-ranges, "px", "!important");
 
-	/*****************************************************
-	Others ***********************************************/
+	///
+	/// Backdrop Filters (blur)
+	///
+	@include setHelperListWithRange($backdrops, $helper-backdrops, 'px');
+
+	///
+	/// Others
+	///
 	@include otherHelpers();
 }

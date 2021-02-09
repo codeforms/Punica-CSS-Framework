@@ -1,8 +1,9 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : PANEL **********************/
-//
-// if panel is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : PANEL
+/////////////////////////////////////////////////////////
+///
+/// if panel is enable
+///
 @if $components-panel {
 	.#{$panel-name} {
 		display: flex;
@@ -10,8 +11,8 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 
 		// has panel border?
 		@if $has-panel-border {
-			border: $panel-border-width $panel-border-style $panel-border-color;
-			border-radius: $panel-border-radius;
+			@include border();
+			border-radius: theme('border-radius');
 		}
 
 		// has panel shadow?
@@ -19,7 +20,7 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 			@include shadow();
 		}
 
-		background: $main-bg;
+		background-color: theme('background-color');
 		margin: $panel-margin;
 		&>.#{$panel-header},
 		&>.#{$panel-bottom} {
@@ -34,7 +35,7 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 			}
 		}
 		&>.#{$panel-header} {
-			border-bottom: $panel-title-bottom-border;
+			border-bottom: theme('border-width') theme('border-style') theme('border-color');
 			padding: $panel-title-padding;
 			&.dashed {
 				border-bottom-style: dashed;
@@ -43,17 +44,17 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 				border-bottom-style: dotted;
 			}
 			.#{$panel-title} {
-				font-size: $panel-title-font-size;
-				font-weight: $panel-title-font-weight;
+				font-size: 1.185rem;
+				font-weight: 900;
 			}
 		}
 		&>.#{$panel-content} {
 			flex: 1 1 auto;
 			padding: $panel-padding;
 			height: auto;
-			//
-			// MEDIA
-			//
+			///
+			/// MEDIA
+			///
 			@if $components-panel-media {
 				&>.#{$panel-media} {
 					min-width: 0;
@@ -68,26 +69,26 @@ PUNICA CSS > COMPONENTS : PANEL **********************/
 						display: block;
 					}
 				}
-				//
-				// MEDIA GROUP
-				//
+				///
+				/// MEDIA GROUP
+				///
 				@if $components-panel-media-group {
 					@include media-group-specs($panel-media);
 				}
 			}
 			.#{$panel-headline},
 			p.#{$panel-headline} {
-				font-size: $panel-headline-font-size;
-				line-height: $panel-headline-line-height;
-				margin-bottom: $panel-headline-margin-bottom;
-				color: $panel-headline-color;
-				letter-spacing: $panel-headline-letter-spacing;
+				font-size: 1.39em;
+				line-height: 1.5;
+				margin-bottom: 26px;
+				color: darken(theme('text-color'), 16%);
+				letter-spacing: -.0158em;
 			}
 		}
 		&>.#{$panel-bottom} {
-			min-height: $panel-bottom-min-height;
-			border-top: $panel-bottom-border;
-			padding: $panel-bottom-padding;
+			min-height: 50px;
+			border-top: theme('border-width') theme('border-style') theme('border-color');
+			padding: 6px;
 		}
 	}
 }

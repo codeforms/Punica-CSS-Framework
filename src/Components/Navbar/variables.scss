@@ -1,8 +1,8 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : MENU > VARIABLES ***********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : MENU > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
+/// CLASS NAMING ========================================
 $navbar-name			: 'navbar';
 $navbar-section			: 'section';
 $navbar-fixed			: 'fixed';
@@ -11,22 +11,16 @@ $navbar-links			: 'links';
 $navbar-burger			: 'burger';
 $navbar-spacer			: 'navbar-spacer';
 
-/*****************************************************
-STYLES ***********************************************/
-/* Default Theme */
-$navbar-bg				: $primary-color;
-$navbar-color			: $main-invert-color;
+/// STYLES ==============================================
 // you can add your own custom styles.
-// theme name, bg color, text color, input bg, input color, input border color
 $navbar-themes: (
-	("light", $main-bg, $main-font-color, $main-bg, $main-font-color),
-	("dark", darken($main-dark-color, 5%), $main-invert-color, lighten($main-dark-color, 7%), $main-invert-color, lighten($main-dark-color, 7%))
+	// theme name, bg color, text color, input bg, input color, input border color
+	("light", white, black, white, black, theme('color-dark')),
+	("dark", darken(theme('color-dark'), 5%), theme('color-negative'), lighten(theme('color-dark'), 7%), theme('color-negative'), lighten(theme('color-dark'), 17%))
 );
 
-/*****************************************************
-PREFERENCES ******************************************/
+/// PREFERENCES =========================================
 $navbar-min-height		: 80px;
 $navbar-brand-padding	: 0;
 $navbar-font-size		: 1.1em;
-$navbar-container-width : $container-width;
 $navbar-spacer-top		: $navbar-min-height + 20px;

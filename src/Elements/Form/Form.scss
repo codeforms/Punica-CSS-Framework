@@ -1,34 +1,35 @@
-/*****************************************************
-PUNICA CSS > ELEMENTS : FORM *************************/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : FORM
+/////////////////////////////////////////////////////////
 @import "mixins";
-//
-// if form is enable
-//
+///
+/// if form is enable
+///
 @if $elements-form {
 	@include form-inputs() {
 		-webkit-appearance: none;
-		background-color: $form-input-bg;
-		border: $main-border-width $main-border-style $main-border-color;
+		background-color: theme('input-bg');
+		border: theme('border-width') theme('border-style') theme('input-border-color');
 		height: $form-input-height;
 		border-radius: $form-input-radius;
-		outline: $form-outline-width solid transparent;
+		outline: theme('input-outline-width') solid transparent;
 		box-shadow: none;
 		box-sizing: inherit;
-		outline-offset: -$form-outline-width;
+		outline-offset: -#{theme('input-outline-width')};
 		padding: $form-input-padding;
 		width: 100%;
 		max-width: 100%;
 		font-family: inherit;
-		color: $form-input-color;
+		color: theme('input-color');
 		font-size: $form-input-size;
 		&:focus {
-			outline: $form-outline-width solid $form-outline-color;
-			outline-offset: -$form-outline-width;
+			outline: theme('input-outline-width') solid theme('input-outline-color');
+			outline-offset: -#{theme('input-outline-width')};
 			transition: .35s;
 		}
-		//
-		// VALIDATION STYLES
-		//
+		///
+		/// VALIDATION STYLES
+		///
 		@if $elements-form-validation-styles {
 			@each $style-name, $style-color in $form-input-styles {
 				&.#{$style-name} {
@@ -85,7 +86,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			@at-root .#{$form-name} label,
 			&>label {
 				margin: $form-label-margin;
-				color: $form-label-color;
+				color: theme('text-color');
 				font-size: $form-label-size;
 				font-weight: $form-label-weight;
 				text-transform: none;
@@ -99,9 +100,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				height: 100%;
 				cursor: default;
 			}
-			//
-			// FORM GROUPS
-			//
+			///
+			/// FORM GROUPS
+			///
 			@if $elements-form-group {
 				@at-root .#{$form-name} .#{$form-group},
 				&>.#{$form-group} {
@@ -122,9 +123,7 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 					}
 					>.#{$button-class} {
 						height: $form-input-height;
-						font-size: $button-font-size;
-						padding: $button-padding;
-						font-weight: $button-font-weight;
+						box-shadow: none;
 						&:first-child {
 							border-bottom-right-radius: 0;
 			    			border-top-right-radius: 0;
@@ -159,9 +158,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 				}
 			}
 		}
-		//
-		// INPUT SIZES
-		//
+		///
+		/// INPUT SIZES
+		///
 		@if $elements-form-input-sizes {
 			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in $form-input-sizes {
 				&.#{$size-name} {
@@ -183,9 +182,9 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			}
 		}
 	}
-	//
-	// CHECKBOX & RADIO
-	//
+	///
+	/// CHECKBOX & RADIO
+	///
 	@if $elements-form-checkbox-radio {
 		.#{$form-radio},
 		.#{$form-checkbox} {
@@ -207,11 +206,10 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 			input + label::after {
 				position: absolute;
 				transition: opacity 0.11s ease-in-out;
-				font-family: $form-icon-font-family;
+				font-family: '#{$icon-font-name}';
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none;
-				color: $form-radio-checkbox-color;
 				font-size: $form-radio-checkbox-size;
 				top: $form-radio-checkbox-top;
 				left: $form-radio-checkbox-left;
@@ -228,18 +226,22 @@ PUNICA CSS > ELEMENTS : FORM *************************/
 		}
 		.#{$form-checkbox} {
 			input + label::before {
-				content: $form-checkbox-before-content;
+				content: $icon-checkbox-before;
+				color: theme('text-color');
 			}
 			input + label::after {
-				content: $form-checkbox-after-content;
+				content: $icon-checkbox-after;
+				color: theme('primary-color');
 			}
 		}
 		.#{$form-radio} {
 			input + label::before {
-				content: $form-radio-before-content;
+				content: $icon-radio-before;
+				color: theme('text-color');
 			}
 			input + label::after {
-				content: $form-radio-after-content;
+				content:  $icon-radio-after;
+				color: theme('primary-color');
 			}
 		}
 	}

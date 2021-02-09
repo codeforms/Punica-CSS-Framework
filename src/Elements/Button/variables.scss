@@ -1,8 +1,8 @@
-/*****************************************************
-PUNICA CSS > ELEMENTS : BUTTON > VARIABLES ***********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : BUTTON > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-CLASS NAMING *****************************************/
+/// CLASS NAMING ========================================
 $button-class					: 'button';
 /* Static Button Styles */
 $button-class-link				: 'link';
@@ -24,60 +24,22 @@ $dropdown-bottom				: 'bottom';
 $dropdown-toggle				: 'toggle';
 $dropdown-click					: 'clickable';
 
-/*****************************************************
-PREFERENCES ******************************************/
-/* Text & Font Size */
-$button-font-family				: $main-font-family;
-$button-font-size				: 1em;
-/* Color & Background */
-$button-bg-color				: #fff;
-$button-text-color				: $main-font-color;
-$button-bg-hover				: $main-hovered-bg;
-$button-hover-text-color		: $button-text-color;
-$button-bg-active				: $main-secondary-bg;
-/* Shadow */
-$button-text-shadow 			: 0 1px 1px #fff;
-$button-shadow 					: none;
-/* Bg Image */
-$button-bg-image				: none;
-$button-bg-hover-image			: none;
-/* Button Icon */
-$button-icon-color				: $button-text-color;
-$button-icon-shadow				: none;
-/* Line Height & Weight */
-$button-line-height				: 1;
-$button-font-weight				: 700; // default button
-/* Border */
-$button-border-width			: 1px;
-$button-border-color			: #ccc;
-$button-border-radius			: 3px;
-$button-group-border-radius		: $button-border-radius;
-/* Padding */
-$button-padding					: .935rem 1.6rem;
-$button-padding-inactive		: .45rem !important;
-/* Secondary Button */
-$button-secondary-text-color	: $main-font-color;
-$button-secondary-hover-color	: $main-font-color;
-$button-secondary-bg-img		: linear-gradient(to bottom, #ffffff 0%,#ededed 60%,#e6e6e6 100%);
-$button-secondary-bg-img-hover	: linear-gradient(to bottom, #e1e1e1 0%,#e1e1e1 11%,#e8e8e8 22%,#eeeeee 43%,#fafafa 100%);
-
-/*****************************************************
-SIZES ************************************************/
-// size name, font-size, padding, font-weight
+// SIZES ================================================
 $button-sizes: (
-	("tiny", .809em, .415rem .5rem, $button-font-weight),
-	("mini", .909em, .445rem .9rem, $button-font-weight),
-	("small", .979em, .645rem 1.4rem, $button-font-weight),
-	("large", 1.25em, 1.15rem 2.1rem, $button-font-weight),
-	("huge", 1.45em, 1.3rem 2.4rem, $button-font-weight)
+	// size name, font-size, padding, font-weight
+	("tiny", .809em, .415rem .5rem, 700),
+	("mini", .909em, .445rem .9rem, 700),
+	("small", .979em, .645rem 1.4rem, 700),
+	("large", 1.25em, 1.15rem 2.1rem, 700),
+	("huge", 1.45em, 1.3rem 2.4rem, 700)
 );
-/*****************************************************
-STYLES ***********************************************/
-// name, color
+
+/// STYLES ==============================================
 $button-styles: (
-	('primary', $primary-color),
-	('success', $success-color),
-	('warning', $warning-color),
-	('error', $error-color),
-	('dark', $main-dark-color)
+	// name, color, border color
+	('primary', theme('primary-color'), lighten(theme('primary-color'), 7%)),
+	('success', theme('success-color'), lighten(theme('success-color'), 7%)),
+	('warning', theme('warning-color'), lighten(theme('warning-color'), 7%)),
+	('error', theme('error-color'), lighten(theme('error-color'), 7%)),
+	('dark', theme('color-dark'), lighten(theme('color-dark'), 7%))
 );

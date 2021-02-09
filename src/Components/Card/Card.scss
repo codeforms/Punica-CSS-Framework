@@ -1,34 +1,35 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : CARD ***********************/
-//
-// if card is enable
-//
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : CARD
+/////////////////////////////////////////////////////////
+///
+/// if card is enable
+///
 @if $components-card {
 	.#{$cards-name} {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	//
-	// CARD GROUPS
-	//
+	///
+	/// CARD GROUPS
+	///
 	@if $components-card-groups {
 		@each $name, $number in $grids {
 			.#{$cards-name}.#{$name} {
 				&>.#{$card-name} {
-					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{$card-margin}));
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * 10px));
 					height: auto;
-					margin: $card-margin;
+					margin: 10px;
 				}
 			}
 		}
 	}
 	.#{$card-name} {
-		background: $card-bg;
+		background-color: theme('background-color');
 
 		// has card border?
 		@if $has-card-border {
-			border: $main-border-width $main-border-style $main-border-color;
-			border-radius: $main-border-radius;
+			@include border();
+			border-radius: theme('border-radius');
 		}
 
 		// has card shadow?
@@ -38,57 +39,58 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 		
 		display: flex;
 		flex-direction: column;
-		width: $card-default-width; // for only a single card
+		width: 240px; // for only a single card
 		height: 100%;
 		overflow: hidden;
 		>.#{$card-body} .#{$card-title},
 		.#{$card-title} {
-			color: darken($main-font-color, 15%);
+			color: theme('text-color');
 			line-height: initial;
 			&>.#{$card-subtitle} {
-				color: grey;
+				color: theme('color-grey');
 				flex: 1 1 auto;
 			}
 		}
 		.#{$card-title},
 		.#{$card-description},
 		.#{$card-action} {
-			padding: $card-padding;
+			padding: 16px;
 		}
 		.#{$card-description} {
 			flex: 1 1 auto;
-			color: $main-font-color;
+			color: theme('text-color');
 		}
-		//
-		// MEDIA
-		//
+		///
+		/// MEDIA
+		///
 		@if $components-card-media {
 			&>.#{$card-media} {
-				flex-wrap: wrap;
 				display: flex;
+				flex-wrap: wrap;
 				img {
 					display: block;
+					width: 100%;
 				}
 			}
-			//
-			// MEDIA GROUP
-			//
+			///
+			/// MEDIA GROUP
+			///
 			@if $components-card-media-group {
 				@include media-group-specs($card-media, 0);
 			}
 		}
-		//
-		// HORIZONTAL CARDS
-		//
+		///
+		/// HORIZONTAL CARDS
+		///
 		@if $components-card-horizontal {
 			&.#{$card-horizontal} {
 				flex-direction: row;
 				width: 100%;
 				align-items: center;
 				margin-bottom: 15px;
-				//
-				// MEDIA
-				//
+				///
+				/// MEDIA
+				///
 				@if $components-card-media {
 					>.#{$card-media} {
 						align-self: normal;
@@ -103,7 +105,7 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 					flex: inherit;
 					.#{$card-title},
 					.#{$card-description} {
-						padding: calc(#{$card-padding} / 2) $card-padding;
+						padding: calc(16px / 2) 16px;
 					}
 					.#{$card-description} {
 						flex: 1;
@@ -119,9 +121,9 @@ PUNICA CSS > COMPONENTS : CARD ***********************/
 			width: 100%; // for only a single card
 			height: fit-content !important;
 		}
-		//
-		// HORIZONTAL CARDS
-		//
+		///
+		/// HORIZONTAL CARDS
+		///
 		@if $components-card-horizontal {
 			.#{$card-name}.#{$card-horizontal} {
 				flex-direction: column;

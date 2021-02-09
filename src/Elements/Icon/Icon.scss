@@ -1,7 +1,9 @@
-/***************************************************** 
-PUNICA CSS > ELEMENTS : ICON *************************/
-
-// if icon is enable
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : ICON
+/////////////////////////////////////////////////////////
+///
+/// if icon is enable
+///
 @if $elements-icon {
 	.#{$icon-font-class-name} {
 		font-size: $icon-font-size;

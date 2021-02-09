@@ -1,13 +1,12 @@
-/*****************************************************
-PUNICA CSS > COMPONENTS : CARD > VARIABLES ***********/
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : CARD > VARIABLES
+/////////////////////////////////////////////////////////
 
-/*****************************************************
-STYLE OPTIONS ****************************************/
+/// STYLE OPTIONS =======================================
 $has-card-shadow	: true;
 $has-card-border	: true;
 
-/*****************************************************
-CLASS NAMING *****************************************/
+/// CLASS NAMING ========================================
 $card-name			: 'card';
 $cards-name			: 'cards';
 $card-body			: 'body';
@@ -17,10 +16,3 @@ $card-description	: 'description';
 $card-media			: 'media';
 $card-horizontal	: 'horizontal';
 $card-action		: 'actions';
-
-/*****************************************************
-PREFERENCES ******************************************/
-$card-bg			: #fff;
-$card-padding		: 16px;
-$card-margin		: 10px;
-$card-default-width	: 240px; // for only a single card
