@@ -346,6 +346,9 @@
 				background: theme('color-active');
 				color: theme('text-color');
 			}
+			i, [class^="#{$icon-font-class-name}"] {
+				color: theme('text-color');
+			}
 		};
 	}
 }
