@@ -22,7 +22,7 @@
 		///
 		/// EQUAL
 		///
-		@if $equal-feature {
+		@if $layout-grid-equal {
 			&.#{$equal} > [class^="#{$column}"] {
 				height: auto;
 			}
@@ -43,7 +43,7 @@
 				///
 				/// OFFSET
 				///
-				@if $offset-feature {
+				@if $layout-grid-offset {
 					@for $offset-id from 2 through $grid {
 						.#{$column}-#{$label}-#{$id}.#{$offset}-#{$label}-#{$offset-id} {
 							grid-column: #{$offset-id} / span #{$id};
