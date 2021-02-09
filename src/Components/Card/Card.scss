@@ -65,8 +65,8 @@
 		///
 		@if $components-card-media {
 			&>.#{$card-media} {
-				flex-wrap: wrap;
 				display: flex;
+				flex-wrap: wrap;
 				img {
 					display: block;
 					width: 100%;

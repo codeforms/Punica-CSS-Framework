@@ -28,7 +28,6 @@
 		/// SIZES
 		///
 		@if ($components-badge-sizes) {
-			// badge sizes
 			@each $size-name, $font-size, $padding in $badge-sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}

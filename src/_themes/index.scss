@@ -34,9 +34,9 @@ $punica-themes: (
 		///////////////////////////////////////////////////////////
 		/// shadow
 		'shadow-horizontal'				: 0,
-		'shadow-vertical'				: 4px,
-		'shadow-blur'					: 8px,
-		'shadow-color'					: rgba(0, 0, 0, 0.2),
+		'shadow-vertical'				: 1px,
+		'shadow-blur'					: 5px,
+		'shadow-color'					: rgba(0, 0, 0, 0.15),
 		///////////////////////////////////////////////////////////
 		// inputs
 		'input-bg'						: white,
@@ -130,10 +130,6 @@ $punica-themes: (
 		'input-border-color'			: ,
 		"input-outline-color"			: ,
 		'input-outline-width'			: ,
-		///////////////////////////////////////////////////////////
-		// card, panel & billboard
-		'component-bg'					: ,
-		'component-bg-linear'			: ,
 		///////////////////////////////////////////////////////////
 		// button
 		'button-secondary-bg'			: ,

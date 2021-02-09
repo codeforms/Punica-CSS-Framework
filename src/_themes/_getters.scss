@@ -6,7 +6,7 @@
 /// Get Active Theme
 /// @param {String} $theme
 ///
-@mixin get-theme($theme: $active-theme) { 
+@mixin get-theme($theme: $active-theme) {
 	$current-theme : map-get($punica-themes, $theme);
 	$theme-map: $current-theme !global;
 	@content;
