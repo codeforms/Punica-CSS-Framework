@@ -1,4 +1,4 @@
-<p align="center"><img src="https://codeforms.github.io/Punica-CSS-Framework/images/logo.png"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/codeforms/Punica-CSS-Framework/1.x/docs/images/logo.png"></p>
 
 <h3 align="center">Punica CSS</h3>
 
