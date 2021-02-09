@@ -1,11 +1,11 @@
 <p align="center"><img src="https://codeforms.github.io/Punica-CSS-Framework/images/logo.png"></p>
 
-<h3 align="center">Punica CSS v2.0 Beta</h3>
+<h3 align="center">Punica CSS</h3>
 
 <p align="center">
     Clean, lightweight, responsive, modern and fully customizable.<br>
-    <a href="http://punica.site" target="_blank"><strong>Web Site & Documentation</strong></a> |  
-    <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelogs</a>
+    <a href="http://punica.site" target="_blank"><strong>Documentation</strong></a> |  
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelog</a>
 </p>
 
 ## Introduction
@@ -19,7 +19,11 @@ Punica CSS is a clean, lightweight, responsive, modern and fully customizable (e
 ## Install From CDN
 If you want to quickly add Punica to your project, you can use the JsDelivr CDN;
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@1.8.0/dist/punica.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.0.0/dist/punica.min.css" crossorigin="anonymous">
+```
+Dark theme;
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.0.0/dist/punica-dark.min.css" crossorigin="anonymous">
 ```
 
 ## HTML Markup
