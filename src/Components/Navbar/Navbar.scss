@@ -12,7 +12,7 @@
 		align-items: stretch;
 		justify-content: space-between;
 		min-height: $navbar-min-height;
-		background: darken(theme('primary-color'), 7%);
+		background: theme('primary-color');
 		color: theme('color-negative');
 		width: 100%;
 		// grid container
@@ -100,14 +100,20 @@
 			height: 100%;
 			min-height: 100%;
 			box-shadow: none;
-			.#{$button-class} {
+			.#{$button-class},
+			.#{$dropdown-name} .#{$button-class} {
 				background: transparent;
 				border-color: transparent;
+				border-radius: 0;
 				border: none;
 				color: theme('color-negative');
 				min-height: 100%;
 				i, span.#{$icon-font-class-name} {
 					color: theme('color-negative');
+				}
+				&:hover {
+					background: darken(theme('primary-color'), 10.15%);
+					border-radius: 0;
 				}
 			}
 		}

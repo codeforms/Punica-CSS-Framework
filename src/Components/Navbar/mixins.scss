@@ -16,7 +16,6 @@
 	$input-bg: $navbar-color,
 	$input-color: $main-font-color,
 	$input-border-color: inherit
-
 ) {
 	background: $bg-color;
 	color: $text-color;
@@ -26,6 +25,9 @@
 			min-height: 100%;
 			i, span.#{$icon-font-class-name} {
 				color: $text-color;
+			}
+			&:hover {
+				background: darken($bg-color, 10.15%);
 			}
 		}
 	}
