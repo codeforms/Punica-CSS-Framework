@@ -65,6 +65,11 @@ PUNICA CSS > ELEMENTS : BUTTON ***********************/
 				text-shadow: none;
 			}
 		}
+        &.#{$button-class-inactive} {
+			pointer-events: none;
+			cursor: default;
+			background-image: none !important;
+		}
 		&[disabled],
 		&:disabled,
 		&.#{$button-class-disabled} {

@@ -11,10 +11,10 @@ $button-secondary				: 'secondary';
 $button-class-active			: 'active';
 $button-class-disabled			: 'disabled';
 $button-class-inactive			: 'inactive';
+//
 $button-class-block				: 'block';
 $button-class-group				: 'buttons';
 $button-class-group-vertical	: 'vertical';
-$button-class-invert			: 'invert';
 /* Dropdown */
 $dropdown-name					: 'dropdown';
 $dropdown-right					: 'right';
@@ -31,7 +31,8 @@ $button-sizes: (
 	("mini", .909em, .445rem .9rem, 700),
 	("small", .979em, .645rem 1.4rem, 700),
 	("large", 1.25em, 1.15rem 2.1rem, 700),
-	("huge", 1.45em, 1.3rem 2.4rem, 700)
+	("huge", 1.45em, 1.3rem 2.4rem, 700),
+    //("name", font-size, padding, font-weight)
 );
 
 /// STYLES ==============================================
@@ -41,5 +42,6 @@ $button-styles: (
 	('success', theme('success-color'), lighten(theme('success-color'), 7%)),
 	('warning', theme('warning-color'), lighten(theme('warning-color'), 7%)),
 	('error', theme('error-color'), lighten(theme('error-color'), 7%)),
-	('dark', theme('color-dark'), lighten(theme('color-dark'), 7%))
+	('dark', theme('color-dark'), lighten(theme('color-dark'), 7%)),
+    //("name", color, border-color)
 );

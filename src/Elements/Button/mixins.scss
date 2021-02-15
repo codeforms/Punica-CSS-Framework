@@ -160,13 +160,6 @@
 				flex: 1 0 0;
 			}
 		}
-		.#{$button-class-inactive} {
-			padding-left: .45rem !important;
-			padding-right: .45rem !important;
-			pointer-events: none;
-			cursor: default;
-			background-image: none !important;
-		}
 		///
 		/// SIZES
 		/// 
