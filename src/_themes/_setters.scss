@@ -15,13 +15,9 @@
 	$v-offset: theme('shadow-vertical'),
 	$blur: theme('shadow-blur'),
 	$color: theme('shadow-color'),
-	$inset: ""
+	$inset: null
 ) {
-	@if ($inset != "") {
-		box-shadow: $inset $h-offset $v-offset $blur $color;
-	} @else {
-		box-shadow: $h-offset $v-offset $blur $color;
-	}
+	box-shadow: $inset $h-offset $v-offset $blur $color;
 	@content;
 }
 
