@@ -102,12 +102,12 @@
 			box-shadow: none;
 			.#{$button-class},
 			.#{$dropdown-name} .#{$button-class} {
-				background: transparent;
-				border-color: transparent;
-				border-radius: 0;
-				border: none;
+                background: transparent;
+                border-color: transparent;
 				color: theme('color-negative');
 				min-height: 100%;
+                border-radius: 0;
+                border: none;
 				i, span.#{$icon-font-class-name} {
 					color: theme('color-negative');
 				}
@@ -116,6 +116,11 @@
 					border-radius: 0;
 				}
 			}
+            .#{$dropdown-name}:last-child,
+			.#{$dropdown-name}:last-child > .#{$button-class}:first-child,
+			.#{$dropdown-name}:last-child > .#{$button-class}:last-child {
+                border-radius: 0;
+            }
 		}
 		.#{$button-class},
 		.#{$dropdown-name} .#{$button-class} {
