@@ -47,7 +47,6 @@
 				&:active,
 				&:focus,
 				&.#{$menu-item-active} {
-					//background: darken(theme('background-color'), 11%);
 					background: theme('color-secondary');
 					color: theme('text-color');
 					transition: background .15s, color .15s;
