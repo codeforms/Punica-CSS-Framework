@@ -13,7 +13,7 @@
 		width: 100%;
 		min-width: max-content;
 		padding: .9rem;
-		@include shadow(0, 7px, 10px, rgba(0, 0, 0, 0.15));
+		@include shadow();
 		z-index: 300;
 		// menu title
 		.#{$menu-title} {
@@ -40,14 +40,15 @@
 				font-weight: 600;
 				transition: background .15s, color .15s;
 				&:hover {
-					background: darken(theme('background-color'), 11%);
+					background: theme('color-secondary');
 					color: theme('text-color');
 					transition: background .15s, color .15s;
 				}
 				&:active,
 				&:focus,
 				&.#{$menu-item-active} {
-					background: darken(theme('background-color'), 11%);
+					//background: darken(theme('background-color'), 11%);
+					background: theme('color-secondary');
 					color: theme('text-color');
 					transition: background .15s, color .15s;
 				}
