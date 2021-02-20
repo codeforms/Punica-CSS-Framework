@@ -16,7 +16,7 @@ palenight: (
 	'color-active'					: lighten(#292d3e, 3.7%),
 	'color-negative'				: white,
 	'color-grey'					: #565e81,
-	'color-secondary'				: #32364b,
+	'color-secondary'				: lighten(#292d3e, 5%),
 	'color-dark'					: lighten(#292d3e, 4.5%),
 	///////////////////////////////////////////////////////////
 	// border

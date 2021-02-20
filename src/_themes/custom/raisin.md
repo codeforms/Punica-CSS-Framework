@@ -15,7 +15,7 @@ raisin: (
 	'color-active'					: lighten(#2D2A2E, 3.7%),
 	'color-negative'				: white,
 	'color-grey'					: lighten(#2D2A2E, 12.5%),
-	'color-secondary'				: lighten(#2D2A2E, 7%),
+	'color-secondary'				: lighten(#2D2A2E, 5%),
 	'color-dark'					: lighten(#2D2A2E, 4.5%),
 	///////////////////////////////////////////////////////////
 	// border

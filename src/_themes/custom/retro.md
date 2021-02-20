@@ -15,7 +15,7 @@ retro: (
 	'color-active'					: lighten(#493323, 3.7%),
 	'color-negative'				: white,
 	'color-grey'					: #e3d0b9,
-	'color-secondary'				: lighten(#493323, 1.95%),
+	'color-secondary'				: lighten(#493323, 5%),
 	'color-dark'					: lighten(#493323, 8.5%),
 	///////////////////////////////////////////////////////////
 	// border
