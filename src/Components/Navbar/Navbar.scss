@@ -138,6 +138,24 @@
 				}
 			}
 		}
+        ///
+        /// NAVBAR SIZES
+        ///
+        @if $components-navbar-sizes {
+            @each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
+                &.#{$size-name} {
+                    min-height: $min-height;
+                    & .#{$button-class},
+                    & .#{$dropdown-name} .#{$button-class} {
+                        font-size: $font-size;
+                        padding: $button-padding;
+                    }
+                    @at-root .#{$navbar-spacer}.#{$size-name} {
+                        margin-top: $spacer-top !important;
+                    }
+                }
+            }
+        }
 	}
 	.#{$navbar-spacer} {
 		margin-top: $navbar-spacer-top;
