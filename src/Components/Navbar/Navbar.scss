@@ -223,6 +223,24 @@
 					justify-content: center;
 				}
 			}
+            ///
+            /// NAVBAR SIZES
+            ///
+            @if $components-navbar-sizes {
+                @each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
+                    &.#{$size-name} {
+                        & .#{$navbar-burger},
+                        & .#{$navbar-burger}::before {
+                            min-height: $min-height;
+                            min-width: $min-height;
+                            font-size: 1.359em;
+                        }
+                        section.#{$navbar-links} {
+                            top: $min-height;
+                        }
+                    }
+                }
+            }
 			input[type=checkbox]##{$navbar-burger}:not(:checked) ~ section.#{$navbar-links} {
 				height: 0;
 			}
