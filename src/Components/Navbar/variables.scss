@@ -21,13 +21,13 @@ $navbar-themes: (
 
 /// SIZES ===============================================
 $navbar-sizes: (
-    // size name, min-height, button font-size, button padding, top spacer for navbar (min-height + 20px)
-    ("mini", 40px, .95em, .445rem .9rem, 60px),
-    ("small", 60px, 1em, .645rem 1.4rem, 80px)
+    // size name, min-height, button font-size, button padding, top spacer for navbar (min-height + 40px)
+    ("mini", 40px, .95em, .445rem .9rem, 80px),
+    ("small", 60px, 1em, .645rem 1.4rem, 100px)
 );
 
 /// PREFERENCES =========================================
 $navbar-min-height		: 80px;
 $navbar-brand-padding	: 0;
 $navbar-font-size		: 1.1em;
-$navbar-spacer-top		: $navbar-min-height + 20px;
+$navbar-spacer-top		: $navbar-min-height + 40px;
