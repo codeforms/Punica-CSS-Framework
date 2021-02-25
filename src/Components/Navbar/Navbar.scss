@@ -30,7 +30,7 @@
 			margin-right: 1rem;
 			img {
 				max-height: $navbar-min-height - 20px;
-				padding: ($navbar-min-height / 10);
+				padding: ($navbar-min-height / 12);
 			}
 			a,
 			a:visited {
@@ -153,6 +153,11 @@
                     @at-root .#{$navbar-spacer}.#{$size-name} {
                         margin-top: $spacer-top !important;
                     }
+                    .#{$navbar-brand} {
+						img {
+							max-height: $min-height;
+						}
+					}
                 }
             }
         }
