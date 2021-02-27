@@ -1,0 +1,22 @@
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > ELEMENTS : CAPTION > VARIABLES
+/////////////////////////////////////////////////////////
+
+/// CLASS NAMING ========================================
+$caption-name		: 'caption';
+$caption-centered	: 'centered';
+$caption-divided	: 'divided';
+
+/// SIZES =============================================== 
+$caption-sizes: (
+	// size name, margin, font-size, font-weight
+    ("small", 1em .1rem, 1.65rem, 600),
+    ("large", 1.4em .3rem, 2.35rem, 900)
+);
+
+/// PREFERENCES =========================================
+$caption-margin: 1.3em .2rem;
+$caption-font-size: 2rem;
+$caption-font-weight: 700;
+$caption-line-height: 1.4;
+$caption-media-spacer: .559em;
