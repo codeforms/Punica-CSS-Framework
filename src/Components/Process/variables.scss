@@ -12,10 +12,11 @@ $process-vertical-reversed	: 'reversed';
 
 /// STYLES ==============================================
 $process-styles	: (
+	// style name, color theme
 	"success"	: theme('success-color'),
 	"warning"	: theme('warning-color'),
 	"error"		: theme('error-color'),
-	"dark"		: theme('color-dark'),
+	"dark"		: theme('text-color'),
 );
 
 /// PREFERENCES =========================================

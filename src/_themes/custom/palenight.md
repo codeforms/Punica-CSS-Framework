@@ -27,7 +27,7 @@ palenight: (
 	///////////////////////////////////////////////////////////
 	/// shadow
 	'shadow-horizontal'				: 0,
-	'shadow-vertical'				: 3px,
+	'shadow-vertical'				: 4px,
 	'shadow-blur'					: 7px,
 	'shadow-color'					: rgba(0, 0, 0, 0.21),
 	///////////////////////////////////////////////////////////

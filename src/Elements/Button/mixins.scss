@@ -130,6 +130,7 @@
 		flex-shrink: 0;
 		border-radius: theme('border-radius');
 		@include shadow();
+		width: fit-content;
 		.#{$button-class} {
 			box-shadow: none;
 			&:first-child:not(:last-child) {
@@ -156,6 +157,7 @@
 		}
 		&.#{$button-class-block} {
 			display: flex;
+			width: auto;
 			.#{$button-class} {
 				flex: 1 0 0;
 			}

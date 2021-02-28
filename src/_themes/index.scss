@@ -34,8 +34,8 @@ $punica-themes: (
 		///////////////////////////////////////////////////////////
 		/// shadow
 		'shadow-horizontal'				: 0,
-		'shadow-vertical'				: 1px,
-		'shadow-blur'					: 5px,
+		'shadow-vertical'				: 4px,
+		'shadow-blur'					: 4px,
 		'shadow-color'					: rgba(0, 0, 0, 0.15),
 		///////////////////////////////////////////////////////////
 		// inputs
@@ -65,7 +65,7 @@ $punica-themes: (
 		'color-active'					: lighten(#26272b, 3.7%),
 		'color-negative'				: white,
 		'color-grey'					: #6c6e79,
-		'color-secondary'				: #2b2d2f,
+		'color-secondary'				: lighten(#26272b, 5%),
 		'color-dark'					: lighten(#26272b, 4.5%),
 		///////////////////////////////////////////////////////////
 		// border
@@ -77,7 +77,7 @@ $punica-themes: (
 		/// shadow
 		'shadow-horizontal'				: 0,
 		'shadow-vertical'				: 4px,
-		'shadow-blur'					: 8px,
+		'shadow-blur'					: 5px,
 		'shadow-color'					: rgba(0, 0, 0, 0.2),
 		///////////////////////////////////////////////////////////
 		// inputs

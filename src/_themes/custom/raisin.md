@@ -26,8 +26,8 @@ raisin: (
 	///////////////////////////////////////////////////////////
 	/// shadow
 	'shadow-horizontal'				: 0,
-	'shadow-vertical'				: 1px,
-	'shadow-blur'					: 4px,
+	'shadow-vertical'				: 4px,
+	'shadow-blur'					: 3px,
 	'shadow-color'					: rgba(0, 0, 0, 0.17),
 	///////////////////////////////////////////////////////////
 	// inputs

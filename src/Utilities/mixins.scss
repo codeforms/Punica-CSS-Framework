@@ -132,7 +132,11 @@
 		text-overflow: ellipsis;
 	}
 	.transparent {background: transparent !important;}
-	.pure, .pure > div {background: transparent; border: none; box-shadow: none}
+	.pure, .pure > div {
+		background: transparent !important; 
+		border: none; 
+		box-shadow: none !important
+	}
 	.bordered {@include border();}
 	.borderless {border: none !important;}
 	.rounded {border-radius: theme('border-radius');}

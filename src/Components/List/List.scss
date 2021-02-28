@@ -19,10 +19,17 @@
 		    >i {
 		    	margin-right: 1rem;
 		    }
+		    &>span,
+		    &>div {
+		    	/// ..children of a flex container are
+		    	/// forced to have a block-flavored display type.
+		    	display: contents;
+		    }
 		    >.#{$list-body} {
 		    	flex: 1;
 		    	line-height: 1.4;
 		    	text-align: left;
+		    	display: initial;
 		    	>.#{$list-title},
 		    	>.#{$list-subtitle} {
 					display: block;

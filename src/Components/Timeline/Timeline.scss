@@ -45,11 +45,11 @@
 				/// STYLES
 				///
 				@if $components-timeline-styles {
-					@each $type, $color in $timeline-styles {
+					@each $type, $bg-color, $color in $timeline-styles {
 					    &.#{$type} {
-							background-color: $color;
-							color: theme('color-negative');
-							border-color: darken($color, 5%);
+							background-color: $bg-color;
+							color: $color;
+							border-color: darken($bg-color, 5%);
 						}
 					}
 				}

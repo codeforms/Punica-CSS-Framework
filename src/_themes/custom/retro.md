@@ -14,7 +14,7 @@ retro: (
 	//
 	'color-active'					: lighten(#493323, 3.7%),
 	'color-negative'				: white,
-	'color-grey'					: #e3d0b9,
+	'color-grey'					: lighten(#493323, 17.5%),
 	'color-secondary'				: lighten(#493323, 5%),
 	'color-dark'					: lighten(#493323, 8.5%),
 	///////////////////////////////////////////////////////////
@@ -26,7 +26,7 @@ retro: (
 	///////////////////////////////////////////////////////////
 	/// shadow
 	'shadow-horizontal'				: 0,
-	'shadow-vertical'				: 1px,
+	'shadow-vertical'				: 4px,
 	'shadow-blur'					: 4px,
 	'shadow-color'					: rgba(0, 0, 0, 0.24),
 	///////////////////////////////////////////////////////////

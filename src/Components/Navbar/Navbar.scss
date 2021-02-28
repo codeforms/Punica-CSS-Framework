@@ -6,6 +6,9 @@
 /// if navbar is enable
 ///
 @if $components-navbar {
+	.#{$navbar-spacer} {
+		margin-top: $navbar-spacer-top;
+	}
 	.#{$navbar-name} {
 		display: flex;
 		flex-wrap: wrap;
@@ -28,9 +31,9 @@
 			min-height: 100%;
 			align-items: center;
 			margin-right: 1rem;
+			white-space: nowrap;
 			img {
-				max-height: $navbar-min-height - 20px;
-				padding: ($navbar-min-height / 12);
+				width: 7rem;
 			}
 			a,
 			a:visited {
@@ -150,22 +153,19 @@
                         font-size: $font-size;
                         padding: $button-padding;
                     }
-                    @at-root .#{$navbar-spacer}.#{$size-name} {
+                    @at-root .#{$navbar-spacer}-#{$size-name} {
                         margin-top: $spacer-top !important;
                     }
-                    .#{$navbar-brand} {
-						img {
-							max-height: $min-height;
-						}
-					}
+                    @include breakpoints($breakpoints-medium, 'max-width') {
+                    	@at-root .#{$navbar-spacer}-#{$size-name} {
+	                        margin-top: $spacer-top / 2 !important;
+	                    }
+                    }
                 }
             }
         }
 	}
-	.#{$navbar-spacer} {
-		margin-top: $navbar-spacer-top;
-	}
-
+	//
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		.#{$navbar-spacer} {
 			margin-top: 0;
@@ -206,6 +206,7 @@
 				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$button-class},
 				.#{$navbar-section} .#{$button-class-group} .#{$button-class} {
 					color: theme('text-color');
+					background: theme('color-secondary');
 					i, span.#{$icon-font-class-name} {
 						display: none;
 					}
@@ -226,6 +227,7 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					top: auto;
 				}
 			}
             ///

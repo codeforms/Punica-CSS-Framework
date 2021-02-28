@@ -10,6 +10,11 @@
 		margin: 0 auto;
 		padding: 0 $container-padding;
 	}
+	@include breakpoints($breakpoints-medium, 'max-width') {
+		.#{$container} {
+			padding: 0 ($container-padding / 3);
+		}
+	}
 	.#{$row} {
 		display: grid;
 		grid-gap: $gutter;
@@ -26,11 +31,6 @@
 			&.#{$equal} > [class^="#{$column}"] {
 				height: auto;
 			}
-		}
-	}
-	@include breakpoints($breakpoints-medium, 'max-width') {
-		.#{$container} {
-			padding: 0 ($container-padding / 3);
 		}
 	}
 	@each $label, $breakpoint in $viewports {

@@ -8,7 +8,7 @@
 /// @param {Size} $v-offset - Vertical offset
 /// @param {Size} $blur - Blur
 /// @param {Color} $color - Color
-/// @param {Boolean|String} $inset - Inset
+/// @param {String|Null} $inset - Inset
 ///
 @mixin shadow(
 	$h-offset: theme('shadow-horizontal'),

@@ -24,7 +24,7 @@
 	    }
 	    &.#{$caption-divided} {
 	    	border-bottom: theme('border-width') theme('border-style') theme('border-color');
-	    	padding-bottom: .579em;
+	    	padding-bottom: $caption-media-spacer;
 	    }
 	    &>span,
 	    &>div {
@@ -35,11 +35,12 @@
 	    &.#{$caption-centered} {
 	    	flex-direction: column;
 	    	text-align: center;
+	    	margin: inherit;
 	    	>img,
 		    >.#{$icon-font-class-name},
 		    >i {
 		    	margin-right: unset;
-		    	margin-bottom: $caption-media-spacer;
+		    	margin-bottom: 2rem;
 		    }
 	    }
 	    ///
@@ -56,6 +57,18 @@
 				    }
 				};
 			}
+		}
+		//
+		@include breakpoints($breakpoints-medium, 'max-width') {
+			flex-direction: column;
+	    	text-align: center;
+	    	margin: inherit;
+	    	>img,
+		    >.#{$icon-font-class-name},
+		    >i {
+		    	margin-right: unset;
+		    	margin-bottom: 2rem;
+		    }
 		}
 	}
 }

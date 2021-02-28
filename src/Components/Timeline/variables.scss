@@ -14,11 +14,11 @@ $timeline-actions	: 'actions';
 
 /// STYLES ==============================================
 $timeline-styles: (
-	"primary"	: theme('primary-color'),
-	"success"	: theme('success-color'),
-	"warning"	: theme('warning-color'),
-	"error"		: theme('error-color'),
-	"dark"		: theme('color-dark'),
+	("primary", theme('primary-color'), theme('color-negative')),
+	("success", theme('success-color'), theme('color-negative')),
+	("warning", theme('warning-color'), theme('color-negative')),
+	("error", theme('error-color'), theme('color-negative')),
+	("dark", theme('text-color'), theme('color-grey')),
 );
 
 /// PREFERENCES =========================================
