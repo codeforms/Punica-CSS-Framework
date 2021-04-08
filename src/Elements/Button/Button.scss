@@ -59,7 +59,7 @@
 			&:focus,
 			&:hover {
 				color: theme('text-color');
-				background: theme('color-secondary');
+				background: lighten( theme('color-active'), 4%);
 			}
 			i, [class^="#{$icon-font-class-name}"] {
 				color: theme('text-color');

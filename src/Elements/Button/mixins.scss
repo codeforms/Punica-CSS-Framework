@@ -312,13 +312,13 @@
 ///
 @mixin secondary-button() {
 	color: theme('text-color');
-	background-image: theme('button-secondary-bg');
+	background: theme('button-secondary-bg');
 	&:focus,
 	&:hover,
 	&:active,
 	&.#{$button-class-active} {
 		color: theme('text-color');
-		background-image: theme('button-secondary-bg-hover');
+		background: theme('button-secondary-bg-hover');
 		z-index: 1;
 		border-color: theme('border-color');
 		i, [class^="#{$icon-font-class-name}"] {
