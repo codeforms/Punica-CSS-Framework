@@ -17,9 +17,24 @@ If you want to quickly add Punica to your project, you can use the JsDelivr CDN;
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/punica.min.css" crossorigin="anonymous">
 ```
-Dark theme;
+##### Dark theme;
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/punica-dark.min.css" crossorigin="anonymous">
+```
+
+##### Other custom themes;
+```html
+<!--Palenight (dark)-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/custom/punica-palenight.min.css" crossorigin="anonymous">
+
+<!--Retro (dark)-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/custom/punica-retro.min.css" crossorigin="anonymous">
+
+<!--Raisin (dark)-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/custom/punica-raisin.min.css" crossorigin="anonymous">
+
+<!--Dusty (light)-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/custom/punica-dusty.min.css" crossorigin="anonymous">
 ```
 
 ### HTML Markup
