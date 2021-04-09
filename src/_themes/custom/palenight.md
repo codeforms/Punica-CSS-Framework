@@ -25,7 +25,7 @@ palenight: (
 	'border-style'					: solid,
 	'border-radius'					: 4px,
 	///////////////////////////////////////////////////////////
-	/// shadow
+	// shadow
 	'shadow-horizontal'				: 0,
 	'shadow-vertical'				: 4px,
 	'shadow-blur'					: 7px,

@@ -100,7 +100,7 @@
 			}
 		}
 
-		// vertical style is setted "true" for mobile devices
+		// vertical style is setted as "true" for mobile devices
 		@include breakpoints($breakpoints-medium, 'max-width') {
 			@include process-vertical();
 		}

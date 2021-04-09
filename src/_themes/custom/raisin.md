@@ -24,7 +24,7 @@ raisin: (
 	'border-style'					: solid,
 	'border-radius'					: 0,
 	///////////////////////////////////////////////////////////
-	/// shadow
+	// shadow
 	'shadow-horizontal'				: 0,
 	'shadow-vertical'				: 4px,
 	'shadow-blur'					: 3px,

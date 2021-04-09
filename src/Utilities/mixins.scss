@@ -103,7 +103,7 @@
 		max-height: 100%;
 	}
 	.fade {opacity: 0;}
-	.hide {display: none;}
+	.hide {display: none !important;}
 	/* seperator for flex */
 	.spacer {
 		flex-grow: 1!important;

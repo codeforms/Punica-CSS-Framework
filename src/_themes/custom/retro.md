@@ -24,7 +24,7 @@ retro: (
 	'border-style'					: solid,
 	'border-radius'					: 2px,
 	///////////////////////////////////////////////////////////
-	/// shadow
+	// shadow
 	'shadow-horizontal'				: 0,
 	'shadow-vertical'				: 4px,
 	'shadow-blur'					: 4px,
