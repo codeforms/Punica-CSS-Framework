@@ -70,5 +70,8 @@
 				}
 			}
 		}
+        &.#{$tabnav-centered} {
+            justify-content: center;
+        }
 	}
 }
