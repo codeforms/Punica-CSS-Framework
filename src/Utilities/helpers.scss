@@ -100,7 +100,7 @@
 	///
 	/// Borders
 	///
-	@include setHelperListWithRange($borders, $helper-br-ranges, "px", "!important");
+	@include setHelperListWithRange($borders, $helper-borders, "px", "!important");
 
 	///
 	/// Border Styles
