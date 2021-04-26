@@ -97,12 +97,12 @@
 	///
 	@include setHelperListWithRange($line-heights, $helper-lh-ranges, null, "!important");
 
-    ///
+	///
 	/// Borders
 	///
-	@include setHelperListWithRange($borders, $helper-borders, "px", "!important");
+	@include setHelperListWithRange($borders, $helper-br-ranges, "px", "!important");
 
-    ///
+	///
 	/// Border Styles
 	///
 	@include setHelperList($border-styles, "border-style", "!important");
@@ -112,17 +112,17 @@
 	///
 	@include setHelperListWithRange($border-radius, $helper-br-ranges, "px", "!important");
 
-    ///
+	///
 	/// Order
 	///
 	@include setHelperListWithRange($orders, $helper-orders, null, "!important");
 
-    ///
+	///
 	/// Object-Fit
 	///
 	@include setHelperList($object-fit, "object-fit", "!important");
 
-    ///
+	///
 	/// Resize
 	///
 	@include setHelperList($resizes, "resize", "!important");
