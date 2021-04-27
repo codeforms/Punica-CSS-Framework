@@ -7,8 +7,9 @@
 /// @param {String} $theme
 ///
 @mixin get-theme($theme: $active-theme) {
-	$current-theme : map-get($punica-themes, $theme);
-	$theme-map: $current-theme !global;
+    $set-theme: if(map-has-key($punica-themes, $theme), $theme, theme-not-found($theme));
+	$current-theme : map-get($punica-themes, $set-theme);
+	$theme-map: map-get($punica-themes, $set-theme) !global;
 	@content;
 	$theme-map: null !global;
 }
@@ -19,4 +20,12 @@
 ///
 @function theme($key) {
 	@return map-get($theme-map, $key);
+}
+
+/// 
+/// @param {String} $theme
+///
+@function theme-not-found($theme) {
+    $error: "Invalid theme name: #{$theme}. Punica's theme map does not contains a value associated with #{$theme}. Please check the '_themes/index.scss' file.";
+    @error $error;
 }
