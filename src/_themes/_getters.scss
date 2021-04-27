@@ -8,7 +8,6 @@
 ///
 @mixin get-theme($theme: $active-theme) {
     $set-theme: if(map-has-key($punica-themes, $theme), $theme, theme-not-found($theme));
-	$current-theme : map-get($punica-themes, $set-theme);
 	$theme-map: map-get($punica-themes, $set-theme) !global;
 	@content;
 	$theme-map: null !global;
