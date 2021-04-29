@@ -42,7 +42,8 @@
 			}
 		}
         &.#{$tooltip-left},
-        &.#{$tooltip-right} {
+        &.#{$tooltip-right},
+        &.#{$tooltip-top} {
             &>.#{$tooltip-text} {
                 top: auto;
                  &::after {
@@ -73,10 +74,8 @@
         }
         &.#{$tooltip-top} {
             &>.#{$tooltip-text} {
-                top: auto;
                 bottom: 120%;
                 &::after {
-                    bottom: auto;
                     top: 100%;
                     border-color: theme('color-dark') transparent transparent transparent;
                 }
