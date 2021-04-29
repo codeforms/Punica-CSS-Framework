@@ -8,14 +8,17 @@
 	.#{$tooltip-name} {
 		display: inline-flex;
 		justify-content: center;
+        align-items: center;
 		position: relative;
 		cursor: default;
 		.#{$tooltip-text} {
 			position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 			color: theme('color-negative');
 			font-size: .9em;
 			font-weight: 600;
-			text-align: center;
 			visibility: hidden;
 			background-color: theme('color-dark');
 			border-radius: theme('border-radius');
@@ -38,6 +41,47 @@
 				border-color: transparent transparent theme('color-dark') transparent;
 			}
 		}
+        &.#{$tooltip-left},
+        &.#{$tooltip-right} {
+            &>.#{$tooltip-text} {
+                top: auto;
+                 &::after {
+                    bottom: auto;
+                 }
+            }
+        }
+        &.#{$tooltip-right} {
+            &>.#{$tooltip-text} {
+                left: 110%;
+                &::after {
+                    right: 100%;
+                    left: auto;
+                    border-color: transparent theme('color-dark') transparent transparent;
+                }
+            }
+        }
+        &.#{$tooltip-left} {
+            &>.#{$tooltip-text} {
+                right: 110%;
+                &::after {
+                    left: 100%;
+                    right: auto;
+                    margin: auto -5px auto auto ;
+                    border-color: transparent transparent transparent theme('color-dark');
+                }
+            }
+        }
+        &.#{$tooltip-top} {
+            &>.#{$tooltip-text} {
+                top: auto;
+                bottom: 120%;
+                &::after {
+                    bottom: auto;
+                    top: 100%;
+                    border-color: theme('color-dark') transparent transparent transparent;
+                }
+            }
+        }
 		&:hover .#{$tooltip-text} {
 			visibility: visible;
 			opacity: 1;
