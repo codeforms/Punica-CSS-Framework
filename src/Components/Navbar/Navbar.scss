@@ -105,12 +105,12 @@
 			box-shadow: none;
 			.#{$button-class},
 			.#{$dropdown-name} .#{$button-class} {
-                background: transparent;
-                border-color: transparent;
+				background: transparent;
+				border-color: transparent;
 				color: theme('color-negative');
 				min-height: 100%;
-                border-radius: 0;
-                border: none;
+				border-radius: 0;
+				border: 0;
 				i, span.#{$icon-font-class-name} {
 					color: theme('color-negative');
 				}
@@ -119,11 +119,25 @@
 					border-radius: 0;
 				}
 			}
-            .#{$dropdown-name}:last-child,
+			.#{$dropdown-name}:last-child,
 			.#{$dropdown-name}:last-child > .#{$button-class}:first-child,
 			.#{$dropdown-name}:last-child > .#{$button-class}:last-child {
-                border-radius: 0;
-            }
+				border-radius: 0;
+			}
+		}
+		///
+		/// DIVIDED NAVBAR
+		///
+		@if $components-navbar-divided {
+			&.#{$navbar-divided} {
+				@include navbar-divided();
+				.#{$button-class-group} {
+					.#{$button-class},
+					.#{$dropdown-name} .#{$button-class} {
+						border: solid darken(theme('primary-color'), 10.15%);
+					}
+				}
+			}
 		}
 		.#{$button-class},
 		.#{$dropdown-name} .#{$button-class} {
@@ -141,29 +155,29 @@
 				}
 			}
 		}
-        ///
-        /// NAVBAR SIZES
-        ///
-        @if $components-navbar-sizes {
-            @each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
-                &.#{$size-name} {
-                    min-height: $min-height;
-                    & .#{$button-class},
-                    & .#{$dropdown-name} .#{$button-class} {
-                        font-size: $font-size;
-                        padding: $button-padding;
-                    }
-                    @at-root .#{$navbar-spacer}-#{$size-name} {
-                        margin-top: $spacer-top !important;
-                    }
-                    @include breakpoints($breakpoints-medium, 'max-width') {
-                    	@at-root .#{$navbar-spacer}-#{$size-name} {
-	                        margin-top: $spacer-top / 2 !important;
-	                    }
-                    }
-                }
-            }
-        }
+		///
+		/// NAVBAR SIZES
+		///
+		@if $components-navbar-sizes {
+			@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
+				&.#{$size-name} {
+					min-height: $min-height;
+					& .#{$button-class},
+					& .#{$dropdown-name} .#{$button-class} {
+						font-size: $font-size;
+						padding: $button-padding;
+					}
+					@at-root .#{$navbar-spacer}-#{$size-name} {
+						margin-top: $spacer-top !important;
+					}
+					@include breakpoints($breakpoints-medium, 'max-width') {
+						@at-root .#{$navbar-spacer}-#{$size-name} {
+							margin-top: $spacer-top / 2 !important;
+						}
+					}
+				}
+			}
+		}
 	}
 	//
 	@include breakpoints($breakpoints-medium, 'max-width') {
@@ -230,24 +244,24 @@
 					top: auto;
 				}
 			}
-            ///
-            /// NAVBAR SIZES
-            ///
-            @if $components-navbar-sizes {
-                @each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
-                    &.#{$size-name} {
-                        & .#{$navbar-burger},
-                        & .#{$navbar-burger}::before {
-                            min-height: $min-height;
-                            min-width: $min-height;
-                            font-size: 1.359em;
-                        }
-                        section.#{$navbar-links} {
-                            top: $min-height;
-                        }
-                    }
-                }
-            }
+			///
+			/// NAVBAR SIZES
+			///
+			@if $components-navbar-sizes {
+				@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
+					&.#{$size-name} {
+						& .#{$navbar-burger},
+						& .#{$navbar-burger}::before {
+							min-height: $min-height;
+							min-width: $min-height;
+							font-size: 1.359em;
+						}
+						section.#{$navbar-links} {
+							top: $min-height;
+						}
+					}
+				}
+			}
 			input[type=checkbox]##{$navbar-burger}:not(:checked) ~ section.#{$navbar-links} {
 				height: 0;
 			}
