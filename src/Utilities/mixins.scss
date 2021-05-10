@@ -39,6 +39,20 @@
 	}
 }
 
+@mixin setFilters(
+	$values, 
+	$filters,
+	$property-name: null
+) {
+	@each $class-name, $function in $filters {
+		@each $value, $suffix in $values {
+			.#{$class-name}#{$suffix} {
+				#{$property-name}: call(get-function($function, true), $value);
+			}
+		}
+	}
+}
+
 ///
 /// Set Nested List
 /// @param {List} $helpers

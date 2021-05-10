@@ -128,9 +128,14 @@
 	@include setHelperList($resizes, "resize", "!important");
 
 	///
-	/// Backdrop Filters (blur)
+	/// Backdrop Filters (only blur)
 	///
-	@include setHelperListWithRange($backdrops, $helper-backdrops, 'px');
+	@include setFilters($backdrop-blur-ranges, $backdrop-blur, "backdrop-filter"); 
+
+	///
+	/// All Backdrop Filters
+	///
+	@include setFilters($backdrop-filter-ranges, $backdrop-filters, "backdrop-filter"); 
 
 	///
 	/// Others

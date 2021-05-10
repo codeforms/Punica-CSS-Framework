@@ -8,7 +8,6 @@ $helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font-weight
 $helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999;
 $helper-lh-ranges	: 0,1,2,3,4,5; // lh: line-height
 $helper-br-ranges	: 4,8,10,12,14,16,500; // br: border-radius
-$helper-backdrops	: 4,7,10,12,16,20; // backdrop-filter (blur)
 $helper-orders		: 1,2,3,4,5;
 $helper-borders		: 0,1,2;
 
@@ -282,7 +281,28 @@ $resizes: (
 );
 
 /// Backdrop Filters =================================
-$backdrops: (
-	// class name (prefix), property
-	"backdrop-": "backdrop-filter"
+$backdrop-blur-ranges: (
+	// (values, suffixes)
+	(4px,4)(7px,7)(10px,10)(12px,12)(16px,16)(20px,20)
+);
+$backdrop-blur: (
+	// class name (prefix), filter function
+	("backdrop-blur-", "blur"),
+);
+
+$backdrop-filter-ranges: (
+	// (values, suffixes)
+	(0,0)(.25,25)(.5,50)(.75,75)(1,100)(1.25,125)(1.5,150)(1.75,175)(2,200)
+);
+$backdrop-filters: (
+	// class name (prefix), filter function
+	("backdrop-brightness-", "brightness"),
+	("backdrop-contrast-", "contrast"),
+	("backdrop-shadow-", "drop-shadow"),
+	("backdrop-grayscale-", "grayscale"),
+	("backdrop-hue-", "hue-rotate"),
+	("backdrop-invert-", "invert"),
+	("backdrop-opacity-", "opacity"),
+	("backdrop-saturate-", "saturate"),
+	("backdrop-sepia-", "sepia"),
 );
