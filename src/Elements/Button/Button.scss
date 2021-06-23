@@ -78,10 +78,11 @@
 			opacity: .59;
 			pointer-events: none;
 		}
-		// Button Block
+		// Block Button
 		&.#{$button-class-block} {
-			display: block;
-			width: 100%;
+    		display: flex;
+		    flex: 1;
+		    width: auto;
 		}
 		i, [class^="#{$icon-font-class-name}"] {
 			font-size: 1.35em; 
