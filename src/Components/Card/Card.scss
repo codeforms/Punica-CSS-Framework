@@ -43,7 +43,7 @@
 		height: 100%;
 		overflow: hidden;
 		>.#{$card-body} .#{$card-title},
-		.#{$card-title} {
+		>.#{$card-title} {
 			color: theme('text-color');
 			line-height: initial;
 			&>.#{$card-subtitle} {
@@ -51,12 +51,12 @@
 				flex: 1 1 auto;
 			}
 		}
-		.#{$card-title},
-		.#{$card-description},
-		.#{$card-action} {
+		>.#{$card-title}, 
+		>.#{$card-description},
+		>.#{$card-action} {
 			padding: 16px;
 		}
-		.#{$card-description} {
+		>.#{$card-description} {
 			flex: 1 1 auto;
 			color: theme('text-color');
 		}
