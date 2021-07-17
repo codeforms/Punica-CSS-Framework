@@ -13,6 +13,14 @@
 		max-width: 100%;
 		text-align: left;
 		margin-bottom: 1.5rem;
+		caption {
+			text-align: inherit;
+			color: theme('text-color');
+			font-size: 1rem;
+			font-weight: bold;
+			padding: $table-heading-padding;
+			border-bottom: theme('border-width') theme('border-style') theme('text-color');
+		}
 		///
 		/// STRIPED
 		///
@@ -26,9 +34,6 @@
 					&:nth-of-type(odd) {
 						background: theme('color-secondary');
 					}
-				}
-				thead tr {
-					background: transparent !important;
 				}
 			}
 		}
@@ -44,9 +49,6 @@
 						color: theme('text-color');
 					}
 				}
-				thead tr {
-					background: transparent !important;
-				}
 			}
 		}
 		tr,
@@ -60,16 +62,16 @@
 		td,
 		th {
 			border-bottom: theme('border-width') theme('border-style') theme('color-secondary');
-			padding: 5px 7px;
+			padding: $table-inline-padding;
 			text-align: inherit;
 		}
 		thead tr {
-			background: transparent;
+			background: transparent !important;
 			th {
-				border-bottom-width: theme('border-width');
 				border-bottom-color: theme('border-color');
 				font-weight: 400;
 				color: theme('color-grey');
+				padding: $table-heading-padding;
 			}
 		}
 	}
