@@ -91,45 +91,6 @@ $punica-themes: (
 		'button-secondary-bg'			: linear-gradient(to top, #202125 0%,#26272b 100%),
 		'button-secondary-bg-hover'		: linear-gradient(to top, #26272b 0%,#202125 100%)
 	),
-    digital: (
-		///////////////////////////////////////////////////////////
-		'primary-color'					: #4582ec,
-		'success-color'					: #02b875,
-		'warning-color'					: #c08a3e,
-		'error-color'					: #ae423f,
-		///////////////////////////////////////////////////////////
-		'background-color'				: #fff,
-		'text-color'					: #161c2d,
-		//
-		'color-active'					: #dcdcdc,
-		'color-negative'				: white,
-		'color-grey'					: #a8a8a8,
-		'color-secondary'				: #e6e6e6,
-		'color-dark'					: #343a40,
-		///////////////////////////////////////////////////////////
-		// border
-		'border-color' 					: #a9a9a9,
-		'border-width'					: 1px,
-		'border-style'					: solid,
-		'border-radius'					: .375rem,
-		///////////////////////////////////////////////////////////
-		// shadow
-		'shadow-horizontal'				: 0,
-		'shadow-vertical'				: 4px,
-		'shadow-blur'					: 5px,
-		'shadow-color'					: rgba(0, 0, 0, 0.2),
-		///////////////////////////////////////////////////////////
-		// inputs
-		'input-bg'						: white,
-		'input-color'					: #161c2d,
-		'input-border-color'			: #c6c6c6,
-		'input-outline-color'			: #000,
-		'input-outline-width'			: 1px,
-		///////////////////////////////////////////////////////////
-		// secondary button
-		'button-secondary-bg'			: #dce3ea,
-		'button-secondary-bg-hover'		: lighten(#dce3ea, 4%)
-	),
 	///
 	/// Custom Theme
 	/// Apply your own color scheme 
