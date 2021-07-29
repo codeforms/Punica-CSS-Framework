@@ -43,6 +43,13 @@
 }
 
 ///
+/// Set default border
+///
+@function set-border() {
+	@return theme('border-width') theme('border-style') theme('border-color');
+};
+
+///
 /// @param {Size} $font-size
 /// @param {Integer} $padding
 /// @param {String|Boolean} $size-name

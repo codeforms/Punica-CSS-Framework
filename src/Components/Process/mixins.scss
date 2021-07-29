@@ -47,11 +47,11 @@
 		align-items: center;
 		max-width: 100%;
 		min-width: 100%;
-		border-bottom: theme('border-width') theme('border-style') theme('border-color');
-		border-right: theme('border-width') theme('border-style') theme('border-color');
+		border-bottom: set-border();
+		border-right: set-border();
 		padding-left: 20px;
 		&:first-child {
-			border-top: theme('border-width') theme('border-style') theme('border-color');
+			border-top: set-border();
 		}
 		&:not(:first-child)::before {
 			width: $process-stage-stick-width;
@@ -81,7 +81,7 @@
 		flex-direction: column-reverse;
 		.#{$process-item} {
 			&:last-child {
-				border-top: theme('border-width') theme('border-style') theme('border-color');
+				border-top: set-border();
 			}
 			&:first-child {
 				border-top: none;

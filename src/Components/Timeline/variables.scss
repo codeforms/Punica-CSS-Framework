@@ -2,16 +2,6 @@
 /// PUNICA CSS > COMPONENTS : TIMELINE > VARIABLES
 /////////////////////////////////////////////////////////
 
-/// CLASS NAMING ========================================
-$timeline-container	: 'timeline';
-$timeline-item		: 'activity';
-$timeline-author	: 'author';
-$timeline-body		: 'body';
-$timeline-type		: 'type';
-$timeline-date		: 'date';
-$timeline-media		: 'media';
-$timeline-actions	: 'actions';
-
 /// STYLES ==============================================
 $timeline-styles: (
 	("primary", theme('primary-color'), theme('color-negative')),

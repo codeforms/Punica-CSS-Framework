@@ -61,7 +61,7 @@
 		@if $components-list-divided {
 			&.#{$list-bordered} {
 				>.#{$list-item} {
-					border-bottom: theme('border-width') theme('border-style') theme('border-color');
+					border-bottom: set-border();
 					&:last-child {
 						border-bottom: none;
 					}

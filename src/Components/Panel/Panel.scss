@@ -35,7 +35,7 @@
 			}
 		}
 		&>.#{$panel-header} {
-			border-bottom: theme('border-width') theme('border-style') theme('border-color');
+			border-bottom: set-border();
 			padding: $panel-title-padding;
 			&.dashed {
 				border-bottom-style: dashed;
@@ -87,7 +87,7 @@
 		}
 		&>.#{$panel-bottom} {
 			min-height: 50px;
-			border-top: theme('border-width') theme('border-style') theme('border-color');
+			border-top: set-border();
 			padding: 6px;
 		}
 	}

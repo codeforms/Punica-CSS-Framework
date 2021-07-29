@@ -39,10 +39,14 @@
 	}
 }
 
+///
+/// Set Filters
+/// @param {List} $values
+/// @param {List} $filters
+/// @param {String} $property-name
+/// 
 @mixin setFilters(
-	$values, 
-	$filters,
-	$property-name: null
+	$values, $filters, $property-name: null
 ) {
 	@each $class-name, $function in $filters {
 		@each $value, $suffix in $values {

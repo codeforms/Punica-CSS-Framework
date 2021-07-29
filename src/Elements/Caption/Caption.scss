@@ -23,7 +23,7 @@
 	    	font-size: $caption-font-size * 1.4;
 	    }
 	    &.#{$caption-divided} {
-	    	border-bottom: theme('border-width') theme('border-style') theme('border-color');
+	    	border-bottom: set-border();
 	    	padding-bottom: $caption-media-spacer;
 	    }
 	    &>span,

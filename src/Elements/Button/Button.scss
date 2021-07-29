@@ -18,7 +18,7 @@
 		width: min-content;
 		background: theme('background-color');
 		background-image: none;
-		border: theme('border-width') theme('border-style') theme('border-color');
+		@include border();
 		appearance: none;
 		color: theme('text-color');
 		border-radius: theme('border-radius');
