@@ -4,7 +4,7 @@
 ///
 /// Headers
 ///
-@each $header, $font-size, $responsive-size in $typography-headers {
+@each $header, $font-size, $responsive-size, $font-weight in $typography-headers {
 	#{$header} {
 		margin-top: 0;
 		color: inherit;
@@ -14,7 +14,7 @@
 	#{$header},
 	.#{$header} {
 		font-size: $font-size;
-		font-weight: $main-title-weight;
+		font-weight: theme('header-weight');
 	}
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		#{$header},

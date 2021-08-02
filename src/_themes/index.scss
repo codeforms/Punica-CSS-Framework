@@ -12,33 +12,48 @@ $punica-themes: (
 	///
 	light: (
 		///////////////////////////////////////////////////////////
+		// GLOBAL
+		///////////////////////////////////////////////////////////
+		// imported google font and weights
+		'font-family'					: 'Nunito', // main font family
+		'font-weights'					: '300;400;600;700;900',
+		// main typography settings
+		'font-size'						: 13px,
+		'font-weight'					: 400,
+		'line-height'					: 1.7,
+		'header-weight'					: 900, // for h1, h2, h3...
+		'background-color'				: white,
+		'text-color'					: #3f4143,
+		///////////////////////////////////////////////////////////
+		// COLOR
+		///////////////////////////////////////////////////////////
 		'primary-color'					: #0a8fff,
 		'success-color'					: #2ec4b6,
 		'warning-color'					: #de9e36,
 		'error-color'					: #d62828,
-		///////////////////////////////////////////////////////////
-		'background-color'				: white,
-		'text-color'					: #3f4143,
 		//
 		'color-active'					: #dcdcdc,
-		'color-negative'				: white,
+		'color-negative'				: white, // for dark backgrounds
 		'color-grey'					: #a8a8a8,
 		'color-secondary'				: #e6e6e6,
 		'color-dark'					: #26272b,
 		///////////////////////////////////////////////////////////
-		// border
+		// BORDER
+		///////////////////////////////////////////////////////////
 		'border-color' 					: #c6c6c6,
 		'border-width'					: 1px,
 		'border-style'					: solid,
 		'border-radius'					: 4px,
 		///////////////////////////////////////////////////////////
-		// shadow
+		// SHADOW
+		///////////////////////////////////////////////////////////
 		'shadow-horizontal'				: 0,
 		'shadow-vertical'				: 1px,
 		'shadow-blur'					: 4px,
 		'shadow-color'					: rgba(0, 0, 0, 0.15),
 		///////////////////////////////////////////////////////////
-		// inputs
+		// INPUT
+		///////////////////////////////////////////////////////////
 		'input-bg'						: white,
 		'input-color'					: #3f4143,
 		'input-border-color'			: #c6c6c6,
@@ -54,33 +69,48 @@ $punica-themes: (
 	///
 	dark: (
 		///////////////////////////////////////////////////////////
+		// GLOBAL
+		///////////////////////////////////////////////////////////
+		// imported google font and weights
+		'font-family'					: 'Nunito', // main font family
+		'font-weights'					: '300;400;600;700;900',
+		// main typography settings
+		'font-size'						: 13px,
+		'font-weight'					: 400,
+		'line-height'					: 1.7,
+		'header-weight'					: 900, // for h1, h2, h3...
+		'background-color'				: #26272b,
+		'text-color'					: white,
+		///////////////////////////////////////////////////////////
+		// COLOR
+		///////////////////////////////////////////////////////////
 		'primary-color'					: #10a6fa,
 		'success-color'					: #2abc90,
 		'warning-color'					: #b78343,
 		'error-color'					: #d84955,
-		///////////////////////////////////////////////////////////
-		'background-color'				: #26272b,
-		'text-color'					: white,
 		//
 		'color-active'					: lighten(#26272b, 3.7%),
-		'color-negative'				: white,
+		'color-negative'				: white, // for dark backgrounds
 		'color-grey'					: #6c6e79,
 		'color-secondary'				: lighten(#26272b, 5%),
 		'color-dark'					: lighten(#26272b, 4.5%),
 		///////////////////////////////////////////////////////////
-		// border
+		// BORDER
+		///////////////////////////////////////////////////////////
 		'border-color' 					: lighten(#26272b, 23%),
 		'border-width'					: 1px,
 		'border-style'					: solid,
 		'border-radius'					: 4px,
 		///////////////////////////////////////////////////////////
-		// shadow
+		// SHADOW
+		///////////////////////////////////////////////////////////
 		'shadow-horizontal'				: 0,
 		'shadow-vertical'				: 4px,
 		'shadow-blur'					: 5px,
 		'shadow-color'					: rgba(0, 0, 0, 0.2),
 		///////////////////////////////////////////////////////////
-		// inputs
+		// INPUT
+		///////////////////////////////////////////////////////////
 		'input-bg'						: lighten(#26272b, 8.5%),
 		'input-color'					: white,
 		'input-border-color'			: lighten(#26272b, 26%),
@@ -98,13 +128,25 @@ $punica-themes: (
 	/*
 	custom: (
 		///////////////////////////////////////////////////////////
+		// GLOBAL
+    	///////////////////////////////////////////////////////////
+		// imported google font and weights
+		'font-family'					: , // main font family
+		'font-weights'					: ,
+		// main typography settings
+		'font-size'						: ,
+		'font-weight'					: ,
+		'line-height'					: ,
+		'header-weight'					: , // for h1, h2, h3...
+		'background-color'				: ,
+		'text-color'					: ,
+		///////////////////////////////////////////////////////////
+		// COLOR
+		///////////////////////////////////////////////////////////
 		'primary-color'					: ,
 		'success-color'					: ,
 		'warning-color'					: ,
 		'error-color'					: ,
-		///////////////////////////////////////////////////////////
-		'background-color'				: ,
-		'text-color'					: ,
 		//
 		'color-active'					: ,
 		'color-negative'				: ,
@@ -112,19 +154,22 @@ $punica-themes: (
 		'color-secondary'				: ,
 		'color-dark'					: ,
 		///////////////////////////////////////////////////////////
-		// border
+		// BORDER
+		///////////////////////////////////////////////////////////
 		'border-color' 					: ,
 		'border-width'					: ,
 		'border-style'					: ,
 		'border-radius'					: ,
 		///////////////////////////////////////////////////////////
-		// shadow
+		// SHADOW
+		///////////////////////////////////////////////////////////
 		'shadow-horizontal'				: ,
 		'shadow-vertical'				: ,
 		'shadow-blur'					: ,
 		'shadow-color'					: ,
 		///////////////////////////////////////////////////////////
-		// inputs
+		// INPUTS
+		///////////////////////////////////////////////////////////
 		'input-bg'						: ,
 		'input-color'					: ,
 		'input-border-color'			: ,

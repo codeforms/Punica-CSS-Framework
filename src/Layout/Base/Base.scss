@@ -20,10 +20,10 @@ html {
 	-webkit-tap-highlight-color: transparent;
 }
 body {
-	font-family: $main-font-family;
-	font-size: $main-font-size;
-	font-weight: $main-font-weight;
-	line-height: $main-line-height;
+	font-family: $typography-font-family; // typography > variables
+	font-size: theme('font-size');
+	font-weight: theme('font-weight');
+	line-height: theme('line-height');
 	color: theme('text-color');
 	background-color: theme('background-color');
 }

@@ -1,9 +1,14 @@
 /////////////////////////////////////////////////////////
 /// PUNICA CSS > ELEMENTS : TYPOGRAPHY > VARIABLES
 /////////////////////////////////////////////////////////
+///
+/// TYPOGRAPHY
+///
+@import url('https://fonts.googleapis.com/css2?family=#{theme('font-family')}:wght@#{theme('font-weights')}&display=swap');
 
 /// PREFERENCES =========================================
-$typography-headers	: ( 
+$typography-font-family	: theme('font-family'), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$typography-headers		: ( 
 	// name, font-size, responsive font-size
 	("h1", 2rem, 1.7rem),
 	("h2", 1.8rem, 1.5rem),

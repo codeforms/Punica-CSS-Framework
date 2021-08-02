@@ -9,7 +9,7 @@
 	a.#{$button-class},
 	.#{$button-class} {
 		display: inline-flex;
-		font-family: $main-font-family;
+		font-family: $typography-font-family; // typography > variables
 		font-size: 1em;
 		font-weight: 700;
 		text-decoration: none;

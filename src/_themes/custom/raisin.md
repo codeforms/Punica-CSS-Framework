@@ -4,13 +4,25 @@
 ///
 raisin: (
 	///////////////////////////////////////////////////////////
+	// GLOBAL
+	///////////////////////////////////////////////////////////
+	// imported google font and weights
+	'font-family'					: 'Nunito', // main font family
+	'font-weights'					: '300;400;600;700;900',
+	// main typography settings
+	'font-size'						: 13px,
+	'font-weight'					: 400,
+	'line-height'					: 1.7,
+	'header-weight'					: 900, // for h1, h2, h3...
+	'background-color'				: #2D2A2E,
+	'text-color'					: white,
+	///////////////////////////////////////////////////////////
+	// COLOR
+	///////////////////////////////////////////////////////////
 	'primary-color'					: #7080e2,
 	'success-color'					: #66923f,
 	'warning-color'					: #cf6d4e,
 	'error-color'					: #b03767,
-	///////////////////////////////////////////////////////////
-	'background-color'				: #2D2A2E,
-	'text-color'					: white,
 	//
 	'color-active'					: lighten(#2D2A2E, 3.7%),
 	'color-negative'				: white,
@@ -18,19 +30,22 @@ raisin: (
 	'color-secondary'				: lighten(#2D2A2E, 5%),
 	'color-dark'					: lighten(#2D2A2E, 4.5%),
 	///////////////////////////////////////////////////////////
-	// border
+	// BORDER
+	///////////////////////////////////////////////////////////
 	'border-color' 					: lighten(#2D2A2E, 23%),
 	'border-width'					: 1px,
 	'border-style'					: solid,
 	'border-radius'					: 0,
 	///////////////////////////////////////////////////////////
-	// shadow
+	// SHADOW
+	///////////////////////////////////////////////////////////
 	'shadow-horizontal'				: 0,
 	'shadow-vertical'				: 4px,
 	'shadow-blur'					: 3px,
 	'shadow-color'					: rgba(0, 0, 0, 0.17),
 	///////////////////////////////////////////////////////////
-	// inputs
+	// INPUT
+	///////////////////////////////////////////////////////////
 	'input-bg'						: lighten(#2D2A2E, 8.5%),
 	'input-color'					: white,
 	'input-border-color'			: lighten(#2D2A2E, 26%),

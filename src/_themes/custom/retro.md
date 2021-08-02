@@ -4,13 +4,25 @@
 ///
 retro: (
 	///////////////////////////////////////////////////////////
+	// GLOBAL
+	///////////////////////////////////////////////////////////
+	// imported google font and weights
+	'font-family'					: 'Comfortaa', // main font family
+	'font-weights'					: '300;400;600;700',
+	// main typography settings
+	'font-size'						: 12px,
+	'font-weight'					: 600,
+	'line-height'					: 1.5,
+	'header-weight'					: 700, // for h1, h2, h3...
+	'background-color'				: #493323,
+	'text-color'					: white,
+	///////////////////////////////////////////////////////////
+	// COLOR
+	///////////////////////////////////////////////////////////
 	'primary-color'					: #5eaaa8,
 	'success-color'					: #879a67,
 	'warning-color'					: #de7e57,
 	'error-color'					: #cd5c5c,
-	///////////////////////////////////////////////////////////
-	'background-color'				: #493323,
-	'text-color'					: white,
 	//
 	'color-active'					: lighten(#493323, 3.7%),
 	'color-negative'				: white,
@@ -18,19 +30,22 @@ retro: (
 	'color-secondary'				: lighten(#493323, 5%),
 	'color-dark'					: lighten(#493323, 8.5%),
 	///////////////////////////////////////////////////////////
-	// border
+	// BORDER
+	///////////////////////////////////////////////////////////
 	'border-color' 					: lighten(#493323, 10%),
 	'border-width'					: 1px,
 	'border-style'					: solid,
 	'border-radius'					: 2px,
 	///////////////////////////////////////////////////////////
-	// shadow
+	// SHADOW
+	///////////////////////////////////////////////////////////
 	'shadow-horizontal'				: 0,
 	'shadow-vertical'				: 4px,
 	'shadow-blur'					: 4px,
 	'shadow-color'					: rgba(0, 0, 0, 0.24),
 	///////////////////////////////////////////////////////////
-	// inputs
+	// INPUT
+	///////////////////////////////////////////////////////////
 	'input-bg'						: lighten(#493323, 8.5%),
 	'input-color'					: white,
 	'input-border-color'			: lighten(#493323, 26%),
