@@ -4,7 +4,7 @@
 ///
 /// Headers
 ///
-@each $header, $font-size, $responsive-size, $font-weight in $typography-headers {
+@each $header, $font-size, $responsive-size in $typography-headers {
 	#{$header} {
 		margin-top: 0;
 		color: inherit;

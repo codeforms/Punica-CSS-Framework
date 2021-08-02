@@ -8,9 +8,10 @@ palenight: (
 	// GLOBAL
 	///////////////////////////////////////////////////////////
 	// imported google font and weights
-	'font-family'					: 'Nunito', // main font family
-	'font-weights'					: '300;400;600;700;900',
-	// main typography settings
+	'google-font'                   : 'Nunito', // or 'Source+Sans+Pro' etc.
+    'google-font-weights'           : '300;400;600;700;900',
+    // main typography settings
+    'font-family'                   : 'Nunito', // main font family ('Source Sans Pro' etc)
 	'font-size'						: 13px,
 	'font-weight'					: 400,
 	'line-height'					: 1.7,

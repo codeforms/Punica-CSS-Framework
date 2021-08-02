@@ -7,9 +7,10 @@ retro: (
 	// GLOBAL
 	///////////////////////////////////////////////////////////
 	// imported google font and weights
-	'font-family'					: 'Comfortaa', // main font family
-	'font-weights'					: '300;400;600;700',
-	// main typography settings
+	'google-font'                   : 'Comfortaa', // or 'Source+Sans+Pro' etc.
+    'google-font-weights'           : '300;400;600;700;900',
+    // main typography settings
+    'font-family'                   : 'Comfortaa', // main font family ('Source Sans Pro' etc)
 	'font-size'						: 12px,
 	'font-weight'					: 600,
 	'line-height'					: 1.5,
