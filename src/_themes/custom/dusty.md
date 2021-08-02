@@ -7,13 +7,13 @@ dusty: (
     // GLOBAL
     ///////////////////////////////////////////////////////////
     // imported google font and weights
-    'google-font'                   : 'Nunito', // or 'Source+Sans+Pro' etc.
+    'google-font'                   : 'Source+Sans+Pro', // or 'Source+Sans+Pro' etc.
     'google-font-weights'           : '300;400;600;700;900',
     // main typography settings
-    'font-family'                   : 'Nunito', // main font family ('Source Sans Pro' etc)
-    'font-size'                     : 13px,
+    'font-family'                   : 'Source Sans Pro', // main font family ('Source Sans Pro' etc)
+    'font-size'                     : .8538em,
     'font-weight'                   : 400,
-    'line-height'                   : 1.7,
+    'line-height'                   : 1.9,
     'header-weight'                 : 900, // for h1, h2, h3...
     'background-color'              : #f5f5f5,
     'text-color'                    : #525252,
@@ -43,6 +43,7 @@ dusty: (
     'shadow-horizontal'             : 0,
     'shadow-vertical'               : 0,
     'shadow-blur'                   : 8px,
+    'shadow-spread'                 : 0,
     'shadow-color'                  : rgba(0, 0, 0, 0.1),
     ///////////////////////////////////////////////////////////
     // INPUT

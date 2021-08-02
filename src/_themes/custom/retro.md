@@ -7,14 +7,14 @@ retro: (
 	// GLOBAL
 	///////////////////////////////////////////////////////////
 	// imported google font and weights
-	'google-font'                   : 'Comfortaa', // or 'Source+Sans+Pro' etc.
-    'google-font-weights'           : '300;400;600;700;900',
+	'google-font'                   : 'Montserrat+Alternates', // or 'Source+Sans+Pro' etc.
+    'google-font-weights'           : '300;400;500;700;900',
     // main typography settings
-    'font-family'                   : 'Comfortaa', // main font family ('Source Sans Pro' etc)
-	'font-size'						: 12px,
-	'font-weight'					: 600,
-	'line-height'					: 1.5,
-	'header-weight'					: 700, // for h1, h2, h3...
+    'font-family'                   : 'Montserrat Alternates', // main font family ('Source Sans Pro' etc)
+	'font-size'						: .7493em,
+	'font-weight'					: 500,
+	'line-height'					: 1.8,
+	'header-weight'					: 900, // for h1, h2, h3...
 	'background-color'				: #493323,
 	'text-color'					: white,
 	///////////////////////////////////////////////////////////
@@ -41,8 +41,9 @@ retro: (
 	// SHADOW
 	///////////////////////////////////////////////////////////
 	'shadow-horizontal'				: 0,
-	'shadow-vertical'				: 4px,
+	'shadow-vertical'				: 2px,
 	'shadow-blur'					: 4px,
+	'shadow-spread'					: 1px,
 	'shadow-color'					: rgba(0, 0, 0, 0.24),
 	///////////////////////////////////////////////////////////
 	// INPUT

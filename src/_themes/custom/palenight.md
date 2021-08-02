@@ -8,10 +8,10 @@ palenight: (
 	// GLOBAL
 	///////////////////////////////////////////////////////////
 	// imported google font and weights
-	'google-font'                   : 'Nunito', // or 'Source+Sans+Pro' etc.
-    'google-font-weights'           : '300;400;600;700;900',
+	'google-font'                   : 'Roboto', // or 'Source+Sans+Pro' etc.
+    'google-font-weights'           : '300;400;700;900',
     // main typography settings
-    'font-family'                   : 'Nunito', // main font family ('Source Sans Pro' etc)
+    'font-family'                   : 'Roboto', // main font family ('Source Sans Pro' etc)
 	'font-size'						: 13px,
 	'font-weight'					: 400,
 	'line-height'					: 1.7,
@@ -42,9 +42,10 @@ palenight: (
 	// SHADOW
 	///////////////////////////////////////////////////////////
 	'shadow-horizontal'				: 0,
-	'shadow-vertical'				: 4px,
-	'shadow-blur'					: 7px,
-	'shadow-color'					: rgba(0, 0, 0, 0.21),
+	'shadow-vertical'				: 1px,
+	'shadow-blur'					: 1px,
+	'shadow-spread'					: 0,
+	'shadow-color'					: rgb(0, 0, 0 / 1.5%),
 	///////////////////////////////////////////////////////////
 	// INPUT
 	///////////////////////////////////////////////////////////

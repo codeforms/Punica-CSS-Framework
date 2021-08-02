@@ -7,12 +7,12 @@ raisin: (
 	// GLOBAL
 	///////////////////////////////////////////////////////////
 	// imported google font and weights
-	'google-font'                   : 'Nunito', // or 'Source+Sans+Pro' etc.
-    'google-font-weights'           : '300;400;600;700;900',
+	'google-font'                   : 'Mulish', // or 'Source+Sans+Pro' etc.
+    'google-font-weights'           : '300;400;500;600;700;900',
     // main typography settings
-    'font-family'                   : 'Nunito', // main font family ('Source Sans Pro' etc)
-	'font-size'						: 13px,
-	'font-weight'					: 400,
+    'font-family'                   : 'Mulish', // main font family ('Source Sans Pro' etc)
+	'font-size'						: .8133em,
+	'font-weight'					: 500,
 	'line-height'					: 1.7,
 	'header-weight'					: 900, // for h1, h2, h3...
 	'background-color'				: #2D2A2E,
@@ -43,6 +43,7 @@ raisin: (
 	'shadow-horizontal'				: 0,
 	'shadow-vertical'				: 4px,
 	'shadow-blur'					: 3px,
+	'shadow-spread'					: 0,
 	'shadow-color'					: rgba(0, 0, 0, 0.17),
 	///////////////////////////////////////////////////////////
 	// INPUT
@@ -56,5 +57,5 @@ raisin: (
 	// secondary button
 	'button-secondary-bg'			: linear-gradient(to top, #2D2A2E 0%,lighten(#2D2A2E, 8.5%) 100%),
 	'button-secondary-bg-hover'		: linear-gradient(to top, lighten(#2D2A2E, 8.5%) 0%,#2D2A2E 100%)
-)
+),
 ```
