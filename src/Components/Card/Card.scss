@@ -94,7 +94,7 @@
 				@if $components-card-media {
 					>.#{$card-media} {
 						align-self: normal;
-						width: 100%;
+						width: fit-content;
 						img	{
 							width: auto;
 							object-fit: cover
