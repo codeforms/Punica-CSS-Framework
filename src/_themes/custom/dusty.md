@@ -7,14 +7,15 @@ dusty: (
     // GLOBAL
     ///////////////////////////////////////////////////////////
     // imported google font and weights
-    'google-font'                   : 'Source+Sans+Pro', // or 'Source+Sans+Pro' etc.
+    // elements->typography->variables
+    'google-font'                   : 'Source+Sans+Pro',
     'google-font-weights'           : '300;400;600;700;900',
-    // main typography settings
-    'font-family'                   : 'Source Sans Pro', // main font family ('Source Sans Pro' etc)
+    // typography settings
+    'font-family'                   : 'Source Sans Pro',
     'font-size'                     : .8538em,
     'font-weight'                   : 400,
     'line-height'                   : 1.9,
-    'header-weight'                 : 900, // for h1, h2, h3...
+    'header-weight'                 : 900,
     'background-color'              : #f5f5f5,
     'text-color'                    : #525252,
     ///////////////////////////////////////////////////////////

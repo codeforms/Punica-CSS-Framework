@@ -7,14 +7,15 @@ raisin: (
 	// GLOBAL
 	///////////////////////////////////////////////////////////
 	// imported google font and weights
-	'google-font'                   : 'Mulish', // or 'Source+Sans+Pro' etc.
-    'google-font-weights'           : '300;400;500;600;700;900',
-    // main typography settings
-    'font-family'                   : 'Mulish', // main font family ('Source Sans Pro' etc)
+	// elements->typography->variables
+	'google-font'                   : 'Mulish',
+	'google-font-weights'           : '300;400;500;600;700;900',
+	// typography settings
+	'font-family'                   : 'Mulish',
 	'font-size'						: .8133em,
 	'font-weight'					: 500,
 	'line-height'					: 1.7,
-	'header-weight'					: 900, // for h1, h2, h3...
+	'header-weight'					: 900,
 	'background-color'				: #2D2A2E,
 	'text-color'					: white,
 	///////////////////////////////////////////////////////////
@@ -27,8 +28,8 @@ raisin: (
 	//
 	'color-active'					: lighten(#2D2A2E, 3.7%),
 	'color-negative'				: white,
-	'color-grey'					: lighten(#2D2A2E, 12.5%),
-	'color-secondary'				: lighten(#2D2A2E, 5%),
+	'color-grey'					: lighten(#2D2A2E, 19%),
+	'color-secondary'				: lighten(#2D2A2E, 7.3%),
 	'color-dark'					: lighten(#2D2A2E, 4.5%),
 	///////////////////////////////////////////////////////////
 	// BORDER

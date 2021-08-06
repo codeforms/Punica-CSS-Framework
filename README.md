@@ -5,6 +5,7 @@ Punica CSS is a clean, lightweight, responsive, modern and fully customizable (e
 
 <p>
     <a href="http://punica.site" target="_blank"><strong>Documentation</strong></a> |  
+    <a href="http://punica.site/themes"><strong>Themes</strong></a> | 
     <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelog</a>
 </p>
 <p>
@@ -17,25 +18,6 @@ If you want to quickly add Punica to your project, you can use the JsDelivr CDN;
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/punica.min.css" crossorigin="anonymous">
 ```
-##### Dark theme;
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/punica-dark.min.css" crossorigin="anonymous">
-```
-
-##### Other custom themes;
-```html
-<!--Palenight (dark)-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/custom/punica-palenight.min.css" crossorigin="anonymous">
-
-<!--Retro (dark)-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/custom/punica-retro.min.css" crossorigin="anonymous">
-
-<!--Raisin (dark)-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/custom/punica-raisin.min.css" crossorigin="anonymous">
-
-<!--Dusty (light)-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/custom/punica-dusty.min.css" crossorigin="anonymous">
-```
 
 ### HTML Markup
 For your default setup, add the Punica CSS file to the <head> element of your HTML5 document. Also include the Material Icons library. That's it!
@@ -47,7 +29,7 @@ For your default setup, add the Punica CSS file to the <head> element of your HT
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="css/punica.min.css" />
+        <link rel="stylesheet" href="punica.min.css" />
     </head>
     <body>
     </body>

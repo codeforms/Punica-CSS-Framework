@@ -15,14 +15,15 @@ $punica-themes: (
 		// GLOBAL
 		///////////////////////////////////////////////////////////
 		// imported google font and weights
-		'google-font'					: 'Nunito', // or 'Source+Sans+Pro' etc.
+		// elements->typography->variables
+		'google-font'					: 'Nunito',
 		'google-font-weights'			: '300;400;600;700;900',
-		// main typography settings
-		'font-family'					: 'Nunito', // main font family ('Source Sans Pro' etc)
+		// typography settings
+		'font-family'					: 'Nunito',
 		'font-size'						: 13px,
 		'font-weight'					: 400,
 		'line-height'					: 1.7,
-		'header-weight'					: 900, // for h1, h2, h3...
+		'header-weight'					: 900,
 		'background-color'				: white,
 		'text-color'					: #3f4143,
 		///////////////////////////////////////////////////////////
@@ -34,7 +35,7 @@ $punica-themes: (
 		'error-color'					: #d62828,
 		//
 		'color-active'					: #dcdcdc,
-		'color-negative'				: white, // for dark backgrounds
+		'color-negative'				: white,
 		'color-grey'					: #a8a8a8,
 		'color-secondary'				: #e6e6e6,
 		'color-dark'					: #26272b,
@@ -74,14 +75,15 @@ $punica-themes: (
 		// GLOBAL
 		///////////////////////////////////////////////////////////
 		// imported google font and weights
-		'google-font'					: 'Quicksand', // or 'Source+Sans+Pro' etc.
+		// elements->typography->variables
+		'google-font'					: 'Quicksand',
 		'google-font-weights'			: '300;400;500;600;700',
-		// main typography settings
-		'font-family'					: 'Quicksand', // main font family ('Source Sans Pro' etc)
+		// typography settings
+		'font-family'					: 'Quicksand',
 		'font-size'						: .8265em,
 		'font-weight'					: 500,
 		'line-height'					: 1.8,
-		'header-weight'					: 700, // for h1, h2, h3...
+		'header-weight'					: 700,
 		'background-color'				: #26272b,
 		'text-color'					: white,
 		///////////////////////////////////////////////////////////
@@ -93,7 +95,7 @@ $punica-themes: (
 		'error-color'					: #d84955,
 		//
 		'color-active'					: lighten(#26272b, 3.7%),
-		'color-negative'				: white, // for dark backgrounds
+		'color-negative'				: white,
 		'color-grey'					: #6c6e79,
 		'color-secondary'				: lighten(#26272b, 5%),
 		'color-dark'					: lighten(#26272b, 4.5%),
@@ -135,14 +137,15 @@ $punica-themes: (
 		// GLOBAL
     	///////////////////////////////////////////////////////////
 		// imported google font and weights
+		// elements->typography->variables
 		'google-font'					: ,
 		'google-font-weights'			: ,
-		// main typography settings
-		'font-family'					: , // main font family
+		// typography settings
+		'font-family'					: ,
 		'font-size'						: ,
 		'font-weight'					: ,
 		'line-height'					: ,
-		'header-weight'					: , // for h1, h2, h3...
+		'header-weight'					: ,
 		'background-color'				: ,
 		'text-color'					: ,
 		///////////////////////////////////////////////////////////

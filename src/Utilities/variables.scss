@@ -3,13 +3,13 @@
 ///////////////////////////////////////////////////////
 
 /// PREFERENCES =======================================
-$helper-pm-ranges	: 0,5,10,15,20,30,40,50,75,100; // pm: padding/margin
+$helper-pm-ranges	: 0,5,10,15,20,30,40,50,75,100; // pm: padding/margin (px)
 $helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font-weight
-$helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999;
+$helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999,99999;
 $helper-lh-ranges	: 0,1,2,3,4,5; // lh: line-height
-$helper-br-ranges	: 4,8,10,12,14,16,500; // br: border-radius
+$helper-br-ranges	: 4,8,10,12,14,16,500; // br: border-radius (px)
 $helper-orders		: 1,2,3,4,5;
-$helper-borders		: 0,1,2;
+$helper-borders		: 0,1,2,3,4,5; // (px)
 
 /// Margin ============================================
 $margin-helpers: (

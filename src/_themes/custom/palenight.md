@@ -1,21 +1,21 @@
 ```scss
 ///
-/// Custom Palenight Theme
-/// Material Design
+/// Palenight Theme
 ///
 palenight: (
 	///////////////////////////////////////////////////////////
 	// GLOBAL
 	///////////////////////////////////////////////////////////
 	// imported google font and weights
-	'google-font'                   : 'Roboto', // or 'Source+Sans+Pro' etc.
+    // elements->typography->variables
+	'google-font'                   : 'Roboto',
     'google-font-weights'           : '300;400;700;900',
-    // main typography settings
-    'font-family'                   : 'Roboto', // main font family ('Source Sans Pro' etc)
+    // typography settings
+    'font-family'                   : 'Roboto',
 	'font-size'						: 13px,
 	'font-weight'					: 400,
 	'line-height'					: 1.7,
-	'header-weight'					: 900, // for h1, h2, h3...
+	'header-weight'					: 900,
 	'background-color'				: #292d3e,
 	'text-color'					: white,
 	///////////////////////////////////////////////////////////

@@ -7,14 +7,15 @@ retro: (
 	// GLOBAL
 	///////////////////////////////////////////////////////////
 	// imported google font and weights
-	'google-font'                   : 'Montserrat+Alternates', // or 'Source+Sans+Pro' etc.
+    // elements->typography->variables
+	'google-font'                   : 'Montserrat+Alternates',
     'google-font-weights'           : '300;400;500;700;900',
-    // main typography settings
-    'font-family'                   : 'Montserrat Alternates', // main font family ('Source Sans Pro' etc)
+    // typography settings
+    'font-family'                   : 'Montserrat Alternates',
 	'font-size'						: .7493em,
 	'font-weight'					: 500,
 	'line-height'					: 1.8,
-	'header-weight'					: 900, // for h1, h2, h3...
+	'header-weight'					: 900,
 	'background-color'				: #493323,
 	'text-color'					: white,
 	///////////////////////////////////////////////////////////
@@ -27,8 +28,8 @@ retro: (
 	//
 	'color-active'					: lighten(#493323, 3.7%),
 	'color-negative'				: white,
-	'color-grey'					: lighten(#493323, 17.5%),
-	'color-secondary'				: lighten(#493323, 5%),
+	'color-grey'					: lighten(#493323, 24%),
+	'color-secondary'				: lighten(#493323, 7.4%),
 	'color-dark'					: lighten(#493323, 8.5%),
 	///////////////////////////////////////////////////////////
 	// BORDER
