@@ -1,0 +1,40 @@
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : TABNAV > MIXINS
+/////////////////////////////////////////////////////////
+
+///
+/// Default button styles in Tabnav
+///
+@mixin tab-button-styles() {
+	&>.#{$button-class},
+	&>a.#{$button-class},
+	&>.#{$button-class-group} > .#{$button-class},
+	&>.#{$button-class-group} > a.#{$button-class},
+	&>.#{$dropdown-name} > .#{$button-class},
+	&>.#{$dropdown-name} > a.#{$button-class},
+	&>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class},
+	&>.#{$button-class-group} > .#{$dropdown-name} > a.#{$button-class} {
+		background: transparent;
+		border: none;
+		border-radius: 0 !important;
+		line-height: initial;
+        font-size: 1.025em;
+		color: theme('text-color');
+		padding: .935rem 1.4rem;
+		box-shadow: none;
+		&:hover {
+			color: theme('text-color');
+		}
+		&.#{$button-class-disabled} {
+			opacity: .45;
+		}
+		&.#{$tabnav-active} {
+			color: theme('primary-color');
+			font-weight: 700;
+			i, [class^="#{$icon-font-class-name}"] {
+				color: inherit;
+			}
+		}
+		@content
+	}
+}

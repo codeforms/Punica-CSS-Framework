@@ -1,6 +1,7 @@
 /////////////////////////////////////////////////////////
 /// PUNICA CSS > COMPONENTS : TABNAV
 /////////////////////////////////////////////////////////
+@import "mixins";
 ///
 /// if tabnav is enable
 ///
@@ -10,45 +11,41 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-end;
-		border-bottom: $tabnav-border-bottom-width theme('border-style') theme('color-secondary');
+		border-bottom: $tabnav-border-width theme('border-style') theme('color-secondary');
 		padding: 0;
 		&>.#{$button-class-group} {
 			box-shadow: none;
 			border-radius: 0;
 		}
-		&>.#{$button-class},
-		&>a.#{$button-class},
-		&>.#{$button-class-group} > .#{$button-class},
-		&>.#{$button-class-group} > a.#{$button-class},
-		&>.#{$dropdown-name} > .#{$button-class},
-		&>.#{$dropdown-name} > a.#{$button-class},
-		&>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class},
-		&>.#{$button-class-group} > .#{$dropdown-name} > a.#{$button-class} {
-			background: transparent;
-			border: none;
-		    border-bottom: $tabnav-border-bottom-width solid transparent;
-		    border-radius: 0 !important;
-	        margin-bottom: -$tabnav-border-bottom-width;
-	        line-height: initial;
-            font-size: 1.025em;
-            transition: border-bottom-color, color .2s;
-			color: theme('text-color');
-			padding: .935rem 1.4rem;
-			box-shadow: none;
+		///
+		/// Default button styles in Tabnav
+		///
+		@include tab-button-styles() {
+		    border-bottom: $tabnav-border-width solid transparent;
+	        margin-bottom: -$tabnav-border-width;
 			&:hover {
-				color: theme('text-color');
 				border-bottom-color: theme('color-grey');
-				transition: border-bottom-color, color .2s;
-			}
-			&.#{$button-class-disabled} {
-				opacity: .45;
 			}
 			&.#{$tabnav-active} {
-				color: theme('primary-color');
 				border-bottom-color: theme('primary-color');
-				font-weight: 700;
-				i, [class^="#{$icon-font-class-name}"] {
-					color: inherit;
+			}
+		}
+		///
+		/// Bottom Tabnav
+		///
+		&.#{$tabnav-bottom} {
+			border-bottom: 0;
+			border-top: $tabnav-border-width theme('border-style') theme('color-secondary');
+			@include tab-button-styles() {
+				margin-top: -$tabnav-border-width;
+				border-top: $tabnav-border-width solid transparent;
+				border-bottom: 0;
+				margin-bottom: 0;
+				&:hover {
+					border-top-color: theme('color-grey');
+				}
+				&.#{$tabnav-active} {
+					border-top-color: theme('primary-color');
 				}
 			}
 		}
