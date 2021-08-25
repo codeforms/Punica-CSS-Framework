@@ -21,13 +21,30 @@
 		/// Default button styles in Tabnav
 		///
 		@include tab-button-styles() {
-		    border-bottom: $tabnav-border-width solid transparent;
+			background: transparent;
+			border: none;
+			border-radius: 0 !important;
+			line-height: initial;
+	        font-size: 1.025em;
+			color: theme('text-color');
+			padding: .935rem 1.4rem;
+			box-shadow: none;
+			border-bottom: $tabnav-border-width solid transparent;
 	        margin-bottom: -$tabnav-border-width;
 			&:hover {
+				color: theme('text-color');
 				border-bottom-color: theme('color-grey');
 			}
+			&.#{$button-class-disabled} {
+				opacity: .45;
+			}
 			&.#{$tabnav-active} {
+				color: theme('primary-color');
+				font-weight: 700;
 				border-bottom-color: theme('primary-color');
+				i, [class^="#{$icon-font-class-name}"] {
+					color: inherit;
+				}
 			}
 		}
 		///

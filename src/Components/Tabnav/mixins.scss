@@ -14,27 +14,6 @@
 	&>.#{$dropdown-name} > a.#{$button-class},
 	&>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class},
 	&>.#{$button-class-group} > .#{$dropdown-name} > a.#{$button-class} {
-		background: transparent;
-		border: none;
-		border-radius: 0 !important;
-		line-height: initial;
-        font-size: 1.025em;
-		color: theme('text-color');
-		padding: .935rem 1.4rem;
-		box-shadow: none;
-		&:hover {
-			color: theme('text-color');
-		}
-		&.#{$button-class-disabled} {
-			opacity: .45;
-		}
-		&.#{$tabnav-active} {
-			color: theme('primary-color');
-			font-weight: 700;
-			i, [class^="#{$icon-font-class-name}"] {
-				color: inherit;
-			}
-		}
 		@content
 	}
 }
