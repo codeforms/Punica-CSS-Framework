@@ -15,7 +15,8 @@
 	$text-color: $navbar-color,
 	$input-bg: $navbar-color,
 	$input-color: $main-font-color,
-	$input-border-color: inherit
+	$input-border-color: inherit,
+	$divider-color: inherit
 ) {
 	background: $bg-color;
 	color: $text-color;
@@ -39,7 +40,7 @@
 			.#{$button-class-group} {
 				.#{$button-class},
 				.#{$dropdown-name} .#{$button-class} {
-					border: solid $input-border-color;
+					border: solid $divider-color;
 				}
 			}
 		}

@@ -134,7 +134,7 @@
 				.#{$button-class-group} {
 					.#{$button-class},
 					.#{$dropdown-name} .#{$button-class} {
-						border: solid darken(theme('primary-color'), 10.15%);
+						border: solid darken(theme('primary-color'), 7.15%);
 					}
 				}
 			}
@@ -149,9 +149,9 @@
 		/// NAVBAR THEMES
 		///
 		@if $components-navbar-themes {
-			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color in $navbar-themes {
+			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color in $navbar-themes {
 				&.#{$theme-name} {
-					@include navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color);
+					@include navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color);
 				}
 			}
 		}
