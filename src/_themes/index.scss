@@ -2,13 +2,17 @@
 /// PUNICA CSS > THEMES
 /////////////////////////////////////////////////////////
 @import "_getters";
-
 ///
+/// Punica Themes
+/// @link http://punica.site/themes
 ///
+/// Theme customization of Punica CSS
+/// @link http://punica.site/base/custom-theme
 ///
 $punica-themes: (
 	///
 	/// Default Theme
+	/// @link http://punica.site/themes/light
 	///
 	light: (
 		///////////////////////////////////////////////////////////
@@ -67,127 +71,4 @@ $punica-themes: (
 		'button-secondary-bg'			: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
 		'button-secondary-bg-hover'		: linear-gradient(to top, #ffffff 0%,#e6e6e6 100%)
 	),
-	///
-	/// Dark Theme
-	///
-	dark: (
-		///////////////////////////////////////////////////////////
-		// GLOBAL
-		///////////////////////////////////////////////////////////
-		// imported google font and weights
-		// elements->typography->variables
-		'google-font'					: 'Quicksand',
-		'google-font-weights'			: '300;400;500;600;700',
-		// typography settings
-		'font-family'					: 'Quicksand',
-		'font-size'						: .8265em,
-		'font-weight'					: 500,
-		'line-height'					: 1.8,
-		'header-weight'					: 700,
-		'background-color'				: #26272b,
-		'text-color'					: white,
-		///////////////////////////////////////////////////////////
-		// COLOR
-		///////////////////////////////////////////////////////////
-		'primary-color'					: #10a6fa,
-		'success-color'					: #2abc90,
-		'warning-color'					: #b78343,
-		'error-color'					: #d84955,
-		//
-		'color-active'					: lighten(#26272b, 3.7%),
-		'color-negative'				: white,
-		'color-grey'					: #6c6e79,
-		'color-secondary'				: lighten(#26272b, 5%),
-		'color-dark'					: lighten(#26272b, 4.5%),
-		///////////////////////////////////////////////////////////
-		// BORDER
-		///////////////////////////////////////////////////////////
-		'border-color' 					: lighten(#26272b, 23%),
-		'border-width'					: 1px,
-		'border-style'					: solid,
-		'border-radius'					: 4px,
-		///////////////////////////////////////////////////////////
-		// SHADOW
-		///////////////////////////////////////////////////////////
-		'shadow-horizontal'				: 0,
-		'shadow-vertical'				: 2px,
-		'shadow-blur'					: 5px,
-		'shadow-spread'					: 1px,
-		'shadow-color'					: rgba(0, 0, 0, 0.14),
-		///////////////////////////////////////////////////////////
-		// INPUT
-		///////////////////////////////////////////////////////////
-		'input-bg'						: lighten(#26272b, 8.5%),
-		'input-color'					: white,
-		'input-border-color'			: lighten(#26272b, 26%),
-		"input-outline-color"			: white,
-		'input-outline-width'			: 2px,
-		///////////////////////////////////////////////////////////
-		// secondary button
-		'button-secondary-bg'			: linear-gradient(to top, #202125 0%,#26272b 100%),
-		'button-secondary-bg-hover'		: linear-gradient(to top, #26272b 0%,#202125 100%)
-	),
-	///
-	/// Custom Theme
-	/// Apply your own color scheme 
-	///
-	/*
-	custom: (
-		///////////////////////////////////////////////////////////
-		// GLOBAL
-    	///////////////////////////////////////////////////////////
-		// imported google font and weights
-		// elements->typography->variables
-		'google-font'					: ,
-		'google-font-weights'			: ,
-		// typography settings
-		'font-family'					: ,
-		'font-size'						: ,
-		'font-weight'					: ,
-		'line-height'					: ,
-		'header-weight'					: ,
-		'background-color'				: ,
-		'text-color'					: ,
-		///////////////////////////////////////////////////////////
-		// COLOR
-		///////////////////////////////////////////////////////////
-		'primary-color'					: ,
-		'success-color'					: ,
-		'warning-color'					: ,
-		'error-color'					: ,
-		//
-		'color-active'					: ,
-		'color-negative'				: ,
-		'color-grey'					: ,
-		'color-secondary'				: ,
-		'color-dark'					: ,
-		///////////////////////////////////////////////////////////
-		// BORDER
-		///////////////////////////////////////////////////////////
-		'border-color' 					: ,
-		'border-width'					: ,
-		'border-style'					: ,
-		'border-radius'					: ,
-		///////////////////////////////////////////////////////////
-		// SHADOW
-		///////////////////////////////////////////////////////////
-		'shadow-horizontal'				: ,
-		'shadow-vertical'				: ,
-		'shadow-blur'					: ,
-		'shadow-spread'					: ,
-		'shadow-color'					: ,
-		///////////////////////////////////////////////////////////
-		// INPUTS
-		///////////////////////////////////////////////////////////
-		'input-bg'						: ,
-		'input-color'					: ,
-		'input-border-color'			: ,
-		"input-outline-color"			: ,
-		'input-outline-width'			: ,
-		///////////////////////////////////////////////////////////
-		// secondary button
-		'button-secondary-bg'			: ,
-		'button-secondary-bg-hover'		: 
-	),
-	*/
 );
