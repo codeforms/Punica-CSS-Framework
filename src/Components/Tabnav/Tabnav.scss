@@ -46,6 +46,9 @@
 					color: inherit;
 				}
 			}
+			i, [class^="#{$icon-font-class-name}"] {
+				font-size: 1rem;
+			}
 		}
 		///
 		/// Bottom Tabnav
