@@ -48,9 +48,9 @@
 	///
 	/// Alignment
 	///
-	@include setHelperList($align-items, "align-items");
-	@include setHelperList($align-self, "align-self");
-	@include setHelperList($justify-content, "justify-content");
+	@include setHelperList($align-items, "align-items", "!important");
+	@include setHelperList($align-self, "align-self", "!important");
+	@include setHelperList($justify-content, "justify-content", "!important");
 
 	///
 	/// Filters
@@ -60,7 +60,7 @@
 	///
 	/// Text Transform Properties
 	///
-	@include setHelperList($text-transforms, "text-transform");
+	@include setHelperList($text-transforms, "text-transform", "!important");
 
 	///
 	/// Overflow Properties
@@ -70,7 +70,7 @@
 	///
 	/// Position Properties
 	///
-	@include setHelperList($position-properties, "position");
+	@include setHelperList($position-properties, "position", "!important");
 
 	///
 	/// Stack Order 
@@ -80,12 +80,12 @@
 	///
 	/// Direction of the flexible items
 	///
-	@include setHelperList($flex-directions, "flex-direction");
+	@include setHelperList($flex-directions, "flex-direction", "!important");
 
 	///
 	/// User Select Properties
 	///
-	@include setHelperList($user-selects, "user-select");
+	@include setHelperList($user-selects, "user-select", "!important");
 
 	///
 	/// Insets
