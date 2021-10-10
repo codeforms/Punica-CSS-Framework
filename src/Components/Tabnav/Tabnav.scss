@@ -24,7 +24,7 @@
 			background: transparent;
 			border: none;
 			border-radius: 0 !important;
-			line-height: initial;
+			line-height: unset;
 	        font-size: 1.025em;
 			color: theme('text-color');
 			padding: .935rem 1.4rem;
@@ -53,19 +53,21 @@
 		///
 		/// Bottom Tabnav
 		///
-		&.#{$tabnav-bottom} {
-			border-bottom: 0;
-			border-top: $tabnav-border-width theme('border-style') theme('color-secondary');
-			@include tab-button-styles() {
-				margin-top: -$tabnav-border-width;
-				border-top: $tabnav-border-width solid transparent;
+		@if $components-tabnav-bottom-position {
+			&.#{$tabnav-bottom} {
 				border-bottom: 0;
-				margin-bottom: 0;
-				&:hover {
-					border-top-color: theme('color-grey');
-				}
-				&.#{$tabnav-active} {
-					border-top-color: theme('primary-color');
+				border-top: $tabnav-border-width theme('border-style') theme('color-secondary');
+				@include tab-button-styles() {
+					margin-top: -$tabnav-border-width;
+					border-top: $tabnav-border-width solid transparent;
+					border-bottom: 0;
+					margin-bottom: 0;
+					&:hover {
+						border-top-color: theme('color-grey');
+					}
+					&.#{$tabnav-active} {
+						border-top-color: theme('primary-color');
+					}
 				}
 			}
 		}
@@ -82,6 +84,21 @@
 						&.#{$tabnav-active} {
 							color: $color;
 							border-bottom-color: $color;
+						}
+					}
+				}
+				///
+				/// Bottom Tabnav
+				///
+				@if $components-tabnav-bottom-position {
+					&.#{$type-name}.#{$tabnav-bottom} {
+						.#{$button-class},
+						a.#{$button-class},
+						.#{$dropdown-name} .#{$button-class},
+						.#{$dropdown-name} a.#{$button-class} {
+							&.#{$tabnav-active} {
+								border-top-color: $color;
+							}
 						}
 					}
 				}
