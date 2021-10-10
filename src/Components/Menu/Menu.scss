@@ -61,6 +61,14 @@
 			.#{$menu-name} {
 				padding: .4rem;
 			}
+			&.#{$menu-disabled} {
+				opacity: .59;
+				& > a {
+					color: theme('color-grey');
+					cursor: default;
+					pointer-events: none;
+				}
+			}
 		}
 		// menu badge
 		.#{$menu-badge} {
