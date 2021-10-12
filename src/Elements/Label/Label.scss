@@ -9,8 +9,8 @@
 	.#{$label-name} {
 		@include set-style(theme('background-color'), theme('text-color')) {
 			display: inline-block;
-			font-weight: $label-font-weight;
-			line-height: $label-line-height;
+			font-weight: theme('header-weight');
+			line-height: 1.2;
 			margin: $label-margin;
 			border-radius: theme('border-radius');
 			text-decoration: none;

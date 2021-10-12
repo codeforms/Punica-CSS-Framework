@@ -69,7 +69,7 @@
 			background: transparent !important;
 			th {
 				border-bottom-color: theme('border-color');
-				font-weight: 400;
+				font-weight: theme('font-weight');
 				color: theme('color-grey');
 				padding: $table-heading-padding;
 			}

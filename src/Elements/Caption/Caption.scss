@@ -10,7 +10,7 @@
 	    align-items: center;
 		margin: $caption-margin;
 		font-size: $caption-font-size;
-		font-weight: $caption-font-weight;
+		font-weight: theme('header-weight');
 		line-height: $caption-line-height;
 		text-align: left;
 		>img,

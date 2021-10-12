@@ -40,7 +40,7 @@
 			}
 			&.#{$tabnav-active} {
 				color: theme('primary-color');
-				font-weight: 700;
+				font-weight: theme('header-weight');
 				border-bottom-color: theme('primary-color');
 				i, [class^="#{$icon-font-class-name}"] {
 					color: inherit;

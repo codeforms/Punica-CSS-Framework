@@ -5,11 +5,11 @@
 // SIZES ================================================
 $button-sizes: (
 	// size name, font-size, padding, font-weight
-	("tiny", .809em, .415rem .5rem, 700),
-	("mini", .909em, .445rem .9rem, 700),
-	("small", .979em, .645rem 1.4rem, 700),
-	("large", 1.25em, 1.15rem 2.1rem, 700),
-	("huge", 1.45em, 1.3rem 2.4rem, 700),
+	("tiny", .809em, .415rem .5rem, theme('header-weight')),
+	("mini", .909em, .445rem .9rem, theme('header-weight')),
+	("small", .979em, .645rem 1.4rem, theme('header-weight')),
+	("large", 1.25em, 1.15rem 2.1rem, theme('header-weight')),
+	("huge", 1.45em, 1.3rem 2.4rem, theme('header-weight')),
     //("name", font-size, padding, font-weight)
 );
 

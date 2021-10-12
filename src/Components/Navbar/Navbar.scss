@@ -143,7 +143,7 @@
 		.#{$dropdown-name} .#{$button-class} {
 			font-size: $navbar-font-size;
 			padding: .935rem 1.4rem;
-			font-weight: 700;
+			font-weight: theme('header-weight');
 		}
 		/// 
 		/// NAVBAR THEMES

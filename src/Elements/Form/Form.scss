@@ -57,7 +57,7 @@
 	legend {
 		display: block;
 		font-size: 1rem;
-		font-weight: 400;
+		font-weight: theme('font-weight');
 	}
 	fieldset {
 		border-width: 0;
@@ -88,7 +88,7 @@
 				margin: $form-label-margin;
 				color: theme('text-color');
 				font-size: $form-label-size;
-				font-weight: $form-label-weight;
+				font-weight: theme('header-weight');
 				text-transform: none;
 				height: fit-content;
 			}
@@ -193,7 +193,7 @@
 				padding: $form-checkbox-label-padding;
 				cursor: pointer;
 				user-select: none;
-				font-weight: 400;
+				font-weight: theme('font-weight');
 				margin: 0;
 			}
 			input {

@@ -21,7 +21,7 @@
 			min-height: 2rem;
 			color: theme('text-color');
 			padding: .6rem 0;
-			font-weight: 700;
+			font-weight: theme('header-weight');
 			letter-spacing: -.015rem;
 		}
 		// menu item
@@ -37,7 +37,7 @@
 				padding: .28rem .9rem;
 				text-decoration: none;
 				font-size: 1em;
-				font-weight: 600;
+				font-weight: theme('font-weight');
 				transition: background .15s, color .15s;
 				&:hover {
 					background: theme('color-secondary');
@@ -51,6 +51,12 @@
 					color: theme('text-color');
 					transition: background .15s, color .15s;
 				}
+				&.#{$menu-disabled} {
+					opacity: .59;
+					color: theme('color-grey');
+					cursor: default;
+					pointer-events: none;
+				}
 			}
 			i, span.#{$icon-font-class-name} {
 				color: theme('color-grey');
@@ -60,14 +66,6 @@
 			}
 			.#{$menu-name} {
 				padding: .4rem;
-			}
-			&.#{$menu-disabled} {
-				opacity: .59;
-				& > a {
-					color: theme('color-grey');
-					cursor: default;
-					pointer-events: none;
-				}
 			}
 		}
 		// menu badge

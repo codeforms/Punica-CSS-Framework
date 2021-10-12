@@ -36,12 +36,12 @@
 				}
 		    	>.#{$list-title} {
 		    		font-size: 1.28rem;
-    				font-weight: 700;
+    				font-weight: theme('header-weight');
 					line-height: 1;
 		    	}
 				>.#{$list-subtitle} {
 					font-size: .889em;
-					font-weight: 400;
+					font-weight: theme('font-weight');
 					color: theme('primary-color');
 					margin-bottom: 7px;
 				}
