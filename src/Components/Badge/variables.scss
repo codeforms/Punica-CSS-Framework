@@ -14,7 +14,7 @@ $badge-styles: (
 /// SIZES ===============================================
 $badge-sizes: (
 	// size name, font-size, padding
-    ("tiny", .659rem, 0 4px),
-    ("small", .749rem, 1px 4px),
-    ("large", 1.1rem, 2px 8px)
+    ("tiny", .659rem!important, 0 4px!important),
+    ("small", .749rem!important, 1px 4px!important),
+    ("large", 1.1rem!important, 2px 8px!important)
 );
