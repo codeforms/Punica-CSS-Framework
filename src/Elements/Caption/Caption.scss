@@ -11,7 +11,7 @@
 		margin: $caption-margin;
 		font-size: $caption-font-size;
 		font-weight: theme('header-weight');
-		line-height: $caption-line-height;
+		line-height: theme('line-height') - .2;
 		text-align: left;
 		>img,
 	    >.#{$icon-font-class-name},
