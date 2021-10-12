@@ -6,7 +6,7 @@
 ///
 @if $components-badge {
 	.#{$badge-name} {
-		@include set-style(theme('background-color'), theme('text-color')) {
+		@include set-style(darken(theme('background-color'), 4.5%), theme('text-color')) {
 			position: relative;
 			white-space: nowrap;
 			display: inline-flex;
