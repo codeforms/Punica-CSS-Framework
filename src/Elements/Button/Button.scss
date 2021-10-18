@@ -97,6 +97,11 @@
 				&.#{$theme-name} {
 					@include button-styles($theme-color, $border-color);
 				}
+				@if $elements-button-outlined {
+					&.#{$theme-name}.#{$button-class-outlined} {
+						@include button-styles($theme-color, $border-color, true);
+					}
+				}
 			}
 		}
 
