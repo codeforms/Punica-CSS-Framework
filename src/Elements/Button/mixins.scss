@@ -262,10 +262,16 @@
 ///
 @mixin button-styles(
 	$bg-color: theme('primary-color'),
-	$border-color: null
+	$border-color: null,
+	$outlined : false
 ) {
-	background: $bg-color;
-	color: theme('color-negative');
+	@if $outlined {
+		background: transparent;
+		color: $bg-color;
+	} @else {
+		background: $bg-color;
+		color: theme('color-negative');
+	}
 	text-shadow: 0 1px 1px darken($bg-color, 6%);
 	border: theme('border-width') theme('border-style') $border-color;
 	&:hover {
@@ -336,9 +342,10 @@
 		@include button-styles(transparent) {
 			box-shadow: none;
 			border: none;
-			color: theme('text-color');
+			color: theme('primary-color');
+			text-decoration: underline;
+			font-weight: theme('font-weight');
 			&:hover {
-				background: theme('color-active');
 				color: theme('text-color');
 			}
 			i, [class^="#{$icon-font-class-name}"] {
