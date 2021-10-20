@@ -17,9 +17,16 @@
 ///
 /// Get active theme's value by key
 /// @param {String} $key
+/// @param {String} $sub-key : for nested list
 ///
-@function theme($key) {
-	@return map-get($theme-map, $key);
+@function theme($key, $sub-key: null) {
+	$theme-map: map-get($theme-map, $key);
+
+	@if $sub-key {
+	    @return map-get($theme-map, $sub-key);
+	}
+	
+	@return $theme-map;
 }
 
 /// 
