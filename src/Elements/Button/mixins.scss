@@ -61,7 +61,7 @@
 				top: auto;
 				right: 0;
 				left: auto;
-				@include shadow(0, -3px, 10px, rgba(0, 0, 0, 0.15));
+				@include shadow(0, -2px);
 			}
 		}
 		&.#{$dropdown-bottom}.#{$dropdown-left},
