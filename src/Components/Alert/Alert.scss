@@ -6,16 +6,16 @@
 ///
 @if $components-alert {
 	.#{$alert-name} {
-		@include set-style(theme('main-bg'), theme('text-color')) {
+		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: block;
 			@include border();
-			border-radius: theme('border-radius');
+			border-radius: theme('border', 'radius');
 			padding: .6rem;
 			margin: 0 0 8px;
 			width: 100%;
-			font-weight: theme('header-weight');
+			font-weight: theme('typography', 'header-weight');
 			a {
-				color: theme('text-color');
+				color: theme('color', 'text');
 				text-decoration: underline;
 				&:focus,
 				&:hover,
@@ -39,7 +39,7 @@
 		///
 		@if($components-alert-styles) {
 			@each $style-name, $bg-color in $alert-styles {
-				@include set-style($bg-color, theme('color-negative'), $style-name) {
+				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
 					border-color: darken($bg-color, 5%);
 				};
 			}

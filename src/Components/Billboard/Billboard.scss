@@ -6,13 +6,13 @@
 ///
 @if $components-billboard {
 	.#{$billboard-name} {
-		@include set-style(theme('background-color'), theme('text-color')) {
+		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
 			padding: 4.5rem 2.5rem;
-			border-color: darken(theme('background-color'), 4.5%);
+			border-color: darken(theme('color', 'background'), 4.5%);
 			@include border();
 		};
 		///
@@ -20,7 +20,7 @@
 		///
 		@if $components-billboard-styles {
 			@each $style-name, $bg-color in $billboard-styles {
-				@include set-style($bg-color, theme('color-negative'), $style-name) {
+				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
 					border-color: darken($bg-color, 4.5%);
 				};
 			}

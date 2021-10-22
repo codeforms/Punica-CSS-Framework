@@ -4,22 +4,22 @@
 
 // SIZES ================================================
 $button-sizes: (
-	// size name, font-size, padding, font-weight
-	("tiny", .809em, .415rem .5rem, theme('header-weight')),
-	("mini", .909em, .445rem .9rem, theme('header-weight')),
-	("small", .979em, .645rem 1.4rem, theme('header-weight')),
-	("large", 1.25em, 1.15rem 2.1rem, theme('header-weight')),
-	("huge", 1.45em, 1.3rem 2.4rem, theme('header-weight')),
+	// size name, font-size, padding
+	("tiny", .809em, .415rem .5rem),
+	("mini", .909em, .445rem .9rem),
+	("small", .979em, .645rem 1.4rem),
+	("large", 1.25em, 1.15rem 2.1rem),
+	("huge", 1.45em, 1.3rem 2.4rem),
     //("name", font-size, padding, font-weight)
 );
 
 /// STYLES ==============================================
 $button-styles: (
 	// name, color, border color
-	('primary', theme('primary-color'), lighten(theme('primary-color'), 7%)),
-	('success', theme('success-color'), lighten(theme('success-color'), 7%)),
-	('warning', theme('warning-color'), lighten(theme('warning-color'), 7%)),
-	('error', theme('error-color'), lighten(theme('error-color'), 7%)),
-	('dark', theme('color-dark'), lighten(theme('color-dark'), 7%)),
+	('primary', theme('color', 'primary'), lighten(theme('color', 'primary'), 7%)),
+	('success', theme('color', 'success'), lighten(theme('color', 'success'), 7%)),
+	('warning', theme('color', 'warning'), lighten(theme('color', 'warning'), 7%)),
+	('error', theme('color', 'error'), lighten(theme('color', 'error'), 7%)),
+	('dark', theme('color', 'dark'), lighten(theme('color', 'dark'), 7%)),
     //("name", color, border-color)
 );

@@ -15,11 +15,11 @@
 		margin-bottom: 1.5rem;
 		caption {
 			text-align: inherit;
-			color: theme('text-color');
+			color: theme('color', 'text');
 			font-size: 1rem;
 			font-weight: bold;
 			padding: $table-heading-padding;
-			border-bottom: theme('border-width') theme('border-style') theme('text-color');
+			border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'text');
 		}
 		///
 		/// STRIPED
@@ -29,10 +29,10 @@
 				tr,
 				tbody tr {
 					&.#{$table-class-active} {
-						background: theme('color-secondary');
+						background: theme('color', 'secondary');
 					}
 					&:nth-of-type(odd) {
-						background: theme('color-secondary');
+						background: theme('color', 'secondary');
 					}
 				}
 			}
@@ -45,8 +45,8 @@
 				tr,
 				tbody tr {
 					&:hover {
-						background: theme('color-secondary');
-						color: theme('text-color');
+						background: theme('color', 'secondary');
+						color: theme('color', 'text');
 					}
 				}
 			}
@@ -56,21 +56,21 @@
 			transition: all 0.3s;
 			&.#{$table-class-active},
 			&.#{$table-class-active}:hover {
-				background: theme('color-secondary');
+				background: theme('color', 'secondary');
 			}
 		}
 		td,
 		th {
-			border-bottom: theme('border-width') theme('border-style') theme('color-secondary');
+			border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'secondary');
 			padding: $table-inline-padding;
 			text-align: inherit;
 		}
 		thead tr {
 			background: transparent !important;
 			th {
-				border-bottom-color: theme('border-color');
-				font-weight: theme('font-weight');
-				color: theme('color-grey');
+				border-bottom-color: theme('border', 'color');
+				font-weight: theme('typography', 'font-weight');
+				color: theme('color', 'grey');
 				padding: $table-heading-padding;
 			}
 		}

@@ -1,74 +1,64 @@
 /////////////////////////////////////////////////////////
 /// PUNICA CSS > THEMES
+/// @link http://punica.site/themes
 /////////////////////////////////////////////////////////
 @import "_getters";
-///
-/// Punica Themes
-/// @link http://punica.site/themes
-///
-/// Theme customization of Punica CSS
-/// @link http://punica.site/base/custom-theme
-///
+
 $punica-themes: (
-	///
-	/// Default Theme
-	/// @link http://punica.site/themes/light
-	///
 	light: (
-		///////////////////////////////////////////////////////////
-		// GLOBAL
-		///////////////////////////////////////////////////////////
-		// imported google font and weights
-		// elements->typography->variables
-		'google-font'					: 'Nunito',
-		'google-font-weights'			: '300;400;600;700;900',
-		// typography settings
-		'font-family'					: 'Nunito',
-		'font-size'						: 13px,
-		'font-weight'					: 400,
-		'line-height'					: 1.7,
-		'header-weight'					: 900,
-		'background-color'				: white,
-		'text-color'					: #3f4143,
-		///////////////////////////////////////////////////////////
-		// COLOR
-		///////////////////////////////////////////////////////////
-		'primary-color'					: #0a8fff,
-		'success-color'					: #2ec4b6,
-		'warning-color'					: #de9e36,
-		'error-color'					: #d62828,
-		//
-		'color-active'					: #dcdcdc,
-		'color-negative'				: white,
-		'color-grey'					: #a8a8a8,
-		'color-secondary'				: #e6e6e6,
-		'color-dark'					: #26272b,
-		///////////////////////////////////////////////////////////
-		// BORDER
-		///////////////////////////////////////////////////////////
-		'border-color' 					: #c6c6c6,
-		'border-width'					: 1px,
-		'border-style'					: solid,
-		'border-radius'					: 4px,
-		///////////////////////////////////////////////////////////
-		// SHADOW
-		///////////////////////////////////////////////////////////
-		'shadow-horizontal'				: 0,
-		'shadow-vertical'				: 1px,
-		'shadow-blur'					: 4px,
-		'shadow-spread'					: 0,
-		'shadow-color'					: rgba(0, 0, 0, 0.15),
-		///////////////////////////////////////////////////////////
-		// INPUT
-		///////////////////////////////////////////////////////////
-		'input-bg'						: white,
-		'input-color'					: #3f4143,
-		'input-border-color'			: #c6c6c6,
-		'input-outline-color'			: #26272b,
-		'input-outline-width'			: 2px,
-		///////////////////////////////////////////////////////////
-		// secondary button
-		'button-secondary-bg'			: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
-		'button-secondary-bg-hover'		: linear-gradient(to top, #ffffff 0%,#e6e6e6 100%)
+		'name'	: 'Default Theme',
+		'type'	: 'light', // light or dark (required*),
+		'google-font': (
+			'name'		: 'Nunito', // or Source+Sans+Pro etc
+			'weights'	: '300;400;600;700;900',
+		),
+		'typography': (
+			'font-family'		: 'Nunito',
+			'font-size'			: 13px,
+			'font-weight'		: 400,
+			'line-height'		: 1.7,
+			'header-weight'		: 900,
+		),
+		'color': (
+			'text'			: #3f4143,
+			'background'	: white,
+			'primary'		: #0a8fff,
+			'success'		: #2ec4b6,
+			'warning'		: #de9e36,
+			'error'			: #d62828,
+			'active'		: #dcdcdc,
+			'negative'		: white,
+			'grey'			: #a8a8a8,
+			'secondary'		: #e6e6e6,
+			'dark'			: #26272b,
+		),
+		'border': (
+			'color' : #c6c6c6,
+			'width'	: 1px,
+			'style'	: solid,
+			'radius': 4px,
+		),
+		'shadow': (
+			'horizontal': 0,
+			'vertical'	: 1px,
+			'blur'		: 4px,
+			'spread'	: 0,
+			'color'		: rgba(0, 0, 0, 0.15),
+		),
+		'input': (
+			'color'			: #3f4143,
+			'background'	: white,
+			'border-color'	: #c6c6c6,
+			'outline-color'	: #26272b,
+			'outline-width'	: 2px,
+			'label-weight'	: 700
+		),
+		'elements': (
+			'button': (
+				'font-weight'		: 700,
+				'secondary-bg'		: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
+				'secondary-bg-hover': linear-gradient(to top, #ffffff 0%,#e6e6e6 100%)
+			),
+		)
 	),
 );

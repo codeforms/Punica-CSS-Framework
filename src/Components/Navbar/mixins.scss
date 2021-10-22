@@ -61,7 +61,7 @@
 					color: $text-color;
 				}
 				&:focus {
-					outline: theme('input-outline-width') solid lighten($input-border-color, 13%);
+					outline: theme('input', 'outline-width') solid lighten($input-border-color, 13%);
 				}
 			}
 		}

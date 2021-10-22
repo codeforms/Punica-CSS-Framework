@@ -10,8 +10,8 @@
 	    align-items: center;
 		margin: $caption-margin;
 		font-size: $caption-font-size;
-		font-weight: theme('header-weight');
-		line-height: theme('line-height') - .2;
+		font-weight: theme('typography', 'header-weight');
+		line-height: theme('typography', 'line-height') - .2;
 		text-align: left;
 		>img,
 	    >.#{$icon-font-class-name},

@@ -154,7 +154,7 @@
 	}
 	.bordered {@include border();}
 	.borderless {border: none !important;}
-	.rounded {border-radius: theme('border-radius');}
+	.rounded {border-radius: theme('border', 'radius');}
 	.radiusless {border-radius:0 !important;}
 	.shadowed {@include shadow();}
 	.shadowless {box-shadow:none !important;}

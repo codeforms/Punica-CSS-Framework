@@ -11,7 +11,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-end;
-		border-bottom: $tabnav-border-width theme('border-style') theme('color-secondary');
+		border-bottom: $tabnav-border-width theme('border', 'style') theme('color', 'secondary');
 		padding: 0;
 		&>.#{$button-class-group} {
 			box-shadow: none;
@@ -26,22 +26,22 @@
 			border-radius: 0 !important;
 			line-height: unset;
 	        font-size: 1.025em;
-			color: theme('text-color');
+			color: theme('color', 'text');
 			padding: .935rem 1.4rem;
 			box-shadow: none;
 			border-bottom: $tabnav-border-width solid transparent;
 	        margin-bottom: -$tabnav-border-width;
 			&:hover {
-				color: theme('text-color');
-				border-bottom-color: theme('color-grey');
+				color: theme('color', 'text');
+				border-bottom-color: theme('color', 'grey');
 			}
 			&.#{$button-class-disabled} {
 				opacity: .45;
 			}
 			&.#{$tabnav-active} {
-				color: theme('primary-color');
-				font-weight: theme('header-weight');
-				border-bottom-color: theme('primary-color');
+				color: theme('color', 'primary');
+				font-weight: theme('typography', 'header-weight');
+				border-bottom-color: theme('color', 'primary');
 				i, [class^="#{$icon-font-class-name}"] {
 					color: inherit;
 				}
@@ -56,17 +56,17 @@
 		@if $components-tabnav-bottom-position {
 			&.#{$tabnav-bottom} {
 				border-bottom: 0;
-				border-top: $tabnav-border-width theme('border-style') theme('color-secondary');
+				border-top: $tabnav-border-width theme('border', 'style') theme('color', 'secondary');
 				@include tab-button-styles() {
 					margin-top: -$tabnav-border-width;
 					border-top: $tabnav-border-width solid transparent;
 					border-bottom: 0;
 					margin-bottom: 0;
 					&:hover {
-						border-top-color: theme('color-grey');
+						border-top-color: theme('color', 'grey');
 					}
 					&.#{$tabnav-active} {
-						border-top-color: theme('primary-color');
+						border-top-color: theme('color', 'primary');
 					}
 				}
 			}

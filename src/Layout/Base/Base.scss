@@ -21,11 +21,11 @@ html {
 }
 body {
 	font-family: $typography-font-family; // typography > variables
-	font-size: theme('font-size');
-	font-weight: theme('font-weight');
-	line-height: theme('line-height');
-	color: theme('text-color');
-	background-color: theme('background-color');
+	font-size: theme('typography', 'font-size');
+	font-weight: theme('typography', 'font-weight');
+	line-height: theme('typography', 'line-height');
+	color: theme('color', 'text');
+	background-color: theme('color', 'background');
 }
 html, body {
 	min-height: 100%;
@@ -35,31 +35,31 @@ html, body {
 	border: none;
 }
 ::selection {
-	background-color: theme('primary-color');
-	color: theme('color-negative'); 
+	background-color: theme('color', 'primary');
+	color: theme('color', 'negative'); 
 }
 ::placeholder {
-	color: theme('text-color');
+	color: theme('color', 'text');
 	opacity: .5;
 }
 a {
-	color: theme('text-color');
+	color: theme('color', 'text');
 	outline: none;
 	text-decoration: none;
 	&:focus,
 	&:hover,
 	&:active,
 	&.active {
-		color: darken(theme('primary-color'), 8%);
+		color: darken(theme('color', 'primary'), 8%);
 		text-decoration: underline;
 	}
 	&:visited {
-		color: theme('text-color');
+		color: theme('color', 'text');
 	}
 }
 hr {
 	margin: 15px 0;
-	background-color: theme('border-color');
+	background-color: theme('border', 'color');
 	border: none;
 	height: 1px;
 }
@@ -104,7 +104,7 @@ iframe {
 :not(pre)>code, 
 :not(pre)>kbd, 
 :not(pre)>samp {
-	color: theme('error-color');
+	color: theme('color', 'error');
 	white-space: nowrap;
 	padding: 2px 6px;
 	font-size: 1em;

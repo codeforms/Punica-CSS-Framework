@@ -26,8 +26,8 @@ $form-input-sizes: (
 /// STYLES ==============================================
 $form-input-styles: (
 	// name, color (for input validations)
-	('success', theme('success-color')),
-	('error', theme('error-color'))
+	('success', theme('color', 'success')),
+	('error', theme('color', 'error'))
 );
 
 /// PREFERENCES (Checkbox & Radio) ======================

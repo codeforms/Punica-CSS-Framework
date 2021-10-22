@@ -6,7 +6,7 @@
 ///
 @if $components-menu {
 	.#{$menu-name} {
-		background-color: lighten(theme('background-color'), 2.5%);
+		background-color: lighten(theme('color', 'background'), 2.5%);
 		border-radius: 0;
 		list-style: none;
 		margin: 0;
@@ -19,9 +19,9 @@
 		.#{$menu-title} {
 			font-size: 1.25em;
 			min-height: 2rem;
-			color: theme('text-color');
+			color: theme('color', 'text');
 			padding: .6rem 0;
-			font-weight: theme('header-weight');
+			font-weight: theme('typography', 'header-weight');
 			letter-spacing: -.015rem;
 		}
 		// menu item
@@ -31,35 +31,35 @@
 			text-decoration: none;
 		    text-align: left;
 			& > a {
-				color: theme('text-color');
+				color: theme('color', 'text');
 				display: block;
 				width: 100%;
 				padding: .28rem .9rem;
 				text-decoration: none;
 				font-size: 1em;
-				font-weight: theme('font-weight');
+				font-weight: theme('typography', 'font-weight');
 				transition: background .15s, color .15s;
 				&:hover {
-					background: theme('color-secondary');
-					color: theme('text-color');
+					background: theme('color', 'secondary');
+					color: theme('color', 'text');
 					transition: background .15s, color .15s;
 				}
 				&:active,
 				&:focus,
 				&.#{$menu-item-active} {
-					background: theme('color-secondary');
-					color: theme('text-color');
+					background: theme('color', 'secondary');
+					color: theme('color', 'text');
 					transition: background .15s, color .15s;
 				}
 				&.#{$menu-disabled} {
 					opacity: .59;
-					color: theme('color-grey');
+					color: theme('color', 'grey');
 					cursor: default;
 					pointer-events: none;
 				}
 			}
 			i, span.#{$icon-font-class-name} {
-				color: theme('color-grey');
+				color: theme('color', 'grey');
 				font-size: 1.2rem;
 				margin-right: 10px;
 				vertical-align: text-bottom;
@@ -83,7 +83,7 @@
 		// divided menu
 		&.#{$menu-divided} {
 			.#{$menu-item} {
-				border-bottom: theme('border-width') theme('border-style') theme('color-active');
+				border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'active');
 				&:last-child {
 					border-bottom: none;
 				}

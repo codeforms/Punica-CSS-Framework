@@ -36,13 +36,13 @@
 				}
 		    	>.#{$list-title} {
 		    		font-size: 1.28rem;
-    				font-weight: theme('header-weight');
+    				font-weight: theme('typography', 'header-weight');
 					line-height: 1;
 		    	}
 				>.#{$list-subtitle} {
 					font-size: .889em;
-					font-weight: theme('font-weight');
-					color: theme('primary-color');
+					font-weight: theme('typography', 'font-weight');
+					color: theme('color', 'primary');
 					margin-bottom: 7px;
 				}
 		    }
@@ -52,7 +52,7 @@
     		    margin-left: 1rem;
 			}
 			&.#{$list-active} {
-				background: darken(theme('background-color'), 11%);
+				background: darken(theme('color', 'background'), 11%);
 			}
 		}
 		///
@@ -75,7 +75,7 @@
 			&.#{$list-striped} {
 				>.#{$list-item} {
 					&:nth-of-type(odd) {
-						background: theme('color-secondary');
+						background: theme('color', 'secondary');
 					}
 				}
 			}
@@ -87,7 +87,7 @@
 			&.#{$list-hovered} {
 				>.#{$list-item} {
 					&:hover {
-						background: theme('color-secondary');
+						background: theme('color', 'secondary');
 						transition: .15s;
 					}
 				}

@@ -52,28 +52,28 @@ $font-sizes: (
 /// Text Colors ======================================
 $text-colors		: (
 	// class name, value
-	("color-grey", theme('color-grey')),
+	("color-grey", theme('color', 'grey')),
 	("color-white", white),
 	("color-black", black),
-	("color-primary", theme('primary-color')),
-	("color-success", theme('success-color')),
-	("color-warning", theme('warning-color')),
-	("color-error", theme('error-color'))
+	("color-primary", theme('color', 'primary')),
+	("color-success", theme('color', 'success')),
+	("color-warning", theme('color', 'warning')),
+	("color-error", theme('color', 'error'))
 );
 
 /// Bg Colors ========================================
 $bg-colors			: (
 	// class name, value
-	("bg-color", theme('background-color')),
-	("bg-grey", theme('color-grey')),
-	("bg-secondary", theme('color-secondary')),
+	("bg-color", theme('color', 'background')),
+	("bg-grey", theme('color', 'grey')),
+	("bg-secondary", theme('color', 'secondary')),
 	("bg-white", white),
 	("bg-black", black),
-	("bg-dark", theme('color-dark')),
-	("bg-primary", theme('primary-color')),
-	("bg-success", theme('success-color')),
-	("bg-warning", theme('warning-color')),
-	("bg-error", theme('error-color'))
+	("bg-dark", theme('color', 'dark')),
+	("bg-primary", theme('color', 'primary')),
+	("bg-success", theme('color', 'success')),
+	("bg-warning", theme('color', 'warning')),
+	("bg-error", theme('color', 'error'))
 );
 
 /// Cursors ==========================================

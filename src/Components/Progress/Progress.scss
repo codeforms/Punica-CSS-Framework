@@ -8,7 +8,7 @@
 	.#{$progress-name} {
 		width: 100%;
 		height: 12px;
-		background: theme('color-secondary');
+		background: theme('color', 'secondary');
 		@include shadow(0, 1px, 2px, rgba(0, 0, 0, 0.15), inset);
 		border-radius: 16px;
 		appearance: none;
@@ -17,11 +17,11 @@
 			border-radius: 16px;
 		}
 		&::-webkit-progress-value {
-			background: theme('primary-color');
+			background: theme('color', 'primary');
 			border-radius: 16px;
 		}
 		&::-moz-progress-bar {
-			background: theme('primary-color');
+			background: theme('color', 'primary');
 			border-radius: 16px;
 		}
 		///

@@ -12,11 +12,11 @@
 /// @param {String|Null} $inset - Inset
 ///
 @mixin shadow(
-	$h-offset: theme('shadow-horizontal'),
-	$v-offset: theme('shadow-vertical'),
-	$blur: theme('shadow-blur'),
-	$spread: theme('shadow-spread'),
-	$color: theme('shadow-color'),
+	$h-offset: theme('shadow', 'horizontal'),
+	$v-offset: theme('shadow', 'vertical'),
+	$blur: theme('shadow', 'blur'),
+	$spread: theme('shadow', 'spread'),
+	$color: theme('shadow', 'color'),
 	$inset: null
 ) {
 	box-shadow: $inset $h-offset $v-offset $blur $spread $color;
@@ -31,9 +31,9 @@
 /// @param {Boolean} $specificity - Specificity
 ///
 @mixin border(
-	$width: theme('border-width'),
-	$style: theme('border-style'),
-	$color: theme('border-color'),
+	$width: theme('border', 'width'),
+	$style: theme('border', 'style'),
+	$color: theme('border', 'color'),
 	$specificity: false
 ) {
 	@if $specificity {
@@ -48,7 +48,7 @@
 /// Set default border
 ///
 @function set-border() {
-	@return theme('border-width') theme('border-style') theme('border-color');
+	@return theme('border', 'width') theme('border', 'style') theme('border', 'color');
 };
 
 ///

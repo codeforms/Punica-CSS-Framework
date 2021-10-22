@@ -4,8 +4,8 @@
 
 /// STYLES ==============================================
 $progress-styles : (
-	"success"	: theme('success-color'),
-	"warning"	: theme('warning-color'),
-	"error"		: theme('error-color'),
-	"dark"		: theme('text-color'), 
+	"success"	: theme('color', 'success'),
+	"warning"	: theme('color', 'warning'),
+	"error"		: theme('color', 'error'),
+	"dark"		: theme('color', 'text'), 
 );

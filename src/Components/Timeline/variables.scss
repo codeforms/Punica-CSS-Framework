@@ -4,11 +4,11 @@
 
 /// STYLES ==============================================
 $timeline-styles: (
-	("primary", theme('primary-color'), theme('color-negative')),
-	("success", theme('success-color'), theme('color-negative')),
-	("warning", theme('warning-color'), theme('color-negative')),
-	("error", theme('error-color'), theme('color-negative')),
-	("dark", theme('text-color'), theme('color-grey')),
+	("primary", theme('color', 'primary'), theme('color', 'negative')),
+	("success", theme('color', 'success'), theme('color', 'negative')),
+	("warning", theme('color', 'warning'), theme('color', 'negative')),
+	("error", theme('color', 'error'), theme('color', 'negative')),
+	("dark", theme('color', 'text'), theme('color', 'grey')),
 );
 
 /// PREFERENCES =========================================

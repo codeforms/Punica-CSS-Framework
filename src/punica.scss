@@ -3,9 +3,9 @@
 /////////////////////////////////////////////////////////
 
 /// Active Theme ========================================
-$active-theme: light; // light, dark 
+$active-theme: light;
 
-/// Options =============================================
+/// Framework Options ===================================
 @import "options";
 
 /// Themes ==============================================
@@ -17,12 +17,21 @@ $active-theme: light; // light, dark
 
 /// Active Theme ========================================
 @include get-theme() {
+	/*! 
+	 * PUNICA CSS - #{theme('name')}
+	 * 
+	 * @link http://punica.site
+	 * @link http://github.com/codeforms/Punica-CSS-Framework
+	 * 
+	 * Released under the MIT license
+	 * @link http://opensource.org/licenses/MIT
+	 */
 	@import "_themes/_setters";
 	///
 	@import "Layout/variables";
 	@import "Elements/variables";
 	@import "Components/variables";
-	@import "Utilities/variables";
+	@import "Utilities/variables"; 
 	///
 	@import "Layout/index";
 	@import "Elements/index";

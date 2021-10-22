@@ -8,23 +8,23 @@
 @if $elements-form {
 	@include form-inputs() {
 		-webkit-appearance: none;
-		background-color: theme('input-bg');
-		border: theme('border-width') theme('border-style') theme('input-border-color');
+		background-color: theme('input', 'background');
+		border: theme('border', 'width') theme('border', 'style') theme('input', 'border-color');
 		height: $form-input-height;
 		border-radius: $form-input-radius;
-		outline: theme('input-outline-width') solid transparent;
+		outline: theme('input', 'outline-width') solid transparent;
 		box-shadow: none;
 		box-sizing: inherit;
-		outline-offset: -#{theme('input-outline-width')};
+		outline-offset: -#{theme('input', 'outline-width')};
 		padding: $form-input-padding;
 		width: 100%;
 		max-width: 100%;
 		font-family: inherit;
-		color: theme('input-color');
+		color: theme('input', 'color');
 		font-size: $form-input-size;
 		&:focus {
-			outline: theme('input-outline-width') solid theme('input-outline-color');
-			outline-offset: -#{theme('input-outline-width')};
+			outline: theme('input', 'outline-width') solid theme('input', 'outline-color');
+			outline-offset: -#{theme('input', 'outline-width')};
 			transition: .35s;
 		}
 		///
@@ -57,7 +57,7 @@
 	legend {
 		display: block;
 		font-size: 1rem;
-		font-weight: theme('font-weight');
+		font-weight: theme('typography', 'font-weight');
 	}
 	fieldset {
 		border-width: 0;
@@ -86,9 +86,9 @@
 			@at-root .#{$form-name} label,
 			&>label {
 				margin: $form-label-margin;
-				color: theme('text-color');
+				color: theme('color', 'text');
 				font-size: $form-label-size;
-				font-weight: theme('header-weight');
+				font-weight: theme('input', 'label-weight');
 				text-transform: none;
 				height: fit-content;
 			}
@@ -193,7 +193,7 @@
 				padding: $form-checkbox-label-padding;
 				cursor: pointer;
 				user-select: none;
-				font-weight: theme('font-weight');
+				font-weight: theme('typography', 'font-weight');
 				margin: 0;
 			}
 			input {
@@ -227,21 +227,21 @@
 		.#{$form-checkbox} {
 			input + label::before {
 				content: $icon-checkbox-before;
-				color: theme('text-color');
+				color: theme('color', 'text');
 			}
 			input + label::after {
 				content: $icon-checkbox-after;
-				color: theme('primary-color');
+				color: theme('color', 'primary');
 			}
 		}
 		.#{$form-radio} {
 			input + label::before {
 				content: $icon-radio-before;
-				color: theme('text-color');
+				color: theme('color', 'text');
 			}
 			input + label::after {
 				content:  $icon-radio-after;
-				color: theme('primary-color');
+				color: theme('color', 'primary');
 			}
 		}
 	}

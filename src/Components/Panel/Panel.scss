@@ -12,7 +12,7 @@
 		// has panel border?
 		@if $has-panel-border {
 			@include border();
-			border-radius: theme('border-radius');
+			border-radius: theme('border', 'radius');
 		}
 
 		// has panel shadow?
@@ -20,7 +20,7 @@
 			@include shadow();
 		}
 
-		background-color: theme('background-color');
+		background-color: theme('color', 'background');
 		margin: $panel-margin;
 		&>.#{$panel-header},
 		&>.#{$panel-bottom} {
@@ -45,7 +45,7 @@
 			}
 			.#{$panel-title} {
 				font-size: 1.185rem;
-				font-weight: theme('header-weight');
+				font-weight: theme('typography', 'header-weight');
 			}
 		}
 		&>.#{$panel-content} {
@@ -81,7 +81,7 @@
 				font-size: 1.39em;
 				line-height: 1.5;
 				margin-bottom: 26px;
-				color: darken(theme('text-color'), 16%);
+				color: darken(theme('color', 'text'), 16%);
 				letter-spacing: -.0158em;
 			}
 		}

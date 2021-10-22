@@ -6,15 +6,15 @@
 ///
 @if $components-badge {
 	.#{$badge-name} {
-		@include set-style(theme('color-secondary'), theme('text-color')) {
+		@include set-style(theme('color', 'secondary'), theme('color', 'text')) {
 			position: relative;
 			white-space: nowrap;
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
-			font-weight: theme('header-weight');
+			font-weight: theme('typography', 'header-weight');
 			border-radius: 500px;
-			border: theme('border-width') theme('border-style') darken(theme('color-secondary'), 6.5%);
+			border: theme('border', 'width') theme('border', 'style') darken(theme('color', 'secondary'), 6.5%);
 		};
 		@include set-size(1em, 1px 6px);
 		///
@@ -22,7 +22,7 @@
 		///
 		@if $components-badge-styles {
 			@each $name, $bg-color in $badge-styles {
-				@include set-style($bg-color, theme('color-negative'), $name) {
+				@include set-style($bg-color, theme('color', 'negative'), $name) {
 					border-color: darken($bg-color, 6.5%);
 				};
 			}

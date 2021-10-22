@@ -7,16 +7,16 @@
 @if $elements-label {
 	a.#{$label-name},
 	.#{$label-name} {
-		@include set-style(theme('background-color'), theme('text-color')) {
+		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: inline-block;
-			font-weight: theme('header-weight');
+			font-weight: theme('typography', 'header-weight');
 			line-height: 1.2;
 			margin: $label-margin;
-			border-radius: theme('border-radius');
+			border-radius: theme('border', 'radius');
 			text-decoration: none;
 			@include border();
 			@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
-			border-color: theme('border-color');
+			border-color: theme('border', 'color');
 			@include set-size($label-font-size, $label-padding);
 			>i,
 			>.material-icons {
@@ -28,7 +28,7 @@
 		///
 		@if ($elements-label-styles) {
 			@each $style-name, $bg-color in $label-styles {
-				@include set-style($bg-color, theme('color-negative'), $style-name) {
+				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
 					border-color: darken($bg-color, 7%);
 				};
 			}

@@ -26,7 +26,7 @@
 			}
 			&~.#{$process-item} {
 				&::before {
-					background: theme('border-color');
+					background: theme('border', 'color');
 				}
 			}
 		}

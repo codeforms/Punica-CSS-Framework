@@ -14,7 +14,7 @@
 	#{$header},
 	.#{$header} {
 		font-size: $font-size;
-		font-weight: theme('header-weight');
+		font-weight: theme('typography', 'header-weight');
 	}
 	@include breakpoints($breakpoints-medium, 'max-width') {
 		#{$header},
@@ -35,7 +35,7 @@ h6.bordered,
 .h4.bordered, 
 .h5.bordered, 
 .h6.bordered {
-	border-width: 0 0 theme('border-width') 0 !important;
+	border-width: 0 0 theme('border', 'width') 0 !important;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
 }
@@ -52,11 +52,11 @@ abbr[title] {
 	text-decoration: none;
 }
 blockquote {
-	border-left: .1rem dotted theme('color-dark');
+	border-left: .1rem dotted theme('color', 'dark');
 	margin-left: 0;
 	padding: .4rem .8rem;
 	font-style: italic;
-	color: theme('text-color');
+	color: theme('color', 'text');
 }
 small {
   font-size: 86%;

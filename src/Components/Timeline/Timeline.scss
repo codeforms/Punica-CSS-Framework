@@ -20,11 +20,11 @@
 				bottom: 0;
 				left: 0;
 				width: $timeline-border-width;
-				background-color: theme('border-color');
+				background-color: theme('border', 'color');
 			}
 			&:target .#{$timeline-type} {
-				border-color: theme('primary-color');
-				box-shadow: 0 0 0.2em theme('primary-color');
+				border-color: theme('color', 'primary');
+				box-shadow: 0 0 0.2em theme('color', 'primary');
 			}
 			.#{$timeline-type} {
 				position: absolute;
@@ -35,8 +35,8 @@
 				top: 13px;
 				left: -(($timeline-type-width / 2px) - $timeline-border-width);
 				align-items: center;
-				background-color: theme('color-secondary');
-				border: 2px theme('border-style') theme('border-color');
+				background-color: theme('color', 'secondary');
+				border: 2px theme('border', 'style') theme('border', 'color');
 				border-radius: 50%;
 				justify-content: center;
 				flex-shrink: 0;
@@ -61,7 +61,7 @@
 			.#{$timeline-media} {
 				min-width: 0;
 				max-width: 100%;
-				color: theme('text-color');
+				color: theme('color', 'text');
 				flex: auto;
 				margin-left: 10px;
 				width: 100%;
@@ -69,7 +69,7 @@
 			.#{$timeline-author} {
 				font-weight: bold;
 				font-size: 1rem;
-				color: darken(theme('text-color'), 12%);
+				color: darken(theme('color', 'text'), 12%);
 			}
 			.#{$timeline-date} {
 				font-size: .9em;
@@ -99,10 +99,10 @@
 				margin-top: 16px;
 			}
 			&:last-child::before {
-				background: linear-gradient(180deg, theme('border-color') 45%, rgba(255,255,255,0) 100%);
+				background: linear-gradient(180deg, theme('border', 'color') 45%, rgba(255,255,255,0) 100%);
 			}
 			&:first-child::before {
-				background: linear-gradient(0deg, theme('border-color') 45%, rgba(255,255,255,0) 100%);
+				background: linear-gradient(0deg, theme('border', 'color') 45%, rgba(255,255,255,0) 100%);
 			}
 		}
 	}

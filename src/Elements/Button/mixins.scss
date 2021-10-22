@@ -106,8 +106,8 @@
 		@if $elements-button-group {
 			&>.#{$button-class-group} {
 				&>.#{$dropdown-toggle}:nth-last-child(2) {
-					border-bottom-right-radius: theme('border-radius');
-					border-top-right-radius: theme('border-radius');
+					border-bottom-right-radius: theme('border', 'radius');
+					border-top-right-radius: theme('border', 'radius');
 				}
 			}
 		}
@@ -128,7 +128,7 @@
 		display: inline-flex;
 		flex-wrap: wrap;
 		flex-shrink: 0;
-		border-radius: theme('border-radius');
+		border-radius: theme('border', 'radius');
 		@include shadow();
 		width: fit-content;
 		.#{$button-class} {
@@ -139,12 +139,12 @@
 			}
 			&:not(:first-child):not(:last-child) {
 				border-radius: 0;
-				margin-left: -#{theme('border-width')};
+				margin-left: -#{theme('border', 'width')};
 			}
 			&:last-child:not(:first-child) {
 				border-bottom-left-radius: 0;
 				border-top-left-radius: 0;
-				margin-left: -#{theme('border-width')};
+				margin-left: -#{theme('border', 'width')};
 			}
 		}
 		///
@@ -194,8 +194,8 @@
 			.#{$dropdown-name}:last-child,
 			.#{$dropdown-name}:last-child > .#{$button-class}:first-child,
 			.#{$dropdown-name}:last-child > .#{$button-class}:last-child {
-				border-bottom-right-radius: theme('border-radius');
-				border-top-right-radius: theme('border-radius');
+				border-bottom-right-radius: theme('border', 'radius');
+				border-top-right-radius: theme('border', 'radius');
 			}
 			.#{$dropdown-name}:not(:first-child):not(:last-child) > .#{$button-class} {
 				border-radius: 0;
@@ -222,7 +222,7 @@
 					border-radius: 0;
 					&:last-child:not(:first-child),
 					&:not(:first-child):not(:last-child) {
-						margin: -#{theme('border-width')} 0 0;
+						margin: -#{theme('border', 'width')} 0 0;
 					}
 				}
 				&.#{$button-class-block} {
@@ -235,7 +235,7 @@
 					&>.#{$dropdown-name}:last-child:not(:first-child),
 					&>.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class},
 					&>.#{$dropdown-name}:not(:first-child):not(:last-child) > .#{$button-class} {
-						margin: -#{theme('border-width')} 0 0;
+						margin: -#{theme('border', 'width')} 0 0;
 						border-radius: 0;
 					}
 				}
@@ -246,7 +246,7 @@
 					@each $theme-name, $theme-color in $button-styles {
 						&>.#{$theme-name}.#{$button-class},
 						&>.#{$dropdown-name} > .#{$theme-name}.#{$button-class} {
-							border: theme('border-width') solid darken($theme-color, 6%);
+							border: theme('border', 'width') solid darken($theme-color, 6%);
 						}
 					}
 				}
@@ -259,32 +259,40 @@
 /// Button Styles
 /// @param {Color} $bg-color
 /// @param {Color} $border-color
+/// @param {Boolean} $outlined
 ///
 @mixin button-styles(
-	$bg-color: theme('primary-color'),
+	$bg-color: theme('color', 'primary'),
 	$border-color: null,
 	$outlined : false
 ) {
+	///
+	/// OUTLINED STYLE
+	///
 	@if $outlined {
 		background: transparent;
-		color: $bg-color;
+		@if(theme('type') == 'dark') {
+			color: theme('color', 'negative');
+		} @else {
+			color: $bg-color;
+		}
 	} @else {
 		background: $bg-color;
-		color: theme('color-negative');
+		color: theme('color', 'negative');
 	}
 	text-shadow: 0 1px 1px darken($bg-color, 6%);
-	border: theme('border-width') theme('border-style') $border-color;
+	border: theme('border', 'width') theme('border', 'style') $border-color;
 	&:hover {
 		background: lighten($bg-color, 7.5%);
-		color: theme('color-negative');
+		color: theme('color', 'negative');
 	}
 	&:active,
 	&.#{$button-class-active} {
 		background: lighten($bg-color, 7.5%);
-		color: theme('color-negative');
+		color: theme('color', 'negative');
 	}
 	i, [class^="#{$icon-font-class-name}"] {
-		color: theme('color-negative');
+		color: theme('color', 'negative');
 		text-shadow: none;
 	}
 	@content;
@@ -295,19 +303,17 @@
 /// @param {Boolean} $class-name
 ///
 @mixin button-sizes($class-name: false) {
-	@each $name, $font-size, $padding, $font-weight in $button-sizes {
+	@each $name, $font-size, $padding in $button-sizes {
 		@if $class-name {
 			&.#{$name} > .#{$button-class},
 			&.#{$name} > .#{$dropdown-name} > .#{$button-class} {
 				font-size: $font-size;
 				padding: $padding;
-				font-weight: $font-weight;
 			}
 		} @else {
 			&.#{$name} {
 				font-size: $font-size;
 				padding: $padding;
-				font-weight: $font-weight;
 			}
 		}
 	}
@@ -317,18 +323,18 @@
 /// Secondary Button
 ///
 @mixin secondary-button() {
-	color: theme('text-color');
-	background: theme('button-secondary-bg');
+	color: theme('color', 'text');
+	background: theme('elements', 'button', 'secondary');
 	&:focus,
 	&:hover,
 	&:active,
 	&.#{$button-class-active} {
-		color: theme('text-color');
-		background: theme('button-secondary-bg-hover');
+		color: theme('color', 'text');
+		background: theme('elements', 'button', 'secondary');
 		z-index: 1;
-		border-color: theme('border-color');
+		border-color: theme('border', 'color');
 		i, [class^="#{$icon-font-class-name}"] {
-			color: theme('text-color');
+			color: theme('color', 'text');
 		}
 	}
 }
@@ -342,14 +348,14 @@
 		@include button-styles(transparent) {
 			box-shadow: none;
 			border: none;
-			color: theme('primary-color');
+			color: theme('color', 'primary');
 			text-decoration: underline;
-			font-weight: theme('font-weight');
+			font-weight: theme('typography', 'font-weight');
 			&:hover {
-				color: theme('text-color');
+				color: theme('color', 'text');
 			}
 			i, [class^="#{$icon-font-class-name}"] {
-				color: theme('text-color');
+				color: theme('color', 'text');
 			}
 		};
 	}

@@ -23,7 +23,7 @@
 			line-height: 1.3;
 			text-align: center;
 			&:not(:first-child)::before {
-				background: theme('primary-color');
+				background: theme('color', 'primary');
 				content: "";
 				height: $process-stick-height;
 				left: -50%;
@@ -32,15 +32,15 @@
 				width: 100%;
 			}
 			a {
-				color: theme('text-color');
+				color: theme('color', 'text');
 				display: inline-block;
 				padding: 10px 10px 0;
 				text-decoration: none;
-				font-weight: theme('header-weight');
+				font-weight: theme('typography', 'header-weight');
 				&::before {
 					position: absolute;
 					content: "";
-					background: theme('primary-color');
+					background: theme('color', 'primary');
 					top: 0;
 					left: 50%;
 					height: $process-stage-stick-height;
@@ -53,29 +53,29 @@
 			}
 			&.#{$process-active} {
 				a {
-					color: theme('primary-color');
-					font-weight: theme('header-weight');
+					color: theme('color', 'primary');
+					font-weight: theme('typography', 'header-weight');
 					&::after {
 						content: "#{$icon-process-current}"; // [*]
 						font-family: "#{$icon-font-name}"; // [*]
 						position: absolute;
 						top: calc(-15px - #{$process-current-icon-size});
 						left: calc(50% - ((#{$process-stage-stick-width} * 10) / 2));
-						color: theme('primary-color');
+						color: theme('color', 'primary');
 						font-size: $process-current-icon-size;
 					}
 				}
 				&~.#{$process-item} {
 					&::before {
-						background: theme('border-color');
+						background: theme('border', 'color');
 					}
 					a {
-						color: theme('text-color');
+						color: theme('color', 'text');
 						&:hover {
-							color: theme('primary-color');
+							color: theme('color', 'primary');
 						}
 						&::before {
-							background: theme('border-color');
+							background: theme('border', 'color');
 						}
 					}
 				}

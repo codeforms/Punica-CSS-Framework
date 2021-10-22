@@ -17,12 +17,12 @@
 			&:hover,
 			&:active,
 			&.active {
-				color: theme('primary-color');
+				color: theme('color', 'primary');
 			}
 			&::after {
 				font-family: '#{$icon-font-name}';
 				content: $icon-breadcrumb-seperator; // [*]
-				color: theme('primary-color');
+				color: theme('color', 'primary');
 				padding: 0 .25em;
 			    vertical-align: middle;
 		        font-size: 1.4rem;
@@ -32,7 +32,7 @@
 				margin-left: 0;
 			}
 			&.#{$breadcrumb-active} {
-				color: theme('primary-color');
+				color: theme('color', 'primary');
 				font-weight: bold;
 				&::after {
 					content: none;
