@@ -5,7 +5,7 @@
 @import "_getters";
 
 $punica-themes: (
-	light: (
+	default: (
 		'name'	: 'Default Theme',
 		'type'	: 'light', // light or dark (required*),
 		'google-font': (
