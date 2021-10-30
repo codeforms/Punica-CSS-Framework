@@ -16,6 +16,28 @@
 }
 
 ///
+/// Get options value by key
+///
+/// @param {String} $node
+/// @param {Strings} $keys
+///
+/// @example options('layout', 'grid', 'enable')
+/// @example options('layout', 'grid', 'features', 'equal')
+///
+/// @return boolean
+///
+@function options($node, $keys...) {
+	$options: map-get($options, $node);
+	$value: map-get(map-get($options, nth($keys, 1)), nth($keys, 2));
+
+	@if length($keys) > 2 {
+		$value: map-get($value, nth($keys, 3));
+	}
+
+	@return $value;
+}
+
+///
 /// Media Group Specs
 /// @param {String} $item-name
 /// @param {Size} $padding
