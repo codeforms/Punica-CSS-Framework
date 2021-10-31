@@ -4,12 +4,12 @@
 ///
 /// if breadcrumb is enable
 ///
-@if $components-breadcrumb {
-	.#{$breadcrumb-name} {
+@if options('components', 'breadcrumb', 'enable')  {
+	.#{class('breadcrumb', 'name')} {
 		display: inline-block;
 		white-space: nowrap;
-		a.#{$breadcrumb-item},
-		.#{$breadcrumb-item} {
+		a.#{class('breadcrumb', 'item')},
+		.#{class('breadcrumb', 'item')} {
 			text-decoration: none;
 			font-size: inherit;
 			font-weight: bold;
@@ -20,8 +20,8 @@
 				color: theme('color', 'primary');
 			}
 			&::after {
-				font-family: '#{$icon-font-name}';
-				content: $icon-breadcrumb-seperator; // [*]
+				font-family: '#{class('icon', 'font-family')}';
+				content: class('icon', 'breadcrumb-seperator'); // [*]
 				color: theme('color', 'primary');
 				padding: 0 .25em;
 			    vertical-align: middle;
@@ -31,7 +31,7 @@
 			&:first-child {
 				margin-left: 0;
 			}
-			&.#{$breadcrumb-active} {
+			&.#{class('breadcrumb', 'active')} {
 				color: theme('color', 'primary');
 				font-weight: bold;
 				&::after {
@@ -42,11 +42,11 @@
 		///
 		/// SIZES
 		///
-		@if $components-breadcrumb-sizes {
+		@if options('components', 'breadcrumb', 'features', 'sizes') {
 			// size, font-size, seperator-padding, seperator-size
 			@each $size, $font-size, $seperator-padding, $seperator-size in $breadcrumb-sizes {
 				&.#{$size} {
-					.#{$breadcrumb-item} {
+					.#{class('breadcrumb', 'item')} {
 						font-size: $font-size;
 						&::after {
 							padding: $seperator-padding;
@@ -61,8 +61,8 @@
 	///
 	///
 	@include breakpoints($breakpoints-medium, 'max-width') {
-		.#{$breadcrumb-name} {
-			.#{$breadcrumb-item} {
+		.#{class('breadcrumb', 'name')} {
+			.#{class('breadcrumb', 'item')} {
 				&:after {
 					font-size: 1rem;
 					vertical-align: middle;
@@ -73,6 +73,6 @@
 }
 /*
 REFERENCES ******************************************
-[*] Defined at Elements -> Icon -> variables.scss
+[*] Defined at classnames.scss file -> 'icon'
 https://material.io/resources/icons/
 *****************************************************/

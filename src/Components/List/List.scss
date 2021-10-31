@@ -4,18 +4,18 @@
 ///
 /// if list is enable
 ///
-@if $components-list {
-	.#{$list-name} {
+@if options('components', 'list', 'enable') {
+	.#{class('list', 'name')} {
 		list-style: none;
 		margin: 1rem 0;
-		>.#{$list-item} {
+		>.#{class('list', 'item')} {
 		    display: flex;
 		    align-items: center;
 		    padding: .55em;
 		    margin: 0;
 		    transition: .15s;
 		    >img,
-		    >.#{$icon-font-class-name},
+		    >.#{class('icon', 'class-name')},
 		    >i {
 		    	margin-right: 1rem;
 		    }
@@ -25,42 +25,42 @@
 		    	/// forced to have a block-flavored display type.
 		    	display: contents;
 		    }
-		    >.#{$list-body} {
+		    >.#{class('list', 'body')} {
 		    	flex: 1;
 		    	line-height: 1.4;
 		    	text-align: left;
 		    	display: initial;
-		    	>.#{$list-title},
-		    	>.#{$list-subtitle} {
+		    	>.#{class('list', 'title')},
+		    	>.#{class('list', 'subtitle')} {
 					display: block;
 				}
-		    	>.#{$list-title} {
+		    	>.#{class('list', 'title')} {
 		    		font-size: 1.28rem;
     				font-weight: theme('typography', 'header-weight');
 					line-height: 1;
 		    	}
-				>.#{$list-subtitle} {
+				>.#{class('list', 'subtitle')} {
 					font-size: .889em;
 					font-weight: theme('typography', 'font-weight');
 					color: theme('color', 'primary');
 					margin-bottom: 7px;
 				}
 		    }
-		    >.#{$list-actions} {
+		    >.#{class('list', 'actions')} {
 	    		margin-left: auto;
     		    width: auto;
     		    margin-left: 1rem;
 			}
-			&.#{$list-active} {
+			&.#{class('list', 'active')} {
 				background: darken(theme('color', 'background'), 11%);
 			}
 		}
 		///
 		/// DIVIDED
 		///
-		@if $components-list-divided {
-			&.#{$list-bordered} {
-				>.#{$list-item} {
+		@if options('components', 'list', 'features', 'divided') {
+			&.#{class('list', 'divided')} {
+				>.#{class('list', 'item')} {
 					border-bottom: set-border();
 					&:last-child {
 						border-bottom: none;
@@ -71,9 +71,9 @@
 		///
 		/// STRIPED
 		///
-		@if $components-list-striped {
-			&.#{$list-striped} {
-				>.#{$list-item} {
+		@if options('components', 'list', 'features', 'striped') {
+			&.#{class('list', 'striped')} {
+				>.#{class('list', 'item')} {
 					&:nth-of-type(odd) {
 						background: theme('color', 'secondary');
 					}
@@ -83,9 +83,9 @@
 		///
 		/// HOVERED
 		///
-		@if $components-list-hovered {
-			&.#{$list-hovered} {
-				>.#{$list-item} {
+		@if options('components', 'list', 'features', 'hovered') {
+			&.#{class('list', 'hovered')} {
+				>.#{class('list', 'item')} {
 					&:hover {
 						background: theme('color', 'secondary');
 						transition: .15s;

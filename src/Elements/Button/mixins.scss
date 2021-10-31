@@ -6,10 +6,10 @@
 /// Dropdown
 ///
 @mixin dropdown() {
-	.#{$dropdown-name} {
+	.#{class('button', 'dropdown')} {
 		display: inline-block;
 		position: relative;
-		&>.#{$menu-name} {
+		&>.#{class('menu', 'name')} {
 			animation: slide-down .15s ease 1;
 			display: none;
 			left: 0;
@@ -19,44 +19,44 @@
 			top: 100%;
 			z-index: 300 + 1; // menu z-index + 1
 			width: auto;
-			&>.#{$menu-item} {
+			&>.#{class('menu', 'item')} {
 				& > a {
 					padding: .1rem .9rem;
 				}
 			}
 		}
-		&.#{$dropdown-right},
-		&.#{$dropdown-left} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-right')},
+		&.#{class('button', 'dropdown-left')} {
+			&>.#{class('menu', 'name')} {
 				top: 0;
 			}
 		}
-		&.#{$dropdown-right} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-right')} {
+			&>.#{class('menu', 'name')} {
 				left: 100%;
 				right: auto;
 			}
 		}
-		&.#{$dropdown-left} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-left')} {
+			&>.#{class('menu', 'name')} {
 				left: auto;
 				right: 100%;
 			}
 		}
-		&.#{$dropdown-top}.#{$dropdown-left} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-top')}.#{class('button', 'dropdown-left')} {
+			&>.#{class('menu', 'name')} {
 				right: auto !important;
 				left: 0 !important;
 			}
 		}
-		&.#{$dropdown-top}.#{$dropdown-right} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-top')}.#{class('button', 'dropdown-right')} {
+			&>.#{class('menu', 'name')} {
 				right: 0 !important;
 				left: auto !important;
 			}
 		}
-		&.#{$dropdown-top} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-top')} {
+			&>.#{class('menu', 'name')} {
 				bottom: 100%;
 				top: auto;
 				right: 0;
@@ -64,48 +64,48 @@
 				@include shadow(0, -2px);
 			}
 		}
-		&.#{$dropdown-bottom}.#{$dropdown-left},
-		&.#{$dropdown-bottom}.#{$dropdown-right} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-left')},
+		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-right')} {
+			&>.#{class('menu', 'name')} {
 				top: 100%;
 			}
 		}
-		&.#{$dropdown-bottom}.#{$dropdown-left} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-left')} {
+			&>.#{class('menu', 'name')} {
 				right: auto !important;
 				left: 0 !important;
 			}
 		}
-		&.#{$dropdown-bottom}.#{$dropdown-right} {
-			&>.#{$menu-name} {
+		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-right')} {
+			&>.#{class('menu', 'name')} {
 				right: 0 !important;
 				left: auto !important;
 			}
 		}
 		// dropdown hover (default)
-		&.#{$menu-item-active} > .#{$menu-name},
-		&>.#{$dropdown-toggle}:focus + .#{$menu-name},
-		&>.#{$dropdown-toggle}:hover + .#{$menu-name},
-		&>.#{$menu-name}:focus,
-		&>.#{$menu-name}:hover {
+		&.#{class('menu', 'item')-active} > .#{class('menu', 'name')},
+		&>.#{class('button', 'dropdown-toggle')}:focus + .#{class('menu', 'name')},
+		&>.#{class('button', 'dropdown-toggle')}:hover + .#{class('menu', 'name')},
+		&>.#{class('menu', 'name')}:focus,
+		&>.#{class('menu', 'name')}:hover {
 			display: block;
 		}
 		// clickable dropdown
-		&.#{$dropdown-click} {
-			&>.#{$dropdown-toggle}:hover + .#{$menu-name} {
+		&.#{class('button', 'dropdown-clickable')} {
+			&>.#{class('button', 'dropdown-toggle')}:hover + .#{class('menu', 'name')} {
 				display: none;
 			}
-			&>.#{$dropdown-toggle}:focus + .#{$menu-name},
-			&>.#{$dropdown-toggle}:active + .#{$menu-name} {
+			&>.#{class('button', 'dropdown-toggle')}:focus + .#{class('menu', 'name')},
+			&>.#{class('button', 'dropdown-toggle')}:active + .#{class('menu', 'name')} {
 				display: block;
 			}
 		}
 		///
 		/// BUTTON GROUPS
 		///
-		@if $elements-button-group {
-			&>.#{$button-class-group} {
-				&>.#{$dropdown-toggle}:nth-last-child(2) {
+		@if options('elements', 'button', 'features', 'group') {
+			&>.#{class('button', 'group')} {
+				&>.#{class('button', 'dropdown-toggle')}:nth-last-child(2) {
 					border-bottom-right-radius: theme('border', 'radius');
 					border-top-right-radius: theme('border', 'radius');
 				}
@@ -114,7 +114,7 @@
 		///
 		/// SIZES
 		///
-		@if $elements-button-sizes {
+		@if options('elements', 'button', 'features', 'sizes') {
 			@include button-sizes(true);
 		}
 	}
@@ -124,14 +124,14 @@
 /// Button Group
 ///
 @mixin button-group() {
-	.#{$button-class-group} {
+	.#{class('button', 'group')} {
 		display: inline-flex;
 		flex-wrap: wrap;
 		flex-shrink: 0;
 		border-radius: theme('border', 'radius');
 		@include shadow();
 		width: fit-content;
-		.#{$button-class} {
+		.#{class('button', 'name')} {
 			box-shadow: none;
 			&:first-child:not(:last-child) {
 				border-bottom-right-radius: 0;
@@ -150,31 +150,31 @@
 		///
 		/// SECONDARY BUTTON
 		///
-		@if $elements-button-secondary {
-			&.#{$button-secondary} > .#{$button-class} {
+		@if options('elements', 'button', 'features', 'secondary') {
+			&.#{class('button', 'secondary')} > .#{class('button', 'name')} {
 				@include secondary-button();
 			}
 		}
-		&.#{$button-class-block} {
+		&.#{class('button', 'block')} {
 			display: flex;
 			width: auto;
-			.#{$button-class} {
+			.#{class('button', 'name')} {
 				flex: 1 0 0;
 			}
 		}
 		///
 		/// SIZES
 		/// 
-		@if $elements-button-sizes {
+		@if options('elements', 'button', 'features', 'sizes') {
 			@include button-sizes(true);
 		}
 		///
 		/// STYLES
 		///
-		@if $elements-button-styles {
+		@if options('elements', 'button', 'features', 'sizes') {
 			@each $theme-name, $theme-color in $button-styles {
-				&.#{$theme-name} > .#{$button-class},
-				&.#{$theme-name} > .#{$dropdown-name} > .#{$button-class} {
+				&.#{$theme-name} > .#{class('button', 'name')},
+				&.#{$theme-name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
 					@include button-styles($theme-color, darken($theme-color, 7%));
 				}
 			}
@@ -184,20 +184,20 @@
 		///
 		/// DROPDOWN
 		///
-		@if $elements-button-dropdown {
-			.#{$dropdown-name}:last-child:not(:first-child),
-			.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class} {
+		@if options('elements', 'button', 'features', 'dropdown') {
+			.#{class('button', 'dropdown')}:last-child:not(:first-child),
+			.#{class('button', 'dropdown')}:last-child:not(:first-child) > .#{class('button', 'name')} {
 				border-bottom-left-radius: 0;
 				border-top-left-radius: 0;
 				margin-left: -1px;
 			}
-			.#{$dropdown-name}:last-child,
-			.#{$dropdown-name}:last-child > .#{$button-class}:first-child,
-			.#{$dropdown-name}:last-child > .#{$button-class}:last-child {
+			.#{class('button', 'dropdown')}:last-child,
+			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:first-child,
+			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:last-child {
 				border-bottom-right-radius: theme('border', 'radius');
 				border-top-right-radius: theme('border', 'radius');
 			}
-			.#{$dropdown-name}:not(:first-child):not(:last-child) > .#{$button-class} {
+			.#{class('button', 'dropdown')}:not(:first-child):not(:last-child) > .#{class('button', 'name')} {
 				border-radius: 0;
 				margin-left: -1px;
 			}
@@ -209,32 +209,32 @@
 		///
 		/// VERTICAL BUTTONS
 		///
-		@if $elements-button-group-vertical {
-			&.#{$button-class-group-vertical} {
+		@if options('elements', 'button', 'features', 'vertical') {
+			&.#{class('button', 'vertical')} {
 				flex-flow: column;
-				>.#{$button-class},
-				&.#{$button-class-block},
-				&.#{$button-class-block} > .#{$button-class},
-				&>.#{$dropdown-name} >.#{$button-class} {
+				>.#{class('button', 'name')},
+				&.#{class('button', 'block')},
+				&.#{class('button', 'block')} > .#{class('button', 'name')},
+				&>.#{class('button', 'dropdown')} >.#{class('button', 'name')} {
 					width: 100%;
 				}
-				>.#{$button-class} {
+				>.#{class('button', 'name')} {
 					border-radius: 0;
 					&:last-child:not(:first-child),
 					&:not(:first-child):not(:last-child) {
 						margin: -#{theme('border', 'width')} 0 0;
 					}
 				}
-				&.#{$button-class-block} {
+				&.#{class('button', 'block')} {
 					display: inline-flex;
 				}
 				///
 				/// DROPDOWN FOR VERTICAL BUTTONS
 				///
-				@if $elements-button-dropdown {
-					&>.#{$dropdown-name}:last-child:not(:first-child),
-					&>.#{$dropdown-name}:last-child:not(:first-child) > .#{$button-class},
-					&>.#{$dropdown-name}:not(:first-child):not(:last-child) > .#{$button-class} {
+				@if options('elements', 'button', 'features', 'dropdown') {
+					&>.#{class('button', 'dropdown')}:last-child:not(:first-child),
+					&>.#{class('button', 'dropdown')}:last-child:not(:first-child) > .#{class('button', 'name')},
+					&>.#{class('button', 'dropdown')}:not(:first-child):not(:last-child) > .#{class('button', 'name')} {
 						margin: -#{theme('border', 'width')} 0 0;
 						border-radius: 0;
 					}
@@ -242,10 +242,10 @@
 				///
 				/// STYLES
 				///
-				@if $elements-button-styles {
+				@if options('elements', 'button', 'features', 'styles') {
 					@each $theme-name, $theme-color in $button-styles {
-						&>.#{$theme-name}.#{$button-class},
-						&>.#{$dropdown-name} > .#{$theme-name}.#{$button-class} {
+						&>.#{$theme-name}.#{class('button', 'name')},
+						&>.#{class('button', 'dropdown')} > .#{$theme-name}.#{class('button', 'name')} {
 							border: theme('border', 'width') solid darken($theme-color, 6%);
 						}
 					}
@@ -287,11 +287,11 @@
 		color: theme('color', 'negative');
 	}
 	&:active,
-	&.#{$button-class-active} {
+	&.#{class('button', 'active')} {
 		background: lighten($bg-color, 7.5%);
 		color: theme('color', 'negative');
 	}
-	i, [class^="#{$icon-font-class-name}"] {
+	i, [class^="#{class('icon', 'class-name')}"] {
 		color: theme('color', 'negative');
 		text-shadow: none;
 	}
@@ -305,8 +305,8 @@
 @mixin button-sizes($class-name: false) {
 	@each $name, $font-size, $padding in $button-sizes {
 		@if $class-name {
-			&.#{$name} > .#{$button-class},
-			&.#{$name} > .#{$dropdown-name} > .#{$button-class} {
+			&.#{$name} > .#{class('button', 'name')},
+			&.#{$name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
 				font-size: $font-size;
 				padding: $padding;
 			}
@@ -328,12 +328,12 @@
 	&:focus,
 	&:hover,
 	&:active,
-	&.#{$button-class-active} {
+	&.#{class('button', 'active')} {
 		color: theme('color', 'text');
 		background: theme('elements', 'button', 'secondary-bg-hover');
 		z-index: 1;
 		border-color: theme('border', 'color');
-		i, [class^="#{$icon-font-class-name}"] {
+		i, [class^="#{class('icon', 'class-name')}"] {
 			color: theme('color', 'text');
 		}
 	}
@@ -343,8 +343,8 @@
 /// Link Button
 ///
 @mixin link-button() {
-	&.#{$button-class-link}.#{$button-class},
-	&.#{$button-class-link} > .#{$button-class} {
+	&.#{class('button', 'link')}.#{class('button', 'name')},
+	&.#{class('tooltip', 'top')} > .#{class('button', 'name')} {
 		@include button-styles(transparent) {
 			box-shadow: none;
 			border: none;
@@ -354,7 +354,7 @@
 			&:hover {
 				color: theme('color', 'text');
 			}
-			i, [class^="#{$icon-font-class-name}"] {
+			i, [class^="#{class('icon', 'class-name')}"] {
 				color: theme('color', 'text');
 			}
 		};

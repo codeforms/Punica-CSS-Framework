@@ -6,14 +6,14 @@
 /// Default button styles in Tabnav
 ///
 @mixin tab-button-styles() {
-	&>.#{$button-class},
-	&>a.#{$button-class},
-	&>.#{$button-class-group} > .#{$button-class},
-	&>.#{$button-class-group} > a.#{$button-class},
-	&>.#{$dropdown-name} > .#{$button-class},
-	&>.#{$dropdown-name} > a.#{$button-class},
-	&>.#{$button-class-group} > .#{$dropdown-name} > .#{$button-class},
-	&>.#{$button-class-group} > .#{$dropdown-name} > a.#{$button-class} {
+	&>.#{class('button', 'name')},
+	&>a.#{class('button', 'name')},
+	&>.#{class('button', 'group')} > .#{class('button', 'name')},
+	&>.#{class('button', 'group')} > a.#{class('button', 'name')},
+	&>.#{class('button', 'dropdown')} > .#{class('button', 'name')},
+	&>.#{class('button', 'dropdown')} > a.#{class('button', 'name')},
+	&>.#{class('button', 'group')} > .#{class('button', 'dropdown')} > .#{class('button', 'name')},
+	&>.#{class('button', 'group')} > .#{class('button', 'dropdown')} > a.#{class('button', 'name')} {
 		@content
 	}
 }

@@ -4,22 +4,22 @@
 ///
 /// if grid is enable
 ///
-@if $layout-grid {
-	.#{$container} {
+@if options('layout', 'grid', 'enable') {
+	.#{class('grid', 'container')} {
 		width: $container-width;
 		margin: 0 auto;
 		padding: 0 $container-padding;
 	}
 	@include breakpoints($breakpoints-medium, 'max-width') {
-		.#{$container} {
+		.#{class('grid', 'container')} {
 			padding: 0 ($container-padding / 3);
 		}
 	}
-	.#{$row} {
+	.#{class('grid', 'row')} {
 		display: grid;
 		grid-gap: $gutter;
 		grid-template-columns: repeat($grid, 1fr);
-		&> [class^="#{$column}"] {
+		&> [class^="#{class('grid', 'column')}"] {
 			height: fit-content;
 			padding: $column-padding;
 			min-height: $column-min-height;
@@ -27,8 +27,8 @@
 		///
 		/// EQUAL
 		///
-		@if $layout-grid-equal {
-			&.#{$equal} > [class^="#{$column}"] {
+		@if options('layout', 'grid', 'features', 'equal') {
+			&.#{class('grid', 'equal')} > [class^="#{class('grid', 'column')}"] {
 				height: auto;
 			}
 		}
@@ -36,16 +36,16 @@
 	@each $label, $breakpoint in $viewports {
 		@include breakpoints($breakpoint) {
 			@for $id from 1 through $grid {
-				.#{$column}-#{$id},
-				.#{$column}-#{$label}-#{$id} {
+				.#{class('grid', 'column')}-#{$id},
+				.#{class('grid', 'column')}-#{$label}-#{$id} {
 					grid-column: span #{$id};
 				}
 				///
 				/// OFFSET
 				///
-				@if $layout-grid-offset {
+				@if options('layout', 'grid', 'features', 'offset') {
 					@for $offset-id from 2 through $grid {
-						.#{$column}-#{$label}-#{$id}.#{$offset}-#{$label}-#{$offset-id} {
+						.#{class('grid', 'column')}-#{$label}-#{$id}.#{class('grid', 'offset')}-#{$label}-#{$offset-id} {
 							grid-column: #{$offset-id} / span #{$id};
 						}
 					}

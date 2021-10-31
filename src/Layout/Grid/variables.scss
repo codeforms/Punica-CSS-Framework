@@ -18,9 +18,9 @@ $breakpoints-large			: 992px;
 $breakpoints-extra-large	: 1260px;
 /* Viewports */
 $viewports					: (
-	($extra-small, $breakpoints-extra-small),
-	($small, $breakpoints-small),
-	($medium, $breakpoints-medium),
-	($large, $breakpoints-large),
-	($extra-large, $breakpoints-extra-large)
+	(class('grid', 'extra-small'), $breakpoints-extra-small),
+	(class('grid', 'small'), $breakpoints-small),
+	(class('grid', 'medium'), $breakpoints-medium),
+	(class('grid', 'large'), $breakpoints-large),
+	(class('grid', 'extra-large'), $breakpoints-extra-large)
 );

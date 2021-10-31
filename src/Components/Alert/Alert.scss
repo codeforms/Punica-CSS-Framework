@@ -4,8 +4,8 @@
 ///
 /// if alert is enable
 ///
-@if $components-alert {
-	.#{$alert-name} {
+@if options('components', 'alert', 'enable') {
+	.#{class('alert', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: block;
 			@include border();
@@ -20,7 +20,7 @@
 				&:focus,
 				&:hover,
 				&:active,
-				&.#{$alert-active} {
+				&.#{class('alert', 'active')} {
 					opacity: .75;
 				}
 			}
@@ -30,14 +30,14 @@
 				}
 			}
 			>i,
-			>.#{$icon-font-class-name} {
+			>.#{class('icon', 'class-name')} {
 				vertical-align: text-top;
 			}
 		}
 		///
 		/// STYLES
 		///
-		@if($components-alert-styles) {
+		@if options('components', 'alert', 'features', 'styles') {
 			@each $style-name, $bg-color in $alert-styles {
 				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
 					border-color: darken($bg-color, 5%);
@@ -47,7 +47,7 @@
 		///
 		/// SIZES
 		///
-		@if ($components-alert-sizes) {
+		@if options('components', 'alert', 'features', 'sizes') {
 			@each $size-name, $font-size, $padding in $alert-sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}

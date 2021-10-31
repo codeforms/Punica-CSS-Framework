@@ -20,11 +20,11 @@
 ) {
 	background: $bg-color;
 	color: $text-color;
-	.#{$button-class-group} {
-		.#{$button-class} {
+	.#{class('button', 'group')} {
+		.#{class('button', 'name')} {
 			color: $text-color;
 			min-height: 100%;
-			i, span.#{$icon-font-class-name} {
+			i, span.#{class('icon', 'class-name')} {
 				color: $text-color;
 			}
 			&:hover {
@@ -35,24 +35,24 @@
 	///
 	/// DIVIDED NAVBAR
 	///
-	@if($components-navbar-divided) {
-		&.#{$navbar-divided} {
-			.#{$button-class-group} {
-				.#{$button-class},
-				.#{$dropdown-name} .#{$button-class} {
+	@if options('components', 'navbar', 'features', 'divided') {
+		&.#{class('navbar', 'divided')} {
+			.#{class('button', 'group')} {
+				.#{class('button', 'name')},
+				.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 					border: solid $divider-color;
 				}
 			}
 		}
 	}
-	.#{$navbar-brand} {
+	.#{class('navbar', 'brand')} {
 		a,
 		a:visited {
 			color: $text-color;
 		}
 	}
-	section.#{$navbar-links} {
-		div.#{$navbar-section} {
+	section.#{class('navbar', 'links')} {
+		div.#{class('navbar', 'section')} {
 			input[type='text'] {
 				background-color: $input-bg;
 				border-color: $input-border-color;
@@ -72,24 +72,24 @@
 /// Divided Navbar
 ///
 @mixin navbar-divided() {
-	.#{$button-class-group} {
-		.#{$button-class},
-		.#{$dropdown-name} .#{$button-class} {
+	.#{class('button', 'group')} {
+		.#{class('button', 'name')},
+		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 			border-width: 0 1px !important;
 		}
-		&>.#{$button-class}:first-child {
+		&>.#{class('button', 'name')}:first-child {
 			border-left-width: 0 !important;
 		}
-		&>.#{$button-class}:last-child {
+		&>.#{class('button', 'name')}:last-child {
 			border-right-width: 0 !important;
 		}
-		.#{$dropdown-name}:first-child {
-			.#{$button-class} {
+		.#{class('button', 'dropdown')}:first-child {
+			.#{class('button', 'name')} {
 				border-left-width: 0 !important;
 			}
 		}
-		.#{$dropdown-name}:last-child {
-			.#{$button-class} {
+		.#{class('button', 'dropdown')}:last-child {
+			.#{class('button', 'name')} {
 				border-right-width: 0 !important;
 				border-left-width: 0 !important;
 				margin-left: 1px;

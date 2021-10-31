@@ -4,14 +4,14 @@
 ///
 /// if tooltip is enable
 ///
-@if $components-tooltip {
-	.#{$tooltip-name} {
+@if options('components', 'tooltip', 'enable') {
+	.#{class('tooltip', 'name')} {
 		display: inline-flex;
 		justify-content: center;
         align-items: center;
 		position: relative;
 		cursor: default;
-		.#{$tooltip-text} {
+		.#{class('tooltip', 'text')} {
 			position: absolute;
             display: flex;
             align-items: center;
@@ -41,18 +41,18 @@
 				border-color: transparent transparent theme('color', 'dark') transparent;
 			}
 		}
-        &.#{$tooltip-left},
-        &.#{$tooltip-right},
-        &.#{$tooltip-top} {
-            &>.#{$tooltip-text} {
+        &.#{class('tooltip', 'left')},
+        &.#{class('tooltip', 'right')},
+        &.#{class('tooltip', 'top')} {
+            &>.#{class('tooltip', 'text')} {
                 top: auto;
                  &::after {
                     bottom: auto;
                  }
             }
         }
-        &.#{$tooltip-right} {
-            &>.#{$tooltip-text} {
+        &.#{class('tooltip', 'right')} {
+            &>.#{class('tooltip', 'text')} {
                 left: 110%;
                 &::after {
                     right: 100%;
@@ -61,8 +61,8 @@
                 }
             }
         }
-        &.#{$tooltip-left} {
-            &>.#{$tooltip-text} {
+        &.#{class('tooltip', 'left')} {
+            &>.#{class('tooltip', 'text')} {
                 right: 110%;
                 &::after {
                     left: 100%;
@@ -72,8 +72,8 @@
                 }
             }
         }
-        &.#{$tooltip-top} {
-            &>.#{$tooltip-text} {
+        &.#{class('tooltip', 'top')} {
+            &>.#{class('tooltip', 'text')} {
                 bottom: 120%;
                 &::after {
                     top: 100%;
@@ -81,7 +81,7 @@
                 }
             }
         }
-		&:hover .#{$tooltip-text} {
+		&:hover .#{class('tooltip', 'text')} {
 			visibility: visible;
 			opacity: 1;
 		}

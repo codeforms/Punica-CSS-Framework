@@ -4,9 +4,9 @@
 ///
 /// if label is enable
 ///
-@if $elements-label {
-	a.#{$label-name},
-	.#{$label-name} {
+@if options('elements', 'label', 'enable') {
+	a.#{class('label', 'name')},
+	.#{class('label', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: inline-block;
 			font-weight: theme('typography', 'header-weight');
@@ -26,7 +26,7 @@
 		///
 		/// STYLES
 		///
-		@if ($elements-label-styles) {
+		@if options('elements', 'label', 'features', 'styles') {
 			@each $style-name, $bg-color in $label-styles {
 				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
 					border-color: darken($bg-color, 7%);
@@ -36,7 +36,7 @@
 		///
 		/// SIZES
 		///
-		@if ($elements-label-sizes) {
+		@if options('elements', 'label', 'features', 'sizes') {
 			@each $size-name, $padding, $font-size in $label-sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}

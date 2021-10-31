@@ -5,8 +5,7 @@
 ///
 ///
 ///
-@if $helpers {
-
+@if options('utilities', 'helpers', 'enable') {
 	///
 	/// Padding & Margin Helpers
 	///

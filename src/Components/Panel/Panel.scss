@@ -4,37 +4,37 @@
 ///
 /// if panel is enable
 ///
-@if $components-panel {
-	.#{$panel-name} {
+@if options('components', 'panel', 'enable') {
+	.#{class('panel', 'name')} {
 		display: flex;
 		flex-direction: column;
 
 		// has panel border?
-		@if $has-panel-border {
+		@if options('components', 'panel', 'features', 'border') {
 			@include border();
 			border-radius: theme('border', 'radius');
 		}
 
 		// has panel shadow?
-		@if $has-panel-shadow {
+		@if options('components', 'panel', 'features', 'shadow') {
 			@include shadow();
 		}
 
 		background-color: theme('color', 'background');
 		margin: $panel-margin;
-		&>.#{$panel-header},
-		&>.#{$panel-bottom} {
+		&>.#{class('panel', 'header')},
+		&>.#{class('panel', 'bottom')} {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			.#{$panel-title-actions} {
+			.#{class('panel', 'actions')} {
 				margin-left: auto;
 				&:before {
 					flex-grow: 1;
 				}
 			}
 		}
-		&>.#{$panel-header} {
+		&>.#{class('panel', 'header')} {
 			border-bottom: set-border();
 			padding: $panel-title-padding;
 			&.dashed {
@@ -43,20 +43,20 @@
 			&.dotted {
 				border-bottom-style: dotted;
 			}
-			.#{$panel-title} {
+			.#{class('panel', 'title')} {
 				font-size: 1.185rem;
 				font-weight: theme('typography', 'header-weight');
 			}
 		}
-		&>.#{$panel-content} {
+		&>.#{class('panel', 'content')} {
 			flex: 1 1 auto;
 			padding: $panel-padding;
 			height: auto;
 			///
 			/// MEDIA
 			///
-			@if $components-panel-media {
-				&>.#{$panel-media} {
+			@if options('components', 'panel', 'features', 'media') {
+				&>.#{class('panel', 'media')} {
 					min-width: 0;
 					max-width: 100%;
 					flex: auto;
@@ -72,12 +72,12 @@
 				///
 				/// MEDIA GROUP
 				///
-				@if $components-panel-media-group {
-					@include media-group-specs($panel-media);
+				@if options('components', 'panel', 'features', 'media-group') {
+					@include media-group-specs(class('panel', 'media'));
 				}
 			}
-			.#{$panel-headline},
-			p.#{$panel-headline} {
+			.#{class('panel', 'headline')},
+			p.#{class('panel', 'headline')} {
 				font-size: 1.39em;
 				line-height: 1.5;
 				margin-bottom: 26px;
@@ -85,7 +85,7 @@
 				letter-spacing: -.0158em;
 			}
 		}
-		&>.#{$panel-bottom} {
+		&>.#{class('panel', 'bottom')} {
 			min-height: 50px;
 			border-top: set-border();
 			padding: 6px;

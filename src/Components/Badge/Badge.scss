@@ -4,8 +4,8 @@
 ///
 /// if badge is enable
 ///
-@if $components-badge {
-	.#{$badge-name} {
+@if options('components', 'badge', 'enable') {
+	.#{class('badge', 'name')} {
 		@include set-style(theme('color', 'secondary'), theme('color', 'text')) {
 			position: relative;
 			white-space: nowrap;
@@ -20,7 +20,7 @@
 		///
 		/// STYLES
 		///
-		@if $components-badge-styles {
+		@if options('components', 'badge', 'features', 'styles') {
 			@each $name, $bg-color in $badge-styles {
 				@include set-style($bg-color, theme('color', 'negative'), $name) {
 					border-color: darken($bg-color, 6.5%);
@@ -30,7 +30,7 @@
 		///
 		/// SIZES
 		///
-		@if ($components-badge-sizes) {
+		@if options('components', 'badge', 'features', 'sizes') {
 			@each $size-name, $font-size, $padding in $badge-sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}

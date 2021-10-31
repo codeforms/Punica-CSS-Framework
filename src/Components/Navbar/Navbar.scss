@@ -5,11 +5,11 @@
 ///
 /// if navbar is enable
 ///
-@if $components-navbar {
-	.#{$navbar-spacer} {
+@if options('components', 'navbar', 'enable') {
+	.#{class('navbar', 'spacer')} {
 		margin-top: $navbar-spacer-top;
 	}
-	.#{$navbar-name} {
+	.#{class('navbar', 'name')} {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: stretch;
@@ -19,12 +19,12 @@
 		color: theme('color', 'negative');
 		width: 100%;
 		// grid container
-		.#{$container} {
+		.#{class('grid', 'container')} {
 			display: flex;
 			width: $container-width; // layout->grid
 		}
 		// navbar brand
-		.#{$navbar-brand} {
+		.#{class('navbar', 'brand')} {
 			padding: $navbar-brand-padding;
 			display: flex;
 			justify-content: center;
@@ -45,14 +45,14 @@
 			}
 		}
 		// navbar burger
-		input[type=checkbox]##{$navbar-burger},
-		.#{$navbar-burger} {
+		input[type=checkbox]##{class('navbar', 'burger')},
+		.#{class('navbar', 'burger')} {
 			display: none;
 		}
-		.#{$navbar-burger} {
+		.#{class('navbar', 'burger')} {
 			&::before {
-				content: "#{$icon-navbar-open}"; // [*]
-				font-family: "#{$icon-font-name}"; // [*]
+				content: "#{class('icon', 'navbar-open')}"; // [*]
+				font-family: "#{class('icon', 'font-family')}"; // [*]
 				font-size: 2.459rem;
 				display: none;
 				min-height: $navbar-min-height;
@@ -64,12 +64,12 @@
 			}
 		}
 		// navbar links
-		section.#{$navbar-links} {
+		section.#{class('navbar', 'links')} {
 			display: flex;
 			flex: 1 0 0;
 			align-items: center;
 			// navbar sections
-			div.#{$navbar-section} {
+			div.#{class('navbar', 'section')} {
 				flex: 1 0 0;
 				display: flex;
 				height: 100%;
@@ -90,7 +90,7 @@
 				}
 			}
 		}
-		&.#{$navbar-fixed} {
+		&.#{class('navbar', 'fixed')} {
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -99,19 +99,19 @@
 			transform: translateY(0px);
 			z-index: 5;
 		}
-		.#{$button-class-group} {
+		.#{class('button', 'group')} {
 			height: 100%;
 			min-height: 100%;
 			box-shadow: none;
-			.#{$button-class},
-			.#{$dropdown-name} .#{$button-class} {
+			.#{class('button', 'name')},
+			.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 				background: transparent;
 				border-color: transparent;
 				color: theme('color', 'negative');
 				min-height: 100%;
 				border-radius: 0;
 				border: 0;
-				i, span.#{$icon-font-class-name} {
+				i, span.#{class('icon', 'class-name')} {
 					color: theme('color', 'negative');
 				}
 				&:hover {
@@ -119,28 +119,28 @@
 					border-radius: 0;
 				}
 			}
-			.#{$dropdown-name}:last-child,
-			.#{$dropdown-name}:last-child > .#{$button-class}:first-child,
-			.#{$dropdown-name}:last-child > .#{$button-class}:last-child {
+			.#{class('button', 'dropdown')}:last-child,
+			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:first-child,
+			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:last-child {
 				border-radius: 0;
 			}
 		}
 		///
 		/// DIVIDED NAVBAR
 		///
-		@if $components-navbar-divided {
-			&.#{$navbar-divided} {
+		@if options('components', 'navbar', 'features', 'divided') {
+			&.#{class('navbar', 'divided')} {
 				@include navbar-divided();
-				.#{$button-class-group} {
-					.#{$button-class},
-					.#{$dropdown-name} .#{$button-class} {
+				.#{class('button', 'group')} {
+					.#{class('button', 'name')},
+					.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 						border: solid darken(theme('color', 'primary'), 7.15%);
 					}
 				}
 			}
 		}
-		.#{$button-class},
-		.#{$dropdown-name} .#{$button-class} {
+		.#{class('button', 'name')},
+		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 			font-size: $navbar-font-size;
 			padding: .935rem 1.4rem;
 			font-weight: theme('typography', 'header-weight');
@@ -148,7 +148,7 @@
 		/// 
 		/// NAVBAR THEMES
 		///
-		@if $components-navbar-themes {
+		@if options('components', 'navbar', 'features', 'themes') {
 			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color in $navbar-themes {
 				&.#{$theme-name} {
 					@include navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color);
@@ -158,20 +158,20 @@
 		///
 		/// NAVBAR SIZES
 		///
-		@if $components-navbar-sizes {
+		@if options('components', 'navbar', 'features', 'sizes') {
 			@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
 				&.#{$size-name} {
 					min-height: $min-height;
-					& .#{$button-class},
-					& .#{$dropdown-name} .#{$button-class} {
+					& .#{class('button', 'name')},
+					& .#{class('button', 'dropdown')} .#{class('button', 'name')} {
 						font-size: $font-size;
 						padding: $button-padding;
 					}
-					@at-root .#{$navbar-spacer}-#{$size-name} {
+					@at-root .#{class('navbar', 'spacer')}-#{$size-name} {
 						margin-top: $spacer-top !important;
 					}
 					@include breakpoints($breakpoints-medium, 'max-width') {
-						@at-root .#{$navbar-spacer}-#{$size-name} {
+						@at-root .#{class('navbar', 'spacer')}-#{$size-name} {
 							margin-top: $spacer-top / 2 !important;
 						}
 					}
@@ -181,17 +181,18 @@
 	}
 	//
 	@include breakpoints($breakpoints-medium, 'max-width') {
-		.#{$navbar-spacer} {
+		.#{class('navbar', 'spacer')} {
 			margin-top: 0;
 		}
-		.#{$navbar-name} {
-			.#{$container} {
+		.#{class('navbar', 'name')} {
+			// grid container
+			.#{class('grid', 'container')} {
 				padding: 0;
 			}
-			&.#{$navbar-fixed} {
+			&.#{class('navbar', 'fixed')} {
 				position: relative;
 			}
-			section.#{$navbar-links} {
+			section.#{class('navbar', 'links')} {
 				position: absolute;
 				display: block;
 				width: 100%;
@@ -205,39 +206,39 @@
 				margin: 0 !important;
 				padding: 0 !important;
 				@include shadow();
-				.#{$navbar-section},
-				.#{$navbar-section} .#{$button-class-group},
-				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name},
-				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$menu-name},
-				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$menu-name} .#{$button-class},
-				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$button-class},
-				.#{$navbar-section} .#{$button-class-group} .#{$button-class} {
+				.#{class('navbar', 'section')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')} .#{class('button', 'name')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
 					display: block !important;
 					width: 100%;
 					text-align: left;
 					position: relative;
 				}
-				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$button-class},
-				.#{$navbar-section} .#{$button-class-group} .#{$button-class} {
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
 					color: theme('color', 'text');
 					background: theme('color', 'secondary');
-					i, span.#{$icon-font-class-name} {
+					i, span.#{class('icon', 'class-name')} {
 						display: none;
 					}
 				}
-				.#{$navbar-section} .#{$button-class-group} .#{$dropdown-name} .#{$menu-name} {
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')} {
 					max-height: 100%;
 					box-shadow: none;
 				}
 			}
-			.#{$navbar-burger} {
+			.#{class('navbar', 'burger')} {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				min-height: $navbar-min-height;
 				min-width: $navbar-min-height;
 				&::before {
-					content: "#{$icon-navbar-close}"; // [*]
+					content: "#{class('icon', 'navbar-close')}"; // [*]
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -247,38 +248,38 @@
 			///
 			/// NAVBAR SIZES
 			///
-			@if $components-navbar-sizes {
+			@if options('components', 'navbar', 'features', 'sizes') {
 				@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
 					&.#{$size-name} {
-						& .#{$navbar-burger},
-						& .#{$navbar-burger}::before {
+						& .#{class('navbar', 'burger')},
+						& .#{class('navbar', 'burger')}::before {
 							min-height: $min-height;
 							min-width: $min-height;
 							font-size: 1.359em;
 						}
-						section.#{$navbar-links} {
+						section.#{class('navbar', 'links')} {
 							top: $min-height;
 						}
 					}
 				}
 			}
-			input[type=checkbox]##{$navbar-burger}:not(:checked) ~ section.#{$navbar-links} {
+			input[type=checkbox]##{class('navbar', 'burger')}:not(:checked) ~ section.#{class('navbar', 'links')} {
 				height: 0;
 			}
-			input[type=checkbox]##{$navbar-burger}:checked ~ section.#{$navbar-links} {
+			input[type=checkbox]##{class('navbar', 'burger')}:checked ~ section.#{class('navbar', 'links')} {
 				height: auto;
 			}
-			input[type=checkbox]##{$navbar-burger}:not(:checked) ~ .#{$navbar-burger}::before {
-				content: "#{$icon-navbar-open}"; // [*]
+			input[type=checkbox]##{class('navbar', 'burger')}:not(:checked) ~ .#{class('navbar', 'burger')}::before {
+				content: "#{class('icon', 'navbar-open')}"; // [*]
 			}
-			input[type=checkbox]##{$navbar-burger}:checked ~ .#{$navbar-burger}::before {
-				content: "#{$icon-navbar-close}"; // [*]
+			input[type=checkbox]##{class('navbar', 'burger')}:checked ~ .#{class('navbar', 'burger')}::before {
+				content: "#{class('icon', 'navbar-close')}"; // [*]
 			}
 		}
 	}
 }
 /*
 REFERENCES ******************************************
-[*] Defined at Elements -> Icon -> variables.scss
+[*] Defined at classnames.scss file -> 'icon'
 https://material.io/resources/icons/
 *****************************************************/

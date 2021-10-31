@@ -4,8 +4,8 @@
 ///
 /// if menu is enable
 ///
-@if $components-menu {
-	.#{$menu-name} {
+@if options('components', 'menu', 'enable') {
+	.#{class('menu', 'name')} {
 		background-color: lighten(theme('color', 'background'), 2.5%);
 		border-radius: 0;
 		list-style: none;
@@ -16,7 +16,7 @@
 		@include shadow();
 		z-index: 300;
 		// menu title
-		.#{$menu-title} {
+		.#{class('menu', 'title')} {
 			font-size: 1.25em;
 			min-height: 2rem;
 			color: theme('color', 'text');
@@ -25,7 +25,7 @@
 			letter-spacing: -.015rem;
 		}
 		// menu item
-		.#{$menu-item} {
+		.#{class('menu', 'item')} {
 			padding: 0;
 			position: relative;
 			text-decoration: none;
@@ -46,30 +46,30 @@
 				}
 				&:active,
 				&:focus,
-				&.#{$menu-item-active} {
+				&.#{class('menu', 'active')} {
 					background: theme('color', 'secondary');
 					color: theme('color', 'text');
 					transition: background .15s, color .15s;
 				}
-				&.#{$menu-disabled} {
+				&.#{class('menu', 'disabled')} {
 					opacity: .59;
 					color: theme('color', 'grey');
 					cursor: default;
 					pointer-events: none;
 				}
 			}
-			i, span.#{$icon-font-class-name} {
+			i, span.#{class('icon', 'class-name')} {
 				color: theme('color', 'grey');
 				font-size: 1.2rem;
 				margin-right: 10px;
 				vertical-align: text-bottom;
 			}
-			.#{$menu-name} {
+			.#{class('menu', 'name')} {
 				padding: .4rem;
 			}
 		}
 		// menu badge
-		.#{$menu-badge} {
+		.#{class('menu', 'badge')} {
 			position: absolute;
 			right: 0;
 			top: 4px;
@@ -77,12 +77,12 @@
 			font-size: .93em;
 		}
 		// small menu
-		&.#{$menu-small} > .#{$menu-item} a {
+		&.#{class('menu', 'small')} > .#{class('menu', 'item')} a {
 			font-size: .879em;
 		}
 		// divided menu
-		&.#{$menu-divided} {
-			.#{$menu-item} {
+		&.#{class('menu', 'divided')} {
+			.#{class('menu', 'item')} {
 				border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'active');
 				&:last-child {
 					border-bottom: none;

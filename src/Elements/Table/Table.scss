@@ -4,8 +4,8 @@
 ///
 /// if table is enable
 ///
-@if $elements-table {
-	.#{$table-class} {
+@if options('elements', 'table', 'enable') {
+	.#{class('table', 'name')} {
 		position: relative;
 		border-collapse: collapse;
 		border-spacing: 0;
@@ -24,11 +24,11 @@
 		///
 		/// STRIPED
 		///
-		@if $elements-table-striped {
-			&.#{$table-class-striped} {
+		@if options('elements', 'table', 'features', 'striped') {
+			&.#{class('table', 'striped')} {
 				tr,
 				tbody tr {
-					&.#{$table-class-active} {
+					&.#{class('table', 'active')} {
 						background: theme('color', 'secondary');
 					}
 					&:nth-of-type(odd) {
@@ -40,8 +40,8 @@
 		/// 
 		/// HOVERED
 		///
-		@if $elements-table-hovered {
-			&.#{$table-class-hovered} {
+		@if options('elements', 'table', 'features', 'hovered') {
+			&.#{class('table', 'hovered')} {
 				tr,
 				tbody tr {
 					&:hover {
@@ -54,8 +54,8 @@
 		tr,
 		tbody tr {
 			transition: all 0.3s;
-			&.#{$table-class-active},
-			&.#{$table-class-active}:hover {
+			&.#{class('table', 'active')},
+			&.#{class('table', 'active')}:hover {
 				background: theme('color', 'secondary');
 			}
 		}

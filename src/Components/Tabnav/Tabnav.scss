@@ -5,15 +5,15 @@
 ///
 /// if tabnav is enable
 ///
-@if $components-tabnav {
-	.#{$tabnav-name} {
+@if options('components', 'tabnav', 'enable') {
+	.#{class('tabnav', 'name')} {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-end;
 		border-bottom: $tabnav-border-width theme('border', 'style') theme('color', 'secondary');
 		padding: 0;
-		&>.#{$button-class-group} {
+		&>.#{class('button', 'group')} {
 			box-shadow: none;
 			border-radius: 0;
 		}
@@ -35,25 +35,25 @@
 				color: theme('color', 'text');
 				border-bottom-color: theme('color', 'grey');
 			}
-			&.#{$button-class-disabled} {
+			&.#{class('button', 'disabled')} {
 				opacity: .45;
 			}
-			&.#{$tabnav-active} {
+			&.#{class('tabnav', 'active')} {
 				color: theme('color', 'primary');
 				border-bottom-color: theme('color', 'primary');
-				i, [class^="#{$icon-font-class-name}"] {
+				i, [class^="#{class('icon', 'class-name')}"] {
 					color: inherit;
 				}
 			}
-			i, [class^="#{$icon-font-class-name}"] {
+			i, [class^="#{class('icon', 'class-name')}"] {
 				font-size: 1rem;
 			}
 		}
 		///
 		/// Bottom Tabnav
 		///
-		@if $components-tabnav-bottom-position {
-			&.#{$tabnav-bottom} {
+		@if options('components', 'tabnav', 'features', 'bottom-position') {
+			&.#{class('tabnav', 'bottom')} {
 				border-bottom: 0;
 				border-top: $tabnav-border-width theme('border', 'style') theme('color', 'secondary');
 				@include tab-button-styles() {
@@ -64,7 +64,7 @@
 					&:hover {
 						border-top-color: theme('color', 'grey');
 					}
-					&.#{$tabnav-active} {
+					&.#{class('tabnav', 'active')} {
 						border-top-color: theme('color', 'primary');
 					}
 				}
@@ -73,14 +73,14 @@
 		///
 		/// STYLES
 		///
-		@if $components-tabnav-styles {
+		@if options('components', 'tabnav', 'features', 'styles') {
 			@each $type-name, $color in $tabnav-styles {
 				&.#{$type-name} {
-					.#{$button-class},
-					a.#{$button-class},
-					.#{$dropdown-name} .#{$button-class},
-					.#{$dropdown-name} a.#{$button-class} {
-						&.#{$tabnav-active} {
+					.#{class('button', 'name')},
+					a.#{class('button', 'name')},
+					.#{class('button', 'dropdown')} .#{class('button', 'name')},
+					.#{class('button', 'dropdown')} a.#{class('button', 'name')} {
+						&.#{class('tabnav', 'active')} {
 							color: $color;
 							border-bottom-color: $color;
 						}
@@ -89,13 +89,13 @@
 				///
 				/// Bottom Tabnav
 				///
-				@if $components-tabnav-bottom-position {
-					&.#{$type-name}.#{$tabnav-bottom} {
-						.#{$button-class},
-						a.#{$button-class},
-						.#{$dropdown-name} .#{$button-class},
-						.#{$dropdown-name} a.#{$button-class} {
-							&.#{$tabnav-active} {
+				@if options('components', 'tabnav', 'features', 'bottom-position') {
+					&.#{$type-name}.#{class('tabnav', 'bottom')} {
+						.#{class('button', 'name')},
+						a.#{class('button', 'name')},
+						.#{class('button', 'dropdown')} .#{class('button', 'name')},
+						.#{class('button', 'dropdown')} a.#{class('button', 'name')} {
+							&.#{class('tabnav', 'active')} {
 								border-top-color: $color;
 							}
 						}
@@ -103,7 +103,7 @@
 				}
 			}
 		}
-        &.#{$tabnav-centered} {
+        &.#{class('tabnav', 'centered')} {
             justify-content: center;
         }
 	}

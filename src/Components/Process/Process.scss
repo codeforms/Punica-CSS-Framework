@@ -5,14 +5,14 @@
 ///
 /// if process is enable
 ///
-@if $components-process {
-	.#{$process-name} {
+@if options('components', 'process', 'enable') {
+	.#{class('process', 'name')} {
 		display: flex;
 		flex-wrap: nowrap;
 		margin: $process-margin;
 		width: 100%;
 		list-style: none;
-		.#{$process-item} {
+		.#{class('process', 'item')} {
 			flex: 1 1 0;
 			min-height: $process-item-min-height;
 			position: relative;
@@ -51,13 +51,13 @@
 					left: calc(50% - (#{$process-stage-stick-width} - 1px));
 				}
 			}
-			&.#{$process-active} {
+			&.#{class('process', 'active')} {
 				a {
 					color: theme('color', 'primary');
 					font-weight: theme('typography', 'header-weight');
 					&::after {
-						content: "#{$icon-process-current}"; // [*]
-						font-family: "#{$icon-font-name}"; // [*]
+						content: "#{class('icon', 'process-current')}"; // [*]
+						font-family: "#{class('icon', 'font-family')}"; // [*]
 						position: absolute;
 						top: calc(-15px - #{$process-current-icon-size});
 						left: calc(50% - ((#{$process-stage-stick-width} * 10) / 2));
@@ -65,7 +65,7 @@
 						font-size: $process-current-icon-size;
 					}
 				}
-				&~.#{$process-item} {
+				&~.#{class('process', 'item')} {
 					&::before {
 						background: theme('border', 'color');
 					}
@@ -84,7 +84,7 @@
 		///
 		/// STYLES
 		///
-		@if $components-process-styles {
+		@if options('components', 'process', 'features', 'styles') {
 			@each $type, $bg-color in $process-styles {
 				&.#{$type} {
 					@include process-styles($bg-color);
@@ -94,8 +94,8 @@
 		///
 		/// VERTICAL PROCESS
 		///
-		@if $components-process-vertical {
-			&.#{$process-vertical} {
+		@if options('components', 'process', 'features', 'vertical') {
+			&.#{class('process', 'vertical')} {
 				@include process-vertical();
 			}
 		}
@@ -108,6 +108,6 @@
 }
 /*
 REFERENCES ******************************************
-[*] Defined at Elements -> Icon -> variables.scss
+[*] Defined at classnames.scss file -> 'icon'
 https://material.io/resources/icons/
 *****************************************************/

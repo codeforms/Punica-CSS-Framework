@@ -7,7 +7,7 @@
 /// @param {Color} $color
 ///
 @mixin process-styles($color: $primary-color) {
-	.#{$process-item} {
+	.#{class('process', 'item')} {
 		&:not(:first-child)::before {
 			background: $color;
 		}
@@ -17,14 +17,14 @@
 				background: $color;
 			}
 		}
-		&.#{$process-active} {
+		&.#{class('process', 'active')} {
 			a {
 				color: $color;
 				&::after {
 					color: $color;
 				}
 			}
-			&~.#{$process-item} {
+			&~.#{class('process', 'item')} {
 				&::before {
 					background: theme('border', 'color');
 				}
@@ -42,7 +42,7 @@
 	margin: $process-vertical-margin;
 	flex-direction: column;
 	align-items: flex-start;
-	.#{$process-item} {
+	.#{class('process', 'item')} {
 		justify-content: flex-start;
 		align-items: center;
 		max-width: 100%;
@@ -67,7 +67,7 @@
 				height: 100%;
 			}
 		}
-		&.#{$process-active} {
+		&.#{class('process', 'active')} {
 			a {
 				font-weight: bold;
 				&::after {
@@ -77,9 +77,9 @@
 			}
 		}
 	}
-	&.#{$process-vertical-reversed} {
+	&.#{class('process', 'reversed')} {
 		flex-direction: column-reverse;
-		.#{$process-item} {
+		.#{class('process', 'item')} {
 			&:last-child {
 				border-top: set-border();
 			}

@@ -4,8 +4,8 @@
 ///
 /// if icon is enable
 ///
-@if $elements-icon {
-	.#{$icon-font-class-name} {
+@if options('elements', 'icon', 'enable') {
+	.#{class('icon', 'class-name')} {
 		font-size: $icon-font-size;
 		line-height: $icon-line-height;
 		vertical-align: $icon-vertical-align;

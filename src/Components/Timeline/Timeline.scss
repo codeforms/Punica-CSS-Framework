@@ -4,9 +4,9 @@
 ///
 /// if timeline is enable
 ///
-@if $components-timeline {
-	.#{$timeline-container} {
-		.#{$timeline-item} {
+@if options('components', 'timeline', 'enable') {
+	.#{class('timeline', 'name')} {
+		.#{class('timeline', 'item')} {
 			display: flex;
 			padding: 1.25em 2em 2.85em;
 			position: relative;
@@ -22,11 +22,11 @@
 				width: $timeline-border-width;
 				background-color: theme('border', 'color');
 			}
-			&:target .#{$timeline-type} {
+			&:target .#{class('timeline', 'type')} {
 				border-color: theme('color', 'primary');
 				box-shadow: 0 0 0.2em theme('color', 'primary');
 			}
-			.#{$timeline-type} {
+			.#{class('timeline', 'type')} {
 				position: absolute;
 				z-index: 1;
 				display: flex;
@@ -44,7 +44,7 @@
 				///
 				/// STYLES
 				///
-				@if $components-timeline-styles {
+				@if options('components', 'timeline', 'features', 'styles') {
 					@each $type, $bg-color, $color in $timeline-styles {
 					    &.#{$type} {
 							background-color: $bg-color;
@@ -54,11 +54,11 @@
 					}
 				}
 			}
-			.#{$timeline-author},
-			.#{$timeline-body},
-			.#{$timeline-date},
-			.#{$timeline-actions},
-			.#{$timeline-media} {
+			.#{class('timeline', 'author')},
+			.#{class('timeline', 'body')},
+			.#{class('timeline', 'date')},
+			.#{class('timeline', 'actions')},
+			.#{class('timeline', 'media')} {
 				min-width: 0;
 				max-width: 100%;
 				color: theme('color', 'text');
@@ -66,20 +66,20 @@
 				margin-left: 10px;
 				width: 100%;
 			}
-			.#{$timeline-author} {
+			.#{class('timeline', 'author')} {
 				font-weight: bold;
 				font-size: 1rem;
 				color: darken(theme('color', 'text'), 12%);
 			}
-			.#{$timeline-date} {
+			.#{class('timeline', 'date')} {
 				font-size: .9em;
 				opacity: .6;
 			}
 			///
 			/// MEDIA
 			///
-			@if $components-timeline-media {
-				.#{$timeline-media} {
+			@if options('components', 'timeline', 'features', 'media') {
+				.#{class('timeline', 'media')} {
 					margin-top: 16px;
 					display: flex;
 					flex-wrap: wrap;
@@ -91,11 +91,11 @@
 				///
 				/// MEDIA GROUP
 				///
-				@if $components-timeline-media-group {
-					@include media-group-specs($timeline-media);
+				@if options('components', 'timeline', 'features', 'media-group') {
+					@include media-group-specs(class('timeline', 'media'));
 				}
 			}
-			.#{$timeline-actions} {
+			.#{class('timeline', 'actions')} {
 				margin-top: 16px;
 			}
 			&:last-child::before {
