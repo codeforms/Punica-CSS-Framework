@@ -1,123 +1,171 @@
 /////////////////////////////////////////////////////////
-/// LAYOUT
+/// OPTIONS
 /////////////////////////////////////////////////////////
-	$layout-grid								: true;
-	/**/$layout-grid-equal						: true;
-	/**/$layout-grid-offset						: true; // [!] increases the size
-
-/////////////////////////////////////////////////////////
-/// COMPONENTS
-/////////////////////////////////////////////////////////
-
-/// ALERT =============================================
-	$components-alert							: true;
-	/**/$components-alert-styles				: true;
-	/**/$components-alert-sizes					: true;
-
-/// BADGE =============================================
-	$components-badge							: true;
-	/**/$components-badge-styles				: true;
-	/**/$components-badge-sizes					: true;
-
-/// BILLBOARD =========================================
-	$components-billboard						: true;
-	/**/$components-billboard-styles			: true;
-	/**/$components-billboard-sizes				: true;
-	/**/$components-billboard-cover				: true;
-
-/// BREADCRUMB ========================================
-	$components-breadcrumb						: true;
-	/**/$components-breadcrumb-sizes			: true;
-
-/// CARD ==============================================
-	$components-card							: true;
-	/**/$components-card-groups					: true;
-	/**/$components-card-horizontal				: true;
-	/**/$components-card-media					: true;
-	/**//**/$components-card-media-group		: true;
-
-/// LIST ==============================================
-	$components-list							: true;
-	/**/$components-list-divided				: true;
-	/**/$components-list-hovered				: true;
-	/**/$components-list-striped				: true;
-
-/// MENU ==============================================
-	$components-menu							: true;
-
-/// NAVBAR ============================================
-	$components-navbar							: true;
-	/**/$components-navbar-themes				: true;
-	/**/$components-navbar-sizes				: true;
-	/**/$components-navbar-divided				: true;
-
-/// PANEL =============================================
-	$components-panel							: true;
-	/**/$components-panel-media					: true;
-	/**//**/$components-panel-media-group		: true;
-
-/// PROCESS ===========================================
-	$components-process							: true;
-	/**/$components-process-styles				: true;
-	/**/$components-process-vertical			: true;
-
-/// PROGRESS ==========================================
-	$components-progress						: true;
-	/**/$components-progress-styles				: true;
-
-/// TABNAV ============================================
-	$components-tabnav							: true;
-	/**/$components-tabnav-styles				: true;
-	/**/$components-tabnav-bottom-position		: true;
-
-/// TIMELINE ==========================================
-	$components-timeline						: true;
-	/**/$components-timeline-styles				: true;
-	/**/$components-timeline-media				: true;
-	/**//**/$components-timeline-media-group	: true;
-
-/// TOOLTIP ===========================================
-	$components-tooltip							: true;
-
-/////////////////////////////////////////////////////////
-/// ELEMENTS
-/////////////////////////////////////////////////////////
-
-/// Button ============================================
-	$elements-button							: true;
-	/**/$elements-button-group					: true;
-	/**/$elements-button-group-vertical			: true;
-	/**/$elements-button-styles					: true;
-	/**/$elements-button-sizes					: true;
-	/**/$elements-button-outlined				: true;
-	/**/$elements-button-secondary				: true;
-	/**/$elements-button-dropdown				: true;
-
-/// Caption ===========================================
-	$elements-caption							: true;
-	/**/$elements-caption-sizes					: true;
-
-/// Form ==============================================
-	$elements-form								: true;
-	/**/$elements-form-group					: true;
-	/**/$elements-form-input-sizes				: true;
-	/**/$elements-form-validation-styles		: true;
-	/**/$elements-form-checkbox-radio			: true;
-
-/// Icon ==============================================
-	$elements-icon								: true;
-
-/// Table =============================================
-	$elements-table								: true;
-	/**/$elements-table-hovered					: true;
-	/**/$elements-table-striped					: true;
-
-/// Label =============================================
-	$elements-label								: true;
-	/**/$elements-label-styles					: true;
-	/**/$elements-label-sizes					: true;
-
-/////////////////////////////////////////////////////////
-/// UTILITIES
-/////////////////////////////////////////////////////////
-	$helpers									: true; 
+$options: (
+	/// LAYOUT
+	'layout': (
+		'grid': (
+			'enable': true,
+			'features': (
+				'equal': true,
+				'offset': true // [!] increases the size
+			)
+		)
+	),
+	/// COMPONENTS
+	'components': (
+		'alert': (
+			'enable': true,
+			'features': (
+				'styles': true,
+				'sizes': true
+			)
+		),
+		'badge': (
+			'enable': true,
+			'features': (
+				'styles': true,
+				'sizes': true
+			)
+		),
+		'billboard': (
+			'enable': true,
+			'features': (
+				'styles': true,
+				'sizes': true,
+				'cover': true
+			)
+		),
+		'breadcrumb': (
+			'enable': true,
+			'features': (
+				'sizes': true
+			)
+		),
+		'card': (
+			'enable': true,
+			'features': (
+				'group': true,
+				'horizontal': true,
+				'media': true,
+				'media-group': true,
+				'border': true,
+				'shadow': true
+			)
+		),
+		'list': (
+			'enable': true,
+			'features': (
+				'divided': true,
+				'hovered': true,
+				'striped': true
+			)
+		),
+		'menu': (
+			'enable': true,
+			'features': (),
+		),
+		'navbar': (
+			'enable': true,
+			'features': (
+				'themes': true,
+				'sizes': true,
+				'divided': true
+			)
+		),
+		'panel': (
+			'enable': true,
+			'features': (
+				'media': true,
+				'media-group': true,
+				'border': true,
+				'shadow': true
+			)
+		),
+		'process': (
+			'enable': true,
+			'features': (
+				'styles': true,
+				'vertical': true
+			)
+		),
+		'progress': (
+			'enable': true,
+			'features': (
+				'styles': true
+			)
+		),
+		'tabnav': (
+			'enable': true,
+			'features': (
+				'styles': true,
+				'bottom-position': true
+			)
+		),
+		'timeline': (
+			'enable': true,
+			'features': (
+				'styles': true,
+				'media': true,
+				'media-group': true
+			)
+		),
+		'tooltip': (
+			'enable': true,
+			'features': ()
+		),
+	),
+	/// ELEMENTS
+	'elements': (
+		'button': (
+			'enable': true,
+			'features': (
+				'group': true,
+				'vertical': true,
+				'styles': true,
+				'sizes': true,
+				'outlined': true,
+				'secondary': true,
+				'dropdown': true
+			)
+		),
+		'caption': (
+			'enable': true,
+			'features': (
+				'sizes': true,
+			)
+		),
+		'form': (
+			'enable': true,
+			'features': (
+				'group': true,
+				'sizes': true,
+				'validation-styles': true,
+				'checkbox-radio': true,
+			)
+		),
+		'icon': (
+			'enable': true
+		),
+		'table': (
+			'enable': true,
+			'features': (
+				'hovered': true,
+				'striped': true
+			)
+		),
+		'label': (
+			'enable': true,
+			'features': (
+				'styles': true,
+				'sizes': true
+			)
+		),
+	),
+	/// UTILITIES
+	'utilities': (
+		'helpers': (
+			'enable': true
+		)
+	)
+);
