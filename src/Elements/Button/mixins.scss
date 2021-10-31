@@ -83,7 +83,7 @@
 			}
 		}
 		// dropdown hover (default)
-		&.#{class('menu', 'item')-active} > .#{class('menu', 'name')},
+		&.#{class('menu', 'active')} > .#{class('menu', 'name')},
 		&>.#{class('button', 'dropdown-toggle')}:focus + .#{class('menu', 'name')},
 		&>.#{class('button', 'dropdown-toggle')}:hover + .#{class('menu', 'name')},
 		&>.#{class('menu', 'name')}:focus,
