@@ -322,20 +322,26 @@
 ///
 /// Secondary Button
 ///
-@mixin secondary-button() {
-	color: theme('color', 'text');
-	background: theme('elements', 'button', 'secondary-bg');
+@mixin secondary-button(
+	$color: theme('elements', 'button', 'secondary', 'color'),
+	$hover-color: theme('elements', 'button', 'secondary', 'hover-color'),
+	$hover-bg: theme('elements', 'button', 'secondary', 'hover-bg'),
+	$border-color: theme('elements', 'button', 'secondary', 'border-color'), 
+) {
+	$setColor: if($color, $color, theme('color', 'text'));
+	color: $setColor;
+	border-color: if($border-color, $border-color, theme('border', 'color'));
+	background: theme('elements', 'button', 'secondary', 'background');
 	&:focus,
 	&:hover,
 	&:active,
 	&.#{class('button', 'active')} {
-		color: theme('color', 'text');
-		background: theme('elements', 'button', 'secondary-bg-hover');
-		z-index: 1;
-		border-color: theme('border', 'color');
-		i, [class^="#{class('icon', 'class-name')}"] {
-			color: theme('color', 'text');
-		}
+		color: if($hover-color, $hover-color, $setColor);
+		background: theme('elements', 'button', 'secondary', 'hover-bg');
+		//z-index: 1;
+	}
+	i, [class^="#{class('icon', 'class-name')}"] {
+		color: $setColor;
 	}
 }
 

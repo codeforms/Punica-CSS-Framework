@@ -56,8 +56,13 @@ $punica-themes: (
 		'elements': (
 			'button': (
 				'font-weight'		: 700,
-				'secondary-bg'		: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
-				'secondary-bg-hover': linear-gradient(to top, #ffffff 0%,#e6e6e6 100%)
+				'secondary': (
+					'color'			: null,
+					'background'	: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
+					'hover-color'	: null,
+					'hover-bg'		: linear-gradient(to top, #ffffff 0%,#e6e6e6 100%),
+					'border-color'	: null
+				)
 			),
 		)
 	),

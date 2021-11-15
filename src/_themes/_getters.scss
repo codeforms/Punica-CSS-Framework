@@ -24,14 +24,18 @@
 /// @example theme('name')
 /// @example theme('color', 'primary')
 /// @example theme('elements', 'button', 'font-weight')
+/// @example theme('elements', 'button', 'secondary', 'background')
 ///
-@function theme($node, $key: null, $child: null) {
+@function theme($node, $key: null, $child: null, $sub: null) {
 	$value: map-get($theme-map, $node);
 
 	@if $key {
 		$value: map-get($value, $key);
 		@if $child {
-			$value: map-get($value, $child)
+			$value: map-get($value, $child);
+			@if $sub {
+				$value: map-get($value, $sub);
+			}
 		}
 	}
 	
