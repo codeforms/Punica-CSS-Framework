@@ -30,7 +30,7 @@
 			padding: .935rem 1.4rem;
 			box-shadow: none;
 			border-bottom: variables('tabnav', 'border-width') solid transparent;
-	        margin-bottom: -variables('tabnav', 'border-width');
+	        margin-bottom: -#{variables('tabnav', 'border-width')};
 			&:hover {
 				color: theme('color', 'text');
 				border-bottom-color: theme('color', 'grey');
@@ -57,7 +57,7 @@
 				border-bottom: 0;
 				border-top: variables('tabnav', 'border-width') theme('border', 'style') theme('color', 'secondary');
 				@include tab-button-styles() {
-					margin-top: -variables('tabnav', 'border-width');
+					margin-top: -#{variables('tabnav', 'border-width')};
 					border-top: variables('tabnav', 'border-width') solid transparent;
 					border-bottom: 0;
 					margin-bottom: 0;
