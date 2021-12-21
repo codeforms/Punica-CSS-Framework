@@ -1,0 +1,80 @@
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENTS : STATS
+/////////////////////////////////////////////////////////
+///
+/// if stats is enable
+///
+@if options('stats', 'enable') {
+	.#{class('stats', 'name')},
+	a.#{class('stats', 'name')} {
+		display: inline-flex;
+		flex-direction: column;
+		background-color: theme('color', 'background');
+		margin: variables('stats', 'margin');
+		border-width: variables('stats', 'border-width');
+		border-color: theme('border', 'color');
+		border-style: theme('border', 'style');
+		border-radius: variables('stats', 'border-radius');
+		padding: variables('stats', 'padding');
+		line-height: variables('stats', 'line-height');
+		text-decoration: none;
+		transition: variables('stats', 'transition');
+		>.#{class('stats', 'title')},
+		>.#{class('stats', 'subtitle')},
+		>.#{class('stats', 'value')} {
+			display: flex;
+			flex-direction: column;
+		}
+		>.#{class('stats', 'title')} {
+			font-size: variables('stats', 'title', 'font-size');
+		}
+		>.#{class('stats', 'subtitle')} {
+			font-size: variables('stats', 'subtitle', 'font-size');
+			margin-top: variables('stats', 'subtitle', 'margin-top');
+			color: theme('color', 'grey');
+		}
+		>.#{class('stats', 'value')} {
+			font-weight: variables('stats', 'value', 'font-weight');
+			font-size: variables('stats', 'value', 'font-size');
+			flex-direction: row;
+			line-height: variables('stats', 'value', 'line-height');
+			align-items: center;
+			>img,
+		    >.#{class('icon', 'class-name')},
+		    >i {
+		    	font-weight: normal;
+		    	display: inline-block;
+		    	vertical-align: baseline;
+		    	font-size: variables('stats', 'media', 'font-size');
+		    	margin-right: variables('stats', 'media', 'margin-right');
+		    }
+		}
+		///
+		/// STYLES
+		///
+		@if options('stats', 'features', 'styles') {
+			@each $style-name, $bg-color in $stats-styles {
+				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
+					border-color: $bg-color;
+					background: transparent;
+					color: inherit;
+					>.#{class('stats', 'value')} {
+						color: inherit;
+						>.#{class('icon', 'class-name')},
+					    >i {
+					    	color: $bg-color;
+					    }
+					}
+				};
+			}
+		}
+	}
+	a.#{class('stats', 'name')}:hover {
+		@if theme('type') == 'light' {
+			background-color: darken(theme('color', 'background'), 4.75%);
+		} @else {
+			background-color: lighten(theme('color', 'background'), 3.25%);
+		}
+		
+	}
+}

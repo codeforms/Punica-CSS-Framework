@@ -241,6 +241,37 @@ $options: (
 		),
 		'variables': ()
 	),
+	/// Stats
+	'stats': (
+		'enable': true,
+		'features': (
+			'styles': true
+		),
+		'variables': (
+			'margin': 0 1.1em .8em,
+			'padding': 8px 2.76em,
+			'border-radius': 65% 12% 92% 5% / 12% 95% 6% 65%,
+			'line-height': 2.1em,
+			'border-width': 6px 0,
+			'transition': .15s,
+			'title': (
+				'font-size': 1.1em
+			),
+			'value': (
+				'font-size': 1.65rem,
+				'font-weight': bold,
+				'line-height': 1.2
+			),
+			'subtitle': (
+				'font-size': .816rem,
+				'margin-top': -4px
+			),
+			'media': (
+				'font-size': 1em,
+				'margin-right': .5em
+			)
+		)
+	),
 	/// Tabnav
 	'tabnav': (
 		'enable': true,

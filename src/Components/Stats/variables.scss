@@ -1,0 +1,13 @@
+/////////////////////////////////////////////////////////
+/// PUNICA CSS > COMPONENT : STATS > VARIABLES
+/////////////////////////////////////////////////////////
+
+/// STYLES ==============================================
+$stats-styles: (
+	// style name, theme variable
+	"primary"	: theme('color', 'primary'),
+	"success"	: theme('color', 'success'),
+	"warning"	: theme('color', 'warning'),
+	"error"		: theme('color', 'error'),
+	"dark"		: lighten(theme('color', 'dark'), 7.85%),
+);
