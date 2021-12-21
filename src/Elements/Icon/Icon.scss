@@ -4,10 +4,10 @@
 ///
 /// if icon is enable
 ///
-@if options('elements', 'icon', 'enable') {
+@if options('icon', 'enable') {
 	.#{class('icon', 'class-name')} {
-		font-size: $icon-font-size;
-		line-height: $icon-line-height;
-		vertical-align: $icon-vertical-align;
+		font-size: variables('icon', 'font-size');
+		line-height: variables('icon', 'line-height');
+		vertical-align: variables('icon', 'vertical-align');
 	}
 }

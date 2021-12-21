@@ -3,24 +3,10 @@
 /////////////////////////////////////////////////////////
 
 /// PREFERENCES =========================================
-$grid 						: 16;
-$gutter						: 6px;
-$container-width 			: 100%;
-$container-padding			: 40px;
-/* Column */
-$column-padding				: .3rem;
-$column-min-height			: .125rem;
-/* Breakpoints */
-$breakpoints-extra-small	: 0;
-$breakpoints-small			: 500px;
-$breakpoints-medium			: 768px;
-$breakpoints-large			: 992px;
-$breakpoints-extra-large	: 1260px;
-/* Viewports */
-$viewports					: (
-	(class('grid', 'extra-small'), $breakpoints-extra-small),
-	(class('grid', 'small'), $breakpoints-small),
-	(class('grid', 'medium'), $breakpoints-medium),
-	(class('grid', 'large'), $breakpoints-large),
-	(class('grid', 'extra-large'), $breakpoints-extra-large)
+$viewports: (
+	(class('grid', 'extra-small'), variables('grid', 'breakpoints', 'extra-small')),
+	(class('grid', 'small'), variables('grid', 'breakpoints', 'small')),
+	(class('grid', 'medium'), variables('grid', 'breakpoints', 'medium')),
+	(class('grid', 'large'), variables('grid', 'breakpoints', 'large')),
+	(class('grid', 'extra-large'), variables('grid', 'breakpoints', 'extra-large'))
 );

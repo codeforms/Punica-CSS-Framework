@@ -10,14 +10,3 @@ $process-styles	: (
 	"error"		: theme('color', 'error'),
 	"dark"		: theme('color', 'text'),
 );
-
-/// PREFERENCES =========================================
-$process-margin					: 1em 0 5em;
-$process-item-min-height		: 4rem;
-$process-stick-height			: 6px;
-$process-stage-stick-width		: 3px;
-$process-stage-stick-height		: .8rem;
-$process-current-icon-size		: 1.8rem;
-/* Vertical */
-$process-vertical-margin		: 1em 0;
-$process-vertical-stick-width	: 9px;

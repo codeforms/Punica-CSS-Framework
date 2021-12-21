@@ -8,8 +8,3 @@ $caption-sizes: (
     ("small", 1em .1rem, 1.65rem, theme('typography', 'font-weight')),
     ("large", 1.4em .3rem, 2.35rem, theme('typography', 'header-weight'))
 );
-
-/// PREFERENCES =========================================
-$caption-margin: 1.3em .2rem;
-$caption-font-size: 2em;
-$caption-media-spacer: .559em;

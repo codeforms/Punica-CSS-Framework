@@ -39,7 +39,7 @@
 @mixin process-vertical() {
 	display: flex;
 	padding: 1.25em 2em 2.85em;
-	margin: $process-vertical-margin;
+	margin: variables('process', 'vertical', 'margin');
 	flex-direction: column;
 	align-items: flex-start;
 	.#{class('process', 'item')} {
@@ -54,13 +54,13 @@
 			border-top: set-border();
 		}
 		&:not(:first-child)::before {
-			width: $process-stage-stick-width;
+			width: variables('process', 'stickbar', 'width');
 			height: 100%;
 			left: 0;
 		}
 		a {
 			&::before {
-				width: $process-vertical-stick-width;
+				width: variables('process', 'vertical', 'stickbar-width');
 			}
 			&:first-child::before {
 				left: 0;
@@ -72,7 +72,7 @@
 				font-weight: bold;
 				&::after {
 					top: 15px;
-					left: calc(-15px - #{$process-current-icon-size});
+					left: calc(-15px - #{variables('process', 'icon-size')});
 				}
 			}
 		}

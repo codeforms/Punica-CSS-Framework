@@ -4,20 +4,20 @@
 ///
 /// if list is enable
 ///
-@if options('components', 'list', 'enable') {
+@if options('list', 'enable') {
 	.#{class('list', 'name')} {
 		list-style: none;
-		margin: 1rem 0;
+		margin: variables('list', 'margin');
 		>.#{class('list', 'item')} {
 		    display: flex;
 		    align-items: center;
-		    padding: .55em;
-		    margin: 0;
-		    transition: .15s;
+		    padding: variables('list', 'item', 'padding');
+		    margin: variables('list', 'item', 'margin');
+		    transition: variables('list', 'item', 'transition');
 		    >img,
 		    >.#{class('icon', 'class-name')},
 		    >i {
-		    	margin-right: 1rem;
+		    	margin-right: variables('list', 'media', 'margin-right');
 		    }
 		    &>span,
 		    &>div {
@@ -27,29 +27,28 @@
 		    }
 		    >.#{class('list', 'body')} {
 		    	flex: 1;
-		    	line-height: 1.4;
-		    	text-align: left;
+		    	line-height: variables('list', 'body', 'line-height');
+		    	text-align: variables('list', 'body', 'text-align');
 		    	display: initial;
 		    	>.#{class('list', 'title')},
 		    	>.#{class('list', 'subtitle')} {
 					display: block;
 				}
 		    	>.#{class('list', 'title')} {
-		    		font-size: 1.28rem;
+		    		font-size: variables('list', 'title', 'font-size');
     				font-weight: theme('typography', 'header-weight');
-					line-height: 1;
+					line-height: variables('list', 'body', 'line-height');
 		    	}
 				>.#{class('list', 'subtitle')} {
-					font-size: .889em;
+					font-size: variables('list', 'subtitle', 'font-size');
 					font-weight: theme('typography', 'font-weight');
 					color: theme('color', 'primary');
-					margin-bottom: 7px;
+					margin-bottom: variables('list', 'subtitle', 'margin-bottom');
 				}
 		    }
 		    >.#{class('list', 'actions')} {
-	    		margin-left: auto;
-    		    width: auto;
-    		    margin-left: 1rem;
+    		    width: variables('list', 'actions', 'width');
+	    		margin-left: variables('list', 'actions', 'margin-left');
 			}
 			&.#{class('list', 'active')} {
 				background: darken(theme('color', 'background'), 11%);
@@ -58,7 +57,7 @@
 		///
 		/// DIVIDED
 		///
-		@if options('components', 'list', 'features', 'divided') {
+		@if options('list', 'features', 'divided') {
 			&.#{class('list', 'divided')} {
 				>.#{class('list', 'item')} {
 					border-bottom: set-border();
@@ -71,7 +70,7 @@
 		///
 		/// STRIPED
 		///
-		@if options('components', 'list', 'features', 'striped') {
+		@if options('list', 'features', 'striped') {
 			&.#{class('list', 'striped')} {
 				>.#{class('list', 'item')} {
 					&:nth-of-type(odd) {
@@ -83,12 +82,12 @@
 		///
 		/// HOVERED
 		///
-		@if options('components', 'list', 'features', 'hovered') {
+		@if options('list', 'features', 'hovered') {
 			&.#{class('list', 'hovered')} {
 				>.#{class('list', 'item')} {
 					&:hover {
 						background: theme('color', 'secondary');
-						transition: .15s;
+						transition: variables('list', 'item', 'transition');
 					}
 				}
 			}

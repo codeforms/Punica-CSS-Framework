@@ -4,7 +4,7 @@
 ///
 /// if breadcrumb is enable
 ///
-@if options('components', 'breadcrumb', 'enable')  {
+@if options('breadcrumb', 'enable')  {
 	.#{class('breadcrumb', 'name')} {
 		display: inline-block;
 		white-space: nowrap;
@@ -12,11 +12,8 @@
 		.#{class('breadcrumb', 'item')} {
 			text-decoration: none;
 			font-size: inherit;
-			font-weight: bold;
-			&:focus,
-			&:hover,
-			&:active,
-			&.active {
+			font-weight: variables('breadcrumb', 'font-weight');
+			&:focus,&:hover,&:active,&.active {
 				color: theme('color', 'primary');
 			}
 			&::after {
@@ -33,7 +30,7 @@
 			}
 			&.#{class('breadcrumb', 'active')} {
 				color: theme('color', 'primary');
-				font-weight: bold;
+				font-weight: variables('breadcrumb', 'active-weight');
 				&::after {
 					content: none;
 				}
@@ -42,7 +39,7 @@
 		///
 		/// SIZES
 		///
-		@if options('components', 'breadcrumb', 'features', 'sizes') {
+		@if options('breadcrumb', 'features', 'sizes') {
 			// size, font-size, seperator-padding, seperator-size
 			@each $size, $font-size, $seperator-padding, $seperator-size in $breadcrumb-sizes {
 				&.#{$size} {
@@ -60,7 +57,7 @@
 	///
 	///
 	///
-	@include breakpoints($breakpoints-medium, 'max-width') {
+	@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('breadcrumb', 'name')} {
 			.#{class('breadcrumb', 'item')} {
 				&:after {

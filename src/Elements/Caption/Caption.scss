@@ -4,27 +4,27 @@
 ///
 /// if caption is enable
 ///
-@if options('elements', 'caption', 'enable') {
+@if options('caption', 'enable') {
 	.#{class('caption', 'name')} {
 		display: flex;
 	    align-items: center;
-		margin: $caption-margin;
-		font-size: $caption-font-size;
+		margin: variables('caption', 'margin');
+		font-size: variables('caption', 'font-size');
 		font-weight: theme('typography', 'header-weight');
 		line-height: theme('typography', 'line-height') - .2;
 		text-align: left;
 		>img,
 	    >.#{class('icon', 'class-name')},
 	    >i {
-	    	margin-right: $caption-media-spacer;
+	    	margin-right: variables('caption', 'media', 'margin');
 	    }
 	    >.#{class('icon', 'class-name')},
 	    >i {
-	    	font-size: $caption-font-size * 1.4;
+	    	font-size: variables('caption', 'font-size') * 1.4;
 	    }
 	    &.#{class('caption', 'divided')} {
 	    	border-bottom: set-border();
-	    	padding-bottom: $caption-media-spacer;
+	    	padding-bottom: variables('caption', 'media', 'margin');
 	    }
 	    &>span,
 	    &>div {
@@ -46,7 +46,7 @@
 	    ///
 		/// SIZES
 		///
-		@if options('elements', 'caption', 'features', 'sizes') {
+		@if options('caption', 'features', 'sizes') {
 			@each $size-name, $margin, $font-size, $font-weight in $caption-sizes {
 				@include set-size($font-size, null, $size-name) {
 					margin: $margin;
@@ -59,7 +59,7 @@
 			}
 		}
 		//
-		@include breakpoints($breakpoints-medium, 'max-width') {
+		@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 			flex-direction: column;
 	    	text-align: center;
 	    	margin: inherit;

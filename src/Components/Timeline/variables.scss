@@ -10,7 +10,3 @@ $timeline-styles: (
 	("error", theme('color', 'error'), theme('color', 'negative')),
 	("dark", theme('color', 'text'), theme('color', 'grey')),
 );
-
-/// PREFERENCES =========================================
-$timeline-type-width	: 32px;
-$timeline-border-width	: 1px;

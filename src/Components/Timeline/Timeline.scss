@@ -4,7 +4,7 @@
 ///
 /// if timeline is enable
 ///
-@if options('components', 'timeline', 'enable') {
+@if options('timeline', 'enable') {
 	.#{class('timeline', 'name')} {
 		.#{class('timeline', 'item')} {
 			display: flex;
@@ -19,7 +19,7 @@
 				top: 0;
 				bottom: 0;
 				left: 0;
-				width: $timeline-border-width;
+				width: variables('timeline', 'border-width');
 				background-color: theme('border', 'color');
 			}
 			&:target .#{class('timeline', 'type')} {
@@ -30,10 +30,10 @@
 				position: absolute;
 				z-index: 1;
 				display: flex;
-				width: $timeline-type-width;
-				height: $timeline-type-width;
+				width: variables('timeline', 'type-width');
+				height: variables('timeline', 'type-width');
 				top: 13px;
-				left: -(($timeline-type-width / 2px) - $timeline-border-width);
+				left: -((variables('timeline', 'type-width') / 2px) - variables('timeline', 'border-width'));
 				align-items: center;
 				background-color: theme('color', 'secondary');
 				border: 2px theme('border', 'style') theme('border', 'color');
@@ -44,7 +44,7 @@
 				///
 				/// STYLES
 				///
-				@if options('components', 'timeline', 'features', 'styles') {
+				@if options('timeline', 'features', 'styles') {
 					@each $type, $bg-color, $color in $timeline-styles {
 					    &.#{$type} {
 							background-color: $bg-color;
@@ -78,7 +78,7 @@
 			///
 			/// MEDIA
 			///
-			@if options('components', 'timeline', 'features', 'media') {
+			@if options('timeline', 'features', 'media') {
 				.#{class('timeline', 'media')} {
 					margin-top: 16px;
 					display: flex;
@@ -91,7 +91,7 @@
 				///
 				/// MEDIA GROUP
 				///
-				@if options('components', 'timeline', 'features', 'media-group') {
+				@if options('timeline', 'features', 'media-group') {
 					@include media-group-specs(class('timeline', 'media'));
 				}
 			}

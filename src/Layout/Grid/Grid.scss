@@ -4,30 +4,30 @@
 ///
 /// if grid is enable
 ///
-@if options('layout', 'grid', 'enable') {
+@if options('grid', 'enable') {
 	.#{class('grid', 'container')} {
-		width: $container-width;
-		margin: 0 auto;
-		padding: 0 $container-padding;
+		width: variables('grid', 'container', 'width');
+		margin: variables('grid', 'container', 'margin');
+		padding: 0 variables('grid', 'container', 'padding');
 	}
-	@include breakpoints($breakpoints-medium, 'max-width') {
+	@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('grid', 'container')} {
-			padding: 0 ($container-padding / 3);
+			padding: 0 (variables('grid', 'container', 'padding') / 3);
 		}
 	}
 	.#{class('grid', 'row')} {
 		display: grid;
-		grid-gap: $gutter;
-		grid-template-columns: repeat($grid, 1fr);
+		grid-gap: variables('grid', 'gap');
+		grid-template-columns: repeat(variables('grid', 'columns', 'size'), 1fr);
 		&> [class^="#{class('grid', 'column')}"] {
 			height: fit-content;
-			padding: $column-padding;
-			min-height: $column-min-height;
+			padding: variables('grid', 'columns', 'padding');
+			min-height: variables('grid', 'columns', 'min-height');
 		}
 		///
 		/// EQUAL
 		///
-		@if options('layout', 'grid', 'features', 'equal') {
+		@if options('grid', 'features', 'equal') {
 			&.#{class('grid', 'equal')} > [class^="#{class('grid', 'column')}"] {
 				height: auto;
 			}
@@ -35,7 +35,7 @@
 	}
 	@each $label, $breakpoint in $viewports {
 		@include breakpoints($breakpoint) {
-			@for $id from 1 through $grid {
+			@for $id from 1 through variables('grid', 'columns', 'size') {
 				.#{class('grid', 'column')}-#{$id},
 				.#{class('grid', 'column')}-#{$label}-#{$id} {
 					grid-column: span #{$id};
@@ -43,8 +43,8 @@
 				///
 				/// OFFSET
 				///
-				@if options('layout', 'grid', 'features', 'offset') {
-					@for $offset-id from 2 through $grid {
+				@if options('grid', 'features', 'offset') {
+					@for $offset-id from 2 through variables('grid', 'columns', 'size') {
 						.#{class('grid', 'column')}-#{$label}-#{$id}.#{class('grid', 'offset')}-#{$label}-#{$offset-id} {
 							grid-column: #{$offset-id} / span #{$id};
 						}

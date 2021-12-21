@@ -35,7 +35,7 @@
 	///
 	/// DIVIDED NAVBAR
 	///
-	@if options('components', 'navbar', 'features', 'divided') {
+	@if options('navbar', 'features', 'divided') {
 		&.#{class('navbar', 'divided')} {
 			.#{class('button', 'group')} {
 				.#{class('button', 'name')},

@@ -103,7 +103,7 @@
 		///
 		/// BUTTON GROUPS
 		///
-		@if options('elements', 'button', 'features', 'group') {
+		@if options('button', 'features', 'group') {
 			&>.#{class('button', 'group')} {
 				&>.#{class('button', 'dropdown-toggle')}:nth-last-child(2) {
 					border-bottom-right-radius: theme('border', 'radius');
@@ -114,7 +114,7 @@
 		///
 		/// SIZES
 		///
-		@if options('elements', 'button', 'features', 'sizes') {
+		@if options('button', 'features', 'sizes') {
 			@include button-sizes(true);
 		}
 	}
@@ -150,7 +150,7 @@
 		///
 		/// SECONDARY BUTTON
 		///
-		@if options('elements', 'button', 'features', 'secondary') {
+		@if options('button', 'features', 'secondary') {
 			&.#{class('button', 'secondary')} > .#{class('button', 'name')} {
 				@include secondary-button();
 			}
@@ -165,13 +165,13 @@
 		///
 		/// SIZES
 		/// 
-		@if options('elements', 'button', 'features', 'sizes') {
+		@if options('button', 'features', 'sizes') {
 			@include button-sizes(true);
 		}
 		///
 		/// STYLES
 		///
-		@if options('elements', 'button', 'features', 'sizes') {
+		@if options('button', 'features', 'sizes') {
 			@each $theme-name, $theme-color in $button-styles {
 				&.#{$theme-name} > .#{class('button', 'name')},
 				&.#{$theme-name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
@@ -184,7 +184,7 @@
 		///
 		/// DROPDOWN
 		///
-		@if options('elements', 'button', 'features', 'dropdown') {
+		@if options('button', 'features', 'dropdown') {
 			.#{class('button', 'dropdown')}:last-child:not(:first-child),
 			.#{class('button', 'dropdown')}:last-child:not(:first-child) > .#{class('button', 'name')} {
 				border-bottom-left-radius: 0;
@@ -202,14 +202,14 @@
 				margin-left: -1px;
 			}
 		}
-		@include breakpoints($breakpoints-medium, 'max-width') {
+		@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 			//button-class-group
 			box-shadow: none;
 		}
 		///
 		/// VERTICAL BUTTONS
 		///
-		@if options('elements', 'button', 'features', 'vertical') {
+		@if options('button', 'features', 'vertical') {
 			&.#{class('button', 'vertical')} {
 				flex-flow: column;
 				>.#{class('button', 'name')},
@@ -231,7 +231,7 @@
 				///
 				/// DROPDOWN FOR VERTICAL BUTTONS
 				///
-				@if options('elements', 'button', 'features', 'dropdown') {
+				@if options('button', 'features', 'dropdown') {
 					&>.#{class('button', 'dropdown')}:last-child:not(:first-child),
 					&>.#{class('button', 'dropdown')}:last-child:not(:first-child) > .#{class('button', 'name')},
 					&>.#{class('button', 'dropdown')}:not(:first-child):not(:last-child) > .#{class('button', 'name')} {
@@ -242,7 +242,7 @@
 				///
 				/// STYLES
 				///
-				@if options('elements', 'button', 'features', 'styles') {
+				@if options('button', 'features', 'styles') {
 					@each $theme-name, $theme-color in $button-styles {
 						&>.#{$theme-name}.#{class('button', 'name')},
 						&>.#{class('button', 'dropdown')} > .#{$theme-name}.#{class('button', 'name')} {

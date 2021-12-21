@@ -5,27 +5,27 @@
 ///
 /// if navbar is enable
 ///
-@if options('components', 'navbar', 'enable') {
+@if options('navbar', 'enable') {
 	.#{class('navbar', 'spacer')} {
-		margin-top: $navbar-spacer-top;
+		margin-top: variables('navbar', 'spacer-top');
 	}
 	.#{class('navbar', 'name')} {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: stretch;
 		justify-content: space-between;
-		min-height: $navbar-min-height;
+		min-height: variables('navbar', 'min-height');
 		background: theme('color', 'primary');
 		color: theme('color', 'negative');
 		width: 100%;
 		// grid container
 		.#{class('grid', 'container')} {
 			display: flex;
-			width: $container-width; // layout->grid
+			width: variables('grid', 'container', 'width'); // options->grid
 		}
 		// navbar brand
 		.#{class('navbar', 'brand')} {
-			padding: $navbar-brand-padding;
+			padding: variables('navbar', 'brand-padding');
 			display: flex;
 			justify-content: center;
 			min-height: 100%;
@@ -37,7 +37,7 @@
 			}
 			a,
 			a:visited {
-				font-size: $navbar-font-size;
+				font-size: variables('navbar', 'font-size');
 				text-decoration: none;
 				color: theme('color', 'negative');
 				display: flex;
@@ -55,8 +55,8 @@
 				font-family: "#{class('icon', 'font-family')}"; // [*]
 				font-size: 2.459rem;
 				display: none;
-				min-height: $navbar-min-height;
-				min-width: $navbar-min-height;
+				min-height: variables('navbar', 'min-height');
+				min-width: variables('navbar', 'min-height');
 				position: absolute;
 				cursor: pointer;
 				right: 0;
@@ -128,7 +128,7 @@
 		///
 		/// DIVIDED NAVBAR
 		///
-		@if options('components', 'navbar', 'features', 'divided') {
+		@if options('navbar', 'features', 'divided') {
 			&.#{class('navbar', 'divided')} {
 				@include navbar-divided();
 				.#{class('button', 'group')} {
@@ -141,14 +141,14 @@
 		}
 		.#{class('button', 'name')},
 		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
-			font-size: $navbar-font-size;
+			font-size: variables('navbar', 'font-size');
 			padding: .935rem 1.4rem;
 			font-weight: theme('typography', 'header-weight');
 		}
 		/// 
 		/// NAVBAR THEMES
 		///
-		@if options('components', 'navbar', 'features', 'themes') {
+		@if options('navbar', 'features', 'themes') {
 			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color in $navbar-themes {
 				&.#{$theme-name} {
 					@include navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color);
@@ -158,7 +158,7 @@
 		///
 		/// NAVBAR SIZES
 		///
-		@if options('components', 'navbar', 'features', 'sizes') {
+		@if options('navbar', 'features', 'sizes') {
 			@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
 				&.#{$size-name} {
 					min-height: $min-height;
@@ -170,7 +170,7 @@
 					@at-root .#{class('navbar', 'spacer')}-#{$size-name} {
 						margin-top: $spacer-top !important;
 					}
-					@include breakpoints($breakpoints-medium, 'max-width') {
+					@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 						@at-root .#{class('navbar', 'spacer')}-#{$size-name} {
 							margin-top: $spacer-top / 2 !important;
 						}
@@ -180,7 +180,7 @@
 		}
 	}
 	//
-	@include breakpoints($breakpoints-medium, 'max-width') {
+	@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('navbar', 'spacer')} {
 			margin-top: 0;
 		}
@@ -197,7 +197,7 @@
 				display: block;
 				width: 100%;
 				height: 0;
-				top: $navbar-min-height;
+				top: variables('navbar', 'min-height');
 				left: 0;
 				overflow-x: auto;
 				overflow-y: hidden;
@@ -235,8 +235,8 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				min-height: $navbar-min-height;
-				min-width: $navbar-min-height;
+				min-height: variables('navbar', 'min-height');
+				min-width: variables('navbar', 'min-height');
 				&::before {
 					content: "#{class('icon', 'navbar-close')}"; // [*]
 					display: flex;
@@ -248,7 +248,7 @@
 			///
 			/// NAVBAR SIZES
 			///
-			@if options('components', 'navbar', 'features', 'sizes') {
+			@if options('navbar', 'features', 'sizes') {
 				@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in $navbar-sizes {
 					&.#{$size-name} {
 						& .#{class('navbar', 'burger')},

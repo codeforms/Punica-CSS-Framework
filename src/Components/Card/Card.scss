@@ -4,7 +4,7 @@
 ///
 /// if card is enable
 ///
-@if options('components', 'card', 'enable') {
+@if options('card', 'enable') {
 	.#{class('card', 'cards')} {
 		display: flex;
 		flex-wrap: wrap;
@@ -12,13 +12,13 @@
 	///
 	/// CARD GROUPS
 	///
-	@if options('components', 'card', 'features', 'group') {
+	@if options('card', 'features', 'group') {
 		@each $name, $number in $grids {
 			.#{class('card', 'cards')}.#{$name} {
 				&>.#{class('card', 'name')} {
-					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * 10px));
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * variables('card', 'group', 'margin')));
 					height: auto;
-					margin: 10px;
+					margin: variables('card', 'group', 'margin');
 				}
 			}
 		}
@@ -27,20 +27,20 @@
 		background-color: theme('color', 'background');
 
 		// has card border?
-		@if options('components', 'card', 'features', 'border') {
+		@if options('card', 'features', 'border') {
 			@include border();
 			border-radius: theme('border', 'radius');
 		}
 
 		// has card shadow?
-		@if options('components', 'card', 'features', 'shadow') {
+		@if options('card', 'features', 'shadow') {
 			@include shadow();
 		}
 		
 		display: flex;
 		flex-direction: column;
-		width: 240px; // for only a single card
-		height: 100%;
+		width: variables('card', 'width'); // for only a single card
+		height: variables('card', 'height');
 		overflow: hidden;
 		>.#{class('card', 'body')} .#{class('card', 'title')},
 		>.#{class('card', 'title')} {
@@ -54,7 +54,7 @@
 		>.#{class('card', 'title')}, 
 		>.#{class('card', 'description')},
 		>.#{class('card', 'actions')} {
-			padding: 16px;
+			padding: variables('card', 'padding');
 		}
 		>.#{class('card', 'description')} {
 			flex: 1 1 auto;
@@ -63,7 +63,7 @@
 		///
 		/// MEDIA
 		///
-		@if options('components', 'card', 'features', 'media') {
+		@if options('card', 'features', 'media') {
 			&>.#{class('card', 'media')} {
 				display: flex;
 				flex-wrap: wrap;
@@ -75,23 +75,23 @@
 			///
 			/// MEDIA GROUP
 			///
-			@if options('components', 'card', 'features', 'media-group') {
+			@if options('card', 'features', 'media-group') {
 				@include media-group-specs(class('card', 'media'), 0);
 			}
 		}
 		///
 		/// HORIZONTAL CARDS
 		///
-		@if options('components', 'card', 'features', 'horizontal') {
+		@if options('card', 'features', 'horizontal') {
 			&.#{class('card', 'horizontal')} {
 				flex-direction: row;
 				width: 100%;
 				align-items: center;
-				margin-bottom: 15px;
+				margin-bottom: variables('card', 'horizontal', 'margin-bottom');
 				///
 				/// MEDIA
 				///
-				@if options('components', 'card', 'features', 'media') {
+				@if options('card', 'features', 'media') {
 					>.#{class('card', 'media')} {
 						align-self: normal;
 						width: fit-content;
@@ -105,7 +105,7 @@
 					flex: inherit;
 					.#{class('card', 'title')},
 					.#{class('card', 'description')} {
-						padding: calc(16px / 2) 16px;
+						padding: calc(variables('card', 'padding') / 2) variables('card', 'padding');
 					}
 					.#{class('card', 'description')} {
 						flex: 1;
@@ -114,7 +114,7 @@
 			}
 		}
 	}
-	@include breakpoints($breakpoints-medium, 'max-width') {
+	@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('card', 'name')},
 		.#{class('card', 'cards')} > .#{class('card', 'name')} {
 			flex: 0 0 100% !important;
@@ -124,7 +124,7 @@
 		///
 		/// HORIZONTAL CARDS
 		///
-		@if options('components', 'card', 'features', 'horizontal') {
+		@if options('card', 'features', 'horizontal') {
 			.#{class('card', 'name')}.#{class('card', 'horizontal')} {
 				flex-direction: column;
 			}

@@ -5,16 +5,16 @@
 ///
 /// if process is enable
 ///
-@if options('components', 'process', 'enable') {
+@if options('process', 'enable') {
 	.#{class('process', 'name')} {
 		display: flex;
 		flex-wrap: nowrap;
-		margin: $process-margin;
+		margin: variables('process', 'margin');
 		width: 100%;
 		list-style: none;
 		.#{class('process', 'item')} {
 			flex: 1 1 0;
-			min-height: $process-item-min-height;
+			min-height: variables('process', 'min-height');
 			position: relative;
 			align-items: center;
 			justify-content: center;
@@ -25,7 +25,7 @@
 			&:not(:first-child)::before {
 				background: theme('color', 'primary');
 				content: "";
-				height: $process-stick-height;
+				height: variables('process', 'stepbar', 'height');
 				left: -50%;
 				position: absolute;
 				top: 0;
@@ -43,12 +43,12 @@
 					background: theme('color', 'primary');
 					top: 0;
 					left: 50%;
-					height: $process-stage-stick-height;
-					width: $process-stage-stick-width;
+					height: variables('process', 'stickbar', 'height');
+					width: variables('process', 'stickbar', 'width');
 					z-index: 1;
 				}
 				&:first-child::before {
-					left: calc(50% - (#{$process-stage-stick-width} - 1px));
+					left: calc(50% - (#{variables('process', 'stickbar', 'width')} - 1px));
 				}
 			}
 			&.#{class('process', 'active')} {
@@ -59,10 +59,10 @@
 						content: "#{class('icon', 'process-current')}"; // [*]
 						font-family: "#{class('icon', 'font-family')}"; // [*]
 						position: absolute;
-						top: calc(-15px - #{$process-current-icon-size});
-						left: calc(50% - ((#{$process-stage-stick-width} * 10) / 2));
+						top: calc(-15px - #{variables('process', 'icon-size')});
+						left: calc(50% - ((#{variables('process', 'stickbar', 'width')} * 10) / 2));
 						color: theme('color', 'primary');
-						font-size: $process-current-icon-size;
+						font-size: variables('process', 'icon-size');
 					}
 				}
 				&~.#{class('process', 'item')} {
@@ -84,7 +84,7 @@
 		///
 		/// STYLES
 		///
-		@if options('components', 'process', 'features', 'styles') {
+		@if options('process', 'features', 'styles') {
 			@each $type, $bg-color in $process-styles {
 				&.#{$type} {
 					@include process-styles($bg-color);
@@ -94,14 +94,14 @@
 		///
 		/// VERTICAL PROCESS
 		///
-		@if options('components', 'process', 'features', 'vertical') {
+		@if options('process', 'features', 'vertical') {
 			&.#{class('process', 'vertical')} {
 				@include process-vertical();
 			}
 		}
 
 		// vertical style is setted as "true" for mobile devices
-		@include breakpoints($breakpoints-medium, 'max-width') {
+		@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 			@include process-vertical();
 		}
 	}

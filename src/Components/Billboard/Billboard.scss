@@ -4,21 +4,21 @@
 ///
 /// if billboard is enable
 ///
-@if options('components', 'billboard', 'enable') {
+@if options('billboard', 'enable') {
 	.#{class('billboard', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
-			padding: 4.5rem 2.5rem;
+			padding: variables('billboard', 'padding');
 			border-color: darken(theme('color', 'background'), 4.5%);
 			@include border();
 		};
 		///
 		/// STYLES
 		///
-		@if options('components', 'billboard', 'features', 'styles') {
+		@if options('billboard', 'features', 'styles') {
 			@each $style-name, $bg-color in $billboard-styles {
 				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
 					border-color: darken($bg-color, 4.5%);
@@ -28,7 +28,7 @@
 		///
 		/// SIZES
 		///
-		@if options('components', 'billboard', 'features', 'sizes') {
+		@if options('billboard', 'features', 'sizes') {
 			@each $size-name, $padding, $font-size in $billboard-sizes {
 				@include set-size($font-size, $padding, $size-name) {
 					.#{class('billboard', 'body')} {
@@ -44,7 +44,7 @@
 			flex: 0 0 auto;
 		}
 		.#{class('billboard', 'body')} {
-			padding: 4.5rem 2.5rem;
+			padding: variables('billboard', 'body', 'padding');
 			flex: 1 1 auto;
 			display: flex;
 			justify-content: center;
@@ -54,7 +54,7 @@
     ///
     /// COVER
     ///
-    @if options('components', 'billboard', 'features', 'cover') {
+    @if options('billboard', 'features', 'cover') {
 		&.#{class('billboard', 'cover')} {
 			min-height: 100vh;
 			max-height: 100%;
@@ -68,7 +68,7 @@
 	///
 	///
 	///
-	@include breakpoints($breakpoints-medium, 'max-width') {
+	@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('billboard', 'name')} {
 			padding: 2.5rem 1rem;
 			flex-direction: column;
@@ -83,7 +83,7 @@
 			///
 			/// SIZES
 			///
-			@if options('components', 'billboard', 'features', 'sizes') {
+			@if options('billboard', 'features', 'sizes') {
 				@each $size, $padding, $font-size in $billboard-responsive-sizes {
 					&.#{$size} {
 						padding: $padding;

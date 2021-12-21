@@ -4,52 +4,52 @@
 ///
 /// if menu is enable
 ///
-@if options('components', 'menu', 'enable') {
+@if options('menu', 'enable') {
 	.#{class('menu', 'name')} {
 		background-color: lighten(theme('color', 'background'), 2.5%);
-		border-radius: 0;
+		border-radius: variables('menu', 'border-radius');
 		list-style: none;
-		margin: 0;
-		width: 100%;
+		margin: variables('menu', 'margin');
+		width: variables('menu', 'width');
 		min-width: max-content;
-		padding: .9rem;
+		padding: variables('menu', 'padding');
 		@include shadow();
 		z-index: 300;
 		// menu title
 		.#{class('menu', 'title')} {
-			font-size: 1.25em;
-			min-height: 2rem;
+			font-size: variables('menu', 'title', 'font-size');
+			min-height: variables('menu', 'title', 'min-height');
 			color: theme('color', 'text');
-			padding: .6rem 0;
+			padding: variables('menu', 'title', 'padding');
 			font-weight: theme('typography', 'header-weight');
-			letter-spacing: -.015rem;
+			letter-spacing: variables('menu', 'title', 'letter-spacing');
 		}
 		// menu item
 		.#{class('menu', 'item')} {
-			padding: 0;
+			padding: 0; // default container
 			position: relative;
 			text-decoration: none;
-		    text-align: left;
+		    text-align: variables('menu', 'item', 'text-align');
 			& > a {
 				color: theme('color', 'text');
 				display: block;
-				width: 100%;
-				padding: .28rem .9rem;
+				width: variables('menu', 'item', 'width');
+				padding: variables('menu', 'item', 'padding');
 				text-decoration: none;
-				font-size: 1em;
+				font-size: variables('menu', 'item', 'font-size');
 				font-weight: theme('typography', 'font-weight');
-				transition: background .15s, color .15s;
+				transition: variables('menu', 'item', 'transition');
 				&:hover {
 					background: theme('color', 'secondary');
 					color: theme('color', 'text');
-					transition: background .15s, color .15s;
+					transition: variables('menu', 'item', 'transition');
 				}
 				&:active,
 				&:focus,
 				&.#{class('menu', 'active')} {
 					background: theme('color', 'secondary');
 					color: theme('color', 'text');
-					transition: background .15s, color .15s;
+					transition: variables('menu', 'item', 'transition');
 				}
 				&.#{class('menu', 'disabled')} {
 					opacity: .59;
@@ -60,25 +60,25 @@
 			}
 			i, span.#{class('icon', 'class-name')} {
 				color: theme('color', 'grey');
-				font-size: 1.2rem;
-				margin-right: 10px;
-				vertical-align: text-bottom;
+				font-size: variables('menu', 'item', 'font-size');
+				margin-right: variables('menu', 'item', 'margin-right');
+				vertical-align: variables('menu', 'item', 'vertical-align');
 			}
 			.#{class('menu', 'name')} {
-				padding: .4rem;
+				padding: variables('menu', 'item', 'sub-padding');
 			}
 		}
 		// menu badge
 		.#{class('menu', 'badge')} {
 			position: absolute;
-			right: 0;
-			top: 4px;
-			padding: 0 4px;
-			font-size: .93em;
+			right: variables('menu', 'badge', 'right');
+			top: variables('menu', 'badge', 'top');
+			padding: variables('menu', 'badge', 'padding');
+			font-size: variables('menu', 'badge', 'font-size');
 		}
 		// small menu
 		&.#{class('menu', 'small')} > .#{class('menu', 'item')} a {
-			font-size: .879em;
+			font-size: variables('menu', 'item', 'small-size');
 		}
 		// divided menu
 		&.#{class('menu', 'divided')} {

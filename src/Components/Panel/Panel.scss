@@ -4,24 +4,24 @@
 ///
 /// if panel is enable
 ///
-@if options('components', 'panel', 'enable') {
+@if options('panel', 'enable') {
 	.#{class('panel', 'name')} {
 		display: flex;
 		flex-direction: column;
 
 		// has panel border?
-		@if options('components', 'panel', 'features', 'border') {
+		@if options('panel', 'features', 'border') {
 			@include border();
 			border-radius: theme('border', 'radius');
 		}
 
 		// has panel shadow?
-		@if options('components', 'panel', 'features', 'shadow') {
+		@if options('panel', 'features', 'shadow') {
 			@include shadow();
 		}
 
 		background-color: theme('color', 'background');
-		margin: $panel-margin;
+		margin: variables('panel', 'margin');
 		&>.#{class('panel', 'header')},
 		&>.#{class('panel', 'bottom')} {
 			display: flex;
@@ -36,7 +36,7 @@
 		}
 		&>.#{class('panel', 'header')} {
 			border-bottom: set-border();
-			padding: $panel-title-padding;
+			padding: variables('panel', 'title-padding');
 			&.dashed {
 				border-bottom-style: dashed;
 			}
@@ -50,12 +50,12 @@
 		}
 		&>.#{class('panel', 'content')} {
 			flex: 1 1 auto;
-			padding: $panel-padding;
+			padding: variables('panel', 'padding');
 			height: auto;
 			///
 			/// MEDIA
 			///
-			@if options('components', 'panel', 'features', 'media') {
+			@if options('panel', 'features', 'media') {
 				&>.#{class('panel', 'media')} {
 					min-width: 0;
 					max-width: 100%;
@@ -72,7 +72,7 @@
 				///
 				/// MEDIA GROUP
 				///
-				@if options('components', 'panel', 'features', 'media-group') {
+				@if options('panel', 'features', 'media-group') {
 					@include media-group-specs(class('panel', 'media'));
 				}
 			}

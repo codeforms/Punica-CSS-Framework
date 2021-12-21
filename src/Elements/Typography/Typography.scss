@@ -16,7 +16,7 @@
 		font-size: $font-size;
 		font-weight: theme('typography', 'header-weight');
 	}
-	@include breakpoints($breakpoints-medium, 'max-width') {
+	@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 		#{$header},
 		.#{$header} {
 			font-size: $responsive-size;

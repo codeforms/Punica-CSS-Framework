@@ -4,7 +4,7 @@
 ///
 /// if table is enable
 ///
-@if options('elements', 'table', 'enable') {
+@if options('table', 'enable') {
 	.#{class('table', 'name')} {
 		position: relative;
 		border-collapse: collapse;
@@ -18,13 +18,13 @@
 			color: theme('color', 'text');
 			font-size: 1rem;
 			font-weight: bold;
-			padding: $table-heading-padding;
+			padding: variables('table', 'th', 'padding');
 			border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'text');
 		}
 		///
 		/// STRIPED
 		///
-		@if options('elements', 'table', 'features', 'striped') {
+		@if options('table', 'features', 'striped') {
 			&.#{class('table', 'striped')} {
 				tr,
 				tbody tr {
@@ -40,7 +40,7 @@
 		/// 
 		/// HOVERED
 		///
-		@if options('elements', 'table', 'features', 'hovered') {
+		@if options('table', 'features', 'hovered') {
 			&.#{class('table', 'hovered')} {
 				tr,
 				tbody tr {
@@ -62,7 +62,7 @@
 		td,
 		th {
 			border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'secondary');
-			padding: $table-inline-padding;
+			padding: variables('table', 'td', 'padding');
 			text-align: inherit;
 		}
 		thead tr {
@@ -71,7 +71,7 @@
 				border-bottom-color: theme('border', 'color');
 				font-weight: theme('typography', 'font-weight');
 				color: theme('color', 'grey');
-				padding: $table-heading-padding;
+				padding: variables('table', 'th', 'padding');
 			}
 		}
 	}

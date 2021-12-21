@@ -5,23 +5,23 @@
 ///
 /// if form is enable
 ///
-@if options('elements', 'form', 'enable') {
+@if options('form', 'enable') {
 	@include form-inputs() {
 		-webkit-appearance: none;
 		background-color: theme('input', 'background');
 		border: theme('border', 'width') theme('border', 'style') theme('input', 'border-color');
-		height: $form-input-height;
-		border-radius: $form-input-radius;
+		height: variables('form', 'input', 'height');
+		border-radius: variables('form', 'input', 'border-radius');
 		outline: theme('input', 'outline-width') solid transparent;
 		box-shadow: none;
 		box-sizing: inherit;
 		outline-offset: -#{theme('input', 'outline-width')};
-		padding: $form-input-padding;
+		padding: variables('form', 'input', 'padding');
 		width: 100%;
 		max-width: 100%;
 		font-family: inherit;
 		color: theme('input', 'color');
-		font-size: $form-input-size;
+		font-size: variables('form', 'input', 'font-size');
 		&:focus {
 			outline: theme('input', 'outline-width') solid theme('input', 'outline-color');
 			outline-offset: -#{theme('input', 'outline-width')};
@@ -30,7 +30,7 @@
 		///
 		/// VALIDATION STYLES
 		///
-		@if options('elements', 'form', 'features', 'validation-styles') {
+		@if options('form', 'features', 'validation-styles') {
 			@each $style-name, $style-color in $form-input-styles {
 				&.#{$style-name} {
 					color: $style-color;
@@ -73,10 +73,10 @@
 	.#{class('form', 'name')} {
 		position: relative;
 		max-width: 100%;
-		padding: $form-padding;
+		padding: variables('form', 'padding');
 		.#{class('form', 'item')} {
 			height: fit-content;
-			margin: $form-items-spacer;
+			margin: variables('form', 'item', 'margin');
 			display: inline-flex;
 			flex-wrap: wrap;
 			width: 100%;
@@ -85,9 +85,9 @@
 			align-items: center;
 			@at-root .#{class('form', 'name')} label,
 			&>label {
-				margin: $form-label-margin;
+				margin: variables('form', 'label', 'margin');
 				color: theme('color', 'text');
-				font-size: $form-label-size;
+				font-size: variables('form', 'label', 'font-size');
 				font-weight: theme('input', 'label-weight');
 				text-transform: none;
 				height: fit-content;
@@ -103,7 +103,7 @@
 			///
 			/// FORM GROUPS
 			///
-			@if options('elements', 'form', 'features', 'group') {
+			@if options('form', 'features', 'group') {
 				@at-root .#{class('form', 'name')} .#{class('form', 'group')},
 				&>.#{class('form', 'group')} {
 					display: flex;
@@ -122,7 +122,7 @@
 						box-shadow: none;
 					}
 					>.#{class('button', 'name')} {
-						height: $form-input-height;
+						height: variables('form', 'input', 'height');
 						box-shadow: none;
 						&:first-child {
 							border-bottom-right-radius: 0;
@@ -137,20 +137,20 @@
 			}
 		}
 		.#{class('form', 'items')} {
-			margin: $form-items-spacer;
+			margin: variables('form', 'items', 'margin');
 			display: flex;
 			flex-wrap: wrap;
 			&>.#{class('form', 'item')} {
-				margin: $form-item-spacer;
+				margin: variables('form', 'item', 'margin');
 			}
 		}
 		@each $name, $number in $grids {
 			.#{$name}.#{class('form', 'items')} {
 				>.#{class('form', 'item')} {
-					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{$form-item-spacer}));
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{variables('form', 'item', 'margin')}));
 				}
 			}
-			@include breakpoints($breakpoints-medium, 'max-width') {
+			@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 				.#{$name}.#{class('form', 'items')} {
 					>.#{class('form', 'item')} {
 						flex: 0 0 100%;
@@ -161,7 +161,7 @@
 		///
 		/// INPUT SIZES
 		///
-		@if options('elements', 'form', 'features', 'sizes') {
+		@if options('form', 'features', 'sizes') {
 			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in $form-input-sizes {
 				&.#{$size-name} {
 					@include form-inputs() {
@@ -185,12 +185,12 @@
 	///
 	/// CHECKBOX & RADIO
 	///
-	@if options('elements', 'form', 'features', 'checkbox-radio') {
+	@if options('form', 'features', 'checkbox-radio') {
 		.#{class('form', 'radio')},
 		.#{class('form', 'checkbox')} {
 			position: relative;
 			label {
-				padding: $form-checkbox-label-padding;
+				padding: variables('form', 'radio-checkbox', 'label-padding');
 				cursor: pointer;
 				user-select: none;
 				font-weight: theme('typography', 'font-weight');
@@ -210,9 +210,9 @@
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none;
-				font-size: $form-radio-checkbox-size;
-				top: $form-radio-checkbox-top;
-				left: $form-radio-checkbox-left;
+				font-size: variables('form', 'radio-checkbox', 'font-size');
+				top: variables('form', 'radio-checkbox', 'top');
+				left: variables('form', 'radio-checkbox', 'left');
 			}
 			input + label::before {
 				opacity: 1;

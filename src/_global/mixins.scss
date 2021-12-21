@@ -21,13 +21,12 @@
 /// @param {String} $node
 /// @param {String(s)} $keys
 ///
-/// @example options('layout', 'grid', 'enable')
-/// @example options('layout', 'grid', 'features', 'equal')
+/// @example options('grid', 'enable')
+/// @example options('grid', 'features', 'equal')
 ///
 /// @return boolean
 ///
-@function options($node, $keys...) {
-	$options: map-get($options, $node);
+@function options($keys...) {
 	$value: map-get(map-get($options, nth($keys, 1)), nth($keys, 2));
 
 	@if length($keys) > 2 {
@@ -35,6 +34,28 @@
 	}
 
 	@return $value;
+}
+
+///
+/// Get component/element variables from options
+///
+/// @param {String} $node
+/// @param {String} $key
+///
+/// @example variables('grid', 'gap')
+/// @example variables('grid', 'columns', 'size')
+///
+/// @return mixed
+///
+@function variables($node, $keys...) {
+	$variables: map-get(map-get($options, $node), 'variables');
+	$variables: map-get($variables, nth($keys, 1));
+	
+	@if length($keys) == 1 {
+		@return $variables;
+	}
+
+	@return map-get($variables, nth($keys, 2));
 }
 
 ///
@@ -46,7 +67,7 @@
 /// @example class('alert', 'name')
 /// @example class('button', 'dropdown')
 ///
-/// @return boolean
+/// @return string
 ///
 @function class($node, $key) {
 	$classnames: map-get($classnames, $node);

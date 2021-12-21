@@ -1,171 +1,384 @@
 /////////////////////////////////////////////////////////
-/// OPTIONS
+/// OPTIONS & VARIABLES
 /////////////////////////////////////////////////////////
 $options: (
-	/// LAYOUT
-	'layout': (
-		'grid': (
-			'enable': true,
-			'features': (
-				'equal': true,
-				'offset': true // [!] increases the size
+/// LAYOUT
+	/// Grid
+	'grid': (
+		'enable': true,
+		'features': (
+			'equal': true,
+			'offset': true // [!] increases the size
+		),
+		'variables': (
+			'gap': 6px,
+			'columns': (
+				'size': 16,
+				'padding': .3rem,
+				'min-height': .125rem
+			),
+			'container': (
+				'width': 100%,
+				'padding': 40px,
+				'margin': 0 auto
+			),
+			'breakpoints': (
+				'extra-small': 0,
+				'small': 500px,
+				'medium': 768px,
+				'large': 992px,
+				'extra-large': 1260px
 			)
 		)
 	),
-	/// COMPONENTS
-	'components': (
-		'alert': (
-			'enable': true,
-			'features': (
-				'styles': true,
-				'sizes': true
+/// COMPONENTS
+	/// Alert
+	'alert': (
+		'enable': true,
+		'features': (
+			'styles': true,
+			'sizes': true
+		),
+		'variables': (
+			'padding': .6rem,
+			'margin': 0 0 8px,
+			'width': 100%,
+			'icon': (
+				'vertical-align': text-top
 			)
-		),
-		'badge': (
-			'enable': true,
-			'features': (
-				'styles': true,
-				'sizes': true
-			)
-		),
-		'billboard': (
-			'enable': true,
-			'features': (
-				'styles': true,
-				'sizes': true,
-				'cover': true
-			)
-		),
-		'breadcrumb': (
-			'enable': true,
-			'features': (
-				'sizes': true
-			)
-		),
-		'card': (
-			'enable': true,
-			'features': (
-				'group': true,
-				'horizontal': true,
-				'media': true,
-				'media-group': true,
-				'border': true,
-				'shadow': true
-			)
-		),
-		'list': (
-			'enable': true,
-			'features': (
-				'divided': true,
-				'hovered': true,
-				'striped': true
-			)
-		),
-		'menu': (
-			'enable': true,
-			'features': (),
-		),
-		'navbar': (
-			'enable': true,
-			'features': (
-				'themes': true,
-				'sizes': true,
-				'divided': true
-			)
-		),
-		'panel': (
-			'enable': true,
-			'features': (
-				'media': true,
-				'media-group': true,
-				'border': true,
-				'shadow': true
-			)
-		),
-		'process': (
-			'enable': true,
-			'features': (
-				'styles': true,
-				'vertical': true
-			)
-		),
-		'progress': (
-			'enable': true,
-			'features': (
-				'styles': true
-			)
-		),
-		'tabnav': (
-			'enable': true,
-			'features': (
-				'styles': true,
-				'bottom-position': true
-			)
-		),
-		'timeline': (
-			'enable': true,
-			'features': (
-				'styles': true,
-				'media': true,
-				'media-group': true
-			)
-		),
-		'tooltip': (
-			'enable': true,
-			'features': ()
-		),
-	),
-	/// ELEMENTS
-	'elements': (
-		'button': (
-			'enable': true,
-			'features': (
-				'group': true,
-				'vertical': true,
-				'styles': true,
-				'sizes': true,
-				'outlined': true,
-				'secondary': true,
-				'dropdown': true
-			)
-		),
-		'caption': (
-			'enable': true,
-			'features': (
-				'sizes': true,
-			)
-		),
-		'form': (
-			'enable': true,
-			'features': (
-				'group': true,
-				'sizes': true,
-				'validation-styles': true,
-				'checkbox-radio': true,
-			)
-		),
-		'icon': (
-			'enable': true
-		),
-		'table': (
-			'enable': true,
-			'features': (
-				'hovered': true,
-				'striped': true
-			)
-		),
-		'label': (
-			'enable': true,
-			'features': (
-				'styles': true,
-				'sizes': true
-			)
-		),
-	),
-	/// UTILITIES
-	'utilities': (
-		'helpers': (
-			'enable': true
 		)
+	),
+	/// Badge
+	'badge': (
+		'enable': true,
+		'features': (
+			'styles': true,
+			'sizes': true
+		),
+		'variables': ()
+	),
+	/// Billboard
+	'billboard': (
+		'enable': true,
+		'features': (
+			'styles': true,
+			'sizes': true,
+			'cover': true
+		),
+		'variables': (
+			'padding': 4.5rem 2.5rem,
+			'body': (
+				'padding': 4.5rem 2.5rem
+			)
+		)
+	),
+	/// Breadcrumb
+	'breadcrumb': (
+		'enable': true,
+		'features': (
+			'sizes': true
+		),
+		'variables': (
+			'font-weight': bold,
+			'active-weight': bold
+		)
+	),
+	/// Card
+	'card': (
+		'enable': true,
+		'features': (
+			'group': true,
+			'horizontal': true,
+			'media': true,
+			'media-group': true,
+			'border': true,
+			'shadow': true
+		),
+		'variables': (
+			'width': 240px, // for only a single card
+			'height': 100%,
+			'padding': 16px,
+			'group': (
+				'margin': 10px
+			),
+			'horizontal': (
+				'margin-bottom': 15px
+			)
+		)
+	),
+	/// List
+	'list': (
+		'enable': true,
+		'features': (
+			'divided': true,
+			'hovered': true,
+			'striped': true
+		),
+		'variables': (
+			'margin': 1rem 0,
+			'item': (
+				'padding': .55em,
+				'margin': 0,
+				'transition': .15s
+			),
+			'media': (
+				'margin-right': 1rem
+			),
+			'body': (
+				'line-height': 1.4,
+				'text-align': left
+			),
+			'title': (
+				'font-size': 1.28rem,
+				'line-height': 1
+			),
+			'subtitle': (
+				'font-size': .889em,
+				'margin-bottom': 7px
+			),
+			'actions': (
+    		    'width': auto,
+    		    'margin-left': 1rem
+			)
+		)
+	),
+	/// Menu
+	'menu': (
+		'enable': true,
+		'features': (),
+		'variables': (
+			'width': 100%,
+			'padding': .9rem,
+			'margin': 0,
+			'border-radius': 0,
+			'title': (
+				'font-size': 1.25em,
+				'min-height': 2rem,
+				'padding': .6rem 0,
+				'letter-spacing': -.015rem
+			),
+			'item': (
+				'width': 100%,
+				'text-align': left,
+				'padding': .28rem .9rem,
+				'font-size': 1em,
+				'small-size': .879em,
+				'transition': background .15s,
+				'sub-padding': .4rem
+			),
+			'icon': (
+				'font-size': 1.2rem,
+				'margin-right': 10px,
+				'vertical-align': text-bottom
+			),
+			'badge': (
+				'right': 0,
+				'top': 4px,
+				'padding': 0 4px,
+				'font-size': .93em
+			)
+		)
+	),
+	/// Navbar
+	'navbar': (
+		'enable': true,
+		'features': (
+			'themes': true,
+			'sizes': true,
+			'divided': true
+		),
+		'variables': (
+			'min-height': 80px,
+			'brand-padding': 0,
+			'font-size': 1.128em,
+			'spacer-top': 120px // min-height + 40px
+		)
+	),
+	/// Panel
+	'panel': (
+		'enable': true,
+		'features': (
+			'media': true,
+			'media-group': true,
+			'border': true,
+			'shadow': true
+		),
+		'variables': (
+			'padding': 16px,
+			'margin': 16px 0,
+			'title-padding': 12px 16px
+		)
+	),
+	/// Process
+	'process': (
+		'enable': true,
+		'features': (
+			'styles': true,
+			'vertical': true
+		),
+		'variables': (
+			'margin': 1em 0 5em,
+			'min-height': 4rem, // for each item
+			'icon-size': 1.8rem,
+			'stepbar': (
+				'height': 6px,
+			),
+			'stickbar': (
+				'width': 3px,
+				'height': .8rem
+			),
+			'vertical': (
+				'margin': 1em 0,
+				'stickbar-width': 9px
+			)
+		)
+	),
+	/// Progress
+	'progress': (
+		'enable': true,
+		'features': (
+			'styles': true
+		),
+		'variables': ()
+	),
+	/// Tabnav
+	'tabnav': (
+		'enable': true,
+		'features': (
+			'styles': true,
+			'bottom-position': true
+		),
+		'variables': (
+			'border-width': 2px
+		)
+	),
+	/// Timeline
+	'timeline': (
+		'enable': true,
+		'features': (
+			'styles': true,
+			'media': true,
+			'media-group': true
+		),
+		'variables': (
+			'type-width': 32px,
+			'border-width': 1px,
+		)
+	),
+	/// Tooltip
+	'tooltip': (
+		'enable': true,
+		'features': (),
+		'variables': ()
+	),
+/// ELEMENTS
+	/// Button
+	'button': (
+		'enable': true,
+		'features': (
+			'group': true,
+			'vertical': true,
+			'styles': true,
+			'sizes': true,
+			'outlined': true,
+			'secondary': true,
+			'dropdown': true
+		),
+		'variables': ()
+	),
+	/// Caption
+	'caption': (
+		'enable': true,
+		'features': (
+			'sizes': true,
+		),
+		'variables': (
+			'margin': 1.3em .2rem,
+			'font-size': 2em,
+			'media': (
+				'margin': .559em,
+			),
+		)
+	),
+	/// Form
+	'form': (
+		'enable': true,
+		'features': (
+			'group': true,
+			'sizes': true,
+			'validation-styles': true,
+			'checkbox-radio': true,
+		),
+		'variables': (
+			'padding': 0 16px,
+			'input': (
+				'height': 2.5rem,
+				'padding': .4rem .5rem,
+				'font-size': 1.088em,
+				'border-radius': 0
+			),
+			'items': (
+				'margin': 6px 0 .75em
+			),
+			'item': (
+				'margin': 6px 6px .75em
+			),
+			'label': (
+				'font-size': .8579rem,
+				'margin': 0
+			),
+			'radio-checkbox': (
+				'font-size': 1.35rem,
+				'top': -8px,
+				'left': 0,
+				'label-padding': 0 1.2rem 0 1.7rem
+			)
+		)
+	),
+	/// Icon
+	'icon': (
+		'enable': true,
+		'features': (),
+		'variables': (
+			'font-size': 1.1rem,
+			'line-height': 1,
+			'vertical-align': middle
+		)
+	),
+	/// Label
+	'label': (
+		'enable': true,
+		'features': (
+			'styles': true,
+			'sizes': true
+		),
+		'variables': (
+			'font-size': .9195em,
+			'padding': 0.28rem 0.9rem,
+			'margin': .1rem .05rem
+		)
+	),
+	/// Table
+	'table': (
+		'enable': true,
+		'features': (
+			'hovered': true,
+			'striped': true
+		),
+		'variables': (
+			'td': (
+				'padding': 5px .7rem,
+			),
+			'th': (
+				'padding': .7rem,
+			)
+		)
+	),
+/// UTILITIES
+	/// Helpers
+	'helpers': (
+		'enable': true,
+		'features': (),
+		'variables': ()
 	)
 );

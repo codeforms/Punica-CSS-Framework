@@ -5,13 +5,13 @@
 ///
 /// if tabnav is enable
 ///
-@if options('components', 'tabnav', 'enable') {
+@if options('tabnav', 'enable') {
 	.#{class('tabnav', 'name')} {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-end;
-		border-bottom: $tabnav-border-width theme('border', 'style') theme('color', 'secondary');
+		border-bottom: variables('tabnav', 'border-width') theme('border', 'style') theme('color', 'secondary');
 		padding: 0;
 		&>.#{class('button', 'group')} {
 			box-shadow: none;
@@ -29,8 +29,8 @@
 			color: theme('color', 'text');
 			padding: .935rem 1.4rem;
 			box-shadow: none;
-			border-bottom: $tabnav-border-width solid transparent;
-	        margin-bottom: -$tabnav-border-width;
+			border-bottom: variables('tabnav', 'border-width') solid transparent;
+	        margin-bottom: -variables('tabnav', 'border-width');
 			&:hover {
 				color: theme('color', 'text');
 				border-bottom-color: theme('color', 'grey');
@@ -52,13 +52,13 @@
 		///
 		/// Bottom Tabnav
 		///
-		@if options('components', 'tabnav', 'features', 'bottom-position') {
+		@if options('tabnav', 'features', 'bottom-position') {
 			&.#{class('tabnav', 'bottom')} {
 				border-bottom: 0;
-				border-top: $tabnav-border-width theme('border', 'style') theme('color', 'secondary');
+				border-top: variables('tabnav', 'border-width') theme('border', 'style') theme('color', 'secondary');
 				@include tab-button-styles() {
-					margin-top: -$tabnav-border-width;
-					border-top: $tabnav-border-width solid transparent;
+					margin-top: -variables('tabnav', 'border-width');
+					border-top: variables('tabnav', 'border-width') solid transparent;
 					border-bottom: 0;
 					margin-bottom: 0;
 					&:hover {
@@ -73,7 +73,7 @@
 		///
 		/// STYLES
 		///
-		@if options('components', 'tabnav', 'features', 'styles') {
+		@if options('tabnav', 'features', 'styles') {
 			@each $type-name, $color in $tabnav-styles {
 				&.#{$type-name} {
 					.#{class('button', 'name')},
@@ -89,7 +89,7 @@
 				///
 				/// Bottom Tabnav
 				///
-				@if options('components', 'tabnav', 'features', 'bottom-position') {
+				@if options('tabnav', 'features', 'bottom-position') {
 					&.#{$type-name}.#{class('tabnav', 'bottom')} {
 						.#{class('button', 'name')},
 						a.#{class('button', 'name')},
