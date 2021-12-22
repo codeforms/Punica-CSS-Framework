@@ -1,7 +1,7 @@
 ## Introduction
 <p>
-    <a href="http://punica.site" target="_blank"><strong>Documentation</strong></a> |  
-    <a href="http://punica.site/themes"><strong>Themes</strong></a> | 
+    <a href="http://punicacss.com" target="_blank"><strong>Documentation</strong></a> |  
+    <a href="http://punicacss.com/themes"><strong>Themes</strong></a> | 
     <a href="https://github.com/codeforms/punica-themes" target="_blank"><strong>Nightly Builds</strong></a> |  
     <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelog</a>
 </p>
@@ -20,13 +20,13 @@
 </p>
 
 ### Install From CDN
-If you want to quickly add Punica to your project, you can use the JsDelivr CDN;
+If you want to quickly add the Punica CSS to your project, you can use the JsDelivr CDN;
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/punica.min.css" crossorigin="anonymous">
 ```
 
 ### HTML Markup
-For your default setup, add the Punica CSS file to the <head> element of your HTML5 document. Also include the Material Icons library. That's it!
+For your default setup, add the Punica CSS file to the <head> element of your HTML5 document. Also include the <a href="https://fonts.google.com/icons" target="_blank">Material Icons</a> library. That's it!
 ```html
 <!DOCTYPE html>
 <html>
