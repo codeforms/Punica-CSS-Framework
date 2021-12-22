@@ -1,11 +1,12 @@
 /////////////////////////////////////////////////////////
 /// PUNICA CSS
 /////////////////////////////////////////////////////////
+// ======================================================
+$active-theme: raven; // active theme name
+// ======================================================
 
-/// Active Theme ========================================
-$active-theme: default;
-
-/// Framework Options ===================================
+/// Class names & Framework Options =====================
+@import "classnames";
 @import "options";
 
 /// Themes ==============================================
@@ -20,7 +21,7 @@ $active-theme: default;
 	/*! 
 	 * PUNICA CSS - #{theme('name')}
 	 * 
-	 * @link http://punica.site
+	 * @link http://www.punicacss.com
 	 * @link http://github.com/codeforms/Punica-CSS-Framework
 	 * 
 	 * Released under the MIT license
