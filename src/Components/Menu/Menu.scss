@@ -60,9 +60,9 @@
 			}
 			i, span.#{class('icon', 'class-name')} {
 				color: theme('color', 'grey');
-				font-size: variables('menu', 'item', 'font-size');
-				margin-right: variables('menu', 'item', 'margin-right');
-				vertical-align: variables('menu', 'item', 'vertical-align');
+				font-size: variables('menu', 'icon', 'font-size');
+				margin-right: variables('menu', 'icon', 'margin-right');
+				vertical-align: variables('menu', 'icon', 'vertical-align');
 			}
 			.#{class('menu', 'name')} {
 				padding: variables('menu', 'item', 'sub-padding');
