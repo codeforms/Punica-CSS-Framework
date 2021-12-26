@@ -16,7 +16,7 @@
 		@each $name, $number in $grids {
 			.#{class('card', 'cards')}.#{$name} {
 				&>.#{class('card', 'name')} {
-					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * variables('card', 'group', 'margin')));
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{variables('card', 'group', 'margin')}));
 					height: auto;
 					margin: variables('card', 'group', 'margin');
 				}
@@ -105,7 +105,7 @@
 					flex: inherit;
 					.#{class('card', 'title')},
 					.#{class('card', 'description')} {
-						padding: calc(variables('card', 'padding') / 2) variables('card', 'padding');
+						padding: calc(#{variables('card', 'padding')} / 2) #{variables('card', 'padding')};
 					}
 					.#{class('card', 'description')} {
 						flex: 1;
