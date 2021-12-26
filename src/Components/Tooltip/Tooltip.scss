@@ -25,7 +25,7 @@
 			min-width: variables('tooltip', 'min-width');
 			max-width: variables('tooltip', 'max-width');
 			padding: variables('tooltip', 'padding');
-			top: variables('tooltip', 'top');
+			top: 120%;
 			opacity: 0;
 			transition: variables('tooltip', 'transition');
 			z-index: 1;
