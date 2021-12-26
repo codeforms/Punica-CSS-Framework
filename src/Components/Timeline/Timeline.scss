@@ -8,7 +8,7 @@
 	.#{class('timeline', 'name')} {
 		.#{class('timeline', 'item')} {
 			display: flex;
-			padding: 1.25em 2em 2.85em;
+			padding: variables('timeline', 'item', 'padding');
 			position: relative;
 			flex-direction: column;
 			justify-content: center;

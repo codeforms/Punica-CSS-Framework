@@ -239,7 +239,11 @@ $options: (
 		'features': (
 			'styles': true
 		),
-		'variables': ()
+		'variables': (
+			'width': 100%,
+			'height': 12px,
+			'border-radius': 16px
+		)
 	),
 	/// Stats
 	'stats': (
@@ -294,13 +298,23 @@ $options: (
 		'variables': (
 			'type-width': 32px,
 			'border-width': 1px,
+			'item': (
+				'padding': 1.25em 2em 2.85em
+			)
 		)
 	),
 	/// Tooltip
 	'tooltip': (
 		'enable': true,
 		'features': (),
-		'variables': ()
+		'variables': (
+			'font-size': .9em,
+			'font-weight': bold,
+			'min-width': 100px,
+			'max-width': 180px,
+			'padding': 5px,
+			'transition': opacity 0.18s
+		)
 	),
 /// ELEMENTS
 	/// Button

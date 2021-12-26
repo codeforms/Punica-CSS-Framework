@@ -17,17 +17,17 @@
             align-items: center;
             justify-content: center;
 			color: theme('color', 'negative');
-			font-size: .9em;
-			font-weight: bold;
+			font-size: variables('tooltip', 'font-size');
+			font-weight: variables('tooltip', 'font-weight');
 			visibility: hidden;
 			background-color: theme('color', 'dark');
 			border-radius: theme('border', 'radius');
-			min-width: 100px;
-			max-width: 180px;
-			padding: 5px;
-			top: 120%;
+			min-width: variables('tooltip', 'min-width');
+			max-width: variables('tooltip', 'max-width');
+			padding: variables('tooltip', 'padding');
+			top: variables('tooltip', 'top');
 			opacity: 0;
-			transition: opacity 0.18s;
+			transition: variables('tooltip', 'transition');
 			z-index: 1;
 			&::after {
 				content: "";
