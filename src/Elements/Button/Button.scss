@@ -10,12 +10,12 @@
 	.#{class('button', 'name')} {
 		display: inline-flex;
 		font-family: $typography-font-family; // typography > variables
-		font-size: 1em;
+		font-size: variables('button', 'font-size');
 		font-weight: theme('elements', 'button', 'font-weight');
 		text-decoration: none;
 		white-space: nowrap;
 		outline: none;
-		width: min-content;
+		width: variables('button', 'width');
 		background: theme('color', 'background');
 		background-image: none;
 		@include border();
@@ -24,9 +24,9 @@
 		border-radius: theme('border', 'radius');
 		box-sizing: border-box;
 		cursor: pointer;
-		line-height: 1;
-		padding: .935rem 1.6rem;
-		transition: background .2s, color .2s;
+		line-height: variables('button', 'line-height');
+		padding: variables('button', 'padding');
+		transition: variables('button', 'transition');
 		user-select: none;
 		box-shadow: none;
 		align-items: center;
@@ -38,7 +38,7 @@
 			color: theme('color', 'text');
 			background: theme('color', 'secondary');
 			background-image: none;
-			transition: background .2s, color .2s;
+			transition: variables('button', 'transition');
 		}
 		&:active {
 			color: theme('color', 'text');
@@ -85,7 +85,7 @@
 		    width: auto;
 		}
 		i, [class^="#{class('icon', 'class-name')}"] {
-			font-size: 1.35em;
+			font-size: variables('button', 'icon', 'font-size');
 			color: theme('color', 'text');
 			text-shadow: none;
 		}

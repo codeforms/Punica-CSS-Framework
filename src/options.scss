@@ -329,7 +329,16 @@ $options: (
 			'secondary': true,
 			'dropdown': true
 		),
-		'variables': ()
+		'variables': (
+			'font-size': 1em,
+			'line-height': 1,
+			'width': min-content,
+			'padding': .935rem 1.6rem,
+			'transition': .2s,
+			'icon': (
+				'font-size': 1.35em
+			)
+		)
 	),
 	/// Caption
 	'caption': (

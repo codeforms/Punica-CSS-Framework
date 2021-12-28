@@ -60,7 +60,7 @@
 					margin-top: -#{variables('tabnav', 'border-width')};
 					border-top: variables('tabnav', 'border-width') solid transparent;
 					border-bottom: 0;
-					margin-bottom: 0;
+					margin-bottom: 0; 
 					&:hover {
 						border-top-color: theme('color', 'grey');
 					}
