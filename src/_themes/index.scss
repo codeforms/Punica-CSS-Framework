@@ -53,6 +53,11 @@ $punica-themes: (
 			'outline-width'	: 2px,
 			'label-weight'	: 700
 		),
+		'components': (
+			'navbar': (
+				'font-weight': 600
+			)
+		),
 		'elements': (
 			'button': (
 				'font-weight'		: 700,
