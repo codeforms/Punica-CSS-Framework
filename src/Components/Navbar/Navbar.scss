@@ -143,7 +143,7 @@
 		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 			font-size: variables('navbar', 'font-size');
 			padding: .935rem 1.4rem;
-			font-weight: theme('typography', 'header-weight');
+			font-weight: theme('components','navbar', 'font-weight');
 		}
 		/// 
 		/// NAVBAR THEMES
