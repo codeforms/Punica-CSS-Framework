@@ -92,13 +92,18 @@
 				text-transform: none;
 				height: fit-content;
 			}
-			> input[type="file"] {
-				opacity: 0;
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				cursor: default;
+			///
+			/// Custom file input
+			///
+			@if options('form', 'features', 'upload') {
+				> input[type="file"] {
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					cursor: default;
+				}
 			}
 			///
 			/// FORM GROUPS
