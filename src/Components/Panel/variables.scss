@@ -1,3 +1,9 @@
 /////////////////////////////////////////////////////////
 /// PUNICA CSS > COMPONENT : PANEL > VARIABLES
 /////////////////////////////////////////////////////////
+/// SIZES ===============================================
+$panel-sizes: (
+	// size name, font-size of title, padding of title/content
+    ("mini", .985rem, 4px 8px),
+    ("small", 1.038rem, 8px 12px)
+);

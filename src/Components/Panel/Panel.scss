@@ -88,7 +88,26 @@
 		&>.#{class('panel', 'bottom')} {
 			min-height: 50px;
 			border-top: set-border();
-			padding: 6px;
+			padding: variables('panel', 'padding');
+		}
+		///
+		/// SIZES
+		///
+		@if options('panel', 'features', 'sizes') {
+			@each $size-name, $font-size, $padding in $panel-sizes {
+				&.#{$size-name} {
+					>.#{class('panel', 'header')} {
+						padding: $padding;
+						.#{class('panel', 'title')} {
+							font-size: $font-size;
+						}
+					}
+					>.#{class('panel', 'content')},
+					>.#{class('panel', 'bottom')} {
+						padding: $padding;
+					}
+				}
+			}
 		}
 	}
 }
