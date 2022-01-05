@@ -43,7 +43,7 @@
 			&.dotted {
 				border-bottom-style: dotted;
 			}
-			.#{class('panel', 'title')} {
+			>.#{class('panel', 'title')} {
 				font-size: 1.185rem;
 				font-weight: theme('typography', 'header-weight');
 			}
