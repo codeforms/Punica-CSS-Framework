@@ -7,7 +7,7 @@ $options: (
 	'grid': (
 		'enable': true,
 		'features': (
-			'equal': true,
+			'equal': true, // equal height
 			'offset': true // [!] increases the size
 		),
 		'variables': (
@@ -99,7 +99,7 @@ $options: (
 			'height': 100%,
 			'padding': 16px,
 			'group': (
-				'margin': 10px
+				'margin': 10px // margin for each card
 			),
 			'horizontal': (
 				'margin-bottom': 15px
@@ -255,9 +255,9 @@ $options: (
 		'variables': (
 			'margin': 0 1.1em .8em,
 			'padding': 8px 2.76em,
-			'border-radius': 65% 12% 92% 5% / 12% 95% 6% 65%,
+			'border-radius': 4px,
 			'line-height': 2.1em,
-			'border-width': 6px 0,
+			'border-width': 1px,
 			'transition': .15s,
 			'title': (
 				'font-size': 1.1em
