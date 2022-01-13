@@ -51,12 +51,6 @@
 					color: theme('color', 'text');
 					transition: variables('menu', 'item', 'transition');
 				}
-				&.#{class('menu', 'disabled')} {
-					opacity: .59;
-					color: theme('color', 'grey');
-					cursor: default;
-					pointer-events: none;
-				}
 			}
 			i, span.#{class('icon', 'class-name')} {
 				color: theme('color', 'grey');

@@ -152,6 +152,13 @@
 		border: none; 
 		box-shadow: none !important
 	}
+	[disabled],
+	:disabled,
+	.disabled {
+		opacity: .49;
+		cursor: default;
+		pointer-events: none;
+	}
 	.bordered {@include border();}
 	.borderless {border: none !important;}
 	.rounded {border-radius: theme('border', 'radius');}

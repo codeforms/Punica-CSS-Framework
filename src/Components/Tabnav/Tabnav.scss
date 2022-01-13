@@ -35,9 +35,6 @@
 				color: theme('color', 'text');
 				border-bottom-color: theme('color', 'grey');
 			}
-			&.#{class('button', 'disabled')} {
-				opacity: .45;
-			}
 			&.#{class('tabnav', 'active')} {
 				color: theme('color', 'primary');
 				border-bottom-color: theme('color', 'primary');

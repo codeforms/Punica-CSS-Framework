@@ -71,13 +71,6 @@
 			cursor: default;
 			background-image: none !important;
 		}
-		&[disabled],
-		&:disabled,
-		&.#{class('button', 'disabled')} {
-			cursor: default;
-			opacity: .59;
-			pointer-events: none;
-		}
 		// Block Button
 		&.#{class('button', 'block')} {
     		display: flex;
