@@ -26,6 +26,7 @@
 			border-radius: 0 !important;
 			line-height: unset;
 	        font-size: 1.025em;
+	        font-weight: theme('components', 'tabnav', 'font-weight');
 			color: theme('color', 'text');
 			padding: .935rem 1.4rem;
 			box-shadow: none;
