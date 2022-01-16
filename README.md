@@ -11,12 +11,18 @@
 </p>
 
 <p>
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codeforms/Punica-CSS-Framework"></a>
+    <a href="https://github.com/codeforms/Punica-CSS-Framework/releases"><img src="https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework"></a>
+</p>
+
+#### Your custom CSS Framework
+<p>
     Punica also lets you create your custom CSS Framework. You can customize all the class names, apply your color scheme, enable or disable features of element/component, change all variables as your need and create your themes according to your taste. You are completely free!
 </p>
 
+#### API for Developers
 <p>
-    <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codeforms/Punica-CSS-Framework"></a>
-    <a href="https://github.com/codeforms/Punica-CSS-Framework/releases"><img src="https://img.shields.io/github/v/release/codeforms/Punica-CSS-Framework"></a>
+    You can customize the Punica as you wish with the ```options.scss``` and ```classnames.scss``` API files. If you completed your process of customization then compile the Punica again. That's it.
 </p>
 
 ### Install From CDN
