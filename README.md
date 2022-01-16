@@ -16,14 +16,10 @@
 </p>
 
 #### Your custom CSS Framework
-<p>
-    Punica also lets you create your custom CSS Framework. You can customize all the class names, apply your color scheme, enable or disable features of element/component, change all variables as your need and create your themes according to your taste. You are completely free!
-</p>
+Punica also lets you create your custom CSS Framework. You can customize all the class names, apply your color scheme, enable or disable features of element/component, change all variables as your need and create your themes according to your taste. You are completely free!
 
 #### API for Developers
-<p>
-    You can customize the Punica as you wish with the **options.scss** and **classnames.scss** API files. If you completed your process of customization then compile the Punica again. That's it.
-</p>
+You can customize the Punica as you wish with the ```options.scss``` and ```classnames.scss``` API files. If you completed your process of customization then compile the Punica again. That's it.
 
 ### Install From CDN
 If you want to quickly add the Punica CSS to your project, you can use the JsDelivr CDN;
