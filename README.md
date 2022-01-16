@@ -22,7 +22,7 @@
 
 #### API for Developers
 <p>
-    You can customize the Punica as you wish with the ```options.scss``` and ```classnames.scss``` API files. If you completed your process of customization then compile the Punica again. That's it.
+    You can customize the Punica as you wish with the **options.scss** and **classnames.scss** API files. If you completed your process of customization then compile the Punica again. That's it.
 </p>
 
 ### Install From CDN
