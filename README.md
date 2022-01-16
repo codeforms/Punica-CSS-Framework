@@ -19,7 +19,7 @@
 Punica also lets you create your custom CSS Framework. You can customize all the class names, apply your color scheme, enable or disable features of element/component, change all variables as your need and create your themes according to your taste. You are completely free!
 
 ### API for Developers
-Punica API is based on SCSS maps for various options, values, and generating class names. The Punica SCSS maps contain a key list of options/values/class names. For example, you can customize the Punica as you wish with the ```options.scss``` and ```classnames.scss``` API files. Take a look at the official [SASS docs](https://sass-lang.com/documentation/values/maps) to get started about SASS maps. 
+Punica API is based on SCSS maps for various options, values, generating class names, and themes. The Punica SCSS maps contain a key list of options/values/class names/theme variables. For example, you can customize the Punica as you wish with the ```options.scss``` and ```classnames.scss``` API files and of course generate your custom themes with Punica's theme maps. Take a look at the official [SASS docs](https://sass-lang.com/documentation/values/maps) to get started about SASS maps. 
 
 ### Install From CDN
 If you want to quickly add the Punica CSS to your project, you can use the JsDelivr CDN;
