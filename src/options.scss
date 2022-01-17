@@ -55,7 +55,9 @@ $options: (
 			'styles': true,
 			'sizes': true
 		),
-		'variables': ()
+		'variables': (
+			'border-radius': 500px
+		)
 	),
 	/// Billboard
 	'billboard': (
@@ -80,7 +82,13 @@ $options: (
 		),
 		'variables': (
 			'font-weight': bold,
-			'active-weight': bold
+			'active-weight': bold,
+			'seperator': ( // icon
+				'padding': 0 .25em,
+				'vertical-align': middle,
+				'font-size': 1.4rem,
+				'cursor': auto
+			)
 		)
 	),
 	/// Card
@@ -189,9 +197,19 @@ $options: (
 		),
 		'variables': (
 			'min-height': 80px,
-			'brand-padding': 0,
 			'font-size': 1.128em,
-			'spacer-top': 120px // min-height + 40px
+			'spacer-top': 120px, // min-height + 40px
+			'button-padding': .935rem 1.4rem,
+			'brand': (
+				'padding': 0,
+				'margin-right': 1rem,
+				'font-weight': bold,
+				'img-width': 7rem
+			),
+			'burger': (
+				'padding': 0 1.5rem,
+				'icon-size': 2.459rem
+			)
 		)
 	),
 	/// Panel

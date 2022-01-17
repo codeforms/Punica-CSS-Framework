@@ -25,15 +25,15 @@
 		}
 		// navbar brand
 		.#{class('navbar', 'brand')} {
-			padding: variables('navbar', 'brand-padding');
+			padding: variables('navbar', 'brand', 'padding');
 			display: flex;
 			justify-content: center;
 			min-height: 100%;
 			align-items: center;
-			margin-right: 1rem;
+			margin-right: variables('navbar', 'brand', 'margin-right');
 			white-space: nowrap;
 			img {
-				width: 7rem;
+				width: variables('navbar', 'brand', 'img-width');
 			}
 			a,
 			a:visited {
@@ -41,7 +41,7 @@
 				text-decoration: none;
 				color: theme('color', 'negative');
 				display: flex;
-				font-weight: bold;
+				font-weight: variables('navbar', 'brand', 'font-weight');
 			}
 		}
 		// navbar burger
@@ -53,10 +53,10 @@
 			&::before {
 				content: "#{class('icon', 'navbar-open')}"; // [*]
 				font-family: "#{class('icon', 'font-family')}"; // [*]
-				font-size: 2.459rem;
+				font-size: variables('navbar', 'burger', 'icon-size');
 				display: none;
 				min-height: variables('navbar', 'min-height');
-				min-width: variables('navbar', 'min-height');
+				max-height: variables('navbar', 'min-height');
 				position: absolute;
 				cursor: pointer;
 				right: 0;
@@ -142,7 +142,7 @@
 		.#{class('button', 'name')},
 		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 			font-size: variables('navbar', 'font-size');
-			padding: .935rem 1.4rem;
+			padding: variables('navbar', 'button-padding');
 			font-weight: theme('components','navbar', 'font-weight');
 		}
 		/// 
@@ -187,7 +187,7 @@
 		.#{class('navbar', 'name')} {
 			// grid container
 			.#{class('grid', 'container')} {
-				padding: 0;
+				padding: 0 (variables('grid', 'container', 'padding') / 2);
 			}
 			&.#{class('navbar', 'fixed')} {
 				position: relative;
@@ -235,10 +235,10 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				min-height: variables('navbar', 'min-height');
-				min-width: variables('navbar', 'min-height');
 				&::before {
 					content: "#{class('icon', 'navbar-close')}"; // [*]
+					padding: variables('navbar', 'burger', 'padding');
+					font-size: variables('navbar', 'burger', 'icon-size');
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -254,8 +254,7 @@
 						& .#{class('navbar', 'burger')},
 						& .#{class('navbar', 'burger')}::before {
 							min-height: $min-height;
-							min-width: $min-height;
-							font-size: 1.359em;
+							max-height: $min-height;
 						}
 						section.#{class('navbar', 'links')} {
 							top: $min-height;

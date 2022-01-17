@@ -20,10 +20,10 @@
 				font-family: '#{class('icon', 'font-family')}';
 				content: class('icon', 'breadcrumb-seperator'); // [*]
 				color: theme('color', 'primary');
-				padding: 0 .25em;
-			    vertical-align: middle;
-		        font-size: 1.4rem;
-				cursor: auto;
+				padding: variables('breadcrumb', 'seperator', 'padding');
+			    vertical-align: variables('breadcrumb', 'seperator', 'vertical-align');
+		        font-size: variables('breadcrumb', 'seperator', 'font-size');
+				cursor: variables('breadcrumb', 'seperator', 'cursor');
 			}
 			&:first-child {
 				margin-left: 0;

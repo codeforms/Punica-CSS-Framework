@@ -13,7 +13,7 @@
 			justify-content: center;
 			align-items: center;
 			font-weight: theme('typography', 'header-weight');
-			border-radius: 500px;
+			border-radius: variables('badge', 'border-radius');
 			border: theme('border', 'width') theme('border', 'style') darken(theme('color', 'secondary'), 6.5%);
 		};
 		@include set-size(1em, 1px 6px);
