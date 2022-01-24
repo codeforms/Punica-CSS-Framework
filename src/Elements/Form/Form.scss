@@ -211,7 +211,7 @@
 			input + label::after {
 				position: absolute;
 				transition: opacity 0.11s ease-in-out;
-				font-family: '#{class('icon', 'font-family')}';
+				font-family: '#{variables('icon', 'font-family')}';
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none;
@@ -231,21 +231,21 @@
 		}
 		.#{class('form', 'checkbox')} {
 			input + label::before {
-				content: class('icon', 'checkbox-before');
+				content: variables('icon', 'form', 'checkbox-before');
 				color: theme('color', 'text');
 			}
 			input + label::after {
-				content: class('icon', 'checkbox-after');
+				content: variables('icon', 'form', 'checkbox-after');
 				color: theme('color', 'primary');
 			}
 		}
 		.#{class('form', 'radio')} {
 			input + label::before {
-				content: class('icon', 'radio-before');
+				content: variables('icon', 'form', 'radio-before');
 				color: theme('color', 'text');
 			}
 			input + label::after {
-				content:  class('icon', 'radio-after');
+				content:  variables('icon', 'form', 'radio-after');
 				color: theme('color', 'primary');
 			}
 		}

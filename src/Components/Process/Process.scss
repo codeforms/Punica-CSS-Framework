@@ -56,8 +56,8 @@
 					color: theme('color', 'primary');
 					font-weight: theme('typography', 'header-weight');
 					&::after {
-						content: "#{class('icon', 'process-current')}"; // [*]
-						font-family: "#{class('icon', 'font-family')}"; // [*]
+						content: "#{variables('icon', 'process', 'current')}"; // [*]
+						font-family: "#{variables('icon', 'font-family')}"; // [*]
 						position: absolute;
 						top: calc(-15px - #{variables('process', 'icon-size')});
 						left: calc(50% - ((#{variables('process', 'stickbar', 'width')} * 10) / 2));
@@ -108,6 +108,6 @@
 }
 /*
 REFERENCES ******************************************
-[*] Defined at classnames.scss file -> 'icon'
+[*] Defined at options.scss file -> 'icon'
 https://material.io/resources/icons/
 *****************************************************/

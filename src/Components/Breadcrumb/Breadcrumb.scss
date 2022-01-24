@@ -17,8 +17,8 @@
 				color: theme('color', 'primary');
 			}
 			&::after {
-				font-family: '#{class('icon', 'font-family')}';
-				content: class('icon', 'breadcrumb-seperator'); // [*]
+				font-family: '#{variables('icon', 'font-family')}';
+				content: variables('icon', 'breadcrumb', 'seperator'); // [*]
 				color: theme('color', 'primary');
 				padding: variables('breadcrumb', 'seperator', 'padding');
 			    vertical-align: variables('breadcrumb', 'seperator', 'vertical-align');
@@ -70,6 +70,6 @@
 }
 /*
 REFERENCES ******************************************
-[*] Defined at classnames.scss file -> 'icon'
+[*] Defined at options.scss file -> 'icon'
 https://material.io/resources/icons/
 *****************************************************/

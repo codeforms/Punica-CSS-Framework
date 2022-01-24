@@ -51,8 +51,8 @@
 		}
 		.#{class('navbar', 'burger')} {
 			&::before {
-				content: "#{class('icon', 'navbar-open')}"; // [*]
-				font-family: "#{class('icon', 'font-family')}"; // [*]
+				content: "#{variables('icon', 'navbar', 'open')}"; // [*]
+				font-family: "#{variables('icon', 'font-family')}"; // [*]
 				font-size: variables('navbar', 'burger', 'icon-size');
 				display: none;
 				min-height: variables('navbar', 'min-height');
@@ -236,7 +236,7 @@
 				align-items: center;
 				justify-content: center;
 				&::before {
-					content: "#{class('icon', 'navbar-close')}"; // [*]
+					content: "#{variables('icon', 'navbar', 'close')}"; // [*]
 					padding: variables('navbar', 'burger', 'padding');
 					font-size: variables('navbar', 'burger', 'icon-size');
 					display: flex;
@@ -269,16 +269,16 @@
 				height: auto;
 			}
 			input[type=checkbox]##{class('navbar', 'burger')}:not(:checked) ~ .#{class('navbar', 'burger')}::before {
-				content: "#{class('icon', 'navbar-open')}"; // [*]
+				content: "#{variables('icon', 'navbar', 'open')}"; // [*]
 			}
 			input[type=checkbox]##{class('navbar', 'burger')}:checked ~ .#{class('navbar', 'burger')}::before {
-				content: "#{class('icon', 'navbar-close')}"; // [*]
+				content: "#{variables('icon', 'navbar', 'close')}"; // [*]
 			}
 		}
 	}
 }
 /*
 REFERENCES ******************************************
-[*] Defined at classnames.scss file -> 'icon'
+[*] Defined at options.scss file -> 'icon'
 https://material.io/resources/icons/
 *****************************************************/

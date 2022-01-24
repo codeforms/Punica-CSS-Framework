@@ -2,8 +2,8 @@
 /// OPTIONS & VARIABLES
 /////////////////////////////////////////////////////////
 $options: (
-/// LAYOUT
-	/// Grid
+	/////////////////////////////////////////////////////////
+	/// Layout
 	'grid': (
 		'enable': true,
 		'features': (
@@ -31,8 +31,8 @@ $options: (
 			)
 		)
 	),
-/// COMPONENTS
-	/// Alert
+	/////////////////////////////////////////////////////////
+	/// Components
 	'alert': (
 		'enable': true,
 		'features': (
@@ -48,7 +48,6 @@ $options: (
 			)
 		)
 	),
-	/// Badge
 	'badge': (
 		'enable': true,
 		'features': (
@@ -59,7 +58,6 @@ $options: (
 			'border-radius': 500px
 		)
 	),
-	/// Billboard
 	'billboard': (
 		'enable': true,
 		'features': (
@@ -74,7 +72,6 @@ $options: (
 			)
 		)
 	),
-	/// Breadcrumb
 	'breadcrumb': (
 		'enable': true,
 		'features': (
@@ -91,7 +88,6 @@ $options: (
 			)
 		)
 	),
-	/// Card
 	'card': (
 		'enable': true,
 		'features': (
@@ -114,7 +110,6 @@ $options: (
 			)
 		)
 	),
-	/// List
 	'list': (
 		'enable': true,
 		'features': (
@@ -150,7 +145,6 @@ $options: (
 			)
 		)
 	),
-	/// Menu
 	'menu': (
 		'enable': true,
 		'features': (),
@@ -187,7 +181,6 @@ $options: (
 			)
 		)
 	),
-	/// Navbar
 	'navbar': (
 		'enable': true,
 		'features': (
@@ -212,7 +205,6 @@ $options: (
 			)
 		)
 	),
-	/// Panel
 	'panel': (
 		'enable': true,
 		'features': (
@@ -228,7 +220,6 @@ $options: (
 			'title-padding': 12px 16px
 		)
 	),
-	/// Process
 	'process': (
 		'enable': true,
 		'features': (
@@ -252,7 +243,6 @@ $options: (
 			)
 		)
 	),
-	/// Progress
 	'progress': (
 		'enable': true,
 		'features': (
@@ -264,7 +254,6 @@ $options: (
 			'border-radius': 16px
 		)
 	),
-	/// Stats
 	'stats': (
 		'enable': true,
 		'features': (
@@ -295,7 +284,6 @@ $options: (
 			)
 		)
 	),
-	/// Tabnav
 	'tabnav': (
 		'enable': true,
 		'features': (
@@ -306,7 +294,6 @@ $options: (
 			'border-width': 2px
 		)
 	),
-	/// Timeline
 	'timeline': (
 		'enable': true,
 		'features': (
@@ -322,7 +309,6 @@ $options: (
 			)
 		)
 	),
-	/// Tooltip
 	'tooltip': (
 		'enable': true,
 		'features': (),
@@ -335,8 +321,8 @@ $options: (
 			'transition': opacity 0.18s
 		)
 	),
-/// ELEMENTS
-	/// Button
+	/////////////////////////////////////////////////////////
+	/// Elements
 	'button': (
 		'enable': true,
 		'features': (
@@ -359,7 +345,6 @@ $options: (
 			)
 		)
 	),
-	/// Caption
 	'caption': (
 		'enable': true,
 		'features': (
@@ -373,7 +358,6 @@ $options: (
 			),
 		)
 	),
-	/// Form
 	'form': (
 		'enable': true,
 		'features': (
@@ -409,17 +393,32 @@ $options: (
 			)
 		)
 	),
-	/// Icon
 	'icon': (
 		'enable': true,
 		'features': (),
 		'variables': (
+			'font-family': 'Material Icons',
 			'font-size': 1.1rem,
 			'line-height': 1,
-			'vertical-align': middle
+			'vertical-align': middle,
+			'form': (
+				'radio-before': 'radio_button_unchecked',
+				'radio-after': 'radio_button_checked',
+				'checkbox-before': 'check_box_outline_blank',
+				'checkbox-after': 'check_box'
+			),
+			'breadcrumb': (
+				'seperator': 'keyboard_arrow_right'
+			),
+			'navbar': (
+				'open': 'dehaze',
+				'close': 'close'
+			),
+			'process': (
+				'current': 'beenhere'
+			)
 		)
 	),
-	/// Label
 	'label': (
 		'enable': true,
 		'features': (
@@ -432,7 +431,6 @@ $options: (
 			'margin': .1rem .05rem
 		)
 	),
-	/// Table
 	'table': (
 		'enable': true,
 		'features': (
@@ -448,8 +446,8 @@ $options: (
 			)
 		)
 	),
-/// UTILITIES
-	/// Helpers
+	/////////////////////////////////////////////////////////
+	/// Utilities
 	'helpers': (
 		'enable': true,
 		'features': (),
