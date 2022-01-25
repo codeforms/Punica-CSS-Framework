@@ -54,7 +54,6 @@
 			&.#{class('process', 'active')} {
 				a {
 					color: theme('color', 'primary');
-					font-weight: theme('typography', 'header-weight');
 					&::after {
 						content: "#{variables('icon', 'process', 'current')}"; // [*]
 						font-family: "#{variables('icon', 'font-family')}"; // [*]
