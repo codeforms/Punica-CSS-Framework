@@ -13,7 +13,7 @@
 			padding: variables('alert', 'padding');
 			margin: variables('alert', 'margin');
 			width: variables('alert', 'width');
-			font-weight: theme('typography', 'header-weight');
+			font-weight: bold;
 			a {
 				color: theme('color', 'text');
 				text-decoration: underline;
