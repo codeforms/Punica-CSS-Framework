@@ -9,7 +9,7 @@
 	.#{class('label', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: inline-block;
-			font-weight: theme('typography', 'header-weight');
+			font-weight: bold;
 			line-height: 1.2;
 			margin: variables('label', 'margin');
 			border-radius: theme('border', 'radius');
