@@ -9,7 +9,9 @@
 	@include form-inputs() {
 		-webkit-appearance: none;
 		background-color: theme('input', 'background');
-		border: theme('border', 'width') theme('border', 'style') theme('input', 'border-color');
+		border-width: theme('border', 'width');
+		border-style: theme('border', 'style');
+		border-color: if(theme('input', 'border-color'), theme('input', 'border-color'), theme('border', 'color'));
 		height: variables('form', 'input', 'height');
 		border-radius: variables('form', 'input', 'border-radius');
 		outline: theme('input', 'outline-width') solid transparent;
@@ -20,7 +22,7 @@
 		width: 100%;
 		max-width: 100%;
 		font-family: inherit;
-		color: theme('input', 'color');
+		color: if(theme('input', 'color'), theme('input', 'color'), theme('color', 'text'));
 		font-size: variables('form', 'input', 'font-size');
 		&:focus {
 			outline: theme('input', 'outline-width') solid theme('input', 'outline-color');
