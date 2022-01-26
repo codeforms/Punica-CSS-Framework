@@ -24,12 +24,14 @@
 		}
 	}
 	.#{class('card', 'name')} {
-		background-color: theme('color', 'background');
+		/// background color
+		background-color: if(theme('components', 'card', 'background'), theme('components', 'card', 'background'), theme('color', 'background'));
 
 		// has card border?
 		@if options('card', 'features', 'border') {
 			@include border();
-			border-radius: theme('border', 'radius');
+			/// border radius
+			border-radius: if(theme('components', 'card', 'radius'), theme('components', 'card', 'radius'), theme('border', 'radius'));
 		}
 
 		// has card shadow?
