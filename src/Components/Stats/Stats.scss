@@ -9,7 +9,7 @@
 	a.#{class('stats', 'name')} {
 		display: inline-flex;
 		flex-direction: column;
-		background-color: theme('color', 'background');
+		background-color: transparent;
 		margin: variables('stats', 'margin');
 		border-width: variables('stats', 'border-width');
 		border-color: theme('border', 'color');
