@@ -67,7 +67,8 @@ $punica-themes: (
 		),
 		'elements': (
 			'button': (
-				'font-weight'		: 700,
+				'font-weight'	: 700,
+				'radius'		: null, // (null = border > radius)
 				'secondary': (
 					'color'			: null,
 					'background'	: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
