@@ -106,8 +106,8 @@
 		@if options('button', 'features', 'group') {
 			&>.#{class('button', 'group')} {
 				&>.#{class('button', 'dropdown-toggle')}:nth-last-child(2) {
-					border-bottom-right-radius: theme('border', 'radius');
-					border-top-right-radius: theme('border', 'radius');
+					border-bottom-right-radius: if(theme('elements', 'button', 'radius'), theme('elements', 'button', 'radius'), theme('border', 'radius'));
+					border-top-right-radius: if(theme('elements', 'button', 'radius'), theme('elements', 'button', 'radius'), theme('border', 'radius'));
 				}
 			}
 		}
@@ -128,7 +128,7 @@
 		display: inline-flex;
 		flex-wrap: wrap;
 		flex-shrink: 0;
-		border-radius: theme('border', 'radius');
+		border-radius: if(theme('elements', 'button', 'radius'), theme('elements', 'button', 'radius'), theme('border', 'radius'));
 		@include shadow();
 		width: fit-content;
 		.#{class('button', 'name')} {
@@ -194,8 +194,8 @@
 			.#{class('button', 'dropdown')}:last-child,
 			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:first-child,
 			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:last-child {
-				border-bottom-right-radius: theme('border', 'radius');
-				border-top-right-radius: theme('border', 'radius');
+				border-bottom-right-radius: if(theme('elements', 'button', 'radius'), theme('elements', 'button', 'radius'), theme('border', 'radius'));
+				border-top-right-radius: if(theme('elements', 'button', 'radius'), theme('elements', 'button', 'radius'), theme('border', 'radius'));
 			}
 			.#{class('button', 'dropdown')}:not(:first-child):not(:last-child) > .#{class('button', 'name')} {
 				border-radius: 0;
