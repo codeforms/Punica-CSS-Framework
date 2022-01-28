@@ -63,6 +63,10 @@ $punica-themes: (
 			'card': (
 				'background': null, // (null = color > background)
 				'radius': null // (null = border > radius)
+			),
+			'panel': (
+				'background': null, // (null = color > background)
+				'radius'	: null // (null = border > radius)
 			)
 		),
 		'elements': (
