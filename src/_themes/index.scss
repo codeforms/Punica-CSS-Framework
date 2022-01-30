@@ -9,15 +9,15 @@ $punica-themes: (
 		'name'	: 'Default Theme',
 		'type'	: 'light', // light or dark (required*),
 		'google-font': (
-			'name'		: 'Nunito', // or Source+Sans+Pro etc
-			'weights'	: '300;400;600;700;900',
+			'name'		: 'IBM+Plex+Sans+Hebrew', // or Source+Sans+Pro etc
+			'weights'	: '300;400;600;700',
 		),
 		'typography': (
-			'font-family'	: 'Nunito',
+			'font-family'	: 'IBM Plex Sans Hebrew',
 			'font-size'		: 13px,
 			'font-weight'	: 400,
 			'line-height'	: 1.7,
-			'header-weight'	: 900,
+			'header-weight'	: 700,
 		),
 		'color': (
 			'text'			: #202123,
@@ -51,18 +51,18 @@ $punica-themes: (
 			'border-color'	: null, // (null = border > color)
 			'outline-color'	: #26272b,
 			'outline-width'	: 2px,
-			'label-weight'	: 700
+			'label-weight'	: 600
 		),
 		'components': (
 			'navbar': (
 				'font-weight': 600
 			),
 			'tabnav': (
-				'font-weight': 700
+				'font-weight': 600
 			),
 			'card': (
 				'background': null, // (null = color > background)
-				'radius': null // (null = border > radius)
+				'radius'	: null // (null = border > radius)
 			),
 			'panel': (
 				'background': null, // (null = color > background)
@@ -71,7 +71,7 @@ $punica-themes: (
 		),
 		'elements': (
 			'button': (
-				'font-weight'	: 700,
+				'font-weight'	: 600,
 				'radius'		: null, // (null = border > radius)
 				'secondary': (
 					'color'			: null,
