@@ -12,7 +12,8 @@ $active-theme: default; // active theme name
 /// Themes ==============================================
 @import "_themes/index";
 
-/// Global Mixins & Variables ===========================
+/// Global Getter functions, Mixins & Variables =========
+@import "_global/_getters";
 @import "_global/mixins";
 @import "_global/variables";
 
