@@ -22,13 +22,13 @@ $punica-themes: (
 		'color': (
 			'text'			: #202123,
 			'background'	: white,
-			'primary'		: #0a8fff,
-			'success'		: #2ec4b6,
-			'warning'		: #de9e36,
-			'error'			: #d62828,
+			'primary'		: #314a93,
+			'success'		: #297d51,
+			'warning'		: #956d28,
+			'error'			: #972727,
 			'active'		: #dcdcdc,
 			'negative'		: white,
-			'grey'			: #a8a8a8,
+			'grey'			: #979797,
 			'secondary'		: #e6e6e6,
 			'dark'			: #26272b,
 		),
@@ -40,10 +40,10 @@ $punica-themes: (
 		),
 		'shadow': (
 			'horizontal': 0,
-			'vertical'	: 1px,
+			'vertical'	: 2px,
 			'blur'		: 4px,
 			'spread'	: 0,
-			'color'		: rgba(0, 0, 0, 0.15),
+			'color'		: rgba(0, 0, 0, 0.16),
 		),
 		'input': (
 			'color'			: null, // (null = color > text)
