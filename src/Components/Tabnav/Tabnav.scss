@@ -36,8 +36,10 @@
 				color: theme('color', 'text');
 				border-bottom-color: theme('color', 'grey');
 			}
+			&:focus {
+				background: transparent;
+			}
 			&.#{class('tabnav', 'active')} {
-				color: theme('color', 'primary');
 				border-bottom-color: theme('color', 'primary');
 				i, [class^="#{class('icon', 'class-name')}"] {
 					color: inherit;
@@ -79,7 +81,6 @@
 					.#{class('button', 'dropdown')} .#{class('button', 'name')},
 					.#{class('button', 'dropdown')} a.#{class('button', 'name')} {
 						&.#{class('tabnav', 'active')} {
-							color: $color;
 							border-bottom-color: $color;
 						}
 					}
