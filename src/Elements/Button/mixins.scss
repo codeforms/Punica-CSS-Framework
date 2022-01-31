@@ -290,10 +290,13 @@
 	&.#{class('button', 'active')} {
 		background: lighten($bg-color, 7.5%);
 		color: theme('color', 'negative');
+		&:focus,
+		&:hover {
+			background: lighten($bg-color, 12.5%);
+		}
 	}
 	i, [class^="#{class('icon', 'class-name')}"] {
 		color: theme('color', 'negative');
-		text-shadow: none;
 	}
 	@content;
 }

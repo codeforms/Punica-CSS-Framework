@@ -38,21 +38,15 @@
 		text-align: center;
 		&:focus,
 		&:hover {
-			color: theme('color', 'text');
-			background: theme('color', 'secondary');
-			background-image: none;
 			transition: variables('button', 'transition');
+			background-image: none;
 		}
-		&:active {
-			color: theme('color', 'text');
-			background: theme('color', 'background');
+		&:hover {
+			background: theme('color', 'secondary');
 		}
+		&:active,
 		&:focus {
 			background: theme('color', 'background');
-			> i,
-			> [class^="#{class('icon', 'class-name')}"] {
-				color: theme('color', 'primary');
-			}
 		}
 		&.#{class('button', 'active')} {
 			color: theme('color', 'text');
@@ -62,11 +56,7 @@
 			&:focus,
 			&:hover {
 				color: theme('color', 'text');
-				background: lighten( theme('color', 'active'), 4%);
-			}
-			i, [class^="#{class('icon', 'class-name')}"] {
-				color: theme('color', 'text');
-				text-shadow: none;
+				background: lighten(theme('color', 'active'), 4%);
 			}
 		}
         &.#{class('button', 'inactive')} {
