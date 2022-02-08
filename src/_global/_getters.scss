@@ -55,7 +55,7 @@
 	$variables: map-get(map-get(options($node), 'variables'), nth($keys, 1));
 
 	@if null == $variables {
-		@return debug-message("#{$node} > #{nth($keys, 1)}", 'options');
+		@return debug-message("#{$node} > variables > #{nth($keys, 1)}", 'options');
 	}
 	
 	@if length($keys) == 1 {
@@ -63,7 +63,7 @@
 	}
 
 	@if null == map-get($variables, nth($keys, 2)) {
-		@return debug-message("#{$node} > #{nth($keys, 1)} > #{nth($keys, 2)}", 'options');
+		@return debug-message("#{$node} > variables > #{nth($keys, 1)} > #{nth($keys, 2)}", 'options');
 	}
 
 	@return map-get($variables, nth($keys, 2));
@@ -126,7 +126,7 @@
 /// @return text
 /// 
 @function debug-message($message, $file) {
-	$message: debug-title() + ' "#{$message}" ' + debug-text($file);
+	$message: debug-title() + ' " #{$message} " ' + debug-text($file);
 
 	@warn $message; @error $message;
 }
