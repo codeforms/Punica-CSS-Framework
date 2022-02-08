@@ -40,10 +40,10 @@ $punica-themes: (
 		),
 		'shadow': (
 			'horizontal': 0,
-			'vertical'	: 2px,
-			'blur'		: 4px,
+			'vertical'	: 3px,
+			'blur'		: 5px,
 			'spread'	: 0,
-			'color'		: rgba(0, 0, 0, 0.16),
+			'color'		: rgba(0, 0, 0, 0.20),
 		),
 		'input': (
 			'color'			: null, // (null = color > text)
@@ -77,7 +77,7 @@ $punica-themes: (
 					'color'			: null,
 					'background'	: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
 					'hover-color'	: null,
-					'hover-bg'		: linear-gradient(to top, #ffffff 0%,#e6e6e6 100%),
+					'hover-bg'		: linear-gradient(to bottom, #e6e6e6 0%,#ffffff 100%),
 					'border-color'	: null
 				)
 			),
