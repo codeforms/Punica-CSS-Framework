@@ -27,7 +27,7 @@ If you want to quickly add the Punica CSS to your project, you can use the JsDel
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@2.x.x/dist/punica.min.css" crossorigin="anonymous">
 ```
 
-### HTML Markup
+### HTML Markup & Including Material Symbols and Icons library
 For your default setup, add the Punica CSS file to the <head> element of your HTML5 document. Also Punica CSS uses <a href="https://fonts.google.com/icons" target="_blank">Material Symbols and Icons</a> library, therefore you should include this library as well. That's it!
 ```html
 <!DOCTYPE html>
