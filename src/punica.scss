@@ -2,7 +2,7 @@
 /// PUNICA CSS
 /////////////////////////////////////////////////////////
 // ======================================================
-$active-theme: default; // active theme name
+$active-theme: default; // active theme name 
 // ======================================================
 
 /// Class names & Framework Options =====================
@@ -39,4 +39,8 @@ $active-theme: default; // active theme name
 	@import "Elements/index";
 	@import "Components/index";
 	@import "Utilities/helpers";
+
+	// If you want to use (or override) the default Punica variables
+	// in your SCSS file(s) so you can add it here.
+	// @import "custom";
 }
