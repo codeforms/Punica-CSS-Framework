@@ -46,7 +46,7 @@
 				}
 			}
 			i, [class^="#{class('icon', 'class-name')}"] {
-				font-size: 1rem;
+				font-size: variables('button', 'icon', 'font-size');
 			}
 		}
 		///
