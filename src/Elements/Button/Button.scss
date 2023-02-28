@@ -31,7 +31,7 @@
 		padding: variables('button', 'padding');
 		transition: variables('button', 'transition');
 		user-select: none;
-		box-shadow: theme('elements', 'button', 'shadow');
+		box-shadow: none;
 		align-items: center;
 		justify-content: center;
 		overflow: visible;
