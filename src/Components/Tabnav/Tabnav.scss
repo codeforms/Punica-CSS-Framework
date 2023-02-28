@@ -11,7 +11,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-end;
-		border-bottom: variables('tabnav', 'border-width') theme('border', 'style') theme('color', 'secondary');
+		border-bottom: variables('tabnav', 'border-width') theme('border', 'style') theme('border', 'color');
 		padding: 0;
 		&>.#{class('button', 'group')} {
 			box-shadow: none;

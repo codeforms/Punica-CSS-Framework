@@ -4,7 +4,14 @@
 
 /// SIZES ===============================================
 $panel-sizes: (
-	// size name, font-size of title, padding of title/content/bottom
-    ("mini", .985rem, 4px 8px),
-    ("small", 1.038rem, 8px 12px)
+    (
+    	"mini", // size name
+    	.985rem, // font-size (title)
+    	4px 8px // padding (title/content/bottom)
+    ),
+    (
+    	"small", // size name
+    	1.038rem, // font-size (title)
+    	8px 12px // padding (title/content/bottom)
+    )
 );

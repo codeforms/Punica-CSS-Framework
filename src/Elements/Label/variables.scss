@@ -13,7 +13,14 @@ $label-styles	: (
 
 /// SIZES =============================================== 
 $label-sizes: (
-	// size name, padding, font-size
-    ("small", .18rem .85rem, .8195em),
-    ("large", .415rem 1.159rem, 1em)
+    (
+    	"small", // size name
+    	.18rem .85rem, // padding
+    	.8195em // font-size
+    ),
+    (
+    	"large", // size name
+    	.415rem 1.159rem, // padding
+    	1em // font-size
+    )
 );

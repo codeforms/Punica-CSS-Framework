@@ -6,7 +6,7 @@
 ///
 @if options('menu', 'enable') {
 	.#{class('menu', 'name')} {
-		background-color: lighten(theme('color', 'background'), 2.5%);
+		background-color: if(theme('components', 'menu', 'background'), theme('components', 'menu', 'background'), lighten(theme('color', 'background'), 2.5%));
 		border-radius: variables('menu', 'border-radius');
 		list-style: none;
 		margin: variables('menu', 'margin');
@@ -77,7 +77,7 @@
 		// divided menu
 		&.#{class('menu', 'divided')} {
 			.#{class('menu', 'item')} {
-				border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'active');
+				border-bottom: set-border();
 				&:last-child {
 					border-bottom: none;
 				}

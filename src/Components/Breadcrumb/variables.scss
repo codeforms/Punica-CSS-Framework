@@ -4,8 +4,17 @@
 
 /// SIZES ===============================================
 $breadcrumb-sizes: (
-	// size name, font-size, seperator-padding, seperator-size
-    ('small', .9589em, .15em, 1.25rem),
-    ('large', 1.18em, .18em, 1.7rem)
+    (
+    	'small', // size name
+    	.9589em, // font-size
+    	.15em, // seperator-padding
+    	1.25rem // seperator-size
+    ),
+    (
+    	'large', // size name
+    	1.18em, // font-size
+    	.18em, // seperator-padding
+    	1.7rem // seperator-size
+    )
 );
 

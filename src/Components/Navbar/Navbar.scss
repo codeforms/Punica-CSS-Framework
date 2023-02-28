@@ -145,6 +145,22 @@
 			padding: variables('navbar', 'button-padding');
 			font-weight: theme('components','navbar', 'font-weight');
 		}
+
+		///
+		/// GRADIENT
+		///
+		@if options('navbar', 'features', 'gradient') {
+			&.#{class('navbar', 'gradient')} {
+				background: linear-gradient(
+					to top, 
+					theme('color', 'primary') 0%, 
+					lighten(theme('color', 'primary'), 11.5%) 2%, 
+					darken(theme('color', 'primary'), 3%) 97%, 
+					lighten(theme('color', 'primary'), 11.5%) 100%
+				);
+			}
+		}
+
 		/// 
 		/// NAVBAR THEMES
 		///

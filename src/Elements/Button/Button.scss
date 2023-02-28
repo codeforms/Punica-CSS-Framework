@@ -31,7 +31,7 @@
 		padding: variables('button', 'padding');
 		transition: variables('button', 'transition');
 		user-select: none;
-		box-shadow: none;
+		box-shadow: theme('elements', 'button', 'shadow');
 		align-items: center;
 		justify-content: center;
 		overflow: visible;
@@ -48,6 +48,24 @@
 		&:focus {
 			background: theme('color', 'background');
 		}
+
+		///
+		/// GRADIENT
+		///
+		@if options('button', 'features', 'gradient') {
+			&.#{class('button', 'gradient')} {
+				@include set-gradient(theme('color', 'background'));
+				&:hover {
+					@include set-gradient(theme('color', 'background'), to bottom, 25%);
+				}
+				&:active,
+				&:focus {
+					background: theme('color', 'background');
+					@include set-gradient(theme('color', 'background'), to bottom, 34%);
+				}
+			}
+		}
+
 		&.#{class('button', 'active')} {
 			color: theme('color', 'text');
 			background: theme('color', 'active');
@@ -62,7 +80,7 @@
         &.#{class('button', 'inactive')} {
 			pointer-events: none;
 			cursor: default;
-			background-image: none !important;
+			background-image: none;
 		}
 		// Block Button
 		&.#{class('button', 'block')} {

@@ -4,9 +4,20 @@
 
 /// STYLES ==============================================
 $tabnav-styles: (
-	// name, color
-	('success', theme('color', 'success')),
-	('warning', theme('color', 'warning')),
-	('error', theme('color', 'error')),
-	('dark', theme('color', 'text'))
+	(
+		'success', // style name
+		theme('color', 'success') // color
+	),
+	(
+		'warning', // style name
+		theme('color', 'warning') // color
+	),
+	(
+		'error', // style name
+		theme('color', 'error') // color
+	),
+	(
+		'dark', // style name
+		theme('color', 'text') // color
+	)
 );

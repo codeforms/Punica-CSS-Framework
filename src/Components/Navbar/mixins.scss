@@ -20,6 +20,22 @@
 ) {
 	background: $bg-color;
 	color: $text-color;
+
+	///
+	/// GRADIENT
+	///
+	@if options('navbar', 'features', 'gradient') {
+		&.#{class('navbar', 'gradient')} {
+			background: linear-gradient(
+				to top, 
+				$bg-color 0%, 
+				lighten($bg-color, 11.5%) 2%, 
+				darken($bg-color, 3%) 97%, 
+				lighten($bg-color, 11.5%) 100%
+			);
+		}
+	}
+
 	.#{class('button', 'group')} {
 		.#{class('button', 'name')} {
 			color: $text-color;

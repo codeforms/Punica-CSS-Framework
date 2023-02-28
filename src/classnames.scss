@@ -55,14 +55,15 @@ $classnames: (
 		'divided': 'divided'
 	),
 	'navbar': (
-		'name'   : 'navbar',
-		'section': 'section',
-		'fixed'  : 'fixed',
-		'brand'  : 'brand',
-		'links'  : 'links',
-		'burger' : 'burger',
-		'divided': 'divided',
-		'spacer' : 'navbar-spacer',
+		'name'     : 'navbar',
+		'section'  : 'section',
+		'fixed'    : 'fixed',
+		'brand'    : 'brand',
+		'links'    : 'links',
+		'burger'   : 'burger',
+		'divided'  : 'divided',
+		'gradient' : 'gradient',
+		'spacer'   : 'navbar-spacer',
 	),
 	'panel': (
 		'name'    : 'panel',
@@ -125,6 +126,7 @@ $classnames: (
 		'inactive'          : 'inactive',
 		'block'             : 'block',
 		'vertical'          : 'vertical',
+		'gradient'			: 'gradient',
 		// dropdown
 		'dropdown'          : 'dropdown',
 		'dropdown-right'    : 'right',

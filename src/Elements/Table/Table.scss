@@ -61,7 +61,7 @@
 		}
 		td,
 		th {
-			border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'secondary');
+			border-bottom: set-border();
 			padding: variables('table', 'td', 'padding');
 			text-align: inherit;
 		}

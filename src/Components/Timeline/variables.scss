@@ -4,9 +4,29 @@
 
 /// STYLES ==============================================
 $timeline-styles: (
-	("primary", theme('color', 'primary'), theme('color', 'negative')),
-	("success", theme('color', 'success'), theme('color', 'negative')),
-	("warning", theme('color', 'warning'), theme('color', 'negative')),
-	("error", theme('color', 'error'), theme('color', 'negative')),
-	("dark", theme('color', 'text'), theme('color', 'grey')),
+	(
+		"primary", // style name
+		theme('color', 'primary'), // bg color
+		theme('color', 'negative') // text color
+	),
+	(
+		"success", // style name
+		theme('color', 'success'), // bg color
+		theme('color', 'negative') // text color
+	),
+	(
+		"warning", // style name
+		theme('color', 'warning'), // bg color
+		theme('color', 'negative') // text color
+	),
+	(
+		"error", // style name
+		theme('color', 'error'), // bg color
+		theme('color', 'negative') // text color
+	),
+	(
+		"dark", // style name
+		theme('color', 'text'), // bg color
+		theme('color', 'grey') // text color
+	),
 );

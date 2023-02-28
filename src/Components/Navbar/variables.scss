@@ -5,14 +5,48 @@
 /// STYLES ==============================================
 // you can add your own custom styles.
 $navbar-themes: (
-	// theme name, bg color, text color, input bg, input color, input border color, divider color
-	("light", white, #303232, white, #303232, theme('color', 'dark'), theme('color', 'grey')),
-	("dark", theme('color', 'dark'), theme('color', 'negative'), lighten(theme('color', 'dark'), 7%), theme('color', 'negative'), lighten(theme('color', 'dark'), 25.75%), lighten(theme('color', 'dark'), 12.55%))
+	(
+		"light", // theme name
+		white, // bg color
+		#303232, // text color
+		white, // input bg
+		#303232, // input color
+		theme('color', 'dark'), // input border color
+		theme('color', 'grey') // divider color
+	),
+	(
+		"dark", // theme name
+		theme('color', 'dark'), // bg color
+		theme('color', 'negative'), // text color
+		lighten(theme('color', 'dark'), 7%), // input bg
+		theme('color', 'negative'), // input color
+		lighten(theme('color', 'dark'), 25.75%), // input border color
+		lighten(theme('color', 'dark'), 12.55%) // divider color
+	)
 );
 
 /// SIZES ===============================================
+// you can add your own custom sizes.
 $navbar-sizes: (
-    // size name, min-height, button font-size, button padding, top spacer for navbar (min-height + 40px)
-    ("mini", 40px, .9839em, .445rem .9rem, 80px),
-    ("small", 60px, 1em, .645rem 1.4rem, 100px)
+    (
+		"mini", // size name
+		45px, // min-height
+		.9839em, // button font-size
+		.445rem .9rem, // button padding
+		70px // top spacer for navbar (min-height + 25px)
+    ),
+    (
+		"small", // size name
+		65px, // min-height
+		1em, // button font-size
+		.645rem 1.4rem, // button padding
+		90px // top spacer for navbar (min-height + 25px)
+    ),
+    (
+		"large", // size name
+		95px, // min-height
+		1.28em, // button font-size
+		.645rem 1.4rem, // button padding
+		115px // top spacer for navbar (min-height + 25px)
+    )
 );

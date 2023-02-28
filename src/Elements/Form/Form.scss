@@ -24,10 +24,11 @@
 		font-family: inherit;
 		color: if(theme('input', 'color'), theme('input', 'color'), theme('color', 'text'));
 		font-size: variables('form', 'input', 'font-size');
+		transition: theme('input', 'transition');
 		&:focus {
 			outline: theme('input', 'outline-width') solid theme('input', 'outline-color');
 			outline-offset: -#{theme('input', 'outline-width')};
-			transition: .35s;
+			background-color: lighten(theme('input', 'background'), 5.5%);
 		}
 		///
 		/// VALIDATION STYLES

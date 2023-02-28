@@ -14,7 +14,14 @@ $alert-styles: (
 
 /// SIZES ===============================================
 $alert-sizes: (
-	// size name, font-size, padding
-    ("small", .749rem, .4rem),
-    ("large", 1.1rem, .8rem)
+    (
+    	"small", // size name
+    	.749rem, // font-size
+    	.4rem // padding
+    ),
+    (
+    	"large", // size name
+    	1.1rem, // font-size
+    	.8rem // padding
+    )
 );

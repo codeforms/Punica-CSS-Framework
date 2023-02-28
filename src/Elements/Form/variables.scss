@@ -3,16 +3,33 @@
 /////////////////////////////////////////////////////////
 
 /// SIZES ===============================================
+// [*] referenced from button variables
 $form-input-sizes: (
-	// name, font-size, input height, button padding[*], button font size[*]
-	// [*] referenced from button variables
-	('small', 1em, 1.9rem, .645rem 1.4rem, .979em),
-	('large', 1.2em, 2.9rem, 1.15rem 2.1rem, 1.25em)
+	(
+		'small', // name
+		1em, // font-size
+		1.9rem, // input height
+		.645rem 1.4rem, // button padding[*]
+		.979em // button font size[*]
+	),
+	(
+		'large', // name
+		1.2em, // font-size
+		2.9rem, // input height
+		1.15rem 2.1rem, // button padding[*]
+		1.25em // button font size[*]
+	)
 );
 
 /// STYLES ==============================================
+// for input validations
 $form-input-styles: (
-	// name, color (for input validations)
-	('success', theme('color', 'success')),
-	('error', theme('color', 'error'))
+	(
+		'success', // name
+		theme('color', 'success') // color
+	),
+	(
+		'error', // name
+		theme('color', 'error') // color
+	)
 );

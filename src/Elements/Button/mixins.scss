@@ -298,6 +298,24 @@
 	i, [class^="#{class('icon', 'class-name')}"] {
 		color: theme('color', 'negative');
 	}
+
+	///
+	/// GRADIENT
+	///
+	@if options('button', 'features', 'gradient') {
+		&.#{class('button', 'gradient')} {
+			background: $bg-color;
+			@include set-gradient($bg-color, to top);
+			&:hover {
+				@include set-gradient($bg-color, to bottom, 25%);
+			}
+			&:active,
+			&:focus {
+				background: $bg-color;
+				@include set-gradient($bg-color, to bottom, 34%);
+			}
+		}
+	}
 	@content;
 }
 

@@ -51,7 +51,8 @@ $punica-themes: (
 			'border-color'	: null, // (null = border > color)
 			'outline-color'	: #252831,
 			'outline-width'	: 2px,
-			'label-weight'	: 600
+			'label-weight'	: 600,
+			'transition'	: .35s
 		),
 		'components': (
 			'navbar': (
@@ -67,12 +68,15 @@ $punica-themes: (
 			'panel': (
 				'background': null, // (null = color > background)
 				'radius'	: null // (null = border > radius)
+			),
+			'menu': (
+				'background': null, // (null = color > background)
 			)
 		),
 		'elements': (
 			'button': (
-				'font-weight'	: 600,
-				'radius'		: null, // (null = border > radius)
+				'font-weight' : 600,
+				'radius'      : null, // (null = border > radius)
 				'secondary': (
 					'color'			: null,
 					'background'	: linear-gradient(to top, #e6e6e6 0%,#ffffff 100%),
