@@ -61,10 +61,8 @@
 			@if options('panel', 'features', 'media') {
 				&>.#{class('panel', 'media')} {
 					min-width: 0;
-					max-width: 100%;
 					flex: auto;
 					margin-bottom: 32px;
-					width: 100%;
 					flex-wrap: wrap;
 					display: flex;
 					@include embedded-media();

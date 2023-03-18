@@ -49,6 +49,7 @@
 	///
 	@include setHelperList($align-items, "align-items", "!important");
 	@include setHelperList($align-self, "align-self", "!important");
+	@include setHelperList($justify-self, "justify-self", "!important");
 	@include setHelperList($justify-content, "justify-content", "!important");
 
 	///
