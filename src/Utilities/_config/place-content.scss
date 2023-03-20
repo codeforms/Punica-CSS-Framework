@@ -1,0 +1,18 @@
+/// 
+/// Place Content
+///
+/// The justify-self property aligns a grid item 
+/// within its grid cell in the inline direction.
+///
+$place-content: (
+	// class name, value
+	("place-content-stretch", stretch),
+	("place-content-start", start),
+	("place-content-end", end),
+	("place-content-center", center),
+	("place-content-between", space-between),
+	("place-content-around", space-around),
+	("place-content-evenly", space-evenly),
+	("place-content-initial", initial),
+	("place-content-inherit", inherit)
+);

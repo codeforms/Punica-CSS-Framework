@@ -1,0 +1,9 @@
+/// 
+/// Text Transforms
+/// 
+$text-transforms: (
+	// class name, value
+	("text-uppercase", uppercase),
+	("text-lowercase", lowercase),
+	("text-capitalize", capitalize)
+);

@@ -1,0 +1,12 @@
+/// 
+/// Border Styles
+/// 
+$border-styles: (
+	// class name, value
+	("border-solid", solid),
+	("border-dashed", dashed),
+	("border-dotted", dotted),
+	("border-double", double),
+	("border-groove", groove),
+	("border-ridge", ridge)
+);

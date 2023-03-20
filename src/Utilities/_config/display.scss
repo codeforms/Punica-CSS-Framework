@@ -1,0 +1,18 @@
+/// 
+/// Display Properties
+/// 
+$display-properties: (
+	// class name, value
+	("display-inline", inline),
+	("display-flex", flex),
+	("display-inline-flex", inline-flex),
+	("display-grid", grid),
+	("display-inline-grid", inline-grid),
+	("display-block", block),
+	("display-inline-block", inline-block),
+	("display-table", table),
+	("display-inline-table", inline-table),
+	("display-table-row", table-row),
+	("display-table-column", table-column),
+	("display-table-cell", table-cell)
+);

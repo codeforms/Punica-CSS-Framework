@@ -1,0 +1,16 @@
+/// 
+/// Align Items
+///
+/// The align-items property specifies the default alignment
+/// for items inside a flexbox or grid container.
+///
+$align-items: (
+	// class name, value
+	("align-items-baseline", baseline),
+	("align-items-start", flex-start),
+	("align-items-end", flex-end),
+	("align-items-center", center),
+	("align-items-stretch", stretch),
+	("align-items-initial", initial),
+	("align-items-inherit", inherit)
+);

@@ -1,0 +1,18 @@
+/// 
+/// Justify Content
+///
+/// The justify-content property aligns the flexible
+/// container's items when the items do not use
+/// all available space on the main-axis (horizontally).
+///
+$justify-content: (
+	// class name, value
+	("justify-content-baseline", baseline),
+	("justify-content-start", flex-start),
+	("justify-content-end", flex-end),
+	("justify-content-center", center),
+	("justify-content-between", space-between),
+	("justify-content-around", space-around),
+	("justify-content-initial", initial),
+	("justify-content-inherit", inherit)
+);

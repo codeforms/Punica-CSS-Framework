@@ -1,0 +1,18 @@
+/// 
+/// Justify Items
+///
+/// The justify-items property is set 
+/// on the grid container to give child elements (grid items) 
+/// alignment in the inline direction.
+///
+$justify-items: (
+	// class name, value
+	("justify-items-stretch", stretch),
+	("justify-items-start", start),
+	("justify-items-left", left),
+	("justify-items-center", center),
+	("justify-items-end", end),
+	("justify-items-right", right),
+	("justify-items-initial", initial),
+	("justify-items-inherit", inherit)
+);

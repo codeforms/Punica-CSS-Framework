@@ -1,0 +1,11 @@
+/// 
+/// Padding
+/// 
+$padding-helpers: (
+	// class name (prefix), property
+	("p-", "padding"),
+	("pt-", "padding-top"),
+	("pr-", "padding-right"),
+	("pb-", "padding-bottom"),
+	("pl-", "padding-left")
+);

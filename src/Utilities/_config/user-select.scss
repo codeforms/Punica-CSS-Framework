@@ -1,0 +1,10 @@
+/// 
+/// User Select
+/// 
+$user-selects: (
+	// class name, value
+	("user-select-none", none),
+	("user-select-auto", auto),
+	("user-select-text", text),
+	("user-select-all", all)
+);

@@ -1,0 +1,12 @@
+/// 
+/// Resize
+/// 
+$resizes: (
+	// class name, value
+	("resize-none", none),
+	("resize-both", both),
+	("resize-horizontal", horizontal),
+	("resize-vertical", vertical),
+	("resize-initial", initial),
+	("resize-inherit", inherit)
+);

@@ -1,0 +1,13 @@
+/// 
+/// Object Fit
+/// 
+$object-fit: (
+	// class name, value
+	("fit-fill", fill),
+	("fit-contain", contain),
+	("fit-cover", cover),
+	("fit-none", none),
+	("fit-scale-down", scale-down),
+	("fit-initial", initial),
+	("fit-inherit", inherit)
+);

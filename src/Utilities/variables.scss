@@ -1,323 +1,41 @@
 ///////////////////////////////////////////////////////
 /// PUNICA CSS > UTILITIES : HELPERS > VARIABLES
 ///////////////////////////////////////////////////////
+@import "_config/_specs";
 
-/// PREFERENCES =======================================
-$helper-pm-ranges	: 0,5,10,15,20,30,40,50,75,100; // pm: padding/margin (px)
-$helper-fw-ranges	: 100,200,300,400,500,600,700,800,900; // fw: font-weight
-$helper-z-indexes	: -1,0,1,10,20,30,40,50,100,999,9999,99999;
-$helper-lh-ranges	: 0,1,2,3,4,5; // lh: line-height
-$helper-br-ranges	: 4,8,10,12,14,16,500; // br: border-radius (px)
-$helper-orders		: 1,2,3,4,5;
-$helper-borders		: 0,1,2,3,4,5; // (px)
-
-/// Margin ============================================
-$margin-helpers: (
-	// class name (prefix), property
-	("m-", "margin"),
-	("mt-", "margin-top"),
-	("mr-", "margin-right"),
-	("mb-", "margin-bottom"),
-	("ml-", "margin-left")
-);
-
-/// Padding ===========================================
-$padding-helpers: (
-	// class name (prefix), property
-	("p-", "padding"),
-	("pt-", "padding-top"),
-	("pr-", "padding-right"),
-	("pb-", "padding-bottom"),
-	("pl-", "padding-left")
-);
-
-/// Font Weight ======================================
-$font-weights: (
-	// class name (prefix), property
-	"weight-": "font-weight"
-);
-
-/// Font Size ========================================
-$font-sizes: (
-	// class name, value
-	("mini-text", 60%),
-	("tiny-text", 73%),
-	("small-text", 85%),
-	("large-text", 120%),
-	("big-text", 175%),
-	("huge-text", 200%),
-	("giant-text", 350%)
-);
-
-/// Text Colors ======================================
-$text-colors		: (
-	// class name, value
-	("color-grey", theme('color', 'grey')),
-	("color-white", white),
-	("color-black", black),
-	("color-primary", theme('color', 'primary')),
-	("color-success", theme('color', 'success')),
-	("color-warning", theme('color', 'warning')),
-	("color-error", theme('color', 'error'))
-);
-
-/// Bg Colors ========================================
-$bg-colors			: (
-	// class name, value
-	("bg-color", theme('color', 'background')),
-	("bg-grey", theme('color', 'grey')),
-	("bg-secondary", theme('color', 'secondary')),
-	("bg-white", white),
-	("bg-black", black),
-	("bg-dark", theme('color', 'dark')),
-	("bg-primary", theme('color', 'primary')),
-	("bg-success", theme('color', 'success')),
-	("bg-warning", theme('color', 'warning')),
-	("bg-error", theme('color', 'error'))
-);
-
-/// Cursors ==========================================
-$cursors: (
-	// class name, value
-	("cursor-alias", alias),
-	("cursor-default", default),
-	("cursor-grab", grab),
-	("cursor-help", help),
-	("cursor-move", move),
-	("cursor-pointer", pointer),
-	("cursor-wait", wait),
-	("cursor-zoom-in", zoom-in),
-	("cursor-zoom-out", zoom-out)
-);
-
-/// Display Properties ===============================
-$display-properties: (
-	// class name, value
-	("display-inline", inline),
-	("display-flex", flex),
-	("display-inline-flex", inline-flex),
-	("display-grid", grid),
-	("display-inline-grid", inline-grid),
-	("display-block", block),
-	("display-inline-block", inline-block),
-	("display-table", table),
-	("display-inline-table", inline-table),
-	("display-table-row", table-row),
-	("display-table-column", table-column),
-	("display-table-cell", table-cell)
-);
-
-/// Alignment ========================================
-$align-items: (
-	// class name, value
-	("align-items-baseline", baseline),
-	("align-items-flex-start", flex-start),
-	("align-items-flex-end", flex-end),
-	("align-items-center", center),
-	("align-items-stretch", stretch),
-	("align-items-initial", initial),
-	("align-items-inherit", inherit)
-);
-$align-self: (
-	// class name, value
-	("align-self-auto", auto),
-	("align-self-baseline", baseline),
-	("align-self-flex-start", flex-start),
-	("align-self-flex-end", flex-end),
-	("align-self-center", center),
-	("align-self-stretch", stretch),
-	("align-self-initial", initial),
-	("align-self-inherit", inherit)
-);
-$justify-self: (
-	// class name, value
-	("justify-self-auto", auto),
-	("justify-self-normal", normal),
-	("justify-self-stretch", stretch),
-	("justify-self-start", start),
-	("justify-self-left", left),
-	("justify-self-center", center),
-	("justify-self-end", end),
-	("justify-self-right", right),
-	("justify-self-first-baseline", first baseline),
-	("justify-self-last-baseline", last baseline),
-	("justify-self-initial", initial),
-	("justify-self-inherit", inherit)
-);
-$justify-content: (
-	// class name, value
-	("justify-content-baseline", baseline),
-	("justify-content-flex-start", flex-start),
-	("justify-content-flex-end", flex-end),
-	("justify-content-center", center),
-	("justify-content-space-between", space-between),
-	("justify-content-space-around", space-around),
-	("justify-content-initial", initial),
-	("justify-content-inherit", inherit)
-);
-
-/// Display Filters ==================================
-$display-filters: (
-	// class name, property, value
-	("filter-invert", "filter", invert(100%)),
-	("filter-gray", "filter", grayscale(100%)),
-);
-
-/// Text Transforms ==================================
-$text-transforms: (
-	// class name, value
-	("text-uppercase", uppercase),
-	("text-lowercase", lowercase),
-	("text-capitalize", capitalize)
-);
-
-/// Overflow Properties ==============================
-$overflow-properties: (
-	// class name, property, value
-	("overflow-auto", "overflow", auto),
-	("overflow-hidden", "overflow", hidden),
-	("overflow-visible", "overflow", visible),
-	("overflow-x-auto", "overflow-x", auto),
-	("overflow-x-hidden", "overflow-x", hidden),
-	("overflow-x-visible", "overflow-x", visible),
-	("overflow-x-scroll", "overflow-x", scroll),
-	("overflow-y-auto", "overflow-y", auto),
-	("overflow-y-hidden", "overflow-y", hidden),
-	("overflow-y-visible", "overflow-y", visible),
-	("overflow-y-scroll", "overflow-y", scroll)
-);
-
-/// Position Properties ==============================
-$position-properties: (
-	// class name, value
-	("position-static", static),
-	("position-absolute", absolute),
-	("position-fixed", fixed),
-	("position-relative", relative),
-	("position-sticky", sticky),
-	("position-initial", initial),
-	("position-inherit", inherit)
-);
-
-/// Stack Order (z-index) ============================
-$z-indexes: (
-	// class name (prefix), property
-	"z-": "z-index"
-);
-
-/// Direction of the flexible items (flex-direction) =
-$flex-directions: (
-	// class name, value
-	("flex-direction-row", row),
-	("flex-direction-row-reverse", row-reverse),
-	("flex-direction-column", column),
-	("flex-direction-column-reverse", column-reverse),
-	("flex-direction-initial", initial),
-	("flex-direction-inherit", inherit)
-);
-
-/// User Select ======================================
-$user-selects: (
-	// class name, value
-	("user-select-none", none),
-	("user-select-auto", auto),
-	("user-select-text", text),
-	("user-select-all", all)
-);
-
-/// Positioned Elements ==============================
-$insets: (
-	// class name, [values]
-	'top'(0, auto),
-	'bottom'(0, auto),
-	'left'(0, auto),
-	'right'(0, auto),
-);
-
-/// Line Height ======================================
-$line-heights: (
-	// class name (prefix), property
-	"line-height-": "line-height"
-);
-
-/// Borders (width) ==================================
-$borders:(
-	// class name (prefix), property
-	("border-", "border-width")
-	("border-top-", "border-top-width")
-	("border-right-", "border-right-width")
-	("border-bottom-", "border-bottom-width")
-	("border-left-", "border-left-width")
-);
-
-/// Border Styles ====================================
-$border-styles: (
-	// class name, value
-	("border-solid", solid),
-	("border-dashed", dashed),
-	("border-dotted", dotted),
-	("border-double", double),
-	("border-groove", groove),
-	("border-ridge", ridge)
-);
-
-/// Border Radius ====================================
-$border-radius: (
-	// class name (prefix), property
-	"radius-": "border-radius"
-);
-
-/// Order (order of a flexible item) =================
-$orders: (
-	// class name (prefix), property
-	"order-": "order"
-);
-
-/// Object Fit ====================================
-$object-fit: (
-	// class name, value
-	("fit-fill", fill),
-	("fit-contain", contain),
-	("fit-cover", cover),
-	("fit-none", none),
-	("fit-scale-down", scale-down),
-	("fit-initial", initial),
-	("fit-inherit", inherit)
-);
-
-/// Resize ========================================
-$resizes: (
-	// class name, value
-	("resize-none", none),
-	("resize-both", both),
-	("resize-horizontal", horizontal),
-	("resize-vertical", vertical),
-	("resize-initial", initial),
-	("resize-inherit", inherit)
-);
-
-/// Backdrop Filters =================================
-$backdrop-blur-ranges: (
-	// (values, suffixes)
-	(4px,4)(7px,7)(10px,10)(12px,12)(16px,16)(20px,20)
-);
-$backdrop-blur: (
-	// class name (prefix), filter function
-	("backdrop-blur-", "blur"),
-);
-$backdrop-filter-ranges: (
-	// (values, suffixes)
-	(0,0)(.25,25)(.5,50)(.75,75)(1,100)(1.25,125)(1.5,150)(1.75,175)(2,200)
-);
-$backdrop-filters: (
-	// class name (prefix), filter function
-	("backdrop-brightness-", "brightness"),
-	("backdrop-contrast-", "contrast"),
-	//("backdrop-shadow-", "drop-shadow"),
-	("backdrop-grayscale-", "grayscale"),
-	//("backdrop-hue-", "hue-rotate"),
-	("backdrop-invert-", "invert"),
-	("backdrop-opacity-", "opacity"),
-	("backdrop-saturate-", "saturate"),
-	("backdrop-sepia-", "sepia"),
-);
+@import "_config/margin"; 
+@import "_config/padding";
+@import "_config/font-weight";
+@import "_config/font-sizes";
+@import "_config/text-colors";
+@import "_config/bg-colors";
+@import "_config/cursors";
+@import "_config/display";
+@import "_config/position";
+@import "_config/overflow";
+@import "_config/backdrop-filter";
+@import "_config/display-filter";
+@import "_config/text-transform";
+@import "_config/border";
+@import "_config/border-style";
+@import "_config/border-radius";
+@import "_config/resize";
+@import "_config/user-select";
+@import "_config/align-items";
+@import "_config/align-self";
+@import "_config/align-content";
+@import "_config/justify-self";
+@import "_config/justify-content";
+@import "_config/justify-items";
+@import "_config/place-content";
+@import "_config/place-items";
+@import "_config/place-self";
+@import "_config/flex-direction";
+@import "_config/flex-wrap";
+@import "_config/flex-grow";
+@import "_config/flex-shrink";
+@import "_config/z-index";
+@import "_config/line-height";
+@import "_config/order";
+@import "_config/object-fit";
+@import "_config/inset";

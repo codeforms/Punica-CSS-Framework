@@ -1,0 +1,11 @@
+/// 
+/// Borders (width)
+/// 
+$borders:(
+	// class name (prefix), property
+	("border-", "border-width")
+	("border-top-", "border-top-width")
+	("border-right-", "border-right-width")
+	("border-bottom-", "border-bottom-width")
+	("border-left-", "border-left-width")
+);

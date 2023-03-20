@@ -1,0 +1,8 @@
+/// 
+/// Display Filters
+/// 
+$display-filters: (
+	// class name, property, value
+	("filter-invert", "filter", invert(100%)),
+	("filter-gray", "filter", grayscale(100%)),
+);

@@ -1,0 +1,15 @@
+/// 
+/// Cursors
+/// 
+$cursors: (
+	// class name, value
+	("cursor-alias", alias),
+	("cursor-default", default),
+	("cursor-grab", grab),
+	("cursor-help", help),
+	("cursor-move", move),
+	("cursor-pointer", pointer),
+	("cursor-wait", wait),
+	("cursor-zoom-in", zoom-in),
+	("cursor-zoom-out", zoom-out)
+);

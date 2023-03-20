@@ -1,0 +1,15 @@
+/// 
+/// Place Items
+///
+/// The place-items property is used in grid layout, 
+/// and is a shorthand property for the 
+/// align-items and justify-items properties.
+///
+$place-items: (
+	// class name, value
+	("place-items-stretch", stretch),
+	("place-items-start", start),
+	("place-items-end", end),
+	("place-items-center", center),
+	("place-items-baseline", baseline)
+);

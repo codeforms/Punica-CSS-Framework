@@ -1,0 +1,13 @@
+/// 
+/// Position Properties
+/// 
+$position-properties: (
+	// class name, value
+	("position-static", static),
+	("position-absolute", absolute),
+	("position-fixed", fixed),
+	("position-relative", relative),
+	("position-sticky", sticky),
+	("position-initial", initial),
+	("position-inherit", inherit)
+);

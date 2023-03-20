@@ -3,6 +3,18 @@
 /////////////////////////////////////////////////////////
 
 ///
+/// Get helper specs
+///
+/// @param {String} $node
+/// @example specs('spaces')
+///
+/// @return mixed
+///
+@function specs($node) {
+	@return map-get($specs, $node);
+}
+
+///
 /// Set List with Range
 /// @param {List} $helpers
 /// @param {List} $range
@@ -165,7 +177,7 @@
 		cursor: default;
 		pointer-events: none;
 	}
-	.bordered {@include border();}
+	.bordered {@include border();} 
 	.borderless {border: none !important;}
 	.rounded {border-radius: theme('border', 'radius');}
 	.radiusless {border-radius:0 !important;}

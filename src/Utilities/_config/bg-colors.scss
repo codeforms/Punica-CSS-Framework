@@ -1,0 +1,16 @@
+/// 
+/// Bg Colors
+/// 
+$bg-colors: (
+	// class name, value
+	("bg-color", theme('color', 'background')),
+	("bg-grey", theme('color', 'grey')),
+	("bg-secondary", theme('color', 'secondary')),
+	("bg-white", white),
+	("bg-black", black),
+	("bg-dark", theme('color', 'dark')),
+	("bg-primary", theme('color', 'primary')),
+	("bg-success", theme('color', 'success')),
+	("bg-warning", theme('color', 'warning')),
+	("bg-error", theme('color', 'error'))
+);

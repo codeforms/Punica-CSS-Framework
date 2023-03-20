@@ -1,0 +1,12 @@
+/// 
+/// Direction of the flexible items (flex-direction)
+/// 
+$flex-directions: (
+	// class name, value
+	("flex-direction-row", row),
+	("flex-direction-row-reverse", row-reverse),
+	("flex-direction-column", column),
+	("flex-direction-column-reverse", column-reverse),
+	("flex-direction-initial", initial),
+	("flex-direction-inherit", inherit)
+);
