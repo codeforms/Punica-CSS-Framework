@@ -1,6 +1,7 @@
 /////////////////////////////////////////////////////////
 /// PUNICA CSS > UTILITIES : HELPERS
 /////////////////////////////////////////////////////////
+@import "variables";
 @import "mixins";
 ///
 ///
@@ -33,6 +34,7 @@
 	/// Background Colors
 	///
 	@include setHelperList($bg-colors, "background-color", "!important");
+	@include setColorScale($bg-colors);
 
 	///
 	/// Cursors

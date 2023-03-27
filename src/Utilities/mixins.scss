@@ -112,6 +112,28 @@
 }
 
 ///
+/// Color Scale
+/// @param {Array} $colors
+///
+@mixin setColorScale($colors) {
+	@for $i from 5 through 35 {
+		@each $class, $color in $colors {
+			@if $i % 5 == 0 {
+				$percentage: $i*1%;
+				// darken
+				.#{$class}-darken-#{$i} {
+					background-color: darken($color, $percentage);
+				}
+				// lighten
+				.#{$class}-lighten-#{$i} {
+					background-color: lighten($color, $percentage);
+				}
+			}
+		}
+	}
+}
+
+///
 /// Other Helpers
 ///
 @mixin otherHelpers() {
