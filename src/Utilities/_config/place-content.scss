@@ -1,8 +1,9 @@
 /// 
 /// Place Content
 ///
-/// The justify-self property aligns a grid item 
-/// within its grid cell in the inline direction.
+/// The place-content property is used in flexbox 
+/// and grid layouts, and is a shorthand property for
+/// align-content and justify-content properties..
 ///
 $place-content: (
 	// class name, value

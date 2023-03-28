@@ -29,6 +29,7 @@
 	/// Text Colors
 	///
 	@include setHelperList($text-colors, "color", "!important");
+	@include setColorScale($text-colors, false);
 
 	///
 	/// Background Colors
