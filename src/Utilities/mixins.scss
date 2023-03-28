@@ -116,30 +116,16 @@
 /// @param {Array} $colors
 /// @param {Boolean} $bgcolor
 ///
-@mixin setColorScale($colors, $bgcolor : true) {
+@mixin setColorScale($colors, $property:'background-color') {
 	@for $i from 5 through 35 {
 		@each $class, $color in $colors {
 			@if $i % 5 == 0 {
 				$percentage: $i*1%;
-
-				@if $bgcolor {
-					// darken
-					.#{$class}-darken-#{$i} {
-						background-color: darken($color, $percentage);
-					}
-					// lighten
-					.#{$class}-lighten-#{$i} {
-						background-color: lighten($color, $percentage);
-					}
-				} @else {
-					// darken
-					.#{$class}-darken-#{$i} {
-						color: darken($color, $percentage);
-					}
-					// lighten
-					.#{$class}-lighten-#{$i} {
-						color: lighten($color, $percentage);
-					}
+				.#{$class}-darken-#{$i} {
+					#{$property}: mix(black, $color, $percentage);
+				}
+				.#{$class}-lighten-#{$i} {
+					#{$property}: mix(white, $color, $percentage);
 				}
 			}
 		}
