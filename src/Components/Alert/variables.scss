@@ -4,7 +4,7 @@
 
 /// STYLES ==============================================
 $alert-styles: (
-	// style name, theme variable
+	// style name (class), theme variable
 	"primary"	: theme('color', 'primary'),
 	"success"	: theme('color', 'success'),
 	"warning"	: theme('color', 'warning'),
@@ -15,12 +15,12 @@ $alert-styles: (
 /// SIZES ===============================================
 $alert-sizes: (
     (
-    	"small", // size name
+    	"small", // size name (class)
     	.749rem, // font-size
     	.4rem // padding
     ),
     (
-    	"large", // size name
+    	"large", // size name (class)
     	1.1rem, // font-size
     	.8rem // padding
     )

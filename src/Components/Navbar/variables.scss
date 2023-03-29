@@ -6,7 +6,7 @@
 // you can add your own custom styles.
 $navbar-themes: (
 	(
-		"light", // theme name
+		"light", // theme name (class)
 		white, // bg color
 		#303232, // text color
 		white, // input bg
@@ -15,7 +15,7 @@ $navbar-themes: (
 		theme('color', 'grey') // divider color
 	),
 	(
-		"dark", // theme name
+		"dark", // theme name (class)
 		theme('color', 'dark'), // bg color
 		theme('color', 'negative'), // text color
 		lighten(theme('color', 'dark'), 7%), // input bg
@@ -29,21 +29,21 @@ $navbar-themes: (
 // you can add your own custom sizes.
 $navbar-sizes: (
     (
-		"mini", // size name
+		"mini", // size name (class)
 		45px, // min-height
 		.9839em, // button font-size
 		.445rem .9rem, // button padding
 		70px // top spacer for navbar (min-height + 25px)
     ),
     (
-		"small", // size name
+		"small", // size name (class)
 		65px, // min-height
 		1em, // button font-size
 		.645rem 1.4rem, // button padding
 		90px // top spacer for navbar (min-height + 25px)
     ),
     (
-		"large", // size name
+		"large", // size name (class)
 		95px, // min-height
 		1.28em, // button font-size
 		.645rem 1.4rem, // button padding

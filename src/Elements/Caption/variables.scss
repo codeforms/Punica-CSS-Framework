@@ -5,13 +5,13 @@
 /// SIZES =============================================== 
 $caption-sizes: (
     (
-    	"small", // size name
+    	"small", // size name (class)
     	1em .1rem, // margin
     	1.65rem, // font-size
     	theme('typography', 'font-weight') // font-weight
     ),
     (
-    	"large", // size name
+    	"large", // size name (class)
     	1.4em .3rem, // margin
     	2.35rem, // font-size
     	theme('typography', 'header-weight') // font-weight

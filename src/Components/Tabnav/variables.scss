@@ -5,19 +5,19 @@
 /// STYLES ==============================================
 $tabnav-styles: (
 	(
-		'success', // style name
+		'success', // style name (class)
 		theme('color', 'success') // color
 	),
 	(
-		'warning', // style name
+		'warning', // style name (class)
 		theme('color', 'warning') // color
 	),
 	(
-		'error', // style name
+		'error', // style name (class)
 		theme('color', 'error') // color
 	),
 	(
-		'dark', // style name
+		'dark', // style name (class)
 		theme('color', 'text') // color
 	)
 );

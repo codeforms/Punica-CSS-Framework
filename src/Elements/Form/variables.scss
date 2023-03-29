@@ -6,14 +6,14 @@
 // [*] referenced from button variables
 $form-input-sizes: (
 	(
-		'small', // name
+		'small', // class name
 		1em, // font-size
 		1.9rem, // input height
 		.645rem 1.4rem, // button padding[*]
 		.979em // button font size[*]
 	),
 	(
-		'large', // name
+		'large', // class name
 		1.2em, // font-size
 		2.9rem, // input height
 		1.15rem 2.1rem, // button padding[*]
@@ -25,11 +25,11 @@ $form-input-sizes: (
 // for input validations
 $form-input-styles: (
 	(
-		'success', // name
+		'success', // class name
 		theme('color', 'success') // color
 	),
 	(
-		'error', // name
+		'error', // class name
 		theme('color', 'error') // color
 	)
 );

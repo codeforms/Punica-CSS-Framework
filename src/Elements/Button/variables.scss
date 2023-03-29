@@ -5,27 +5,27 @@
 // SIZES ================================================
 $button-sizes: (
 	(
-		"tiny", // size name
+		"tiny", // size name (class)
 		.809em, // font-size
 		.415rem .5rem // padding
 	),
 	(
-		"mini", // size name
+		"mini", // size name (class)
 		.909em, // font-size
 		.445rem .9rem // padding
 	),
 	(
-		"small", // size name
+		"small", // size name (class)
 		.979em, // font-size
 		.645rem 1.4rem // padding
 	),
 	(
-		"large", // size name
+		"large", // size name (class)
 		1.25em, // font-size
 		1.15rem 2.1rem // padding
 	),
 	(
-		"huge", // size name
+		"huge", // size name (class)
 		1.45em, // font-size
 		1.3rem 2.4rem // padding
 	)
@@ -34,27 +34,27 @@ $button-sizes: (
 /// STYLES ==============================================
 $button-styles: (
 	(
-		'primary', // name
+		'primary', // class name
 		theme('color', 'primary'), // bg color
 		lighten(theme('color', 'primary'), 7%) // border color
 	),
 	(
-		'success', // name
+		'success', // class name
 		theme('color', 'success'), // bg color
 		lighten(theme('color', 'success'), 7%) // border color
 	),
 	(
-		'warning', // name
+		'warning', // class name
 		theme('color', 'warning'), // bg color
 		lighten(theme('color', 'warning'), 7%) // border color
 	),
 	(
-		'error', // name
+		'error', // class name
 		theme('color', 'error'), // bg color
 		lighten(theme('color', 'error'), 7%) // border color
 	),
 	(
-		'dark', // name
+		'dark', // class name
 		theme('color', 'dark'), // bg color
 		lighten(theme('color', 'dark'), 7%) // border color
 	)

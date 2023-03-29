@@ -5,27 +5,27 @@
 /// STYLES ==============================================
 $timeline-styles: (
 	(
-		"primary", // style name
+		"primary", // style name (class)
 		theme('color', 'primary'), // bg color
 		theme('color', 'negative') // text color
 	),
 	(
-		"success", // style name
+		"success", // style name (class)
 		theme('color', 'success'), // bg color
 		theme('color', 'negative') // text color
 	),
 	(
-		"warning", // style name
+		"warning", // style name (class)
 		theme('color', 'warning'), // bg color
 		theme('color', 'negative') // text color
 	),
 	(
-		"error", // style name
+		"error", // style name (class)
 		theme('color', 'error'), // bg color
 		theme('color', 'negative') // text color
 	),
 	(
-		"dark", // style name
+		"dark", // style name (class)
 		theme('color', 'text'), // bg color
 		theme('color', 'grey') // text color
 	),

@@ -3,8 +3,8 @@
 /////////////////////////////////////////////////////////
 
 /// STYLES ==============================================
-$process-styles	: (
-	// style name, color theme
+$process-styles: (
+	// style name (class), color theme
 	"success"	: theme('color', 'success'),
 	"warning"	: theme('color', 'warning'),
 	"error"		: theme('color', 'error'),

@@ -3,7 +3,8 @@
 /////////////////////////////////////////////////////////
 
 /// STYLES ==============================================
-$label-styles	: (
+$label-styles: (
+	// style name (class), theme variable
 	"primary"	: theme('color', 'primary'),
 	"success"	: theme('color', 'success'),
 	"warning"	: theme('color', 'warning'),
@@ -14,12 +15,12 @@ $label-styles	: (
 /// SIZES =============================================== 
 $label-sizes: (
     (
-    	"small", // size name
+    	"small", // size name (class)
     	.18rem .85rem, // padding
     	.8195em // font-size
     ),
     (
-    	"large", // size name
+    	"large", // size name (class)
     	.415rem 1.159rem, // padding
     	1em // font-size
     )
