@@ -1,6 +1,12 @@
 /// 
 /// Object Fit
 /// 
+/// The object-fit property is used to specify 
+/// how an <img> or <video> should be resized to fit its container.
+/// This property tells the content to fill the container 
+/// in a variety of ways; such as "preserve that aspect ratio"
+/// or "stretch up and take up as much space as possible".
+/// 
 $object-fit: (
 	// class name, value
 	("fit-fill", fill),

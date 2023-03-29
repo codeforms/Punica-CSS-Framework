@@ -1,6 +1,9 @@
 /// 
 /// Resize
 /// 
+/// The resize property defines if (and how)
+/// an element is resizable by the user.
+/// 
 $resizes: (
 	// class name, value
 	("resize-none", none),
