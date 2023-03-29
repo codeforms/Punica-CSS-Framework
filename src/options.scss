@@ -2,13 +2,17 @@
 /// OPTIONS & VARIABLES
 /////////////////////////////////////////////////////////
 $options: (
-	/////////////////////////////////////////////////////////
-	/// Layout
+	///
+	/// LAYOUT
+	/// 
+	/// total estimated size is [59KB] if the grid
+	/// and it's features enabled.
+	/// 
 	'grid': (
-		'enable'  : true,
+		'enable': true, // estimated 59KB with offset feature
 		'features': (
 			'equal' : true, // equal height
-			'offset': true // [!] increases the size
+			'offset': true // [!] increases the size (estimated 52KB)
 		),
 		'variables': (
 			'gap'    : 6px,
@@ -31,10 +35,14 @@ $options: (
 			)
 		)
 	),
-	/////////////////////////////////////////////////////////
-	/// Components
+	///
+	/// COMPONENTS
+	/// 
+	/// total estimated size is [41KB] if all components
+	/// and it's features enabled.
+	/// 
 	'alert': (
-		'enable'  : true,
+		'enable': true, // estimated 1KB
 		'features': (
 			'styles': true,
 			'sizes' : true
@@ -49,7 +57,7 @@ $options: (
 		)
 	),
 	'badge': (
-		'enable'  : true,
+		'enable': true, // estimated 1KB
 		'features': (
 			'styles': true,
 			'sizes' : true
@@ -59,7 +67,7 @@ $options: (
 		)
 	),
 	'billboard': (
-		'enable'  : true,
+		'enable': true, // estimated 2KB
 		'features': (
 			'styles': true,
 			'sizes' : true,
@@ -73,7 +81,7 @@ $options: (
 		)
 	),
 	'breadcrumb': (
-		'enable'  : true,
+		'enable': true, // estimated 1KB
 		'features': (
 			'sizes': true
 		),
@@ -89,7 +97,7 @@ $options: (
 		)
 	),
 	'card': (
-		'enable'  : true,
+		'enable': true, // estimated 5KB
 		'features': (
 			'group'      : true,
 			'horizontal' : true,
@@ -111,7 +119,7 @@ $options: (
 		)
 	),
 	'list': (
-		'enable'  : true,
+		'enable': true, // estimated 1KB
 		'features': (
 			'divided': true,
 			'hovered': true,
@@ -146,7 +154,7 @@ $options: (
 		)
 	),
 	'menu': (
-		'enable'  : true,
+		'enable': true, // estimated 1KB
 		'features': (),
 		'variables': (
 			'width'        : 100%,
@@ -182,7 +190,7 @@ $options: (
 		)
 	),
 	'navbar': (
-		'enable'  : true,
+		'enable': true, // estimated 8KB
 		'features': (
 			'themes'   : true,
 			'sizes'    : true,
@@ -207,7 +215,7 @@ $options: (
 		)
 	),
 	'panel': (
-		'enable'  : true,
+		'enable': true, // estimated 5KB
 		'features': (
 			'media'      : true,
 			'media-group': true,
@@ -222,7 +230,7 @@ $options: (
 		)
 	),
 	'process': (
-		'enable'  : true,
+		'enable': true, // estimated 4KB
 		'features': (
 			'styles'  : true,
 			'vertical': true
@@ -245,7 +253,7 @@ $options: (
 		)
 	),
 	'progress': (
-		'enable'  : true,
+		'enable': true,  // estimated 1KB
 		'features': (
 			'styles': true
 		),
@@ -256,7 +264,7 @@ $options: (
 		)
 	),
 	'stats': (
-		'enable'  : true,
+		'enable': true, // estimated 2KB
 		'features': (
 			'styles': true
 		),
@@ -286,7 +294,7 @@ $options: (
 		)
 	),
 	'tabnav': (
-		'enable': true,
+		'enable': true, // estimated 5KB
 		'features': (
 			'styles'         : true,
 			'bottom-position': true
@@ -296,7 +304,7 @@ $options: (
 		)
 	),
 	'timeline': (
-		'enable'  : true,
+		'enable': true, // estimated 5KB
 		'features': (
 			'styles'     : true,
 			'media'      : true,
@@ -311,7 +319,7 @@ $options: (
 		)
 	),
 	'tooltip': (
-		'enable'   : true,
+		'enable': true, // estimated 1KB
 		'features' : (),
 		'variables': (
 			'font-size'  : .9em,
@@ -322,10 +330,14 @@ $options: (
 			'transition' : opacity 0.18s
 		)
 	),
-	/////////////////////////////////////////////////////////
-	/// Elements
+	///
+	/// ELEMENTS
+	/// 
+	/// total estimated size is [44kb] if all elements
+	/// and it's features enabled.
+	/// 
 	'button': (
-		'enable'  : true,
+		'enable': true, // estimated 31KB
 		'features': (
 			'group'    : true,
 			'vertical' : true,
@@ -348,7 +360,7 @@ $options: (
 		)
 	),
 	'caption': (
-		'enable'  : true,
+		'enable': true, // estimated 1KB
 		'features': (
 			'sizes': true,
 		),
@@ -361,7 +373,7 @@ $options: (
 		)
 	),
 	'form': (
-		'enable'  : true,
+		'enable': true, // estimated 9KB
 		'features': (
 			'group'            : true,
 			'sizes'            : true,
@@ -396,7 +408,7 @@ $options: (
 		)
 	),
 	'icon': (
-		'enable'   : true,
+		'enable': true, // estimated 1KB
 		'features' : (),
 		'variables': (
 			'font-family'   : 'Material Symbols Outlined',
@@ -422,7 +434,7 @@ $options: (
 		)
 	),
 	'label': (
-		'enable'  : true,
+		'enable': true, // estimated 1KB
 		'features': (
 			'styles': true,
 			'sizes' : true
@@ -434,7 +446,7 @@ $options: (
 		)
 	),
 	'table': (
-		'enable'  : true,
+		'enable': true, // estimated 1KB
 		'features': (
 			'hovered': true,
 			'striped': true
@@ -448,8 +460,12 @@ $options: (
 			)
 		)
 	),
-	/////////////////////////////////////////////////////////
-	/// Utilities
+	///
+	/// UTILITIES
+	/// 
+	/// total estimated size is [31KB] if all helpers
+	/// and it's features enabled.
+	/// 
 	'helpers': (
 		'enable'   : true,
 		'features' : (),
