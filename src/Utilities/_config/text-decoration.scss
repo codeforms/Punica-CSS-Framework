@@ -1,0 +1,11 @@
+/// 
+/// Text Decoration
+/// 
+/// The text-decoration property specifies the decoration added to text.
+/// 
+$text-decorations: (
+	// class name, value
+	("underline", underline),
+	("overline", overline),
+	("line-through", line-through)
+);

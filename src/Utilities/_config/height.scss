@@ -1,0 +1,21 @@
+/// 
+/// Height
+/// 
+/// The height property sets the height of an element.
+/// 
+$height-helpers: (
+	// class name, value
+	("height-min-content", min-content),
+	("height-max-content", max-content),
+	("height-fit-content", fit-content),
+	("height-25", 25%),
+	("height-50", 50%),
+	("height-75", 75%),
+	("height-100", 100%),
+	("tiny-height", 1rem), // 16px
+	("mini-height", 2rem), // 32px
+	("small-height", 4rem), // 64px
+	("large-height", 8rem), // 128px
+	("huge-height", 12rem), // 190px
+	("giant-height", 24rem) // 384px
+);

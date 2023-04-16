@@ -1,0 +1,21 @@
+/// 
+/// Width
+/// 
+/// The width property sets the width of an element.
+/// 
+$width-helpers: (
+	// class name, value
+	("width-min-content", min-content),
+	("width-max-content", max-content),
+	("width-fit-content", fit-content),
+	("width-25", 25%),
+	("width-50", 50%),
+	("width-75", 75%),
+	("width-100", 100%),
+	("tiny-width", 1rem), // 16px
+	("mini-width", 2rem), // 32px
+	("small-width", 4rem), // 64px
+	("large-width", 8rem), // 128px
+	("huge-width", 12rem), // 192px
+	("giant-width", 24rem) // 384px
+);
