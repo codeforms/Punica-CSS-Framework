@@ -1,6 +1,11 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > UTILITIES : HELPERS > MIXINS
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Utilities : Helpers -> Mixins
+///
+
+@use "../_themes/_setters" as *;
+@use "../_themes/_getters" as *;
+@use "_config/specs" as *;
 
 ///
 /// Get helper specs

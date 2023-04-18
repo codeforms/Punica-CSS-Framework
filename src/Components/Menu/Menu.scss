@@ -1,9 +1,15 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : MENU
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : Menu
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if menu is enable
-///
 @if options('menu', 'enable') {
 	.#{class('menu', 'name')} {
 		background-color: if(theme('components', 'menu', 'background'), theme('components', 'menu', 'background'), lighten(theme('color', 'background'), 2.5%));

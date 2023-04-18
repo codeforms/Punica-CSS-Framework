@@ -1,9 +1,13 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > LAYOUT : GRID
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Layout : Grid
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "variables" as *;
+
 /// if grid is enable
-///
 @if options('grid', 'enable') {
 	.#{class('grid', 'container')} {
 		width: variables('grid', 'container', 'width');
@@ -12,7 +16,7 @@
 	}
 	@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('grid', 'container')} {
-			padding: 0 (variables('grid', 'container', 'padding') / 3);
+			padding: 0 calc(variables('grid', 'container', 'padding') / 3);
 		}
 	}
 	.#{class('grid', 'row')} {
@@ -24,9 +28,7 @@
 			padding: variables('grid', 'columns', 'padding');
 			min-height: variables('grid', 'columns', 'min-height');
 		}
-		///
-		/// EQUAL
-		///
+		/// Equal height
 		@if options('grid', 'features', 'equal') {
 			&.#{class('grid', 'equal')} > [class^="#{class('grid', 'column')}"] {
 				height: auto;
@@ -40,9 +42,7 @@
 				.#{class('grid', 'column')}-#{$label}-#{$id} {
 					grid-column: span #{$id};
 				}
-				///
-				/// OFFSET
-				///
+				/// Offset
 				@if options('grid', 'features', 'offset') {
 					@for $offset-id from 2 through variables('grid', 'columns', 'size') {
 						.#{class('grid', 'column')}-#{$label}-#{$id}.#{class('grid', 'offset')}-#{$label}-#{$offset-id} {

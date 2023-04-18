@@ -1,10 +1,16 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : PROGRESS
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : Progress
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if progress is enable
-///
-@if ptions('progress', 'enable') {
+@if options('progress', 'enable') {
 	.#{class('progress', 'name')} {
 		width: variables('progress', 'width');
 		height: variables('progress', 'height');
@@ -28,7 +34,7 @@
 		/// STYLES
 		///
 		@if options('progress', 'features', 'styles') {
-			@each $type, $color in $progress-styles {
+			@each $type, $color in variables.$styles {
 				&.#{$type}::-webkit-progress-value {
 					background: $color;
 				}

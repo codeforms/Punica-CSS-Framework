@@ -1,12 +1,18 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : FORM
-/////////////////////////////////////////////////////////
-@import "mixins";
 ///
+/// Punica CSS Framework
+/// Elements : Form
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_global/variables" as *;
+@use "../../_themes/_getters" as *;
+@use "variables";
+@use "mixins";
+
 /// if form is enable
-///
 @if options('form', 'enable') {
-	@include form-inputs() {
+	@include mixins.form-inputs() {
 		-webkit-appearance: none;
 		background-color: theme('input', 'background');
 		border-width: theme('border', 'width');
@@ -34,7 +40,7 @@
 		/// VALIDATION STYLES
 		///
 		@if options('form', 'features', 'validation-styles') {
-			@each $style-name, $style-color in $form-input-styles {
+			@each $style-name, $style-color in variables.$input-styles {
 				&.#{$style-name} {
 					color: $style-color;
 					outline-color: $style-color;
@@ -170,9 +176,9 @@
 		/// INPUT SIZES
 		///
 		@if options('form', 'features', 'sizes') {
-			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in $form-input-sizes {
+			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in variables.$input-sizes {
 				&.#{$size-name} {
-					@include form-inputs() {
+					@include mixins.form-inputs() {
 						height: $input-height;
 						font-size: $font-size;
 					}

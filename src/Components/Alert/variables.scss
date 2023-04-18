@@ -1,9 +1,12 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENT : ALERT > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Alert -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
-$alert-styles: (
+$styles: (
 	// style name (class), theme variable
 	"primary"	: theme('color', 'primary'),
 	"success"	: theme('color', 'success'),
@@ -13,7 +16,7 @@ $alert-styles: (
 );
 
 /// SIZES ===============================================
-$alert-sizes: (
+$sizes: (
     (
     	"small", // size name (class)
     	.749rem, // font-size

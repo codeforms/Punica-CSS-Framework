@@ -1,9 +1,12 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : LABEL > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Elements : Label -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
-$label-styles: (
+$styles: (
 	// style name (class), theme variable
 	"primary"	: theme('color', 'primary'),
 	"success"	: theme('color', 'success'),
@@ -13,7 +16,7 @@ $label-styles: (
 );
 
 /// SIZES =============================================== 
-$label-sizes: (
+$sizes: (
     (
     	"small", // size name (class)
     	.18rem .85rem, // padding

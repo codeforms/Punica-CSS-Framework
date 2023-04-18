@@ -1,9 +1,14 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : BADGE
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : Badge
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if badge is enable
-///
 @if options('badge', 'enable') {
 	.#{class('badge', 'name')} {
 		@include set-style(theme('color', 'secondary'), theme('color', 'text')) {
@@ -21,7 +26,7 @@
 		/// STYLES
 		///
 		@if options('badge', 'features', 'styles') {
-			@each $name, $bg-color in $badge-styles {
+			@each $name, $bg-color in variables.$styles {
 				@include set-style($bg-color, theme('color', 'negative'), $name) {
 					border-color: darken($bg-color, 6.5%);
 				};
@@ -31,7 +36,7 @@
 		/// SIZES
 		///
 		@if options('badge', 'features', 'sizes') {
-			@each $size-name, $font-size, $padding in $badge-sizes {
+			@each $size-name, $font-size, $padding in variables.$sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}
 		}

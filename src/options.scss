@@ -1,6 +1,6 @@
-/////////////////////////////////////////////////////////
-/// OPTIONS & VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework : Options & Variables
+/// 
 $options: (
 	///
 	/// LAYOUT
@@ -471,4 +471,4 @@ $options: (
 		'features' : (),
 		'variables': ()
 	)
-);
+) !default;

@@ -1,9 +1,15 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : PANEL
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : Panel
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if panel is enable
-///
 @if options('panel', 'enable') {
 	.#{class('panel', 'name')} {
 		display: flex;
@@ -95,7 +101,7 @@
 		/// SIZES
 		///
 		@if options('panel', 'features', 'sizes') {
-			@each $size-name, $font-size, $padding in $panel-sizes {
+			@each $size-name, $font-size, $padding in variables.$sizes {
 				&.#{$size-name} {
 					>.#{class('panel', 'header')} {
 						padding: $padding;

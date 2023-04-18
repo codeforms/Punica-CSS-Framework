@@ -1,11 +1,11 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > UTILITIES : HELPERS
-/////////////////////////////////////////////////////////
-@import "variables";
-@import "mixins";
 ///
+/// Punica CSS Framework
+/// Utilities : Helpers
 ///
-///
+
+@use "variables" as *;
+@use "mixins" as *;
+
 @if options('helpers', 'enable') {
 	/// Align Items
 	@include setHelperList($align-items, "align-items", "!important");

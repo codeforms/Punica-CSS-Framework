@@ -1,9 +1,12 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENT : STATS > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Stats -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
-$stats-styles: (
+$styles: (
 	// style name (class), theme variable
 	"primary"	: theme('color', 'primary'),
 	"success"	: theme('color', 'success'),

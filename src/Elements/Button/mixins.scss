@@ -1,6 +1,13 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : BUTTON > MIXINS
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Elements : Button -> Mixins
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_setters" as *;
+@use "../../_themes/_getters" as *;
+@use "variables";
 
 ///
 /// Dropdown
@@ -172,7 +179,7 @@
 		/// STYLES
 		///
 		@if options('button', 'features', 'sizes') {
-			@each $theme-name, $theme-color in $button-styles {
+			@each $theme-name, $theme-color in variables.$button-styles {
 				&.#{$theme-name} > .#{class('button', 'name')},
 				&.#{$theme-name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
 					@include button-styles($theme-color, darken($theme-color, 7%));
@@ -243,7 +250,7 @@
 				/// STYLES
 				///
 				@if options('button', 'features', 'styles') {
-					@each $theme-name, $theme-color in $button-styles {
+					@each $theme-name, $theme-color in variables.$button-styles {
 						&>.#{$theme-name}.#{class('button', 'name')},
 						&>.#{class('button', 'dropdown')} > .#{$theme-name}.#{class('button', 'name')} {
 							border: theme('border', 'width') solid darken($theme-color, 6%);
@@ -324,7 +331,7 @@
 /// @param {Boolean} $class-name
 ///
 @mixin button-sizes($class-name: false) {
-	@each $name, $font-size, $padding in $button-sizes {
+	@each $name, $font-size, $padding in variables.$button-sizes {
 		@if $class-name {
 			&.#{$name} > .#{class('button', 'name')},
 			&.#{$name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {

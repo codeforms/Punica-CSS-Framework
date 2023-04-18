@@ -1,10 +1,12 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS
-/////////////////////////////////////////////////////////
-@import "Button/Button";
-@import "Caption/Caption";
-@import "Form/Form";
-@import "Typography/Typography";
-@import "Table/Table";
-@import "Icon/Icon";
-@import "Label/Label";
+///
+/// Punica CSS Framework
+/// Elements
+///
+
+@forward "Button/Button";
+@forward "Caption/Caption";
+@forward "Form/Form";
+@forward "Typography/Typography";
+@forward "Table/Table";
+@forward "Icon/Icon";
+@forward "Label/Label";

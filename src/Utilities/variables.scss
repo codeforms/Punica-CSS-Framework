@@ -1,46 +1,48 @@
-///////////////////////////////////////////////////////
-/// PUNICA CSS > UTILITIES : HELPERS > VARIABLES
-///////////////////////////////////////////////////////
-@import "_config/_specs";
+///
+/// Punica CSS Framework
+/// Utilities : Helpers -> Variables
+///
 
-@import "_config/align-content";
-@import "_config/align-items";
-@import "_config/align-self";
-@import "_config/backdrop-filter";
-@import "_config/bg-colors";
-@import "_config/border-radius";
-@import "_config/border-style";
-@import "_config/border";
-@import "_config/cursors";
-@import "_config/display-filter";
-@import "_config/display";
-@import "_config/flex-direction";
-@import "_config/flex";
-@import "_config/flex-grow";
-@import "_config/flex-shrink";
-@import "_config/flex-wrap";
-@import "_config/float";
-@import "_config/font-sizes";
-@import "_config/font-weight";
-@import "_config/height";
-@import "_config/inset";
-@import "_config/justify-content";
-@import "_config/justify-items";
-@import "_config/justify-self";
-@import "_config/line-height";
-@import "_config/margin";
-@import "_config/object-fit";
-@import "_config/order";
-@import "_config/overflow";
-@import "_config/padding";
-@import "_config/place-content";
-@import "_config/place-items";
-@import "_config/place-self";
-@import "_config/position";
-@import "_config/resize";
-@import "_config/text-colors";
-@import "_config/text-decoration";
-@import "_config/text-transform";
-@import "_config/user-select";
-@import "_config/width";
-@import "_config/z-index";
+@forward "_config/_specs";
+
+@forward "_config/align-content";
+@forward "_config/align-items";
+@forward "_config/align-self";
+@forward "_config/backdrop-filter";
+@forward "_config/bg-colors";
+@forward "_config/border-radius";
+@forward "_config/border-style";
+@forward "_config/border";
+@forward "_config/cursors";
+@forward "_config/display-filter";
+@forward "_config/display";
+@forward "_config/flex-direction";
+@forward "_config/flex";
+@forward "_config/flex-grow";
+@forward "_config/flex-shrink";
+@forward "_config/flex-wrap";
+@forward "_config/float";
+@forward "_config/font-sizes";
+@forward "_config/font-weight";
+@forward "_config/height";
+@forward "_config/inset";
+@forward "_config/justify-content";
+@forward "_config/justify-items";
+@forward "_config/justify-self";
+@forward "_config/line-height";
+@forward "_config/margin";
+@forward "_config/object-fit";
+@forward "_config/order";
+@forward "_config/overflow";
+@forward "_config/padding";
+@forward "_config/place-content";
+@forward "_config/place-items";
+@forward "_config/place-self";
+@forward "_config/position";
+@forward "_config/resize";
+@forward "_config/text-colors";
+@forward "_config/text-decoration";
+@forward "_config/text-transform";
+@forward "_config/user-select";
+@forward "_config/width";
+@forward "_config/z-index";

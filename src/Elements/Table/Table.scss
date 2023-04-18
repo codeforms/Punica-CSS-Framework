@@ -1,9 +1,13 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : TABLE
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Elements : Table
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+
 /// if table is enable
-///
 @if options('table', 'enable') {
 	.#{class('table', 'name')} {
 		position: relative;

@@ -1,6 +1,8 @@
-/////////////////////////////////////////////////////////
-/// GLOBAL MIXINS
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework : Global Mixins
+/// 
+
+@use "variables";
 
 ///
 /// Breakpoints
@@ -42,7 +44,7 @@
 @mixin media-group-specs(
 	$item-name, $padding: 1px
 ) {
-	@each $name, $number in $grids {
+	@each $name, $number in variables.$grids {
 		&>.#{$item-name}.#{$name} {
 			padding-bottom: initial !important;
 			height: auto;

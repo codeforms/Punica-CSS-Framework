@@ -1,9 +1,12 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : TABNAV > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Tabnav -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
-$tabnav-styles: (
+$styles: (
 	(
 		'success', // style name (class)
 		theme('color', 'success') // color

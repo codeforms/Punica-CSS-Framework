@@ -1,9 +1,15 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : LIST
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : List
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if list is enable
-///
 @if options('list', 'enable') {
 	.#{class('list', 'name')} {
 		list-style: none;

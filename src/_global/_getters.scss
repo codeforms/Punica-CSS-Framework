@@ -1,6 +1,9 @@
-/////////////////////////////////////////////////////////
-/// GLOBAL GETTER FUNCTIONS
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework : Global Getter Functions
+/// 
+
+@use "../options" as option;
+@use "../classnames" as class;
 
 ///
 /// Get options value by key
@@ -13,11 +16,11 @@
 /// @return boolean
 ///
 @function options($keys...) {
-	@if null == map-get($options, nth($keys, 1)) {
+	@if null == map-get(option.$options, nth($keys, 1)) {
 		@return debug-message("#{nth($keys, 1)}", 'options');
 	}
 
-	$value: map-get($options, nth($keys, 1));
+	$value: map-get(option.$options, nth($keys, 1));
 
 	@if length($keys) == 1 {
 		@return $value;
@@ -80,11 +83,11 @@
 /// @return string
 ///
 @function class($node, $key) {
-	@if null == map-get($classnames, $node) {
+	@if null == map-get(class.$classnames, $node) {
 		@return debug-message("#{$node}", 'classnames');
 	}
 
-	$classnames: map-get($classnames, $node);
+	$classnames: map-get(class.$classnames, $node);
 
 	@if null == map-get($classnames, $key) {
 		@return debug-message("#{$node} > #{$key}", 'classnames');

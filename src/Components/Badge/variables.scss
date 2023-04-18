@@ -1,9 +1,12 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : BADGE > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Badge -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
-$badge-styles: (
+$styles: (
 	// style name (class), theme variable
 	"primary"	: theme('color', 'primary'),
 	"success"	: theme('color', 'success'),
@@ -13,7 +16,7 @@ $badge-styles: (
 );
 
 /// SIZES ===============================================
-$badge-sizes: (
+$sizes: (
     (
 		"tiny", // size name (class)
 		.659rem!important, // font-size

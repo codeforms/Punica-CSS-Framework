@@ -1,10 +1,13 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : NAVBAR > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Navbar -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
 // you can add your own custom styles.
-$navbar-themes: (
+$themes: (
 	(
 		"light", // theme name (class)
 		white, // bg color
@@ -27,7 +30,7 @@ $navbar-themes: (
 
 /// SIZES ===============================================
 // you can add your own custom sizes.
-$navbar-sizes: (
+$sizes: (
     (
 		"mini", // size name (class)
 		45px, // min-height

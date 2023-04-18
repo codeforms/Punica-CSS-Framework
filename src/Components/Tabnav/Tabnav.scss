@@ -1,10 +1,16 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : TABNAV
-/////////////////////////////////////////////////////////
-@import "mixins";
 ///
+/// Punica CSS Framework
+/// Components : Tabnav
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "mixins";
+@use "variables";
+
 /// if tabnav is enable
-///
 @if options('tabnav', 'enable') {
 	.#{class('tabnav', 'name')} {
 		position: relative;
@@ -17,10 +23,8 @@
 			box-shadow: none;
 			border-radius: 0;
 		}
-		///
 		/// Default button styles in Tabnav
-		///
-		@include tab-button-styles() {
+		@include mixins.tab-button-styles() {
 			background: transparent;
 			border: none;
 			border-radius: 0 !important;
@@ -49,14 +53,12 @@
 				font-size: variables('button', 'icon', 'font-size');
 			}
 		}
-		///
 		/// Bottom Tabnav
-		///
 		@if options('tabnav', 'features', 'bottom-position') {
 			&.#{class('tabnav', 'bottom')} {
 				border-bottom: 0;
 				border-top: variables('tabnav', 'border-width') theme('border', 'style') theme('color', 'secondary');
-				@include tab-button-styles() {
+				@include mixins.tab-button-styles() {
 					margin-top: -#{variables('tabnav', 'border-width')};
 					border-top: variables('tabnav', 'border-width') solid transparent;
 					border-bottom: 0;
@@ -74,7 +76,7 @@
 		/// STYLES
 		///
 		@if options('tabnav', 'features', 'styles') {
-			@each $type-name, $color in $tabnav-styles {
+			@each $type-name, $color in variables.$styles {
 				&.#{$type-name} {
 					.#{class('button', 'name')},
 					a.#{class('button', 'name')},
@@ -85,9 +87,7 @@
 						}
 					}
 				}
-				///
 				/// Bottom Tabnav
-				///
 				@if options('tabnav', 'features', 'bottom-position') {
 					&.#{$type-name}.#{class('tabnav', 'bottom')} {
 						.#{class('button', 'name')},

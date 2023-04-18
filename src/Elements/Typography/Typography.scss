@@ -1,10 +1,15 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : TYPOGRAPHY
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Elements : Typography
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "variables";
+
 /// Headers
-///
-@each $header, $font-size, $responsive-size in $typography-headers {
+@each $header, $font-size, $responsive-size in variables.$headers {
 	#{$header} {
 		margin-top: 0;
 		color: inherit;

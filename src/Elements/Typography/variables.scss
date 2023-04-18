@@ -1,6 +1,10 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : TYPOGRAPHY > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Elements : Typography -> Variables
+///
+
+@use "../../_themes/_getters" as *;
+
 ///
 /// Google Fonts
 /// @link https://developers.google.com/fonts/docs/css2
@@ -8,8 +12,8 @@
 @import url('https://fonts.googleapis.com/css2?family=#{theme('google-font', 'name')}:wght@#{theme('google-font', 'weights')}&display=swap');
 
 /// PREFERENCES =========================================
-$typography-font-family	: theme('typography', 'font-family'), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$typography-headers		: (
+$font-family: theme('typography', 'font-family'), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$headers: (
 	(
 		"h1", // class name
 		2em, // font-size

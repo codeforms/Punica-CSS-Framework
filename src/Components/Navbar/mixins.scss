@@ -1,6 +1,10 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENT : NAVBAR > MIXINS
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Navbar -> Mixins
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_themes/_getters" as *;
 
 ///
 /// Navbar Themes

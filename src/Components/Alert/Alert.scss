@@ -1,9 +1,14 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : ALERT
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : Alert
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if alert is enable
-///
 @if options('alert', 'enable') {
 	.#{class('alert', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
@@ -35,7 +40,7 @@
 		/// STYLES
 		///
 		@if options('alert', 'features', 'styles') {
-			@each $style-name, $bg-color in $alert-styles {
+			@each $style-name, $bg-color in variables.$styles {
 				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
 					border-color: darken($bg-color, 5%);
 				};
@@ -45,7 +50,7 @@
 		/// SIZES
 		///
 		@if options('alert', 'features', 'sizes') {
-			@each $size-name, $font-size, $padding in $alert-sizes {
+			@each $size-name, $font-size, $padding in variables.$sizes {
 				@include set-size($font-size, $padding, $size-name);
 			}
 		}

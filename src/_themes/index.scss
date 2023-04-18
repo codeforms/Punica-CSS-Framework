@@ -1,10 +1,8 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > THEMES
-/// @link http://www.punicacss.com/themes
-/////////////////////////////////////////////////////////
-@import "_getters";
+///
+/// Punica CSS Framework : Themes
+/// 
 
-$punica-themes: (
+$themes: (
 	default: (
 		'name' : 'Default Theme',
 		'type' : 'light', // light or dark (required*),
@@ -86,5 +84,5 @@ $punica-themes: (
 				)
 			),
 		)
-	),
+	)
 );

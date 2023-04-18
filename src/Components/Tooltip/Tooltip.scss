@@ -1,9 +1,15 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : TOOLTIP
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : Tooltip
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if tooltip is enable
-///
 @if options('tooltip', 'enable') {
 	.#{class('tooltip', 'name')} {
 		display: inline-flex;

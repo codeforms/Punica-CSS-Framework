@@ -1,9 +1,15 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : STATS
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : Stats
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if stats is enable
-///
 @if options('stats', 'enable') {
 	.#{class('stats', 'name')},
 	a.#{class('stats', 'name')} {
@@ -53,7 +59,7 @@
 		/// STYLES
 		///
 		@if options('stats', 'features', 'styles') {
-			@each $style-name, $bg-color in $stats-styles {
+			@each $style-name, $bg-color in variables.$styles {
 				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
 					border-color: $bg-color;
 					background: transparent;

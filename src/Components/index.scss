@@ -1,18 +1,20 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS
-/////////////////////////////////////////////////////////
-@import "Alert/Alert";
-@import "Badge/Badge";
-@import "Billboard/Billboard";
-@import "Breadcrumb/Breadcrumb";
-@import "Card/Card";
-@import "List/List";
-@import "Menu/Menu";
-@import "Navbar/Navbar";
-@import "Panel/Panel";
-@import "Process/Process";
-@import "Progress/Progress";
-@import "Stats/Stats";
-@import "Tabnav/Tabnav";
-@import "Timeline/Timeline";
-@import "Tooltip/Tooltip";
+///
+/// Punica CSS Framework
+/// Components
+///
+
+@forward "Alert/Alert";
+@forward "Badge/Badge";
+@forward "Billboard/Billboard";
+@forward "Breadcrumb/Breadcrumb";
+@forward "Card/Card";
+@forward "List/List";
+@forward "Menu/Menu";
+@forward "Navbar/Navbar";
+@forward "Panel/Panel";
+@forward "Process/Process";
+@forward "Progress/Progress";
+@forward "Stats/Stats";
+@forward "Tabnav/Tabnav";
+@forward "Timeline/Timeline";
+@forward "Tooltip/Tooltip";

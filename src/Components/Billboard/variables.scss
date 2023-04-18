@@ -1,9 +1,12 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : BILLBOARD > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Billboard -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
-$billboard-styles: (
+$styles: (
 	// style name (class), theme variable
 	"primary"	: theme('color', 'primary'),
 	"success"	: theme('color', 'success'),
@@ -13,7 +16,7 @@ $billboard-styles: (
 );
 
 /// SIZES ===============================================
-$billboard-sizes: (
+$sizes: (
 	(
 		"small", // size name (class)
 		2.5rem 1.5rem, // padding
@@ -25,7 +28,7 @@ $billboard-sizes: (
 		1.6em // font-size
 	)
 );
-$billboard-responsive-sizes	: ( 
+$responsive-sizes: ( 
 	(
 		"small", // size name (class)
 		1rem, // padding

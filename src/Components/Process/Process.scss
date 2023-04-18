@@ -1,10 +1,16 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : PROCESS
-/////////////////////////////////////////////////////////
-@import "mixins";
 ///
+/// Punica CSS Framework
+/// Components : Process
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "mixins";
+@use "variables";
+
 /// if process is enable
-///
 @if options('process', 'enable') {
 	.#{class('process', 'name')} {
 		display: flex;
@@ -84,9 +90,9 @@
 		/// STYLES
 		///
 		@if options('process', 'features', 'styles') {
-			@each $type, $bg-color in $process-styles {
+			@each $type, $bg-color in variables.$styles {
 				&.#{$type} {
-					@include process-styles($bg-color);
+					@include mixins.process-styles($bg-color);
 				}
 			}
 		}
@@ -95,13 +101,13 @@
 		///
 		@if options('process', 'features', 'vertical') {
 			&.#{class('process', 'vertical')} {
-				@include process-vertical();
+				@include mixins.process-vertical();
 			}
 		}
 
 		// vertical style is setted as "true" for mobile devices
 		@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
-			@include process-vertical();
+			@include mixins.process-vertical();
 		}
 	}
 }

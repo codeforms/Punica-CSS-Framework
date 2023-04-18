@@ -1,9 +1,15 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : CAPTION
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Elements : Caption
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_setters" as *;
+@use "../../_themes/_getters" as *;
+@use "variables";
+
 /// if caption is enable
-///
 @if options('caption', 'enable') {
 	.#{class('caption', 'name')} {
 		display: flex;
@@ -47,7 +53,7 @@
 		/// SIZES
 		///
 		@if options('caption', 'features', 'sizes') {
-			@each $size-name, $margin, $font-size, $font-weight in $caption-sizes {
+			@each $size-name, $margin, $font-size, $font-weight in variables.$caption-sizes {
 				@include set-size($font-size, null, $size-name) {
 					margin: $margin;
 					font-weight: $font-weight;

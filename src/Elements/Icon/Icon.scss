@@ -1,9 +1,11 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : ICON
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Elements : Icon
+///
+
+@use "../../_global/_getters" as *;
+
 /// if icon is enable
-///
 @if options('icon', 'enable') {
 	.#{class('icon', 'class-name')} {
 		font-size: variables('icon', 'font-size');

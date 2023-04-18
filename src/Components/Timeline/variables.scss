@@ -1,9 +1,12 @@
-///////////////////////////////////////////////////////// 
-/// PUNICA CSS > COMPONENTS : TIMELINE > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Timeline -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
-$timeline-styles: (
+$styles: (
 	(
 		"primary", // style name (class)
 		theme('color', 'primary'), // bg color

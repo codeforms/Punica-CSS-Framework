@@ -1,9 +1,15 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : TIMELINE
-/////////////////////////////////////////////////////////
 ///
+/// Punica CSS Framework
+/// Components : Timeline
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "variables";
+
 /// if timeline is enable
-///
 @if options('timeline', 'enable') {
 	.#{class('timeline', 'name')} {
 		.#{class('timeline', 'item')} {
@@ -33,7 +39,7 @@
 				width: variables('timeline', 'type-width');
 				height: variables('timeline', 'type-width');
 				top: 13px;
-				left: -((variables('timeline', 'type-width') / 2px) - variables('timeline', 'border-width'));
+				left: -(calc(variables('timeline', 'type-width') / 2px) - variables('timeline', 'border-width'));
 				align-items: center;
 				background-color: theme('color', 'secondary');
 				border: 2px theme('border', 'style') theme('border', 'color');
@@ -45,7 +51,7 @@
 				/// STYLES
 				///
 				@if options('timeline', 'features', 'styles') {
-					@each $type, $bg-color, $color in $timeline-styles {
+					@each $type, $bg-color, $color in variables.$styles {
 					    &.#{$type} {
 							background-color: $bg-color;
 							color: $color;

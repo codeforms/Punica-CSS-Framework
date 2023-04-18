@@ -1,6 +1,21 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > LAYOUT : BASE
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Layout : Base
+///
+
+@use "../../_themes/_getters" as *;
+@use "../../Elements/Typography/variables";
+
+/*! 
+ * PUNICA CSS - #{theme('name')}
+ * 
+ * @link http://www.punicacss.com
+ * @link http://github.com/codeforms/Punica-CSS-Framework
+ * 
+ * Released under the MIT license
+ * @link http://opensource.org/licenses/MIT
+ */
+
 *,
 *:after,
 *:before {
@@ -20,7 +35,7 @@ html {
 	-webkit-tap-highlight-color: transparent;
 }
 body {
-	font-family: $typography-font-family; // typography > variables
+	font-family: variables.$font-family; // typography > variables
 	font-size: theme('typography', 'font-size');
 	font-weight: theme('typography', 'font-weight');
 	line-height: theme('typography', 'line-height');

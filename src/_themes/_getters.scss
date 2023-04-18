@@ -1,15 +1,14 @@
-/////////////////////////////////////////////////////////
-/// THEME GETTERS
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework : Theme Getter Functions
+/// 
 
 ///
 /// Get Active Theme
 /// @param {String} $theme
 ///
-@mixin get-theme($theme: $active-theme) {
-    $set-theme: if(map-has-key($punica-themes, $theme), $theme, theme-not-found($theme));
-	$theme-map: map-get($punica-themes, $set-theme) !global;
-    @debug "Compiling #{$set-theme} theme...";
+@mixin get-theme($theme: 'default') {
+    $set-theme: if(map-has-key(themes.$themes, $theme), $theme, theme-not-found($theme));
+	$theme-map: map-get(themes.$themes, $set-theme) !global;
 	@content;
 	$theme-map: null !global;
 }

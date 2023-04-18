@@ -1,9 +1,12 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : PROCESS > VARIABLES
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Process -> Variables
+///
+
+@use "../../_themes/_getters" as *;
 
 /// STYLES ==============================================
-$process-styles: (
+$styles: (
 	// style name (class), color theme
 	"success"	: theme('color', 'success'),
 	"warning"	: theme('color', 'warning'),

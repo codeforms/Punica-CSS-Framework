@@ -1,6 +1,11 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > COMPONENTS : PROCESS > MIXINS
-/////////////////////////////////////////////////////////
+///
+/// Punica CSS Framework
+/// Components : Process -> Mixins
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
 
 ///
 /// Process Styles

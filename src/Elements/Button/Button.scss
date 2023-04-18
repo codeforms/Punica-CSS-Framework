@@ -1,15 +1,22 @@
-/////////////////////////////////////////////////////////
-/// PUNICA CSS > ELEMENTS : BUTTON
-/////////////////////////////////////////////////////////
-@import "mixins";
 ///
+/// Punica CSS Framework
+/// Elements : Button
+///
+
+@use "../../_global/_getters" as *;
+@use "../../_global/mixins" as *;
+@use "../../_themes/_getters" as *;
+@use "../../_themes/_setters" as *;
+@use "../../Elements/Typography/variables" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
 /// if button is enable
-///
 @if options('button', 'enable') {
 	a.#{class('button', 'name')},
 	.#{class('button', 'name')} {
 		display: inline-flex;
-		font-family: $typography-font-family; // typography > variables
+		font-family: $font-family; // typography > variables
 		font-size: variables('button', 'font-size');
 		font-weight: theme('elements', 'button', 'font-weight');
 		text-decoration: none;
