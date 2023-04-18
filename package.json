@@ -1,7 +1,7 @@
 {
   "name": "Punica-CSS-Framework",
   "description": "Punica CSS is a clean, lightweight, responsive, modern and fully customizable (even class names) pure CSS Framework based on SASS/SCSS with multi-theme support.",
-  "version": "2.6.1",
+  "version": "2.8.0",
   "homepage": "http://www.punicacss.com/",
   "author": "CodeForms (https://github.com/codeforms)",
   "license": "MIT",
@@ -9,10 +9,11 @@
     "css", "framework", "sass", "responsive", "customizable", "multi-theme"
   ],
   "scripts": {
-    "prod": "node-sass src/punica.scss dist/punica.min.css --output-style compressed",
+    "prod": "sass src/punica.scss dist/punica.min.css --style compressed",
+    "unminify": "sass src/punica.scss dist/punica.min.css",
     "watch": "npm run prod -- -w"
   },
   "dependencies": {
-    "node-sass": "^7.0.1"
+    "dart-sass": "^1.25.0"
   }
 }
