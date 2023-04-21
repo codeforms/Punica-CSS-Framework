@@ -38,6 +38,14 @@
 				lighten($bg-color, 11.5%) 100%
 			);
 		}
+		/// Gradient Left-To-Right
+		&.#{class('navbar', 'gradient')}#{'-ltr'} {
+			background: linear-gradient(135deg, lighten($bg-color, 23%), $bg-color);
+		}
+		/// Gradient Right-To-Left
+		&.#{class('navbar', 'gradient')}#{'-rtl'} {
+			background: linear-gradient(-135deg, lighten($bg-color, 23%), $bg-color);
+		}
 	}
 
 	.#{class('button', 'group')} {

@@ -322,6 +322,32 @@
 				@include set-gradient($bg-color, to bottom, 27%);
 			}
 		}
+		/// Gradient Left-To-Right
+		&.#{class('button', 'gradient')}#{'-ltr'} {
+			background: linear-gradient(135deg, lighten($bg-color, 26.5%), darken($bg-color, 5%));
+		}
+		&.#{class('button', 'gradient')}#{'-ltr'} {
+			&:hover {
+				background: linear-gradient(135deg, lighten($bg-color, 32%), darken($bg-color, 2%));
+			}
+			&:active,
+			&:focus {
+				background: linear-gradient(135deg, lighten($bg-color, 36%), $bg-color);
+			}
+		}
+		/// Gradient Right-To-Left
+		&.#{class('button', 'gradient')}#{'-rtl'} {
+			background: linear-gradient(-135deg, lighten($bg-color, 26.5%), darken($bg-color, 5%));
+		}
+		&.#{class('button', 'gradient')}#{'-rtl'} {
+			&:hover {
+				background: linear-gradient(-135deg, lighten($bg-color, 32%), darken($bg-color, 2%));
+			}
+			&:active,
+			&:focus {
+				background: linear-gradient(-135deg, lighten($bg-color, 36%), $bg-color);
+			}
+		}
 	}
 	@content;
 }
