@@ -319,7 +319,7 @@
 			&:active,
 			&:focus {
 				background: $bg-color;
-				@include set-gradient($bg-color, to bottom, 26%);
+				@include set-gradient($bg-color, to bottom, 27%);
 			}
 		}
 	}

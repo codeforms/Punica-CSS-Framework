@@ -68,7 +68,7 @@
 				&:active,
 				&:focus {
 					background: theme('color', 'background');
-					@include set-gradient(theme('color', 'background'), to bottom, 26%);
+					@include set-gradient(theme('color', 'background'), to bottom, 27%);
 				}
 			}
 		}
