@@ -63,12 +63,12 @@
 			&.#{class('button', 'gradient')} {
 				@include set-gradient(theme('color', 'background'));
 				&:hover {
-					@include set-gradient(theme('color', 'background'), to bottom, 25%);
+					@include set-gradient(theme('color', 'background'), to bottom, 23%);
 				}
 				&:active,
 				&:focus {
 					background: theme('color', 'background');
-					@include set-gradient(theme('color', 'background'), to bottom, 34%);
+					@include set-gradient(theme('color', 'background'), to bottom, 26%);
 				}
 			}
 		}

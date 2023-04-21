@@ -314,12 +314,12 @@
 			background: $bg-color;
 			@include set-gradient($bg-color, to top);
 			&:hover {
-				@include set-gradient($bg-color, to bottom, 25%);
+				@include set-gradient($bg-color, to bottom, 23%);
 			}
 			&:active,
 			&:focus {
 				background: $bg-color;
-				@include set-gradient($bg-color, to bottom, 34%);
+				@include set-gradient($bg-color, to bottom, 26%);
 			}
 		}
 	}
