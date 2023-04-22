@@ -94,6 +94,20 @@
 						outline: theme('input', 'outline-width') solid lighten(theme('color', 'primary'), 26%);
 					}
 				}
+				///
+				/// DIVIDED NAVBAR
+				///
+				@if options('navbar', 'features', 'divided') {
+					&.#{class('navbar', 'divided')} {
+						@include mixins.navbar-divided();
+						.#{class('button', 'group')} {
+							.#{class('button', 'name')},
+							.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+								border: solid darken(theme('color', 'primary'), 7.15%);
+							}
+						}
+					}
+				}
 			}
 		}
 		&.#{class('navbar', 'fixed')} {
@@ -131,20 +145,6 @@
 				border-radius: 0;
 			}
 		}
-		///
-		/// DIVIDED NAVBAR
-		///
-		@if options('navbar', 'features', 'divided') {
-			&.#{class('navbar', 'divided')} {
-				@include mixins.navbar-divided();
-				.#{class('button', 'group')} {
-					.#{class('button', 'name')},
-					.#{class('button', 'dropdown')} .#{class('button', 'name')} {
-						border: solid darken(theme('color', 'primary'), 7.15%);
-					}
-				}
-			}
-		}
 		.#{class('button', 'name')},
 		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 			font-size: variables('navbar', 'font-size');
@@ -165,11 +165,13 @@
 					lighten(theme('color', 'primary'), 11.5%) 100%
 				);
 			}
+			/// Gradient Left-To-Right
 			&.#{class('navbar', 'gradient')}#{'-ltr'} {
-				background: linear-gradient(135deg, lighten(theme('color', 'primary'), 14.5%), theme('color', 'primary'));
+				background: linear-gradient(135deg, lighten(theme('color', 'primary'), 7.5%), theme('color', 'primary'));
 			}
+			/// Gradient Right-To-Left
 			&.#{class('navbar', 'gradient')}#{'-rtl'} {
-				background: linear-gradient(-135deg, lighten(theme('color', 'primary'), 14.5%), theme('color', 'primary'));
+				background: linear-gradient(-135deg, lighten(theme('color', 'primary'), 7.5%), theme('color', 'primary'));
 			}
 		}
 

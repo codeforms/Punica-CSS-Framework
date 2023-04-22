@@ -40,11 +40,11 @@
 		}
 		/// Gradient Left-To-Right
 		&.#{class('navbar', 'gradient')}#{'-ltr'} {
-			background: linear-gradient(135deg, lighten($bg-color, 23%), $bg-color);
+			background: linear-gradient(135deg, lighten($bg-color, 9%), $bg-color);
 		}
 		/// Gradient Right-To-Left
 		&.#{class('navbar', 'gradient')}#{'-rtl'} {
-			background: linear-gradient(-135deg, lighten($bg-color, 23%), $bg-color);
+			background: linear-gradient(-135deg, lighten($bg-color, 9%), $bg-color);
 		}
 	}
 
@@ -57,19 +57,6 @@
 			}
 			&:hover {
 				background: darken($bg-color, 10.15%);
-			}
-		}
-	}
-	///
-	/// DIVIDED NAVBAR
-	///
-	@if options('navbar', 'features', 'divided') {
-		&.#{class('navbar', 'divided')} {
-			.#{class('button', 'group')} {
-				.#{class('button', 'name')},
-				.#{class('button', 'dropdown')} .#{class('button', 'name')} {
-					border: solid $divider-color;
-				}
 			}
 		}
 	}
@@ -90,6 +77,19 @@
 				}
 				&:focus {
 					outline: theme('input', 'outline-width') solid lighten($input-border-color, 13%);
+				}
+			}
+			///
+			/// DIVIDED NAVBAR
+			///
+			@if options('navbar', 'features', 'divided') {
+				&.#{class('navbar', 'divided')} {
+					.#{class('button', 'group')} {
+						.#{class('button', 'name')},
+						.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+							border: solid $divider-color;
+						}
+					}
 				}
 			}
 		}

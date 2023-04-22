@@ -312,12 +312,26 @@
 	@if options('button', 'features', 'gradient') {
 		&.#{class('button', 'gradient')} {
 			background: $bg-color;
+			z-index: 1;
+			position: relative;
 			@include set-gradient($bg-color, to top);
-			&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
 				@include set-gradient($bg-color, to bottom, 23%);
+				opacity: 0;
+				transition: opacity 0.25s;
+				z-index: -1;
 			}
-			&:active,
-			&:focus {
+			&:hover::before {
+				opacity: 1;
+			}
+			&:active::before,
+			&:focus::before {
 				background: $bg-color;
 				@include set-gradient($bg-color, to bottom, 27%);
 			}
@@ -326,26 +340,32 @@
 		&.#{class('button', 'gradient')}#{'-ltr'} {
 			background: linear-gradient(135deg, lighten($bg-color, 26.5%), darken($bg-color, 5%));
 		}
-		&.#{class('button', 'gradient')}#{'-ltr'} {
-			&:hover {
-				background: linear-gradient(135deg, lighten($bg-color, 32%), darken($bg-color, 2%));
-			}
-			&:active,
-			&:focus {
-				background: linear-gradient(135deg, lighten($bg-color, 36%), $bg-color);
-			}
-		}
 		/// Gradient Right-To-Left
 		&.#{class('button', 'gradient')}#{'-rtl'} {
 			background: linear-gradient(-135deg, lighten($bg-color, 26.5%), darken($bg-color, 5%));
 		}
+		&.#{class('button', 'gradient')}#{'-ltr'},
 		&.#{class('button', 'gradient')}#{'-rtl'} {
-			&:hover {
-				background: linear-gradient(-135deg, lighten($bg-color, 32%), darken($bg-color, 2%));
+			z-index: 1;
+			position: relative;
+			&:before {
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				transition: opacity 0.25s;
+				z-index: -1;
+				background: linear-gradient(0deg, lighten($bg-color, 32%), darken($bg-color, 2%));
 			}
-			&:active,
-			&:focus {
-				background: linear-gradient(-135deg, lighten($bg-color, 36%), $bg-color);
+			&:hover::before {
+				opacity: 1;
+			}
+			&:active::before,
+			&:focus::before {
+				background: linear-gradient(0deg, lighten($bg-color, 36%), $bg-color);
 			}
 		}
 	}
