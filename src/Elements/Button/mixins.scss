@@ -338,11 +338,11 @@
 		}
 		/// Gradient Left-To-Right
 		&.#{class('button', 'gradient')}#{'-ltr'} {
-			background: linear-gradient(135deg, lighten($bg-color, 26.5%), darken($bg-color, 5%));
+			background: linear-gradient(125deg, lighten($bg-color, 21%), darken($bg-color, 5%));
 		}
 		/// Gradient Right-To-Left
 		&.#{class('button', 'gradient')}#{'-rtl'} {
-			background: linear-gradient(-135deg, lighten($bg-color, 26.5%), darken($bg-color, 5%));
+			background: linear-gradient(-125deg, lighten($bg-color, 21%), darken($bg-color, 5%));
 		}
 		&.#{class('button', 'gradient')}#{'-ltr'},
 		&.#{class('button', 'gradient')}#{'-rtl'} {
@@ -358,14 +358,14 @@
 				opacity: 0;
 				transition: opacity 0.25s;
 				z-index: -1;
-				background: linear-gradient(0deg, lighten($bg-color, 32%), darken($bg-color, 2%));
+				background: linear-gradient(0deg, lighten($bg-color, 21%), darken($bg-color, 2%));
 			}
 			&:hover::before {
 				opacity: 1;
 			}
 			&:active::before,
 			&:focus::before {
-				background: linear-gradient(0deg, lighten($bg-color, 36%), $bg-color);
+				background: linear-gradient(0deg, lighten($bg-color, 25%), $bg-color);
 			}
 		}
 	}
