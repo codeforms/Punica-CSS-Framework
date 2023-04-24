@@ -117,6 +117,9 @@
 	/// Resize
 	@include setHelperList($resizes, "resize", "!important");
 
+	/// Text Align
+	@include setHelperList($text-align, "text-align", "!important");
+
 	/// Text Colors
 	@include setHelperList($text-colors, "color", "!important");
 	@include setColorScale($text-colors, "color"); // color scale
