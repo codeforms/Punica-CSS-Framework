@@ -104,6 +104,31 @@
 }
 
 ///
+/// Set Size Helpers
+/// @param {List} $list
+/// @param {List} $sizes
+/// @param {String} $suffix (must also be a name of css property)
+///
+@mixin setSizeHelpers($list: null, $sizes: null, $suffix: null) {
+
+	@if $suffix {
+		@each $name, $value in $sizes {
+			.#{$name}-#{$suffix} {
+				@include setProperties($suffix, $value, null, "!important");
+			}
+		}
+	} @else {
+		@each $classname, $prop in $list {
+			@each $name, $value in $sizes {
+				.#{$classname}#{$name} {
+					@include setProperties($prop, $value, null, "!important");
+				}
+			}
+		}
+	}
+}
+
+///
 /// Set Properties
 /// @param {Property|String} $property
 /// @param {mixed} $value

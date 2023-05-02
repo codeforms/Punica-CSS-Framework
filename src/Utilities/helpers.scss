@@ -5,6 +5,7 @@
 
 @use "variables" as *;
 @use "mixins" as *;
+@use "../_global/_getters" as *;
 
 @if options('helpers', 'enable') {
 	/// Align Items
@@ -68,6 +69,7 @@
 
 	/// Height
 	@include setHelperList($height-helpers, "height", "!important");
+	@include setSizeHelpers(null, specs('sizes'), "height");
 
 	/// Inset
 	@include setNestedHelperList($insets);
@@ -86,6 +88,7 @@
 
 	/// Margin
 	@include setHelperListWithRange($margin-helpers, specs('spaces'), "px", "!important");
+	@include setSizeHelpers($margin-helpers, specs('sizes'));
 	@include setHelperListWithRange($margin-helpers, auto, null, "!important"); // margin auto
 
 	/// Object-Fit
@@ -100,6 +103,7 @@
 
 	/// Padding
 	@include setHelperListWithRange($padding-helpers, specs('spaces'), "px", "!important");
+	@include setSizeHelpers($padding-helpers, specs('sizes'));
 	@include setHelperListWithRange($padding-helpers, auto, null, "!important"); // padding auto
 
 	/// Place Content
@@ -135,6 +139,7 @@
 
 	/// Width
 	@include setHelperList($width-helpers, "width", "!important");
+	@include setSizeHelpers(null, specs('sizes'), "width");
 	
 	/// Z-Index
 	@include setHelperListWithRange($z-indexes, specs('z-index'), null, "!important");

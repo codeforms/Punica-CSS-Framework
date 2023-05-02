@@ -4,11 +4,22 @@
 ///
 
 $specs: (
-	"spaces"        : (0,5,10,15,20,30,40,50,75,100,125,150,175,200), // padding and margin (px)
+	"spaces"		: (0,5,10,15,20,30,40,50,75,100,125,150,175,200), // padding and margin (px)
 	"font-weight"   : (100,200,300,400,500,600,700,800,900,normal,bold,bolder,lighter),
 	"borders"       : (0,1,2,3,4,5), // border width (px)
 	"border-radius" : (2,4,8,10,12,14,16,500), // (px)
 	"orders"        : (1,2,3,4,5),
 	"line-height"   : (0,1,2,3,4,5),
-	"z-index"       : (-1,0,1,10,20,30,40,50,100,999,9999,99999)
+	"z-index"       : (-1,0,1,10,20,30,40,50,100,999,9999,99999),
+	"sizes"			: (
+		// used for padding, margin, width and height
+		("tiny", 1rem), // 16px
+		("mini", 2rem), // 32px
+		("small", 4rem), // 64px
+		("large", 8rem), // 128px
+		("big", 10rem), // 160px
+		("huge", 12rem), // 190px
+		("massive", 18rem), // 288px
+		("giant", 24rem) // 384px
+	),
 );
