@@ -333,11 +333,11 @@ $options: (
 	///
 	/// ELEMENTS
 	/// 
-	/// total estimated size is [44kb] if all elements
+	/// total estimated size is [74kb] if all elements
 	/// and it's features enabled.
 	/// 
 	'button': (
-		'enable': true, // estimated 31KB
+		'enable': true, // estimated 61KB
 		'features': (
 			'group'    : true,
 			'vertical' : true,
@@ -463,7 +463,7 @@ $options: (
 	///
 	/// UTILITIES
 	/// 
-	/// total estimated size is [31KB] if all helpers
+	/// total estimated size is [35KB] if all helpers
 	/// and it's features enabled.
 	/// 
 	'helpers': (
