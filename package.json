@@ -9,8 +9,8 @@
     "css", "framework", "sass", "responsive", "customizable", "multi-theme"
   ],
   "scripts": {
-    "prod": "sass src/punica.scss dist/punica.min.css --style compressed",
-    "unminify": "sass src/punica.scss dist/punica.min.css",
+    "prod": "sass src/punica.scss dist/punica.min.css --no-source-map --style compressed",
+    "unminify": "sass src/punica.scss dist/punica.min.css --no-source-map",
     "watch": "npm run prod -- -w"
   },
   "dependencies": {
