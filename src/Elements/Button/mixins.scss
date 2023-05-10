@@ -277,21 +277,27 @@
 	/// OUTLINED STYLE
 	///
 	@if $outlined {
+		$textcolor: if(theme('type') == 'dark', theme('color', 'negative'), $bg-color);
 		background: transparent;
-		@if(theme('type') == 'dark') {
-			color: theme('color', 'negative');
-		} @else {
-			color: $bg-color;
+		color: $textcolor;
+		i, [class^="#{class('icon', 'class-name')}"] {
+			color: $textcolor;
 		}
 	} @else {
 		background: $bg-color;
 		color: theme('color', 'negative');
+		i, [class^="#{class('icon', 'class-name')}"] {
+			color: theme('color', 'negative');
+		}
 	}
 	text-shadow: 0 1px 1px darken($bg-color, 6%);
 	border: theme('border', 'width') theme('border', 'style') $border-color;
 	&:hover {
 		background: lighten($bg-color, 7.5%);
 		color: theme('color', 'negative');
+		i, [class^="#{class('icon', 'class-name')}"] {
+			color: theme('color', 'negative');
+		}
 	}
 	&:active,
 	&.#{class('button', 'active')} {
@@ -301,9 +307,6 @@
 		&:hover {
 			background: lighten($bg-color, 12.5%);
 		}
-	}
-	i, [class^="#{class('icon', 'class-name')}"] {
-		color: theme('color', 'negative');
 	}
 
 	///
