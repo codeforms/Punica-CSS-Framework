@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "prod": "sass src/punica.scss dist/punica.min.css --no-source-map --style compressed",
-    "unminify": "sass src/punica.scss dist/punica.min.css --no-source-map",
+    "unminify": "sass src/punica.scss dist/punica.css --no-source-map",
     "watch": "npm run prod -- -w"
   },
   "dependencies": {
