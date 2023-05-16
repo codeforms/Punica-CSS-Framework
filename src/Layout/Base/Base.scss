@@ -21,6 +21,7 @@
 *:after,
 *:before {
 	box-sizing: inherit;
+	border: 0 solid theme('border', 'color');
 }
 * {
 	margin: 0;
