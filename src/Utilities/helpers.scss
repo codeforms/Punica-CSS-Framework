@@ -27,6 +27,7 @@
 
 	/// Border
 	@include setHelperListWithRange($borders, specs('borders'), "px", "!important");
+	@include setBorderSides(specs('borders'));
 
 	/// Border Styles
 	@include setHelperListWithRange($border-radius, specs('border-radius'), "px", "!important");

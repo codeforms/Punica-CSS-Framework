@@ -163,6 +163,23 @@
 }
 
 ///
+/// Horizontal or vertical border sides
+/// @param {Integer} $borders
+///
+@mixin setBorderSides($borders) {
+	@each $border in $borders {
+		.border-x-#{$border} {
+			border-left-width: #{$border}px !important;
+			border-right-width: #{$border}px !important;
+		}
+		.border-y-#{$border} {
+			border-top-width: #{$border}px !important;
+			border-bottom-width: #{$border}px !important;
+		}
+	}
+}
+
+///
 /// Other Helpers
 ///
 @mixin otherHelpers() {
