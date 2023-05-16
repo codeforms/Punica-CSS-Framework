@@ -8,6 +8,7 @@
 
 /*! 
  * PUNICA CSS - #{theme('name')}
+ * v2.8.0 build 1045
  * 
  * @link http://www.punicacss.com
  * @link http://github.com/codeforms/Punica-CSS-Framework
@@ -62,14 +63,9 @@ a {
 	outline: none;
 	text-decoration: none;
 	&:focus,
-	&:hover,
-	&:active,
-	&.active {
-		color: darken(theme('color', 'primary'), 8%);
+	&:hover {
+		color: theme('color', 'primary');
 		text-decoration: underline;
-	}
-	&:visited {
-		color: theme('color', 'text');
 	}
 }
 hr {
