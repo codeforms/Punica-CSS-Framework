@@ -27,3 +27,6 @@ $theme-map: map-get(get.$themes, $theme) !global;
 
 @debug "DONE \1F5F8";
 @debug "The #{$theme} theme is compiled successfully.";
+
+$theme-map: null !global;
+/// ======================================================
