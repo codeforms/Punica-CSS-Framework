@@ -10,7 +10,7 @@
 @use "variables";
 
 /// if breadcrumb is enable
-@if options('breadcrumb', 'enable')  {
+@if options('breadcrumb', 'enable') {
 	.#{class('breadcrumb', 'name')} {
 		display: inline-block;
 		white-space: nowrap;
