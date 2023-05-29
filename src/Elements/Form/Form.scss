@@ -165,9 +165,11 @@
 				}
 			}
 			@include breakpoints(variables('grid', 'breakpoints', 'medium'), 'max-width') {
-				.#{$name}.#{class('form', 'items')} {
-					>.#{class('form', 'item')} {
-						flex: 0 0 100%;
+				.#{$name}.#{class('form', 'name')} {
+					.#{$name}.#{class('form', 'items')} {
+						>.#{class('form', 'item')} {
+							flex: 0 0 100%;
+						}
 					}
 				}
 			}
