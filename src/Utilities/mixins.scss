@@ -152,10 +152,10 @@
 			@if $i % 5 == 0 {
 				$percentage: $i*1%;
 				.#{$class}-darken-#{$i} {
-					#{$property}: mix(black, $color, $percentage);
+					#{$property}: mix(black, $color, $percentage) !important;
 				}
 				.#{$class}-lighten-#{$i} {
-					#{$property}: mix(white, $color, $percentage);
+					#{$property}: mix(white, $color, $percentage) !important;
 				}
 			}
 		}
