@@ -146,6 +146,16 @@
 					background: darken(theme('color', 'primary'), 10.15%);
 					border-radius: 0;
 				}
+				&:active,
+				&.#{class('button', 'active')} {
+					color: theme('color', 'negative');
+					background: darken(theme('color', 'primary'), 7%);
+					transition: variables('button', 'transition');
+					&:hover {
+						transition: variables('button', 'transition');
+						background: darken(theme('color', 'primary'), 10%);
+					}
+				}
 			}
 			.#{class('button', 'dropdown')}:last-child,
 			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:first-child,
