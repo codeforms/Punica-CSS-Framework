@@ -11,5 +11,6 @@ $viewports: (
 	(class('grid', 'small'), variables('grid', 'breakpoints', 'small')),
 	(class('grid', 'medium'), variables('grid', 'breakpoints', 'medium')),
 	(class('grid', 'large'), variables('grid', 'breakpoints', 'large')),
-	(class('grid', 'extra-large'), variables('grid', 'breakpoints', 'extra-large'))
+	(class('grid', 'extra-large'), variables('grid', 'breakpoints', 'extra-large')),
+	(class('grid', 'extra-extra-large'), variables('grid', 'breakpoints', 'extra-extra-large'))
 );
