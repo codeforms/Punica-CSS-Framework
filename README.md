@@ -1,6 +1,5 @@
 ## Introduction
 <p>
-    <a href="http://punicacss.com" target="_blank"><strong>Documentation</strong></a> |  
     <a href="https://github.com/codeforms/punica-themes" target="_blank"><strong>Nightly Builds</strong></a> |  
     <a href="https://github.com/codeforms/punica-templates"><strong>Templates</strong></a> |  
     <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelog</a>
