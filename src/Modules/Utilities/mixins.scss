@@ -1,0 +1,269 @@
+///
+/// Punica CSS Framework
+/// Utilities : Helpers -> Mixins
+///
+
+@use "../../Core/Theme/Getters" as *;
+@use "../../Core/Theme/Setters" as *;
+@use "_config/specs" as *;
+
+///
+/// Get helper specs
+///
+/// @param {String} $node
+/// @example specs('spaces')
+///
+/// @return mixed
+///
+@function specs($node) {
+	@return map-get($specs, $node);
+}
+
+///
+/// Set List with Range
+/// @param {List} $helpers
+/// @param {List} $range
+/// @param {String} $value-type
+/// @param {Boolean} $specificity
+///
+@mixin setHelperListWithRange(
+	$helpers, $range, $value-type: null, $specificity: null
+) {
+	@include setNestedHelperList($helpers, $range, $value-type, $specificity);
+}
+
+///
+/// Set List
+/// @param {List} $helpers
+/// @param {String} $property-name
+/// @param {Boolean|String} $specificity
+///
+@mixin setHelperList(
+	$list, $property-name: null, $specificity: null
+) {
+	@if $property-name {
+		@each $class, $value in $list {
+			.#{$class} {
+				@include setProperties($property-name, $value, null, $specificity);
+			}
+		}
+	} @else {
+		@each $class, $property, $value in $list {
+			.#{$class} {
+				@include setProperties($property, $value, null, $specificity);
+			}
+		}
+	}
+}
+
+///
+/// Set Filters
+/// @param {List} $values
+/// @param {List} $filters
+/// @param {String} $property-name
+/// 
+@mixin setFilters(
+	$values, $filters, $property-name: null
+) {
+	@each $class-name, $function in $filters {
+		@each $value, $suffix in $values {
+			.#{$class-name}#{$suffix} {
+				#{$property-name}: call(get-function($function, true), $value);
+			}
+		}
+	}
+}
+
+///
+/// Set Nested List
+/// @param {List} $helpers
+/// @param {List} $second_list
+/// @param {String} $value-type
+/// @param {String} $specificity
+///
+@mixin setNestedHelperList(
+	$list, $second_list: null, $value-type: null, $specificity: null
+) {
+	@if $second_list {
+		@each $class-name, $property in $list {
+			@each $value in $second_list {
+				.#{$class-name}#{$value} {
+					@include setProperties($property, $value, $value-type, $specificity);
+				}
+			}
+		}
+	} @else {
+		@each $class-name, $values in $list {
+			@each $value in $values {
+				.#{$class-name}-#{$value} {
+					@include setProperties($class-name, $value);
+				}
+			}
+		}
+	}
+}
+
+///
+/// Set Size Helpers
+/// @param {List} $list
+/// @param {List} $sizes
+/// @param {String} $suffix (must also be a name of css property)
+///
+@mixin setSizeHelpers($list: null, $sizes: null, $suffix: null) {
+
+	@if $suffix {
+		@each $name, $value in $sizes {
+			.#{$name}-#{$suffix} {
+				@include setProperties($suffix, $value, null, "!important");
+			}
+		}
+	} @else {
+		@each $classname, $prop in $list {
+			@each $name, $value in $sizes {
+				.#{$classname}#{$name} {
+					@include setProperties($prop, $value, null, "!important");
+				}
+			}
+		}
+	}
+}
+
+///
+/// Set Properties
+/// @param {Property|String} $property
+/// @param {mixed} $value
+/// @param {String} $value-type
+/// @param {String} $specificity
+///
+@mixin setProperties(
+	$property, $value, $value-type: null, $specificity: null
+) {
+	#{$property}: #{$value}#{$value-type} #{$specificity};
+}
+
+///
+/// Color Scale
+/// @param {Array} $colors
+/// @param {Boolean} $bgcolor
+///
+@mixin setColorScale($colors, $property:'background-color') {
+	@for $i from 5 through 35 {
+		@each $class, $color in $colors {
+			@if $i % 5 == 0 {
+				$percentage: $i*1%;
+				.#{$class}-darken-#{$i} {
+					#{$property}: mix(black, $color, $percentage) !important;
+				}
+				.#{$class}-lighten-#{$i} {
+					#{$property}: mix(white, $color, $percentage) !important;
+				}
+			}
+		}
+	}
+}
+
+///
+/// Horizontal or vertical border sides
+/// @param {Integer} $borders
+///
+@mixin setBorderSides($borders) {
+	@each $border in $borders {
+		.border-x-#{$border} {
+			border-left-width: #{$border}px !important;
+			border-right-width: #{$border}px !important;
+		}
+		.border-y-#{$border} {
+			border-top-width: #{$border}px !important;
+			border-bottom-width: #{$border}px !important;
+		}
+	}
+}
+
+///
+/// Other Helpers
+///
+@mixin otherHelpers() {
+	.centered {margin: 0 auto;}
+	.align.right {text-align: right !important;}
+	.align.left {text-align: left !important;}
+	.align.center {text-align: center !important;}
+	.align.justify {text-align: justify !important;}
+	.float.right {float: right;}
+	.float.left {float: left;}
+	.full.width {
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+	.full.height {
+		height: 100%;
+		min-height: 100%;
+		max-height: 100%;
+	}
+	.vh-100 {
+		height: 100vh;
+	}
+	.vw-100 {
+		width: 100vw;
+	}
+	.ungap {
+		gap: 0;
+	}
+	.fade {opacity: 0;}
+	.hide {display: none !important;}
+	/* seperator for flex */
+	.spacer {
+		flex-grow: 1!important;
+		outline: none;
+	}
+	.avatar {
+	    display: inline-block;
+	    border-radius: 50%;
+	}
+	.reset {
+		padding: 0 !important;
+		margin : 0 !important;
+	}
+	.reverse {
+		transform: rotateY(180deg);
+		unicode-bidi: bidi-override;
+		direction: rtl;
+	}
+	.truncate {
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.transparent {background: transparent !important;}
+	.pure, .pure > div {
+		background: transparent !important; 
+		border: none; 
+		box-shadow: none !important
+	}
+	[disabled],
+	:disabled,
+	.disabled {
+		opacity: .49;
+		cursor: default;
+		pointer-events: none;
+	}
+	.bordered {@include border();} 
+	.borderless {border: none !important;}
+	.rounded {border-radius: theme('border', 'radius');}
+	.radiusless {border-radius:0 !important;}
+	.shadowed {@include shadow();}
+	.shadowless {box-shadow:none !important;}
+	.inset-0 {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.inset-auto {
+		top: auto;
+		right: auto;
+		bottom: auto;
+		left: auto;
+	}
+}

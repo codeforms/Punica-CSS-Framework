@@ -1,0 +1,15 @@
+///
+/// Punica CSS Framework
+/// Components : Process -> Variables
+///
+
+@use "../../../Core/Theme/Getters" as *;
+
+/// STYLES ==============================================
+$styles: (
+	// style name (class), color theme
+	"success"	: theme('color', 'success'),
+	"warning"	: theme('color', 'warning'),
+	"error"		: theme('color', 'error'),
+	"dark"		: theme('color', 'text'),
+);

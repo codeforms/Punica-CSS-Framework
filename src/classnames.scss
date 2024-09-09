@@ -1,5 +1,6 @@
 ///
-/// Punica CSS Framework : Class Names
+/// Punica CSS Framework
+/// Default class names
 /// 
 $classnames: (
 	/////////////////////////////////////////////////////////
@@ -22,6 +23,11 @@ $classnames: (
 		'item'  : 'item',
 		'active': 'active'
 	),
+	'caption': (
+		'name'    : 'caption',
+		'centered': 'centered',
+		'divided' : 'divided'
+	),
 	'card': (
 		'name'       : 'card',
 		'cards'      : 'cards',
@@ -32,6 +38,9 @@ $classnames: (
 		'media'      : 'media',
 		'horizontal' : 'horizontal',
 		'actions'    : 'actions',
+	),
+	'label': (
+		'name': 'label'
 	),
 	'list': (
 		'name'    : 'list',
@@ -121,7 +130,6 @@ $classnames: (
 		'group'             : 'buttons',
 		'link'              : 'link',
 		'outlined'          : 'outlined',
-		'secondary'         : 'secondary',
 		'active'            : 'active',
 		'inactive'          : 'inactive',
 		'block'             : 'block',
@@ -136,11 +144,6 @@ $classnames: (
 		'dropdown-toggle'   : 'toggle',
 		'dropdown-clickable': 'clickable'
 	),
-	'caption': (
-		'name'    : 'caption',
-		'centered': 'centered',
-		'divided' : 'divided'
-	),
 	'form': (
 		'name'    : 'form',
 		'items'   : 'items',
@@ -149,21 +152,6 @@ $classnames: (
 		'radio'   : 'radio',
 		'group'   : 'group',
 	),
-	'icon': (
-		'class-name': 'material-symbols-outlined'
-	),
-	'label': (
-		'name': 'label'
-	),
-	'table': (
-		'name'   : 'table',
-		'striped': 'striped',
-		'hovered': 'hovered',
-		'active' : 'active'
-	),
-	'typography': (),
-	/////////////////////////////////////////////////////////
-	/// Layout
 	'grid': (
 		'row'        		: 'row',
 		'container'  		: 'container',
@@ -177,5 +165,15 @@ $classnames: (
 		'large'      		: 'lg',
 		'extra-large'		: 'xl',
 		'extra-extra-large'	: 'xxl'
+	),
+	'table': (
+		'name'   : 'table',
+		'striped': 'striped',
+		'hovered': 'hovered',
+		'active' : 'active'
+	),
+	'typography': (),
+	'icon': (
+		'class-name': 'material-symbols-outlined'
 	),
 )

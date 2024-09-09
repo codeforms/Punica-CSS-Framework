@@ -1,0 +1,138 @@
+///
+/// Punica CSS Framework : Themes
+/// 
+
+$themes: (
+	default: (
+		'name' : 'Default Theme',
+		'type' : 'light', // light or dark (required*),
+		'google-font': (
+			'name'    : 'IBM+Plex+Sans+Hebrew', // or Source+Sans+Pro etc
+			'weights' : '400;600;700',
+		),
+		'typography': (
+			'font-family'   : 'IBM Plex Sans Hebrew',
+			'font-size'     : 13px,
+			'font-weight'   : 400,
+			'line-height'   : 1.7,
+			'header-weight' : 700,
+		),
+		'color': (
+			'text'       : #202123,
+			'background' : white,
+			'primary'    : #314a93,
+			'success'    : #297d51,
+			'warning'    : #956d28,
+			'error'      : #972727,
+			'active'     : #dcdcdc,
+			'negative'   : white,
+			'grey'       : #979797,
+			'secondary'  : #e6e6e6,
+			'dark'       : #252831,
+		),
+		'border': (
+			'color'  : #c6c6c6,
+			'width'  : 1px,
+			'style'  : solid,
+			'radius' : 4px,
+		),
+		'shadow': (
+			'horizontal' : 0,
+			'vertical'   : 2px,
+			'blur'       : 4px,
+			'spread'     : 0,
+			'color'      : rgba(0, 0, 0, 0.20),
+		),
+		'input': (
+			'color'         : null, // (null = color > text)
+			'background'    : white,
+			'border-color'  : null, // (null = border > color)
+			'outline-color' : #252831,
+			'outline-width' : 2px,
+			'label-weight'  : 600,
+			'transition'    : .35s,
+		),
+		'components': (
+			'navbar': (
+				'font-weight': 700
+			),
+			'tabnav': (
+				'font-weight': 600
+			)
+		),
+		'elements': (
+			'button': (
+				'font-weight' : 700
+			),
+		),
+		'utilities': ()
+	),
+	dark: (
+		'name' : 'Dark Theme',
+		'type' : 'dark', // light or dark (required*),
+		'google-font': (
+			'name'    : 'IBM+Plex+Sans+Hebrew', // or Source+Sans+Pro etc
+			'weights' : '400;600;700',
+		),
+		'typography': (
+			'font-family'   : 'IBM Plex Sans Hebrew',
+			'font-size'     : 13px,
+			'font-weight'   : 400,
+			'line-height'   : 1.7,
+			'header-weight' : 700,
+		),
+		'color': (
+			'text'       : white,
+			'background' : #252831,
+			'primary'    : #3e5bb2,
+			'success'    : #2f8f5d,
+			'warning'    : #ab7d2d,
+			'error'      : #ba3d3d,
+			'active'     : lighten(#252831, 3.7%),
+			'negative'   : white,
+			'grey'       : #6d758c,
+			'secondary'  : lighten(#252831, 5%),
+			'dark'       : lighten(#252831, 4.5%),
+		),
+		'border': (
+			'color'  : lighten(#252831, 17%),
+			'width'  : 1px,
+			'style'  : solid,
+			'radius' : 4px,
+		),
+		'shadow': (
+			'horizontal' : 0,
+			'vertical'   : 1px,
+			'blur'       : 4px,
+			'spread'     : 0,
+			'color'      : rgba(0, 0, 0, 0.20),
+		),
+		'input': (
+			'color'         : null, // (null = color > text)
+			'background'    : lighten(#252831, 4.5%),
+			'border-color'  : null, // (null = border > color)
+			'outline-color' : white,
+			'outline-width' : 2px,
+			'label-weight'  : 600,
+			'transition'    : .35s
+		),
+		'components': (
+			'navbar': (
+				'font-weight': 700
+			),
+			'tabnav': (
+				'font-weight': 600
+			),
+			'card': (
+				'background' : lighten(#252831, 1.75%)
+			)
+		),
+		'elements': (
+			'button': (
+				'font-weight' : 700
+			),
+		),
+		'utilities': ()
+	),
+	// add your custom theme map here.
+);

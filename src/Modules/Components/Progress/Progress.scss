@@ -1,0 +1,44 @@
+///
+/// Punica CSS Framework
+/// Components : Progress
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "variables";
+
+/// if progress is enable
+@if enabled('components', 'progress') {
+	.#{class('progress', 'name')} {
+		width: components('progress', 'width');
+		height: components('progress', 'height');
+		background: theme('color', 'secondary');
+		@include shadow(0, 1px, 2px, rgba(0, 0, 0, 0.15), inset);
+		border-radius: components('progress', 'border-radius');
+		appearance: none;
+		&::-webkit-progress-bar {
+			background: transparent;
+			border-radius: components('progress', 'border-radius');
+		}
+		&::-webkit-progress-value {
+			background: theme('color', 'primary');
+			border-radius: components('progress', 'border-radius');
+		}
+		&::-moz-progress-bar {
+			background: theme('color', 'primary');
+			border-radius: components('progress', 'border-radius');
+		}
+		///
+		/// STYLES
+		///
+		@if features('components', 'progress', 'styles') {
+			@each $type, $color in variables.$styles {
+				&.#{$type}::-webkit-progress-value {
+					background: $color;
+				}
+			}
+		}
+	}
+}

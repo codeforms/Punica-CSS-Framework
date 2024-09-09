@@ -1,0 +1,82 @@
+///
+/// Punica CSS Framework
+/// Elements : Table
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+
+/// if table is enable
+@if enabled('elements', 'table') {
+	.#{class('table', 'name')} {
+		position: relative;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		max-width: 100%;
+		text-align: left;
+		margin-bottom: 1.5rem;
+		caption {
+			text-align: inherit;
+			color: theme('color', 'text');
+			font-size: 1rem;
+			font-weight: bold;
+			padding: elements('table', 'th', 'padding');
+			border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'text');
+		}
+		///
+		/// STRIPED
+		///
+		@if features('elements', 'table', 'striped') {
+			&.#{class('table', 'striped')} {
+				tr,
+				tbody tr {
+					&.#{class('table', 'active')} {
+						background: theme('color', 'secondary');
+					}
+					&:nth-of-type(odd) {
+						background: theme('color', 'secondary');
+					}
+				}
+			}
+		}
+		/// 
+		/// HOVERED
+		///
+		@if features('elements', 'table', 'hovered') {
+			&.#{class('table', 'hovered')} {
+				tr,
+				tbody tr {
+					&:hover {
+						background: theme('color', 'secondary');
+						color: theme('color', 'text');
+					}
+				}
+			}
+		}
+		tr,
+		tbody tr {
+			transition: all 0.3s;
+			&.#{class('table', 'active')},
+			&.#{class('table', 'active')}:hover {
+				background: theme('color', 'secondary');
+			}
+		}
+		td,
+		th {
+			border-bottom: set-border();
+			padding: elements('table', 'td', 'padding');
+			text-align: inherit;
+		}
+		thead tr {
+			background: transparent !important;
+			th {
+				border-bottom-color: theme('border', 'color');
+				font-weight: theme('typography', 'font-weight');
+				color: theme('color', 'grey');
+				padding: elements('table', 'th', 'padding');
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+///
+/// Punica CSS Framework
+/// Components : Stats -> Variables
+///
+
+@use "../../../Core/Theme/Getters" as *;
+
+/// STYLES ==============================================
+$styles: (
+	// style name (class), theme variable
+	"primary"	: theme('color', 'primary'),
+	"success"	: theme('color', 'success'),
+	"warning"	: theme('color', 'warning'),
+	"error"		: theme('color', 'error'),
+	"dark"		: lighten(theme('color', 'dark'), 7.85%),
+);

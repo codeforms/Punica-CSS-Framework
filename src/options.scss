@@ -1,49 +1,14 @@
 ///
-/// Punica CSS Framework : Options & Variables
+/// Punica CSS Framework
+/// Default Options & Variables
+/// You can override the all following default variables from your theme map.
 /// 
 $options: (
 	///
-	/// LAYOUT
-	/// 
-	/// total estimated size is [59KB] if the grid
-	/// and it's features enabled.
-	/// 
-	'grid': (
-		'enable': true, // estimated 59KB with offset feature
-		'features': (
-			'equal' : true, // equal height
-			'offset': true // [!] increases the size (estimated 52KB)
-		),
-		'variables': (
-			'gap'    : 6px,
-			'columns': (
-				'size'      : 16,
-				'padding'   : .3rem,
-				'min-height': .125rem
-			),
-			'container': (
-				'width'  : 100%,
-				'padding': 40px,
-				'margin' : 0 auto
-			),
-			'breakpoints': (
-				'extra-small'		: 0,
-				'small'      		: 500px,
-				'medium'     		: 768px,
-				'large'      		: 992px,
-				'extra-large'		: 1260px,
-				'extra-extra-large'	: 1400px
-			)
-		)
-	),
-	///
 	/// COMPONENTS
 	/// 
-	/// total estimated size is [41KB] if all components
-	/// and it's features enabled.
-	/// 
 	'alert': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'styles': true,
 			'sizes' : true
@@ -58,7 +23,7 @@ $options: (
 		)
 	),
 	'badge': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'styles': true,
 			'sizes' : true
@@ -68,7 +33,7 @@ $options: (
 		)
 	),
 	'billboard': (
-		'enable': true, // estimated 2KB
+		'enabled': true,
 		'features': (
 			'styles': true,
 			'sizes' : true,
@@ -82,23 +47,31 @@ $options: (
 		)
 	),
 	'breadcrumb': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'sizes': true
 		),
 		'variables': (
-			'font-weight'  : bold,
+			'font-weight'  : normal,
 			'active-weight': bold,
-			'seperator'    : ( // icon
-				'padding'       : 0 .25em,
-				'vertical-align': middle,
-				'font-size'     : 1.4rem,
-				'cursor'        : auto
-			)
+			'seperator'	   : "\276D"
+		)
+	),
+	'caption': (
+		'enabled': true,
+		'features': (
+			'sizes': true,
+		),
+		'variables': (
+			'margin'   : 1.3em .2rem,
+			'font-size': 1.95rem,
+			'media'    : (
+				'margin': .559em,
+			),
 		)
 	),
 	'card': (
-		'enable': true, // estimated 5KB
+		'enabled': true,
 		'features': (
 			'group'      : true,
 			'horizontal' : true,
@@ -119,8 +92,20 @@ $options: (
 			)
 		)
 	),
+	'label': (
+		'enabled': true,
+		'features': (
+			'styles': true,
+			'sizes' : true
+		),
+		'variables': (
+			'font-size': .9195em,
+			'padding'  : 0.28rem 0.9rem,
+			'margin'   : .1rem .05rem
+		)
+	),
 	'list': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'divided': true,
 			'hovered': true,
@@ -155,7 +140,7 @@ $options: (
 		)
 	),
 	'menu': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (),
 		'variables': (
 			'width'        : 100%,
@@ -191,7 +176,7 @@ $options: (
 		)
 	),
 	'navbar': (
-		'enable': true, // estimated 8KB
+		'enabled': true,
 		'features': (
 			'themes'   : true,
 			'sizes'    : true,
@@ -216,7 +201,7 @@ $options: (
 		)
 	),
 	'panel': (
-		'enable': true, // estimated 5KB
+		'enabled': true,
 		'features': (
 			'media'      : true,
 			'media-group': true,
@@ -231,7 +216,7 @@ $options: (
 		)
 	),
 	'process': (
-		'enable': true, // estimated 4KB
+		'enabled': true,
 		'features': (
 			'styles'  : true,
 			'vertical': true
@@ -254,7 +239,7 @@ $options: (
 		)
 	),
 	'progress': (
-		'enable': true,  // estimated 1KB
+		'enabled': true,
 		'features': (
 			'styles': true
 		),
@@ -265,7 +250,7 @@ $options: (
 		)
 	),
 	'stats': (
-		'enable': true, // estimated 2KB
+		'enabled': true,
 		'features': (
 			'styles': true
 		),
@@ -295,7 +280,7 @@ $options: (
 		)
 	),
 	'tabnav': (
-		'enable': true, // estimated 5KB
+		'enabled': true,
 		'features': (
 			'styles'         : true,
 			'bottom-position': true
@@ -305,7 +290,7 @@ $options: (
 		)
 	),
 	'timeline': (
-		'enable': true, // estimated 5KB
+		'enabled': true,
 		'features': (
 			'styles'     : true,
 			'media'      : true,
@@ -320,7 +305,7 @@ $options: (
 		)
 	),
 	'tooltip': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features' : (),
 		'variables': (
 			'font-size'  : .9em,
@@ -334,11 +319,8 @@ $options: (
 	///
 	/// ELEMENTS
 	/// 
-	/// total estimated size is [60kb] if all elements
-	/// and it's features enabled.
-	/// 
 	'button': (
-		'enable': true, // estimated 50KB
+		'enabled': true,
 		'features': (
 			'group'    : true,
 			'vertical' : true,
@@ -350,6 +332,7 @@ $options: (
 			'gradient' : true
 		),
 		'variables': (
+			'font-weight': 600,
 			'font-size'  : 1em,
 			'line-height': 1,
 			'width'      : min-content,
@@ -360,21 +343,8 @@ $options: (
 			)
 		)
 	),
-	'caption': (
-		'enable': true, // estimated 1KB
-		'features': (
-			'sizes': true,
-		),
-		'variables': (
-			'margin'   : 1.3em .2rem,
-			'font-size': 1.95rem,
-			'media'    : (
-				'margin': .559em,
-			),
-		)
-	),
 	'form': (
-		'enable': true, // estimated 9KB
+		'enabled': true,
 		'features': (
 			'group'            : true,
 			'sizes'            : true,
@@ -408,46 +378,36 @@ $options: (
 			)
 		)
 	),
-	'icon': (
-		'enable': true, // estimated 1KB
-		'features' : (),
+	'grid': (
+		'enabled': true, 
+		'features': (
+			'equal' : true, // equal height
+			'offset': true // [!] increases the size
+		),
 		'variables': (
-			'font-family'   : 'Material Symbols Outlined',
-			'font-size'     : 1.12rem,
-			'line-height'   : 1,
-			'vertical-align': middle,
-			'form': (
-				'radio-before'   : 'radio_button_unchecked',
-				'radio-after'    : 'radio_button_checked',
-				'checkbox-before': 'check_box_outline_blank',
-				'checkbox-after' : 'check_box'
+			'gap'    : 6px,
+			'columns': (
+				'size'      : 16,
+				'padding'   : .3rem,
+				'min-height': .125rem
 			),
-			'breadcrumb': (
-				'seperator': 'keyboard_arrow_right'
+			'container': (
+				'width'  : 100%,
+				'padding': 40px,
+				'margin' : 0 auto
 			),
-			'navbar': (
-				'open' : 'dehaze',
-				'close': 'close'
-			),
-			'process': (
-				'current': 'beenhere'
+			'breakpoints': (
+				'extra-small'		: 0,
+				'small'      		: 500px,
+				'medium'     		: 768px,
+				'large'      		: 992px,
+				'extra-large'		: 1260px,
+				'extra-extra-large'	: 1400px
 			)
 		)
 	),
-	'label': (
-		'enable': true, // estimated 1KB
-		'features': (
-			'styles': true,
-			'sizes' : true
-		),
-		'variables': (
-			'font-size': .9195em,
-			'padding'  : 0.28rem 0.9rem,
-			'margin'   : .1rem .05rem
-		)
-	),
 	'table': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'hovered': true,
 			'striped': true
@@ -464,11 +424,8 @@ $options: (
 	///
 	/// UTILITIES
 	/// 
-	/// total estimated size is [35KB] if all helpers
-	/// and it's features enabled.
-	/// 
 	'helpers': (
-		'enable'   : true,
+		'enabled'  : true,
 		'features' : (),
 		'variables': ()
 	)

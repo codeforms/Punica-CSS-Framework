@@ -1,0 +1,143 @@
+///
+/// Punica CSS Framework
+/// Components : Card
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Variables" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "../../../Modules/Elements/Typography/variables" as *;
+@use "variables";
+
+/// if card is enable
+@if enabled('components', 'card') {
+	.#{class('card', 'cards')} {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	///
+	/// CARD GROUPS
+	///
+	@if features('components', 'card', 'group') {
+		@each $name, $number in $grids {
+			.#{class('card', 'cards')}.#{$name} {
+				&>.#{class('card', 'name')} {
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{variables('card', 'group', 'margin')}));
+					height: auto;
+					margin: components('card', 'group', 'margin');
+				}
+			}
+		}
+	}
+	.#{class('card', 'name')} {
+		/// background color
+		background-color: if(theme('components', 'card', 'background'), theme('components', 'card', 'background'), theme('color', 'background'));
+
+		// has card border?
+		@if features('components', 'card', 'border') {
+			@include border();
+			/// border radius
+			border-radius: if(theme('components', 'card', 'radius'), theme('components', 'card', 'radius'), theme('border', 'radius'));
+		}
+
+		// has card shadow?
+		@if features('components', 'card', 'shadow') {
+			@include shadow();
+		}
+		
+		display: flex;
+		flex-direction: column;
+		width: components('card', 'width'); // for only a single card
+		height: components('card', 'height');
+		overflow: hidden;
+		>.#{class('card', 'body')} .#{class('card', 'title')},
+		>.#{class('card', 'title')} {
+			color: theme('color', 'text');
+			line-height: initial;
+			&>.#{class('card', 'subtitle')} {
+				color: theme('color', 'grey');
+				flex: 1 1 auto;
+			}
+		}
+		>.#{class('card', 'title')}, 
+		>.#{class('card', 'description')},
+		>.#{class('card', 'actions')} {
+			padding: components('card', 'padding');
+		}
+		>.#{class('card', 'description')} {
+			flex: 1 1 auto;
+			color: theme('color', 'text');
+		}
+		///
+		/// MEDIA
+		///
+		@if features('components', 'card', 'media') {
+			&>.#{class('card', 'media')} {
+				display: flex;
+				flex-wrap: wrap;
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+			///
+			/// MEDIA GROUP
+			///
+			@if features('components', 'card', 'media-group') {
+				@include media-group-specs(class('card', 'media'), 0);
+			}
+		}
+		///
+		/// HORIZONTAL CARDS
+		///
+		@if features('components', 'card', 'horizontal') {
+			&.#{class('card', 'horizontal')} {
+				flex-direction: row;
+				width: 100%;
+				align-items: center;
+				margin-bottom: components('card', 'horizontal', 'margin-bottom');
+				///
+				/// MEDIA
+				///
+				@if features('components', 'card', 'media') {
+					>.#{class('card', 'media')} {
+						align-self: normal;
+						width: fit-content;
+						img	{
+							width: auto;
+							object-fit: cover
+						}
+					}
+				}
+				>.#{class('card', 'body')} {
+					flex: inherit;
+					.#{class('card', 'title')},
+					.#{class('card', 'description')} {
+						padding: calc(#{components('card', 'padding')} / 2) #{components('card', 'padding')};
+					}
+					.#{class('card', 'description')} {
+						flex: 1;
+					}
+				}
+			}
+		}
+	}
+	@include breakpoints(layouts('grid', 'breakpoints', 'medium'), 'max-width') {
+		.#{class('card', 'name')},
+		.#{class('card', 'cards')} > .#{class('card', 'name')} {
+			flex: 0 0 100% !important;
+			width: 100%; // for only a single card
+			height: fit-content !important;
+		}
+		///
+		/// HORIZONTAL CARDS
+		///
+		@if features('components', 'card', 'horizontal') {
+			.#{class('card', 'name')}.#{class('card', 'horizontal')} {
+				flex-direction: column;
+			}
+		}
+	}
+}

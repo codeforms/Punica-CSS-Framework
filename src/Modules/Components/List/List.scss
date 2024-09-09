@@ -1,0 +1,102 @@
+///
+/// Punica CSS Framework
+/// Components : List
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "variables";
+
+/// if list is enable
+@if enabled('components', 'list') {
+	.#{class('list', 'name')} {
+		list-style: none;
+		margin: components('list', 'margin');
+		>.#{class('list', 'item')} {
+		    display: flex;
+		    align-items: center;
+		    padding: components('list', 'item', 'padding');
+		    margin: components('list', 'item', 'margin');
+		    transition: components('list', 'item', 'transition');
+		    >img,
+		    >.#{class('icon', 'class-name')},
+		    >i {
+		    	margin-right: components('list', 'media', 'margin-right');
+		    }
+		    &>span,
+		    &>div {
+		    	/// ..children of a flex container are
+		    	/// forced to have a block-flavored display type.
+		    	display: contents;
+		    }
+		    >.#{class('list', 'body')} {
+		    	flex: 1;
+		    	line-height: components('list', 'body', 'line-height');
+		    	text-align: components('list', 'body', 'text-align');
+		    	display: initial;
+		    	>.#{class('list', 'title')},
+		    	>.#{class('list', 'subtitle')} {
+					display: block;
+				}
+		    	>.#{class('list', 'title')} {
+		    		font-size: components('list', 'title', 'font-size');
+    				font-weight: theme('typography', 'header-weight');
+					line-height: components('list', 'body', 'line-height');
+		    	}
+				>.#{class('list', 'subtitle')} {
+					font-size: components('list', 'subtitle', 'font-size');
+					font-weight: theme('typography', 'font-weight');
+					color: theme('color', 'primary');
+					margin-bottom: components('list', 'subtitle', 'margin-bottom');
+				}
+		    }
+		    >.#{class('list', 'actions')} {
+    		    width: components('list', 'actions', 'width');
+	    		margin-left: components('list', 'actions', 'margin-left');
+			}
+			&.#{class('list', 'active')} {
+				background: darken(theme('color', 'background'), 11%);
+			}
+		}
+		///
+		/// DIVIDED
+		///
+		@if features('components', 'list', 'divided') {
+			&.#{class('list', 'divided')} {
+				>.#{class('list', 'item')} {
+					border-bottom: set-border();
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+		///
+		/// STRIPED
+		///
+		@if features('components', 'list', 'striped') {
+			&.#{class('list', 'striped')} {
+				>.#{class('list', 'item')} {
+					&:nth-of-type(odd) {
+						background: theme('color', 'secondary');
+					}
+				}
+			}
+		}
+		///
+		/// HOVERED
+		///
+		@if features('components', 'list', 'hovered') {
+			&.#{class('list', 'hovered')} {
+				>.#{class('list', 'item')} {
+					&:hover {
+						background: theme('color', 'secondary');
+						transition: components('list', 'item', 'transition');
+					}
+				}
+			}
+		}
+	}
+}

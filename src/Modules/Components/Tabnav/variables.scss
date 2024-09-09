@@ -1,0 +1,26 @@
+///
+/// Punica CSS Framework
+/// Components : Tabnav -> Variables
+///
+
+@use "../../../Core/Theme/Getters" as *;
+
+/// STYLES ==============================================
+$styles: (
+	(
+		'success', // style name (class)
+		theme('color', 'success') // color
+	),
+	(
+		'warning', // style name (class)
+		theme('color', 'warning') // color
+	),
+	(
+		'error', // style name (class)
+		theme('color', 'error') // color
+	),
+	(
+		'dark', // style name (class)
+		theme('color', 'text') // color
+	)
+);

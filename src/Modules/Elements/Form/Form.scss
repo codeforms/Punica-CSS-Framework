@@ -1,0 +1,254 @@
+///
+/// Punica CSS Framework
+/// Elements : Form
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Variables" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "variables";
+@use "mixins";
+
+/// if form is enable
+@if enabled('elements', 'form') {
+	@include mixins.form-inputs() {
+		-webkit-appearance: none;
+		background-color: theme('input', 'background');
+		border-width: theme('border', 'width');
+		border-style: theme('border', 'style');
+		border-color: if(theme('input', 'border-color'), theme('input', 'border-color'), theme('border', 'color'));
+		height: if(theme('input', 'height'), theme('input', 'height'), elements('form', 'input', 'height'));
+		border-radius: if(theme('input', 'border-radius'), theme('input', 'border-radius'), elements('form', 'input', 'border-radius'));
+		outline: theme('input', 'outline-width') solid transparent;
+		box-shadow: none;
+		box-sizing: inherit;
+		outline-offset: -#{theme('input', 'outline-width')};
+		padding: if(theme('input', 'padding'), theme('input', 'padding'), elements('form', 'input', 'padding'));
+		width: 100%;
+		max-width: 100%;
+		font-family: inherit;
+		color: if(theme('input', 'color'), theme('input', 'color'), theme('color', 'text'));
+		font-size: if(theme('input', 'font-size'), theme('input', 'font-size'), elements('form', 'input', 'font-size'));
+		transition: theme('input', 'transition');
+		&:focus {
+			outline: theme('input', 'outline-width') solid theme('input', 'outline-color');
+			outline-offset: -#{theme('input', 'outline-width')};
+			background-color: lighten(theme('input', 'background'), 5.5%);
+			z-index: 0;
+		}
+		///
+		/// VALIDATION STYLES
+		///
+		@if features('elements', 'form', 'validation-styles') {
+			@each $style-name, $style-color in variables.$input-styles {
+				&.#{$style-name} {
+					color: $style-color;
+					outline-color: $style-color;
+				}
+			}
+		}
+	};
+	select {
+		background-image:
+		url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=");
+		background-repeat: no-repeat;
+		background-position: right 10px center;
+		&[multiple] {
+			background: none;
+			height: auto;
+		}
+	}
+	textarea {
+		min-height: 6.5rem;
+		resize: vertical;
+	}
+	label,
+	legend {
+		display: block;
+		font-size: 1rem;
+		font-weight: theme('typography', 'font-weight');
+	}
+	fieldset {
+		border-width: 0;
+		padding: 0;
+	}
+	input[type='checkbox'],
+	input[type='radio'] {
+		display: inline;
+	}
+	input:disabled {
+	  opacity: .59;
+	}
+	.#{class('form', 'name')} {
+		position: relative;
+		max-width: 100%;
+		padding: elements('form', 'padding');
+		.#{class('form', 'item')} {
+			height: fit-content;
+			margin: elements('form', 'item', 'margin');
+			display: inline-flex;
+			flex-wrap: wrap;
+			width: 100%;
+			max-width: 100%;
+			position: relative;
+			align-items: center;
+			@at-root .#{class('form', 'name')} label,
+			&>label {
+				margin: elements('form', 'label', 'margin');
+				color: theme('color', 'text');
+				font-size: elements('form', 'label', 'font-size');
+				font-weight: theme('input', 'label-weight');
+				text-transform: none;
+				height: fit-content;
+			}
+			///
+			/// Custom file input
+			///
+			@if features('elements', 'form', 'upload') {
+				> input[type="file"] {
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					cursor: default;
+				}
+			}
+			///
+			/// FORM GROUPS
+			///
+			@if features('elements', 'form', 'group') {
+				@at-root .#{class('form', 'name')} .#{class('form', 'group')},
+				&>.#{class('form', 'group')} {
+					display: flex;
+				    width: 100%;
+					>* {
+						flex: 1 1 auto;
+						&:last-child {
+			    			margin-left: -1px;
+						}
+						&:not(:first-child):not(:last-child) {
+		    			    margin-left: -1px;
+		    				margin-right: 0;
+		    				border-radius: 0;
+						}
+					}
+					>.#{class('button', 'group')} {
+						box-shadow: none;
+					}
+					>.#{class('button', 'name')} {
+						padding: if(theme('input', 'padding'), theme('input', 'padding'), elements('form', 'input', 'padding'));
+						box-shadow: none;
+						&:first-child {
+							border-bottom-right-radius: 0;
+			    			border-top-right-radius: 0;
+						}
+						&:last-child:not(:first-child) {
+							border-bottom-left-radius: 0;
+			    			border-top-left-radius: 0;
+						}
+					}
+					@include mixins.form-inputs() {
+						&:first-child {
+							border-bottom-right-radius: 0;
+			    			border-top-right-radius: 0;
+						}
+						&:last-child:not(:first-child) {
+							border-bottom-left-radius: 0;
+			    			border-top-left-radius: 0;
+						}
+					}
+				}
+			}
+		}
+		.#{class('form', 'items')} {
+			margin: elements('form', 'items', 'margin');
+			display: flex;
+			flex-wrap: wrap;
+			&>.#{class('form', 'item')} {
+				margin: elements('form', 'item', 'margin');
+			}
+		}
+		@each $name, $number in $grids {
+			.#{$name}.#{class('form', 'items')} {
+				>.#{class('form', 'item')} {
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{elements('form', 'item', 'margin')}));
+				}
+			}
+			@include breakpoints(layouts('grid', 'breakpoints', 'medium'), 'max-width') {
+				.#{$name}.#{class('form', 'name')} {
+					.#{$name}.#{class('form', 'items')} {
+						>.#{class('form', 'item')} {
+							flex: 0 0 100%;
+						}
+					}
+				}
+			}
+		}
+		///
+		/// INPUT SIZES
+		///
+		@if features('elements', 'form', 'sizes') {
+			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in variables.$input-sizes {
+				&.#{$size-name} {
+					@include mixins.form-inputs() {
+						height: $input-height;
+						font-size: $font-size;
+					}
+					.#{class('button', 'name')} {
+						height: $input-height !important;
+						font-size: $button-font-size !important;
+						padding: $button-padding !important;
+					}
+					@at-root .#{class('form', 'name')}.#{$size-name} label,
+					&>.#{class('form', 'items')}>.#{class('form', 'item')}>label,
+					&>.#{class('form', 'item')}>label {
+						font-size: $font-size;
+					}
+				}
+			}
+		}
+	}
+	///
+	/// CHECKBOX & RADIO
+	///
+	@if features('elements', 'form', 'checkbox-radio') {
+		.#{class('form', 'radio')},
+		.#{class('form', 'checkbox')} {
+			display: grid;
+			grid-template-columns: 1em auto;
+			gap: 1rem;
+			input {
+				display: grid;
+				place-content: center;
+				margin: 0;
+				width: 1.6em;
+				height: 1.6em;
+				border: 0.15em solid theme('border', 'color');
+				-webkit-appearance: none;
+				appearance: none;
+				&::before {
+					content: "";
+					width: 0.7em;
+					height: 0.7em;
+					transform: scale(0);
+					background-color: theme('color', 'primary');
+					clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+				}
+				&:checked::before {
+				  transform: scale(1.5);
+				}
+				&:disabled {
+				  cursor: not-allowed;
+				}
+			}
+			input[type="radio"] {
+				border-radius: 500px;
+				&::before {
+					clip-path: ellipse(45% 45% at 50% 50%);;
+				}
+			}
+		}
+	}
+}

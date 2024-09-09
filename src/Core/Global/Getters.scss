@@ -1,0 +1,104 @@
+///
+/// Punica CSS Framework
+/// Core/Global/Getters.scss
+/// 
+
+@use "../../options" as option;
+@use "../../classnames" as class;
+@use "Helpers";
+
+///
+/// Get options value by key
+///
+/// @param {String(s)} $keys
+///
+/// @example options('grid', 'enable')
+/// @example options('grid', 'features', 'equal')
+///
+/// @return boolean
+///
+@function options($keys...) 
+{
+	@if null == map-get(option.$options, nth($keys, 1)) {
+		@return debug-message("#{nth($keys, 1)}", 'options');
+	}
+
+	$value: map-get(option.$options, nth($keys, 1));
+
+	@if length($keys) == 1 {
+		@return $value;
+	}
+
+	$value: map-get($value, nth($keys, 2));
+
+	@if null == $value {
+		@return debug-message("#{nth($keys, 1)} > #{nth($keys, 2)}", 'options');
+	}
+
+	@if length($keys) > 2 {
+		$value: map-get($value, nth($keys, 3));
+		@if null == $value {
+			@return debug-message("#{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}", 'options');
+		}
+	}
+
+	@return $value;
+}
+
+///
+/// Get default variable of a specific component/element
+/// from the options.scss API file
+///
+/// @param {String} $node
+/// @param {String} $key(s)
+///
+/// @example variables('grid', 'gap')
+/// @example variables('grid', 'columns', 'size')
+///
+/// @return mixed
+///
+@function variables($node, $keys...) 
+{
+	$variables: map-get(map-get(options($node), 'variables'), nth($keys, 1));
+
+	@if null == $variables {
+		@return debug-message("#{$node} > variables > #{nth($keys, 1)}", 'options');
+	}
+	
+	@if length($keys) == 1 {
+		@return $variables;
+	}
+
+	@if null == map-get($variables, nth($keys, 2)) {
+		@return debug-message("#{$node} > variables > #{nth($keys, 1)} > #{nth($keys, 2)}", 'options');
+	}
+
+	@return map-get($variables, nth($keys, 2));
+}
+
+///
+/// Get class name of a specific component/element
+/// from the classnames.scss API file
+///
+/// @param {String} $node
+/// @param {String} $key
+///
+/// @example class('alert', 'name')
+/// @example class('button', 'dropdown')
+///
+/// @return string
+///
+@function class($node, $key) 
+{
+	@if null == map-get(class.$classnames, $node) {
+		@return debug-message("#{$node}", 'classnames');
+	}
+
+	$classnames: map-get(class.$classnames, $node);
+
+	@if null == map-get($classnames, $key) {
+		@return debug-message("#{$node} > #{$key}", 'classnames');
+	}
+
+	@return map-get($classnames, $key);
+}

@@ -1,0 +1,112 @@
+///
+/// Punica CSS Framework
+/// Components : Process
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "mixins";
+@use "variables";
+
+/// if process is enable
+@if enabled('components', 'process') {
+	.#{class('process', 'name')} {
+		display: flex;
+		flex-wrap: nowrap;
+		margin: components('process', 'margin');
+		width: 100%;
+		list-style: none;
+		.#{class('process', 'item')} {
+			flex: 1 1 0;
+			min-height: components('process', 'min-height');
+			position: relative;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			word-break: break-word;
+			line-height: 1.3;
+			text-align: center;
+			&:not(:first-child)::before {
+				background: theme('color', 'primary');
+				content: "";
+				height: components('process', 'stepbar', 'height');
+				left: -50%;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+			a {
+				color: theme('color', 'text');
+				display: inline-block;
+				padding: 10px 10px 0;
+				text-decoration: none;
+				font-weight: bold;
+				&::before {
+					position: absolute;
+					content: "";
+					background: theme('color', 'primary');
+					top: 0;
+					left: 50%;
+					height: components('process', 'stickbar', 'height');
+					width: components('process', 'stickbar', 'width');
+					z-index: 1;
+				}
+				&:first-child::before {
+					left: calc(50% - (#{variables('process', 'stickbar', 'width')} - 1px));
+				}
+			}
+			&.#{class('process', 'active')} {
+				a {
+					color: theme('color', 'primary');
+					&::after {
+						content: "\2756";
+						position: absolute;
+						top: calc(-15px - #{components('process', 'icon-size')});
+						left: calc(50% - ((#{components('process', 'stickbar', 'width')} * 10) / 2));
+						color: theme('color', 'primary');
+						font-size: components('process', 'icon-size');
+					}
+				}
+				&~.#{class('process', 'item')} {
+					&::before {
+						background: theme('border', 'color');
+					}
+					a {
+						color: theme('color', 'text');
+						&:hover {
+							color: theme('color', 'primary');
+						}
+						&::before {
+							background: theme('border', 'color');
+						}
+					}
+				}
+			}
+		}
+		///
+		/// STYLES
+		///
+		@if features('components', 'process', 'styles') {
+			@each $type, $bg-color in variables.$styles {
+				&.#{$type} {
+					@include mixins.process-styles($bg-color);
+				}
+			}
+		}
+		///
+		/// VERTICAL PROCESS
+		///
+		@if features('components', 'process', 'vertical') {
+			&.#{class('process', 'vertical')} {
+				@include mixins.process-vertical();
+			}
+		}
+
+		// vertical style is setted as "true" for mobile devices
+		@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
+			@include mixins.process-vertical();
+		}
+	}
+}

@@ -1,0 +1,109 @@
+///
+/// Punica CSS Framework
+/// Components : Tabnav
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "mixins";
+@use "variables";
+
+/// if tabnav is enable
+@if enabled('components', 'tabnav') {
+	.#{class('tabnav', 'name')} {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		border-bottom: components('tabnav', 'border-width') theme('border', 'style') theme('border', 'color');
+		padding: 0;
+		&>.#{class('button', 'group')} {
+			box-shadow: none;
+			border-radius: 0;
+		}
+		/// Default button styles in Tabnav
+		@include mixins.tab-button-styles() {
+			background: transparent;
+			border: none;
+			border-radius: 0 !important;
+			line-height: unset;
+	        font-size: 1.025em;
+	        font-weight: theme('components', 'tabnav', 'font-weight');
+			color: theme('color', 'text');
+			padding: .935rem 1.4rem;
+			box-shadow: none;
+			border-bottom: components('tabnav', 'border-width') solid transparent;
+	        margin-bottom: -#{components('tabnav', 'border-width')};
+			&:hover {
+				color: theme('color', 'text');
+				border-bottom-color: theme('color', 'grey');
+			}
+			&:focus {
+				background: transparent;
+			}
+			&.#{class('tabnav', 'active')} {
+				border-bottom-color: theme('color', 'primary');
+				i, [class^="#{class('icon', 'class-name')}"] {
+					color: inherit;
+				}
+			}
+			i, [class^="#{class('icon', 'class-name')}"] {
+				font-size: components('button', 'icon', 'font-size');
+			}
+		}
+		/// Bottom Tabnav
+		@if features('components', 'tabnav', 'bottom-position') {
+			&.#{class('tabnav', 'bottom')} {
+				border-bottom: 0;
+				border-top: components('tabnav', 'border-width') theme('border', 'style') theme('color', 'secondary');
+				@include mixins.tab-button-styles() {
+					margin-top: -#{components('tabnav', 'border-width')};
+					border-top: components('tabnav', 'border-width') solid transparent;
+					border-bottom: 0;
+					margin-bottom: 0; 
+					&:hover {
+						border-top-color: theme('color', 'grey');
+					}
+					&.#{class('tabnav', 'active')} {
+						border-top-color: theme('color', 'primary');
+					}
+				}
+			}
+		}
+		///
+		/// STYLES
+		///
+		@if features('components', 'tabnav', 'styles') {
+			@each $type-name, $color in variables.$styles {
+				&.#{$type-name} {
+					.#{class('button', 'name')},
+					a.#{class('button', 'name')},
+					.#{class('button', 'dropdown')} .#{class('button', 'name')},
+					.#{class('button', 'dropdown')} a.#{class('button', 'name')} {
+						&.#{class('tabnav', 'active')} {
+							border-bottom-color: $color;
+						}
+					}
+				}
+				/// Bottom Tabnav
+				@if features('components', 'tabnav', 'bottom-position') {
+					&.#{$type-name}.#{class('tabnav', 'bottom')} {
+						.#{class('button', 'name')},
+						a.#{class('button', 'name')},
+						.#{class('button', 'dropdown')} .#{class('button', 'name')},
+						.#{class('button', 'dropdown')} a.#{class('button', 'name')} {
+							&.#{class('tabnav', 'active')} {
+								border-top-color: $color;
+							}
+						}
+					}
+				}
+			}
+		}
+        &.#{class('tabnav', 'centered')} {
+            justify-content: center;
+        }
+	}
+}

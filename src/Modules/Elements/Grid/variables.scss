@@ -1,0 +1,17 @@
+///
+/// Punica CSS Framework
+/// Layout : Grid -> Variables
+///
+
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Global/Getters" as *;
+
+/// PREFERENCES =========================================
+$viewports: (
+	(class('grid', 'extra-small'), elements('grid', 'breakpoints', 'extra-small')),
+	(class('grid', 'small'), elements('grid', 'breakpoints', 'small')),
+	(class('grid', 'medium'), elements('grid', 'breakpoints', 'medium')),
+	(class('grid', 'large'), elements('grid', 'breakpoints', 'large')),
+	(class('grid', 'extra-large'), elements('grid', 'breakpoints', 'extra-large')),
+	(class('grid', 'extra-extra-large'), elements('grid', 'breakpoints', 'extra-extra-large'))
+);

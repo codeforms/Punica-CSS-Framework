@@ -1,0 +1,41 @@
+///
+/// Punica CSS Framework
+/// Core/Global/Helpers.scss
+//
+
+///
+/// Debugging title
+/// 
+/// @return string
+///
+@function debug-title() 
+{
+	@return '[ INVALID KEY ] :';
+}
+
+///
+/// Debugging text
+///
+/// @param {String} $file
+/// 
+/// @return text
+/// 
+@function debug-text($file) 
+{
+	@return 'key is not found in the #{$file}.scss API file.';
+}
+
+/// 
+/// Debugging message
+/// 
+/// @param {Text} $message
+/// @param {String} $file
+/// 
+/// @return text
+/// 
+@function debug-message($message, $file) 
+{
+	$message: debug-title() + ' " #{$message} " ' + debug-text($file);
+
+	@warn $message; @error $message;
+}

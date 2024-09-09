@@ -1,0 +1,115 @@
+///
+/// Punica CSS Framework
+/// Components : Timeline
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "variables";
+
+/// if timeline is enable
+@if enabled('components', 'timeline') {
+	.#{class('timeline', 'name')} {
+		.#{class('timeline', 'item')} {
+			display: flex;
+			padding: components('timeline', 'item', 'padding');
+			position: relative;
+			flex-direction: column;
+			justify-content: center;
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: components('timeline', 'border-width');
+				background-color: theme('border', 'color');
+			}
+			&:target .#{class('timeline', 'type')} {
+				border-color: theme('color', 'primary');
+				box-shadow: 0 0 0.2em theme('color', 'primary');
+			}
+			.#{class('timeline', 'type')} {
+				position: absolute;
+				z-index: 1;
+				display: flex;
+				width: components('timeline', 'type-width');
+				height: components('timeline', 'type-width');
+				top: 13px;
+				left: -(calc(components('timeline', 'type-width') / 2px) - components('timeline', 'border-width'));
+				align-items: center;
+				background-color: theme('color', 'secondary');
+				border: 2px theme('border', 'style') theme('border', 'color');
+				border-radius: 50%;
+				justify-content: center;
+				flex-shrink: 0;
+				@include shadow();
+				///
+				/// STYLES
+				///
+				@if features('components', 'timeline', 'styles') {
+					@each $type, $bg-color, $color in variables.$styles {
+					    &.#{$type} {
+							background-color: $bg-color;
+							color: $color;
+							border-color: darken($bg-color, 5%);
+						}
+					}
+				}
+			}
+			.#{class('timeline', 'author')},
+			.#{class('timeline', 'body')},
+			.#{class('timeline', 'date')},
+			.#{class('timeline', 'actions')},
+			.#{class('timeline', 'media')} {
+				min-width: 0;
+				max-width: 100%;
+				color: theme('color', 'text');
+				flex: auto;
+				margin-left: 10px;
+				width: 100%;
+			}
+			.#{class('timeline', 'author')} {
+				font-weight: bold;
+				font-size: 1rem;
+				color: darken(theme('color', 'text'), 12%);
+			}
+			.#{class('timeline', 'date')} {
+				font-size: .9em;
+				opacity: .6;
+			}
+			///
+			/// MEDIA
+			///
+			@if features('components', 'timeline', 'timeline') {
+				.#{class('timeline', 'media')} {
+					margin-top: 16px;
+					display: flex;
+					flex-wrap: wrap;
+					@include embedded-media();
+					img {
+						display: block;
+					}
+				}
+				///
+				/// MEDIA GROUP
+				///
+				@if features('components', 'timeline', 'media-group') {
+					@include media-group-specs(class('timeline', 'media'));
+				}
+			}
+			.#{class('timeline', 'actions')} {
+				margin-top: 16px;
+			}
+			&:last-child::before {
+				background: linear-gradient(180deg, theme('border', 'color') 45%, rgba(255,255,255,0) 100%);
+			}
+			&:first-child::before {
+				background: linear-gradient(0deg, theme('border', 'color') 45%, rgba(255,255,255,0) 100%);
+			}
+		}
+	}
+}

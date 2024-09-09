@@ -1,0 +1,168 @@
+///
+/// Punica CSS Framework
+/// Core/Theme/Getters.scss
+/// 
+
+@use "../../options" as option;
+@use "../Global/Getters" as get;
+
+///
+/// Get Active Theme
+/// @param {String} $theme
+///
+@mixin get-theme($theme: 'default') 
+{
+    $set-theme: if(map-has-key(themes.$themes, $theme), $theme, theme-not-found($theme));
+	$theme-map: map-get(themes.$themes, $set-theme) !global;
+	@content;
+	$theme-map: null !global;
+}
+
+///
+/// Get active theme's value by key(s)
+///
+/// @param {String} $node
+/// @param {String} $key
+/// @param {String} $child
+/// @param {String} $sub
+///
+/// @example theme('name')
+/// @example theme('color', 'primary')
+/// @example theme('elements', 'button', 'font-weight')
+/// @example theme('elements', 'button', 'secondary', 'background')
+///
+/// @return mixed
+/// 
+@function theme($node, $key: null, $child: null, $sub: null) 
+{
+	$value: if(map-has-key($theme-map, $node), map-get($theme-map, $node), null);
+
+	@if ($value != null) and $key {
+		$value: if(map-has-key($value, $key), map-get($value, $key), null);
+
+		@if ($value != null) and $child {
+			$value: if(map-has-key($value, $child), map-get($value, $child), null);
+
+			@if ($value != null) and $sub {
+				$value: if(map-has-key($value, $sub), map-get($value, $sub), null);
+			}
+		}
+	}
+
+	@return $value;
+}
+
+///
+/// Get a specific component's variable
+///
+/// @param {String(s)} $keys
+///
+/// @return mixed
+/// 
+@function components($keys...) 
+{
+	@return set_variable('components', $keys...);
+}
+
+///
+/// Get a specific element's variable
+///
+/// @param {String(s)} $keys
+///
+/// @return mixed
+/// 
+@function elements($keys...) 
+{
+	@return set_variable('elements', $keys...);
+}
+
+///
+/// Get features of Component/Elements
+/// from theme map or options.scss API file
+/// 
+/// @param {String} $node
+/// @param {String} $module
+/// @param {String} $feature
+///
+/// @return bool
+///
+@function features($node, $module, $feature : null) 
+{
+	@if theme($node, $module, 'features', $feature) != null {
+		@return theme($node, $module, 'features', $feature);
+	};
+
+	@return map-get(map-get(get.options($module), 'features'), $feature);
+}
+
+///
+/// Is component/element enabled?
+///
+/// @param {String} $node
+/// @param {String} $module
+/// 
+/// @return bool
+///
+@function enabled($node, $module) 
+{
+	@if theme($node, $module, 'enabled') != null {
+		@return theme($node, $module, 'enabled');
+	};
+
+	@return get.options($module, 'enabled');
+}
+
+///
+/// Set variable
+///
+/// @param {String} $module
+/// @param {String(s)} $keys
+///
+/// @return mixed
+///
+@function set_variable($module, $keys...) 
+{
+	@if theme($module, nth($keys, 1), nth($keys, 2)) {
+		$value : theme($module, nth($keys, 1), nth($keys, 2));
+
+		@if length($keys) > 2 {
+			$value: theme($module, nth($keys, 1), nth($keys, 2), nth($keys, 3));
+		}
+
+		@if($value != null) {
+			@return $value
+		};
+
+		@return get_default_variable($keys);
+	} @else {
+		@return get_default_variable($keys);
+	}
+}
+
+///
+/// Get default variables
+/// from the options.scss API file
+///
+/// @param {String(s)} $keys
+/// 
+/// @return mixed
+/// 
+@function get_default_variable($keys) 
+{
+	$value: get.variables(nth($keys, 1), nth($keys, 2));
+
+	@if length($keys) > 2 {
+		$value: get.variables(nth($keys, 1), nth($keys, 2), nth($keys, 3));
+	}
+
+	@return $value;
+};
+
+/// 
+/// @param {String} $theme
+///
+@function theme-not-found($theme) 
+{
+    $error: "Invalid theme name: #{$theme}. Punica's theme map does not contains a value associated with #{$theme}. Please check the 'themes.scss' file.";
+    @error $error;
+}

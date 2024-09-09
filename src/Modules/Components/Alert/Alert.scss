@@ -1,0 +1,58 @@
+///
+/// Punica CSS Framework
+/// Components : Alert
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "variables";
+
+/// if alert is enable
+@if enabled('components', 'alert') {
+	.#{class('alert', 'name')} {
+		@include set-style(theme('color', 'background'), theme('color', 'text')) {
+			display: block;
+			@include border();
+			border-radius: theme('border', 'radius');
+			padding: components('alert', 'padding');
+			margin: components('alert', 'margin');
+			width: components('alert', 'margin');
+			font-weight: bold;
+			a {
+				color: theme('color', 'text');
+				text-decoration: underline;
+				&:focus,&:hover,&:active,&.#{class('alert', 'active')} {
+					opacity: .75;
+				}
+			}
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			>i,
+			>.#{class('icon', 'class-name')} {
+				vertical-align: components('alert', 'icon', 'vertical-align');
+			}
+		}
+		///
+		/// STYLES
+		///
+		@if features('components', 'alert', 'styles') {
+			@each $style-name, $bg-color in variables.$styles {
+				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
+					border-color: darken($bg-color, 5%);
+				};
+			}
+		}
+		///
+		/// SIZES
+		///
+		@if features('components', 'alert', 'sizes') {
+			@each $size-name, $font-size, $padding in variables.$sizes {
+				@include set-size($font-size, $padding, $size-name);
+			}
+		}
+	}
+}

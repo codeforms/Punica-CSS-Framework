@@ -1,0 +1,326 @@
+///
+/// Punica CSS Framework
+/// Components : Navbar
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "mixins";
+@use "variables";
+
+/// if navbar is enable
+@if enabled('components', 'navbar') {
+	.#{class('navbar', 'spacer')} {
+		margin-top: components('navbar', 'spacer-top');
+	}
+	.#{class('navbar', 'name')} {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: space-between;
+		min-height: components('navbar', 'min-height');
+		background: theme('color', 'primary');
+		color: theme('color', 'negative');
+		width: 100%;
+		// grid container
+		.#{class('grid', 'container')} {
+			display: flex;
+			width: elements('grid', 'container', 'width'); // options->grid
+		}
+		// navbar brand
+		.#{class('navbar', 'brand')} {
+			padding: components('navbar', 'brand', 'padding');
+			display: flex;
+			justify-content: center;
+			min-height: 100%;
+			align-items: center;
+			margin-right: components('navbar', 'brand', 'margin-right');
+			white-space: nowrap;
+			img {
+				width: components('navbar', 'brand', 'img-width');
+			}
+			a,
+			a:visited {
+				font-size: components('navbar', 'font-size');
+				text-decoration: none;
+				color: theme('color', 'negative');
+				display: flex;
+				font-weight: components('navbar', 'brand', 'font-weight');
+			}
+		}
+		// navbar burger
+		input[type=checkbox]##{class('navbar', 'burger')},
+		.#{class('navbar', 'burger')} {
+			display: none;
+		}
+		.#{class('navbar', 'burger')} {
+			&::before {
+				content: "\2630";
+				font-size: components('navbar', 'burger', 'icon-size');
+				display: none;
+				min-height: components('navbar', 'min-height');
+				max-height: components('navbar', 'min-height');
+				position: absolute;
+				cursor: pointer;
+				right: 0;
+				top: 0;
+			}
+		}
+		// navbar links
+		section.#{class('navbar', 'links')} {
+			display: flex;
+			flex: 1 0 0;
+			align-items: center;
+			// navbar sections
+			div.#{class('navbar', 'section')} {
+				flex: 1 0 0;
+				display: flex;
+				height: 100%;
+				align-items: center;
+				&:not(:first-child):last-child {
+					justify-content: flex-end;
+				}
+				input[type='text'] {
+					background-color: darken(theme('color', 'primary'), 7%);
+					color: theme('color', 'negative');
+					border-color: lighten(theme('color', 'primary'), 8%);
+					&::placeholder {
+						color: theme('color', 'negative');
+					}
+					&:focus {
+						outline: theme('input', 'outline-width') solid lighten(theme('color', 'primary'), 26%);
+					}
+				}
+				///
+				/// DIVIDED NAVBAR
+				///
+				@if features('components', 'navbar', 'divided') {
+					&.#{class('navbar', 'divided')} {
+						@include mixins.navbar-divided();
+						.#{class('button', 'group')} {
+							.#{class('button', 'name')},
+							.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+								border: solid darken(theme('color', 'primary'), 7.15%);
+							}
+						}
+						@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
+							.#{class('button', 'group')} {
+								.#{class('button', 'name')},
+								.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+									border: 0 !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.#{class('navbar', 'fixed')} {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0px;
+			margin-top: 0;
+			transform: translateY(0px);
+			z-index: 5;
+		}
+		.#{class('button', 'group')} {
+			height: 100%;
+			min-height: 100%;
+			box-shadow: none;
+			.#{class('button', 'name')},
+			.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+				background: transparent;
+				border-color: transparent;
+				color: theme('color', 'negative');
+				min-height: 100%;
+				border-radius: 0;
+				border: 0;
+				i, span.#{class('icon', 'class-name')} {
+					color: theme('color', 'negative');
+				}
+				&:hover {
+					background: darken(theme('color', 'primary'), 10.15%);
+					border-radius: 0;
+				}
+				&:active,
+				&.#{class('button', 'active')} {
+					color: theme('color', 'negative');
+					background: darken(theme('color', 'primary'), 7%);
+					transition: components('button', 'transition');
+					&:hover {
+						transition: components('button', 'transition');
+						background: darken(theme('color', 'primary'), 10%);
+					}
+				}
+			}
+			.#{class('button', 'dropdown')}:last-child,
+			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:first-child,
+			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:last-child {
+				border-radius: 0;
+			}
+		}
+		.#{class('button', 'name')},
+		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+			font-size: components('navbar', 'font-size');
+			padding: components('navbar', 'button-padding');
+			font-weight: theme('components','navbar', 'font-weight');
+		}
+
+		///
+		/// GRADIENT
+		///
+		@if features('components', 'navbar', 'gradient') {
+			&.#{class('navbar', 'gradient')} {
+				background: linear-gradient(
+					to top, 
+					theme('color', 'primary') 0%, 
+					lighten(theme('color', 'primary'), 11.5%) 2%, 
+					darken(theme('color', 'primary'), 3%) 97%, 
+					lighten(theme('color', 'primary'), 11.5%) 100%
+				);
+			}
+			/// Gradient Left-To-Right
+			&.#{class('navbar', 'gradient')}#{'-ltr'} {
+				background: linear-gradient(135deg, lighten(theme('color', 'primary'), 7.5%), theme('color', 'primary'));
+			}
+			/// Gradient Right-To-Left
+			&.#{class('navbar', 'gradient')}#{'-rtl'} {
+				background: linear-gradient(-135deg, lighten(theme('color', 'primary'), 7.5%), theme('color', 'primary'));
+			}
+		}
+
+		/// 
+		/// NAVBAR THEMES
+		///
+		@if features('components', 'navbar', 'themes') {
+			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color in variables.$themes {
+				&.#{$theme-name} {
+					@include mixins.navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color);
+				}
+			}
+		}
+		///
+		/// NAVBAR SIZES
+		///
+		@if features('components', 'navbar', 'sizes') {
+			@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in variables.$sizes {
+				&.#{$size-name} {
+					min-height: $min-height;
+					& .#{class('button', 'name')},
+					& .#{class('button', 'dropdown')} .#{class('button', 'name')} {
+						font-size: $font-size;
+						padding: $button-padding;
+					}
+					@at-root .#{class('navbar', 'spacer')}-#{$size-name} {
+						margin-top: $spacer-top !important;
+					}
+					@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
+						@at-root .#{class('navbar', 'spacer')}-#{$size-name} {
+							margin-top: div($spacer-top, 2) !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	//
+	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
+		.#{class('navbar', 'spacer')} {
+			margin-top: 0;
+		}
+		.#{class('navbar', 'name')} {
+			// grid container
+			.#{class('grid', 'container')} {
+				padding: 0 div(elements('grid', 'container', 'padding'), 2);
+			}
+			&.#{class('navbar', 'fixed')} {
+				position: relative;
+			}
+			section.#{class('navbar', 'links')} {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 0;
+				top: components('navbar', 'min-height');
+				left: 0;
+				overflow-x: auto;
+				overflow-y: hidden;
+				background: theme('color', 'secondary');
+				z-index: 1;
+				margin: 0 !important;
+				padding: 0 !important;
+				@include shadow();
+				.#{class('navbar', 'section')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')} .#{class('button', 'name')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
+					display: block !important;
+					width: 100%;
+					text-align: left;
+					position: relative;
+				}
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
+					color: theme('color', 'text');
+					background: theme('color', 'secondary');
+					i, span.#{class('icon', 'class-name')} {
+						display: none;
+					}
+				}
+				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')} {
+					max-height: 100%;
+					box-shadow: none;
+				}
+			}
+			.#{class('navbar', 'burger')} {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				&::before {
+					content: "\2715";
+					padding: components('navbar', 'burger', 'padding');
+					font-size: components('navbar', 'burger', 'icon-size');
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					top: auto;
+				}
+			}
+			///
+			/// NAVBAR SIZES
+			///
+			@if features('components', 'navbar', 'sizes') {
+				@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in variables.$sizes {
+					&.#{$size-name} {
+						& .#{class('navbar', 'burger')},
+						& .#{class('navbar', 'burger')}::before {
+							min-height: $min-height;
+							max-height: $min-height;
+						}
+						section.#{class('navbar', 'links')} {
+							top: $min-height;
+						}
+					}
+				}
+			}
+			input[type=checkbox]##{class('navbar', 'burger')}:not(:checked) ~ section.#{class('navbar', 'links')} {
+				height: 0;
+			}
+			input[type=checkbox]##{class('navbar', 'burger')}:checked ~ section.#{class('navbar', 'links')} {
+				height: auto;
+			}
+			input[type=checkbox]##{class('navbar', 'burger')}:not(:checked) ~ .#{class('navbar', 'burger')}::before {
+				content: "\2630"; // open
+			}
+			input[type=checkbox]##{class('navbar', 'burger')}:checked ~ .#{class('navbar', 'burger')}::before {
+				content: "\2715"; // close
+			}
+		}
+	}
+}

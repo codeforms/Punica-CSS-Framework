@@ -1,0 +1,80 @@
+///
+/// Punica CSS Framework
+/// Components : Caption
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "variables";
+
+/// if caption is enable
+@if enabled('elements', 'caption') {
+	.#{class('caption', 'name')} {
+		display: flex;
+	    align-items: center;
+		margin: elements('caption', 'margin');
+		font-size: elements('caption', 'font-size');
+		font-weight: theme('typography', 'header-weight');
+		line-height: theme('typography', 'line-height') - .2;
+		text-align: left;
+		>img,
+	    >.#{class('icon', 'class-name')},
+	    >i {
+	    	margin-right: elements('caption', 'media', 'margin');
+	    }
+	    >.#{class('icon', 'class-name')},
+	    >i {
+	    	font-size: elements('caption', 'font-size') * 1.4;
+	    }
+	    &.#{class('caption', 'divided')} {
+	    	border-bottom: set-border();
+	    	padding-bottom: elements('caption', 'media', 'margin');
+	    }
+	    &>span,
+	    &>div {
+	    	/// ..children of a flex container are
+	    	/// forced to have a block-flavored display type.
+	    	display: contents;
+	    }
+	    &.#{class('caption', 'centered')} {
+	    	flex-direction: column;
+	    	text-align: center;
+	    	margin: inherit;
+	    	>img,
+		    >.#{class('icon', 'class-name')},
+		    >i {
+		    	margin-right: unset;
+		    	margin-bottom: 2rem;
+		    }
+	    }
+	    ///
+		/// SIZES
+		///
+		@if features('elements', 'caption', 'sizes') {
+			@each $size-name, $margin, $font-size, $font-weight in variables.$caption-sizes {
+				@include set-size($font-size, null, $size-name) {
+					margin: $margin;
+					font-weight: $font-weight;
+					>.#{class('icon', 'class-name')},
+				    >i {
+				    	font-size: $font-size * 1.4;
+				    }
+				};
+			}
+		}
+		//
+		@include breakpoints(layouts('grid', 'breakpoints', 'medium'), 'max-width') {
+			flex-direction: column;
+	    	text-align: center;
+	    	margin: inherit;
+	    	>img,
+		    >.#{class('icon', 'class-name')},
+		    >i {
+		    	margin-right: unset;
+		    	margin-bottom: 2rem;
+		    }
+		}
+	}
+}

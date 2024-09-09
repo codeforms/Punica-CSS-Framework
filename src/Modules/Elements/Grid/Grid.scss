@@ -1,0 +1,71 @@
+///
+/// Punica CSS Framework
+/// Elements : Grid
+///
+
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "variables" as *;
+
+/// if grid is enable
+@if enabled('elements', 'grid') {
+	$column-size: elements('grid', 'columns', 'size');
+
+	.#{class('grid', 'container')} {
+		width: elements('grid', 'container', 'width');
+		margin: elements('grid', 'container', 'margin');
+		padding: 0 elements('grid', 'container', 'padding');
+	}
+	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
+		.#{class('grid', 'container')} {
+			padding: 0 calc(elements('grid', 'container', 'padding') / 3);
+		}
+	}
+	.#{class('grid', 'row')} {
+		display: grid;
+		grid-gap: elements('grid', 'gap');
+		grid-template-columns: repeat($column-size, 1fr);
+		&> [class^="#{class('grid', 'column')}"] {
+			height: fit-content;
+			padding: elements('grid', 'columns', 'padding');
+			min-height: elements('grid', 'columns', 'min-height');
+		}
+		/// Equal height
+		@if features('elements', 'grid', 'equal') {
+			&.#{class('grid', 'equal')} > [class^="#{class('grid', 'column')}"] {
+				height: auto;
+			}
+		}
+	}
+	// Default Grid System
+	@for $id from 1 through $column-size {
+		.#{class('grid', 'column')}-#{$id} {
+			grid-column: span #{$id};
+		}
+	}
+	// Breakpoints
+	@each $label, $breakpoint in $viewports { 
+		@include breakpoints($breakpoint) {
+			@for $id from 1 through $column-size {
+				.#{class('grid', 'column')}-#{$label}-#{$id} {
+					grid-column: span #{$id};
+				}
+			}
+		}
+	}
+	// Offset
+	@if features('elements', 'grid', 'offset') {
+		@each $label, $breakpoint in $viewports {
+			@include breakpoints($breakpoint) {
+				@for $id from 1 through $column-size {
+					@for $offset-id from 2 through $column-size {
+						.#{class('grid', 'column')}-#{$label}-#{$id}.#{class('grid', 'offset')}-#{$label}-#{$offset-id} {
+							grid-column: #{$offset-id} / span #{$id};
+						}
+					}
+				}
+			}
+		}
+	}
+}

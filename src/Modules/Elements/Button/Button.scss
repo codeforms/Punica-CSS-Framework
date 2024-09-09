@@ -1,0 +1,154 @@
+///
+/// Punica CSS Framework
+/// Elements : Button
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "../../../Modules/Elements/Typography/variables" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+/// if button is enable
+@if enabled('elements', 'button') {
+	a.#{class('button', 'name')},
+	.#{class('button', 'name')} {
+		display: inline-flex;
+		font-family: $font-family; // typography > variables
+		font-size: elements('button', 'font-size');
+		font-weight: elements('button', 'font-weight');
+		text-decoration: none;
+		white-space: nowrap;
+		outline: none;
+		width: elements('button', 'width');
+		background: theme('color', 'background');
+		background-image: none;
+		@include border();
+		appearance: none;
+		color: theme('color', 'text');
+
+		/// border radius
+		border-radius: if(theme('elements', 'button', 'radius'), theme('elements', 'button', 'radius'), theme('border', 'radius'));
+
+		box-sizing: border-box;
+		cursor: pointer;
+		line-height: elements('button', 'line-height');
+		padding: elements('button', 'padding');
+		transition: elements('button', 'transition');
+		user-select: none;
+		box-shadow: none;
+		align-items: center;
+		justify-content: center;
+		overflow: visible;
+		text-align: center;
+		&:focus,
+		&:hover {
+			transition: elements('button', 'transition');
+			background-image: none;
+		}
+		&:hover {
+			background: theme('color', 'secondary');
+		}
+		&:active,
+		&:focus {
+			background: theme('color', 'background');
+		}
+
+		///
+		/// GRADIENT
+		///
+		@if features('elements', 'button', 'gradient') {
+			&.#{class('button', 'gradient')} {
+				z-index: 1;
+				position: relative;
+				@include set-gradient(theme('color', 'background'));
+				&:before {
+					position: absolute;
+					content: "";
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					transition: opacity 0.25s;
+					z-index: -1;
+					@include set-gradient(theme('color', 'background'), to bottom, 23%);
+				}
+				&:hover::before {
+					opacity: 1;
+				}
+				&:active::before,
+				&:focus::before {
+					@include set-gradient(theme('color', 'background'), to bottom, 27%);
+				}
+			}
+		}
+
+		&.#{class('button', 'active')} {
+			color: theme('color', 'text');
+			background: theme('color', 'active');
+			background-image: none;
+			text-decoration: none;
+			&:focus,
+			&:hover {
+				color: theme('color', 'text');
+				background: lighten(theme('color', 'active'), 4%);
+			}
+		}
+        &.#{class('button', 'inactive')} {
+			pointer-events: none;
+			cursor: default;
+			background-image: none;
+		}
+		// Block Button
+		&.#{class('button', 'block')} {
+    		display: flex;
+		    flex: 1;
+		    width: auto;
+		}
+		i, [class^="#{class('icon', 'class-name')}"] {
+			font-size: elements('button', 'icon', 'font-size');
+			color: theme('color', 'text');
+			text-shadow: none;
+		}
+		///
+		/// STYLES
+		///
+		@if features('elements', 'button', 'styles') {
+			@each $theme-name, $theme-color, $border-color in $button-styles {
+				&.#{$theme-name} {
+					@include button-styles($theme-color, $border-color);
+				}
+				@if features('elements', 'button', 'outlined') {
+					&.#{$theme-name}.#{class('button', 'outlined')} {
+						@include button-styles($theme-color, $border-color, true);
+					}
+				}
+			}
+		}
+
+		// Button Link
+		@include link-button();
+
+		///
+		/// SIZES
+		///
+		@if features('elements', 'button', 'sizes') {
+			@include button-sizes();
+		}
+	}
+	///
+	/// BUTTON GROUPS
+	///
+	@if features('elements', 'button', 'group') {
+		@include button-group();
+	}
+	///
+	/// DROPDOWN
+	///
+	@if features('elements', 'button', 'dropdown') {
+		@include dropdown();
+	}
+}

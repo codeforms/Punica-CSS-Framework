@@ -1,0 +1,21 @@
+///
+/// Punica CSS Framework
+/// Components : Breadcrumb -> Variables
+///
+
+/// SIZES ===============================================
+$sizes: (
+    (
+    	'small', // size name (class)
+    	.986em, // font-size
+    	.15em, // seperator-padding
+    	null // seperator-size
+    ),
+    (
+    	'large', // size name (class)
+    	1.38em, // font-size
+    	.15em, // seperator-padding
+    	null // seperator-size
+    )
+);
+

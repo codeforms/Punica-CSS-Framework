@@ -1,32 +1,29 @@
-/// 
+///
 /// Punica CSS Framework
 /// 
-/// @link http://www.punicacss.com
-/// @link http://github.com/codeforms/Punica-CSS-Framework
-/// 
-/// Released under the MIT license
-/// @link http://opensource.org/licenses/MIT
-///
+
+@use "Core/Theme/Getters" as *;
+@use "themes" as get;
 
 /// ======================================================
-	$active-theme: default; // _themes/index
+	$active-theme: default;
+/// ======================================================
+	$theme: if(map-has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
+	$theme-map: map-get(get.$themes, $theme) !global;
 /// ======================================================
 
-@use "_themes/_getters" as *;
-@use "_themes/index" as get;
+/*! 
+ * PUNICA CSS - #{theme('name')}
+ * v3.0.0 Beta build 1054
+ * 
+ * @link http://github.com/codeforms/Punica-CSS-Framework
+ * 
+ * Released under the MIT license
+ * @link http://opensource.org/licenses/MIT
+ */
 
-$theme: if(map-has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
-$theme-map: map-get(get.$themes, $theme) !global;
-
-/// ======================================================
-@use "Layout/index" as layout;
-@use "Elements/index" as elements;
-@use "Components/index" as components;
-@use "Utilities/helpers";
-/// ======================================================
-
-@debug "DONE \1F5F8";
-@debug "The #{$theme} theme is compiled successfully.";
-
+@use "Modules/Elements/index" as elements;
+@use "Modules/Components/index" as components;
+@use "Modules/Utilities/helpers";
+@debug "#{theme('name')} is compiled successfully.";
 $theme-map: null !global;
-/// ======================================================

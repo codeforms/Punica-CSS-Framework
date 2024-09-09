@@ -1,0 +1,120 @@
+///
+/// Punica CSS Framework
+/// Components : Panel
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+@use "variables";
+
+/// if panel is enable
+@if enabled('components', 'panel') {
+	.#{class('panel', 'name')} {
+		display: flex;
+		flex-direction: column;
+
+		// has panel border?
+		@if features('components', 'panel', 'border') {
+			@include border();
+			/// border radius
+			border-radius: if(theme('components', 'panel', 'radius'), theme('components', 'panel', 'radius'), theme('border', 'radius'));
+		}
+
+		// has panel shadow?
+		@if features('components', 'panel', 'shadow') {
+			@include shadow();
+		}
+
+		/// background color
+		background-color: if(theme('components', 'panel', 'background'), theme('components', 'panel', 'background'), theme('color', 'background'));
+
+		margin: components('panel', 'margin');
+		&>.#{class('panel', 'header')},
+		&>.#{class('panel', 'bottom')} {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			.#{class('panel', 'actions')} {
+				margin-left: auto;
+				&:before {
+					flex-grow: 1;
+				}
+			}
+		}
+		&>.#{class('panel', 'header')} {
+			border-bottom: set-border();
+			padding: components('panel', 'title-padding');
+			&.dashed {
+				border-bottom-style: dashed;
+			}
+			&.dotted {
+				border-bottom-style: dotted;
+			}
+			>.#{class('panel', 'title')} {
+				font-size: 1.185rem;
+				font-weight: theme('typography', 'header-weight');
+			}
+		}
+		&>.#{class('panel', 'content')} {
+			flex: 1 1 auto;
+			padding: components('panel', 'padding');
+			height: auto;
+			///
+			/// MEDIA
+			///
+			@if features('components', 'panel', 'media') {
+				&>.#{class('panel', 'media')} {
+					min-width: 0;
+					flex: auto;
+					margin-bottom: 32px;
+					flex-wrap: wrap;
+					display: flex;
+					@include embedded-media();
+					img {
+						display: block;
+					}
+				}
+				///
+				/// MEDIA GROUP
+				///
+				@if features('components', 'panel', 'media-group') {
+					@include media-group-specs(class('panel', 'media'));
+				}
+			}
+			.#{class('panel', 'headline')},
+			p.#{class('panel', 'headline')} {
+				font-size: 1.39em;
+				line-height: 1.5;
+				margin-bottom: 26px;
+				color: darken(theme('color', 'text'), 16%);
+				letter-spacing: -.0158em;
+			}
+		}
+		&>.#{class('panel', 'bottom')} {
+			min-height: 50px;
+			border-top: set-border();
+			padding: components('panel', 'padding');
+		}
+		///
+		/// SIZES
+		///
+		@if features('components', 'panel', 'sizes') {
+			@each $size-name, $font-size, $padding in variables.$sizes {
+				&.#{$size-name} {
+					>.#{class('panel', 'header')} {
+						padding: $padding;
+						.#{class('panel', 'title')} {
+							font-size: $font-size;
+						}
+					}
+					>.#{class('panel', 'content')},
+					>.#{class('panel', 'bottom')} {
+						padding: $padding;
+					}
+				}
+			}
+		}
+	}
+}

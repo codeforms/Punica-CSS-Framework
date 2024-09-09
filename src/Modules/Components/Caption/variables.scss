@@ -1,0 +1,22 @@
+///
+/// Punica CSS Framework
+/// Components : Caption -> Variables
+///
+
+@use "../../../Core/Theme/Getters" as *;
+
+/// SIZES =============================================== 
+$caption-sizes: (
+    (
+    	"small", // size name (class)
+    	1em .1rem, // margin
+    	1.65rem, // font-size
+    	theme('typography', 'font-weight') // font-weight
+    ),
+    (
+    	"large", // size name (class)
+    	1.4em .3rem, // margin
+    	2.35rem, // font-size
+    	theme('typography', 'header-weight') // font-weight
+    )
+);
