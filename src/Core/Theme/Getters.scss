@@ -132,11 +132,9 @@
 		@if($value != null) {
 			@return $value
 		};
-
-		@return get_default_variable($keys);
-	} @else {
-		@return get_default_variable($keys);
 	}
+	
+	@return get_default_variable($keys);
 }
 
 ///
