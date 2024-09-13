@@ -26,7 +26,7 @@
 		///
 		@if features('components', 'billboard', 'styles') {
 			@each $style-name, $bg-color in variables.$styles {
-				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
+				@include set-style($bg-color, white, $style-name) {
 					border-color: darken($bg-color, 4.5%);
 				};
 			}

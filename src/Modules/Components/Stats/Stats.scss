@@ -5,6 +5,7 @@
 
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
@@ -37,7 +38,12 @@
 		>.#{class('stats', 'subtitle')} {
 			font-size: components('stats', 'subtitle', 'font-size');
 			margin-top: components('stats', 'subtitle', 'margin-top');
-			color: theme('color', 'grey');
+
+			@if theme('type') == 'light' {
+				color: darken(color.$grey, 20%);
+			} @else if theme('type') == 'dark' {
+				color: lighten(color.$grey, 20%);
+			}
 		}
 		>.#{class('stats', 'value')} {
 			font-weight: components('stats', 'value', 'font-weight');
@@ -60,7 +66,7 @@
 		///
 		@if features('components', 'stats', 'styles') {
 			@each $style-name, $bg-color in variables.$styles {
-				@include set-style($bg-color, theme('color', 'negative'), $style-name) {
+				@include set-style($bg-color, white, $style-name) {
 					border-color: $bg-color;
 					background: transparent;
 					color: inherit;

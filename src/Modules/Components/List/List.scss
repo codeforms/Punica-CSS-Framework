@@ -5,6 +5,7 @@
 
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
@@ -80,7 +81,7 @@
 			&.#{class('list', 'striped')} {
 				>.#{class('list', 'item')} {
 					&:nth-of-type(odd) {
-						background: theme('color', 'secondary');
+						background: color.$grey;
 					}
 				}
 			}
@@ -92,7 +93,7 @@
 			&.#{class('list', 'hovered')} {
 				>.#{class('list', 'item')} {
 					&:hover {
-						background: theme('color', 'secondary');
+						background: color.$grey;
 						transition: components('list', 'item', 'transition');
 					}
 				}

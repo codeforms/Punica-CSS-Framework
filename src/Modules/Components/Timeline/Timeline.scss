@@ -5,6 +5,7 @@
 
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
@@ -41,7 +42,7 @@
 				top: 13px;
 				left: -(calc(components('timeline', 'type-width') / 2px) - components('timeline', 'border-width'));
 				align-items: center;
-				background-color: theme('color', 'secondary');
+				background-color: color.$grey;
 				border: 2px theme('border', 'style') theme('border', 'color');
 				border-radius: 50%;
 				justify-content: center;

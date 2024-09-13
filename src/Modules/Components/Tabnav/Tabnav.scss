@@ -5,6 +5,7 @@
 
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "mixins";
@@ -38,7 +39,11 @@
 	        margin-bottom: -#{components('tabnav', 'border-width')};
 			&:hover {
 				color: theme('color', 'text');
-				border-bottom-color: theme('color', 'grey');
+				@if theme('type') == 'light' {
+					border-bottom-color: darken(color.$grey, 20%);
+				} @else if theme('type') == 'dark' {
+					border-bottom-color: lighten(color.$grey, 20%);
+				}
 			}
 			&:focus {
 				background: transparent;
@@ -57,14 +62,18 @@
 		@if features('components', 'tabnav', 'bottom-position') {
 			&.#{class('tabnav', 'bottom')} {
 				border-bottom: 0;
-				border-top: components('tabnav', 'border-width') theme('border', 'style') theme('color', 'secondary');
+				border-top: components('tabnav', 'border-width') theme('border', 'style') color.$grey;
 				@include mixins.tab-button-styles() {
 					margin-top: -#{components('tabnav', 'border-width')};
 					border-top: components('tabnav', 'border-width') solid transparent;
 					border-bottom: 0;
 					margin-bottom: 0; 
 					&:hover {
-						border-top-color: theme('color', 'grey');
+						@if theme('type') == 'light' {
+							border-top-color: darken(color.$grey, 20%);
+						} @else if theme('type') == 'dark' {
+							border-top-color: lighten(color.$grey, 20%);
+						}
 					}
 					&.#{class('tabnav', 'active')} {
 						border-top-color: theme('color', 'primary');

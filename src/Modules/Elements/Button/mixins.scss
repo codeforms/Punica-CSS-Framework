@@ -269,7 +269,7 @@
 	/// OUTLINED STYLE
 	///
 	@if $outlined {
-		$textcolor: if(theme('type') == 'dark', theme('color', 'negative'), $bg-color);
+		$textcolor: if(theme('type') == 'dark', white, $bg-color);
 		background: transparent;
 		color: $textcolor;
 		i, [class^="#{class('icon', 'class-name')}"] {
@@ -277,24 +277,24 @@
 		}
 	} @else {
 		background: $bg-color;
-		color: theme('color', 'negative');
+		color: white;
 		i, [class^="#{class('icon', 'class-name')}"] {
-			color: theme('color', 'negative');
+			color: white;
 		}
 	}
 	text-shadow: 0 1px 1px darken($bg-color, 6%);
 	border: theme('border', 'width') theme('border', 'style') $border-color;
 	&:hover {
 		background: lighten($bg-color, 7.5%);
-		color: theme('color', 'negative');
+		color: white;
 		i, [class^="#{class('icon', 'class-name')}"] {
-			color: theme('color', 'negative');
+			color: white;
 		}
 	}
 	&:active,
 	&.#{class('button', 'active')} {
 		background: lighten($bg-color, 7.5%);
-		color: theme('color', 'negative');
+		color: white;
 		&:focus,
 		&:hover {
 			background: lighten($bg-color, 12.5%);

@@ -3,6 +3,7 @@
 /// Components : Navbar -> Variables
 ///
 
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 
 /// STYLES ==============================================
@@ -15,14 +16,14 @@ $themes: (
 		white, // input bg
 		#303232, // input color
 		theme('color', 'dark'), // input border color
-		theme('color', 'grey') // divider color
+		color.$grey // divider color
 	),
 	(
 		"dark", // theme name (class)
 		theme('color', 'dark'), // bg color
-		theme('color', 'negative'), // text color
+		white, // text color
 		lighten(theme('color', 'dark'), 7%), // input bg
-		theme('color', 'negative'), // input color
+		white, // input color
 		lighten(theme('color', 'dark'), 25.75%), // input border color
 		lighten(theme('color', 'dark'), 12.55%) // divider color
 	)

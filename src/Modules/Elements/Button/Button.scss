@@ -5,6 +5,7 @@
 
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "../../../Modules/Elements/Typography/variables" as *;
@@ -49,7 +50,7 @@
 			background-image: none;
 		}
 		&:hover {
-			background: theme('color', 'secondary');
+			background: color.$grey;
 		}
 		&:active,
 		&:focus {
@@ -88,13 +89,12 @@
 
 		&.#{class('button', 'active')} {
 			color: theme('color', 'text');
-			background: theme('color', 'active');
+			background: color.$grey;
 			background-image: none;
 			text-decoration: none;
 			&:focus,
 			&:hover {
-				color: theme('color', 'text');
-				background: lighten(theme('color', 'active'), 4%);
+				background: lighten(color.$grey, 5%);
 			}
 		}
         &.#{class('button', 'inactive')} {

@@ -5,6 +5,7 @@
 
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "mixins";
@@ -22,7 +23,7 @@
 		justify-content: space-between;
 		min-height: components('navbar', 'min-height');
 		background: theme('color', 'primary');
-		color: theme('color', 'negative');
+		color: white;
 		width: 100%;
 		// grid container
 		.#{class('grid', 'container')} {
@@ -45,7 +46,7 @@
 			a:visited {
 				font-size: components('navbar', 'font-size');
 				text-decoration: none;
-				color: theme('color', 'negative');
+				color: white;
 				display: flex;
 				font-weight: components('navbar', 'brand', 'font-weight');
 			}
@@ -84,10 +85,10 @@
 				}
 				input[type='text'] {
 					background-color: darken(theme('color', 'primary'), 7%);
-					color: theme('color', 'negative');
+					color: white;
 					border-color: lighten(theme('color', 'primary'), 8%);
 					&::placeholder {
-						color: theme('color', 'negative');
+						color: white;
 					}
 					&:focus {
 						outline: theme('input', 'outline-width') solid lighten(theme('color', 'primary'), 26%);
@@ -134,12 +135,12 @@
 			.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 				background: transparent;
 				border-color: transparent;
-				color: theme('color', 'negative');
+				color: white;
 				min-height: 100%;
 				border-radius: 0;
 				border: 0;
 				i, span.#{class('icon', 'class-name')} {
-					color: theme('color', 'negative');
+					color: white;
 				}
 				&:hover {
 					background: darken(theme('color', 'primary'), 10.15%);
@@ -147,7 +148,7 @@
 				}
 				&:active,
 				&.#{class('button', 'active')} {
-					color: theme('color', 'negative');
+					color: white;
 					background: darken(theme('color', 'primary'), 7%);
 					transition: components('button', 'transition');
 					&:hover {
@@ -248,7 +249,7 @@
 				left: 0;
 				overflow-x: auto;
 				overflow-y: hidden;
-				background: theme('color', 'secondary');
+				background: color.$grey;
 				z-index: 1;
 				margin: 0 !important;
 				padding: 0 !important;
@@ -268,7 +269,7 @@
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
 					color: theme('color', 'text');
-					background: theme('color', 'secondary');
+					background: color.$grey;
 					i, span.#{class('icon', 'class-name')} {
 						display: none;
 					}

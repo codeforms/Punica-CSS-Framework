@@ -53,7 +53,7 @@ html, body {
 }
 ::selection {
 	background-color: theme('color', 'primary');
-	color: theme('color', 'negative'); 
+	color: white; 
 }
 ::placeholder {
 	color: theme('color', 'text');

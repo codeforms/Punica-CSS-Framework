@@ -4,6 +4,7 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 
@@ -33,10 +34,10 @@
 				tr,
 				tbody tr {
 					&.#{class('table', 'active')} {
-						background: theme('color', 'secondary');
+						background: color.$grey;
 					}
 					&:nth-of-type(odd) {
-						background: theme('color', 'secondary');
+						background: color.$grey;
 					}
 				}
 			}
@@ -49,7 +50,7 @@
 				tr,
 				tbody tr {
 					&:hover {
-						background: theme('color', 'secondary');
+						background: color.$grey;
 						color: theme('color', 'text');
 					}
 				}
@@ -60,7 +61,7 @@
 			transition: all 0.3s;
 			&.#{class('table', 'active')},
 			&.#{class('table', 'active')}:hover {
-				background: theme('color', 'secondary');
+				background: color.$grey;
 			}
 		}
 		td,
@@ -74,7 +75,11 @@
 			th {
 				border-bottom-color: theme('border', 'color');
 				font-weight: theme('typography', 'font-weight');
-				color: theme('color', 'grey');
+				@if theme('type') == 'light' {
+					color: darken(color.$grey, 20%);
+				} @else if theme('type') == 'dark' {
+					color: lighten(color.$grey, 20%);
+				}
 				padding: elements('table', 'th', 'padding');
 			}
 		}

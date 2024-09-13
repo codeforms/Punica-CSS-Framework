@@ -24,11 +24,7 @@ $themes: (
 			'success'    : #297d51,
 			'warning'    : #956d28,
 			'error'      : #972727,
-			'active'     : #dcdcdc,
-			'negative'   : white,
-			'grey'       : #979797,
-			'secondary'  : #e6e6e6,
-			'dark'       : #252831,
+			'dark'       : #252831
 		),
 		'border': (
 			'color'  : #c6c6c6,
@@ -88,11 +84,7 @@ $themes: (
 			'success'    : #2f8f5d,
 			'warning'    : #ab7d2d,
 			'error'      : #ba3d3d,
-			'active'     : lighten(#252831, 3.7%),
-			'negative'   : white,
-			'grey'       : #6d758c,
-			'secondary'  : lighten(#252831, 5%),
-			'dark'       : lighten(#252831, 4.5%),
+			'dark'       : lighten(#252831, 4.5%)
 		),
 		'border': (
 			'color'  : lighten(#252831, 17%),
@@ -134,5 +126,5 @@ $themes: (
 		),
 		'utilities': ()
 	),
-	// add your custom theme map here.
+	// you can add your custom theme map here.
 );

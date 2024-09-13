@@ -4,6 +4,7 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
@@ -11,7 +12,7 @@
 /// if badge is enable
 @if enabled('components', 'badge') {
 	.#{class('badge', 'name')} {
-		@include set-style(theme('color', 'secondary'), theme('color', 'text')) {
+		@include set-style(color.$grey, theme('color', 'text')) {
 			position: relative;
 			white-space: nowrap;
 			display: inline-flex;
@@ -19,7 +20,7 @@
 			align-items: center;
 			font-weight: bold;
 			border-radius: components('badge', 'border-radius');
-			border: theme('border', 'width') theme('border', 'style') darken(theme('color', 'secondary'), 6.5%);
+			border: theme('border', 'width') theme('border', 'style') darken(color.$grey, 6.5%);
 		};
 		@include set-size(1em, 1px 6px);
 		///
@@ -27,7 +28,7 @@
 		///
 		@if features('components', 'badge', 'styles') {
 			@each $name, $bg-color in variables.$styles {
-				@include set-style($bg-color, theme('color', 'negative'), $name) {
+				@include set-style($bg-color, white, $name) {
 					border-color: darken($bg-color, 6.5%);
 				};
 			}

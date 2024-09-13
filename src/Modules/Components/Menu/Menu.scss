@@ -5,6 +5,7 @@
 
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
@@ -46,20 +47,24 @@
 				font-weight: theme('typography', 'font-weight');
 				transition: components('menu', 'item', 'transition');
 				&:hover {
-					background: theme('color', 'secondary');
+					background: color.$grey;
 					color: theme('color', 'text');
 					transition: components('menu', 'item', 'transition');
 				}
 				&:active,
 				&:focus,
 				&.#{class('menu', 'active')} {
-					background: theme('color', 'secondary');
+					background: color.$grey;
 					color: theme('color', 'text');
 					transition: components('menu', 'item', 'transition');
 				}
 			}
 			i, span.#{class('icon', 'class-name')} {
-				color: theme('color', 'grey');
+				@if theme('type') == 'light' {
+					color: darken(color.$grey, 28%);
+				} @else if theme('type') == 'dark' {
+					color: lighten(color.$grey, 28%);
+				}
 				font-size: components('menu', 'icon', 'font-size');
 				margin-right: components('menu', 'icon', 'margin-right');
 				vertical-align: components('menu', 'icon', 'vertical-align');
