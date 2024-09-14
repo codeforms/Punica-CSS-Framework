@@ -14,27 +14,28 @@
 @if enabled('elements', 'form') {
 	@include mixins.form-inputs() {
 		-webkit-appearance: none;
-		background-color: theme('input', 'background');
+		background-color: elements('form', 'input', 'background');
 		border-width: theme('border', 'width');
 		border-style: theme('border', 'style');
-		border-color: if(theme('input', 'border-color'), theme('input', 'border-color'), theme('border', 'color'));
-		height: if(theme('input', 'height'), theme('input', 'height'), elements('form', 'input', 'height'));
-		border-radius: if(theme('input', 'border-radius'), theme('input', 'border-radius'), elements('form', 'input', 'border-radius'));
-		outline: theme('input', 'outline-width') solid transparent;
+		border-color: elements('form', 'input', 'border-color');
+		height: elements('form', 'input', 'height');
+		border-radius: elements('form', 'input', 'border-radius');
+		outline: elements('form', 'input', 'outline-width') solid transparent;
 		box-shadow: none;
 		box-sizing: inherit;
-		outline-offset: -#{theme('input', 'outline-width')};
-		padding: if(theme('input', 'padding'), theme('input', 'padding'), elements('form', 'input', 'padding'));
+		outline-offset: -#{elements('form', 'input', 'outline-width')};
+		padding: elements('form', 'input', 'padding');
 		width: 100%;
 		max-width: 100%;
 		font-family: inherit;
-		color: if(theme('input', 'color'), theme('input', 'color'), theme('color', 'text'));
-		font-size: if(theme('input', 'font-size'), theme('input', 'font-size'), elements('form', 'input', 'font-size'));
-		transition: theme('input', 'transition');
+		color: elements('form', 'input', 'color');
+		font-size: elements('form', 'input', 'font-size');
+		transition: elements('form', 'input', 'transition');
 		&:focus {
-			outline: theme('input', 'outline-width') solid theme('input', 'outline-color');
-			outline-offset: -#{theme('input', 'outline-width')};
-			background-color: lighten(theme('input', 'background'), 5.5%);
+			outline-color: elements('form', 'input', 'outline-color');
+			outline-width: elements('form', 'input', 'outline-width');
+			outline-offset: -#{elements('form', 'input', 'outline-width')};
+			background-color: elements('form', 'input', 'background');
 			z-index: 0;
 		}
 		///
@@ -44,7 +45,10 @@
 			@each $style-name, $style-color in variables.$input-styles {
 				&.#{$style-name} {
 					color: $style-color;
-					outline-color: $style-color;
+					border-color: $style-color;
+					&:focus {
+						outline-color: $style-color;
+					}
 				}
 			}
 		}
@@ -98,7 +102,7 @@
 				margin: elements('form', 'label', 'margin');
 				color: theme('color', 'text');
 				font-size: elements('form', 'label', 'font-size');
-				font-weight: theme('input', 'label-weight');
+				font-weight: bold;
 				text-transform: none;
 				height: fit-content;
 			}

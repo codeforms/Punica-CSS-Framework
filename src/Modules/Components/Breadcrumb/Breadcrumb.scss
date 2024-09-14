@@ -17,7 +17,7 @@
 		a.#{class('breadcrumb', 'item')},
 		.#{class('breadcrumb', 'item')} {
 			text-decoration: none;
-			font-size: .9785rem;
+			font-size: components('breadcrumb', 'font-size');
 			font-weight: components('breadcrumb', 'font-weight');
 			&:focus,&:hover,&:active,&.active {
 				color: theme('color', 'primary');
@@ -27,6 +27,7 @@
 				color: theme('color', 'primary');
 		        font-size: 1rem;
 				cursor: default;
+				padding: .3em;
 			}
 			&:first-child {
 				margin-left: 0;
@@ -44,12 +45,13 @@
 		///
 		@if features('components', 'breadcrumb', 'sizes') {
 			// size, font-size, seperator-padding, seperator-size
-			@each $size, $font-size, $seperator-padding, $seperator-size in variables.$sizes {
+			@each $size, $font-size, $seperator-padding, $seperator-size, $valign in variables.$sizes {
 				&.#{$size} {
 					.#{class('breadcrumb', 'item')} {
 						font-size: $font-size;
 						&::after {
 							padding: $seperator-padding;
+							vertical-align: $valign;
 							font-size: $seperator-size;
 						}
 					}

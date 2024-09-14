@@ -43,7 +43,7 @@
 				}
 		    	>.#{class('list', 'title')} {
 		    		font-size: components('list', 'title', 'font-size');
-    				font-weight: theme('typography', 'header-weight');
+    				font-weight: bold;
 					line-height: components('list', 'body', 'line-height');
 		    	}
 				>.#{class('list', 'subtitle')} {

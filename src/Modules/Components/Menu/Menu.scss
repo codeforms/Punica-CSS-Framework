@@ -28,7 +28,7 @@
 			min-height: components('menu', 'title', 'min-height');
 			color: theme('color', 'text');
 			padding: components('menu', 'title', 'padding');
-			font-weight: theme('typography', 'header-weight');
+			font-weight: bold;
 			letter-spacing: components('menu', 'title', 'letter-spacing');
 		}
 		// menu item

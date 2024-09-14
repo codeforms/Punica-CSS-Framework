@@ -52,6 +52,7 @@ $options: (
 			'sizes': true
 		),
 		'variables': (
+			'font-size'	   : 1.1rem,
 			'font-weight'  : normal,
 			'active-weight': bold,
 			'seperator'	   : "\276D"
@@ -354,10 +355,16 @@ $options: (
 		'variables': (
 			'padding': 0 16px,
 			'input'  : (
-				'height'       : 2.5rem,
+				'color'        : initial,
+				'background'   : initial,
+				'border-color' : initial,
+				'height'       : initial,
 				'padding'      : .4rem .5rem,
 				'font-size'    : 1.088em,
-				'border-radius': 0
+				'border-radius': 0,
+				'transition'   : .35s,
+				'outline-color' : initial,
+				'outline-width' : 2px
 			),
 			'items': (
 				'margin': 6px 0 .75em

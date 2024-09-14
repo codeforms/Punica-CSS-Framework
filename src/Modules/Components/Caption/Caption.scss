@@ -16,7 +16,7 @@
 	    align-items: center;
 		margin: elements('caption', 'margin');
 		font-size: elements('caption', 'font-size');
-		font-weight: theme('typography', 'header-weight');
+		font-weight: bold;
 		line-height: theme('typography', 'line-height') - .2;
 		text-align: left;
 		>img,

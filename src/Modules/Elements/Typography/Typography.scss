@@ -20,7 +20,7 @@
 	#{$header},
 	.#{$header} {
 		font-size: $font-size;
-		font-weight: theme('typography', 'header-weight');
+		font-weight: bold;
 	}
 	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
 		#{$header},

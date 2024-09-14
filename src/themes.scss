@@ -7,20 +7,19 @@ $themes: (
 		'name' : 'Default Theme',
 		'type' : 'light', // light or dark (required*),
 		'google-font': (
-			'name'    : 'IBM+Plex+Sans+Hebrew', // or Source+Sans+Pro etc
-			'weights' : '400;600;700',
+			'name'    : 'Reddit+Sans+Condensed', // or Source+Sans+Pro etc
+			'weights' : '300;400;600',
 		),
 		'typography': (
-			'font-family'   : 'IBM Plex Sans Hebrew',
-			'font-size'     : 13px,
+			'font-family'   : 'Reddit Sans Condensed',
+			'font-size'     : .965rem,
 			'font-weight'   : 400,
-			'line-height'   : 1.7,
-			'header-weight' : 700,
+			'line-height'   : 1.7
 		),
 		'color': (
 			'text'       : #202123,
 			'background' : white,
-			'primary'    : #314a93,
+			'primary'    : #4572d8,
 			'success'    : #297d51,
 			'warning'    : #956d28,
 			'error'      : #972727,
@@ -39,27 +38,23 @@ $themes: (
 			'spread'     : 0,
 			'color'      : rgba(0, 0, 0, 0.20),
 		),
-		'input': (
-			'color'         : null, // (null = color > text)
-			'background'    : white,
-			'border-color'  : null, // (null = border > color)
-			'outline-color' : #252831,
-			'outline-width' : 2px,
-			'label-weight'  : 600,
-			'transition'    : .35s,
-		),
 		'components': (
 			'navbar': (
-				'font-weight': 700
+				'font-weight': 600
 			),
 			'tabnav': (
 				'font-weight': 600
 			)
 		),
 		'elements': (
-			'button': (
-				'font-weight' : 700
+			'form': (
+				'input': (
+					'border-color' : #c6c6c6
+				),
 			),
+			'button': (
+				'font-weight' : 600
+			)
 		),
 		'utilities': ()
 	),
@@ -74,8 +69,7 @@ $themes: (
 			'font-family'   : 'IBM Plex Sans Hebrew',
 			'font-size'     : 13px,
 			'font-weight'   : 400,
-			'line-height'   : 1.7,
-			'header-weight' : 700,
+			'line-height'   : 1.7
 		),
 		'color': (
 			'text'       : white,
@@ -99,15 +93,6 @@ $themes: (
 			'spread'     : 0,
 			'color'      : rgba(0, 0, 0, 0.20),
 		),
-		'input': (
-			'color'         : null, // (null = color > text)
-			'background'    : lighten(#252831, 4.5%),
-			'border-color'  : null, // (null = border > color)
-			'outline-color' : white,
-			'outline-width' : 2px,
-			'label-weight'  : 600,
-			'transition'    : .35s
-		),
 		'components': (
 			'navbar': (
 				'font-weight': 700
@@ -123,6 +108,12 @@ $themes: (
 			'button': (
 				'font-weight' : 700
 			),
+			'form': (
+				'input': (
+					'background'    : lighten(#252831, 4.5%),
+					'outline-color' : white,
+				),
+			)
 		),
 		'utilities': ()
 	),

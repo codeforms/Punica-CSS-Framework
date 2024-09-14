@@ -8,14 +8,16 @@ $sizes: (
     (
     	'small', // size name (class)
     	.986em, // font-size
-    	.15em, // seperator-padding
-    	null // seperator-size
+    	.3em, // seperator-padding
+    	null, // seperator-size
+        unset, // vertical align
     ),
     (
     	'large', // size name (class)
     	1.38em, // font-size
-    	.15em, // seperator-padding
-    	null // seperator-size
+    	.3em, // seperator-padding
+    	null, // seperator-size
+        text-bottom, // vertical align
     )
 );
 

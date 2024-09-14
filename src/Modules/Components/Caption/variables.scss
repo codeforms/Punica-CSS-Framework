@@ -17,6 +17,6 @@ $caption-sizes: (
     	"large", // size name (class)
     	1.4em .3rem, // margin
     	2.35rem, // font-size
-    	theme('typography', 'header-weight') // font-weight
+    	bold // font-weight
     )
 );
