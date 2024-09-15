@@ -1,7 +1,9 @@
 ///
 /// Punica CSS Framework
 /// Default Options & Variables
-/// You can override the all following default variables from your theme map.
+/// 
+/// Note: You can also override/change the all following 
+/// default variables from your theme map.
 /// 
 $options: (
 	///
@@ -189,6 +191,7 @@ $options: (
 			'spacer-top'    : 105px, // min-height + 25px
 			'font-size'     : 1.128em,
 			'button-padding': .935rem 1.4rem,
+			// for only text 
 			'brand': (
 				'padding'     : 0,
 				'margin-right': 1rem,
@@ -332,7 +335,7 @@ $options: (
 			'gradient' : true
 		),
 		'variables': (
-			'font-weight': 600,
+			'font-weight': bold,
 			'font-size'  : 1em,
 			'line-height': 1,
 			'width'      : min-content,
@@ -357,7 +360,7 @@ $options: (
 			'input'  : (
 				'color'        : initial,
 				'background'   : initial,
-				'border-color' : initial,
+				'border-color' : inherit,
 				'height'       : initial,
 				'padding'      : .4rem .5rem,
 				'font-size'    : 1.088em,

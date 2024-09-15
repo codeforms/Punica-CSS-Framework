@@ -45,7 +45,7 @@
 		}
 	}
 	// Breakpoints
-	@each $label, $breakpoint in $viewports { 
+	@each $label, $breakpoint in $viewports {
 		@include breakpoints($breakpoint) {
 			@for $id from 1 through $column-size {
 				.#{class('grid', 'column')}-#{$label}-#{$id} {

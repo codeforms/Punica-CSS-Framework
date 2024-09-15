@@ -2,9 +2,13 @@
 /// Punica CSS Framework
 /// Default class names
 /// 
+/// Note: You can change the all following 
+/// default class names as you wish.
+/// 
 $classnames: (
-	/////////////////////////////////////////////////////////
-	/// Components
+	///
+	/// COMPONENTS
+	/// 
 	'alert': (
 		'name'  : 'alert',
 		'active': 'active'
@@ -123,8 +127,9 @@ $classnames: (
 		'left' : 'left',
 		'top'  : 'top',
 	),
-	/////////////////////////////////////////////////////////
-	/// Elements
+	///
+	/// ELEMENTS
+	/// 
 	'button': (
 		'name'              : 'button',
 		'group'             : 'buttons',
@@ -174,6 +179,7 @@ $classnames: (
 	),
 	'typography': (),
 	'icon': (
+		// change the class name according to your icon library.
 		'class-name': 'material-symbols-outlined'
 	),
 )

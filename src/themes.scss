@@ -1,5 +1,6 @@
 ///
 /// Punica CSS Framework : Themes
+/// Note: you can also add your custom theme map here.
 /// 
 
 $themes: (
@@ -7,7 +8,7 @@ $themes: (
 		'name' : 'Default Theme',
 		'type' : 'light', // light or dark (required*),
 		'google-font': (
-			'name'    : 'Reddit+Sans+Condensed', // or Source+Sans+Pro etc
+			'name'    : 'Reddit+Sans+Condensed',
 			'weights' : '300;400;600',
 		),
 		'typography': (
@@ -20,49 +21,37 @@ $themes: (
 			'text'       : #202123,
 			'background' : white,
 			'primary'    : #4572d8,
-			'success'    : #297d51,
-			'warning'    : #956d28,
-			'error'      : #972727,
-			'dark'       : #252831
+			'success'    : #4aa847,
+			'warning'    : #cc9042,
+			'error'      : #ca4040,
+			'dark'       : #4b505e
 		),
 		'border': (
 			'color'  : #c6c6c6,
 			'width'  : 1px,
 			'style'  : solid,
-			'radius' : 4px,
+			'radius' : 2px,
 		),
 		'shadow': (
 			'horizontal' : 0,
 			'vertical'   : 2px,
 			'blur'       : 4px,
 			'spread'     : 0,
-			'color'      : rgba(0, 0, 0, 0.20),
+			'color'      : rgba(0, 0, 0, 0.14),
 		),
-		'components': (
-			'navbar': (
-				'font-weight': 600
-			),
-			'tabnav': (
-				'font-weight': 600
-			)
-		),
-		'elements': (
-			'form': (
-				'input': (
-					'border-color' : #c6c6c6
-				),
-			),
-			'button': (
-				'font-weight' : 600
-			)
-		),
+		//////////////////////////////////////////////////////////
+		// You can use this section to override/change
+		// the all default variables in the options.scss API file.
+		'components': (),
+		'elements': (),
 		'utilities': ()
+		//////////////////////////////////////////////////////////
 	),
 	dark: (
 		'name' : 'Dark Theme',
 		'type' : 'dark', // light or dark (required*),
 		'google-font': (
-			'name'    : 'IBM+Plex+Sans+Hebrew', // or Source+Sans+Pro etc
+			'name'    : 'IBM+Plex+Sans+Hebrew',
 			'weights' : '400;600;700',
 		),
 		'typography': (
@@ -93,21 +82,15 @@ $themes: (
 			'spread'     : 0,
 			'color'      : rgba(0, 0, 0, 0.20),
 		),
+		//////////////////////////////////////////////////////////
+		// You can use this section to override/change
+		// the all default variables in the options.scss API file.
 		'components': (
-			'navbar': (
-				'font-weight': 700
-			),
-			'tabnav': (
-				'font-weight': 600
-			),
 			'card': (
 				'background' : lighten(#252831, 1.75%)
 			)
 		),
 		'elements': (
-			'button': (
-				'font-weight' : 700
-			),
 			'form': (
 				'input': (
 					'background'    : lighten(#252831, 4.5%),
@@ -116,6 +99,6 @@ $themes: (
 			)
 		),
 		'utilities': ()
+		//////////////////////////////////////////////////////////
 	),
-	// you can add your custom theme map here.
 );
