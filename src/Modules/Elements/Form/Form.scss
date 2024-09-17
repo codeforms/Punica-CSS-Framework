@@ -142,7 +142,7 @@
 						box-shadow: none;
 					}
 					>.#{class('button', 'name')} {
-						padding: if(theme('input', 'padding'), theme('input', 'padding'), elements('form', 'input', 'padding'));
+						padding: elements('form', 'input', 'padding');
 						box-shadow: none;
 						&:first-child {
 							border-bottom-right-radius: 0;
@@ -250,7 +250,7 @@
 			input[type="radio"] {
 				border-radius: 500px;
 				&::before {
-					clip-path: ellipse(45% 45% at 50% 50%);;
+					clip-path: ellipse(45% 45% at 50% 50%);
 				}
 			}
 		}
