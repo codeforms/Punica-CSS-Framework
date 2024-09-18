@@ -12,7 +12,6 @@
 @use "../../../Modules/Elements/Typography/variables" as *;
 @use "variables";
 
-/// if card is enable
 @if enabled('components', 'card') {
 	.#{class('card', 'cards')} {
 		display: flex;

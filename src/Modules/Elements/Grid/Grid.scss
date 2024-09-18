@@ -8,7 +8,6 @@
 @use "../../../Core/Global/Mixins" as *;
 @use "variables" as *;
 
-/// if grid is enable
 @if enabled('elements', 'grid') {
 	$column-size: elements('grid', 'columns', 'size');
 

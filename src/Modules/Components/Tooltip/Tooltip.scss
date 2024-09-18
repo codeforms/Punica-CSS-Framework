@@ -9,7 +9,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if tooltip is enable
 @if enabled('components', 'tooltip') {
 	.#{class('tooltip', 'name')} {
 		display: inline-flex;

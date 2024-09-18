@@ -11,7 +11,6 @@
 @use "mixins";
 @use "variables";
 
-/// if navbar is enable
 @if enabled('components', 'navbar') {
 	.#{class('navbar', 'spacer')} {
 		margin-top: components('navbar', 'spacer-top');

@@ -19,7 +19,7 @@
 }
 
 ///
-/// Get active theme's value by key(s)
+/// Get active theme's value by key(s) from the theme map
 ///
 /// @param {String} $node
 /// @param {String} $key
@@ -52,9 +52,14 @@
 }
 
 ///
-/// Get a specific component's variable
+/// Get a specific component's variable from the theme map
+/// or from the options.scss API file,
+/// which contains the default variables.
 ///
 /// @param {String(s)} $keys
+/// 
+/// @example components('card', 'padding')
+/// @example components('card', 'group', 'margin')
 ///
 /// @return mixed
 /// 
@@ -64,10 +69,15 @@
 }
 
 ///
-/// Get a specific element's variable
+/// Get a specific element's variable from the theme map 
+/// or from the options.scss API file, 
+/// which contains the default variables.
 ///
 /// @param {String(s)} $keys
 ///
+/// @example elements('button', 'font-weight')
+/// @example elements('form', 'input', 'color')
+/// 
 /// @return mixed
 /// 
 @function elements($keys...) 
@@ -76,12 +86,16 @@
 }
 
 ///
-/// Get features of Component/Elements
-/// from theme map or options.scss API file
+/// Get features of Component/Elements from the theme map 
+/// or from the options.scss API file, 
+/// which contains the default variables.
 /// 
 /// @param {String} $node
 /// @param {String} $module
 /// @param {String} $feature
+/// 
+/// @example features('components', 'card', 'horizontal')
+/// @example features('elements', 'button', 'gradient')
 ///
 /// @return bool
 ///
@@ -89,7 +103,7 @@
 {
 	@if theme($node, $module, 'features', $feature) != null {
 		@return theme($node, $module, 'features', $feature);
-	};
+	}
 
 	@return map-get(map-get(get.options($module), 'features'), $feature);
 }
@@ -106,7 +120,7 @@
 {
 	@if theme($node, $module, 'enabled') != null {
 		@return theme($node, $module, 'enabled');
-	};
+	}
 
 	@return get.options($module, 'enabled');
 }
@@ -130,7 +144,7 @@
 
 		@if($value != null) {
 			@return $value
-		};
+		}
 	}
 	
 	@return get_default_variable($keys);
@@ -153,7 +167,7 @@
 	}
 
 	@return $value;
-};
+}
 
 /// 
 /// @param {String} $theme

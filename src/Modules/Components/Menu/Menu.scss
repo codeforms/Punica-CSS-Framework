@@ -10,7 +10,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if menu is enable
 @if enabled('components', 'menu') {
 	.#{class('menu', 'name')} {
 		background-color: if(theme('components', 'menu', 'background'), theme('components', 'menu', 'background'), lighten(theme('color', 'background'), 2.5%));

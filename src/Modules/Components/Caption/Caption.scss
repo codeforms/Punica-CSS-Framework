@@ -9,7 +9,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if caption is enable
 @if enabled('elements', 'caption') {
 	.#{class('caption', 'name')} {
 		display: flex;

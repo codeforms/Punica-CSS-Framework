@@ -8,7 +8,6 @@
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 
-/// if table is enable
 @if enabled('elements', 'table') {
 	.#{class('table', 'name')} {
 		position: relative;

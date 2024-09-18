@@ -8,7 +8,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if label is enable
 @if enabled('elements', 'label') {
 	a.#{class('label', 'name')},
 	.#{class('label', 'name')} {

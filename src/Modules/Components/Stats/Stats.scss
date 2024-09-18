@@ -10,7 +10,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if stats is enable
 @if enabled('components', 'stats') {
 	.#{class('stats', 'name')},
 	a.#{class('stats', 'name')} {

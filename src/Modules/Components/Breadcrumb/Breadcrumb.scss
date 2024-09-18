@@ -9,7 +9,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if breadcrumb is enable
 @if enabled('components', 'breadcrumb') {
 	.#{class('breadcrumb', 'name')} {
 		display: inline-block;

@@ -10,7 +10,6 @@
 @use "mixins";
 @use "variables";
 
-/// if process is enable
 @if enabled('components', 'process') {
 	.#{class('process', 'name')} {
 		display: flex;

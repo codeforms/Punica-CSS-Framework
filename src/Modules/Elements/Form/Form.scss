@@ -10,7 +10,6 @@
 @use "variables";
 @use "mixins";
 
-/// if form is enable
 @if enabled('elements', 'form') {
 	@include mixins.form-inputs() {
 		-webkit-appearance: none;

@@ -10,7 +10,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if list is enable
 @if enabled('components', 'list') {
 	.#{class('list', 'name')} {
 		list-style: none;

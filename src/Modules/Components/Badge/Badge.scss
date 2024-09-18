@@ -9,7 +9,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if badge is enable
 @if enabled('components', 'badge') {
 	.#{class('badge', 'name')} {
 		@include set-style(color.$grey, theme('color', 'text')) {

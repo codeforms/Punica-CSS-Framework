@@ -10,7 +10,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if timeline is enable
 @if enabled('components', 'timeline') {
 	.#{class('timeline', 'name')} {
 		.#{class('timeline', 'item')} {

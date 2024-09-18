@@ -8,7 +8,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if alert is enable
 @if enabled('components', 'alert') {
 	.#{class('alert', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {

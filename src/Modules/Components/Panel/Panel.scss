@@ -9,7 +9,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if panel is enable
 @if enabled('components', 'panel') {
 	.#{class('panel', 'name')} {
 		display: flex;

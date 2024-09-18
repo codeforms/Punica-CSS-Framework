@@ -2,6 +2,9 @@
 /// Punica CSS Framework : Themes
 /// Note: you can also add your custom theme map here.
 /// 
+/// If you want to compile your own theme map, don't forget to change 
+/// the "$active-theme" variable in the punica.scss file.
+/// 
 
 $themes: (
 	default: (
@@ -41,9 +44,23 @@ $themes: (
 		),
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
-		// the all default variables in the options.scss API file.
-		'components': (),
-		'elements': (),
+		// the all default "variables" in the options.scss API file.
+		'components': (
+			/*
+			'card': (
+				'background': grey
+			)
+			*/
+		),
+		'elements': (
+			/*
+			'form': (
+				'input': (
+					'background': white
+				),
+			)
+			*/
+		),
 		'utilities': ()
 		//////////////////////////////////////////////////////////
 	),
@@ -84,7 +101,7 @@ $themes: (
 		),
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
-		// the all default variables in the options.scss API file.
+		// the all default "variables" in the options.scss API file.
 		'components': (
 			'card': (
 				'background' : lighten(#252831, 1.75%)

@@ -9,7 +9,6 @@
 @use "../../../Core/Theme/Setters" as *;
 @use "variables";
 
-/// if billboard is enable
 @if enabled('components', 'billboard') {
 	.#{class('billboard', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {

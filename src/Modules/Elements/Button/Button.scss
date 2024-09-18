@@ -12,7 +12,6 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-/// if button is enable
 @if enabled('elements', 'button') {
 	a.#{class('button', 'name')},
 	.#{class('button', 'name')} {
