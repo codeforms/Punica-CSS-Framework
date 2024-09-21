@@ -41,7 +41,7 @@
 		@if features('components', 'alert', 'styles') {
 			@each $style-name, $bg-color in variables.$styles {
 				@include set-style($bg-color, white, $style-name) {
-					border-color: darken($bg-color, 5%);
+					border-color: darken($bg-color, 3%);
 				};
 			}
 		}

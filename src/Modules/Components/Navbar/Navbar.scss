@@ -12,9 +12,6 @@
 @use "variables";
 
 @if enabled('components', 'navbar') {
-	.#{class('navbar', 'spacer')} {
-		margin-top: components('navbar', 'spacer-top');
-	}
 	.#{class('navbar', 'name')} {
 		display: flex;
 		flex-wrap: wrap;
@@ -206,21 +203,13 @@
 		/// NAVBAR SIZES
 		///
 		@if features('components', 'navbar', 'sizes') {
-			@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in variables.$sizes {
+			@each $size-name, $min-height, $font-size, $button-padding in variables.$sizes {
 				&.#{$size-name} {
 					min-height: $min-height;
 					& .#{class('button', 'name')},
 					& .#{class('button', 'dropdown')} .#{class('button', 'name')} {
 						font-size: $font-size;
 						padding: $button-padding;
-					}
-					@at-root .#{class('navbar', 'spacer')}-#{$size-name} {
-						margin-top: $spacer-top !important;
-					}
-					@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
-						@at-root .#{class('navbar', 'spacer')}-#{$size-name} {
-							margin-top: div($spacer-top, 2) !important;
-						}
 					}
 				}
 			}

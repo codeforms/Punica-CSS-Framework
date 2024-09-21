@@ -5,18 +5,11 @@
 
 @use "../../options" as option;
 @use "../Global/Getters" as get;
+@use "../../themes" as themes;
 
-///
-/// Get Active Theme
-/// @param {String} $theme
-///
-@mixin get-theme($theme: 'default') 
-{
-    $set-theme: if(map-has-key(themes.$themes, $theme), $theme, theme-not-found($theme));
-	$theme-map: map-get(themes.$themes, $set-theme) !global;
-	@content;
-	$theme-map: null !global;
-}
+/// ======================================================
+	$theme-map: null !default;
+/// ======================================================
 
 ///
 /// Get active theme's value by key(s) from the theme map
@@ -86,7 +79,7 @@
 }
 
 ///
-/// Get features of Component/Elements from the theme map 
+/// Get features of Components/Elements from the theme map 
 /// or from the options.scss API file, 
 /// which contains the default variables.
 /// 
@@ -167,13 +160,4 @@
 	}
 
 	@return $value;
-}
-
-/// 
-/// @param {String} $theme
-///
-@function theme-not-found($theme) 
-{
-    $error: "Invalid theme name: #{$theme}. Punica's theme map does not contains a value associated with #{$theme}. Please check the 'themes.scss' file.";
-    @error $error;
 }

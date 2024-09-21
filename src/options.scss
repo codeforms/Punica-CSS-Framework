@@ -163,7 +163,7 @@ $options: (
 				'font-size'  : 1em,
 				'small-size' : .945em,
 				'transition' : background .15s,
-				'sub-padding': .4rem
+				'sub-padding': .4rem // padding of sub items
 			),
 			'icon': (
 				'font-size'     : 1.2rem,
@@ -357,7 +357,7 @@ $options: (
 		'variables': (
 			'padding': 0 16px,
 			'input'  : (
-				'color'        : initial,
+				'color'        : inherit,
 				'background'   : initial,
 				'border-color' : inherit,
 				'height'       : initial,

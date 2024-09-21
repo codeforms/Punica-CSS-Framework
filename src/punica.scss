@@ -3,6 +3,7 @@
 /// 
 
 @use "Core/Theme/Getters" as *;
+@use "Core/Global/Helpers" as *;
 @use "themes" as get;
 
 /// ======================================================
@@ -13,8 +14,8 @@
 /// ======================================================
 
 /*! 
- * PUNICA CSS - #{theme('name')}
- * v3.0.0 Beta build 1054
+ * Punica CSS Framework - #{theme('name')}
+ * v3.0.0 Beta
  * 
  * @link http://github.com/codeforms/Punica-CSS-Framework
  * 

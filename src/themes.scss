@@ -7,6 +7,9 @@
 /// 
 
 $themes: (
+	/*
+		Default Theme
+	*/
 	default: (
 		'name' : 'Default Theme',
 		'type' : 'light', // light or dark (required*),
@@ -23,10 +26,10 @@ $themes: (
 		'color': (
 			'text'       : #202123,
 			'background' : white,
-			'primary'    : #4572d8,
-			'success'    : #4aa847,
-			'warning'    : #cc9042,
-			'error'      : #ca4040,
+			'primary'    : #3f61ac,
+			'success'    : #508434,
+			'warning'    : #b08142,
+			'error'      : #b34040,
 			'dark'       : #4b505e
 		),
 		'border': (
@@ -47,23 +50,37 @@ $themes: (
 		// the all default "variables" in the options.scss API file.
 		'components': (
 			/*
-			'card': (
-				'background': grey
+			'navbar': (
+				'brand': (
+					'img-width': 9rem
+				)
+			),
+			'alert': (
+				'enabled': false
 			)
 			*/
 		),
 		'elements': (
 			/*
-			'form': (
-				'input': (
-					'background': white
+			'button': (
+				'features': (
+					'gradient': false
 				),
 			)
 			*/
 		),
-		'utilities': ()
+		'utilities': (
+			/*
+			'helpers': (
+				'enabled': false
+			)
+			*/
+		)
 		//////////////////////////////////////////////////////////
 	),
+	/*
+		Dark Theme
+	*/
 	dark: (
 		'name' : 'Dark Theme',
 		'type' : 'dark', // light or dark (required*),

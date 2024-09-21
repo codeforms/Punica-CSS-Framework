@@ -28,7 +28,7 @@
 		@if features('components', 'badge', 'styles') {
 			@each $name, $bg-color in variables.$styles {
 				@include set-style($bg-color, white, $name) {
-					border-color: darken($bg-color, 6.5%);
+					border-color: darken($bg-color, 3%);
 				};
 			}
 		}

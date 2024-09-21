@@ -39,26 +39,26 @@ $button-styles: (
 	(
 		'primary', // class name
 		theme('color', 'primary'), // bg color
-		lighten(theme('color', 'primary'), 7%) // border color
+		lighten(theme('color', 'primary'), 4%) // border color
 	),
 	(
 		'success', // class name
 		theme('color', 'success'), // bg color
-		lighten(theme('color', 'success'), 7%) // border color
+		lighten(theme('color', 'success'), 4%) // border color
 	),
 	(
 		'warning', // class name
 		theme('color', 'warning'), // bg color
-		lighten(theme('color', 'warning'), 7%) // border color
+		lighten(theme('color', 'warning'), 4%) // border color
 	),
 	(
 		'error', // class name
 		theme('color', 'error'), // bg color
-		lighten(theme('color', 'error'), 7%) // border color
+		lighten(theme('color', 'error'), 4%) // border color
 	),
 	(
 		'dark', // class name
 		theme('color', 'dark'), // bg color
-		lighten(theme('color', 'dark'), 7%) // border color
+		lighten(theme('color', 'dark'), 4%) // border color
 	)
 );
