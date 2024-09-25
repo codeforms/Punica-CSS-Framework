@@ -3,10 +3,6 @@
 /// Core/Theme/Getters.scss
 /// 
 
-@use "../../options" as option;
-@use "../Global/Getters" as get;
-@use "../../themes" as themes;
-
 /// ======================================================
 	$theme-map: null !default;
 /// ======================================================
@@ -39,124 +35,6 @@
 				$value: if(map-has-key($value, $sub), map-get($value, $sub), null);
 			}
 		}
-	}
-
-	@return $value;
-}
-
-///
-/// Get a specific component's variable from the theme map
-/// or from the options.scss API file,
-/// which contains the default variables.
-///
-/// @param {String(s)} $keys
-/// 
-/// @example components('card', 'padding')
-/// @example components('card', 'group', 'margin')
-///
-/// @return mixed
-/// 
-@function components($keys...) 
-{
-	@return set_variable('components', $keys...);
-}
-
-///
-/// Get a specific element's variable from the theme map 
-/// or from the options.scss API file, 
-/// which contains the default variables.
-///
-/// @param {String(s)} $keys
-///
-/// @example elements('button', 'font-weight')
-/// @example elements('form', 'input', 'color')
-/// 
-/// @return mixed
-/// 
-@function elements($keys...) 
-{
-	@return set_variable('elements', $keys...);
-}
-
-///
-/// Get features of Components/Elements from the theme map 
-/// or from the options.scss API file, 
-/// which contains the default variables.
-/// 
-/// @param {String} $node
-/// @param {String} $module
-/// @param {String} $feature
-/// 
-/// @example features('components', 'card', 'horizontal')
-/// @example features('elements', 'button', 'gradient')
-///
-/// @return bool
-///
-@function features($node, $module, $feature : null) 
-{
-	@if theme($node, $module, 'features', $feature) != null {
-		@return theme($node, $module, 'features', $feature);
-	}
-
-	@return map-get(map-get(get.options($module), 'features'), $feature);
-}
-
-///
-/// Is component/element enabled?
-///
-/// @param {String} $node
-/// @param {String} $module
-/// 
-/// @return bool
-///
-@function enabled($node, $module) 
-{
-	@if theme($node, $module, 'enabled') != null {
-		@return theme($node, $module, 'enabled');
-	}
-
-	@return get.options($module, 'enabled');
-}
-
-///
-/// Set variable
-///
-/// @param {String} $module
-/// @param {String(s)} $keys
-///
-/// @return mixed
-///
-@function set_variable($module, $keys...) 
-{
-	@if theme($module, nth($keys, 1), nth($keys, 2)) {
-		$value : theme($module, nth($keys, 1), nth($keys, 2));
-
-		@if length($keys) > 2 {
-			$value: theme($module, nth($keys, 1), nth($keys, 2), nth($keys, 3));
-		}
-
-		@if($value != null) {
-			@return $value
-		}
-	}
-	
-	@return get_default_variable($keys);
-}
-
-///
-/// Get default variables
-/// from the options.scss API file
-///
-/// @param {String(s)} $keys
-/// 
-/// @return mixed
-/// 
-@function get_default_variable($keys) 
-{
-	$value: get.variables(nth($keys, 1), nth($keys, 2));
-
-	@if length($keys) > 2 {
-		$value: get.variables(nth($keys, 1), nth($keys, 2), nth($keys, 3));
 	}
 
 	@return $value;

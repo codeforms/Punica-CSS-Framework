@@ -4,10 +4,10 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Variables" as *;
 @use "../../../Core/Theme/Getters" as *;
-@use "variables";
 @use "mixins";
 
 @if enabled('elements', 'form') {
@@ -41,7 +41,7 @@
 		/// VALIDATION STYLES
 		///
 		@if features('elements', 'form', 'validation-styles') {
-			@each $style-name, $style-color in variables.$input-styles {
+			@each $style-name, $style-color in elements('form', 'styles') {
 				&.#{$style-name} {
 					color: $style-color;
 					border-color: $style-color;
@@ -193,7 +193,7 @@
 		/// INPUT SIZES
 		///
 		@if features('elements', 'form', 'sizes') {
-			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in variables.$input-sizes {
+			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in elements('button', 'sizes') {
 				&.#{$size-name} {
 					@include mixins.form-inputs() {
 						height: $input-height;

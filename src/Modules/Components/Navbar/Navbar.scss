@@ -4,12 +4,12 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "mixins";
-@use "variables";
 
 @if enabled('components', 'navbar') {
 	.#{class('navbar', 'name')} {
@@ -165,7 +165,6 @@
 			padding: components('navbar', 'button-padding');
 			font-weight: theme('components','navbar', 'font-weight');
 		}
-
 		///
 		/// GRADIENT
 		///
@@ -188,12 +187,11 @@
 				background: linear-gradient(-135deg, lighten(theme('color', 'primary'), 7.5%), theme('color', 'primary'));
 			}
 		}
-
 		/// 
 		/// NAVBAR THEMES
 		///
 		@if features('components', 'navbar', 'themes') {
-			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color in variables.$themes {
+			@each $theme-name, $bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color in components('navbar', 'styles') {
 				&.#{$theme-name} {
 					@include mixins.navbar-themes($bg-color, $text-color, $input-bg, $input-color, $input-border-color, $divider-color);
 				}
@@ -203,7 +201,7 @@
 		/// NAVBAR SIZES
 		///
 		@if features('components', 'navbar', 'sizes') {
-			@each $size-name, $min-height, $font-size, $button-padding in variables.$sizes {
+			@each $size-name, $min-height, $font-size, $button-padding in components('navbar', 'sizes') {
 				&.#{$size-name} {
 					min-height: $min-height;
 					& .#{class('button', 'name')},
@@ -285,7 +283,7 @@
 			/// NAVBAR SIZES
 			///
 			@if features('components', 'navbar', 'sizes') {
-				@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in variables.$sizes {
+				@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in components('navbar', 'styles') {
 					&.#{$size-name} {
 						& .#{class('navbar', 'burger')},
 						& .#{class('navbar', 'burger')}::before {

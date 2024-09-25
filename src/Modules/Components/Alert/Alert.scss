@@ -4,9 +4,9 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
-@use "variables";
 
 @if enabled('components', 'alert') {
 	.#{class('alert', 'name')} {
@@ -39,7 +39,7 @@
 		/// STYLES
 		///
 		@if features('components', 'alert', 'styles') {
-			@each $style-name, $bg-color in variables.$styles {
+			@each $style-name, $bg-color in components('alert', 'styles') {
 				@include set-style($bg-color, white, $style-name) {
 					border-color: darken($bg-color, 3%);
 				};
@@ -49,7 +49,7 @@
 		/// SIZES
 		///
 		@if features('components', 'alert', 'sizes') {
-			@each $size-name, $font-size, $padding in variables.$sizes {
+			@each $size-name, $font-size, $padding in components('alert', 'sizes') {
 				@include set-size($font-size, $padding, $size-name);
 			}
 		}

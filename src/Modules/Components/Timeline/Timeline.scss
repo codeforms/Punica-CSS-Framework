@@ -4,11 +4,11 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
-@use "variables";
 
 @if enabled('components', 'timeline') {
 	.#{class('timeline', 'name')} {
@@ -51,7 +51,7 @@
 				/// STYLES
 				///
 				@if features('components', 'timeline', 'styles') {
-					@each $type, $bg-color, $color in variables.$styles {
+					@each $type, $bg-color, $color in components('timeline', 'styles') {
 					    &.#{$type} {
 							background-color: $bg-color;
 							color: $color;

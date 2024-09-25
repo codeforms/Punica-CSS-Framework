@@ -4,10 +4,10 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
-@use "variables";
 
 @if enabled('components', 'badge') {
 	.#{class('badge', 'name')} {
@@ -26,7 +26,7 @@
 		/// STYLES
 		///
 		@if features('components', 'badge', 'styles') {
-			@each $name, $bg-color in variables.$styles {
+			@each $name, $bg-color in components('badge', 'styles') {
 				@include set-style($bg-color, white, $name) {
 					border-color: darken($bg-color, 3%);
 				};
@@ -36,7 +36,7 @@
 		/// SIZES
 		///
 		@if features('components', 'badge', 'sizes') {
-			@each $size-name, $font-size, $padding in variables.$sizes {
+			@each $size-name, $font-size, $padding in components('badge', 'sizes') {
 				@include set-size($font-size, $padding, $size-name);
 			}
 		}

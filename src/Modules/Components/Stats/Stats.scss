@@ -4,11 +4,11 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
-@use "variables";
 
 @if enabled('components', 'stats') {
 	.#{class('stats', 'name')},
@@ -64,7 +64,7 @@
 		/// STYLES
 		///
 		@if features('components', 'stats', 'styles') {
-			@each $style-name, $bg-color in variables.$styles {
+			@each $style-name, $bg-color in components('stats', 'styles') {
 				@include set-style($bg-color, white, $style-name) {
 					border-color: $bg-color;
 					background: transparent;

@@ -4,10 +4,10 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
-@use "variables";
 
 ///
 /// Dropdown
@@ -171,7 +171,7 @@
 		/// STYLES
 		///
 		@if features('elements', 'button', 'styles') {
-			@each $theme-name, $theme-color in variables.$button-styles {
+			@each $theme-name, $theme-color in elements('button', 'styles') {
 				&.#{$theme-name} > .#{class('button', 'name')},
 				&.#{$theme-name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
 					@include button-styles($theme-color, darken($theme-color, 7%));
@@ -242,7 +242,7 @@
 				/// STYLES
 				///
 				@if features('elements', 'button', 'styles') {
-					@each $theme-name, $theme-color in variables.$button-styles {
+					@each $theme-name, $theme-color in elements('button', 'styles') {
 						&>.#{$theme-name}.#{class('button', 'name')},
 						&>.#{class('button', 'dropdown')} > .#{$theme-name}.#{class('button', 'name')} {
 							border: theme('border', 'width') solid darken($theme-color, 6%);
@@ -375,7 +375,7 @@
 /// @param {Boolean} $class-name
 ///
 @mixin button-sizes($class-name: false) {
-	@each $name, $font-size, $padding in variables.$button-sizes {
+	@each $name, $font-size, $padding in elements('button', 'sizes') {
 		@if $class-name {
 			&.#{$name} > .#{class('button', 'name')},
 			&.#{$name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {

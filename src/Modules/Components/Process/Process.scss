@@ -4,11 +4,11 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "mixins";
-@use "variables";
 
 @if enabled('components', 'process') {
 	.#{class('process', 'name')} {
@@ -88,7 +88,7 @@
 		/// STYLES
 		///
 		@if features('components', 'process', 'styles') {
-			@each $type, $bg-color in variables.$styles {
+			@each $type, $bg-color in components('process', 'styles') {
 				&.#{$type} {
 					@include mixins.process-styles($bg-color);
 				}
@@ -102,7 +102,6 @@
 				@include mixins.process-vertical();
 			}
 		}
-
 		// vertical style is setted as "true" for mobile devices
 		@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
 			@include mixins.process-vertical();

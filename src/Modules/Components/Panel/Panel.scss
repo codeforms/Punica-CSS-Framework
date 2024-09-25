@@ -4,10 +4,10 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
-@use "variables";
 
 @if enabled('components', 'panel') {
 	.#{class('panel', 'name')} {
@@ -17,7 +17,6 @@
 		// has panel border?
 		@if features('components', 'panel', 'border') {
 			@include border();
-			/// border radius
 			border-radius: if(theme('components', 'panel', 'radius'), theme('components', 'panel', 'radius'), theme('border', 'radius'));
 		}
 
@@ -26,9 +25,7 @@
 			@include shadow();
 		}
 
-		/// background color
 		background-color: if(theme('components', 'panel', 'background'), theme('components', 'panel', 'background'), theme('color', 'background'));
-
 		margin: components('panel', 'margin');
 		&>.#{class('panel', 'header')},
 		&>.#{class('panel', 'bottom')} {
@@ -100,7 +97,7 @@
 		/// SIZES
 		///
 		@if features('components', 'panel', 'sizes') {
-			@each $size-name, $font-size, $padding in variables.$sizes {
+			@each $size-name, $font-size, $padding in components('panel', 'sizes') {
 				&.#{$size-name} {
 					>.#{class('panel', 'header')} {
 						padding: $padding;

@@ -4,12 +4,12 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "mixins";
-@use "variables";
 
 @if enabled('components', 'tabnav') {
 	.#{class('tabnav', 'name')} {
@@ -84,7 +84,7 @@
 		/// STYLES
 		///
 		@if features('components', 'tabnav', 'styles') {
-			@each $type-name, $color in variables.$styles {
+			@each $type-name, $color in components('tabnav', 'styles') {
 				&.#{$type-name} {
 					.#{class('button', 'name')},
 					a.#{class('button', 'name')},

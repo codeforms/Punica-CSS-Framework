@@ -4,10 +4,10 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
-@use "variables";
 
 @if enabled('components', 'billboard') {
 	.#{class('billboard', 'name')} {
@@ -24,7 +24,7 @@
 		/// STYLES
 		///
 		@if features('components', 'billboard', 'styles') {
-			@each $style-name, $bg-color in variables.$styles {
+			@each $style-name, $bg-color in components('billboard', 'styles') {
 				@include set-style($bg-color, white, $style-name) {
 					border-color: darken($bg-color, 4.5%);
 				};
@@ -34,7 +34,7 @@
 		/// SIZES
 		///
 		@if features('components', 'billboard', 'sizes') {
-			@each $size-name, $padding, $font-size in variables.$sizes {
+			@each $size-name, $padding, $font-size in components('billboard', 'sizes') {
 				@include set-size($font-size, $padding, $size-name) {
 					.#{class('billboard', 'body')} {
 						padding: $padding;
@@ -89,7 +89,7 @@
 			/// SIZES
 			///
 			@if features('components', 'billboard', 'sizes') {
-				@each $size, $padding, $font-size in variables.$responsive-sizes {
+				@each $size, $padding, $font-size in components('billboard', 'responsive-sizes') {
 					&.#{$size} {
 						padding: $padding;
 						.#{class('billboard', 'body')} {

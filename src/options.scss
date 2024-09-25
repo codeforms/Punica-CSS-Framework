@@ -5,6 +5,10 @@
 /// Note: You can also override/change the all following 
 /// default variables from your theme map.
 /// 
+
+@use "Core/Theme/Getters" as *;
+@use "Core/Global/Colors" as color;
+
 $options: (
 	///
 	/// COMPONENTS
@@ -21,8 +25,28 @@ $options: (
 			'width'  : 100%,
 			'icon': (
 				'vertical-align': text-top
+			),
+			'styles': (
+				// style name (class), theme variable
+				"primary"	: theme('color', 'primary'),
+				"success"	: theme('color', 'success'),
+				"warning"	: theme('color', 'warning'),
+				"error"		: theme('color', 'error'),
+				"dark"		: theme('color', 'dark'),
+			),
+			'sizes': (
+				(
+			    	"small", // size name (class)
+			    	.749rem, // font-size
+			    	.4rem // padding
+			    ),
+			    (
+			    	"large", // size name (class)
+			    	1.1rem, // font-size
+			    	.8rem // padding
+			    )
 			)
-		)
+		),
 	),
 	'badge': (
 		'enabled': true,
@@ -31,7 +55,32 @@ $options: (
 			'sizes' : true
 		),
 		'variables': (
-			'border-radius': 500px
+			'border-radius': 500px,
+			'styles': (
+				// style name (class), theme variable
+				"primary"	: theme('color', 'primary'),
+				"success"	: theme('color', 'success'),
+				"warning"	: theme('color', 'warning'),
+				"error"		: theme('color', 'error'),
+				"dark"		: theme('color', 'dark'),
+			),
+			'sizes': (
+				(
+					"tiny", // size name (class)
+					.659rem!important, // font-size
+					0 4px!important // padding
+			    ),
+			    (
+			    	"small", // size name (class)
+			    	.749rem!important, // font-size
+			    	1px 4px!important // padding
+			    ),
+			    (
+			    	"large", // size name (class)
+			    	1.1rem!important, // font-size
+			    	2px 8px!important // padding
+			    )
+			)
 		)
 	),
 	'billboard': (
@@ -45,6 +94,38 @@ $options: (
 			'padding': 4.5rem 2.5rem,
 			'body'   : (
 				'padding': 4.5rem 2.5rem
+			),
+			'styles': (
+				// style name (class), theme variable
+				"primary"	: theme('color', 'primary'),
+				"success"	: theme('color', 'success'),
+				"warning"	: theme('color', 'warning'),
+				"error"		: theme('color', 'error'),
+				"dark"		: theme('color', 'dark'),
+			),
+			'sizes': (
+				(
+					"small", // size name (class)
+					2.5rem 1.5rem, // padding
+					1em // font-size
+				),
+				(
+					"large", // size name (class)
+					7.5rem 4rem, // padding
+					1.6em // font-size
+				)
+			),
+			'responsive-sizes': (
+				(
+					"small", // size name (class)
+					1rem, // padding
+					1em // font-size
+				),
+				(
+					"large", // size name (class)
+					1rem, // padding
+					1.358em // font-size
+				)
 			)
 		)
 	),
@@ -57,7 +138,23 @@ $options: (
 			'font-size'	   : 1.1rem,
 			'font-weight'  : normal,
 			'active-weight': bold,
-			'seperator'	   : "\276D"
+			'seperator'	   : "\276D",
+			'sizes': (
+				(
+			    	'small', // size name (class)
+			    	.986em, // font-size
+			    	.3em, // seperator-padding
+			    	null, // seperator-size
+			        unset, // vertical align
+			    ),
+			    (
+			    	'large', // size name (class)
+			    	1.38em, // font-size
+			    	.3em, // seperator-padding
+			    	null, // seperator-size
+			        text-bottom, // vertical align
+			    )
+			)
 		)
 	),
 	'caption': (
@@ -71,6 +168,20 @@ $options: (
 			'media'    : (
 				'margin': .559em,
 			),
+			'sizes': (
+				(
+			    	"small", // size name (class)
+			    	1em .1rem, // margin
+			    	1.65rem, // font-size
+			    	theme('typography', 'font-weight') // font-weight
+			    ),
+			    (
+			    	"large", // size name (class)
+			    	1.4em .3rem, // margin
+			    	2.35rem, // font-size
+			    	bold // font-weight
+			    )
+			)
 		)
 	),
 	'card': (
@@ -104,7 +215,27 @@ $options: (
 		'variables': (
 			'font-size': .9195em,
 			'padding'  : 0.28rem 0.9rem,
-			'margin'   : .1rem .05rem
+			'margin'   : .1rem .05rem,
+			'styles': (
+				// style name (class), theme variable
+				"primary"	: theme('color', 'primary'),
+				"success"	: theme('color', 'success'),
+				"warning"	: theme('color', 'warning'),
+				"error"		: theme('color', 'error'),
+				"dark"		: theme('color', 'dark'),
+			),
+			'sizes': (
+				(
+			    	"small", // size name (class)
+			    	.18rem .85rem, // padding
+			    	.8195em // font-size
+			    ),
+			    (
+			    	"large", // size name (class)
+			    	.415rem 1.159rem, // padding
+			    	1em // font-size
+			    )
+			)
 		)
 	),
 	'list': (
@@ -200,6 +331,46 @@ $options: (
 			'burger': (
 				'padding'  : 0 1.5rem,
 				'icon-size': 2.459rem
+			),
+			'styles': (
+				(
+					"light", // theme name (class)
+					white, // bg color
+					#303232, // text color
+					white, // input bg
+					#303232, // input color
+					theme('color', 'dark'), // input border color
+					color.$grey // divider color
+				),
+				(
+					"dark", // theme name (class)
+					theme('color', 'dark'), // bg color
+					white, // text color
+					lighten(theme('color', 'dark'), 7%), // input bg
+					white, // input color
+					lighten(theme('color', 'dark'), 25.75%), // input border color
+					lighten(theme('color', 'dark'), 12.55%) // divider color
+				)
+			),
+			'sizes': (
+				(
+					"mini", // size name (class)
+					45px, // min-height
+					.9839em, // button font-size
+					.445rem .9rem, // button padding
+			    ),
+			    (
+					"small", // size name (class)
+					65px, // min-height
+					1em, // button font-size
+					.645rem 1.4rem, // button padding
+			    ),
+			    (
+					"large", // size name (class)
+					95px, // min-height
+					1.28em, // button font-size
+					.645rem 1.4rem, // button padding
+			    )
 			)
 		)
 	),
@@ -215,7 +386,19 @@ $options: (
 		'variables': (
 			'padding'      : 16px,
 			'margin'       : 16px 0,
-			'title-padding': 12px 16px
+			'title-padding': 12px 16px,
+			'sizes': (
+				(
+			    	"mini", // size name (class)
+			    	.985rem, // font-size (title)
+			    	4px 8px // padding (title/content/bottom)
+			    ),
+			    (
+			    	"small", // size name (class)
+			    	1.038rem, // font-size (title)
+			    	8px 12px // padding (title/content/bottom)
+			    )
+			)
 		)
 	),
 	'process': (
@@ -238,18 +421,14 @@ $options: (
 			'vertical': (
 				'margin'        : 1em 0,
 				'stickbar-width': 9px
+			),
+			'styles': (
+				// style name (class), color theme
+				"success"	: theme('color', 'success'),
+				"warning"	: theme('color', 'warning'),
+				"error"		: theme('color', 'error'),
+				"dark"		: theme('color', 'text'),
 			)
-		)
-	),
-	'progress': (
-		'enabled': true,
-		'features': (
-			'styles': true
-		),
-		'variables': (
-			'width'        : 100%,
-			'height'       : 12px,
-			'border-radius': 16px
 		)
 	),
 	'stats': (
@@ -279,6 +458,14 @@ $options: (
 			'media': (
 				'font-size'   : 1em, // icon
 				'margin-right': .5em
+			),
+			'styles': (
+				// style name (class), theme variable
+				"primary"	: theme('color', 'primary'),
+				"success"	: theme('color', 'success'),
+				"warning"	: theme('color', 'warning'),
+				"error"		: theme('color', 'error'),
+				"dark"		: lighten(theme('color', 'dark'), 7.85%),
 			)
 		)
 	),
@@ -289,7 +476,25 @@ $options: (
 			'bottom-position': true
 		),
 		'variables': (
-			'border-width': 2px
+			'border-width': 2px,
+			'styles': (
+				(
+					'success', // style name (class)
+					theme('color', 'success') // color
+				),
+				(
+					'warning', // style name (class)
+					theme('color', 'warning') // color
+				),
+				(
+					'error', // style name (class)
+					theme('color', 'error') // color
+				),
+				(
+					'dark', // style name (class)
+					theme('color', 'text') // color
+				)
+			)
 		)
 	),
 	'timeline': (
@@ -304,6 +509,33 @@ $options: (
 			'border-width': 1px,
 			'item': (
 				'padding': 1.25em 2em 2.85em
+			),
+			'styles': (
+				(
+					"primary", // style name (class)
+					theme('color', 'primary'), // bg color
+					white // text color
+				),
+				(
+					"success", // style name (class)
+					theme('color', 'success'), // bg color
+					white // text color
+				),
+				(
+					"warning", // style name (class)
+					theme('color', 'warning'), // bg color
+					white // text color
+				),
+				(
+					"error", // style name (class)
+					theme('color', 'error'), // bg color
+					white // text color
+				),
+				(
+					"dark", // style name (class)
+					theme('color', 'text'), // bg color
+					lighten(color.$grey, 20%) // text color
+				),
 			)
 		)
 	),
@@ -342,6 +574,60 @@ $options: (
 			'transition' : .2s,
 			'icon': (
 				'font-size': 1.12rem
+			),
+			'styles': (
+				(
+					'primary', // class name
+					theme('color', 'primary'), // bg color
+					lighten(theme('color', 'primary'), 4%) // border color
+				),
+				(
+					'success', // class name
+					theme('color', 'success'), // bg color
+					lighten(theme('color', 'success'), 4%) // border color
+				),
+				(
+					'warning', // class name
+					theme('color', 'warning'), // bg color
+					lighten(theme('color', 'warning'), 4%) // border color
+				),
+				(
+					'error', // class name
+					theme('color', 'error'), // bg color
+					lighten(theme('color', 'error'), 4%) // border color
+				),
+				(
+					'dark', // class name
+					theme('color', 'dark'), // bg color
+					lighten(theme('color', 'dark'), 4%) // border color
+				)
+			),
+			'sizes': (
+				(
+					"tiny", // size name (class)
+					.809em, // font-size
+					.415rem .5rem // padding
+				),
+				(
+					"mini", // size name (class)
+					.909em, // font-size
+					.445rem .9rem // padding
+				),
+				(
+					"small", // size name (class)
+					.979em, // font-size
+					.645rem 1.4rem // padding
+				),
+				(
+					"large", // size name (class)
+					1.25em, // font-size
+					1.15rem 2.1rem // padding
+				),
+				(
+					"huge", // size name (class)
+					1.45em, // font-size
+					1.3rem 2.4rem // padding
+				)
 			)
 		)
 	),
@@ -383,6 +669,34 @@ $options: (
 				'top'          : -8px,
 				'left'         : 0,
 				'label-padding': 0 1.2rem 0 1.7rem
+			),
+			// for input validations
+			'styles': (
+				(
+					'success', // class name
+					theme('color', 'success') // color
+				),
+				(
+					'error', // class name
+					theme('color', 'error') // color
+				)
+			),
+			// input sizes
+			'sizes': (
+				(
+					'small', // class name
+					1em, // font-size
+					1.9rem, // input height
+					.645rem 1.4rem, // button padding[*]
+					.979em // button font size[*]
+				),
+				(
+					'large', // class name
+					1.2em, // font-size
+					2.9rem, // input height
+					1.15rem 2.1rem, // button padding[*]
+					1.25em // button font size[*]
+				)
 			)
 		)
 	),

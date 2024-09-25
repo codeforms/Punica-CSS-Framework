@@ -4,12 +4,12 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 @use "../../../Modules/Elements/Typography/variables" as *;
-@use "variables" as *;
 @use "mixins" as *;
 
 @if enabled('elements', 'button') {
@@ -28,10 +28,7 @@
 		@include border();
 		appearance: none;
 		color: theme('color', 'text');
-
-		/// border radius
 		border-radius: if(theme('elements', 'button', 'radius'), theme('elements', 'button', 'radius'), theme('border', 'radius'));
-
 		box-sizing: border-box;
 		cursor: pointer;
 		line-height: elements('button', 'line-height');
@@ -55,7 +52,6 @@
 		&:focus {
 			background: theme('color', 'background');
 		}
-
 		///
 		/// GRADIENT
 		///
@@ -85,7 +81,6 @@
 				}
 			}
 		}
-
 		&.#{class('button', 'active')} {
 			color: theme('color', 'text');
 			background: color.$grey;
@@ -116,7 +111,7 @@
 		/// STYLES
 		///
 		@if features('elements', 'button', 'styles') {
-			@each $theme-name, $theme-color, $border-color in $button-styles {
+			@each $theme-name, $theme-color, $border-color in elements('button', 'styles') {
 				&.#{$theme-name} {
 					@include button-styles($theme-color, $border-color);
 				}
@@ -127,10 +122,8 @@
 				}
 			}
 		}
-
 		// Button Link
 		@include link-button();
-
 		///
 		/// SIZES
 		///

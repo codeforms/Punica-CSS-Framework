@@ -5,6 +5,7 @@
 
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 
 /// PREFERENCES =========================================
 $viewports: (
