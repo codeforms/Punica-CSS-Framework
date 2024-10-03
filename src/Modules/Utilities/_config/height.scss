@@ -8,12 +8,18 @@ $height-helpers: (
 	("height-min-content", min-content),
 	("height-max-content", max-content),
 	("height-fit-content", fit-content),
-	("height-2", 2rem),
-	("height-3", 3rem),
-	("height-4", 4rem),
-	("height-5", 5rem),
-	("height-10", 10rem),
-	("height-15", 15rem),
-	("height-20", 20rem),
-	("height-25", 25rem)
+	("height-2", 2rem), // 32px
+	("height-3", 3rem), // 48px
+	("height-4", 4rem), // 64px
+	("height-5", 5rem), // 80px
+	("height-10", 10rem), // 160px
+	("height-15", 15rem), // 240px
+	("height-20", 20rem), // 320px
+	("height-25", 25rem), // 400px
+	("height-30", 30rem), // 480px
+	("height-35", 35rem), // 560px
+	("height-40", 40rem), // 640px
+	("height-45", 45rem), // 720px
+	("height-50", 50rem), // 800px
+	("height-75", 75rem) // 1200px
 );

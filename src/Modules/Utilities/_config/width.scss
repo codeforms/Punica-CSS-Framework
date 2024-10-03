@@ -8,15 +8,18 @@ $width-helpers: (
 	("width-min-content", min-content),
 	("width-max-content", max-content),
 	("width-fit-content", fit-content),
-	("width-2", 2rem),
-	("width-3", 3rem),
-	("width-4", 4rem),
-	("width-5", 5rem),
-	("width-10", 10rem),
-	("width-25", 25%),
-	("width-33", 33%),
-	("width-50", 50%),
-	("width-66", 66%),
-	("width-75", 75%),
-	("width-100", 100%)
+	("width-2", 2rem), // 32px
+	("width-3", 3rem), // 48px
+	("width-4", 4rem), // 64px
+	("width-5", 5rem), // 80px
+	("width-10", 10rem), // 160px
+	("width-15", 15rem), // 240px
+	("width-20", 20rem), // 320px
+	("width-25", 25rem), // 400px
+	("width-30", 30rem), // 480px
+	("width-35", 35rem), // 560px
+	("width-40", 40rem), // 640px
+	("width-45", 45rem), // 720px
+	("width-50", 50rem), // 800px
+	("width-75", 75rem) // 1200px
 );
