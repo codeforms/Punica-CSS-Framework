@@ -56,7 +56,7 @@
 		background-image:
 		url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=");
 		background-repeat: no-repeat;
-		background-position: right 10px center;
+		background-position: right 1rem center;
 		&[multiple] {
 			background: none;
 			height: auto;
@@ -66,15 +66,17 @@
 		min-height: 6.5rem;
 		resize: vertical;
 	}
+	fieldset {
+		border-width: 0;
+		padding: 0.6em;
+	}
 	label,
 	legend {
 		display: block;
-		font-size: 1rem;
-		font-weight: theme('typography', 'font-weight');
-	}
-	fieldset {
-		border-width: 0;
-		padding: 0;
+		font-size: 1.3rem;
+		font-weight: bold;
+		margin-bottom: .7rem;
+		white-space: normal;
 	}
 	input[type='checkbox'],
 	input[type='radio'] {

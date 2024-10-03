@@ -210,7 +210,6 @@
 		gap: 0;
 	}
 	.fade {opacity: 0;}
-	.hide {display: none !important;}
 	/* seperator for flex */
 	.spacer {
 		flex-grow: 1!important;
@@ -241,13 +240,6 @@
 		border: none; 
 		box-shadow: none !important
 	}
-	[disabled],
-	:disabled,
-	.disabled {
-		opacity: .49;
-		cursor: default;
-		pointer-events: none;
-	}
 	.bordered {@include border();} 
 	.borderless {border: none !important;}
 	.rounded {border-radius: theme('border', 'radius');}
@@ -265,5 +257,10 @@
 		right: auto;
 		bottom: auto;
 		left: auto;
+	}
+	.clearfix:after {
+		clear: both;
+		content: ' ';
+		display: table;
 	}
 }

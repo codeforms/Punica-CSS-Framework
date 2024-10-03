@@ -8,10 +8,15 @@ $width-helpers: (
 	("width-min-content", min-content),
 	("width-max-content", max-content),
 	("width-fit-content", fit-content),
+	("width-2", 2rem),
+	("width-3", 3rem),
+	("width-4", 4rem),
+	("width-5", 5rem),
+	("width-10", 10rem),
 	("width-25", 25%),
 	("width-33", 33%),
 	("width-50", 50%),
 	("width-66", 66%),
 	("width-75", 75%),
-	("width-100", 100%),
+	("width-100", 100%)
 );
