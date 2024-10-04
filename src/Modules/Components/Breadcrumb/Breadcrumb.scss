@@ -32,7 +32,7 @@
 				margin-left: 0;
 			}
 			&.#{class('breadcrumb', 'active')} {
-				color: theme('color', 'primary');
+				color: components('breadcrumb', 'active-color');
 				font-weight: components('breadcrumb', 'active-weight');
 				&::after {
 					content: none;

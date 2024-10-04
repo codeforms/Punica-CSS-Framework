@@ -18,8 +18,8 @@
 		background-color: transparent;
 		margin: components('stats', 'margin');
 		border-width: components('stats', 'border-width');
-		border-color: theme('border', 'color');
-		border-style: theme('border', 'style');
+		border-color: components('stats', 'border-color');
+		border-style: components('stats', 'border-style');
 		border-radius: components('stats', 'border-radius');
 		padding: components('stats', 'padding');
 		line-height: components('stats', 'line-height');
@@ -45,11 +45,11 @@
 			}
 		}
 		>.#{class('stats', 'value')} {
+			flex-direction: row;
+			align-items: center;
 			font-weight: components('stats', 'value', 'font-weight');
 			font-size: components('stats', 'value', 'font-size');
-			flex-direction: row;
 			line-height: components('stats', 'value', 'line-height');
-			align-items: center;
 			>img,
 		    >.#{class('icon', 'class-name')},
 		    >i {

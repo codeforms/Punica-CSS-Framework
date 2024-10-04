@@ -7,15 +7,14 @@
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Variables" as *;
-@use "../../../Core/Theme/Getters" as *;
 @use "mixins";
 
 @if enabled('elements', 'form') {
 	@include mixins.form-inputs() {
 		-webkit-appearance: none;
-		background-color: elements('form', 'input', 'background');
-		border-width: theme('border', 'width');
-		border-style: theme('border', 'style');
+		background-color: elements('form', 'input', 'background-color');
+		border-width: elements('form', 'input', 'border-width');
+		border-style: elements('form', 'input', 'border-style');
 		border-color: elements('form', 'input', 'border-color');
 		height: elements('form', 'input', 'height');
 		border-radius: elements('form', 'input', 'border-radius');
@@ -34,7 +33,7 @@
 			outline-color: elements('form', 'input', 'outline-color');
 			outline-width: elements('form', 'input', 'outline-width');
 			outline-offset: -#{elements('form', 'input', 'outline-width')};
-			background-color: elements('form', 'input', 'background');
+			background-color: elements('form', 'input', 'background-color');
 			z-index: 0;
 		}
 		///
@@ -101,7 +100,7 @@
 			@at-root .#{class('form', 'name')} label,
 			&>label {
 				margin: elements('form', 'label', 'margin');
-				color: theme('color', 'text');
+				color: elements('form', 'label', 'color');
 				font-size: elements('form', 'label', 'font-size');
 				font-weight: bold;
 				text-transform: none;
@@ -228,9 +227,9 @@
 				display: grid;
 				place-content: center;
 				margin: 0;
-				width: 1.6em;
-				height: 1.6em;
-				border: 0.15em solid theme('border', 'color');
+				width: elements('form', 'radio-checkbox', 'width');
+				height: elements('form', 'radio-checkbox', 'height');
+				border: elements('form', 'radio-checkbox', 'border');
 				-webkit-appearance: none;
 				appearance: none;
 				&::before {
@@ -238,8 +237,8 @@
 					width: 0.7em;
 					height: 0.7em;
 					transform: scale(0);
-					background-color: theme('color', 'primary');
-					clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+					background-color: elements('form', 'radio-checkbox', 'color');
+					clip-path: elements('form', 'radio-checkbox', 'checkbox-clip-path');
 				}
 				&:checked::before {
 				  transform: scale(1.5);
@@ -251,7 +250,7 @@
 			input[type="radio"] {
 				border-radius: 500px;
 				&::before {
-					clip-path: ellipse(45% 45% at 50% 50%);
+					clip-path: elements('form', 'radio-checkbox', 'radio-clip-path');
 				}
 			}
 		}

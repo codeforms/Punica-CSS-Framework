@@ -121,14 +121,14 @@ $themes: (
 		// the all default "variables" in the options.scss API file.
 		'components': (
 			'card': (
-				'background' : lighten(#252831, 1.75%)
+				'background-color' : lighten(#252831, 1.75%)
 			)
 		),
 		'elements': (
 			'form': (
 				'input': (
-					'background'    : lighten(#252831, 4.5%),
-					'outline-color' : white,
+					'background-color'	: lighten(#252831, 4.5%),
+					'outline-color' 	: white,
 				),
 			)
 		),

@@ -13,13 +13,13 @@
 	.#{class('badge', 'name')} {
 		@include set-style(color.$grey, theme('color', 'text')) {
 			position: relative;
-			white-space: nowrap;
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
-			font-weight: bold;
+			font-weight: components('badge', 'font-weight');
+			white-space: components('badge', 'white-space');
+			border: components('badge', 'border');
 			border-radius: components('badge', 'border-radius');
-			border: theme('border', 'width') theme('border', 'style') darken(color.$grey, 6.5%);
 		};
 		@include set-size(1em, 1px 6px);
 		///

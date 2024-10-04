@@ -60,7 +60,7 @@
 				a {
 					color: theme('color', 'primary');
 					&::after {
-						content: "\2756";
+						content: "\2756"; // HTML Symbols
 						position: absolute;
 						top: calc(-15px - #{components('process', 'icon-size')});
 						left: calc(50% - ((#{components('process', 'stickbar', 'width')} * 10) / 2));

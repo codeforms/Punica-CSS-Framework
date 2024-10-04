@@ -42,13 +42,13 @@
 				}
 		    	>.#{class('list', 'title')} {
 		    		font-size: components('list', 'title', 'font-size');
-    				font-weight: bold;
+    				font-weight: components('list', 'title', 'font-weight');
 					line-height: components('list', 'body', 'line-height');
 		    	}
 				>.#{class('list', 'subtitle')} {
 					font-size: components('list', 'subtitle', 'font-size');
-					font-weight: theme('typography', 'font-weight');
-					color: theme('color', 'primary');
+					font-weight: components('list', 'subtitle', 'font-weight');
+					color: components('list', 'subtitle', 'color');
 					margin-bottom: components('list', 'subtitle', 'margin-bottom');
 				}
 		    }

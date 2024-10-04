@@ -6,8 +6,6 @@
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
-@use "../../../Core/Theme/Getters" as *;
-@use "../../../Core/Theme/Setters" as *;
 
 @if enabled('components', 'tooltip') {
 	.#{class('tooltip', 'name')} {
@@ -25,8 +23,8 @@
 			font-size: components('tooltip', 'font-size');
 			font-weight: components('tooltip', 'font-weight');
 			visibility: hidden;
-			background-color: theme('color', 'dark');
-			border-radius: theme('border', 'radius');
+			background-color: components('tooltip', 'background-color');
+			border-radius: components('tooltip', 'border-radius');
 			min-width: components('tooltip', 'min-width');
 			max-width: components('tooltip', 'max-width');
 			padding: components('tooltip', 'padding');
@@ -43,7 +41,7 @@
 				margin-left: -5px;
 				border-width: 5px;
 				border-style: solid;
-				border-color: transparent transparent theme('color', 'dark') transparent;
+				border-color: transparent transparent components('tooltip', 'background-color') transparent;
 			}
 		}
         &.#{class('tooltip', 'left')},
@@ -62,7 +60,7 @@
                 &::after {
                     right: 100%;
                     left: auto;
-                    border-color: transparent theme('color', 'dark') transparent transparent;
+                    border-color: transparent components('tooltip', 'background-color') transparent transparent;
                 }
             }
         }
@@ -73,7 +71,7 @@
                     left: 100%;
                     right: auto;
                     margin: auto -5px auto auto ;
-                    border-color: transparent transparent transparent theme('color', 'dark');
+                    border-color: transparent transparent transparent components('tooltip', 'background-color');
                 }
             }
         }
@@ -82,7 +80,7 @@
                 bottom: 120%;
                 &::after {
                     top: 100%;
-                    border-color: theme('color', 'dark') transparent transparent transparent;
+                    border-color: components('tooltip', 'background-color') transparent transparent transparent;
                 }
             }
         }

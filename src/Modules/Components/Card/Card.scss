@@ -32,14 +32,12 @@
 		}
 	}
 	.#{class('card', 'name')} {
-		/// background color
-		background-color: if(theme('components', 'card', 'background'), theme('components', 'card', 'background'), theme('color', 'background'));
+		background-color: components('card', 'background-color');
 
 		// has card border?
 		@if features('components', 'card', 'border') {
-			@include border();
-			/// border radius
-			border-radius: if(theme('components', 'card', 'radius'), theme('components', 'card', 'radius'), theme('border', 'radius'));
+			border: components('card', 'border');
+			border-radius: components('card', 'border-radius');
 		}
 
 		// has card shadow?
@@ -54,8 +52,8 @@
 		overflow: hidden;
 		>.#{class('card', 'body')} .#{class('card', 'title')},
 		>.#{class('card', 'title')} {
-			color: theme('color', 'text');
-			line-height: initial;
+			color: components('card', 'title', 'color');
+			line-height: components('card', 'title', 'line-height');
 			&>.#{class('card', 'subtitle')} {
 				@if theme('type') == 'light' {
 					color: darken(color.$grey, 20%);
@@ -72,7 +70,7 @@
 		}
 		>.#{class('card', 'description')} {
 			flex: 1 1 auto;
-			color: theme('color', 'text');
+			color: components('card', 'description', 'text');
 		}
 		///
 		/// MEDIA

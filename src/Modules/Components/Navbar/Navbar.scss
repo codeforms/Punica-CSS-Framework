@@ -18,9 +18,9 @@
 		align-items: stretch;
 		justify-content: space-between;
 		min-height: components('navbar', 'min-height');
-		background: theme('color', 'primary');
-		color: white;
-		width: 100%;
+		background: components('navbar', 'background');
+		color: components('navbar', 'color');
+		width: components('navbar', 'width');
 		// grid container
 		.#{class('grid', 'container')} {
 			display: flex;
@@ -80,14 +80,14 @@
 					justify-content: flex-end;
 				}
 				input[type='text'] {
-					background-color: darken(theme('color', 'primary'), 7%);
+					background-color: darken(components('navbar', 'background'), 7%);
 					color: white;
-					border-color: lighten(theme('color', 'primary'), 8%);
+					border-color: lighten(components('navbar', 'background'), 8%);
 					&::placeholder {
 						color: white;
 					}
 					&:focus {
-						outline: theme('input', 'outline-width') solid lighten(theme('color', 'primary'), 26%);
+						outline: theme('input', 'outline-width') solid lighten(components('navbar', 'background'), 26%);
 					}
 				}
 				///
@@ -99,7 +99,7 @@
 						.#{class('button', 'group')} {
 							.#{class('button', 'name')},
 							.#{class('button', 'dropdown')} .#{class('button', 'name')} {
-								border: solid darken(theme('color', 'primary'), 7.15%);
+								border: solid darken(components('navbar', 'background'), 7.15%);
 							}
 						}
 						@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
@@ -139,17 +139,17 @@
 					color: white;
 				}
 				&:hover {
-					background: darken(theme('color', 'primary'), 10.15%);
+					background: darken(components('navbar', 'background'), 10.15%);
 					border-radius: 0;
 				}
 				&:active,
 				&.#{class('button', 'active')} {
 					color: white;
-					background: darken(theme('color', 'primary'), 7%);
+					background: darken(components('navbar', 'background'), 7%);
 					transition: components('button', 'transition');
 					&:hover {
 						transition: components('button', 'transition');
-						background: darken(theme('color', 'primary'), 10%);
+						background: darken(components('navbar', 'background'), 10%);
 					}
 				}
 			}
@@ -163,7 +163,7 @@
 		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 			font-size: components('navbar', 'font-size');
 			padding: components('navbar', 'button-padding');
-			font-weight: theme('components','navbar', 'font-weight');
+			font-weight: components('navbar', 'font-weight');
 		}
 		///
 		/// GRADIENT
@@ -172,19 +172,19 @@
 			&.#{class('navbar', 'gradient')} {
 				background: linear-gradient(
 					to top, 
-					theme('color', 'primary') 0%, 
-					lighten(theme('color', 'primary'), 11.5%) 2%, 
-					darken(theme('color', 'primary'), 3%) 97%, 
-					lighten(theme('color', 'primary'), 11.5%) 100%
+					components('navbar', 'background') 0%, 
+					lighten(components('navbar', 'background'), 11.5%) 2%, 
+					darken(components('navbar', 'background'), 3%) 97%, 
+					lighten(components('navbar', 'background'), 11.5%) 100%
 				);
 			}
 			/// Gradient Left-To-Right
 			&.#{class('navbar', 'gradient')}#{'-ltr'} {
-				background: linear-gradient(135deg, lighten(theme('color', 'primary'), 7.5%), theme('color', 'primary'));
+				background: linear-gradient(135deg, lighten(components('navbar', 'background'), 7.5%), components('navbar', 'background'));
 			}
 			/// Gradient Right-To-Left
 			&.#{class('navbar', 'gradient')}#{'-rtl'} {
-				background: linear-gradient(-135deg, lighten(theme('color', 'primary'), 7.5%), theme('color', 'primary'));
+				background: linear-gradient(-135deg, lighten(components('navbar', 'background'), 7.5%), components('navbar', 'background'));
 			}
 		}
 		/// 

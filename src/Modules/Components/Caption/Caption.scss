@@ -6,7 +6,6 @@
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
-@use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 
 @if enabled('elements', 'caption') {
@@ -15,8 +14,8 @@
 	    align-items: center;
 		margin: elements('caption', 'margin');
 		font-size: elements('caption', 'font-size');
-		font-weight: bold;
-		line-height: theme('typography', 'line-height') - .2;
+		font-weight: elements('caption', 'font-weight');
+		line-height: elements('caption', 'line-height');
 		text-align: left;
 		>img,
 	    >.#{class('icon', 'class-name')},

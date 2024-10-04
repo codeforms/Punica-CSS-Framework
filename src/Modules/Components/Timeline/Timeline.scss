@@ -26,7 +26,7 @@
 				bottom: 0;
 				left: 0;
 				width: components('timeline', 'border-width');
-				background-color: theme('border', 'color');
+				background-color: components('timeline', 'item', 'background-color');
 			}
 			&:target .#{class('timeline', 'type')} {
 				border-color: theme('color', 'primary');
@@ -84,7 +84,7 @@
 			///
 			/// MEDIA
 			///
-			@if features('components', 'timeline', 'timeline') {
+			@if features('components', 'timeline', 'media') {
 				.#{class('timeline', 'media')} {
 					margin-top: 16px;
 					display: flex;

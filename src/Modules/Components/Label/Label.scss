@@ -13,17 +13,16 @@
 	.#{class('label', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: inline-block;
-			font-weight: bold;
-			line-height: 1.2;
+			font-weight: elements('label', 'font-weight');
+			line-height: elements('label', 'line-height');
 			margin: elements('label', 'margin');
-			border-radius: theme('border', 'radius');
-			text-decoration: none;
+			border-radius: elements('label', 'border-radius');
+			text-decoration: elements('label', 'text-decoration');
 			@include border();
 			@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
-			border-color: theme('border', 'color');
+			border-color: elements('label', 'border-color');
 			@include set-size(elements('label', 'font-size'), elements('label', 'padding'));
-			>i,
-			>.material-icons {
+			>i {
 				vertical-align: text-top;
 			}
 		};

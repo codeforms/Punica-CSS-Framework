@@ -7,28 +7,25 @@
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Colors" as color;
-@use "../../../Core/Theme/Getters" as *;
-@use "../../../Core/Theme/Setters" as *;
-@use "../../../Modules/Elements/Typography/variables" as *;
 @use "mixins" as *;
 
 @if enabled('elements', 'button') {
 	a.#{class('button', 'name')},
 	.#{class('button', 'name')} {
 		display: inline-flex;
-		font-family: $font-family; // typography > variables
+		font-family: elements('button', 'font-family');
 		font-size: elements('button', 'font-size');
 		font-weight: elements('button', 'font-weight');
 		text-decoration: none;
 		white-space: nowrap;
 		outline: none;
 		width: elements('button', 'width');
-		background: theme('color', 'background');
+		background: elements('button', 'background');
 		background-image: none;
-		@include border();
 		appearance: none;
-		color: theme('color', 'text');
-		border-radius: if(theme('elements', 'button', 'radius'), theme('elements', 'button', 'radius'), theme('border', 'radius'));
+		color: elements('button', 'color');
+		border: elements('button', 'border');
+		border-radius: elements('button', 'border-radius');
 		box-sizing: border-box;
 		cursor: pointer;
 		line-height: elements('button', 'line-height');
@@ -50,7 +47,7 @@
 		}
 		&:active,
 		&:focus {
-			background: theme('color', 'background');
+			background: elements('button', 'background');
 		}
 		///
 		/// GRADIENT
@@ -59,7 +56,7 @@
 			&.#{class('button', 'gradient')} {
 				z-index: 1;
 				position: relative;
-				@include set-gradient(theme('color', 'background'));
+				@include set-gradient(elements('button', 'background'));
 				&:before {
 					position: absolute;
 					content: "";
@@ -70,19 +67,19 @@
 					opacity: 0;
 					transition: opacity 0.25s;
 					z-index: -1;
-					@include set-gradient(theme('color', 'background'), to bottom, 23%);
+					@include set-gradient(elements('button', 'background'), to bottom, 23%);
 				}
 				&:hover::before {
 					opacity: 1;
 				}
 				&:active::before,
 				&:focus::before {
-					@include set-gradient(theme('color', 'background'), to bottom, 27%);
+					@include set-gradient(elements('button', 'background'), to bottom, 27%);
 				}
 			}
 		}
 		&.#{class('button', 'active')} {
-			color: theme('color', 'text');
+			color: elements('button', 'color');
 			background: color.$grey;
 			background-image: none;
 			text-decoration: none;
@@ -104,7 +101,7 @@
 		}
 		i, [class^="#{class('icon', 'class-name')}"] {
 			font-size: elements('button', 'icon', 'font-size');
-			color: theme('color', 'text');
+			color: elements('button', 'color');
 			text-shadow: none;
 		}
 		///

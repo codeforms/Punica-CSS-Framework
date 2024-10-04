@@ -17,7 +17,7 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: components('billboard', 'padding');
-			border-color: darken(theme('color', 'background'), 4.5%);
+			border-color: components('billboard', 'border-color');
 			@include border();
 		};
 		///

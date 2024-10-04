@@ -16,8 +16,8 @@
 
 		// has panel border?
 		@if features('components', 'panel', 'border') {
-			@include border();
-			border-radius: if(theme('components', 'panel', 'radius'), theme('components', 'panel', 'radius'), theme('border', 'radius'));
+			border: components('panel', 'border');
+			border-radius: components('panel', 'border-radius');
 		}
 
 		// has panel shadow?
@@ -25,7 +25,7 @@
 			@include shadow();
 		}
 
-		background-color: if(theme('components', 'panel', 'background'), theme('components', 'panel', 'background'), theme('color', 'background'));
+		background-color: components('panel', 'background-color');
 		margin: components('panel', 'margin');
 		&>.#{class('panel', 'header')},
 		&>.#{class('panel', 'bottom')} {
