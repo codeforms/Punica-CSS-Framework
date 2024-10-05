@@ -8,27 +8,27 @@
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Theme/Setters" as *;
 
-@if enabled('elements', 'caption') {
+@if enabled('components', 'caption') {
 	.#{class('caption', 'name')} {
 		display: flex;
 	    align-items: center;
-		margin: elements('caption', 'margin');
-		font-size: elements('caption', 'font-size');
-		font-weight: elements('caption', 'font-weight');
-		line-height: elements('caption', 'line-height');
+		margin: components('caption', 'margin');
+		font-size: components('caption', 'font-size');
+		font-weight: components('caption', 'font-weight');
+		line-height: components('caption', 'line-height');
 		text-align: left;
 		>img,
 	    >.#{class('icon', 'class-name')},
 	    >i {
-	    	margin-right: elements('caption', 'media', 'margin');
+	    	margin-right: components('caption', 'media', 'margin');
 	    }
 	    >.#{class('icon', 'class-name')},
 	    >i {
-	    	font-size: elements('caption', 'font-size') * 1.4;
+	    	font-size: components('caption', 'font-size') * 1.4;
 	    }
 	    &.#{class('caption', 'divided')} {
 	    	border-bottom: set-border();
-	    	padding-bottom: elements('caption', 'media', 'margin');
+	    	padding-bottom: components('caption', 'media', 'margin');
 	    }
 	    &>span,
 	    &>div {
@@ -50,7 +50,7 @@
 	    ///
 		/// SIZES
 		///
-		@if features('elements', 'caption', 'sizes') {
+		@if features('components', 'caption', 'sizes') {
 			@each $size-name, $margin, $font-size, $font-weight in components('caption', 'sizes') {
 				@include set-size($font-size, null, $size-name) {
 					margin: $margin;

@@ -8,20 +8,20 @@
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
 
-@if enabled('elements', 'label') {
+@if enabled('components', 'label') {
 	a.#{class('label', 'name')},
 	.#{class('label', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display: inline-block;
-			font-weight: elements('label', 'font-weight');
-			line-height: elements('label', 'line-height');
-			margin: elements('label', 'margin');
-			border-radius: elements('label', 'border-radius');
-			text-decoration: elements('label', 'text-decoration');
+			font-weight: components('label', 'font-weight');
+			line-height: components('label', 'line-height');
+			margin: components('label', 'margin');
+			border-radius: components('label', 'border-radius');
+			text-decoration: components('label', 'text-decoration');
 			@include border();
-			@include shadow(0, .155em, 0, rgba(0, 0, 0, 0.095));
-			border-color: elements('label', 'border-color');
-			@include set-size(elements('label', 'font-size'), elements('label', 'padding'));
+			@include shadow(0, .155em, 0, 0, rgba(0, 0, 0, 0.095));
+			border-color: components('label', 'border-color');
+			@include set-size(components('label', 'font-size'), components('label', 'padding'));
 			>i {
 				vertical-align: text-top;
 			}
@@ -29,7 +29,7 @@
 		///
 		/// STYLES
 		///
-		@if features('elements', 'label', 'styles') {
+		@if features('components', 'label', 'styles') {
 			@each $style-name, $bg-color in components('label', 'styles') {
 				@include set-style($bg-color, white, $style-name) {
 					border-color: darken($bg-color, 3%);
@@ -39,7 +39,7 @@
 		///
 		/// SIZES
 		///
-		@if features('elements', 'label', 'sizes') {
+		@if features('components', 'label', 'sizes') {
 			@each $size-name, $padding, $font-size in components('label', 'sizes') {
 				@include set-size($font-size, $padding, $size-name);
 			}

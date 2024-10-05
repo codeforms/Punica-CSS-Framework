@@ -7,9 +7,9 @@
 /// 
 
 $themes: (
-	/*
-		Default Theme
-	*/
+	//
+	// 01. Default Theme
+	//
 	default: (
 		'name' : 'Default Theme',
 		'type' : 'light', // light or dark (required*),
@@ -78,9 +78,9 @@ $themes: (
 		)
 		//////////////////////////////////////////////////////////
 	),
-	/*
-		Dark Theme
-	*/
+	//
+	// 02. Dark Theme
+	//
 	dark: (
 		'name' : 'Dark Theme',
 		'type' : 'dark', // light or dark (required*),

@@ -615,7 +615,7 @@ $options: (
 			'gradient'	: true
 		),
 		'variables': (
-			'font-family'	: $font-family,
+			'font-family'	: $font-family, // Typography -> variables
 			'font-weight'	: bold,
 			'font-size'		: 1em,
 			'line-height'	: 1,
