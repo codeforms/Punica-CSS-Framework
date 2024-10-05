@@ -54,12 +54,12 @@
 		}
 		.#{class('navbar', 'burger')} {
 			&::before {
-				content: "\2630";
-				font-size: components('navbar', 'burger', 'icon-size');
 				display: none;
+				position: absolute;
+				content: components('navbar', 'burger', 'symbol-open');
+				font-size: components('navbar', 'burger', 'icon-size');
 				min-height: components('navbar', 'min-height');
 				max-height: components('navbar', 'min-height');
-				position: absolute;
 				cursor: pointer;
 				right: 0;
 				top: 0;
@@ -270,7 +270,7 @@
 				align-items: center;
 				justify-content: center;
 				&::before {
-					content: "\2715";
+					content: components('navbar', 'burger', 'symbol-close');
 					padding: components('navbar', 'burger', 'padding');
 					font-size: components('navbar', 'burger', 'icon-size');
 					display: flex;
@@ -303,10 +303,10 @@
 				height: auto;
 			}
 			input[type=checkbox]##{class('navbar', 'burger')}:not(:checked) ~ .#{class('navbar', 'burger')}::before {
-				content: "\2630"; // open
+				content: components('navbar', 'burger', 'symbol-open'); // open
 			}
 			input[type=checkbox]##{class('navbar', 'burger')}:checked ~ .#{class('navbar', 'burger')}::before {
-				content: "\2715"; // close
+				content: components('navbar', 'burger', 'symbol-close'); // close
 			}
 		}
 	}

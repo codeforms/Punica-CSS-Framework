@@ -350,7 +350,6 @@ $options: (
 		),
 		'variables': (
 			'min-height'	: 80px,
-			'spacer-top'	: 105px, // min-height + 25px
 			'font-size'		: 1.128em,
 			'color'			: white,
 			'background'	: theme('color', 'primary'),
@@ -364,8 +363,10 @@ $options: (
 				'img-width'		: 7rem
 			),
 			'burger': (
-				'padding'	: 0 1.5rem,
-				'icon-size'	: 2.459rem
+				'padding'		: 0 1.5rem,
+				'icon-size'		: 2.459rem,
+				'symbol-open'	: "\2630", // HTML Symbols
+				'symbol-close'	: "\2715" // HTML Symbols
 			),
 			'styles': (
 				(
