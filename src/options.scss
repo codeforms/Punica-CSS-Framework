@@ -21,21 +21,21 @@ $options: (
 			'sizes' : true
 		),
 		'variables': (
-			'padding'		: .6rem,
-			'margin'		: 0 0 8px,
-			'width'			: 100%,
-			'font-weight'	: bold,
-			'border-radius'	: theme('border', 'radius'),
+			'padding'      : .6rem,
+			'margin'       : 0 0 8px,
+			'width'        : 100%,
+			'font-weight'  : bold,
+			'border-radius': theme('border', 'radius'),
 			'icon': (
 				'vertical-align': text-top
 			),
 			'styles': (
 				// style name (class), theme variable
-				"primary"	: theme('color', 'primary'),
-				"success"	: theme('color', 'success'),
-				"warning"	: theme('color', 'warning'),
-				"error"		: theme('color', 'error'),
-				"dark"		: theme('color', 'dark'),
+				"primary": theme('color', 'primary'),
+				"success": theme('color', 'success'),
+				"warning": theme('color', 'warning'),
+				"error"  : theme('color', 'error'),
+				"dark"   : theme('color', 'dark'),
 			),
 			'sizes': (
 				(
@@ -58,17 +58,17 @@ $options: (
 			'sizes' : true
 		),
 		'variables': (
-			'border-radius'	: 500px,
-			'white-space'	: nowrap,
-			'font-weight'	: bold,
-			'border'		: theme('border', 'width') theme('border', 'style') darken(color.$grey, 6.5%),
+			'border-radius': 500px,
+			'white-space'  : nowrap,
+			'font-weight'  : bold,
+			'border'       : theme('border', 'width') theme('border', 'style') darken(color.$grey, 6.5%),
 			'styles': (
 				// style name (class), theme variable
-				"primary"	: theme('color', 'primary'),
-				"success"	: theme('color', 'success'),
-				"warning"	: theme('color', 'warning'),
-				"error"		: theme('color', 'error'),
-				"dark"		: theme('color', 'dark'),
+				"primary": theme('color', 'primary'),
+				"success": theme('color', 'success'),
+				"warning": theme('color', 'warning'),
+				"error"  : theme('color', 'error'),
+				"dark"   : theme('color', 'dark'),
 			),
 			'sizes': (
 				(
@@ -97,18 +97,18 @@ $options: (
 			'cover' : true
 		),
 		'variables': (
-			'padding'		: 4.5rem 2.5rem,
-			'border-color'	: darken(theme('color', 'background'), 4.5%),
-			'body': (
+			'padding'     : 4.5rem 2.5rem,
+			'border-color': darken(theme('color', 'background'), 4.5%),
+			'body'        : (
 				'padding': 4.5rem 2.5rem
 			),
 			'styles': (
 				// style name (class), theme variable
-				"primary"	: theme('color', 'primary'),
-				"success"	: theme('color', 'success'),
-				"warning"	: theme('color', 'warning'),
-				"error"		: theme('color', 'error'),
-				"dark"		: theme('color', 'dark'),
+				"primary": theme('color', 'primary'),
+				"success": theme('color', 'success'),
+				"warning": theme('color', 'warning'),
+				"error"  : theme('color', 'error'),
+				"dark"   : theme('color', 'dark'),
 			),
 			'sizes': (
 				(
@@ -146,11 +146,11 @@ $options: (
 			'sizes': true
 		),
 		'variables': (
-			'font-size'		: 1.1rem,
-			'font-weight'	: normal,
-			'active-weight'	: bold,
-			'active-color'	: theme('color', 'primary'),
-			'seperator'		: "\276D", // HTML Symbols
+			'font-size'    : 1.1rem,
+			'font-weight'  : normal,
+			'active-weight': bold,
+			'active-color' : theme('color', 'primary'),
+			'seperator'    : "\276D", // HTML Symbols
 			'sizes': (
 				(
 			    	'small', // size name (class)
@@ -168,7 +168,7 @@ $options: (
 			    )
 			),
 			'responsive': (
-				'font-size'		: 1rem,
+				'font-size'     : 1rem,
 				'vertical-align': middle
 			)
 		)
@@ -179,11 +179,11 @@ $options: (
 			'sizes': true,
 		),
 		'variables': (
-			'margin'		: 1.3em .2rem,
-			'font-size'		: 1.95rem,
-			'font-weight'	: bold,
-			'line-height'	: theme('typography', 'line-height') - .2,
-			'media': (
+			'margin'     : 1.3em .2rem,
+			'font-size'  : 1.95rem,
+			'font-weight': bold,
+			'line-height': theme('typography', 'line-height') - .2,
+			'media'      : (
 				'margin': .559em,
 			),
 			'sizes': (
@@ -205,23 +205,23 @@ $options: (
 	'card': (
 		'enabled': true,
 		'features': (
-			'group'			: true,
-			'horizontal'	: true,
-			'media'			: true,
-			'media-group'	: true,
-			'border'		: true,
-			'shadow'		: true
+			'group'      : true,
+			'horizontal' : true,
+			'media'      : true,
+			'media-group': true,
+			'border'     : true,
+			'shadow'     : true
 		),
 		'variables': (
-			'width'  			: 240px, // for only a single card
-			'height' 			: 100%,
-			'padding'			: 1rem,
-			'border'			: theme('border', 'width') theme('border', 'style') theme('border', 'color'),
-			'border-radius'		: theme('border', 'radius'),
-			'background-color'	: theme('color', 'background'),
-			'title' : (
-				'color'			: theme('color', 'text'),
-				'line-height'	: initial
+			'width'           : 240px, // for only a single card
+			'height'          : 100%,
+			'padding'         : 1rem,
+			'border'          : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
+			'border-radius'   : theme('border', 'radius'),
+			'background-color': theme('color', 'background'),
+			'title'           : (
+				'color'      : theme('color', 'text'),
+				'line-height': initial
 			),
 			'description': (
 				'color': theme('color', 'text')
@@ -241,21 +241,21 @@ $options: (
 			'sizes' : true
 		),
 		'variables': (
-			'font-size'			: .9195em,
-			'font-weight'		: bold,
-			'line-height'		: 1.2,
-			'padding'			: 0.28rem 0.9rem,
-			'margin'			: .1rem .05rem,
-			'border-color'		: theme('border', 'color'),
-			'border-radius'		: theme('border', 'radius'),
-			'text-decoration'	: none,
+			'font-size'      : .9195em,
+			'font-weight'    : bold,
+			'line-height'    : 1.2,
+			'padding'        : 0.28rem 0.9rem,
+			'margin'         : .1rem .05rem,
+			'border-color'   : theme('border', 'color'),
+			'border-radius'  : theme('border', 'radius'),
+			'text-decoration': none,
 			'styles': (
 				// style name (class), theme variable
-				"primary"	: theme('color', 'primary'),
-				"success"	: theme('color', 'success'),
-				"warning"	: theme('color', 'warning'),
-				"error"		: theme('color', 'error'),
-				"dark"		: theme('color', 'dark'),
+				"primary": theme('color', 'primary'),
+				"success": theme('color', 'success'),
+				"warning": theme('color', 'warning'),
+				"error"  : theme('color', 'error'),
+				"dark"   : theme('color', 'dark'),
 			),
 			'sizes': (
 				(
@@ -281,31 +281,31 @@ $options: (
 		'variables': (
 			'margin': 1rem 0,
 			'item': (
-				'padding'	: .55em,
-				'margin'	: 0,
+				'padding'   : .55em,
+				'margin'    : 0,
 				'transition': .15s
 			),
 			'media': (
 				'margin-right': 1rem
 			),
 			'body': (
-				'line-height'	: 1.4,
-				'text-align'	: left
+				'line-height': 1.4,
+				'text-align' : left
 			),
 			'title': (
-				'font-size'		: 1.28rem,
-				'font-weight'	: bold,
-				'line-height'	: 1
+				'font-size'  : 1.28rem,
+				'font-weight': bold,
+				'line-height': 1
 			),
 			'subtitle': (
-				'color'			: theme('color', 'primary'),
-				'font-size'		: .889em,
-				'font-weight'	: theme('typography', 'font-weight'),
-				'margin-bottom'	: 7px
+				'color'        : theme('color', 'primary'),
+				'font-size'    : .889em,
+				'font-weight'  : theme('typography', 'font-weight'),
+				'margin-bottom': 7px
 			),
 			'actions': (
-				'width'			: auto,
-				'margin-left'	: 1rem
+				'width'      : auto,
+				'margin-left': 1rem
 			)
 		)
 	),
@@ -313,68 +313,68 @@ $options: (
 		'enabled': true,
 		'features': (),
 		'variables': (
-			'width'			: 100%,
-			'padding'		: .9rem,
-			'margin'		: 0,
-			'border-radius'	: 0,
-			'background'	: lighten(theme('color', 'background'), 2.5%),
+			'width'        : 100%,
+			'padding'      : .9rem,
+			'margin'       : 0,
+			'border-radius': 0,
+			'background'   : lighten(theme('color', 'background'), 2.5%),
 			'title': (
-				'font-size'		: 1.25em,
-				'font-weight'	: bold,
-				'color'			: theme('color', 'text'),
-				'min-height'	: 2rem,
-				'padding'		: .6rem 0,
+				'font-size'     : 1.25em,
+				'font-weight'   : bold,
+				'color'         : theme('color', 'text'),
+				'min-height'    : 2rem,
+				'padding'       : .6rem 0,
 				'letter-spacing': -.015rem
 			),
 			'item': (
-				'width'			: 100%,
-				'text-align'	: left,
-				'padding'		: .28rem .9rem,
-				'font-size'		: 1em,
-				'small-size'	: .945em,
-				'transition'	: background .15s,
-				'sub-padding'	: .4rem // padding of sub items
+				'width'      : 100%,
+				'text-align' : left,
+				'padding'    : .28rem .9rem,
+				'font-size'  : 1em,
+				'small-size' : .945em,
+				'transition' : background .15s,
+				'sub-padding': .4rem // padding of sub items
 			),
 			'icon': (
-				'font-size'		: 1.2rem,
-				'margin-right'	: 10px,
+				'font-size'     : 1.2rem,
+				'margin-right'  : 10px,
 				'vertical-align': text-bottom
 			),
 			'badge': (
-				'right'		: 0,
-				'top'		: 4px,
-				'padding'	: 0 4px,
-				'font-size'	: .93em
+				'right'    : 0,
+				'top'      : 4px,
+				'padding'  : 0 4px,
+				'font-size': .93em
 			)
 		)
 	),
 	'navbar': (
 		'enabled': true,
 		'features': (
-			'themes'	: true,
-			'sizes'		: true,
-			'divided'	: true,
-			'gradient'	: true
+			'themes'  : true,
+			'sizes'   : true,
+			'divided' : true,
+			'gradient': true
 		),
 		'variables': (
-			'min-height'	: 80px,
-			'font-size'		: 1.128em,
-			'color'			: white,
-			'background'	: theme('color', 'primary'),
-			'width'			: 100%,
+			'min-height'    : 80px,
+			'font-size'     : 1.128em,
+			'color'         : white,
+			'background'    : theme('color', 'primary'),
+			'width'         : 100%,
 			'button-padding': .935rem 1.4rem,
-			'font-weight'	: bold,
-			'brand': (
-				'padding'		: 0,
-				'margin-right'	: 1rem,
-				'font-weight'	: bold,
-				'img-width'		: 7rem
+			'font-weight'   : bold,
+			'brand'         : (
+				'padding'     : 0,
+				'margin-right': 1rem,
+				'font-weight' : bold,
+				'img-width'   : 7rem
 			),
 			'burger': (
-				'padding'		: 0 1.5rem,
-				'icon-size'		: 2.459rem,
-				'symbol-open'	: "\2630", // HTML Symbols
-				'symbol-close'	: "\2715" // HTML Symbols
+				'padding'     : 0 1.5rem,
+				'icon-size'   : 2.459rem,
+				'symbol-open' : "\2630", // HTML Symbols
+				'symbol-close': "\2715" // HTML Symbols
 			),
 			'styles': (
 				(
@@ -421,20 +421,20 @@ $options: (
 	'panel': (
 		'enabled': true,
 		'features': (
-			'media'			: true,
-			'media-group'	: true,
-			'border'		: true,
-			'shadow'		: true,
-			'sizes'			: true
+			'media'      : true,
+			'media-group': true,
+			'border'     : true,
+			'shadow'     : true,
+			'sizes'      : true
 		),
 		'variables': (
-			'padding'			: 1rem,
-			'margin'			: 1rem 0,
-			'title-padding'		: .85rem 1rem,
-			'border'			: theme('border', 'width') theme('border', 'style') theme('border', 'color'),
-			'border-radius'		: theme('border', 'radius'),
-			'background-color'	: theme('color', 'background'),
-			'sizes': (
+			'padding'         : 1rem,
+			'margin'          : 1rem 0,
+			'title-padding'   : .85rem 1rem,
+			'border'          : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
+			'border-radius'   : theme('border', 'radius'),
+			'background-color': theme('color', 'background'),
+			'sizes'           : (
 				(
 			    	"mini", // size name (class)
 			    	.985rem, // font-size (title)
@@ -451,32 +451,32 @@ $options: (
 	'process': (
 		'enabled': true,
 		'features': (
-			'styles'	: true,
-			'vertical'	: true
+			'styles'  : true,
+			'vertical': true
 		),
 		'variables': (
-			'margin'	: 1em 0 5em,
-			'min-height': 4rem, // for each item
-			'symbol'	: "\2756", // HTML Symbols
-			'symbol-size' : 1.8rem,
-			'stepbar': (
+			'margin'     : 1em 0 5em,
+			'min-height' : 4rem, // for each item
+			'symbol'     : "\2756", // HTML Symbols
+			'symbol-size': 1.8rem,
+			'stepbar'    : (
 				'height': 6px,
 			),
 			'stickbar': (
-				'width'	: 3px,
+				'width' : 3px,
 				'height': .8rem
 			),
 			'vertical': (
-				'margin'	: 1em 0,
-				'padding'	: 1.25em 2em 2.85em,
-				'bar-width'	: 9px
+				'margin'   : 1em 0,
+				'padding'  : 1.25em 2em 2.85em,
+				'bar-width': 9px
 			),
 			'styles': (
 				// style name (class), color theme
-				"success"	: theme('color', 'success'),
-				"warning"	: theme('color', 'warning'),
-				"error"		: theme('color', 'error'),
-				"dark"		: theme('color', 'text'),
+				"success": theme('color', 'success'),
+				"warning": theme('color', 'warning'),
+				"error"  : theme('color', 'error'),
+				"dark"   : theme('color', 'text'),
 			)
 		)
 	),
@@ -486,54 +486,54 @@ $options: (
 			'styles': true
 		),
 		'variables': (
-			'margin'		: 0 1.1em .8em,
-			'padding'		: 8px 2.76em,
-			'border-radius'	: 4px,
-			'line-height'	: 2.1em,
-			'border-width'	: 1px,
-			'border-style'	: theme('border', 'style'),
-			'border-color'	: theme('border', 'color'),
-			'transition'	: .15s,
-			'title': (
+			'margin'       : 0 1.1em .8em,
+			'padding'      : 8px 2.76em,
+			'border-radius': 4px,
+			'line-height'  : 2.1em,
+			'border-width' : 1px,
+			'border-style' : theme('border', 'style'),
+			'border-color' : theme('border', 'color'),
+			'transition'   : .15s,
+			'title'        : (
 				'font-size': 1.1em
 			),
 			'value': (
-				'font-size'		: 1.65rem,
-				'font-weight'	: bold,
-				'line-height'	: 1.2
+				'font-size'  : 1.65rem,
+				'font-weight': bold,
+				'line-height': 1.2
 			),
 			'subtitle': (
-				'font-size'	: .816rem,
+				'font-size' : .816rem,
 				'margin-top': -4px
 			),
 			'media': (
-				'font-size'		: 1em, // icon
-				'margin-right'	: .5em
+				'font-size'   : 1em, // icon
+				'margin-right': .5em
 			),
 			'styles': (
 				// style name (class), theme variable
-				"primary"	: theme('color', 'primary'),
-				"success"	: theme('color', 'success'),
-				"warning"	: theme('color', 'warning'),
-				"error"		: theme('color', 'error'),
-				"dark"		: lighten(theme('color', 'dark'), 7.85%),
+				"primary": theme('color', 'primary'),
+				"success": theme('color', 'success'),
+				"warning": theme('color', 'warning'),
+				"error"  : theme('color', 'error'),
+				"dark"   : lighten(theme('color', 'dark'), 7.85%),
 			)
 		)
 	),
 	'tabnav': (
 		'enabled': true,
 		'features': (
-			'styles'			: true,
-			'bottom-position'	: true
+			'styles'         : true,
+			'bottom-position': true
 		),
 		'variables': (
-			'color'			: theme('color', 'text'),
-			'border-width'	: 2px,
-			'font-size'		: 1.025em,
-			'font-weight'	: bold,
-			'line-height'	: unset,
-			'padding'		: .935rem 1.4rem,
-			'styles': (
+			'color'       : theme('color', 'text'),
+			'border-width': 2px,
+			'font-size'   : 1.025em,
+			'font-weight' : bold,
+			'line-height' : unset,
+			'padding'     : .935rem 1.4rem,
+			'styles'      : (
 				(
 					'success', // style name (class)
 					theme('color', 'success') // color
@@ -556,16 +556,16 @@ $options: (
 	'timeline': (
 		'enabled': true,
 		'features': (
-			'styles'		: true,
-			'media'			: true,
-			'media-group'	: true
+			'styles'     : true,
+			'media'      : true,
+			'media-group': true
 		),
 		'variables': (
-			'type-width'	: 32px,
-			'border-width'	: 1px,
+			'type-width'  : 32px,
+			'border-width': 1px,
 			'item': (
-				'background-color'	: color.$grey,
-				'padding'			: 1.25em 2em 2.85em,
+				'background-color': color.$grey,
+				'padding'         : 1.25em 2em 2.85em,
 			),
 			'styles': (
 				(
@@ -600,15 +600,15 @@ $options: (
 		'enabled': true,
 		'features' : (),
 		'variables': (
-			'color'				: white,
-			'font-size'			: .9em,
-			'font-weight'		: bold,
-			'min-width'			: 100px,
-			'max-width'			: 180px,
-			'padding'			: 5px,
-			'transition'		: opacity 0.18s,
-			'background-color'	: theme('color', 'dark'),
-			'border-radius'		: theme('border', 'radius')
+			'color'           : white,
+			'font-size'       : .9em,
+			'font-weight'     : bold,
+			'min-width'       : 100px,
+			'max-width'       : 180px,
+			'padding'         : 5px,
+			'transition'      : opacity 0.18s,
+			'background-color': theme('color', 'dark'),
+			'border-radius'   : theme('border', 'radius')
 		)
 	),
 	///
@@ -617,27 +617,27 @@ $options: (
 	'button': (
 		'enabled': true,
 		'features': (
-			'group'		: true,
-			'vertical'	: true,
-			'styles'	: true,
-			'sizes'		: true,
-			'outlined'	: true,
-			'dropdown'	: true,
-			'gradient'	: true
+			'group'   : true,
+			'vertical': true,
+			'styles'  : true,
+			'sizes'   : true,
+			'outlined': true,
+			'dropdown': true,
+			'gradient': true
 		),
 		'variables': (
-			'font-family'	: $font-family, // Typography -> variables
-			'font-weight'	: bold,
-			'font-size'		: 1em,
-			'line-height'	: 1,
-			'width'			: min-content,
-			'padding'		: .935rem 1.6rem,
-			'transition'	: .2s,
-			'color'			: theme('color', 'text'),
-			'background'	: theme('color', 'background'),
-			'border'		: theme('border', 'width') theme('border', 'style') theme('border', 'color'),
-			'border-radius'	: theme('border', 'radius'),
-			'icon': (
+			'font-family'  : $font-family, // Typography -> variables
+			'font-weight'  : bold,
+			'font-size'    : 1em,
+			'line-height'  : 1,
+			'width'        : min-content,
+			'padding'      : .935rem 1.6rem,
+			'transition'   : .2s,
+			'color'        : theme('color', 'text'),
+			'background'   : theme('color', 'background'),
+			'border'       : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
+			'border-radius': theme('border', 'radius'),
+			'icon'         : (
 				'font-size': 1.12rem
 			),
 			'styles': (
@@ -699,27 +699,27 @@ $options: (
 	'form': (
 		'enabled': true,
 		'features': (
-			'group'				: true,
-			'sizes'				: true,
-			'validation-styles'	: true,
-			'checkbox-radio'	: true,
-			'upload'			: true
+			'group'            : true,
+			'sizes'            : true,
+			'validation-styles': true,
+			'checkbox-radio'   : true,
+			'upload'           : true
 		),
 		'variables': (
 			'padding': 0 16px,
 			'input'  : (
-				'color'				: inherit,
-				'background-color'  : initial,
-				'border-color' 		: inherit,
-				'height'			: initial,
-				'padding'			: .4rem .5rem,
-				'font-size'			: 1.088em,
-				'border-width'		: theme('border', 'width'),
-				'border-style'		: theme('border', 'style'),
-				'border-radius'		: 0,
-				'transition'		: .35s,
-				'outline-color'		: initial,
-				'outline-width'		: 2px
+				'color'           : inherit,
+				'background-color': initial,
+				'border-color'    : inherit,
+				'height'          : initial,
+				'padding'         : .4rem .5rem,
+				'font-size'       : 1.088em,
+				'border-width'    : theme('border', 'width'),
+				'border-style'    : theme('border', 'style'),
+				'border-radius'   : 0,
+				'transition'      : .35s,
+				'outline-color'   : initial,
+				'outline-width'   : 2px
 			),
 			'items': (
 				'margin': .345em 0 .55em
@@ -728,21 +728,21 @@ $options: (
 				'margin': .345em 0 .55em
 			),
 			'label': (
-				'color'		: theme('color', 'text'),
-				'font-size'	: .8579rem,
-				'margin'	: 0
+				'color'    : theme('color', 'text'),
+				'font-size': .8579rem,
+				'margin'   : 0
 			),
 			'radio-checkbox': (
-				'color'					: theme('color', 'primary'),
-				'width'					: 1.6em,
-				'height'				: 1.6em,
-				'border'				: 0.15em solid theme('border', 'color'),
-				'font-size'				: 1.35rem,
-				'top'					: -8px,
-				'left'					: 0,
-				'label-padding'			: 0 1.2rem 0 1.7rem,
-				'radio-clip-path'		: ellipse(45% 45% at 50% 50%),
-				'checkbox-clip-path'	: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%),
+				'color'             : theme('color', 'primary'),
+				'width'             : 1.6em,
+				'height'            : 1.6em,
+				'border'            : 0.15em solid theme('border', 'color'),
+				'font-size'         : 1.35rem,
+				'top'               : -8px,
+				'left'              : 0,
+				'label-padding'     : 0 1.2rem 0 1.7rem,
+				'radio-clip-path'   : ellipse(45% 45% at 50% 50%),
+				'checkbox-clip-path': polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%),
 			),
 			// for input validations
 			'styles': (
@@ -783,8 +783,8 @@ $options: (
 		'variables': (
 			'gap': 6px,
 			'columns': (
-				'size'		: 16,
-				'padding'	: .3rem,
+				'size'      : 16,
+				'padding'   : .3rem,
 				'min-height': .125rem
 			),
 			'container': (
@@ -793,12 +793,12 @@ $options: (
 				'margin' : 0 auto
 			),
 			'breakpoints': (
-				'extra-small'		: 0,
-				'small'				: 500px,
-				'medium'			: 768px,
-				'large'				: 992px,
-				'extra-large'		: 1260px,
-				'extra-extra-large'	: 1400px
+				'extra-small'      : 0,
+				'small'            : 500px,
+				'medium'           : 768px,
+				'large'            : 992px,
+				'extra-large'      : 1260px,
+				'extra-extra-large': 1400px
 			)
 		)
 	),
@@ -821,8 +821,8 @@ $options: (
 	/// UTILITIES
 	/// 
 	'helpers': (
-		'enabled'	: true,
-		'features'	: (),
-		'variables'	: ()
+		'enabled'  : true,
+		'features' : (),
+		'variables': ()
 	)
 ) !default;
