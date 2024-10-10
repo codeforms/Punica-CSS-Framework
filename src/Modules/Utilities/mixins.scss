@@ -8,7 +8,13 @@
 @use "../../Core/Theme/Setters" as *;
 
 /// 
+/// Set default helpers
 /// 
+/// @param {Array|List} $helper
+/// @param {Bool} $two
+/// @param {Bool} $three
+/// 
+/// @return mixed
 /// 
 @mixin set_utils($helper, $two: false, $three: false)
 {
@@ -43,9 +49,11 @@
 }
 
 ///
-/// Set List with Range
+/// Set helper list with specs
 /// 
-/// @param {List} $helpers
+/// @param {Array|List} $helpers
+/// 
+/// @return mixed
 ///
 @mixin utils_with_specs($helpers)
 {
@@ -67,9 +75,12 @@
 }
 
 ///
-/// Color Scale
-/// @param {Array} $colors
-/// @param {Boolean} $bgcolor
+/// Set Color Palette
+/// Color Palette of text and background
+/// 
+/// @param {Array|List} $colors
+/// 
+/// @return mixed
 ///
 @mixin color_palette($colors) 
 {
@@ -98,8 +109,11 @@
 
 ///
 /// Horizontal or vertical border sides
-/// @param {Integer} $borders
-///
+/// 
+/// @param {Array|List} $borders
+/// 
+/// @return mixed
+/// 
 @mixin set_border_sides($borders) {
 	@each $class, $border in $borders {
 		.border-x-#{$class} {
