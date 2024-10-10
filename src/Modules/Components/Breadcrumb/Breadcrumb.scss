@@ -65,8 +65,8 @@
 		.#{class('breadcrumb', 'name')} {
 			.#{class('breadcrumb', 'item')} {
 				&:after {
-					font-size: 1rem;
-					vertical-align: middle;
+					font-size: components('breadcrumb', 'responsive', 'font-size');
+					vertical-align: components('breadcrumb', 'responsive', 'vertical-align');
 				}
 			}
 		}

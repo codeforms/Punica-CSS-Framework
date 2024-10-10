@@ -215,9 +215,6 @@
 	}
 	//
 	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
-		.#{class('navbar', 'spacer')} {
-			margin-top: 0;
-		}
 		.#{class('navbar', 'name')} {
 			// grid container
 			.#{class('grid', 'container')} {
@@ -283,7 +280,7 @@
 			/// NAVBAR SIZES
 			///
 			@if features('components', 'navbar', 'sizes') {
-				@each $size-name, $min-height, $font-size, $button-padding, $spacer-top in components('navbar', 'styles') {
+				@each $size-name, $min-height, $font-size, $button-padding in components('navbar', 'styles') {
 					&.#{$size-name} {
 						& .#{class('navbar', 'burger')},
 						& .#{class('navbar', 'burger')}::before {

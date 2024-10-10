@@ -4,150 +4,57 @@
 ///
 
 @use "../../Core/Global/Getters" as *;
-@use "../../Core/Theme/Getters" as *;
-@use "variables" as *;
 @use "mixins" as *;
 
 @if enabled('utilities', 'helpers') {
-	/// Align Items
-	@include setHelperList($align-items, "align-items", "!important");
+	@include set_utils('align-content');
+	@include set_utils('align-items');
+	@include set_utils('align-self');
 
-	/// Align Self
-	@include setHelperList($align-self, "align-self", "!important");
+	@include set_utils('background-color', true);
+	@include color_palette(utils('background-color'));
 
-	/// Align Content
-	@include setHelperList($align-content, "align-content", "!important");
+	@include set_utils('border-radius');
+	@include set_utils('border-style');
 
-	/// Backdrop Filters
-	@include setFilters($backdrop-blur-ranges, $backdrop-blur, "backdrop-filter"); // only blur
-	@include setFilters($backdrop-filter-ranges, $backdrop-filters, "backdrop-filter");
+	@include utils_with_specs(utils('border'));
+	@include set_border_sides(utils('border', 'specs'));
 
-	/// Background Colors
-	@include setHelperList($bg-colors, "background-color", "!important");
-	@include setColorScale($bg-colors);
+	@include set_utils('color', true);
+	@include color_palette(utils('color'));
 
-	/// Border
-	@include setHelperListWithRange($borders, specs('borders'), "px", "!important");
-	@include setBorderSides(specs('borders'));
+	@include set_utils('cursor');
+	@include set_utils('filter', true);
+	@include set_utils('display');
+	@include set_utils('flex-direction');
+	@include set_utils('flex-grow');
+	@include set_utils('flex-shrink');
+	@include set_utils('flex-wrap');
+	@include set_utils('flex', true);
+	@include set_utils('float');
+	@include set_utils('font-size', true);
+	@include set_utils('font-weight');
+	@include set_utils('height', true);
+	@include set_utils('justify-content');
+	@include set_utils('justify-items');
+	@include set_utils('justify-self', true);
+	@include set_utils('line-height');
+	@include utils_with_specs(utils('margin'));
+	@include set_utils('object-fit');
+	@include set_utils('order');
+	@include set_utils('overflow', false, true);
+	@include utils_with_specs(utils('padding'));
+	@include set_utils('place-content');
+	@include set_utils('place-items');
+	@include set_utils('place-self');
+	@include set_utils('position');
+	@include set_utils('resize');
+	@include set_utils('text-align');
+	@include set_utils('text-decoration');
+	@include set_utils('text-transform');
+	@include set_utils('user-select');
+	@include set_utils('width', true); 
+	@include set_utils('z-index');
 
-	/// Border Styles
-	@include setHelperListWithRange($border-radius, specs('border-radius'), "px", "!important");
-
-	/// Border Radius
-	@include setHelperList($border-styles, "border-style", "!important");
-
-	/// Cursor
-	@include setHelperList($cursors, "cursor", "!important");
-
-	/// Display Filters
-	@include setHelperList($display-filters);
-
-	/// Display
-	@include setHelperList($display-properties, "display", "!important");
-
-	/// Flex
-	@include setHelperList($flex-helpers, "flex", "!important");
-
-	/// Flex Direction
-	@include setHelperList($flex-directions, "flex-direction", "!important");
-
-	/// Flex Grow
-	@include setHelperList($flex-grow, "flex-grow", "!important");
-
-	/// Flex Shrink
-	@include setHelperList($flex-shrink, "flex-shrink", "!important");
-
-	/// Flex Wrap
-	@include setHelperList($flex-wrap, "flex-wrap", "!important");
-
-	/// Float
-	@include setHelperList($float-helpers, "float", "!important");
-
-	/// Font Size
-	@include setHelperList($font-sizes, "font-size", "!important");
-
-	/// Font Weight
-	@include setHelperListWithRange($font-weights, specs('font-weight'), null, "!important");
-
-	/// Height
-	@include setHelperList($height-helpers, "height", "!important");
-	@include setSizeHelpers(null, specs('sizes'), "height");
-
-	/// Inset
-	@include setNestedHelperList($insets);
-
-	/// Justify Content
-	@include setHelperList($justify-content, "justify-content", "!important");
-
-	/// Justify Items
-	@include setHelperList($justify-items, "justify-items", "!important");
-
-	/// Justify Self
-	@include setHelperList($justify-self, "justify-self", "!important");
-
-	/// Line Height
-	@include setHelperListWithRange($line-heights, specs('line-height'), null, "!important");
-
-	/// Margin
-	@include setHelperListWithRange($margin-helpers, specs('spaces'), "px", "!important");
-	@include setSizeHelpers($margin-helpers, specs('sizes'));
-	@include setHelperListWithRange($margin-helpers, auto, null, "!important"); // margin auto
-
-	/// Object-Fit
-	@include setHelperList($object-fit, "object-fit", "!important");
-
-	/// Order
-	@include setHelperListWithRange($orders, specs('orders'), null, "!important");
-
-	/// Overflow
-	///
-	@include setHelperList($overflow-properties);
-
-	/// Padding
-	@include setHelperListWithRange($padding-helpers, specs('spaces'), "px", "!important");
-	@include setSizeHelpers($padding-helpers, specs('sizes'));
-	@include setHelperListWithRange($padding-helpers, auto, null, "!important"); // padding auto
-
-	/// Place Content
-	@include setHelperList($place-content, "place-content", "!important");
-	
-	/// Place Items
-	@include setHelperList($place-items, "place-items", "!important");
-	
-	/// Place Self
-	@include setHelperList($place-self, "place-self", "!important");
-
-	/// Position
-	@include setHelperList($position-properties, "position", "!important");
-
-	/// Resize
-	@include setHelperList($resizes, "resize", "!important");
-
-	/// Text Align
-	@include setHelperList($text-align, "text-align", "!important");
-
-	/// Text Colors
-	@include setHelperList($text-colors, "color", "!important");
-	@include setColorScale($text-colors, "color"); // color scale
-
-	/// Text Decoration
-	@include setHelperList($text-decorations, "text-decoration", "!important");
-	
-	/// Text Transform
-	@include setHelperList($text-transforms, "text-transform", "!important");
-
-	/// User Select
-	@include setHelperList($user-selects, "user-select", "!important");
-
-	/// Width
-	@include setHelperList($width-helpers, "width", "!important");
-	@include setSizeHelpers(null, specs('sizes'), "width");
-	
-	/// Z-Index
-	@include setHelperListWithRange($z-indexes, specs('z-index'), null, "!important");
-
-	///
-	/// Others
-	///
-	@include otherHelpers();
+	@include other_helpers();	
 }

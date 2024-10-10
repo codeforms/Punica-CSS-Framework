@@ -122,16 +122,20 @@ $options: (
 					1.6em // font-size
 				)
 			),
-			'responsive-sizes': (
-				(
-					"small", // size name (class)
-					1rem, // padding
-					1em // font-size
-				),
-				(
-					"large", // size name (class)
-					1rem, // padding
-					1.358em // font-size
+			'responsive': (
+				'padding'		: 2.5rem 1rem,
+				'img-width'		: 100%,
+				'sizes': (
+					(
+						"small", // size name (class)
+						1rem, // padding
+						1em // font-size
+					),
+					(
+						"large", // size name (class)
+						1rem, // padding
+						1.358em // font-size
+					)
 				)
 			)
 		)
@@ -162,6 +166,10 @@ $options: (
 			    	null, // seperator-size
 			        text-bottom, // vertical align
 			    )
+			),
+			'responsive': (
+				'font-size'		: 1rem,
+				'vertical-align': middle
 			)
 		)
 	),
@@ -449,7 +457,8 @@ $options: (
 		'variables': (
 			'margin'	: 1em 0 5em,
 			'min-height': 4rem, // for each item
-			'icon-size' : 1.8rem,
+			'symbol'	: "\2756", // HTML Symbols
+			'symbol-size' : 1.8rem,
 			'stepbar': (
 				'height': 6px,
 			),
@@ -458,8 +467,9 @@ $options: (
 				'height': .8rem
 			),
 			'vertical': (
-				'margin'		: 1em 0,
-				'stickbar-width': 9px
+				'margin'	: 1em 0,
+				'padding'	: 1.25em 2em 2.85em,
+				'bar-width'	: 9px
 			),
 			'styles': (
 				// style name (class), color theme
@@ -590,6 +600,7 @@ $options: (
 		'enabled': true,
 		'features' : (),
 		'variables': (
+			'color'				: white,
 			'font-size'			: .9em,
 			'font-weight'		: bold,
 			'min-width'			: 100px,

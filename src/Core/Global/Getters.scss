@@ -5,6 +5,7 @@
 
 @use "../../options" as option;
 @use "../../classnames" as class;
+@use "../../Modules/Utilities/index" as helper;
 @use "Helpers";
 
 ///
@@ -21,7 +22,8 @@
 @function options($keys...) 
 {
 	@if null == map-get(option.$options, nth($keys, 1)) {
-		@return debug-message("#{nth($keys, 1)}", 'options');
+		@warn "[INVALID KEY] #{nth($keys, 1)}" + ' key is not found in the [options.scss] file.';
+		@return null;
 	}
 
 	$value: map-get(option.$options, nth($keys, 1));
@@ -33,13 +35,15 @@
 	$value: map-get($value, nth($keys, 2));
 
 	@if null == $value {
-		@return debug-message("#{nth($keys, 1)} > #{nth($keys, 2)}", 'options');
+		@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found in the [options.scss] file.';
+		@return null;
 	}
 
 	@if length($keys) > 2 {
 		$value: map-get($value, nth($keys, 3));
 		@if null == $value {
-			@return debug-message("#{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}", 'options');
+			@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found in the [options.scss] file.';
+			@return null;
 		}
 	}
 
@@ -47,7 +51,7 @@
 }
 
 ///
-/// Get default variable of a specific component/element
+/// Get default "variables" of a specific component/element
 /// from the options.scss API file
 ///
 /// @param {String} $node
@@ -63,7 +67,8 @@
 	$variables: map-get(map-get(options($node), 'variables'), nth($keys, 1));
 
 	@if null == $variables {
-		@return debug-message("#{$node} > variables > #{nth($keys, 1)}", 'options');
+		@warn "[INVALID KEY] #{$node} > variables > #{nth($keys, 1)}" + ' key is not found in the [options.scss] file.';
+		@return null;
 	}
 	
 	@if length($keys) == 1 {
@@ -71,7 +76,8 @@
 	}
 
 	@if null == map-get($variables, nth($keys, 2)) {
-		@return debug-message("#{$node} > variables > #{nth($keys, 1)} > #{nth($keys, 2)}", 'options');
+		@warn "[INVALID KEY] #{$node} > variables > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found in the [options.scss] file.';
+		@return null;
 	}
 
 	@return map-get($variables, nth($keys, 2));
@@ -92,14 +98,38 @@
 @function class($node, $key) 
 {
 	@if null == map-get(class.$classnames, $node) {
-		@return debug-message("#{$node}", 'classnames');
+		@warn "[INVALID KEY] #{$node}" + ' key is not found in the [classnames.scss] file.';
+		@return null;
 	}
 
 	$classnames: map-get(class.$classnames, $node);
 
 	@if null == map-get($classnames, $key) {
-		@return debug-message("#{$node} > #{$key}", 'classnames');
+		@warn "[INVALID KEY] #{$node} > #{$key}" + ' key is not found in the [classnames.scss] file.';
+		@return null;
 	}
 
 	@return map-get($classnames, $key);
+}
+
+///
+/// Get variable of a specific utility
+/// 
+/// @param {String} $node
+/// @param {String} $key
+///
+/// @example utils('align-items')
+/// @example utils('align-items', 'name')
+///
+/// @return string
+///
+@function utils($node, $key: null) 
+{
+	$util: if(map-has-key(helper.$helpers, $node), map-get(helper.$helpers, $node), null);
+
+	@if ($util != null) and $key {
+		$util: if(map-has-key($util, $key), map-get($util, $key), null);
+	}
+
+	@return $util;
 }

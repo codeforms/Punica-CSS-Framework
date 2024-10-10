@@ -44,7 +44,7 @@
 ///
 @mixin process-vertical() {
 	display: flex;
-	padding: 1.25em 2em 2.85em;
+	padding: components('process', 'vertical', 'padding');
 	margin: components('process', 'vertical', 'margin');
 	flex-direction: column;
 	align-items: flex-start;
@@ -66,7 +66,7 @@
 		}
 		a {
 			&::before {
-				width: components('process', 'vertical', 'stickbar-width');
+				width: components('process', 'vertical', 'bar-width');
 			}
 			&:first-child::before {
 				left: 0;
@@ -78,7 +78,7 @@
 				font-weight: bold;
 				&::after {
 					top: 15px;
-					left: calc(-15px - #{components('process', 'icon-size')});
+					left: calc(-15px - #{components('process', 'symbol-size')});
 				}
 			}
 		}

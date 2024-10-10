@@ -19,7 +19,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-			color: white;
+			color: components('tooltip', 'color');
 			font-size: components('tooltip', 'font-size');
 			font-weight: components('tooltip', 'font-weight');
 			visibility: hidden;

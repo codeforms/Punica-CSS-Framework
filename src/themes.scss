@@ -122,6 +122,11 @@ $themes: (
 		'components': (
 			'card': (
 				'background-color' : lighten(#252831, 1.75%)
+			),
+			'tooltip': (
+				'color': black,
+				'font-weight': normal,
+				'background-color': white
 			)
 		),
 		'elements': (

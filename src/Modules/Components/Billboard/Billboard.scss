@@ -75,21 +75,21 @@
 	///
 	@include breakpoints(components('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('billboard', 'name')} {
-			padding: 2.5rem 1rem;
+			padding: components('billboard', 'responsive', 'padding');
 			flex-direction: column;
 			.#{class('billboard', 'media')} {
 				img {
-					width: 100%;
+					width: components('billboard', 'responsive', 'img-width');
 				}
 			}
 			.#{class('billboard', 'body')} {
-				padding: 2.5rem 1rem;
+				padding: components('billboard', 'responsive', 'padding');
 			}
 			///
 			/// SIZES
 			///
 			@if features('components', 'billboard', 'sizes') {
-				@each $size, $padding, $font-size in components('billboard', 'responsive-sizes') {
+				@each $size, $padding, $font-size in components('billboard', 'responsive', 'sizes') {
 					&.#{$size} {
 						padding: $padding;
 						.#{class('billboard', 'body')} {

@@ -60,12 +60,12 @@
 				a {
 					color: theme('color', 'primary');
 					&::after {
-						content: "\2756"; // HTML Symbols
+						content: components('process', 'symbol'); // HTML Symbols
 						position: absolute;
-						top: calc(-15px - #{components('process', 'icon-size')});
+						top: calc(-15px - #{components('process', 'symbol-size')});
 						left: calc(50% - ((#{components('process', 'stickbar', 'width')} * 10) / 2));
 						color: theme('color', 'primary');
-						font-size: components('process', 'icon-size');
+						font-size: components('process', 'symbol-size');
 					}
 				}
 				&~.#{class('process', 'item')} {
@@ -102,7 +102,7 @@
 				@include mixins.process-vertical();
 			}
 		}
-		// vertical style is setted as "true" for mobile devices
+		// vertical style is also setted as "true" for mobile devices
 		@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
 			@include mixins.process-vertical();
 		}

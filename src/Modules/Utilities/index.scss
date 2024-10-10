@@ -1,0 +1,749 @@
+///
+/// Punica CSS Framework
+/// Utilities : Default Helpers
+/// 
+
+@use "../../Core/Global/Colors" as color;
+@use "../../Core/Theme/Getters" as *;
+
+$helpers: (
+	///
+	/// Align Content
+	/// The align-content property specifies 
+	/// how flex lines are distributed along the 
+	/// cross axis in a flexbox container.
+	/// 
+	'align-content': (
+		'name'       : 'align-content', // css property name (don't change it !)
+		'prefix'     : 'align-content-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (stretch, center, flex-start, flex-end, space-between, space-around, space-evenly, initial, inherit)
+	),
+	///
+	/// Align Items
+	/// The align-items property specifies the default alignment
+	/// for items inside a flexbox or grid container.
+	///
+	'align-items': (
+		'name'       : 'align-items', // css property name (don't change it !)
+		'prefix'     : 'align-items-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (baseline, flex-start, flex-end, center, stretch, initial, inherit)
+	),
+	///
+	/// Align Self
+	/// The align-self property specifies the alignment
+	/// in the block direction for the selected item 
+	/// inside a flexbox or grid container.
+	///
+	'align-self': (
+		'name'       : 'align-self', // css property name (don't change it !)
+		'prefix'     : 'align-self-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (auto, baseline, flex-start, flex-end, center, stretch, initial, inherit)
+	),
+	///
+	/// Background Colors
+	/// The background-color property sets 
+	/// the background color of an element. The background of 
+	/// an element is the total size of the element, 
+	/// including padding and border (but not the margin).
+	///
+	'background-color': (
+		'name'       : 'background-color', // css property name (don't change it !)
+		'prefix'     : 'bg-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name (suffix), value
+			("color", theme('color', 'background')),
+			("grey", color.$grey),
+			("white", white),
+			("black", black),
+			("dark", theme('color', 'dark')),
+			("primary", theme('color', 'primary')),
+			("success", theme('color', 'success')),
+			("warning", theme('color', 'warning')),
+			("error", theme('color', 'error'))
+		)
+	),
+	///
+	/// Border Radius
+	/// 
+	/// The border-radius property defines 
+	/// the radius of the element's corners.
+	/// 
+	'border-radius': (
+		'name'       : 'border-radius', // css property name (don't change it !)
+		'prefix'     : 'radius-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : px, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (2,4,8,10,12,14,16,500),
+	),
+	/// 
+	/// Border Styles
+	///
+	/// The border-style property sets 
+	/// the style of an element's four borders.
+	/// 
+	'border-style': (
+		'name'       : 'border-style', // css property name (don't change it !)
+		'prefix'     : 'border-style-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (solid, dashed, dotted, double, groove, ridge)
+	),
+	/// 
+	/// Border
+	///
+	/// The border property is a shorthand property for
+	/// border-width, border-style and border-color.
+	/// 
+	'border':(
+		'name'       : 'border', // css property name (don't change it !)
+		'prefix'     : 'border', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : (
+			('0', '0'), // 0
+			('1', '0.063'), // 1px
+			('2', '0.125'), // 2px
+			('3', '0.188'), // 3px
+			('4', '0.25'), // 4px
+			('6', '0.375'), // 6px
+			('8', '0.5') // 8px
+		),
+		'values'     : (
+			// infix, property
+			// class name (prefix), property
+			("-", "border-width")
+			("-top-", "border-top-width")
+			("-right-", "border-right-width")
+			("-bottom-", "border-bottom-width")
+			("-left-", "border-left-width")
+		)
+	),
+	/// 
+	/// Color
+	/// 
+	/// The color property specifies the color of text.
+	/// 
+	'color': (
+		'name'       : 'color', // css property name (don't change it !)
+		'prefix'     : 'color-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name (suffix), value
+			("grey", color.$grey),
+			("white", white),
+			("black", black),
+			("primary", theme('color', 'primary')),
+			("success", theme('color', 'success')),
+			("warning", theme('color', 'warning')),
+			("error", theme('color', 'error')),
+			("dark", theme('color', 'dark'))
+		)
+	),
+	/// 
+	/// Cursor
+	///
+	/// The cursor property specifies the mouse cursor
+	/// to be displayed when pointing over an element.
+	/// 
+	'cursor': (
+		'name'       : 'cursor', // css property name (don't change it !)
+		'prefix'     : 'cursor-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (alias, default, grab, help, move, pointer, wait, zoom-in, zoom-out)
+	),
+	/// 
+	/// Filter
+	///
+	/// The filter property defines visual effects 
+	/// (like blur and saturation) to an element (often <img>).
+	/// 
+	'filter': (
+		'name'       : 'filter', // css property name (don't change it !)
+		'prefix'     : 'filter-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name (suffix), property, value
+			("invert", invert(100%)),
+			("gray", grayscale(100%)),
+		)
+	),
+	/// 
+	/// Display
+	///
+	/// The display property specifies the 
+	/// display behavior (the type of rendering box) of an element.
+	/// 
+	'display': (
+		'name'       : 'display', // css property name (don't change it !)
+		'prefix'     : 'display-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (inline, flex, inline-flex, grid, inline-grid, block, inline-block, table, inline-table, table-row, table-column, table-cell)
+	),
+	/// 
+	/// Flex Direction
+	///
+	/// The flex-direction property specifies 
+	/// the direction of the flexible items.
+	/// 
+	'flex-direction': (
+		'name'       : 'flex-direction', // css property name (don't change it !)
+		'prefix'     : 'flex-direction-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (row, row-reverse, column, column-reverse, initial, inherit)
+	),
+	/// 
+	/// Flex Grow
+	///
+	/// The flex-grow property specifies how much the item 
+	/// will grow relative to the rest of the flexible items 
+	/// inside the same container.
+	/// 
+	'flex-grow': (
+		'name'       : 'flex-grow', // css property name (don't change it !)
+		'prefix'     : 'flex-grow-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (1,0)
+	),
+	/// 
+	/// Flex Shrink
+	///
+	/// The flex-shrink property specifies how the item 
+	/// will shrink relative to the rest of the flexible items
+	/// inside the same container.
+	/// 
+	'flex-shrink': (
+		'name'       : 'flex-shrink', // css property name (don't change it !)
+		'prefix'     : 'flex-shrink-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (1,0)
+	),
+	/// 
+	/// Flex Wrap
+	/// 
+	/// The flex-wrap property specifies whether 
+	/// the flexible items should wrap or not.
+	/// 
+	'flex-wrap': (
+		'name'       : 'flex-wrap', // css property name (don't change it !)
+		'prefix'     : 'flex-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (wrap, wrap-reverse, nowrap)
+	),
+	/// 
+	/// Flex
+	///
+	/// The flex property sets the flexible length on flexible items.
+	/// The flex property is a shorthand property for flex-grow, flex-shrink
+	/// and flex-basis.
+	/// 
+	'flex': (
+		'name'       : 'flex', // css property name (don't change it !)
+		'prefix'     : 'flex-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name (suffix), value
+			("1", 1 1 0%),
+			("auto", 1 1 auto),
+			("initial", 0 1 auto),
+			("none", none)
+		)
+	),
+	/// 
+	/// Float
+	/// 
+	/// The float property specifies whether an element should 
+	/// float to the left, right, or not at all.
+	/// 
+	'float': (
+		'name'       : 'float', // css property name (don't change it !)
+		'prefix'     : 'float-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (right, left, none)
+	),
+	/// 
+	/// Font Size
+	/// 
+	/// The font-size property sets the size of a font.
+	/// 
+	'font-size': (
+		'name'       : 'font-size', // css property name (don't change it !)
+		'prefix'     : 'text-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name (suffix), value
+			("mini", 60%),
+			("tiny", 73%),
+			("small", 85%),
+			("large", 120%),
+			("big", 175%),
+			("huge", 200%),
+			("giant", 350%)
+		)
+	),
+	/// 
+	/// Font Weight
+	/// 
+	/// The font-weight property sets how thick 
+	/// or thin characters in text should be displayed.
+	/// 
+	'font-weight': (
+		'name'       : 'font-weight', // css property name (don't change it !)
+		'prefix'     : 'weight-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (100,200,300,400,500,600,700,800,900,normal,bold,bolder,lighter)
+	),
+	/// 
+	/// Height
+	/// 
+	/// The height property sets the height of an element.
+	/// 
+	'height': (
+		'name'       : 'height', // css property name (don't change it !)
+		'prefix'     : 'height-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name (suffix), value
+			("min-content", min-content),
+			("max-content", max-content),
+			("fit-content", fit-content),
+			("2", 2rem), // 32px
+			("3", 3rem), // 48px
+			("4", 4rem), // 64px
+			("5", 5rem), // 80px
+			("10", 10rem), // 160px
+			("15", 15rem), // 240px
+			("20", 20rem), // 320px
+			("25", 25rem), // 400px
+			("30", 30rem), // 480px
+			("35", 35rem), // 560px
+			("40", 40rem), // 640px
+			("45", 45rem), // 720px
+			("50", 50rem), // 800px
+			("75", 75rem) // 1200px
+		)
+	),
+	/// 
+	/// Justify Content
+	///
+	/// The justify-content property aligns the flexible
+	/// container's items when the items do not use
+	/// all available space on the main-axis (horizontally).
+	///
+	'justify-content': (
+		'name'       : 'justify-content', // css property name (don't change it !)
+		'prefix'     : 'justify-content-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (baseline, flex-start, flex-end, center, space-between, space-around, initial, inherit)
+	),
+	/// 
+	/// Justify Items
+	///
+	/// The justify-items property is set 
+	/// on the grid container to give child elements (grid items) 
+	/// alignment in the inline direction.
+	///
+	'justify-items': (
+		'name'       : 'justify-items', // css property name (don't change it !)
+		'prefix'     : 'justify-items-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (stretch, start, left, center, end, right, initial, inherit)
+	),
+	/// 
+	/// Justify Self
+	///
+	/// The justify-self property aligns a grid item 
+	/// within its grid cell in the inline direction.
+	///
+	'justify-self': (
+		'name'       : 'justify-self', // css property name (don't change it !)
+		'prefix'     : 'justify-self-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name, value
+			("auto", auto),
+			("normal", normal),
+			("stretch", stretch),
+			("start", start),
+			("left", left),
+			("center", center),
+			("end", end),
+			("right", right),
+			("first-baseline", first baseline),
+			("last-baseline", last baseline),
+			("initial", initial),
+			("inherit", inherit)
+		)
+	),
+	///
+	/// Line Height
+	/// 
+	/// The line-height property specifies the height of a line.
+	/// 
+	'line-height': (
+		'name'       : 'line-height', // css property name (don't change it !)
+		'prefix'     : 'line-height-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (0,1,2,3,4,5)
+	),
+	/// 
+	/// Margin
+	/// 
+	/// The margin property sets the margins for an element.
+	/// 
+	'margin': (
+		'name'       : 'margin', // css property name (don't change it !)
+		'prefix'     : 'm', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : (
+			// class name (suffix), value
+			('2', '0.125'), // 2px
+			('4', '0.25'), // 4px
+			('6', '0.375'), // 6px
+			('8', '0.5'), // 8px
+			('10', '0.625'), // 10px
+			('20', '1.25'), // 20px
+			('30', '1.875'), // 30px
+			('40', '2.5'), // 40px
+			('50', '3.125'), // 50px
+			('60', '3.75'), // 60px
+			('70', '4.375'), // 70px
+			('80', '5'), // 80px
+			('100', '6.25'), // 100px
+			('125', '7.813'), // 125px
+			('150', '9.375'), // 150px
+			('175', '10.938'), // 175px
+			('200', '12.5'), // 200px
+		),
+		'values'     : (
+			// infix, property
+			("-", "margin"),
+			("t-", "margin-top"),
+			("r-", "margin-right"),
+			("b-", "margin-bottom"),
+			("l-", "margin-left")
+		)
+	),
+	/// 
+	/// Object Fit
+	/// 
+	/// The object-fit property is used to specify 
+	/// how an <img> or <video> should be resized to fit its container.
+	/// This property tells the content to fill the container 
+	/// in a variety of ways; such as "preserve that aspect ratio"
+	/// or "stretch up and take up as much space as possible".
+	/// 
+	'object-fit': (
+		'name'       : 'object-fit', // css property name (don't change it !)
+		'prefix'     : 'fit-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (fill, contain, cover, none, scale-down, initial, inherit)
+	),
+	/// 
+	/// Order
+	/// 
+	/// The order property specifies the order 
+	/// of a flexible item relative to the rest 
+	/// of the flexible items inside the same container.
+	/// 
+	'order': (
+		'name'       : 'order', // css property name (don't change it !)
+		'prefix'     : 'order-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (1,2,3,4,5)
+	),
+	/// 
+	/// Overflow
+	/// 
+	/// The overflow property specifies what should 
+	/// happen if content overflows an element's box.
+	/// 
+	'overflow': (
+		'name'       : 'overflow', // css property name (don't change it !)
+		'prefix'     : 'overflow-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name, property, value
+			("auto", "overflow", auto),
+			("hidden", "overflow", hidden),
+			("visible", "overflow", visible),
+			("x-auto", "overflow-x", auto),
+			("x-hidden", "overflow-x", hidden),
+			("x-visible", "overflow-x", visible),
+			("x-scroll", "overflow-x", scroll),
+			("y-auto", "overflow-y", auto),
+			("y-hidden", "overflow-y", hidden),
+			("y-visible", "overflow-y", visible),
+			("y-scroll", "overflow-y", scroll)
+		)
+	),
+	/// 
+	/// Padding
+	/// 
+	/// An element's padding is the space between 
+	/// its content and its border.
+	/// 
+	'padding': (
+		'name'       : 'padding', // css property name (don't change it !)
+		'prefix'     : 'p', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : (
+			('2', '0.125'), // 2px
+			('2', '0.125'), // 2px
+			('4', '0.25'), // 4px
+			('6', '0.375'), // 6px
+			('8', '0.5'), // 8px
+			('10', '0.625'), // 10px
+			('20', '1.25'), // 20px
+			('30', '1.875'), // 30px
+			('40', '2.5'), // 40px
+			('50', '3.125'), // 50px
+			('60', '3.75'), // 60px
+			('70', '4.375'), // 70px
+			('80', '5'), // 80px
+			('100', '6.25'), // 100px
+			('125', '7.813'), // 125px
+			('150', '9.375'), // 150px
+			('175', '10.938'), // 175px
+			('200', '12.5'), // 200px
+		),
+		'values'     : (
+			// infix, property
+			("-", "padding"),
+			("t-", "padding-top"),
+			("r-", "padding-right"),
+			("b-", "padding-bottom"),
+			("l-", "padding-left")
+		)
+	),
+	/// 
+	/// Place Content
+	///
+	/// The place-content property is used in flexbox 
+	/// and grid layouts, and is a shorthand property for
+	/// align-content and justify-content properties..
+	///
+	'place-content': (
+		'name'       : 'place-content', // css property name (don't change it !)
+		'prefix'     : 'place-content-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (stretch, start, end, center, space-between, space-around, space-evenly, initial, inherit)
+	),
+	/// 
+	/// Place Items
+	///
+	/// The place-items property is used in grid layout, 
+	/// and is a shorthand property for the 
+	/// align-items and justify-items properties.
+	///
+	'place-items': (
+		'name'       : 'place-items', // css property name (don't change it !)
+		'prefix'     : 'place-items-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (stretch, start, end, center, baseline)
+	),
+	/// 
+	/// Place Self
+	///
+	/// The place-self property is used to align individual grid items, 
+	/// and is a shorthand property for the 
+	/// align-self and justify-self properties.
+	///
+	'place-self': (
+		'name'       : 'place-self', // css property name (don't change it !)
+		'prefix'     : 'place-self-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (auto, stretch, start, left, center, end, right)
+	),
+	/// 
+	/// Position
+	/// 
+	/// The position property specifies the type 
+	/// of positioning method used for an element 
+	/// (static, relative, absolute, fixed, or sticky).
+	/// 
+	'position': (
+		'name'       : 'position', // css property name (don't change it !)
+		'prefix'     : 'position-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (static, absolute, fixed, relative, sticky, initial, inherit)
+	),
+	/// 
+	/// Resize
+	/// 
+	/// The resize property defines if (and how)
+	/// an element is resizable by the user.
+	/// 
+	'resize': (
+		'name'       : 'resize', // css property name (don't change it !)
+		'prefix'     : 'resize-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (none, both, horizontal, vertical, initial, inherit)
+	),
+	/// 
+	/// Text Align
+	/// 
+	/// The text-align property specifies the horizontal alignment of text in an element.
+	/// 
+	'text-align': (
+		'name'       : 'text-align', // css property name (don't change it !)
+		'prefix'     : 'text-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (left, right, center, justify, start, end)
+	),
+	/// 
+	/// Text Decoration
+	/// 
+	/// The text-decoration property specifies the decoration added to text.
+	/// 
+	'text-decoration': (
+		'name'       : 'text-decoration', // css property name (don't change it !)
+		'prefix'     : 'text-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (underline, overline, line-through)
+	),
+	/// 
+	/// Text Transforms
+	/// 
+	/// The text-transform property controls 
+	/// the capitalization of text.
+	/// 
+	'text-transform': (
+		'name'       : 'text-transform', // css property name (don't change it !)
+		'prefix'     : 'text-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (uppercase, lowercase, capitalize)
+	),
+	/// 
+	/// User Select
+	/// 
+	/// The user-select property specifies 
+	/// whether the text of an element can be selected.
+	/// 
+	'user-select': (
+		'name'       : 'user-select', // css property name (don't change it !)
+		'prefix'     : 'select-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (none, auto, text, all)
+	),
+	/// 
+	/// Width
+	/// 
+	/// The width property sets the width of an element.
+	/// 
+	'width': (
+		'name'       : 'width', // css property name (don't change it !)
+		'prefix'     : 'width-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name (suffix), value
+			("min-content", min-content),
+			("max-content", max-content),
+			("fit-content", fit-content),
+			("2", 2rem), // 32px
+			("3", 3rem), // 48px
+			("4", 4rem), // 64px
+			("5", 5rem), // 80px
+			("10", 10rem), // 160px
+			("15", 15rem), // 240px
+			("20", 20rem), // 320px
+			("25", 25rem), // 400px
+			("30", 30rem), // 480px
+			("35", 35rem), // 560px
+			("40", 40rem), // 640px
+			("45", 45rem), // 720px
+			("50", 50rem), // 800px
+			("75", 75rem) // 1200px
+		)
+	),
+	///
+	/// Z-Index
+	/// 
+	/// The z-index property specifies the stack order of an element.
+	/// An element with greater stack order is always in front of an element 
+	/// with a lower stack order.
+	/// 
+	'z-index': (
+		'name'       : 'z-index', // css property name (don't change it !)
+		'prefix'     : 'z-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (-1,0,1,10,20,30,40,50,100,999,9999,99999)
+	)
+)
