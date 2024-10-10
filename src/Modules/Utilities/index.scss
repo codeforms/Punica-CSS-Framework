@@ -543,7 +543,7 @@ $helpers: (
 		'specificity': '!important', // or null
 		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : (
-			('2', '0.125'), // 2px
+			// class name (suffix), value
 			('2', '0.125'), // 2px
 			('4', '0.25'), // 4px
 			('6', '0.375'), // 6px
