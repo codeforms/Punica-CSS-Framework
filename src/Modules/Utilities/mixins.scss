@@ -34,9 +34,9 @@
 		}
 	} @else if $three {
 		// suffix / css property / value
-		@each $suffix, $property, $value in $values {
+		@each $suffix, $prop, $value in $values {
 			.#{$prefix}#{$suffix} {
-				#{$property}: #{$value}#{$type} #{$specificity};
+				#{$prop}: #{$value}#{$type} #{$specificity};
 			}
 		}
 	} @else {
