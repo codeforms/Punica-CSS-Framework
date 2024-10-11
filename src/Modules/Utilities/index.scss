@@ -14,7 +14,7 @@ $helpers: (
 	/// cross axis in a flexbox container.
 	/// 
 	'align-content': (
-		'name'       : 'align-content', // css property name (don't change it !)
+		'property'   : 'align-content', // css property name (don't change it !)
 		'prefix'     : 'align-content-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -27,7 +27,7 @@ $helpers: (
 	/// for items inside a flexbox or grid container.
 	///
 	'align-items': (
-		'name'       : 'align-items', // css property name (don't change it !)
+		'property'   : 'align-items', // css property name (don't change it !)
 		'prefix'     : 'align-items-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -41,7 +41,7 @@ $helpers: (
 	/// inside a flexbox or grid container.
 	///
 	'align-self': (
-		'name'       : 'align-self', // css property name (don't change it !)
+		'property'   : 'align-self', // css property name (don't change it !)
 		'prefix'     : 'align-self-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -56,7 +56,7 @@ $helpers: (
 	/// including padding and border (but not the margin).
 	///
 	'background-color': (
-		'name'       : 'background-color', // css property name (don't change it !)
+		'property'   : 'background-color', // css property name (don't change it !)
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -81,7 +81,7 @@ $helpers: (
 	/// the radius of the element's corners.
 	/// 
 	'border-radius': (
-		'name'       : 'border-radius', // css property name (don't change it !)
+		'property'   : 'border-radius', // css property name (don't change it !)
 		'prefix'     : 'radius-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : px, // value type (px, rem, em, %, vh, vw etc)
@@ -95,7 +95,7 @@ $helpers: (
 	/// the style of an element's four borders.
 	/// 
 	'border-style': (
-		'name'       : 'border-style', // css property name (don't change it !)
+		'property'   : 'border-style', // css property name (don't change it !)
 		'prefix'     : 'border-style-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -109,7 +109,7 @@ $helpers: (
 	/// border-width, border-style and border-color.
 	/// 
 	'border':(
-		'name'       : 'border', // css property name (don't change it !)
+		'property'   : 'border', // css property name (don't change it !)
 		'prefix'     : 'border', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
@@ -138,7 +138,7 @@ $helpers: (
 	/// The color property specifies the color of text.
 	/// 
 	'color': (
-		'name'       : 'color', // css property name (don't change it !)
+		'property'   : 'color', // css property name (don't change it !)
 		'prefix'     : 'color-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -162,7 +162,7 @@ $helpers: (
 	/// to be displayed when pointing over an element.
 	/// 
 	'cursor': (
-		'name'       : 'cursor', // css property name (don't change it !)
+		'property'   : 'cursor', // css property name (don't change it !)
 		'prefix'     : 'cursor-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -176,7 +176,7 @@ $helpers: (
 	/// (like blur and saturation) to an element (often <img>).
 	/// 
 	'filter': (
-		'name'       : 'filter', // css property name (don't change it !)
+		'property'   : 'filter', // css property name (don't change it !)
 		'prefix'     : 'filter-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -194,7 +194,7 @@ $helpers: (
 	/// display behavior (the type of rendering box) of an element.
 	/// 
 	'display': (
-		'name'       : 'display', // css property name (don't change it !)
+		'property'   : 'display', // css property name (don't change it !)
 		'prefix'     : 'display-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -208,7 +208,7 @@ $helpers: (
 	/// the direction of the flexible items.
 	/// 
 	'flex-direction': (
-		'name'       : 'flex-direction', // css property name (don't change it !)
+		'property'   : 'flex-direction', // css property name (don't change it !)
 		'prefix'     : 'flex-direction-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -223,7 +223,7 @@ $helpers: (
 	/// inside the same container.
 	/// 
 	'flex-grow': (
-		'name'       : 'flex-grow', // css property name (don't change it !)
+		'property'   : 'flex-grow', // css property name (don't change it !)
 		'prefix'     : 'flex-grow-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -238,7 +238,7 @@ $helpers: (
 	/// inside the same container.
 	/// 
 	'flex-shrink': (
-		'name'       : 'flex-shrink', // css property name (don't change it !)
+		'property'   : 'flex-shrink', // css property name (don't change it !)
 		'prefix'     : 'flex-shrink-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -252,7 +252,7 @@ $helpers: (
 	/// the flexible items should wrap or not.
 	/// 
 	'flex-wrap': (
-		'name'       : 'flex-wrap', // css property name (don't change it !)
+		'property'   : 'flex-wrap', // css property name (don't change it !)
 		'prefix'     : 'flex-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -267,7 +267,7 @@ $helpers: (
 	/// and flex-basis.
 	/// 
 	'flex': (
-		'name'       : 'flex', // css property name (don't change it !)
+		'property'   : 'flex', // css property name (don't change it !)
 		'prefix'     : 'flex-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -287,7 +287,7 @@ $helpers: (
 	/// float to the left, right, or not at all.
 	/// 
 	'float': (
-		'name'       : 'float', // css property name (don't change it !)
+		'property'   : 'float', // css property name (don't change it !)
 		'prefix'     : 'float-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -300,7 +300,7 @@ $helpers: (
 	/// The font-size property sets the size of a font.
 	/// 
 	'font-size': (
-		'name'       : 'font-size', // css property name (don't change it !)
+		'property'   : 'font-size', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -323,7 +323,7 @@ $helpers: (
 	/// or thin characters in text should be displayed.
 	/// 
 	'font-weight': (
-		'name'       : 'font-weight', // css property name (don't change it !)
+		'property'   : 'font-weight', // css property name (don't change it !)
 		'prefix'     : 'weight-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -336,7 +336,7 @@ $helpers: (
 	/// The height property sets the height of an element.
 	/// 
 	'height': (
-		'name'       : 'height', // css property name (don't change it !)
+		'property'   : 'height', // css property name (don't change it !)
 		'prefix'     : 'height-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -370,7 +370,7 @@ $helpers: (
 	/// all available space on the main-axis (horizontally).
 	///
 	'justify-content': (
-		'name'       : 'justify-content', // css property name (don't change it !)
+		'property'   : 'justify-content', // css property name (don't change it !)
 		'prefix'     : 'justify-content-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -385,7 +385,7 @@ $helpers: (
 	/// alignment in the inline direction.
 	///
 	'justify-items': (
-		'name'       : 'justify-items', // css property name (don't change it !)
+		'property'   : 'justify-items', // css property name (don't change it !)
 		'prefix'     : 'justify-items-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -399,7 +399,7 @@ $helpers: (
 	/// within its grid cell in the inline direction.
 	///
 	'justify-self': (
-		'name'       : 'justify-self', // css property name (don't change it !)
+		'property'   : 'justify-self', // css property name (don't change it !)
 		'prefix'     : 'justify-self-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -426,7 +426,7 @@ $helpers: (
 	/// The line-height property specifies the height of a line.
 	/// 
 	'line-height': (
-		'name'       : 'line-height', // css property name (don't change it !)
+		'property'   : 'line-height', // css property name (don't change it !)
 		'prefix'     : 'line-height-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -439,7 +439,7 @@ $helpers: (
 	/// The margin property sets the margins for an element.
 	/// 
 	'margin': (
-		'name'       : 'margin', // css property name (don't change it !)
+		'property'   : 'margin', // css property name (don't change it !)
 		'prefix'     : 'm', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
@@ -482,7 +482,7 @@ $helpers: (
 	/// or "stretch up and take up as much space as possible".
 	/// 
 	'object-fit': (
-		'name'       : 'object-fit', // css property name (don't change it !)
+		'property'   : 'object-fit', // css property name (don't change it !)
 		'prefix'     : 'fit-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -497,7 +497,7 @@ $helpers: (
 	/// of the flexible items inside the same container.
 	/// 
 	'order': (
-		'name'       : 'order', // css property name (don't change it !)
+		'property'   : 'order', // css property name (don't change it !)
 		'prefix'     : 'order-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -511,7 +511,7 @@ $helpers: (
 	/// happen if content overflows an element's box.
 	/// 
 	'overflow': (
-		'name'       : 'overflow', // css property name (don't change it !)
+		'property'   : 'overflow', // css property name (don't change it !)
 		'prefix'     : 'overflow-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -538,7 +538,7 @@ $helpers: (
 	/// its content and its border.
 	/// 
 	'padding': (
-		'name'       : 'padding', // css property name (don't change it !)
+		'property'   : 'padding', // css property name (don't change it !)
 		'prefix'     : 'p', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
@@ -579,7 +579,7 @@ $helpers: (
 	/// align-content and justify-content properties..
 	///
 	'place-content': (
-		'name'       : 'place-content', // css property name (don't change it !)
+		'property'   : 'place-content', // css property name (don't change it !)
 		'prefix'     : 'place-content-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -594,7 +594,7 @@ $helpers: (
 	/// align-items and justify-items properties.
 	///
 	'place-items': (
-		'name'       : 'place-items', // css property name (don't change it !)
+		'property'   : 'place-items', // css property name (don't change it !)
 		'prefix'     : 'place-items-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -609,7 +609,7 @@ $helpers: (
 	/// align-self and justify-self properties.
 	///
 	'place-self': (
-		'name'       : 'place-self', // css property name (don't change it !)
+		'property'   : 'place-self', // css property name (don't change it !)
 		'prefix'     : 'place-self-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -624,7 +624,7 @@ $helpers: (
 	/// (static, relative, absolute, fixed, or sticky).
 	/// 
 	'position': (
-		'name'       : 'position', // css property name (don't change it !)
+		'property'   : 'position', // css property name (don't change it !)
 		'prefix'     : 'position-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -638,7 +638,7 @@ $helpers: (
 	/// an element is resizable by the user.
 	/// 
 	'resize': (
-		'name'       : 'resize', // css property name (don't change it !)
+		'property'   : 'resize', // css property name (don't change it !)
 		'prefix'     : 'resize-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -651,7 +651,7 @@ $helpers: (
 	/// The text-align property specifies the horizontal alignment of text in an element.
 	/// 
 	'text-align': (
-		'name'       : 'text-align', // css property name (don't change it !)
+		'property'   : 'text-align', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -664,7 +664,7 @@ $helpers: (
 	/// The text-decoration property specifies the decoration added to text.
 	/// 
 	'text-decoration': (
-		'name'       : 'text-decoration', // css property name (don't change it !)
+		'property'   : 'text-decoration', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -678,7 +678,7 @@ $helpers: (
 	/// the capitalization of text.
 	/// 
 	'text-transform': (
-		'name'       : 'text-transform', // css property name (don't change it !)
+		'property'   : 'text-transform', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -692,7 +692,7 @@ $helpers: (
 	/// whether the text of an element can be selected.
 	/// 
 	'user-select': (
-		'name'       : 'user-select', // css property name (don't change it !)
+		'property'   : 'user-select', // css property name (don't change it !)
 		'prefix'     : 'select-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -705,7 +705,7 @@ $helpers: (
 	/// The width property sets the width of an element.
 	/// 
 	'width': (
-		'name'       : 'width', // css property name (don't change it !)
+		'property'   : 'width', // css property name (don't change it !)
 		'prefix'     : 'width-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
@@ -739,7 +739,7 @@ $helpers: (
 	/// with a lower stack order.
 	/// 
 	'z-index': (
-		'name'       : 'z-index', // css property name (don't change it !)
+		'property'   : 'z-index', // css property name (don't change it !)
 		'prefix'     : 'z-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)

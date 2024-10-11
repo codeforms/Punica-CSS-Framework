@@ -19,7 +19,7 @@
 @mixin set_utils($helper, $two: false, $three: false)
 {
 	$list       : utils($helper);
-	$name       : map-get($list, 'name');
+	$property   : map-get($list, 'property');
 	$prefix     : map-get($list, 'prefix');
 	$specificity: map-get($list, 'specificity');
 	$type       : map-get($list, 'type');
@@ -29,7 +29,7 @@
 		// suffix / value
 		@each $suffix, $value in $values {
 			.#{$prefix}#{$suffix} {
-				#{$name}: #{$value}#{$type} #{$specificity};
+				#{$property}: #{$value}#{$type} #{$specificity};
 			}
 		}
 	} @else if $three {
@@ -42,7 +42,7 @@
 	} @else {
 		@each $value in $values {
 			.#{$prefix}#{$value} {
-				#{$name}: #{$value}#{$type} #{$specificity};
+				#{$property}: #{$value}#{$type} #{$specificity};
 			}
 		}
 	}
@@ -82,7 +82,7 @@
 ///
 @mixin color_palette($colors) 
 {
-	$name       : map-get($colors, 'name');
+	$property   : map-get($colors, 'property');
 	$prefix     : map-get($colors, 'prefix');
 	$specificity: map-get($colors, 'specificity');
 	$values     : map-get($colors, 'values');
@@ -92,10 +92,10 @@
 			@if $i % 5 == 0 {
 				$percentage: $i*1%;
 				.#{$prefix}#{$class}-darken-#{$i} {
-					#{$name}: mix(black, $color, $percentage) $specificity;
+					#{$property}: mix(black, $color, $percentage) $specificity;
 				}
 				.#{$prefix}#{$class}-lighten-#{$i} {
-					#{$name}: mix(white, $color, $percentage) $specificity;
+					#{$property}: mix(white, $color, $percentage) $specificity;
 				}
 			}
 		}
