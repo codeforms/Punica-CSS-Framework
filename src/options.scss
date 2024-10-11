@@ -75,17 +75,17 @@ $options: (
 					"tiny", // size name (class)
 					.659rem!important, // font-size
 					0 4px!important // padding
-			    ),
-			    (
-			    	"small", // size name (class)
-			    	.749rem!important, // font-size
-			    	1px 4px!important // padding
-			    ),
-			    (
-			    	"large", // size name (class)
-			    	1.1rem!important, // font-size
-			    	2px 8px!important // padding
-			    )
+				),
+				(
+					"small", // size name (class)
+					.749rem!important, // font-size
+					1px 4px!important // padding
+				),
+				(
+					"large", // size name (class)
+					1.1rem!important, // font-size
+					2px 8px!important // padding
+				)
 			)
 		)
 	),
@@ -123,8 +123,8 @@ $options: (
 				)
 			),
 			'responsive': (
-				'padding'		: 2.5rem 1rem,
-				'img-width'		: 100%,
+				'padding'  : 2.5rem 1rem,
+				'img-width': 100%,
 				'sizes': (
 					(
 						"small", // size name (class)

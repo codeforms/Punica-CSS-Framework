@@ -114,6 +114,7 @@ $helpers: (
 		'specificity': '!important', // or null
 		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : (
+			// suffix, value
 			('0', '0'), // 0
 			('1', '0.063'), // 1px
 			('2', '0.125'), // 2px
@@ -122,9 +123,8 @@ $helpers: (
 			('6', '0.375'), // 6px
 			('8', '0.5') // 8px
 		),
-		'values'     : (
+		'values': (
 			// infix, property
-			// class name (prefix), property
 			("-", "border-width")
 			("-top-", "border-top-width")
 			("-right-", "border-right-width")
@@ -405,7 +405,7 @@ $helpers: (
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : null,
 		'values'     : (
-			// class name, value
+			// class name (suffix), value
 			("auto", auto),
 			("normal", normal),
 			("stretch", stretch),
