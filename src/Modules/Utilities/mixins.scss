@@ -92,10 +92,10 @@
 			@if $i % 5 == 0 {
 				$percentage: $i*1%;
 				.#{$prefix}#{$class}-darken-#{$i} {
-					#{$property}: mix(black, $color, $percentage) $specificity;
+					#{$property}: mix(black, $color, $percentage) #{$specificity};
 				}
 				.#{$prefix}#{$class}-lighten-#{$i} {
-					#{$property}: mix(white, $color, $percentage) $specificity;
+					#{$property}: mix(white, $color, $percentage) #{$specificity};
 				}
 			}
 		}
