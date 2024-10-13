@@ -226,7 +226,7 @@ $options: (
 			'description': (
 				'color': theme('color', 'text')
 			),
-			'group'  : (
+			'group': (
 				'margin': .74rem // margin for each card
 			),
 			'horizontal': (
@@ -725,7 +725,7 @@ $options: (
 				'margin': .345em 0 .55em
 			),
 			'item': (
-				'margin': .345em 0 .55em
+				'margin': 6px
 			),
 			'label': (
 				'color'    : theme('color', 'text'),
@@ -789,7 +789,7 @@ $options: (
 			),
 			'container': (
 				'width'  : 100%,
-				'padding': 40px,
+				'padding': 40px, // for left and right sides
 				'margin' : 0 auto
 			),
 			'breakpoints': (

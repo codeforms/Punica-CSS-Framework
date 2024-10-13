@@ -10,19 +10,14 @@
 	@include set_utils('align-content');
 	@include set_utils('align-items');
 	@include set_utils('align-self');
-
 	@include set_utils('background-color', true);
 	@include color_palette(utils('background-color'));
-
 	@include set_utils('border-radius');
 	@include set_utils('border-style');
-
 	@include utils_with_specs(utils('border'));
 	@include set_border_sides(utils('border', 'specs'));
-
 	@include set_utils('color', true);
 	@include color_palette(utils('color'));
-
 	@include set_utils('cursor');
 	@include set_utils('filter', true);
 	@include set_utils('display');
@@ -35,6 +30,7 @@
 	@include set_utils('font-size', true);
 	@include set_utils('font-weight');
 	@include set_utils('height', true);
+	@include set_inset_helper('inset');
 	@include set_utils('justify-content');
 	@include set_utils('justify-items');
 	@include set_utils('justify-self', true);
@@ -55,6 +51,5 @@
 	@include set_utils('user-select');
 	@include set_utils('width', true); 
 	@include set_utils('z-index');
-
 	@include other_helpers();	
 }

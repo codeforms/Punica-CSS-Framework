@@ -48,6 +48,26 @@
 	}
 }
 
+/// 
+/// @param {Array|List} $helper
+/// 
+/// @return mixed
+/// 
+@mixin set_inset_helper($helper)
+{
+	$util       : utils($helper);
+	$list       : map-get($util, 'values');
+	$specificity: map-get($util, 'specificity');
+
+	@each $class, $values in $list {
+		@each $value in $values {
+			.#{$class}-#{$value} {
+				#{$class}: #{$value} #{$specificity};
+			}
+		}
+	}
+}
+
 ///
 /// Set helper list with specs
 /// 

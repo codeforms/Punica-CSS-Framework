@@ -346,20 +346,45 @@ $helpers: (
 			("min-content", min-content),
 			("max-content", max-content),
 			("fit-content", fit-content),
-			("2", 2rem), // 32px
-			("3", 3rem), // 48px
-			("4", 4rem), // 64px
-			("5", 5rem), // 80px
-			("10", 10rem), // 160px
-			("15", 15rem), // 240px
-			("20", 20rem), // 320px
-			("25", 25rem), // 400px
-			("30", 30rem), // 480px
-			("35", 35rem), // 560px
-			("40", 40rem), // 640px
-			("45", 45rem), // 720px
-			("50", 50rem), // 800px
-			("75", 75rem) // 1200px
+			("1", 0.625rem), // 10px
+			("2", 1.25rem), // 20px
+			("3", 1.875rem), // 30px
+			("4", 2.5rem), // 40px
+			("5", 3.125rem), // 50px
+			("6", 3.75rem), // 60px
+			("7", 4.375rem), // 70px
+			("8", 5rem), // 80px
+			("10", 6.25rem), // 100px
+			("16", 10rem), // 160px
+			("24", 15rem), // 240px
+			("32", 20rem), // 320px
+			("40", 25rem), // 400px
+			("48", 30rem), // 480px
+			("56", 35rem), // 560px
+			("64", 40rem), // 640px
+			("72", 45rem), // 720px
+			("80", 50rem), // 800px
+			("120", 75rem), // 1200px
+		)
+	),
+	/// 
+	/// Inset
+	/// 
+	/// The inset property sets the distance 
+	/// between an element and the parent element.
+	/// 
+	'inset': (
+		'property'   : null, // css property name
+		'prefix'     : null, // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name, [values]
+			'top'(0, auto),
+			'bottom'(0, auto),
+			'left'(0, auto),
+			'right'(0, auto),
 		)
 	),
 	/// 
@@ -446,7 +471,9 @@ $helpers: (
 		'specs'      : (
 			// class name (suffix), value
 			('2', '0.125'), // 2px
+			('3', '0.188'), // 3px
 			('4', '0.25'), // 4px
+			('5', '0.313'), // 5px
 			('6', '0.375'), // 6px
 			('8', '0.5'), // 8px
 			('10', '0.625'), // 10px
@@ -545,7 +572,9 @@ $helpers: (
 		'specs'      : (
 			// class name (suffix), value
 			('2', '0.125'), // 2px
+			('3', '0.188'), // 3px
 			('4', '0.25'), // 4px
+			('5', '0.313'), // 5px
 			('6', '0.375'), // 6px
 			('8', '0.5'), // 8px
 			('10', '0.625'), // 10px
@@ -715,20 +744,25 @@ $helpers: (
 			("min-content", min-content),
 			("max-content", max-content),
 			("fit-content", fit-content),
-			("2", 2rem), // 32px
-			("3", 3rem), // 48px
-			("4", 4rem), // 64px
-			("5", 5rem), // 80px
-			("10", 10rem), // 160px
-			("15", 15rem), // 240px
-			("20", 20rem), // 320px
-			("25", 25rem), // 400px
-			("30", 30rem), // 480px
-			("35", 35rem), // 560px
-			("40", 40rem), // 640px
-			("45", 45rem), // 720px
-			("50", 50rem), // 800px
-			("75", 75rem) // 1200px
+			("1", 0.625rem), // 10px
+			("2", 1.25rem), // 20px
+			("3", 1.875rem), // 30px
+			("4", 2.5rem), // 40px
+			("5", 3.125rem), // 50px
+			("6", 3.75rem), // 60px
+			("7", 4.375rem), // 70px
+			("8", 5rem), // 80px
+			("10", 6.25rem), // 100px
+			("16", 10rem), // 160px
+			("24", 15rem), // 240px
+			("32", 20rem), // 320px
+			("40", 25rem), // 400px
+			("48", 30rem), // 480px
+			("56", 35rem), // 560px
+			("64", 40rem), // 640px
+			("72", 45rem), // 720px
+			("80", 50rem), // 800px
+			("120", 75rem), // 1200px
 		)
 	),
 	///
