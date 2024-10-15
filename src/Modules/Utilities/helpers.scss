@@ -12,6 +12,7 @@
 	@include set_utils('align-self');
 	@include set_utils('background-color', true);
 	@include color_palette(utils('background-color'));
+	@include set_utils('border-color', true);
 	@include set_utils('border-radius');
 	@include set_utils('border-style');
 	@include utils_with_specs(utils('border'));

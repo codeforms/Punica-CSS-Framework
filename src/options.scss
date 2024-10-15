@@ -8,7 +8,6 @@
 
 @use "Core/Theme/Getters" as *;
 @use "Core/Global/Colors" as color;
-@use "Modules/Elements/Typography/variables" as *;
 
 $options: (
 	///
@@ -21,10 +20,11 @@ $options: (
 			'sizes' : true
 		),
 		'variables': (
-			'padding'      : .6rem,
-			'margin'       : 0 0 8px,
-			'width'        : 100%,
-			'font-weight'  : bold,
+			'padding'    : .6rem,
+			'margin'     : 0 0 8px,
+			'width'      : 100%,
+			'font-size'  : 1.015em,
+			'font-weight': bold,
 			'border-radius': theme('border', 'radius'),
 			'icon': (
 				'vertical-align': text-top
@@ -358,7 +358,7 @@ $options: (
 		),
 		'variables': (
 			'min-height'    : 80px,
-			'font-size'     : 1.128em,
+			'font-size'     : 1.015em,
 			'color'         : white,
 			'background'    : theme('color', 'primary'),
 			'width'         : 100%,
@@ -626,9 +626,9 @@ $options: (
 			'gradient': true
 		),
 		'variables': (
-			'font-family'  : $font-family, // Typography -> variables
+			'font-family'  : theme('typography', 'font-family'),
 			'font-weight'  : bold,
-			'font-size'    : 1em,
+			'font-size'    : 1.015em,
 			'line-height'  : 1,
 			'width'        : min-content,
 			'padding'      : .935rem 1.6rem,
@@ -712,17 +712,17 @@ $options: (
 				'background-color': initial,
 				'border-color'    : inherit,
 				'height'          : initial,
-				'padding'         : .4rem .5rem,
+				'padding'         : .7rem .5rem,
 				'font-size'       : 1.088em,
 				'border-width'    : theme('border', 'width'),
 				'border-style'    : theme('border', 'style'),
 				'border-radius'   : 0,
 				'transition'      : .35s,
-				'outline-color'   : initial,
+				'outline-color'   : theme('color', 'primary'),
 				'outline-width'   : 2px
 			),
 			'items': (
-				'margin': .345em 0 .55em
+				'margin': .345em 0 .5rem
 			),
 			'item': (
 				'margin': 6px

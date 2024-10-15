@@ -6,10 +6,9 @@
 @use "../../../Core/Theme/Getters" as *;
 
 ///
-/// Google Fonts
-/// @link https://developers.google.com/fonts/docs/css2
+/// Fonts
 ///
-@import url('https://fonts.googleapis.com/css2?family=#{theme('google-font', 'name')}:wght@#{theme('google-font', 'weights')}&display=swap');
+@import url('#{theme('typography', 'font-url')}');
 
 /// PREFERENCES =========================================
 $font-family: theme('typography', 'font-family'), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;

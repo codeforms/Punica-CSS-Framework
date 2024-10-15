@@ -13,6 +13,8 @@ $helpers: (
 	/// how flex lines are distributed along the 
 	/// cross axis in a flexbox container.
 	/// 
+	/// @example align-content-center
+	/// 
 	'align-content': (
 		'property'   : 'align-content', // css property name (don't change it !)
 		'prefix'     : 'align-content-', // prefix of class name
@@ -25,6 +27,8 @@ $helpers: (
 	/// Align Items
 	/// The align-items property specifies the default alignment
 	/// for items inside a flexbox or grid container.
+	/// 
+	/// @example align-items-flex-end
 	///
 	'align-items': (
 		'property'   : 'align-items', // css property name (don't change it !)
@@ -40,6 +44,8 @@ $helpers: (
 	/// in the block direction for the selected item 
 	/// inside a flexbox or grid container.
 	///
+	/// @example align-self-auto
+	///
 	'align-self': (
 		'property'   : 'align-self', // css property name (don't change it !)
 		'prefix'     : 'align-self-', // prefix of class name
@@ -54,6 +60,8 @@ $helpers: (
 	/// the background color of an element. The background of 
 	/// an element is the total size of the element, 
 	/// including padding and border (but not the margin).
+	/// 
+	/// @example bg-primary
 	///
 	'background-color': (
 		'property'   : 'background-color', // css property name (don't change it !)
@@ -75,11 +83,40 @@ $helpers: (
 		)
 	),
 	///
+	/// Border Color
+	/// 
+	/// The border-color property sets the color
+	/// of an element's four borders. This property 
+	/// can have from one to four values.
+	///
+	/// @example border-primary
+	/// 
+	'border-color': (
+		'property'   : 'border-color', // css property name (don't change it !)
+		'prefix'     : 'border-', // prefix of class name
+		'specificity': '!important', // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (
+			// class name (suffix), value
+			("grey", color.$grey),
+			("white", white),
+			("black", black),
+			("dark", theme('color', 'dark')),
+			("primary", theme('color', 'primary')),
+			("success", theme('color', 'success')),
+			("warning", theme('color', 'warning')),
+			("error", theme('color', 'error'))
+		)
+	),
+	///
 	/// Border Radius
 	/// 
 	/// The border-radius property defines 
 	/// the radius of the element's corners.
 	/// 
+	/// @example radius-4
+	///
 	'border-radius': (
 		'property'   : 'border-radius', // css property name (don't change it !)
 		'prefix'     : 'radius-', // prefix of class name
@@ -94,9 +131,11 @@ $helpers: (
 	/// The border-style property sets 
 	/// the style of an element's four borders.
 	/// 
+	/// @example border-dotted
+	///
 	'border-style': (
 		'property'   : 'border-style', // css property name (don't change it !)
-		'prefix'     : 'border-style-', // prefix of class name
+		'prefix'     : 'border-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : null,
@@ -108,6 +147,8 @@ $helpers: (
 	/// The border property is a shorthand property for
 	/// border-width, border-style and border-color.
 	/// 
+	/// @example border-3
+	///
 	'border':(
 		'property'   : 'border', // css property name (don't change it !)
 		'prefix'     : 'border', // prefix of class name
@@ -137,6 +178,8 @@ $helpers: (
 	/// 
 	/// The color property specifies the color of text.
 	/// 
+	/// @example color-success
+	///
 	'color': (
 		'property'   : 'color', // css property name (don't change it !)
 		'prefix'     : 'color-', // prefix of class name
@@ -161,6 +204,8 @@ $helpers: (
 	/// The cursor property specifies the mouse cursor
 	/// to be displayed when pointing over an element.
 	/// 
+	/// @example cursor-grap
+	///
 	'cursor': (
 		'property'   : 'cursor', // css property name (don't change it !)
 		'prefix'     : 'cursor-', // prefix of class name
@@ -175,6 +220,8 @@ $helpers: (
 	/// The filter property defines visual effects 
 	/// (like blur and saturation) to an element (often <img>).
 	/// 
+	/// @example filter-gray
+	///
 	'filter': (
 		'property'   : 'filter', // css property name (don't change it !)
 		'prefix'     : 'filter-', // prefix of class name
@@ -193,6 +240,8 @@ $helpers: (
 	/// The display property specifies the 
 	/// display behavior (the type of rendering box) of an element.
 	/// 
+	/// @example display-flex
+	///
 	'display': (
 		'property'   : 'display', // css property name (don't change it !)
 		'prefix'     : 'display-', // prefix of class name
@@ -207,6 +256,8 @@ $helpers: (
 	/// The flex-direction property specifies 
 	/// the direction of the flexible items.
 	/// 
+	/// @example flex-direction-column
+	///
 	'flex-direction': (
 		'property'   : 'flex-direction', // css property name (don't change it !)
 		'prefix'     : 'flex-direction-', // prefix of class name
@@ -222,9 +273,11 @@ $helpers: (
 	/// will grow relative to the rest of the flexible items 
 	/// inside the same container.
 	/// 
+	/// @example grow-1
+	///
 	'flex-grow': (
 		'property'   : 'flex-grow', // css property name (don't change it !)
-		'prefix'     : 'flex-grow-', // prefix of class name
+		'prefix'     : 'grow-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : null,
@@ -237,9 +290,11 @@ $helpers: (
 	/// will shrink relative to the rest of the flexible items
 	/// inside the same container.
 	/// 
+	/// @example shrink-1
+	///
 	'flex-shrink': (
 		'property'   : 'flex-shrink', // css property name (don't change it !)
-		'prefix'     : 'flex-shrink-', // prefix of class name
+		'prefix'     : 'shrink-', // prefix of class name
 		'specificity': '!important', // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : null,
@@ -251,6 +306,8 @@ $helpers: (
 	/// The flex-wrap property specifies whether 
 	/// the flexible items should wrap or not.
 	/// 
+	/// @example flex-wrap
+	///
 	'flex-wrap': (
 		'property'   : 'flex-wrap', // css property name (don't change it !)
 		'prefix'     : 'flex-', // prefix of class name
@@ -266,6 +323,8 @@ $helpers: (
 	/// The flex property is a shorthand property for flex-grow, flex-shrink
 	/// and flex-basis.
 	/// 
+	/// @example flex-1
+	///
 	'flex': (
 		'property'   : 'flex', // css property name (don't change it !)
 		'prefix'     : 'flex-', // prefix of class name
@@ -286,6 +345,8 @@ $helpers: (
 	/// The float property specifies whether an element should 
 	/// float to the left, right, or not at all.
 	/// 
+	/// @example float-right
+	///
 	'float': (
 		'property'   : 'float', // css property name (don't change it !)
 		'prefix'     : 'float-', // prefix of class name
@@ -299,6 +360,8 @@ $helpers: (
 	/// 
 	/// The font-size property sets the size of a font.
 	/// 
+	/// @example text-large
+	///
 	'font-size': (
 		'property'   : 'font-size', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
@@ -322,6 +385,8 @@ $helpers: (
 	/// The font-weight property sets how thick 
 	/// or thin characters in text should be displayed.
 	/// 
+	/// @example weight-300
+	///
 	'font-weight': (
 		'property'   : 'font-weight', // css property name (don't change it !)
 		'prefix'     : 'weight-', // prefix of class name
@@ -335,6 +400,8 @@ $helpers: (
 	/// 
 	/// The height property sets the height of an element.
 	/// 
+	/// @example height-6
+	///
 	'height': (
 		'property'   : 'height', // css property name (don't change it !)
 		'prefix'     : 'height-', // prefix of class name
@@ -373,6 +440,8 @@ $helpers: (
 	/// The inset property sets the distance 
 	/// between an element and the parent element.
 	/// 
+	/// @example top-0
+	///
 	'inset': (
 		'property'   : null, // css property name
 		'prefix'     : null, // prefix of class name
@@ -394,6 +463,8 @@ $helpers: (
 	/// container's items when the items do not use
 	/// all available space on the main-axis (horizontally).
 	///
+	/// @example justify-content-center
+	///
 	'justify-content': (
 		'property'   : 'justify-content', // css property name (don't change it !)
 		'prefix'     : 'justify-content-', // prefix of class name
@@ -408,6 +479,8 @@ $helpers: (
 	/// The justify-items property is set 
 	/// on the grid container to give child elements (grid items) 
 	/// alignment in the inline direction.
+	/// 
+	/// @example justify-items-start
 	///
 	'justify-items': (
 		'property'   : 'justify-items', // css property name (don't change it !)
@@ -422,6 +495,8 @@ $helpers: (
 	///
 	/// The justify-self property aligns a grid item 
 	/// within its grid cell in the inline direction.
+	/// 
+	/// @example justify-self-start
 	///
 	'justify-self': (
 		'property'   : 'justify-self', // css property name (don't change it !)
@@ -450,6 +525,8 @@ $helpers: (
 	/// 
 	/// The line-height property specifies the height of a line.
 	/// 
+	/// @example line-height-4
+	///
 	'line-height': (
 		'property'   : 'line-height', // css property name (don't change it !)
 		'prefix'     : 'line-height-', // prefix of class name
@@ -463,6 +540,9 @@ $helpers: (
 	/// 
 	/// The margin property sets the margins for an element.
 	/// 
+	/// @example m-30
+	/// @example mr-70
+	///
 	'margin': (
 		'property'   : 'margin', // css property name (don't change it !)
 		'prefix'     : 'm', // prefix of class name
@@ -508,6 +588,8 @@ $helpers: (
 	/// in a variety of ways; such as "preserve that aspect ratio"
 	/// or "stretch up and take up as much space as possible".
 	/// 
+	/// @example fit-cover
+	///
 	'object-fit': (
 		'property'   : 'object-fit', // css property name (don't change it !)
 		'prefix'     : 'fit-', // prefix of class name
@@ -523,6 +605,8 @@ $helpers: (
 	/// of a flexible item relative to the rest 
 	/// of the flexible items inside the same container.
 	/// 
+	/// @example order-4
+	///
 	'order': (
 		'property'   : 'order', // css property name (don't change it !)
 		'prefix'     : 'order-', // prefix of class name
@@ -537,6 +621,8 @@ $helpers: (
 	/// The overflow property specifies what should 
 	/// happen if content overflows an element's box.
 	/// 
+	/// @example overflow-hidden
+	///
 	'overflow': (
 		'property'   : 'overflow', // css property name (don't change it !)
 		'prefix'     : 'overflow-', // prefix of class name
@@ -564,6 +650,9 @@ $helpers: (
 	/// An element's padding is the space between 
 	/// its content and its border.
 	/// 
+	/// @example p-3
+	/// @example pr-30
+	///
 	'padding': (
 		'property'   : 'padding', // css property name (don't change it !)
 		'prefix'     : 'p', // prefix of class name
@@ -606,6 +695,8 @@ $helpers: (
 	/// The place-content property is used in flexbox 
 	/// and grid layouts, and is a shorthand property for
 	/// align-content and justify-content properties..
+	/// 
+	/// @example place-content-center
 	///
 	'place-content': (
 		'property'   : 'place-content', // css property name (don't change it !)
@@ -621,6 +712,8 @@ $helpers: (
 	/// The place-items property is used in grid layout, 
 	/// and is a shorthand property for the 
 	/// align-items and justify-items properties.
+	/// 
+	/// @example place-items-end
 	///
 	'place-items': (
 		'property'   : 'place-items', // css property name (don't change it !)
@@ -636,6 +729,8 @@ $helpers: (
 	/// The place-self property is used to align individual grid items, 
 	/// and is a shorthand property for the 
 	/// align-self and justify-self properties.
+	/// 
+	/// @example place-self-right
 	///
 	'place-self': (
 		'property'   : 'place-self', // css property name (don't change it !)
@@ -652,6 +747,8 @@ $helpers: (
 	/// of positioning method used for an element 
 	/// (static, relative, absolute, fixed, or sticky).
 	/// 
+	/// @example position-absolute
+	///
 	'position': (
 		'property'   : 'position', // css property name (don't change it !)
 		'prefix'     : 'position-', // prefix of class name
@@ -666,6 +763,8 @@ $helpers: (
 	/// The resize property defines if (and how)
 	/// an element is resizable by the user.
 	/// 
+	/// @example resize-both
+	///
 	'resize': (
 		'property'   : 'resize', // css property name (don't change it !)
 		'prefix'     : 'resize-', // prefix of class name
@@ -679,6 +778,8 @@ $helpers: (
 	/// 
 	/// The text-align property specifies the horizontal alignment of text in an element.
 	/// 
+	/// @example text-center
+	///
 	'text-align': (
 		'property'   : 'text-align', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
@@ -692,6 +793,8 @@ $helpers: (
 	/// 
 	/// The text-decoration property specifies the decoration added to text.
 	/// 
+	/// @example text-overline
+	///
 	'text-decoration': (
 		'property'   : 'text-decoration', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
@@ -706,6 +809,8 @@ $helpers: (
 	/// The text-transform property controls 
 	/// the capitalization of text.
 	/// 
+	/// @example text-uppercase
+	///
 	'text-transform': (
 		'property'   : 'text-transform', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
@@ -720,6 +825,8 @@ $helpers: (
 	/// The user-select property specifies 
 	/// whether the text of an element can be selected.
 	/// 
+	/// @example select-text
+	///
 	'user-select': (
 		'property'   : 'user-select', // css property name (don't change it !)
 		'prefix'     : 'select-', // prefix of class name
@@ -733,6 +840,8 @@ $helpers: (
 	/// 
 	/// The width property sets the width of an element.
 	/// 
+	/// @example width-40
+	///
 	'width': (
 		'property'   : 'width', // css property name (don't change it !)
 		'prefix'     : 'width-', // prefix of class name
@@ -772,6 +881,8 @@ $helpers: (
 	/// An element with greater stack order is always in front of an element 
 	/// with a lower stack order.
 	/// 
+	/// @example z-100
+	///
 	'z-index': (
 		'property'   : 'z-index', // css property name (don't change it !)
 		'prefix'     : 'z-', // prefix of class name

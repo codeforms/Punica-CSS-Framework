@@ -15,6 +15,7 @@
 			padding: components('alert', 'padding');
 			margin: components('alert', 'margin');
 			width: components('alert', 'width');
+			font-size: components('alert', 'font-size');
 			font-weight: components('alert', 'font-weight');
 			@include border();
 			border-radius: components('alert', 'border-radius');

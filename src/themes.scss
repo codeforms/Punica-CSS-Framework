@@ -11,25 +11,22 @@ $themes: (
 	// 01. Default Theme
 	//
 	default: (
-		'name' : 'Default Theme',
-		'type' : 'light', // light or dark (required*),
-		'google-font': (
-			'name'    : 'Reddit+Sans+Condensed',
-			'weights' : '300;400;600',
-		),
+		'name'      : 'Default Theme',
+		'type'      : 'light', // light or dark (required*),
 		'typography': (
-			'font-family'   : 'Reddit Sans Condensed',
-			'font-size'     : .965rem,
-			'font-weight'   : 400,
-			'line-height'   : 1.7
+			'font-family': 'Open Sans',
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap', // embed/import url
+			'font-size'  : .945rem,
+			'font-weight': 400,
+			'line-height': 1.7
 		),
 		'color': (
 			'text'       : #202123,
 			'background' : white,
-			'primary'    : #3f61ac,
-			'success'    : #508434,
-			'warning'    : #b08142,
-			'error'      : #b34040,
+			'primary'    : #3266ec,
+			'success'    : #4f971c,
+			'warning'    : #c68811,
+			'error'      : #d02645,
 			'dark'       : #4b505e
 		),
 		'border': (
@@ -82,17 +79,14 @@ $themes: (
 	// 02. Dark Theme
 	//
 	dark: (
-		'name' : 'Dark Theme',
-		'type' : 'dark', // light or dark (required*),
-		'google-font': (
-			'name'    : 'IBM+Plex+Sans+Hebrew',
-			'weights' : '400;600;700',
-		),
+		'name'      : 'Dark Theme',
+		'type'      : 'dark', // light or dark (required*),
 		'typography': (
-			'font-family'   : 'IBM Plex Sans Hebrew',
-			'font-size'     : 13px,
-			'font-weight'   : 400,
-			'line-height'   : 1.7
+			'font-family': 'IBM Plex Sans Hebrew',
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;600;700&display=swap', // embed/import url
+			'font-size'  : 13px,
+			'font-weight': 400,
+			'line-height': 1.7
 		),
 		'color': (
 			'text'       : white,
