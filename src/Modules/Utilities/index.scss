@@ -156,21 +156,21 @@ $helpers: (
 		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : (
 			// suffix, value
-			('0', '0'), // 0
-			('1', '0.063'), // 1px
-			('2', '0.125'), // 2px
-			('3', '0.188'), // 3px
-			('4', '0.25'), // 4px
-			('6', '0.375'), // 6px
-			('8', '0.5') // 8px
+			(0, 0), // 0
+			(1, 0.063), // 1px
+			(2, 0.125), // 2px
+			(3, 0.188), // 3px
+			(4, 0.25), // 4px
+			(6, 0.375), // 6px
+			(8, 0.5) // 8px
 		),
 		'values': (
 			// infix, property
-			("-", "border-width")
-			("-top-", "border-top-width")
-			("-right-", "border-right-width")
-			("-bottom-", "border-bottom-width")
-			("-left-", "border-left-width")
+			("-", border-width)
+			("-top-", border-top-width)
+			("-right-", border-right-width)
+			("-bottom-", border-bottom-width)
+			("-left-", border-left-width)
 		)
 	),
 	/// 
@@ -413,25 +413,25 @@ $helpers: (
 			("min-content", min-content),
 			("max-content", max-content),
 			("fit-content", fit-content),
-			("1", 0.625rem), // 10px
-			("2", 1.25rem), // 20px
-			("3", 1.875rem), // 30px
-			("4", 2.5rem), // 40px
-			("5", 3.125rem), // 50px
-			("6", 3.75rem), // 60px
-			("7", 4.375rem), // 70px
-			("8", 5rem), // 80px
-			("10", 6.25rem), // 100px
-			("16", 10rem), // 160px
-			("24", 15rem), // 240px
-			("32", 20rem), // 320px
-			("40", 25rem), // 400px
-			("48", 30rem), // 480px
-			("56", 35rem), // 560px
-			("64", 40rem), // 640px
-			("72", 45rem), // 720px
-			("80", 50rem), // 800px
-			("120", 75rem), // 1200px
+			(1, 0.625rem), // 10px
+			(2, 1.25rem), // 20px
+			(3, 1.875rem), // 30px
+			(4, 2.5rem), // 40px
+			(5, 3.125rem), // 50px
+			(6, 3.75rem), // 60px
+			(7, 4.375rem), // 70px
+			(8, 5rem), // 80px
+			(10, 6.25rem), // 100px
+			(16, 10rem), // 160px
+			(24, 15rem), // 240px
+			(32, 20rem), // 320px
+			(40, 25rem), // 400px
+			(48, 30rem), // 480px
+			(56, 35rem), // 560px
+			(64, 40rem), // 640px
+			(72, 45rem), // 720px
+			(80, 50rem), // 800px
+			(120, 75rem), // 1200px
 		)
 	),
 	/// 
@@ -550,33 +550,33 @@ $helpers: (
 		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : (
 			// class name (suffix), value
-			('2', '0.125'), // 2px
-			('3', '0.188'), // 3px
-			('4', '0.25'), // 4px
-			('5', '0.313'), // 5px
-			('6', '0.375'), // 6px
-			('8', '0.5'), // 8px
-			('10', '0.625'), // 10px
-			('20', '1.25'), // 20px
-			('30', '1.875'), // 30px
-			('40', '2.5'), // 40px
-			('50', '3.125'), // 50px
-			('60', '3.75'), // 60px
-			('70', '4.375'), // 70px
-			('80', '5'), // 80px
-			('100', '6.25'), // 100px
-			('125', '7.813'), // 125px
-			('150', '9.375'), // 150px
-			('175', '10.938'), // 175px
-			('200', '12.5'), // 200px
+			(2, 0.125), // 2px
+			(3, 0.188), // 3px
+			(4, 0.25), // 4px
+			(5, 0.313), // 5px
+			(6, 0.375), // 6px
+			(8, 0.5), // 8px
+			(10, 0.625), // 10px
+			(20, 1.25), // 20px
+			(30, 1.875), // 30px
+			(40, 2.5), // 40px
+			(50, 3.125), // 50px
+			(60, 3.75), // 60px
+			(70, 4.375), // 70px
+			(80, 5), // 80px
+			(100, 6.25), // 100px
+			(125, 7.813), // 125px
+			(150, 9.375), // 150px
+			(175, 10.938), // 175px
+			(200, 12.5), // 200px
 		),
 		'values'     : (
 			// infix, property
-			("-", "margin"),
-			("t-", "margin-top"),
-			("r-", "margin-right"),
-			("b-", "margin-bottom"),
-			("l-", "margin-left")
+			("-", margin),
+			("t-", margin-top),
+			("r-", margin-right),
+			("b-", margin-bottom),
+			("l-", margin-left)
 		)
 	),
 	/// 
@@ -631,17 +631,17 @@ $helpers: (
 		'specs'      : null,
 		'values'     : (
 			// class name, property, value
-			("auto", "overflow", auto),
-			("hidden", "overflow", hidden),
-			("visible", "overflow", visible),
-			("x-auto", "overflow-x", auto),
-			("x-hidden", "overflow-x", hidden),
-			("x-visible", "overflow-x", visible),
-			("x-scroll", "overflow-x", scroll),
-			("y-auto", "overflow-y", auto),
-			("y-hidden", "overflow-y", hidden),
-			("y-visible", "overflow-y", visible),
-			("y-scroll", "overflow-y", scroll)
+			("auto", overflow, auto),
+			("hidden", overflow, hidden),
+			("visible", overflow, visible),
+			("x-auto", overflow-x, auto),
+			("x-hidden", overflow-x, hidden),
+			("x-visible", overflow-x, visible),
+			("x-scroll", overflow-x, scroll),
+			("y-auto", overflow-y, auto),
+			("y-hidden", overflow-y, hidden),
+			("y-visible", overflow-y, visible),
+			("y-scroll", overflow-y, scroll)
 		)
 	),
 	/// 
@@ -660,33 +660,33 @@ $helpers: (
 		'type'       : rem, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : (
 			// class name (suffix), value
-			('2', '0.125'), // 2px
-			('3', '0.188'), // 3px
-			('4', '0.25'), // 4px
-			('5', '0.313'), // 5px
-			('6', '0.375'), // 6px
-			('8', '0.5'), // 8px
-			('10', '0.625'), // 10px
-			('20', '1.25'), // 20px
-			('30', '1.875'), // 30px
-			('40', '2.5'), // 40px
-			('50', '3.125'), // 50px
-			('60', '3.75'), // 60px
-			('70', '4.375'), // 70px
-			('80', '5'), // 80px
-			('100', '6.25'), // 100px
-			('125', '7.813'), // 125px
-			('150', '9.375'), // 150px
-			('175', '10.938'), // 175px
-			('200', '12.5'), // 200px
+			(2, 0.125), // 2px
+			(3, 0.188), // 3px
+			(4, 0.25), // 4px
+			(5, 0.313), // 5px
+			(6, 0.375), // 6px
+			(8, 0.5), // 8px
+			(10, 0.625), // 10px
+			(20, 1.25), // 20px
+			(30, 1.875), // 30px
+			(40, 2.5), // 40px
+			(50, 3.125), // 50px
+			(60, 3.75), // 60px
+			(70, 4.375), // 70px
+			(80, 5), // 80px
+			(100, 6.25), // 100px
+			(125, 7.813), // 125px
+			(150, 9.375), // 150px
+			(175, 10.938), // 175px
+			(200, 12.5), // 200px
 		),
 		'values'     : (
 			// infix, property
-			("-", "padding"),
-			("t-", "padding-top"),
-			("r-", "padding-right"),
-			("b-", "padding-bottom"),
-			("l-", "padding-left")
+			("-", padding),
+			("t-", padding-top),
+			("r-", padding-right),
+			("b-", padding-bottom),
+			("l-", padding-left)
 		)
 	),
 	/// 
@@ -853,25 +853,25 @@ $helpers: (
 			("min-content", min-content),
 			("max-content", max-content),
 			("fit-content", fit-content),
-			("1", 0.625rem), // 10px
-			("2", 1.25rem), // 20px
-			("3", 1.875rem), // 30px
-			("4", 2.5rem), // 40px
-			("5", 3.125rem), // 50px
-			("6", 3.75rem), // 60px
-			("7", 4.375rem), // 70px
-			("8", 5rem), // 80px
-			("10", 6.25rem), // 100px
-			("16", 10rem), // 160px
-			("24", 15rem), // 240px
-			("32", 20rem), // 320px
-			("40", 25rem), // 400px
-			("48", 30rem), // 480px
-			("56", 35rem), // 560px
-			("64", 40rem), // 640px
-			("72", 45rem), // 720px
-			("80", 50rem), // 800px
-			("120", 75rem), // 1200px
+			(1, 0.625rem), // 10px
+			(2, 1.25rem), // 20px
+			(3, 1.875rem), // 30px
+			(4, 2.5rem), // 40px
+			(5, 3.125rem), // 50px
+			(6, 3.75rem), // 60px
+			(7, 4.375rem), // 70px
+			(8, 5rem), // 80px
+			(10, 6.25rem), // 100px
+			(16, 10rem), // 160px
+			(24, 15rem), // 240px
+			(32, 20rem), // 320px
+			(40, 25rem), // 400px
+			(48, 30rem), // 480px
+			(56, 35rem), // 560px
+			(64, 40rem), // 640px
+			(72, 45rem), // 720px
+			(80, 50rem), // 800px
+			(120, 75rem), // 1200px
 		)
 	),
 	///
