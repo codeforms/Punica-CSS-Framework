@@ -10,13 +10,8 @@
 *,
 *:after,
 *:before {
-	box-sizing: inherit;
-	border: 0 solid theme('border', 'color');
-}
-*, 
-*::before,
-*::after {
 	box-sizing: border-box;
+	border: 0 solid theme('border', 'color');
 }
 * {
 	margin: 0;

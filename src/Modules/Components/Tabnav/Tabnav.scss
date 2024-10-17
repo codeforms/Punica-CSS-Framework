@@ -39,9 +39,9 @@
 			&:hover {
 				color: theme('color', 'text');
 				@if theme('type') == 'light' {
-					border-bottom-color: darken(color.$grey, 20%);
+					border-bottom-color: darken(color.$grey, 30%);
 				} @else if theme('type') == 'dark' {
-					border-bottom-color: lighten(color.$grey, 20%);
+					border-bottom-color: lighten(color.$grey, 30%);
 				}
 			}
 			&:focus {
@@ -69,9 +69,9 @@
 					margin-bottom: 0; 
 					&:hover {
 						@if theme('type') == 'light' {
-							border-top-color: darken(color.$grey, 20%);
+							border-top-color: darken(color.$grey, 30%);
 						} @else if theme('type') == 'dark' {
-							border-top-color: lighten(color.$grey, 20%);
+							border-top-color: lighten(color.$grey, 30%);
 						}
 					}
 					&.#{class('tabnav', 'active')} {
