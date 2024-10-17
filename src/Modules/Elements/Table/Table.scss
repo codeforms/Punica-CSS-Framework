@@ -11,20 +11,20 @@
 
 @if enabled('elements', 'table') {
 	.#{class('table', 'name')} {
-		position: relative;
-		border-collapse: collapse;
-		border-spacing: 0;
-		width: 100%;
-		max-width: 100%;
-		text-align: left;
-		margin-bottom: 1.5rem;
+		position: elements('table', 'position');
+		border-collapse: elements('table', 'border-collapse');
+		border-spacing: elements('table', 'border-spacing');
+		width: elements('table', 'width');
+		max-width: elements('table', 'max-width');
+		text-align: elements('table', 'text-align');
+		margin-bottom: elements('table', 'margin-bottom');
 		caption {
-			text-align: inherit;
-			color: theme('color', 'text');
-			font-size: 1rem;
-			font-weight: bold;
-			padding: elements('table', 'th', 'padding');
-			border-bottom: theme('border', 'width') theme('border', 'style') theme('color', 'text');
+			text-align: elements('table', 'caption', 'text-align');
+			color: elements('table', 'caption', 'color');
+			font-size: elements('table', 'caption', 'font-size');
+			font-weight: elements('table', 'caption', 'font-weight');
+			padding: elements('table', 'caption', 'padding');
+			border-bottom: elements('table', 'caption', 'border-bottom');
 		}
 		///
 		/// STRIPED

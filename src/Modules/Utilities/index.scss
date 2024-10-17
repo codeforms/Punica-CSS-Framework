@@ -148,6 +148,7 @@ $helpers: (
 	/// border-width, border-style and border-color.
 	/// 
 	/// @example border-3
+	/// @example border-right-2
 	///
 	'border':(
 		'property'   : 'border', // css property name (don't change it !)
@@ -241,6 +242,7 @@ $helpers: (
 	/// display behavior (the type of rendering box) of an element.
 	/// 
 	/// @example display-flex
+	/// @example display-inline-block
 	///
 	'display': (
 		'property'   : 'display', // css property name (don't change it !)
@@ -256,6 +258,7 @@ $helpers: (
 	/// The flex-direction property specifies 
 	/// the direction of the flexible items.
 	/// 
+	/// @example flex-row
 	/// @example flex-direction-column
 	///
 	'flex-direction': (
@@ -307,6 +310,7 @@ $helpers: (
 	/// the flexible items should wrap or not.
 	/// 
 	/// @example flex-wrap
+	/// @example flex-wrap-reverse
 	///
 	'flex-wrap': (
 		'property'   : 'flex-wrap', // css property name (don't change it !)
@@ -324,6 +328,7 @@ $helpers: (
 	/// and flex-basis.
 	/// 
 	/// @example flex-1
+	/// @example flex-initial
 	///
 	'flex': (
 		'property'   : 'flex', // css property name (don't change it !)
@@ -386,6 +391,7 @@ $helpers: (
 	/// or thin characters in text should be displayed.
 	/// 
 	/// @example weight-300
+	/// @example weight-bolder
 	///
 	'font-weight': (
 		'property'   : 'font-weight', // css property name (don't change it !)
@@ -401,6 +407,7 @@ $helpers: (
 	/// The height property sets the height of an element.
 	/// 
 	/// @example height-6
+	/// @example height-max-content
 	///
 	'height': (
 		'property'   : 'height', // css property name (don't change it !)
@@ -441,6 +448,7 @@ $helpers: (
 	/// between an element and the parent element.
 	/// 
 	/// @example top-0
+	/// @example bottom-auto
 	///
 	'inset': (
 		'property'   : null, // css property name
@@ -497,6 +505,7 @@ $helpers: (
 	/// within its grid cell in the inline direction.
 	/// 
 	/// @example justify-self-start
+	/// @example justify-self-first-baseline
 	///
 	'justify-self': (
 		'property'   : 'justify-self', // css property name (don't change it !)
@@ -589,6 +598,7 @@ $helpers: (
 	/// or "stretch up and take up as much space as possible".
 	/// 
 	/// @example fit-cover
+	/// @example fit-scale-down
 	///
 	'object-fit': (
 		'property'   : 'object-fit', // css property name (don't change it !)
@@ -622,6 +632,7 @@ $helpers: (
 	/// happen if content overflows an element's box.
 	/// 
 	/// @example overflow-hidden
+	/// @example overflow-x-scroll
 	///
 	'overflow': (
 		'property'   : 'overflow', // css property name (don't change it !)
@@ -697,6 +708,7 @@ $helpers: (
 	/// align-content and justify-content properties..
 	/// 
 	/// @example place-content-center
+	/// @example place-content-space-evenly
 	///
 	'place-content': (
 		'property'   : 'place-content', // css property name (don't change it !)
@@ -841,6 +853,7 @@ $helpers: (
 	/// The width property sets the width of an element.
 	/// 
 	/// @example width-40
+	/// @example width-fit-content
 	///
 	'width': (
 		'property'   : 'width', // css property name (don't change it !)

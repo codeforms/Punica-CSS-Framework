@@ -430,11 +430,27 @@ $options: (
 		'variables': (
 			'padding'         : 1rem,
 			'margin'          : 1rem 0,
-			'title-padding'   : .85rem 1rem,
 			'border'          : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
 			'border-radius'   : theme('border', 'radius'),
 			'background-color': theme('color', 'background'),
-			'sizes'           : (
+			'header'          : (
+				'padding': .85rem 1rem
+			),
+			'title': (
+				'font-size': 1.185rem,
+				'font-weight': bold
+			),
+			'headline': (
+				'font-size'     : 1.39em,
+				'line-height'   : 1.5,
+				'margin-bottom' : 1.875rem,
+				'color'         : theme('color', 'text'),
+				'letter-spacing': -.0158em,
+			),
+			'media': (
+				'margin-bottom': 32px
+			),
+			'sizes': (
 				(
 			    	"mini", // size name (class)
 			    	.985rem, // font-size (title)
@@ -523,8 +539,8 @@ $options: (
 	'tabnav': (
 		'enabled': true,
 		'features': (
-			'styles'         : true,
-			'bottom-position': true
+			'styles': true,
+			'bottom': true
 		),
 		'variables': (
 			'color'       : theme('color', 'text'),
@@ -566,6 +582,20 @@ $options: (
 			'item': (
 				'background-color': color.$grey,
 				'padding'         : 1.25em 2em 2.85em,
+			),
+			'type': (
+				'top'          : 17px,
+				'border-radius': 500px,
+				'border'       : 2px theme('border', 'style') theme('border', 'color'),
+			),
+			'author': (
+				'color'      : theme('color', 'text'),
+				'font-size'  : 1rem,
+				'font-weight': bold
+			),
+			'date': (
+				'font-size': .9em,
+				'opacity'  : .6
 			),
 			'styles': (
 				(
@@ -809,12 +839,27 @@ $options: (
 			'striped': true
 		),
 		'variables': (
+			'width'          : 100%,
+			'max-width'      : 100%,
+			'text-align'     : left,
+			'margin-bottom'  : margin-bottom,
+			'border-spacing' : 0,
+			'border-collapse': collapse,
+			'position'       : relative,
 			'td': (
-				'padding': 5px .7rem,
+				'padding': 5px .7rem
 			),
 			'th': (
-				'padding': .7rem,
-			)
+				'padding': .7rem
+			),
+			'caption': (
+				'text-align'   : inherit,
+				'color'        : theme('color', 'text'),
+				'font-size'    : 1rem,
+				'font-weight'  : bold,
+				'padding'      : .7rem,
+				'border-bottom': 2px theme('border', 'style') theme('color', 'text')
+			),
 		)
 	),
 	///

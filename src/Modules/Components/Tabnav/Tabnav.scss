@@ -58,7 +58,7 @@
 			}
 		}
 		/// Bottom Tabnav
-		@if features('components', 'tabnav', 'bottom-position') {
+		@if features('components', 'tabnav', 'bottom') {
 			&.#{class('tabnav', 'bottom')} {
 				border-bottom: 0;
 				border-top: components('tabnav', 'border-width') theme('border', 'style') color.$grey;
@@ -96,7 +96,7 @@
 					}
 				}
 				/// Bottom Tabnav
-				@if features('components', 'tabnav', 'bottom-position') {
+				@if features('components', 'tabnav', 'bottom') {
 					&.#{$type-name}.#{class('tabnav', 'bottom')} {
 						.#{class('button', 'name')},
 						a.#{class('button', 'name')},
