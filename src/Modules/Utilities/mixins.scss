@@ -29,20 +29,20 @@
 		// suffix / value
 		@each $suffix, $value in $values {
 			.#{$prefix}#{$suffix} {
-				#{$property}: #{$value}#{$type} #{$specificity};
+				#{$property}: #{$value}#{$type} $specificity;
 			}
 		}
 	} @else if $three {
 		// suffix / css property / value
 		@each $suffix, $prop, $value in $values {
 			.#{$prefix}#{$suffix} {
-				#{$prop}: #{$value}#{$type} #{$specificity};
+				#{$prop}: #{$value}#{$type} $specificity;
 			}
 		}
 	} @else {
 		@each $value in $values {
 			.#{$prefix}#{$value} {
-				#{$property}: #{$value}#{$type} #{$specificity};
+				#{$property}: #{$value}#{$type} $specificity;
 			}
 		}
 	}
@@ -62,7 +62,7 @@
 	@each $class, $values in $list {
 		@each $value in $values {
 			.#{$class}-#{$value} {
-				#{$class}: #{$value} #{$specificity};
+				#{$class}: #{$value} $specificity;
 			}
 		}
 	}
@@ -86,7 +86,7 @@
 	@each $suffix, $property in $values {
 		@each $spec, $value in $specs {
 			.#{$prefix}#{$suffix}#{$spec} {
-				#{$property}: #{$value}#{$type} #{$specificity};
+				#{$property}: #{$value}#{$type} $specificity;
 			}
 		}
 	}
@@ -112,10 +112,10 @@
 			@if $i % 5 == 0 {
 				$percentage: $i*1%;
 				.#{$prefix}#{$class}-darken-#{$i} {
-					#{$property}: mix(black, $color, $percentage) #{$specificity};
+					#{$property}: mix(black, $color, $percentage) $specificity;
 				}
 				.#{$prefix}#{$class}-lighten-#{$i} {
-					#{$property}: mix(white, $color, $percentage) #{$specificity};
+					#{$property}: mix(white, $color, $percentage) $specificity;
 				}
 			}
 		}
