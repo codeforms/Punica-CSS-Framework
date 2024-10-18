@@ -97,6 +97,7 @@
 			max-width: 100%;
 			position: relative;
 			align-items: center;
+			padding: elements('form', 'item', 'padding');
 			@at-root .#{class('form', 'name')} label,
 			&>label {
 				margin: elements('form', 'label', 'margin');
@@ -170,14 +171,11 @@
 			margin: elements('form', 'items', 'margin');
 			display: flex;
 			flex-wrap: wrap;
-			&>.#{class('form', 'item')} {
-				margin: elements('form', 'item', 'margin');
-			}
 		}
 		@each $name, $number in $grids {
 			.#{$name}.#{class('form', 'items')} {
 				>.#{class('form', 'item')} {
-					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{elements('form', 'item', 'margin')}));
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{elements('form', 'items', 'item-spacer')}));
 				}
 			}
 			@include breakpoints(layouts('grid', 'breakpoints', 'medium'), 'max-width') {
@@ -194,7 +192,7 @@
 		/// INPUT SIZES
 		///
 		@if features('elements', 'form', 'sizes') {
-			@each $size-name, $font-size, $input-height, $button-padding, $button-font-size in elements('button', 'sizes') {
+			@each $size-name, $font-size, $input-height, $button-padding in elements('form', 'sizes') {
 				&.#{$size-name} {
 					@include mixins.form-inputs() {
 						height: $input-height;
@@ -202,7 +200,7 @@
 					}
 					.#{class('button', 'name')} {
 						height: $input-height !important;
-						font-size: $button-font-size !important;
+						font-size: $font-size !important;
 						padding: $button-padding !important;
 					}
 					@at-root .#{class('form', 'name')}.#{$size-name} label,
