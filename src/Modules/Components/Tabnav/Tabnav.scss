@@ -13,29 +13,29 @@
 
 @if enabled('components', 'tabnav') {
 	.#{class('tabnav', 'name')} {
-		position: relative;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: flex-end;
+		position     : relative;
+		display      : flex;
+		flex-wrap    : wrap;
+		align-items  : flex-end;
 		border-bottom: components('tabnav', 'border-width') theme('border', 'style') theme('border', 'color');
-		padding: 0;
+		padding      : 0;
 		&>.#{class('button', 'group')} {
-			box-shadow: none;
+			box-shadow   : none;
 			border-radius: 0;
 		}
 		/// Default button styles in Tabnav
 		@include mixins.tab-button-styles() {
-			border: none;
-			box-shadow: none;
-			background: transparent;
+			border       : none;
+			box-shadow   : none;
+			background   : transparent;
 			border-radius: 0 !important;
-			line-height: components('tabnav', 'line-height');
-	        font-size: components('tabnav', 'font-size');
-	        font-weight: components('tabnav', 'font-weight');
-			color: components('tabnav', 'color');
-			padding: components('tabnav', 'padding');
+			line-height  : components('tabnav', 'line-height');
+			font-size    : components('tabnav', 'font-size');
+			font-weight  : components('tabnav', 'font-weight');
+			color        : components('tabnav', 'color');
+			padding      : components('tabnav', 'padding');
 			border-bottom: components('tabnav', 'border-width') solid transparent;
-	        margin-bottom: -#{components('tabnav', 'border-width')};
+			margin-bottom: -#{components('tabnav', 'border-width')};
 			&:hover {
 				color: theme('color', 'text');
 				@if theme('type') == 'light' {
@@ -61,10 +61,10 @@
 		@if features('components', 'tabnav', 'bottom') {
 			&.#{class('tabnav', 'bottom')} {
 				border-bottom: 0;
-				border-top: components('tabnav', 'border-width') theme('border', 'style') color.$grey;
+				border-top   : components('tabnav', 'border-width') theme('border', 'style') color.$grey;
 				@include mixins.tab-button-styles() {
-					margin-top: -#{components('tabnav', 'border-width')};
-					border-top: components('tabnav', 'border-width') solid transparent;
+					margin-top   : -#{components('tabnav', 'border-width')};
+					border-top   : components('tabnav', 'border-width') solid transparent;
 					border-bottom: 0;
 					margin-bottom: 0; 
 					&:hover {

@@ -13,39 +13,39 @@
 @if enabled('components', 'timeline') {
 	.#{class('timeline', 'name')} {
 		.#{class('timeline', 'item')} {
-			display: flex;
-			padding: components('timeline', 'item', 'padding');
-			position: relative;
-			flex-direction: column;
+			display        : flex;
+			padding        : components('timeline', 'item', 'padding');
+			position       : relative;
+			flex-direction : column;
 			justify-content: center;
 			&::before {
-				content: "";
-				display: block;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				width: components('timeline', 'border-width');
+				content         : "";
+				display         : block;
+				position        : absolute;
+				top             : 0;
+				bottom          : 0;
+				left            : 0;
+				width           : components('timeline', 'border-width');
 				background-color: components('timeline', 'item', 'background-color');
 			}
 			&:target .#{class('timeline', 'type')} {
 				border-color: theme('color', 'primary');
-				box-shadow: 0 0 0.2em theme('color', 'primary');
+				box-shadow  : 0 0 0.2em theme('color', 'primary');
 			}
 			.#{class('timeline', 'type')} {
-				position: absolute;
-				z-index: 1;
-				display: flex;
-				width: components('timeline', 'type-width');
-				height: components('timeline', 'type-width');
-				top: components('timeline', 'type', 'top');
-				left: -(calc(components('timeline', 'type-width') / 2px) - components('timeline', 'border-width'));
-				align-items: center;
+				position        : absolute;
+				z-index         : 1;
+				display         : flex;
+				width           : components('timeline', 'type-width');
+				height          : components('timeline', 'type-width');
+				top             : components('timeline', 'type', 'top');
+				left            : -(calc(components('timeline', 'type-width') / 2px) - components('timeline', 'border-width'));
+				align-items     : center;
 				background-color: color.$grey;
-				border: components('timeline', 'type', 'border');
-				border-radius: components('timeline', 'type', 'border-radius');
-				justify-content: center;
-				flex-shrink: 0;
+				border          : components('timeline', 'type', 'border');
+				border-radius   : components('timeline', 'type', 'border-radius');
+				justify-content : center;
+				flex-shrink     : 0;
 				@include shadow();
 				///
 				/// STYLES
@@ -54,8 +54,8 @@
 					@each $type, $bg-color, $color in components('timeline', 'styles') {
 					    &.#{$type} {
 							background-color: $bg-color;
-							color: $color;
-							border-color: darken($bg-color, 5%);
+							color           : $color;
+							border-color    : darken($bg-color, 5%);
 						}
 					}
 				}
@@ -65,21 +65,21 @@
 			.#{class('timeline', 'date')},
 			.#{class('timeline', 'actions')},
 			.#{class('timeline', 'media')} {
-				min-width: 0;
-				max-width: 100%;
-				color: theme('color', 'text');
-				flex: auto;
+				min-width  : 0;
+				max-width  : 100%;
+				color      : theme('color', 'text');
+				flex       : auto;
 				margin-left: 10px;
-				width: 100%;
+				width      : 100%;
 			}
 			.#{class('timeline', 'author')} {
 				font-weight: components('timeline', 'author', 'font-weight');
-				font-size: components('timeline', 'author', 'font-size');
-				color: components('timeline', 'author', 'color');
+				font-size  : components('timeline', 'author', 'font-size');
+				color      : components('timeline', 'author', 'color');
 			}
 			.#{class('timeline', 'date')} {
 				font-size: components('timeline', 'date', 'font-size');
-				opacity: components('timeline', 'date', 'opacity');
+				opacity  : components('timeline', 'date', 'opacity');
 			}
 			///
 			/// MEDIA
@@ -87,8 +87,8 @@
 			@if features('components', 'timeline', 'media') {
 				.#{class('timeline', 'media')} {
 					margin-top: 16px;
-					display: flex;
-					flex-wrap: wrap;
+					display   : flex;
+					flex-wrap : wrap;
 					@include embedded-media();
 					img {
 						display: block;

@@ -11,27 +11,25 @@
 
 @if enabled('components', 'panel') {
 	.#{class('panel', 'name')} {
-		display: flex;
-		flex-direction: column;
+		display         : flex;
+		flex-direction  : column;
+		background-color: components('panel', 'background-color');
+		margin          : components('panel', 'margin');
 
-		// has panel border?
 		@if features('components', 'panel', 'border') {
-			border: components('panel', 'border');
+			border       : components('panel', 'border');
 			border-radius: components('panel', 'border-radius');
 		}
 
-		// has panel shadow?
 		@if features('components', 'panel', 'shadow') {
 			@include shadow();
 		}
-
-		background-color: components('panel', 'background-color');
-		margin: components('panel', 'margin');
+		
 		&>.#{class('panel', 'header')},
 		&>.#{class('panel', 'bottom')} {
-			display: flex;
+			display       : flex;
 			flex-direction: row;
-			align-items: center;
+			align-items   : center;
 			.#{class('panel', 'actions')} {
 				margin-left: auto;
 				&:before {
@@ -41,7 +39,7 @@
 		}
 		&>.#{class('panel', 'header')} {
 			border-bottom: set-border();
-			padding: components('panel', 'header', 'padding');
+			padding      : components('panel', 'header', 'padding');
 			&.dashed {
 				border-bottom-style: dashed;
 			}
@@ -49,24 +47,24 @@
 				border-bottom-style: dotted;
 			}
 			>.#{class('panel', 'title')} {
-				font-size: components('panel', 'title', 'font-size');
+				font-size  : components('panel', 'title', 'font-size');
 				font-weight: components('panel', 'title', 'font-weight');
 			}
 		}
 		&>.#{class('panel', 'content')} {
-			flex: 1 1 auto;
+			flex   : 1 1 auto;
 			padding: components('panel', 'padding');
-			height: auto;
+			height : auto;
 			///
 			/// MEDIA
 			///
 			@if features('components', 'panel', 'media') {
 				&>.#{class('panel', 'media')} {
-					min-width: 0;
-					flex: auto;
+					min-width    : 0;
+					flex         : auto;
 					margin-bottom: components('panel', 'media', 'margin-bottom');
-					flex-wrap: wrap;
-					display: flex;
+					flex-wrap    : wrap;
+					display      : flex;
 					@include embedded-media();
 					img {
 						display: block;
@@ -81,17 +79,17 @@
 			}
 			.#{class('panel', 'headline')},
 			p.#{class('panel', 'headline')} {
-				font-size: components('panel', 'headline', 'font-size');
-				line-height: components('panel', 'headline', 'line-height');
-				margin-bottom: components('panel', 'headline', 'margin-bottom');
-				color: components('panel', 'headline', 'color');
+				font-size     : components('panel', 'headline', 'font-size');
+				line-height   : components('panel', 'headline', 'line-height');
+				margin-bottom : components('panel', 'headline', 'margin-bottom');
+				color         : components('panel', 'headline', 'color');
 				letter-spacing: components('panel', 'headline', 'letter-spacing');
 			}
 		}
 		&>.#{class('panel', 'bottom')} {
 			min-height: 50px;
 			border-top: set-border();
-			padding: components('panel', 'padding');
+			padding   : components('panel', 'padding');
 		}
 		///
 		/// SIZES

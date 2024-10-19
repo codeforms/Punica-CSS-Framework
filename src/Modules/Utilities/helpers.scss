@@ -37,10 +37,12 @@
 	@include set_utils('justify-self', true);
 	@include set_utils('line-height');
 	@include utils_with_specs(utils('margin'));
+	@include set_sides(utils('margin'));
 	@include set_utils('object-fit');
 	@include set_utils('order');
 	@include set_utils('overflow', false, true);
 	@include utils_with_specs(utils('padding'));
+	@include set_sides(utils('padding'), 'padding');
 	@include set_utils('place-content');
 	@include set_utils('place-items');
 	@include set_utils('place-self');

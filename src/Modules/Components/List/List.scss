@@ -13,13 +13,13 @@
 @if enabled('components', 'list') {
 	.#{class('list', 'name')} {
 		list-style: none;
-		margin: components('list', 'margin');
+		margin    : components('list', 'margin');
 		>.#{class('list', 'item')} {
-		    display: flex;
-		    align-items: center;
-		    padding: components('list', 'item', 'padding');
-		    margin: components('list', 'item', 'margin');
-		    transition: components('list', 'item', 'transition');
+			display    : flex;
+			align-items: center;
+			padding    : components('list', 'item', 'padding');
+			margin     : components('list', 'item', 'margin');
+			transition : components('list', 'item', 'transition');
 		    >img,
 		    >.#{class('icon', 'class-name')},
 		    >i {
@@ -32,29 +32,29 @@
 		    	display: contents;
 		    }
 		    >.#{class('list', 'body')} {
-		    	flex: 1;
-		    	line-height: components('list', 'body', 'line-height');
-		    	text-align: components('list', 'body', 'text-align');
-		    	display: initial;
+				flex       : 1;
+				line-height: components('list', 'body', 'line-height');
+				text-align : components('list', 'body', 'text-align');
+				display    : initial;
 		    	>.#{class('list', 'title')},
 		    	>.#{class('list', 'subtitle')} {
 					display: block;
 				}
 		    	>.#{class('list', 'title')} {
-		    		font-size: components('list', 'title', 'font-size');
-    				font-weight: components('list', 'title', 'font-weight');
+					font-size  : components('list', 'title', 'font-size');
+					font-weight: components('list', 'title', 'font-weight');
 					line-height: components('list', 'body', 'line-height');
 		    	}
 				>.#{class('list', 'subtitle')} {
-					font-size: components('list', 'subtitle', 'font-size');
-					font-weight: components('list', 'subtitle', 'font-weight');
-					color: components('list', 'subtitle', 'color');
+					font-size    : components('list', 'subtitle', 'font-size');
+					font-weight  : components('list', 'subtitle', 'font-weight');
+					color        : components('list', 'subtitle', 'color');
 					margin-bottom: components('list', 'subtitle', 'margin-bottom');
 				}
 		    }
 		    >.#{class('list', 'actions')} {
-    		    width: components('list', 'actions', 'width');
-	    		margin-left: components('list', 'actions', 'margin-left');
+				width      : components('list', 'actions', 'width');
+				margin-left: components('list', 'actions', 'margin-left');
 			}
 			&.#{class('list', 'active')} {
 				background: darken(theme('color', 'background'), 11%);

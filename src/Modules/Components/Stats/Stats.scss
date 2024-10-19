@@ -13,18 +13,18 @@
 @if enabled('components', 'stats') {
 	.#{class('stats', 'name')},
 	a.#{class('stats', 'name')} {
-		display: inline-flex;
-		flex-direction: column;
+		display         : inline-flex;
+		flex-direction  : column;
 		background-color: transparent;
-		margin: components('stats', 'margin');
-		border-width: components('stats', 'border-width');
-		border-color: components('stats', 'border-color');
-		border-style: components('stats', 'border-style');
-		border-radius: components('stats', 'border-radius');
-		padding: components('stats', 'padding');
-		line-height: components('stats', 'line-height');
-		text-decoration: none;
-		transition: components('stats', 'transition');
+		margin          : components('stats', 'margin');
+		border-width    : components('stats', 'border-width');
+		border-color    : components('stats', 'border-color');
+		border-style    : components('stats', 'border-style');
+		border-radius   : components('stats', 'border-radius');
+		padding         : components('stats', 'padding');
+		line-height     : components('stats', 'line-height');
+		text-decoration : none;
+		transition      : components('stats', 'transition');
 		>.#{class('stats', 'title')},
 		>.#{class('stats', 'subtitle')},
 		>.#{class('stats', 'value')} {
@@ -35,7 +35,7 @@
 			font-size: components('stats', 'title', 'font-size');
 		}
 		>.#{class('stats', 'subtitle')} {
-			font-size: components('stats', 'subtitle', 'font-size');
+			font-size : components('stats', 'subtitle', 'font-size');
 			margin-top: components('stats', 'subtitle', 'margin-top');
 
 			@if theme('type') == 'light' {
@@ -46,18 +46,18 @@
 		}
 		>.#{class('stats', 'value')} {
 			flex-direction: row;
-			align-items: center;
-			font-weight: components('stats', 'value', 'font-weight');
-			font-size: components('stats', 'value', 'font-size');
-			line-height: components('stats', 'value', 'line-height');
+			align-items   : center;
+			font-weight   : components('stats', 'value', 'font-weight');
+			font-size     : components('stats', 'value', 'font-size');
+			line-height   : components('stats', 'value', 'line-height');
 			>img,
 		    >.#{class('icon', 'class-name')},
 		    >i {
-		    	font-weight: normal;
-		    	display: inline-block;
-		    	vertical-align: baseline;
-		    	font-size: components('stats', 'media', 'font-size');
-		    	margin-right: components('stats', 'media', 'margin-right');
+				font-weight   : normal;
+				display       : inline-block;
+				vertical-align: baseline;
+				font-size     : components('stats', 'media', 'font-size');
+				margin-right  : components('stats', 'media', 'margin-right');
 		    }
 		}
 		///
@@ -67,8 +67,8 @@
 			@each $style-name, $bg-color in components('stats', 'styles') {
 				@include set-style($bg-color, white, $style-name) {
 					border-color: $bg-color;
-					background: transparent;
-					color: inherit;
+					background  : transparent;
+					color       : inherit;
 					>.#{class('stats', 'value')} {
 						color: inherit;
 						>.#{class('icon', 'class-name')},

@@ -11,20 +11,21 @@
 
 @if enabled('elements', 'table') {
 	.#{class('table', 'name')} {
-		position: elements('table', 'position');
+		position       : elements('table', 'position');
 		border-collapse: elements('table', 'border-collapse');
-		border-spacing: elements('table', 'border-spacing');
-		width: elements('table', 'width');
-		max-width: elements('table', 'max-width');
-		text-align: elements('table', 'text-align');
-		margin-bottom: elements('table', 'margin-bottom');
+		border-spacing : elements('table', 'border-spacing');
+		width          : elements('table', 'width');
+		max-width      : elements('table', 'max-width');
+		text-align     : elements('table', 'text-align');
+		margin-bottom  : elements('table', 'margin-bottom');
 		caption {
-			text-align: elements('table', 'caption', 'text-align');
-			color: elements('table', 'caption', 'color');
-			font-size: elements('table', 'caption', 'font-size');
-			font-weight: elements('table', 'caption', 'font-weight');
-			padding: elements('table', 'caption', 'padding');
-			border-bottom: elements('table', 'caption', 'border-bottom');
+			text-align      : elements('table', 'caption', 'text-align');
+			color           : elements('table', 'caption', 'color');
+			font-size       : elements('table', 'caption', 'font-size');
+			font-weight     : elements('table', 'caption', 'font-weight');
+			padding         : elements('table', 'caption', 'padding');
+			border-bottom   : elements('table', 'caption', 'border-bottom');
+			background-color: elements('table', 'caption', 'background-color');
 		}
 		///
 		/// STRIPED
@@ -51,7 +52,7 @@
 				tbody tr {
 					&:hover {
 						background: color.$grey;
-						color: theme('color', 'text');
+						color     : theme('color', 'text');
 					}
 				}
 			}
@@ -67,20 +68,20 @@
 		td,
 		th {
 			border-bottom: set-border();
+			text-align   : inherit;
+		}
+		td {
 			padding: elements('table', 'td', 'padding');
-			text-align: inherit;
 		}
 		thead tr {
 			background: transparent !important;
 			th {
 				border-bottom-color: theme('border', 'color');
-				font-weight: theme('typography', 'font-weight');
-				@if theme('type') == 'light' {
-					color: darken(color.$grey, 20%);
-				} @else if theme('type') == 'dark' {
-					color: lighten(color.$grey, 20%);
-				}
-				padding: elements('table', 'th', 'padding');
+				font-size          : elements('table', 'th', 'font-size');
+				font-weight        : elements('table', 'th', 'font-weight');
+				color              : elements('table', 'th', 'color');
+				padding            : elements('table', 'th', 'padding');
+				background-color   : elements('table', 'th', 'background-color');
 			}
 		}
 	}

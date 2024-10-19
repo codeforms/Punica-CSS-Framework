@@ -12,34 +12,34 @@
 @if enabled('elements', 'button') {
 	a.#{class('button', 'name')},
 	.#{class('button', 'name')} {
-		display: inline-flex;
-		font-family: elements('button', 'font-family');
-		font-size: elements('button', 'font-size');
-		font-weight: elements('button', 'font-weight');
-		text-decoration: none;
-		white-space: nowrap;
-		outline: none;
-		width: elements('button', 'width');
-		background: elements('button', 'background');
+		display         : inline-flex;
+		font-family     : elements('button', 'font-family');
+		font-size       : elements('button', 'font-size');
+		font-weight     : elements('button', 'font-weight');
+		text-decoration : none;
+		white-space     : nowrap;
+		outline         : none;
+		width           : elements('button', 'width');
+		background      : elements('button', 'background');
 		background-image: none;
-		appearance: none;
-		color: elements('button', 'color');
-		border: elements('button', 'border');
-		border-radius: elements('button', 'border-radius');
-		box-sizing: border-box;
-		cursor: pointer;
-		line-height: elements('button', 'line-height');
-		padding: elements('button', 'padding');
-		transition: elements('button', 'transition');
-		user-select: none;
-		box-shadow: none;
-		align-items: center;
-		justify-content: center;
-		overflow: visible;
-		text-align: center;
+		appearance      : none;
+		color           : elements('button', 'color');
+		border          : elements('button', 'border');
+		border-radius   : elements('button', 'border-radius');
+		box-sizing      : border-box;
+		cursor          : pointer;
+		line-height     : elements('button', 'line-height');
+		padding         : elements('button', 'padding');
+		transition      : elements('button', 'transition');
+		user-select     : none;
+		box-shadow      : none;
+		align-items     : center;
+		justify-content : center;
+		overflow        : visible;
+		text-align      : center;
 		&:focus,
 		&:hover {
-			transition: elements('button', 'transition');
+			transition      : elements('button', 'transition');
 			background-image: none;
 		}
 		&:hover {
@@ -54,19 +54,19 @@
 		///
 		@if features('elements', 'button', 'gradient') {
 			&.#{class('button', 'gradient')} {
-				z-index: 1;
+				z-index : 1;
 				position: relative;
 				@include set-gradient(elements('button', 'background'));
 				&:before {
-					position: absolute;
-					content: "";
-					width: 100%;
-					height: 100%;
-					top: 0;
-					left: 0;
-					opacity: 0;
+					position  : absolute;
+					content   : "";
+					width     : 100%;
+					height    : 100%;
+					top       : 0;
+					left      : 0;
+					opacity   : 0;
 					transition: opacity 0.25s;
-					z-index: -1;
+					z-index   : -1;
 					@include set-gradient(elements('button', 'background'), to bottom, 23%);
 				}
 				&:hover::before {
@@ -79,29 +79,29 @@
 			}
 		}
 		&.#{class('button', 'active')} {
-			color: elements('button', 'color');
-			background: color.$grey;
+			color           : elements('button', 'color');
+			background      : color.$grey;
 			background-image: none;
-			text-decoration: none;
+			text-decoration : none;
 			&:focus,
 			&:hover {
 				background: lighten(color.$grey, 5%);
 			}
 		}
         &.#{class('button', 'inactive')} {
-			pointer-events: none;
-			cursor: default;
+			pointer-events  : none;
+			cursor          : default;
 			background-image: none;
 		}
 		// Block Button
 		&.#{class('button', 'block')} {
-    		display: flex;
-		    flex: 1;
-		    width: auto;
+			display: flex;
+			flex   : 1;
+			width  : auto;
 		}
 		i, [class^="#{class('icon', 'class-name')}"] {
-			font-size: elements('button', 'icon', 'font-size');
-			color: elements('button', 'color');
+			font-size  : elements('button', 'icon', 'font-size');
+			color      : elements('button', 'color');
 			text-shadow: none;
 		}
 		///

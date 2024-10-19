@@ -12,29 +12,29 @@
 @if enabled('elements', 'form') {
 	@include mixins.form-inputs() {
 		-webkit-appearance: none;
-		background-color: elements('form', 'input', 'background-color');
-		border-width: elements('form', 'input', 'border-width');
-		border-style: elements('form', 'input', 'border-style');
-		border-color: elements('form', 'input', 'border-color');
-		height: elements('form', 'input', 'height');
-		border-radius: elements('form', 'input', 'border-radius');
-		outline: elements('form', 'input', 'outline-width') solid transparent;
-		box-shadow: none;
-		box-sizing: inherit;
-		outline-offset: -#{elements('form', 'input', 'outline-width')};
-		padding: elements('form', 'input', 'padding');
-		width: 100%;
-		max-width: 100%;
-		font-family: inherit;
-		color: elements('form', 'input', 'color');
-		font-size: elements('form', 'input', 'font-size');
-		transition: elements('form', 'input', 'transition');
+		background-color  : elements('form', 'input', 'background-color');
+		border-width      : elements('form', 'input', 'border-width');
+		border-style      : elements('form', 'input', 'border-style');
+		border-color      : elements('form', 'input', 'border-color');
+		height            : elements('form', 'input', 'height');
+		border-radius     : elements('form', 'input', 'border-radius');
+		outline           : elements('form', 'input', 'outline-width') solid transparent;
+		box-shadow        : none;
+		box-sizing        : inherit;
+		outline-offset    : -#{elements('form', 'input', 'outline-width')};
+		padding           : elements('form', 'input', 'padding');
+		width             : 100%;
+		max-width         : 100%;
+		font-family       : inherit;
+		color             : elements('form', 'input', 'color');
+		font-size         : elements('form', 'input', 'font-size');
+		transition        : elements('form', 'input', 'transition');
 		&:focus {
-			outline-color: elements('form', 'input', 'outline-color');
-			outline-width: elements('form', 'input', 'outline-width');
-			outline-offset: -#{elements('form', 'input', 'outline-width')};
+			outline-color   : elements('form', 'input', 'outline-color');
+			outline-width   : elements('form', 'input', 'outline-width');
+			outline-offset  : -#{elements('form', 'input', 'outline-width')};
 			background-color: elements('form', 'input', 'background-color');
-			z-index: 0;
+			z-index         : 0;
 		}
 		///
 		/// VALIDATION STYLES
@@ -42,7 +42,7 @@
 		@if features('elements', 'form', 'validation-styles') {
 			@each $style-name, $style-color in elements('form', 'styles') {
 				&.#{$style-name} {
-					color: $style-color;
+					color       : $style-color;
 					border-color: $style-color;
 					&:focus {
 						outline-color: $style-color;
@@ -54,28 +54,28 @@
 	select {
 		background-image:
 		url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=");
-		background-repeat: no-repeat;
+		background-repeat  : no-repeat;
 		background-position: right 1rem center;
 		&[multiple] {
 			background: none;
-			height: auto;
+			height    : auto;
 		}
 	}
 	textarea {
 		min-height: 6.5rem;
-		resize: vertical;
+		resize    : vertical;
 	}
 	fieldset {
 		border-width: 0;
-		padding: 0.6em;
+		padding     : 0.6em;
 	}
 	label,
 	legend {
-		display: block;
-		font-size: 1.3rem;
-		font-weight: bold;
+		display      : block;
+		font-size    : 1.3rem;
+		font-weight  : bold;
 		margin-bottom: .7rem;
-		white-space: normal;
+		white-space  : normal;
 	}
 	input[type='checkbox'],
 	input[type='radio'] {
@@ -85,39 +85,39 @@
 	  opacity: .59;
 	}
 	.#{class('form', 'name')} {
-		position: relative;
+		position : relative;
 		max-width: 100%;
-		padding: elements('form', 'padding');
+		padding  : elements('form', 'padding');
 		.#{class('form', 'item')} {
-			height: fit-content;
-			margin: elements('form', 'item', 'margin');
-			display: inline-flex;
-			flex-wrap: wrap;
-			width: 100%;
-			max-width: 100%;
-			position: relative;
+			height     : fit-content;
+			margin     : elements('form', 'item', 'margin');
+			display    : inline-flex;
+			flex-wrap  : wrap;
+			width      : 100%;
+			max-width  : 100%;
+			position   : relative;
 			align-items: center;
-			padding: elements('form', 'item', 'padding');
+			padding    : elements('form', 'item', 'padding');
 			@at-root .#{class('form', 'name')} label,
 			&>label {
-				margin: elements('form', 'label', 'margin');
-				color: elements('form', 'label', 'color');
-				font-size: elements('form', 'label', 'font-size');
-				font-weight: bold;
+				margin        : elements('form', 'label', 'margin');
+				color         : elements('form', 'label', 'color');
+				font-size     : elements('form', 'label', 'font-size');
+				font-weight   : bold;
 				text-transform: none;
-				height: fit-content;
+				height        : fit-content;
 			}
 			///
 			/// Custom file input
 			///
 			@if features('elements', 'form', 'upload') {
 				> input[type="file"] {
-					opacity: 0;
+					opacity : 0;
 					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					cursor: default;
+					top     : 0;
+					left    : 0;
+					height  : 100%;
+					cursor  : default;
 				}
 			}
 			///
@@ -127,49 +127,49 @@
 				@at-root .#{class('form', 'name')} .#{class('form', 'group')},
 				&>.#{class('form', 'group')} {
 					display: flex;
-				    width: 100%;
+					width  : 100%;
 					>* {
 						flex: 1 1 auto;
 						&:last-child {
 			    			margin-left: -1px;
 						}
 						&:not(:first-child):not(:last-child) {
-		    			    margin-left: -1px;
-		    				margin-right: 0;
-		    				border-radius: 0;
+							margin-left  : -1px;
+							margin-right : 0;
+							border-radius: 0;
 						}
 					}
 					>.#{class('button', 'group')} {
 						box-shadow: none;
 					}
 					>.#{class('button', 'name')} {
-						padding: elements('form', 'input', 'padding');
+						padding   : elements('form', 'input', 'padding');
 						box-shadow: none;
 						&:first-child {
 							border-bottom-right-radius: 0;
-			    			border-top-right-radius: 0;
+							border-top-right-radius   : 0;
 						}
 						&:last-child:not(:first-child) {
 							border-bottom-left-radius: 0;
-			    			border-top-left-radius: 0;
+							border-top-left-radius   : 0;
 						}
 					}
 					@include mixins.form-inputs() {
 						&:first-child {
 							border-bottom-right-radius: 0;
-			    			border-top-right-radius: 0;
+							border-top-right-radius   : 0;
 						}
 						&:last-child:not(:first-child) {
 							border-bottom-left-radius: 0;
-			    			border-top-left-radius: 0;
+							border-top-left-radius   : 0;
 						}
 					}
 				}
 			}
 		}
 		.#{class('form', 'items')} {
-			margin: elements('form', 'items', 'margin');
-			display: flex;
+			margin   : elements('form', 'items', 'margin');
+			display  : flex;
 			flex-wrap: wrap;
 		}
 		@each $name, $number in $grids {
@@ -195,13 +195,13 @@
 			@each $size-name, $font-size, $input-height, $button-padding in elements('form', 'sizes') {
 				&.#{$size-name} {
 					@include mixins.form-inputs() {
-						height: $input-height;
+						height   : $input-height;
 						font-size: $font-size;
 					}
 					.#{class('button', 'name')} {
-						height: $input-height !important;
+						height   : $input-height !important;
 						font-size: $font-size !important;
-						padding: $button-padding !important;
+						padding  : $button-padding !important;
 					}
 					@at-root .#{class('form', 'name')}.#{$size-name} label,
 					&>.#{class('form', 'items')}>.#{class('form', 'item')}>label,
@@ -218,25 +218,25 @@
 	@if features('elements', 'form', 'checkbox-radio') {
 		.#{class('form', 'radio')},
 		.#{class('form', 'checkbox')} {
-			display: grid;
+			display              : grid;
 			grid-template-columns: 1em auto;
-			gap: 1rem;
+			gap                  : 1rem;
 			input {
-				display: grid;
-				place-content: center;
-				margin: 0;
-				width: elements('form', 'radio-checkbox', 'width');
-				height: elements('form', 'radio-checkbox', 'height');
-				border: elements('form', 'radio-checkbox', 'border');
+				display           : grid;
+				place-content     : center;
+				margin            : 0;
+				width             : elements('form', 'radio-checkbox', 'width');
+				height            : elements('form', 'radio-checkbox', 'height');
+				border            : elements('form', 'radio-checkbox', 'border');
 				-webkit-appearance: none;
-				appearance: none;
+				appearance        : none;
 				&::before {
-					content: "";
-					width: 0.7em;
-					height: 0.7em;
-					transform: scale(0);
+					content         : "";
+					width           : 0.7em;
+					height          : 0.7em;
+					transform       : scale(0);
 					background-color: elements('form', 'radio-checkbox', 'color');
-					clip-path: elements('form', 'radio-checkbox', 'checkbox-clip-path');
+					clip-path       : elements('form', 'radio-checkbox', 'checkbox-clip-path');
 				}
 				&:checked::before {
 				  transform: scale(1.5);

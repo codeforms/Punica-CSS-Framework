@@ -13,38 +13,38 @@
 
 @if enabled('components', 'navbar') {
 	.#{class('navbar', 'name')} {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: stretch;
+		display        : flex;
+		flex-wrap      : wrap;
+		align-items    : stretch;
 		justify-content: space-between;
-		min-height: components('navbar', 'min-height');
-		background: components('navbar', 'background');
-		color: components('navbar', 'color');
-		width: components('navbar', 'width');
+		min-height     : components('navbar', 'min-height');
+		background     : components('navbar', 'background');
+		color          : components('navbar', 'color');
+		width          : components('navbar', 'width');
 		// grid container
 		.#{class('grid', 'container')} {
 			display: flex;
-			width: elements('grid', 'container', 'width'); // options->grid
+			width  : elements('grid', 'container', 'width'); // options->grid
 		}
 		// navbar brand
 		.#{class('navbar', 'brand')} {
-			padding: components('navbar', 'brand', 'padding');
-			display: flex;
+			padding        : components('navbar', 'brand', 'padding');
+			display        : flex;
 			justify-content: center;
-			min-height: 100%;
-			align-items: center;
-			margin-right: components('navbar', 'brand', 'margin-right');
-			white-space: nowrap;
+			min-height     : 100%;
+			align-items    : center;
+			margin-right   : components('navbar', 'brand', 'margin-right');
+			white-space    : nowrap;
 			img {
 				width: components('navbar', 'brand', 'img-width');
 			}
 			a,
 			a:visited {
-				font-size: components('navbar', 'font-size');
+				font-size      : components('navbar', 'font-size');
 				text-decoration: none;
-				color: white;
-				display: flex;
-				font-weight: components('navbar', 'brand', 'font-weight');
+				color          : white;
+				display        : flex;
+				font-weight    : components('navbar', 'brand', 'font-weight');
 			}
 		}
 		// navbar burger
@@ -54,35 +54,35 @@
 		}
 		.#{class('navbar', 'burger')} {
 			&::before {
-				display: none;
-				position: absolute;
-				content: components('navbar', 'burger', 'symbol-open');
-				font-size: components('navbar', 'burger', 'icon-size');
+				display   : none;
+				position  : absolute;
+				content   : components('navbar', 'burger', 'symbol-open');
+				font-size : components('navbar', 'burger', 'icon-size');
 				min-height: components('navbar', 'min-height');
 				max-height: components('navbar', 'min-height');
-				cursor: pointer;
-				right: 0;
-				top: 0;
+				cursor    : pointer;
+				right     : 0;
+				top       : 0;
 			}
 		}
 		// navbar links
 		section.#{class('navbar', 'links')} {
-			display: flex;
-			flex: 1 0 0;
+			display    : flex;
+			flex       : 1 0 0;
 			align-items: center;
 			// navbar sections
 			div.#{class('navbar', 'section')} {
-				flex: 1 0 0;
-				display: flex;
-				height: 100%;
+				flex       : 1 0 0;
+				display    : flex;
+				height     : 100%;
 				align-items: center;
 				&:not(:first-child):last-child {
 					justify-content: flex-end;
 				}
 				input[type='text'] {
+					color           : white;
 					background-color: darken(components('navbar', 'background'), 7%);
-					color: white;
-					border-color: lighten(components('navbar', 'background'), 8%);
+					border-color    : lighten(components('navbar', 'background'), 8%);
 					&::placeholder {
 						color: white;
 					}
@@ -115,26 +115,26 @@
 			}
 		}
 		&.#{class('navbar', 'fixed')} {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0px;
+			position  : fixed;
+			top       : 0;
+			left      : 0;
+			right     : 0px;
 			margin-top: 0;
-			transform: translateY(0px);
-			z-index: 5;
+			transform : translateY(0px);
+			z-index   : 5;
 		}
 		.#{class('button', 'group')} {
-			height: 100%;
+			height    : 100%;
 			min-height: 100%;
 			box-shadow: none;
 			.#{class('button', 'name')},
 			.#{class('button', 'dropdown')} .#{class('button', 'name')} {
-				background: transparent;
-				border-color: transparent;
-				color: white;
-				min-height: 100%;
+				background   : transparent;
+				border-color : transparent;
+				color        : white;
+				min-height   : 100%;
 				border-radius: 0;
-				border: 0;
+				border       : 0;
 				i, span.#{class('icon', 'class-name')} {
 					color: white;
 				}
@@ -144,7 +144,7 @@
 				}
 				&:active,
 				&.#{class('button', 'active')} {
-					color: white;
+					color     : white;
 					background: darken(components('navbar', 'background'), 7%);
 					transition: components('button', 'transition');
 					&:hover {
@@ -161,8 +161,8 @@
 		}
 		.#{class('button', 'name')},
 		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
-			font-size: components('navbar', 'font-size');
-			padding: components('navbar', 'button-padding');
+			font-size  : components('navbar', 'font-size');
+			padding    : components('navbar', 'button-padding');
 			font-weight: components('navbar', 'font-weight');
 		}
 		///
@@ -207,7 +207,7 @@
 					& .#{class('button', 'name')},
 					& .#{class('button', 'dropdown')} .#{class('button', 'name')} {
 						font-size: $font-size;
-						padding: $button-padding;
+						padding  : $button-padding;
 					}
 				}
 			}
@@ -224,18 +224,18 @@
 				position: relative;
 			}
 			section.#{class('navbar', 'links')} {
-				position: absolute;
-				display: block;
-				width: 100%;
-				height: 0;
-				top: components('navbar', 'min-height');
-				left: 0;
+				position  : absolute;
+				display   : block;
+				width     : 100%;
+				height    : 0;
+				top       : components('navbar', 'min-height');
+				left      : 0;
 				overflow-x: auto;
 				overflow-y: hidden;
 				background: color.$grey;
-				z-index: 1;
-				margin: 0 !important;
-				padding: 0 !important;
+				z-index   : 1;
+				margin    : 0 !important;
+				padding   : 0 !important;
 				@include shadow();
 				.#{class('navbar', 'section')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')},
@@ -244,10 +244,10 @@
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')} .#{class('button', 'name')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
-					display: block !important;
-					width: 100%;
+					display   : block !important;
+					width     : 100%;
 					text-align: left;
-					position: relative;
+					position  : relative;
 				}
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
@@ -263,17 +263,17 @@
 				}
 			}
 			.#{class('navbar', 'burger')} {
-				display: flex;
-				align-items: center;
+				display        : flex;
+				align-items    : center;
 				justify-content: center;
 				&::before {
-					content: components('navbar', 'burger', 'symbol-close');
-					padding: components('navbar', 'burger', 'padding');
-					font-size: components('navbar', 'burger', 'icon-size');
-					display: flex;
-					align-items: center;
+					content        : components('navbar', 'burger', 'symbol-close');
+					padding        : components('navbar', 'burger', 'padding');
+					font-size      : components('navbar', 'burger', 'icon-size');
+					display        : flex;
+					align-items    : center;
 					justify-content: center;
-					top: auto;
+					top            : auto;
 				}
 			}
 			///

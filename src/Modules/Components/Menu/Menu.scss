@@ -13,48 +13,48 @@
 @if enabled('components', 'menu') {
 	.#{class('menu', 'name')} {
 		background-color: components('menu', 'background');
-		border-radius: components('menu', 'border-radius');
-		margin: components('menu', 'margin');
-		width: components('menu', 'width');
-		padding: components('menu', 'padding');
-		min-width: max-content;
-		list-style: none;
+		border-radius   : components('menu', 'border-radius');
+		margin          : components('menu', 'margin');
+		width           : components('menu', 'width');
+		padding         : components('menu', 'padding');
+		min-width       : max-content;
+		list-style      : none;
 		@include shadow();
 		z-index: 300;
 		// menu title
 		.#{class('menu', 'title')} {
-			font-size: components('menu', 'title', 'font-size');
-			min-height: components('menu', 'title', 'min-height');
-			color: components('menu', 'title', 'color');
-			padding: components('menu', 'title', 'padding');
-			font-weight: components('menu', 'title', 'font-weight');
+			font-size     : components('menu', 'title', 'font-size');
+			min-height    : components('menu', 'title', 'min-height');
+			color         : components('menu', 'title', 'color');
+			padding       : components('menu', 'title', 'padding');
+			font-weight   : components('menu', 'title', 'font-weight');
 			letter-spacing: components('menu', 'title', 'letter-spacing');
 		}
 		// menu item
 		.#{class('menu', 'item')} {
-			padding: 0; // default container
-			position: relative;
+			padding        : 0; // default container
+			position       : relative;
 			text-decoration: none;
-		    text-align: components('menu', 'item', 'text-align');
+			text-align     : components('menu', 'item', 'text-align');
 			& > a {
-				display: block;
+				display        : block;
 				text-decoration: none;
-				color: theme('color', 'text');
-				width: components('menu', 'item', 'width');
-				padding: components('menu', 'item', 'padding');
-				font-size: components('menu', 'item', 'font-size');
-				font-weight: theme('typography', 'font-weight');
-				transition: components('menu', 'item', 'transition');
+				color          : theme('color', 'text');
+				width          : components('menu', 'item', 'width');
+				padding        : components('menu', 'item', 'padding');
+				font-size      : components('menu', 'item', 'font-size');
+				font-weight    : theme('typography', 'font-weight');
+				transition     : components('menu', 'item', 'transition');
 				&:hover {
 					background: color.$grey;
-					color: theme('color', 'text');
+					color     : theme('color', 'text');
 					transition: components('menu', 'item', 'transition');
 				}
 				&:active,
 				&:focus,
 				&.#{class('menu', 'active')} {
 					background: color.$grey;
-					color: theme('color', 'text');
+					color     : theme('color', 'text');
 					transition: components('menu', 'item', 'transition');
 				}
 			}
@@ -64,8 +64,8 @@
 				} @else if theme('type') == 'dark' {
 					color: lighten(color.$grey, 28%);
 				}
-				font-size: components('menu', 'icon', 'font-size');
-				margin-right: components('menu', 'icon', 'margin-right');
+				font-size     : components('menu', 'icon', 'font-size');
+				margin-right  : components('menu', 'icon', 'margin-right');
 				vertical-align: components('menu', 'icon', 'vertical-align');
 			}
 			.#{class('menu', 'name')} {
@@ -74,10 +74,10 @@
 		}
 		// menu badge
 		.#{class('menu', 'badge')} {
-			position: absolute;
-			right: components('menu', 'badge', 'right');
-			top: components('menu', 'badge', 'top');
-			padding: components('menu', 'badge', 'padding');
+			position : absolute;
+			right    : components('menu', 'badge', 'right');
+			top      : components('menu', 'badge', 'top');
+			padding  : components('menu', 'badge', 'padding');
 			font-size: components('menu', 'badge', 'font-size');
 		}
 		// small menu

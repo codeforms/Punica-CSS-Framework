@@ -12,12 +12,12 @@
 @if enabled('components', 'billboard') {
 	.#{class('billboard', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
-			display: flex;
-			flex-direction: row;
+			display        : flex;
+			flex-direction : row;
 			justify-content: space-between;
-			align-items: center;
-			padding: components('billboard', 'padding');
-			border-color: components('billboard', 'border-color');
+			align-items    : center;
+			padding        : components('billboard', 'padding');
+			border-color   : components('billboard', 'border-color');
 			@include border();
 		};
 		///
@@ -50,23 +50,23 @@
 		}
 		.#{class('billboard', 'body')} {
 			padding: components('billboard', 'body', 'padding');
-			flex: 1 1 auto;
-			display: flex;
+			flex           : 1 1 auto;
+			display        : flex;
 			justify-content: center;
-			flex-direction: column;
+			flex-direction : column;
 		}
 		///
 	    /// COVER
 	    ///
 	    @if features('components', 'billboard', 'cover') {
 			&.#{class('billboard', 'cover')} {
-				min-height: 100vh;
-				max-height: 100%;
-				min-width: 100%;
-				border: 0;
-				background-size: cover;
+				min-height         : 100vh;
+				max-height         : 100%;
+				min-width          : 100%;
+				border             : 0;
+				background-size    : cover;
 				background-position: center center;
-				background-repeat: no-repeat;
+				background-repeat  : no-repeat;
 			}
 		}
     }

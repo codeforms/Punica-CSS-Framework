@@ -22,7 +22,7 @@
 @function options($keys...) 
 {
 	@if null == map-get(option.$options, nth($keys, 1)) {
-		@warn "[INVALID KEY] #{nth($keys, 1)}" + ' key is not found in the [options.scss] file.';
+		@warn "[INVALID KEY] #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
@@ -35,14 +35,14 @@
 	$value: map-get($value, nth($keys, 2));
 
 	@if null == $value {
-		@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found in the [options.scss] file.';
+		@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
 	@if length($keys) > 2 {
 		$value: map-get($value, nth($keys, 3));
 		@if null == $value {
-			@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found in the [options.scss] file.';
+			@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
 			@return null;
 		}
 	}
@@ -67,7 +67,7 @@
 	$variables: map-get(map-get(options($node), 'variables'), nth($keys, 1));
 
 	@if null == $variables {
-		@warn "[INVALID KEY] #{$node} > variables > #{nth($keys, 1)}" + ' key is not found in the [options.scss] file.';
+		@warn "[INVALID KEY] #{$node} > variables > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 	
@@ -76,7 +76,7 @@
 	}
 
 	@if null == map-get($variables, nth($keys, 2)) {
-		@warn "[INVALID KEY] #{$node} > variables > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found in the [options.scss] file.';
+		@warn "[INVALID KEY] #{$node} > variables > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
@@ -98,14 +98,14 @@
 @function class($node, $key) 
 {
 	@if null == map-get(class.$classnames, $node) {
-		@warn "[INVALID KEY] #{$node}" + ' key is not found in the [classnames.scss] file.';
+		@warn "[INVALID KEY] #{$node}" + ' key is not found or key returns null in the [classnames.scss] file.';
 		@return null;
 	}
 
 	$classnames: map-get(class.$classnames, $node);
 
 	@if null == map-get($classnames, $key) {
-		@warn "[INVALID KEY] #{$node} > #{$key}" + ' key is not found in the [classnames.scss] file.';
+		@warn "[INVALID KEY] #{$node} > #{$key}" + ' key is not found or key returns null in the [classnames.scss] file.';
 		@return null;
 	}
 
@@ -116,7 +116,7 @@
 /// Get variable of a specific utility
 /// 
 /// @param {String} $node
-/// @param {String} $key
+/// @param {String|null} $key
 ///
 /// @example utils('align-items')
 /// @example utils('align-items', 'property')

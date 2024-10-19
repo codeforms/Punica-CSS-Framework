@@ -143,6 +143,36 @@
 }
 
 ///
+/// Set horizontal/vertical side of an element
+/// [Used for margin and padding]
+/// 
+/// @param {Array|List} $util
+/// @param {String} $side
+/// 
+/// @example px-30
+/// @example my-70
+/// 
+/// @return mixed
+/// 
+@mixin set_sides($util, $side: 'margin') 
+{
+	$prefix: map-get($util, 'prefix');
+	$type  : map-get($util, 'type');
+	$values: map-get($util, 'specs');
+
+	@each $suffix, $value in $values {
+		.#{$prefix}x-#{$suffix} {
+			#{$side}-left: #{$value}#{$type} !important;
+			#{$side}-right: #{$value}#{$type} !important;
+		}
+		.#{$prefix}y-#{$suffix} {
+			#{$side}-top: #{$value}#{$type} !important;
+			#{$side}-bottom: #{$value}#{$type} !important;
+		}
+	}
+}
+
+///
 /// Other Helpers
 ///
 @mixin other_helpers() {

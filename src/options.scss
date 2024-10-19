@@ -27,7 +27,7 @@ $options: (
 			'font-weight': bold,
 			'border-radius': theme('border', 'radius'),
 			'icon': (
-				'vertical-align': text-top
+				'vertical-align': middle
 			),
 			'styles': (
 				// style name (class), theme variable
@@ -847,18 +847,23 @@ $options: (
 			'border-collapse': collapse,
 			'position'       : relative,
 			'td': (
-				'padding': 5px .7rem
+				'padding': .313rem .7rem,
 			),
 			'th': (
-				'padding': .7rem
+				'color'           : theme('color', 'text'),
+				'font-size'       : .925rem,
+				'font-weight'     : bold,
+				'padding'         : .90rem .7rem,
+				'background-color': transparent
 			),
 			'caption': (
-				'text-align'   : inherit,
-				'color'        : theme('color', 'text'),
-				'font-size'    : 1rem,
-				'font-weight'  : bold,
-				'padding'      : .7rem,
-				'border-bottom': 2px theme('border', 'style') theme('color', 'text')
+				'text-align'      : inherit,
+				'color'           : theme('color', 'text'),
+				'font-size'       : 1.15rem,
+				'font-weight'     : bold,
+				'padding'         : 1rem .7rem,
+				'border-bottom'   : 2px theme('border', 'style') theme('color', 'text'),
+				'background-color': transparent
 			),
 		)
 	),

@@ -14,7 +14,7 @@
 
 @if enabled('components', 'card') {
 	.#{class('card', 'cards')} {
-		display: flex;
+		display  : flex;
 		flex-wrap: wrap;
 	}
 	///
@@ -24,7 +24,7 @@
 		@each $name, $number in $grids {
 			.#{class('card', 'cards')}.#{$name} {
 				&>.#{class('card', 'name')} {
-					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{components('card', 'group', 'margin')}));
+					flex  : 0 0 calc(100% * (1 / #{$number}) - (2 * #{components('card', 'group', 'margin')}));
 					height: auto;
 					margin: components('card', 'group', 'margin');
 				}
@@ -36,7 +36,7 @@
 
 		// has card border?
 		@if features('components', 'card', 'border') {
-			border: components('card', 'border');
+			border       : components('card', 'border');
 			border-radius: components('card', 'border-radius');
 		}
 
@@ -45,14 +45,14 @@
 			@include shadow();
 		}
 		
-		display: flex;
+		display       : flex;
 		flex-direction: column;
-		width: components('card', 'width'); // for only a single card
-		height: components('card', 'height');
-		overflow: hidden;
+		width         : components('card', 'width'); // for only a single card
+		height        : components('card', 'height');
+		overflow      : hidden;
 		>.#{class('card', 'body')} .#{class('card', 'title')},
 		>.#{class('card', 'title')} {
-			color: components('card', 'title', 'color');
+			color      : components('card', 'title', 'color');
 			line-height: components('card', 'title', 'line-height');
 			&>.#{class('card', 'subtitle')} {
 				@if theme('type') == 'light' {
@@ -77,11 +77,11 @@
 		///
 		@if features('components', 'card', 'media') {
 			&>.#{class('card', 'media')} {
-				display: flex;
+				display  : flex;
 				flex-wrap: wrap;
 				img {
 					display: block;
-					width: 100%;
+					width  : 100%;
 				}
 			}
 			///
@@ -97,18 +97,18 @@
 		@if features('components', 'card', 'horizontal') {
 			&.#{class('card', 'horizontal')} {
 				flex-direction: row;
-				width: 100%;
-				align-items: center;
-				margin-bottom: components('card', 'horizontal', 'margin-bottom');
+				width         : 100%;
+				align-items   : center;
+				margin-bottom : components('card', 'horizontal', 'margin-bottom');
 				///
 				/// MEDIA
 				///
 				@if features('components', 'card', 'media') {
 					>.#{class('card', 'media')} {
 						align-self: normal;
-						width: fit-content;
+						width     : fit-content;
 						img	{
-							width: auto;
+							width     : auto;
 							object-fit: cover
 						}
 					}
@@ -129,8 +129,8 @@
 	@include breakpoints(layouts('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('card', 'name')},
 		.#{class('card', 'cards')} > .#{class('card', 'name')} {
-			flex: 0 0 100% !important;
-			width: 100%; // for only a single card
+			flex  : 0 0 100% !important;
+			width : 100%; // for only a single card
 			height: fit-content !important;
 		}
 		///

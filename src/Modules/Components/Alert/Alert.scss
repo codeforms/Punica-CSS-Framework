@@ -11,16 +11,16 @@
 @if enabled('components', 'alert') {
 	.#{class('alert', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
-			display: block;
-			padding: components('alert', 'padding');
-			margin: components('alert', 'margin');
-			width: components('alert', 'width');
-			font-size: components('alert', 'font-size');
-			font-weight: components('alert', 'font-weight');
-			@include border();
+			display      : block;
+			padding      : components('alert', 'padding');
+			margin       : components('alert', 'margin');
+			width        : components('alert', 'width');
+			font-size    : components('alert', 'font-size');
+			font-weight  : components('alert', 'font-weight');
 			border-radius: components('alert', 'border-radius');
+			@include border();
 			a {
-				color: theme('color', 'text');
+				color          : theme('color', 'text');
 				text-decoration: underline;
 				&:focus,&:hover,&:active,&.#{class('alert', 'active')} {
 					opacity: .75;

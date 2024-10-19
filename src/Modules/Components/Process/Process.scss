@@ -12,45 +12,45 @@
 
 @if enabled('components', 'process') {
 	.#{class('process', 'name')} {
-		display: flex;
-		flex-wrap: nowrap;
-		margin: components('process', 'margin');
-		width: 100%;
+		display   : flex;
+		flex-wrap : nowrap;
+		margin    : components('process', 'margin');
+		width     : 100%;
 		list-style: none;
 		.#{class('process', 'item')} {
-			flex: 1 1 0;
-			min-height: components('process', 'min-height');
-			position: relative;
-			align-items: center;
+			flex           : 1 1 0;
+			min-height     : components('process', 'min-height');
+			position       : relative;
+			align-items    : center;
 			justify-content: center;
-			display: flex;
-			word-break: break-word;
-			line-height: 1.3;
-			text-align: center;
+			display        : flex;
+			word-break     : break-word;
+			line-height    : 1.3;
+			text-align     : center;
 			&:not(:first-child)::before {
 				background: theme('color', 'primary');
-				content: "";
-				height: components('process', 'stepbar', 'height');
-				left: -50%;
-				position: absolute;
-				top: 0;
-				width: 100%;
+				content   : "";
+				height    : components('process', 'stepbar', 'height');
+				left      : -50%;
+				position  : absolute;
+				top       : 0;
+				width     : 100%;
 			}
 			a {
-				color: theme('color', 'text');
-				display: inline-block;
-				padding: 10px 10px 0;
+				color          : theme('color', 'text');
+				display        : inline-block;
+				padding        : 10px 10px 0;
 				text-decoration: none;
-				font-weight: bold;
+				font-weight    : bold;
 				&::before {
-					position: absolute;
-					content: "";
+					position  : absolute;
+					content   : "";
 					background: theme('color', 'primary');
-					top: 0;
-					left: 50%;
-					height: components('process', 'stickbar', 'height');
-					width: components('process', 'stickbar', 'width');
-					z-index: 1;
+					top       : 0;
+					left      : 50%;
+					height    : components('process', 'stickbar', 'height');
+					width     : components('process', 'stickbar', 'width');
+					z-index   : 1;
 				}
 				&:first-child::before {
 					left: calc(50% - (#{variables('process', 'stickbar', 'width')} - 1px));
@@ -60,11 +60,11 @@
 				a {
 					color: theme('color', 'primary');
 					&::after {
-						content: components('process', 'symbol'); // HTML Symbols
-						position: absolute;
-						top: calc(-15px - #{components('process', 'symbol-size')});
-						left: calc(50% - ((#{components('process', 'stickbar', 'width')} * 10) / 2));
-						color: theme('color', 'primary');
+						content  : components('process', 'symbol'); // HTML Symbols
+						position : absolute;
+						top      : calc(-15px - #{components('process', 'symbol-size')});
+						left     : calc(50% - ((#{components('process', 'stickbar', 'width')} * 10) / 2));
+						color    : theme('color', 'primary');
 						font-size: components('process', 'symbol-size');
 					}
 				}

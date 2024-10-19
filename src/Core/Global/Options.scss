@@ -47,7 +47,7 @@
 /// 
 /// @param {String} $node
 /// @param {String} $module
-/// @param {String} $feature
+/// @param {String|null} $feature
 /// 
 /// @example features('components', 'card', 'horizontal')
 /// @example features('elements', 'button', 'gradient')

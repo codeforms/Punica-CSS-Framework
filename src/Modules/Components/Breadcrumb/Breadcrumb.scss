@@ -11,28 +11,28 @@
 
 @if enabled('components', 'breadcrumb') {
 	.#{class('breadcrumb', 'name')} {
-		display: inline-block;
+		display    : inline-block;
 		white-space: nowrap;
 		a.#{class('breadcrumb', 'item')},
 		.#{class('breadcrumb', 'item')} {
 			text-decoration: none;
-			font-size: components('breadcrumb', 'font-size');
-			font-weight: components('breadcrumb', 'font-weight');
+			font-size      : components('breadcrumb', 'font-size');
+			font-weight    : components('breadcrumb', 'font-weight');
 			&:focus,&:hover,&:active,&.active {
 				color: theme('color', 'primary');
 			}
 			&::after {
-				content: components('breadcrumb', 'seperator');
-				color: theme('color', 'primary');
-		        font-size: 1rem;
-				cursor: default;
-				padding: .3em;
+				content  : components('breadcrumb', 'seperator');
+				color    : theme('color', 'primary');
+				font-size: 1rem;
+				cursor   : default;
+				padding  : .3em;
 			}
 			&:first-child {
 				margin-left: 0;
 			}
 			&.#{class('breadcrumb', 'active')} {
-				color: components('breadcrumb', 'active-color');
+				color      : components('breadcrumb', 'active-color');
 				font-weight: components('breadcrumb', 'active-weight');
 				&::after {
 					content: none;
@@ -49,9 +49,9 @@
 					.#{class('breadcrumb', 'item')} {
 						font-size: $font-size;
 						&::after {
-							padding: $seperator-padding;
+							padding       : $seperator-padding;
 							vertical-align: $valign;
-							font-size: $seperator-size;
+							font-size     : $seperator-size;
 						}
 					}
 				}
@@ -65,7 +65,7 @@
 		.#{class('breadcrumb', 'name')} {
 			.#{class('breadcrumb', 'item')} {
 				&:after {
-					font-size: components('breadcrumb', 'responsive', 'font-size');
+					font-size     : components('breadcrumb', 'responsive', 'font-size');
 					vertical-align: components('breadcrumb', 'responsive', 'vertical-align');
 				}
 			}

@@ -13,8 +13,8 @@
 	$column-size: elements('grid', 'columns', 'size');
 
 	.#{class('grid', 'container')} {
-		width: elements('grid', 'container', 'width');
-		margin: elements('grid', 'container', 'margin');
+		width  : elements('grid', 'container', 'width');
+		margin : elements('grid', 'container', 'margin');
 		padding: 0 elements('grid', 'container', 'padding');
 	}
 	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
@@ -23,12 +23,12 @@
 		}
 	}
 	.#{class('grid', 'row')} {
-		display: grid;
-		grid-gap: elements('grid', 'gap');
+		display              : grid;
+		grid-gap             : elements('grid', 'gap');
 		grid-template-columns: repeat($column-size, 1fr);
 		&> [class^="#{class('grid', 'column')}"] {
-			height: fit-content;
-			padding: elements('grid', 'columns', 'padding');
+			height    : fit-content;
+			padding   : elements('grid', 'columns', 'padding');
 			min-height: elements('grid', 'columns', 'min-height');
 		}
 		/// Equal height
