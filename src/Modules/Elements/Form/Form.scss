@@ -6,7 +6,6 @@
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
-@use "../../../Core/Global/Variables" as *;
 @use "mixins";
 
 @if enabled('elements', 'form') {
@@ -172,7 +171,7 @@
 			display  : flex;
 			flex-wrap: wrap;
 		}
-		@each $name, $number in $grids {
+		@each $name, $number in elements('form', 'columns') {
 			.#{$name}.#{class('form', 'items')} {
 				>.#{class('form', 'item')} {
 					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{elements('form', 'items', 'item-spacer')}));

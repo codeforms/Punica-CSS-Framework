@@ -6,7 +6,6 @@
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
-@use "../../../Core/Global/Variables" as *;
 @use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
@@ -20,8 +19,8 @@
 	/// CARD GROUPS
 	///
 	@if features('components', 'card', 'group') {
-		@each $name, $number in $grids {
-			.#{class('card', 'cards')}.#{$name} {
+		@each $name, $number in components('card', 'columns') {
+			.#{$name}.#{class('card', 'cards')} {
 				&>.#{class('card', 'name')} {
 					flex  : 0 0 calc(100% * (1 / #{$number}) - (2 * #{components('card', 'group', 'margin')}));
 					height: auto;

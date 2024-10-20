@@ -231,6 +231,21 @@ $options: (
 			),
 			'horizontal': (
 				'margin-bottom': 1rem
+			),
+			'columns': (
+				// maximum number of cards in a row
+				// class name, value
+				"two"   : 2,
+				"three" : 3,
+				"four"  : 4,
+				"five"  : 5,
+				"six"   : 6,
+				"seven" : 7,
+				"eight" : 8,
+				"nine"  : 9,
+				"ten"   : 10,
+				"eleven": 11,
+				"twelve": 12
 			)
 		)
 	),
@@ -801,6 +816,17 @@ $options: (
 					3.2rem, // input height
 					1.15rem 2.1rem, // button padding
 				)
+			),
+			'columns': (
+				// maximum number of items in a row
+				// class name, value
+				"two"  : 2,
+				"three": 3,
+				"four" : 4,
+				"five" : 5,
+				"six"  : 6,
+				"seven": 7,
+				"eight": 8
 			)
 		)
 	),
