@@ -10,7 +10,6 @@
 @use "../../../Core/Global/Colors" as color;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
-@use "../../../Modules/Elements/Typography/variables" as *;
 
 @if enabled('components', 'card') {
 	.#{class('card', 'cards')} {

@@ -864,7 +864,43 @@ $options: (
 				'padding'         : 1rem .7rem,
 				'border-bottom'   : 2px theme('border', 'style') theme('color', 'text'),
 				'background-color': transparent
-			),
+			)
+		)
+	),
+	'typography': (
+		'variables': (
+			'headers': (
+				(
+					"h1", // class name
+					2em, // font-size
+					1.7em // responsive font-size
+				),
+				(
+					"h2", // class name
+					1.8em, // font-size
+					1.5em // responsive font-size
+				),
+				(
+					"h3", // class name
+					1.6em, // font-size
+					1.3em // responsive font-size
+				),
+				(
+					"h4", // class name
+					1.4em, // font-size
+					1.1em // responsive font-size
+				),
+				(
+					"h5", // class name
+					1.2em, // font-size
+					.9em // responsive font-size
+				),
+				(
+					"h6", // class name
+					1em, // font-size
+					inherit // responsive font-size
+				)
+			)
 		)
 	),
 	///

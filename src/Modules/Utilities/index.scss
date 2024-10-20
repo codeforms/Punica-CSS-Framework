@@ -258,8 +258,8 @@ $helpers: (
 	/// The flex-direction property specifies 
 	/// the direction of the flexible items.
 	/// 
-	/// @example flex-row
-	/// @example flex-direction-column
+	/// @example flex-direction-row
+	/// @example flex-direction-column-reverse
 	///
 	'flex-direction': (
 		'property'   : 'flex-direction', // css property name (don't change it !)
@@ -472,6 +472,7 @@ $helpers: (
 	/// all available space on the main-axis (horizontally).
 	///
 	/// @example justify-content-center
+	/// @example justify-content-space-around
 	///
 	'justify-content': (
 		'property'   : 'justify-content', // css property name (don't change it !)
