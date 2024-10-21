@@ -586,8 +586,9 @@ $options: (
 			'sizes': (
 				(
 					"small", // class name
-					.885em, // font-size
-					.75rem 1rem // padding
+					.9rem, // font-size
+					.685rem .885rem, // padding
+					bold // font-weight
 				),
 			)
 		)

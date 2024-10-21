@@ -61,12 +61,12 @@
 		/// SIZES
 		///
 		@if features('components', 'tabnav', 'sizes') {
-			@each $size-name, $font-size, $padding in components('tabnav', 'sizes') {
-				@debug $size-name;
+			@each $size-name, $font-size, $padding, $weight in components('tabnav', 'sizes') {
 				&.#{$size-name} {
 					@include mixins.tab-buttons() {
-						font-size: $font-size;
-						padding: $padding;
+						font-size  : $font-size;
+						padding    : $padding;
+						font-weight: $weight;
 					}
 				}
 			} 
