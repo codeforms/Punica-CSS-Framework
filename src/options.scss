@@ -555,6 +555,7 @@ $options: (
 		'enabled': true,
 		'features': (
 			'styles': true,
+			'sizes' : true,
 			'bottom': true
 		),
 		'variables': (
@@ -581,6 +582,13 @@ $options: (
 					'dark', // style name (class)
 					theme('color', 'text') // color
 				)
+			),
+			'sizes': (
+				(
+					"small", // class name
+					.885em, // font-size
+					.75rem 1rem // padding
+				),
 			)
 		)
 	),
@@ -824,9 +832,7 @@ $options: (
 				"three": 3,
 				"four" : 4,
 				"five" : 5,
-				"six"  : 6,
-				"seven": 7,
-				"eight": 8
+				"six"  : 6
 			)
 		)
 	),

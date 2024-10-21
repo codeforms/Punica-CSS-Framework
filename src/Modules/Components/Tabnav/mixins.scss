@@ -6,9 +6,9 @@
 @use "../../../Core/Global/Getters" as *;
 
 ///
-/// Default button styles in Tabnav
+/// Class list for button styles
 ///
-@mixin tab-button-styles() {
+@mixin tab-buttons() {
 	&>.#{class('button', 'name')},
 	&>a.#{class('button', 'name')},
 	&>.#{class('button', 'group')} > .#{class('button', 'name')},

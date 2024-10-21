@@ -24,7 +24,7 @@
 			border-radius: 0;
 		}
 		/// Default button styles in Tabnav
-		@include mixins.tab-button-styles() {
+		@include mixins.tab-buttons() {
 			border       : none;
 			box-shadow   : none;
 			background   : transparent;
@@ -57,12 +57,26 @@
 				font-size: components('button', 'icon', 'font-size');
 			}
 		}
+		///
+		/// SIZES
+		///
+		@if features('components', 'tabnav', 'sizes') {
+			@each $size-name, $font-size, $padding in components('tabnav', 'sizes') {
+				@debug $size-name;
+				&.#{$size-name} {
+					@include mixins.tab-buttons() {
+						font-size: $font-size;
+						padding: $padding;
+					}
+				}
+			} 
+		}
 		/// Bottom Tabnav
 		@if features('components', 'tabnav', 'bottom') {
 			&.#{class('tabnav', 'bottom')} {
 				border-bottom: 0;
 				border-top   : components('tabnav', 'border-width') theme('border', 'style') color.$grey;
-				@include mixins.tab-button-styles() {
+				@include mixins.tab-buttons() {
 					margin-top   : -#{components('tabnav', 'border-width')};
 					border-top   : components('tabnav', 'border-width') solid transparent;
 					border-bottom: 0;
