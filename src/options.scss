@@ -862,6 +862,14 @@ $options: (
 				'large'            : 992px,
 				'extra-large'      : 1260px,
 				'extra-extra-large': 1400px
+			),
+			'viewports': (
+				('xs', 0),
+				('sm', 500px),
+				('md', 768px),
+				('lg', 992px),
+				('xl', 1260px),
+				('xxl', 1400px)
 			)
 		)
 	),

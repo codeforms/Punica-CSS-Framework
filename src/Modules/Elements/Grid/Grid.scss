@@ -7,7 +7,6 @@
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
-@use "variables" as *;
 
 @if enabled('elements', 'grid') {
 	$column-size: elements('grid', 'columns', 'size');
@@ -45,7 +44,7 @@
 		}
 	}
 	// Breakpoints
-	@each $label, $breakpoint in $viewports {
+	@each $label, $breakpoint in elements('grid', 'viewports') {
 		@include breakpoints($breakpoint) {
 			@for $id from 1 through $column-size {
 				.#{class('grid', 'column')}-#{$label}-#{$id} {
@@ -56,7 +55,7 @@
 	}
 	// Offset
 	@if features('elements', 'grid', 'offset') {
-		@each $label, $breakpoint in $viewports {
+		@each $label, $breakpoint in elements('grid', 'viewports') {
 			@include breakpoints($breakpoint) {
 				@for $id from 1 through $column-size {
 					@for $offset-id from 2 through $column-size {
