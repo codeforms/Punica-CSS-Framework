@@ -44,7 +44,18 @@ $themes: (
 		),
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
-		// the all default "variables" in the options.scss API file.
+		// the all default variables in the options.scss API file.
+		'classnames': (
+			/*
+			'panel': (
+				'name'    : 'box',
+				'headline': 'spot'
+			),
+			'grid': (
+				'offset': 'off'
+			)
+			*/
+		),
 		'components': (
 			/*
 			'navbar': (
@@ -112,7 +123,8 @@ $themes: (
 		),
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
-		// the all default "variables" in the options.scss API file.
+		// the all default variables in the options.scss API file.
+		'classnames': (),
 		'components': (
 			'card': (
 				'background-color' : lighten(#252831, 1.75%)

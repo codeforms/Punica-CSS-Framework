@@ -9,7 +9,7 @@
 ///
 /// Get a specific component's variable from the theme map
 /// or from the options.scss API file,
-/// which contains the default variables.
+/// which contains the default settings.
 ///
 /// @param {String(s)} $keys
 /// 
@@ -26,7 +26,7 @@
 ///
 /// Get a specific element's variable from the theme map 
 /// or from the options.scss API file, 
-/// which contains the default variables.
+/// which contains the default settings.
 ///
 /// @param {String(s)} $keys
 ///
@@ -43,7 +43,7 @@
 ///
 /// Get features of Components/Elements from the theme map 
 /// or from the options.scss API file, 
-/// which contains the default variables.
+/// which contains the default settings.
 /// 
 /// @param {String} $node
 /// @param {String} $module
@@ -102,23 +102,23 @@
 		}
 	}
 	
-	@return get_default_variable($keys);
+	@return get_default_settings($keys);
 }
 
 ///
-/// Get default variables
+/// Get default settings
 /// from the options.scss API file
 ///
 /// @param {String(s)} $keys
 /// 
 /// @return mixed
 /// 
-@function get_default_variable($keys) 
+@function get_default_settings($keys) 
 {
-	$value: get.variables(nth($keys, 1), nth($keys, 2));
+	$value: get.settings(nth($keys, 1), nth($keys, 2));
 
 	@if length($keys) > 2 {
-		$value: get.variables(nth($keys, 1), nth($keys, 2), nth($keys, 3));
+		$value: get.settings(nth($keys, 1), nth($keys, 2), nth($keys, 3));
 	}
 
 	@return $value;

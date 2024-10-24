@@ -1,9 +1,9 @@
 ///
 /// Punica CSS Framework
-/// Default Options & Variables
+/// Default Options, Variables & Class names
 /// 
 /// Note: You can also override/change the all following 
-/// default variables from your theme map.
+/// default settings from your theme map.
 /// 
 
 @use "Core/Theme/Getters" as *;
@@ -23,7 +23,7 @@ $options: (
 			'name'  : 'alert',
 			'active': 'active'
 		),
-		'variables': (
+		'settings': (
 			'padding'    : .6rem,
 			'margin'     : 0 0 8px,
 			'width'      : 100%,
@@ -64,7 +64,7 @@ $options: (
 		'classnames': (
 			'name': 'badge'
 		),
-		'variables': (
+		'settings': (
 			'border-radius': 500px,
 			'white-space'  : nowrap,
 			'font-weight'  : bold,
@@ -109,7 +109,7 @@ $options: (
 			'body' : 'body',
 			'cover': 'cover'
 		),
-		'variables': (
+		'settings': (
 			'padding'     : 4.5rem 2.5rem,
 			'border-color': darken(theme('color', 'background'), 4.5%),
 			'body'        : (
@@ -163,7 +163,7 @@ $options: (
 			'item'  : 'item',
 			'active': 'active'
 		),
-		'variables': (
+		'settings': (
 			'font-size'    : 1.1rem,
 			'font-weight'  : normal,
 			'active-weight': bold,
@@ -201,7 +201,7 @@ $options: (
 			'centered': 'centered',
 			'divided' : 'divided'
 		),
-		'variables': (
+		'settings': (
 			'margin'     : 1.3em .2rem,
 			'font-size'  : 1.95rem,
 			'font-weight': bold,
@@ -246,7 +246,7 @@ $options: (
 			'horizontal' : 'horizontal',
 			'actions'    : 'actions'
 		),
-		'variables': (
+		'settings': (
 			'width'           : 240px, // for only a single card
 			'height'          : 100%,
 			'padding'         : 1rem,
@@ -292,7 +292,7 @@ $options: (
 		'classnames': (
 			'name': 'label'
 		),
-		'variables': (
+		'settings': (
 			'font-size'      : .9195em,
 			'font-weight'    : bold,
 			'line-height'    : 1.2,
@@ -342,7 +342,7 @@ $options: (
 			'hovered' : 'hovered',
 			'striped' : 'striped'
 		),
-		'variables': (
+		'settings': (
 			'margin': 1rem 0,
 			'item': (
 				'padding'   : .55em,
@@ -378,14 +378,14 @@ $options: (
 		'features'  : (),
 		'classnames': (
 			'name'   : 'menu',
-			'small'  : 'small',
 			'title'  : 'title',
 			'item'   : 'item',
 			'active' : 'active',
 			'badge'  : 'badge',
-			'divided': 'divided'
+			'divided': 'divided',
+			'small'  : 'small'
 		),
-		'variables': (
+		'settings': (
 			'width'        : 100%,
 			'padding'      : .9rem,
 			'margin'       : 0,
@@ -439,7 +439,7 @@ $options: (
 			'divided'  : 'divided',
 			'gradient' : 'gradient'
 		),
-		'variables': (
+		'settings': (
 			'min-height'    : 80px,
 			'font-size'     : 1.015em,
 			'color'         : white,
@@ -520,7 +520,7 @@ $options: (
 			'media'   : 'media',
 			'actions' : 'actions'
 		),
-		'variables': (
+		'settings': (
 			'margin'          : 1rem 0,
 			'border'          : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
 			'border-radius'   : theme('border', 'radius'),
@@ -576,7 +576,7 @@ $options: (
 			'vertical': 'vertical',
 			'reversed': 'reversed'
 		),
-		'variables': (
+		'settings': (
 			'margin'     : 3em 0,
 			'min-height' : 4rem, // for each item
 			'symbol'     : "\2756", // HTML Symbols
@@ -613,7 +613,7 @@ $options: (
 			'subtitle': 'subtitle',
 			'value'   : 'value'
 		),
-		'variables': (
+		'settings': (
 			'margin'       : 0 1.1em .8em,
 			'padding'      : 8px 2.76em,
 			'border-radius': 4px,
@@ -661,7 +661,7 @@ $options: (
 			'centered': 'centered',
 			'bottom'  : 'bottom'
 		),
-		'variables': (
+		'settings': (
 			'color'       : theme('color', 'text'),
 			'border-width': 2px,
 			'font-size'   : 1.025em,
@@ -713,7 +713,7 @@ $options: (
 			'media'  : 'media',
 			'actions': 'actions'
 		),
-		'variables': (
+		'settings': (
 			'type-width'  : 32px,
 			'border-width': 1px,
 			'item': (
@@ -773,7 +773,7 @@ $options: (
 			'left' : 'left',
 			'top'  : 'top'
 		),
-		'variables': (
+		'settings': (
 			'color'           : white,
 			'font-size'       : .9em,
 			'font-weight'     : bold,
@@ -818,7 +818,7 @@ $options: (
 			'dropdown-toggle'   : 'toggle',
 			'dropdown-clickable': 'clickable'
 		),
-		'variables': (
+		'settings': (
 			'font-family'  : theme('typography', 'font-family'),
 			'font-weight'  : bold,
 			'font-size'    : 1.015em,
@@ -906,7 +906,7 @@ $options: (
 			'radio'   : 'radio',
 			'group'   : 'group'
 		),
-		'variables': (
+		'settings': (
 			'padding': 0 16px,
 			'input'  : (
 				'color'           : inherit,
@@ -997,7 +997,7 @@ $options: (
 			'offset'   : 'offset',
 			'equal'    : 'equal'
 		),
-		'variables': (
+		'settings': (
 			'gap': 6px,
 			'columns': (
 				'size'      : 16,
@@ -1039,7 +1039,7 @@ $options: (
 			'hovered': 'hovered',
 			'active' : 'active'
 		),
-		'variables': (
+		'settings': (
 			'width'          : 100%,
 			'max-width'      : 100%,
 			'text-align'     : left,
@@ -1069,7 +1069,7 @@ $options: (
 		)
 	),
 	'typography': (
-		'variables': (
+		'settings': (
 			'headers': (
 				(
 					"h1", // class name
@@ -1110,6 +1110,6 @@ $options: (
 	'helpers': (
 		'enabled'  : true,
 		'features' : (),
-		'variables': ()
+		'settings': ()
 	)
 ) !default;

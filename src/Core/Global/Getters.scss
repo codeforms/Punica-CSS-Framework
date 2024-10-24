@@ -3,6 +3,7 @@
 /// Core/Global/Getters.scss
 /// 
 
+@use "../Theme/Getters" as *;
 @use "../../options" as option;
 @use "../../Modules/Utilities/index" as helper;
 @use "Helpers";
@@ -50,7 +51,7 @@
 }
 
 ///
-/// Get default "variables" of a specific component/element
+/// Get default "settings" of a specific component/element
 /// from the options.scss API file
 ///
 /// @param {String} $node
@@ -61,30 +62,30 @@
 ///
 /// @return mixed
 ///
-@function variables($node, $keys...) 
+@function settings($node, $keys...) 
 {
-	$variables: map-get(map-get(options($node), 'variables'), nth($keys, 1));
+	$settings: map-get(map-get(options($node), 'settings'), nth($keys, 1));
 
-	@if null == $variables {
-		@warn "[INVALID KEY] #{$node} > variables > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
+	@if null == $settings {
+		@warn "[INVALID KEY] #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 	
 	@if length($keys) == 1 {
-		@return $variables;
+		@return $settings;
 	}
 
-	@if null == map-get($variables, nth($keys, 2)) {
-		@warn "[INVALID KEY] #{$node} > variables > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
+	@if null == map-get($settings, nth($keys, 2)) {
+		@warn "[INVALID KEY] #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
-	@return map-get($variables, nth($keys, 2));
+	@return map-get($settings, nth($keys, 2));
 }
 
 ///
 /// Get class name of a specific component/element
-/// from the classnames.scss API file
+/// from the options.scss API file
 ///
 /// @param {String} $node
 /// @param {String} $key
@@ -96,6 +97,10 @@
 ///
 @function class($node, $key) 
 {
+	@if theme('classnames', $node, $key) != null {
+		@return theme('classnames', $node, $key);
+	}
+
 	@return options($node, 'classnames', $key);
 }
 
