@@ -31,8 +31,7 @@
 					margin-bottom: 0;
 				}
 			}
-			>i,
-			>.#{class('icon', 'class-name')} {
+			>i {
 				vertical-align: components('alert', 'icon', 'vertical-align');
 			}
 		}

@@ -49,11 +49,11 @@
 			}
 			&.#{class('tabnav', 'active')} {
 				border-bottom-color: theme('color', 'primary');
-				i, [class^="#{class('icon', 'class-name')}"] {
+				i {
 					color: inherit;
 				}
 			}
-			i, [class^="#{class('icon', 'class-name')}"] {
+			i {
 				font-size: components('button', 'icon', 'font-size');
 			}
 		}

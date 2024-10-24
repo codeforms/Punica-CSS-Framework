@@ -18,11 +18,9 @@
 		line-height: components('caption', 'line-height');
 		text-align : left;
 		>img,
-	    >.#{class('icon', 'class-name')},
 	    >i {
 	    	margin-right: components('caption', 'media', 'margin');
 	    }
-	    >.#{class('icon', 'class-name')},
 	    >i {
 	    	font-size: components('caption', 'font-size') * 1.4;
 	    }
@@ -41,7 +39,6 @@
 			text-align    : center;
 			margin        : inherit;
 	    	>img,
-		    >.#{class('icon', 'class-name')},
 		    >i {
 				margin-right : unset;
 				margin-bottom: 2rem;
@@ -55,7 +52,6 @@
 				@include set-size($font-size, null, $size-name) {
 					margin     : $margin;
 					font-weight: $font-weight;
-					>.#{class('icon', 'class-name')},
 				    >i {
 				    	font-size: $font-size * 1.4;
 				    }
@@ -68,7 +64,6 @@
 			text-align    : center;
 			margin        : inherit;
 	    	>img,
-		    >.#{class('icon', 'class-name')},
 		    >i {
 				margin-right : unset;
 				margin-bottom: 2rem;

@@ -53,7 +53,7 @@
 		}
 		&>.#{class('panel', 'content')} {
 			flex   : 1 1 auto;
-			padding: components('panel', 'padding');
+			padding: components('panel', 'content', 'padding');
 			height : auto;
 			///
 			/// MEDIA
@@ -84,12 +84,13 @@
 				margin-bottom : components('panel', 'headline', 'margin-bottom');
 				color         : components('panel', 'headline', 'color');
 				letter-spacing: components('panel', 'headline', 'letter-spacing');
+				text-wrap     : components('panel', 'headline', 'text-wrap')
 			}
 		}
 		&>.#{class('panel', 'bottom')} {
 			min-height: 50px;
 			border-top: set-border();
-			padding   : components('panel', 'padding');
+			padding   : components('panel', 'bottom', 'padding');
 		}
 		///
 		/// SIZES

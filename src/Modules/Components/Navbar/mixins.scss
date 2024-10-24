@@ -52,7 +52,7 @@
 		.#{class('button', 'name')} {
 			color: $text-color;
 			min-height: 100%;
-			i, span.#{class('icon', 'class-name')} {
+			i {
 				color: $text-color;
 			}
 			&:hover {

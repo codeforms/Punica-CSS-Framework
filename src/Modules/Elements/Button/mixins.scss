@@ -272,13 +272,13 @@
 		$textcolor: if(theme('type') == 'dark', white, $bg-color);
 		background: transparent;
 		color: $textcolor;
-		i, [class^="#{class('icon', 'class-name')}"] {
+		i {
 			color: $textcolor;
 		}
 	} @else {
 		background: $bg-color;
 		color: white;
-		i, [class^="#{class('icon', 'class-name')}"] {
+		i {
 			color: white;
 		}
 	}
@@ -287,7 +287,7 @@
 	&:hover {
 		background: lighten($bg-color, 7.5%);
 		color: white;
-		i, [class^="#{class('icon', 'class-name')}"] {
+		i {
 			color: white;
 		}
 	}
@@ -406,7 +406,7 @@
 			&:hover {
 				color: theme('color', 'text');
 			}
-			i, [class^="#{class('icon', 'class-name')}"] {
+			i {
 				color: theme('color', 'text');
 			}
 		};

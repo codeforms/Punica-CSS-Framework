@@ -21,7 +21,6 @@
 			margin     : components('list', 'item', 'margin');
 			transition : components('list', 'item', 'transition');
 		    >img,
-		    >.#{class('icon', 'class-name')},
 		    >i {
 		    	margin-right: components('list', 'media', 'margin-right');
 		    }

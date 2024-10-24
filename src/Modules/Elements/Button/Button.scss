@@ -99,7 +99,7 @@
 			flex   : 1;
 			width  : auto;
 		}
-		i, [class^="#{class('icon', 'class-name')}"] {
+		i {
 			font-size  : elements('button', 'icon', 'font-size');
 			color      : elements('button', 'color');
 			text-shadow: none;

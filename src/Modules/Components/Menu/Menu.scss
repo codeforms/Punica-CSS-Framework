@@ -58,7 +58,7 @@
 					transition: components('menu', 'item', 'transition');
 				}
 			}
-			i, span.#{class('icon', 'class-name')} {
+			i {
 				@if theme('type') == 'light' {
 					color: darken(color.$grey, 28%);
 				} @else if theme('type') == 'dark' {

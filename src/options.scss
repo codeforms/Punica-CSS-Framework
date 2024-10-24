@@ -19,6 +19,10 @@ $options: (
 			'styles': true,
 			'sizes' : true
 		),
+		'classnames': (
+			'name'  : 'alert',
+			'active': 'active'
+		),
 		'variables': (
 			'padding'    : .6rem,
 			'margin'     : 0 0 8px,
@@ -56,6 +60,9 @@ $options: (
 		'features': (
 			'styles': true,
 			'sizes' : true
+		),
+		'classnames': (
+			'name': 'badge'
 		),
 		'variables': (
 			'border-radius': 500px,
@@ -95,6 +102,12 @@ $options: (
 			'styles': true,
 			'sizes' : true,
 			'cover' : true
+		),
+		'classnames': (
+			'name' : 'billboard',
+			'media': 'media',
+			'body' : 'body',
+			'cover': 'cover'
 		),
 		'variables': (
 			'padding'     : 4.5rem 2.5rem,
@@ -145,6 +158,11 @@ $options: (
 		'features': (
 			'sizes': true
 		),
+		'classnames': (
+			'name'  : 'breadcrumb',
+			'item'  : 'item',
+			'active': 'active'
+		),
 		'variables': (
 			'font-size'    : 1.1rem,
 			'font-weight'  : normal,
@@ -177,6 +195,11 @@ $options: (
 		'enabled': true,
 		'features': (
 			'sizes': true,
+		),
+		'classnames': (
+			'name'    : 'caption',
+			'centered': 'centered',
+			'divided' : 'divided'
 		),
 		'variables': (
 			'margin'     : 1.3em .2rem,
@@ -211,6 +234,17 @@ $options: (
 			'media-group': true,
 			'border'     : true,
 			'shadow'     : true
+		),
+		'classnames': (
+			'name'       : 'card',
+			'cards'      : 'cards',
+			'body'       : 'body',
+			'title'      : 'title',
+			'subtitle'   : 'subtitle',
+			'description': 'description',
+			'media'      : 'media',
+			'horizontal' : 'horizontal',
+			'actions'    : 'actions'
 		),
 		'variables': (
 			'width'           : 240px, // for only a single card
@@ -255,6 +289,9 @@ $options: (
 			'styles': true,
 			'sizes' : true
 		),
+		'classnames': (
+			'name': 'label'
+		),
 		'variables': (
 			'font-size'      : .9195em,
 			'font-weight'    : bold,
@@ -293,6 +330,18 @@ $options: (
 			'hovered': true,
 			'striped': true
 		),
+		'classnames': (
+			'name'    : 'list',
+			'item'    : 'item',
+			'body'    : 'body',
+			'title'   : 'title',
+			'active'  : 'active',
+			'subtitle': 'subtitle',
+			'divided' : 'divided',
+			'actions' : 'actions',
+			'hovered' : 'hovered',
+			'striped' : 'striped'
+		),
 		'variables': (
 			'margin': 1rem 0,
 			'item': (
@@ -325,8 +374,17 @@ $options: (
 		)
 	),
 	'menu': (
-		'enabled': true,
-		'features': (),
+		'enabled'   : true,
+		'features'  : (),
+		'classnames': (
+			'name'   : 'menu',
+			'small'  : 'small',
+			'title'  : 'title',
+			'item'   : 'item',
+			'active' : 'active',
+			'badge'  : 'badge',
+			'divided': 'divided'
+		),
 		'variables': (
 			'width'        : 100%,
 			'padding'      : .9rem,
@@ -370,6 +428,16 @@ $options: (
 			'sizes'   : true,
 			'divided' : true,
 			'gradient': true
+		),
+		'classnames': (
+			'name'     : 'navbar',
+			'section'  : 'section',
+			'fixed'    : 'fixed',
+			'brand'    : 'brand',
+			'links'    : 'links',
+			'burger'   : 'burger',
+			'divided'  : 'divided',
+			'gradient' : 'gradient'
 		),
 		'variables': (
 			'min-height'    : 80px,
@@ -442,14 +510,23 @@ $options: (
 			'shadow'     : true,
 			'sizes'      : true
 		),
+		'classnames': (
+			'name'    : 'panel',
+			'header'  : 'header',
+			'title'   : 'title',
+			'headline': 'headline',
+			'bottom'  : 'bottom',
+			'content' : 'content',
+			'media'   : 'media',
+			'actions' : 'actions'
+		),
 		'variables': (
-			'padding'         : 1rem,
 			'margin'          : 1rem 0,
 			'border'          : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
 			'border-radius'   : theme('border', 'radius'),
 			'background-color': theme('color', 'background'),
 			'header'          : (
-				'padding': .85rem 1rem
+				'padding': .85rem
 			),
 			'title': (
 				'font-size': 1.185rem,
@@ -458,9 +535,16 @@ $options: (
 			'headline': (
 				'font-size'     : 1.39em,
 				'line-height'   : 1.5,
-				'margin-bottom' : 1.875rem,
+				'margin-bottom' : 1.275rem,
 				'color'         : theme('color', 'text'),
 				'letter-spacing': -.0158em,
+				'text-wrap'     : balance
+			),
+			'content': (
+				'padding': .85rem
+			),
+			'bottom': (
+				'padding': .85rem
 			),
 			'media': (
 				'margin-bottom': 32px
@@ -484,6 +568,13 @@ $options: (
 		'features': (
 			'styles'  : true,
 			'vertical': true
+		),
+		'classnames': (
+			'name'    : 'process',
+			'item'    : 'item',
+			'active'  : 'active',
+			'vertical': 'vertical',
+			'reversed': 'reversed'
 		),
 		'variables': (
 			'margin'     : 3em 0,
@@ -515,6 +606,12 @@ $options: (
 		'enabled': true,
 		'features': (
 			'styles': true
+		),
+		'classnames': (
+			'name'    : 'stats',
+			'title'   : 'title',
+			'subtitle': 'subtitle',
+			'value'   : 'value'
 		),
 		'variables': (
 			'margin'       : 0 1.1em .8em,
@@ -558,6 +655,12 @@ $options: (
 			'sizes' : true,
 			'bottom': true
 		),
+		'classnames': (
+			'name'    : 'tab',
+			'active'  : 'active',
+			'centered': 'centered',
+			'bottom'  : 'bottom'
+		),
 		'variables': (
 			'color'       : theme('color', 'text'),
 			'border-width': 2px,
@@ -599,6 +702,16 @@ $options: (
 			'styles'     : true,
 			'media'      : true,
 			'media-group': true
+		),
+		'classnames': (
+			'name'   : 'timeline',
+			'item'   : 'activity',
+			'author' : 'author',
+			'body'   : 'body',
+			'type'   : 'type',
+			'date'   : 'date',
+			'media'  : 'media',
+			'actions': 'actions'
 		),
 		'variables': (
 			'type-width'  : 32px,
@@ -653,6 +766,13 @@ $options: (
 	'tooltip': (
 		'enabled': true,
 		'features' : (),
+		'classnames': (
+			'name' : 'tooltip',
+			'text' : 'text',
+			'right': 'right',
+			'left' : 'left',
+			'top'  : 'top'
+		),
 		'variables': (
 			'color'           : white,
 			'font-size'       : .9em,
@@ -678,6 +798,25 @@ $options: (
 			'outlined': true,
 			'dropdown': true,
 			'gradient': true
+		),
+		'classnames': (
+			'name'              : 'button',
+			'group'             : 'buttons',
+			'link'              : 'link',
+			'outlined'          : 'outlined',
+			'active'            : 'active',
+			'inactive'          : 'inactive',
+			'block'             : 'block',
+			'vertical'          : 'vertical',
+			'gradient'			: 'gradient',
+			// dropdown
+			'dropdown'          : 'dropdown',
+			'dropdown-right'    : 'right',
+			'dropdown-left'     : 'left',
+			'dropdown-top'      : 'top',
+			'dropdown-bottom'   : 'bottom',
+			'dropdown-toggle'   : 'toggle',
+			'dropdown-clickable': 'clickable'
 		),
 		'variables': (
 			'font-family'  : theme('typography', 'font-family'),
@@ -759,6 +898,14 @@ $options: (
 			'checkbox-radio'   : true,
 			'upload'           : true
 		),
+		'classnames': (
+			'name'    : 'form',
+			'items'   : 'items',
+			'item'    : 'item',
+			'checkbox': 'checkbox',
+			'radio'   : 'radio',
+			'group'   : 'group'
+		),
 		'variables': (
 			'padding': 0 16px,
 			'input'  : (
@@ -827,7 +974,7 @@ $options: (
 				)
 			),
 			'columns': (
-				// maximum number of items in a row
+				// maximum number of form items in a row
 				// class name, value
 				"two"  : 2,
 				"three": 3,
@@ -842,6 +989,13 @@ $options: (
 		'features': (
 			'equal' : true, // equal height
 			'offset': true // [!] increases the size
+		),
+		'classnames': (
+			'row'      : 'row',
+			'container': 'container',
+			'column'   : 'col',
+			'offset'   : 'offset',
+			'equal'    : 'equal'
 		),
 		'variables': (
 			'gap': 6px,
@@ -878,6 +1032,12 @@ $options: (
 		'features': (
 			'hovered': true,
 			'striped': true
+		),
+		'classnames': (
+			'name'   : 'table',
+			'striped': 'striped',
+			'hovered': 'hovered',
+			'active' : 'active'
 		),
 		'variables': (
 			'width'          : 100%,

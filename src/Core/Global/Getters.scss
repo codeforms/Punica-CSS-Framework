@@ -4,7 +4,6 @@
 /// 
 
 @use "../../options" as option;
-@use "../../classnames" as class;
 @use "../../Modules/Utilities/index" as helper;
 @use "Helpers";
 
@@ -97,19 +96,7 @@
 ///
 @function class($node, $key) 
 {
-	@if null == map-get(class.$classnames, $node) {
-		@warn "[INVALID KEY] #{$node}" + ' key is not found or key returns null in the [classnames.scss] file.';
-		@return null;
-	}
-
-	$classnames: map-get(class.$classnames, $node);
-
-	@if null == map-get($classnames, $key) {
-		@warn "[INVALID KEY] #{$node} > #{$key}" + ' key is not found or key returns null in the [classnames.scss] file.';
-		@return null;
-	}
-
-	@return map-get($classnames, $key);
+	@return options($node, 'classnames', $key);
 }
 
 ///

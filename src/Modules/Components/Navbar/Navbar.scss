@@ -135,7 +135,7 @@
 				min-height   : 100%;
 				border-radius: 0;
 				border       : 0;
-				i, span.#{class('icon', 'class-name')} {
+				i {
 					color: white;
 				}
 				&:hover {
@@ -253,7 +253,7 @@
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
 					color: theme('color', 'text');
 					background: color.$grey;
-					i, span.#{class('icon', 'class-name')} {
+					i {
 						display: none;
 					}
 				}
