@@ -267,7 +267,7 @@ $options: (
 				'margin-bottom': 1rem
 			),
 			'columns': (
-				// maximum number of cards in a row
+				// maximum number of cards in a single row
 				// class name, value
 				"two"   : 2,
 				"three" : 3,
@@ -954,6 +954,10 @@ $options: (
 					theme('color', 'success') // color
 				),
 				(
+					'warning', // class name
+					theme('color', 'warning') // color
+				),
+				(
 					'error', // class name
 					theme('color', 'error') // color
 				)
@@ -974,7 +978,7 @@ $options: (
 				)
 			),
 			'columns': (
-				// maximum number of form items in a row
+				// maximum number of form items in a single row
 				// class name, value
 				"two"  : 2,
 				"three": 3,

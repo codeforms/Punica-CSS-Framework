@@ -57,8 +57,8 @@
 /// @param {String} $node
 /// @param {String} $key(s)
 ///
-/// @example variables('grid', 'gap')
-/// @example variables('grid', 'columns', 'size')
+/// @example settings('grid', 'gap')
+/// @example settings('grid', 'columns', 'size')
 ///
 /// @return mixed
 ///
@@ -106,6 +106,7 @@
 
 ///
 /// Get variable of a specific utility
+/// from the Modules/Utilities/index.scss file.
 /// 
 /// @param {String} $node
 /// @param {String|null} $key

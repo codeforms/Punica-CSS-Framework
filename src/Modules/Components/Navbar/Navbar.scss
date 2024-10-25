@@ -262,10 +262,16 @@
 					box-shadow: none;
 				}
 			}
+			@each $size-name, $min-height, $font-size, $button-padding in components('navbar', 'sizes') {
+				&.#{$size-name} > section.#{class('navbar', 'links')} {
+					top: $min-height;
+				}
+			}
 			.#{class('navbar', 'burger')} {
 				display        : flex;
 				align-items    : center;
 				justify-content: center;
+				margin         : 0;
 				&::before {
 					content        : components('navbar', 'burger', 'symbol-close');
 					padding        : components('navbar', 'burger', 'padding');
