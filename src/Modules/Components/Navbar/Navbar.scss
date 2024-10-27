@@ -254,7 +254,9 @@
 					color: theme('color', 'text');
 					background: color.$grey;
 					i {
-						display: none;
+						color         : theme('color', 'text');
+						font-size     : components('menu', 'icon', 'font-size');
+						vertical-align: components('menu', 'icon', 'vertical-align');
 					}
 				}
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')} {
