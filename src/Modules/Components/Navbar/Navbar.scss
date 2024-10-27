@@ -255,7 +255,7 @@
 					background: color.$grey;
 					i {
 						color         : theme('color', 'text');
-						font-size     : components('menu', 'icon', 'font-size');
+						font-size     : components('menu', 'icon', 'font-size') !important;
 						vertical-align: components('menu', 'icon', 'vertical-align');
 					}
 				}
