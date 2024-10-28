@@ -164,22 +164,24 @@ $options: (
 			'active': 'active'
 		),
 		'settings': (
-			'font-size'    : 1.1rem,
-			'font-weight'  : normal,
-			'active-weight': bold,
-			'active-color' : theme('color', 'primary'),
-			'seperator'    : "\276D", // HTML Symbols
+			'font-size'     : 1rem,
+			'font-weight'   : normal,
+			'active-weight' : bold,
+			'active-color'  : theme('color', 'primary'),
+			'seperator'     : "\276D", // HTML Symbols
+			'padding'       : .3em, // seperator padding
+			'seperator-size': 1rem,
 			'sizes': (
 				(
 			    	'small', // size name (class)
-			    	.986em, // font-size
+			    	.946rem, // font-size
 			    	.3em, // seperator-padding
 			    	null, // seperator-size
 			        unset, // vertical align
 			    ),
 			    (
 			    	'large', // size name (class)
-			    	1.38em, // font-size
+			    	1.075rem, // font-size
 			    	.3em, // seperator-padding
 			    	null, // seperator-size
 			        text-bottom, // vertical align
@@ -267,7 +269,7 @@ $options: (
 				'margin-bottom': 1rem
 			),
 			'columns': (
-				// maximum number of cards in a single row
+				// maximum number of cards in a single row (default : 12)
 				// class name, value
 				"two"   : 2,
 				"three" : 3,
@@ -978,7 +980,7 @@ $options: (
 				)
 			),
 			'columns': (
-				// maximum number of form items in a single row
+				// maximum number of form items in a single row (default : 6)
 				// class name, value
 				"two"  : 2,
 				"three": 3,

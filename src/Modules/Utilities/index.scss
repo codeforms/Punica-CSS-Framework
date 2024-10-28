@@ -550,8 +550,10 @@ $helpers: (
 	/// 
 	/// The margin property sets the margins for an element.
 	/// 
-	/// @example m-30
-	/// @example mr-70
+	/// @example m-30 / margin
+	/// @example mr-70 / margin right
+	/// @example mx-50 / margin left and right
+	/// @example my-2 / margin top and bottom
 	///
 	'margin': (
 		'property'   : 'margin', // css property name (don't change it !)
@@ -663,8 +665,10 @@ $helpers: (
 	/// An element's padding is the space between 
 	/// its content and its border.
 	/// 
-	/// @example p-3
-	/// @example pr-30
+	/// @example p-3 / padding
+	/// @example pr-30 / padding right
+	/// @example px-70 / padding right and left
+	/// @example py-3 / padding top and bottom
 	///
 	'padding': (
 		'property'   : 'padding', // css property name (don't change it !)

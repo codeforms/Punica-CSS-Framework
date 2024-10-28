@@ -14,18 +14,18 @@
 ///
 @mixin dropdown() {
 	.#{class('button', 'dropdown')} {
-		display: inline-block;
+		display : inline-block;
 		position: relative;
 		&>.#{class('menu', 'name')} {
-			animation: slide-down .15s ease 1;
-			display: none;
-			left: 0;
+			animation : slide-down .15s ease 1;
+			display   : none;
+			left      : 0;
 			max-height: 45vh;
 			overflow-y: auto;
-			position: absolute;
-			top: 100%;
-			z-index: 300 + 1; // menu z-index + 1
-			width: auto;
+			position  : absolute;
+			top       : 100%;
+			z-index   : 300 + 1; // menu z-index + 1
+			width     : auto;
 			&>.#{class('menu', 'item')} {
 				& > a {
 					padding: .1rem .9rem;
@@ -40,34 +40,34 @@
 		}
 		&.#{class('button', 'dropdown-right')} {
 			&>.#{class('menu', 'name')} {
-				left: 100%;
+				left : 100%;
 				right: auto;
 			}
 		}
 		&.#{class('button', 'dropdown-left')} {
 			&>.#{class('menu', 'name')} {
-				left: auto;
+				left : auto;
 				right: 100%;
 			}
 		}
 		&.#{class('button', 'dropdown-top')}.#{class('button', 'dropdown-left')} {
 			&>.#{class('menu', 'name')} {
 				right: auto !important;
-				left: 0 !important;
+				left : 0 !important;
 			}
 		}
 		&.#{class('button', 'dropdown-top')}.#{class('button', 'dropdown-right')} {
 			&>.#{class('menu', 'name')} {
 				right: 0 !important;
-				left: auto !important;
+				left : auto !important;
 			}
 		}
 		&.#{class('button', 'dropdown-top')} {
 			&>.#{class('menu', 'name')} {
 				bottom: 100%;
-				top: auto;
-				right: 0;
-				left: auto;
+				top   : auto;
+				right : 0;
+				left  : auto;
 				@include shadow(0, -2px);
 			}
 		}
@@ -80,13 +80,13 @@
 		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-left')} {
 			&>.#{class('menu', 'name')} {
 				right: auto !important;
-				left: 0 !important;
+				left : 0 !important;
 			}
 		}
 		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-right')} {
 			&>.#{class('menu', 'name')} {
 				right: 0 !important;
-				left: auto !important;
+				left : auto !important;
 			}
 		}
 		// dropdown hover (default)
@@ -114,7 +114,7 @@
 			&>.#{class('button', 'group')} {
 				&>.#{class('button', 'dropdown-toggle')}:nth-last-child(2) {
 					border-bottom-right-radius: elements('button', 'border-radius');
-					border-top-right-radius: elements('button', 'border-radius');
+					border-top-right-radius   : elements('button', 'border-radius');
 				}
 			}
 		}
@@ -132,9 +132,9 @@
 ///
 @mixin button-group() {
 	.#{class('button', 'group')} {
-		display: inline-flex;
-		flex-wrap: wrap;
-		flex-shrink: 0;
+		display      : inline-flex;
+		flex-wrap    : wrap;
+		flex-shrink  : 0;
 		border-radius: elements('button', 'border-radius');
 		@include shadow();
 		width: fit-content;
@@ -143,15 +143,15 @@
 			&:first-child:not(:last-child) {
 				border-bottom-right-radius: 0;
 				border-top-right-radius: 0;
-			}
+				}
 			&:not(:first-child):not(:last-child) {
 				border-radius: 0;
-				margin-left: -#{theme('border', 'width')};
+				margin-left  : -#{theme('border', 'width')};
 			}
 			&:last-child:not(:first-child) {
 				border-bottom-left-radius: 0;
-				border-top-left-radius: 0;
-				margin-left: -#{theme('border', 'width')};
+				border-top-left-radius   : 0;
+				margin-left              : -#{theme('border', 'width')};
 			}
 		}
 		&.#{class('button', 'block')} {
@@ -187,18 +187,18 @@
 			.#{class('button', 'dropdown')}:last-child:not(:first-child),
 			.#{class('button', 'dropdown')}:last-child:not(:first-child) > .#{class('button', 'name')} {
 				border-bottom-left-radius: 0;
-				border-top-left-radius: 0;
-				margin-left: -1px;
+				border-top-left-radius   : 0;
+				margin-left              : -1px;
 			}
 			.#{class('button', 'dropdown')}:last-child,
 			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:first-child,
 			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:last-child {
 				border-bottom-right-radius: elements('button', 'border-radius');
-				border-top-right-radius: elements('button', 'border-radius');
+				border-top-right-radius   : elements('button', 'border-radius');
 			}
 			.#{class('button', 'dropdown')}:not(:first-child):not(:last-child) > .#{class('button', 'name')} {
 				border-radius: 0;
-				margin-left: -1px;
+				margin-left  : -1px;
 			}
 		}
 		@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
@@ -234,7 +234,7 @@
 					&>.#{class('button', 'dropdown')}:last-child:not(:first-child),
 					&>.#{class('button', 'dropdown')}:last-child:not(:first-child) > .#{class('button', 'name')},
 					&>.#{class('button', 'dropdown')}:not(:first-child):not(:last-child) > .#{class('button', 'name')} {
-						margin: -#{theme('border', 'width')} 0 0;
+						margin       : -#{theme('border', 'width')} 0 0;
 						border-radius: 0;
 					}
 				}
@@ -261,9 +261,9 @@
 /// @param {Boolean} $outlined
 ///
 @mixin button-styles(
-	$bg-color: theme('color', 'primary'),
+	$bg-color    : theme('color', 'primary'),
 	$border-color: null,
-	$outlined : false
+	$outlined    : false
 ) {
 	///
 	/// OUTLINED STYLE
@@ -271,13 +271,13 @@
 	@if $outlined {
 		$textcolor: if(theme('type') == 'dark', white, $bg-color);
 		background: transparent;
-		color: $textcolor;
+		color     : $textcolor;
 		i {
 			color: $textcolor;
 		}
 	} @else {
 		background: $bg-color;
-		color: white;
+		color     : white;
 		i {
 			color: white;
 		}
@@ -286,7 +286,7 @@
 	border: theme('border', 'width') theme('border', 'style') $border-color;
 	&:hover {
 		background: lighten($bg-color, 7.5%);
-		color: white;
+		color     : white;
 		i {
 			color: white;
 		}
@@ -294,7 +294,7 @@
 	&:active,
 	&.#{class('button', 'active')} {
 		background: lighten($bg-color, 7.5%);
-		color: white;
+		color     : white;
 		&:focus,
 		&:hover {
 			background: lighten($bg-color, 12.5%);
@@ -309,20 +309,20 @@
 		@if features('elements', 'button', 'gradient') {
 			&.#{class('button', 'gradient')} {
 				background: $bg-color;
-				z-index: 1;
-				position: relative;
+				z-index   : 1;
+				position  : relative;
 				@include set-gradient($bg-color, to top);
 				&:before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
+					content   : "";
+					position  : absolute;
+					top       : 0;
+					left      : 0;
+					width     : 100%;
+					height    : 100%;
 					@include set-gradient($bg-color, to bottom, 23%);
-					opacity: 0;
+					opacity   : 0;
 					transition: opacity 0.25s;
-					z-index: -1;
+					z-index   : -1;
 				}
 				&:hover::before {
 					opacity: 1;
@@ -346,15 +346,15 @@
 				z-index: 1;
 				position: relative;
 				&:before {
-					position: absolute;
-					content: "";
-					width: 100%;
-					height: 100%;
-					top: 0;
-					left: 0;
-					opacity: 0;
+					position  : absolute;
+					content   : "";
+					width     : 100%;
+					height    : 100%;
+					top       : 0;
+					left      : 0;
+					opacity   : 0;
 					transition: opacity 0.25s;
-					z-index: -1;
+					z-index   : -1;
 					background: linear-gradient(0deg, lighten($bg-color, 21%), darken($bg-color, 2%));
 				}
 				&:hover::before {
@@ -380,12 +380,12 @@
 			&.#{$name} > .#{class('button', 'name')},
 			&.#{$name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
 				font-size: $font-size;
-				padding: $padding;
+				padding  : $padding;
 			}
 		} @else {
 			&.#{$name} {
 				font-size: $font-size;
-				padding: $padding;
+				padding  : $padding;
 			}
 		}
 	}
@@ -398,11 +398,12 @@
 	&.#{class('button', 'link')}.#{class('button', 'name')},
 	&.#{class('tooltip', 'top')} > .#{class('button', 'name')} {
 		@include button-styles(transparent) {
-			box-shadow: none;
-			border: none;
-			color: theme('color', 'primary');
+			box-shadow     : none;
+			border         : none;
+			color          : theme('color', 'primary');
 			text-decoration: underline;
-			font-weight: theme('typography', 'font-weight');
+			font-weight    : theme('typography', 'font-weight');
+			padding        : 0;
 			&:hover {
 				color: theme('color', 'text');
 			}

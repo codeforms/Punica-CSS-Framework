@@ -37,8 +37,8 @@ $themes: (
 		),
 		'shadow': (
 			'horizontal' : 0,
-			'vertical'   : 2px,
-			'blur'       : 4px,
+			'vertical'   : .25em,
+			'blur'       : .5em,
 			'spread'     : 0,
 			'color'      : rgba(0, 0, 0, 0.14),
 		),
@@ -130,16 +130,16 @@ $themes: (
 				'background-color' : lighten(#252831, 1.75%)
 			),
 			'tooltip': (
-				'color': black,
-				'font-weight': normal,
+				'color'           : black,
+				'font-weight'     : normal,
 				'background-color': white
 			)
 		),
 		'elements': (
 			'form': (
 				'input': (
-					'background-color'	: lighten(#252831, 4.5%),
-					'outline-color' 	: white,
+					'background-color': lighten(#252831, 4.5%),
+					'outline-color'   : white,
 				),
 			)
 		),

@@ -232,7 +232,7 @@
 				left      : 0;
 				overflow-x: auto;
 				overflow-y: hidden;
-				background: color.$grey;
+				background: theme('color', 'background');
 				z-index   : 1;
 				margin    : 0 !important;
 				padding   : 0 !important;
@@ -248,6 +248,10 @@
 					width     : 100%;
 					text-align: left;
 					position  : relative;
+				}
+				.#{class('navbar', 'section')} {
+					padding: 0 !important;
+					margin: 0 !important;
 				}
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
