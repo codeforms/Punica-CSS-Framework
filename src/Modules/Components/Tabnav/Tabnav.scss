@@ -39,11 +39,12 @@
 			&:hover {
 				color: theme('color', 'text');
 				@if theme('type') == 'light' {
-					border-bottom-color: darken(color.$grey, 30%);
+					border-bottom-color: darken(color.$grey, 35%);
 				} @else if theme('type') == 'dark' {
-					border-bottom-color: lighten(color.$grey, 30%);
+					border-bottom-color: lighten(color.$grey, 35%);
 				}
 			}
+			&:hover,
 			&:focus {
 				background: transparent;
 			}

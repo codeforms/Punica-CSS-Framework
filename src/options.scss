@@ -24,7 +24,7 @@ $options: (
 			'active': 'active'
 		),
 		'settings': (
-			'padding'    : .6rem,
+			'padding'    : .6rem 1rem,
 			'margin'     : 0 0 8px,
 			'width'      : 100%,
 			'font-size'  : 1.015em,
@@ -112,6 +112,7 @@ $options: (
 		'settings': (
 			'padding'     : 4.5rem 2.5rem,
 			'border-color': darken(theme('color', 'background'), 4.5%),
+			'text-wrap'   : balance,
 			'body'        : (
 				'padding': 4.5rem 2.5rem
 			),
@@ -208,6 +209,7 @@ $options: (
 			'font-size'  : 1.95rem,
 			'font-weight': bold,
 			'line-height': theme('typography', 'line-height') - .2,
+			'text-wrap'  : balance,
 			'media'      : (
 				'margin': .559em,
 			),

@@ -18,6 +18,7 @@
 			align-items    : center;
 			padding        : components('billboard', 'padding');
 			border-color   : components('billboard', 'border-color');
+			text-wrap      : components('billboard', 'text-wrap');
 			@include border();
 		};
 		///

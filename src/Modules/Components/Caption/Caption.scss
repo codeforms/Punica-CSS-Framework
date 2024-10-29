@@ -16,6 +16,7 @@
 		font-size  : components('caption', 'font-size');
 		font-weight: components('caption', 'font-weight');
 		line-height: components('caption', 'line-height');
+		text-wrap  : components('caption', 'text-wrap');
 		text-align : left;
 		>img,
 	    >i {
