@@ -1,0 +1,33 @@
+///
+/// Punica CSS Framework
+/// Core/Global/Sass.scss
+/// 
+/**
+ * Sass provides many built-in modules which contain useful functions 
+ * (and the occasional mixin). These modules can be loaded with the 
+ * @use rule like any user-defined stylesheet, and their functions can be 
+ * called like any other module member. All built-in module URLs begin 
+ * with sass: to indicate that they’re part of Sass itself.
+ * 
+ * @link https://sass-lang.com/documentation/modules/
+ * 
+ **/
+@use "sass:color" as *;
+
+///
+/// @param $color
+/// @param $value
+///
+@function lighten($color, $value)
+{
+	@return adjust($color, $lightness: $value);
+}
+
+///
+/// @param $color
+/// @param $value
+///
+@function darken($color, $value)
+{
+	@return adjust($color, $lightness: -$value);
+}

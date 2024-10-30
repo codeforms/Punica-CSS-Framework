@@ -2,6 +2,7 @@
 /// Punica CSS Framework
 /// 
 
+@use "sass:map" as map;
 @use "Core/Theme/Getters" as *;
 @use "Core/Global/Helpers" as *;
 @use "themes" as get;
@@ -9,8 +10,8 @@
 /// ======================================================
 	$active-theme: default;
 /// ======================================================
-	$theme: if(map-has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
-	$theme-map: map-get(get.$themes, $theme) !global;
+	$theme: if(map.has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
+	$theme-map: map.get(get.$themes, $theme) !global;
 /// ======================================================
 
 /*! 

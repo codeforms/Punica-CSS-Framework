@@ -3,6 +3,8 @@
 /// Utilities : Helpers -> Mixins
 ///
 
+@use "sass:map" as map;
+@use "sass:color" as *;
 @use "../../Core/Global/Getters" as *;
 @use "../../Core/Theme/Getters" as *;
 @use "../../Core/Theme/Setters" as *;
@@ -19,11 +21,11 @@
 @mixin set_utils($helper, $two: false, $three: false)
 {
 	$list       : utils($helper);
-	$property   : map-get($list, 'property');
-	$prefix     : map-get($list, 'prefix');
-	$specificity: map-get($list, 'specificity');
-	$type       : map-get($list, 'type');
-	$values     : map-get($list, 'values');
+	$property   : map.get($list, 'property');
+	$prefix     : map.get($list, 'prefix');
+	$specificity: map.get($list, 'specificity');
+	$type       : map.get($list, 'type');
+	$values     : map.get($list, 'values');
 
 	@if $two {
 		// suffix / value
@@ -56,8 +58,8 @@
 @mixin set_inset_helper($helper)
 {
 	$util       : utils($helper);
-	$list       : map-get($util, 'values');
-	$specificity: map-get($util, 'specificity');
+	$list       : map.get($util, 'values');
+	$specificity: map.get($util, 'specificity');
 
 	@each $class, $values in $list {
 		@each $value in $values {
@@ -77,11 +79,11 @@
 ///
 @mixin utils_with_specs($helpers)
 {
-	$prefix     : map-get($helpers, 'prefix');
-	$specificity: map-get($helpers, 'specificity');
-	$type       : map-get($helpers, 'type');
-	$specs      : map-get($helpers, 'specs');
-	$values     : map-get($helpers, 'values');
+	$prefix     : map.get($helpers, 'prefix');
+	$specificity: map.get($helpers, 'specificity');
+	$type       : map.get($helpers, 'type');
+	$specs      : map.get($helpers, 'specs');
+	$values     : map.get($helpers, 'values');
 
 	@each $suffix, $property in $values {
 		@each $spec, $value in $specs {
@@ -102,10 +104,10 @@
 ///
 @mixin color_palette($colors) 
 {
-	$property   : map-get($colors, 'property');
-	$prefix     : map-get($colors, 'prefix');
-	$specificity: map-get($colors, 'specificity');
-	$values     : map-get($colors, 'values');
+	$property   : map.get($colors, 'property');
+	$prefix     : map.get($colors, 'prefix');
+	$specificity: map.get($colors, 'specificity');
+	$values     : map.get($colors, 'values');
 
 	@for $i from 5 through 35 {
 		@each $class, $color in $values {
@@ -156,9 +158,9 @@
 /// 
 @mixin set_sides($util, $side: 'margin') 
 {
-	$prefix: map-get($util, 'prefix');
-	$type  : map-get($util, 'type');
-	$values: map-get($util, 'specs');
+	$prefix: map.get($util, 'prefix');
+	$type  : map.get($util, 'type');
+	$values: map.get($util, 'specs');
 
 	@each $suffix, $value in $values {
 		.#{$prefix}x-#{$suffix} {

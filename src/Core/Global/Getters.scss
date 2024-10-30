@@ -3,6 +3,8 @@
 /// Core/Global/Getters.scss
 /// 
 
+@use "sass:map" as map;
+@use "sass:list" as *;
 @use "../Theme/Getters" as *;
 @use "../../options" as option;
 @use "../../Modules/Utilities/index" as helper;
@@ -21,18 +23,18 @@
 ///
 @function options($keys...) 
 {
-	@if null == map-get(option.$options, nth($keys, 1)) {
+	@if null == map.get(option.$options, nth($keys, 1)) {
 		@warn "[INVALID KEY] #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
-	$value: map-get(option.$options, nth($keys, 1));
+	$value: map.get(option.$options, nth($keys, 1));
 
 	@if length($keys) == 1 {
 		@return $value;
 	}
 
-	$value: map-get($value, nth($keys, 2));
+	$value: map.get($value, nth($keys, 2));
 
 	@if null == $value {
 		@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
@@ -40,7 +42,7 @@
 	}
 
 	@if length($keys) > 2 {
-		$value: map-get($value, nth($keys, 3));
+		$value: map.get($value, nth($keys, 3));
 		@if null == $value {
 			@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
 			@return null;
@@ -64,7 +66,7 @@
 ///
 @function settings($node, $keys...) 
 {
-	$settings: map-get(map-get(options($node), 'settings'), nth($keys, 1));
+	$settings: map.get(map.get(options($node), 'settings'), nth($keys, 1));
 
 	@if null == $settings {
 		@warn "[INVALID KEY] #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
@@ -75,12 +77,12 @@
 		@return $settings;
 	}
 
-	@if null == map-get($settings, nth($keys, 2)) {
+	@if null == map.get($settings, nth($keys, 2)) {
 		@warn "[INVALID KEY] #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
-	@return map-get($settings, nth($keys, 2));
+	@return map.get($settings, nth($keys, 2));
 }
 
 ///
@@ -118,10 +120,10 @@
 ///
 @function utils($node, $key: null) 
 {
-	$util: if(map-has-key(helper.$helpers, $node), map-get(helper.$helpers, $node), null);
+	$util: if(map.has-key(helper.$helpers, $node), map.get(helper.$helpers, $node), null);
 
 	@if ($util != null) and $key {
-		$util: if(map-has-key($util, $key), map-get($util, $key), null);
+		$util: if(map.has-key($util, $key), map.get($util, $key), null);
 	}
 
 	@return $util;

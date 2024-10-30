@@ -5,6 +5,7 @@
 
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Options" as *;
+@use "../../../Core/Global/Sass" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Theme/Getters" as *;
 @use "../../../Core/Theme/Setters" as *;
@@ -178,8 +179,6 @@
 				}
 			}
 		}
-		// Button Link
-		@include link-button();
 		///
 		/// DROPDOWN
 		///
@@ -265,6 +264,8 @@
 	$border-color: null,
 	$outlined    : false
 ) {
+	text-shadow: 0 1px 1px darken($bg-color, 6%);
+	border: theme('border', 'width') theme('border', 'style') $border-color;
 	///
 	/// OUTLINED STYLE
 	///
@@ -282,8 +283,6 @@
 			color: white;
 		}
 	}
-	text-shadow: 0 1px 1px darken($bg-color, 6%);
-	border: theme('border', 'width') theme('border', 'style') $border-color;
 	&:hover {
 		background: lighten($bg-color, 7.5%);
 		color     : white;
@@ -388,28 +387,5 @@
 				padding  : $padding;
 			}
 		}
-	}
-}
-
-///
-/// Link Button
-///
-@mixin link-button() {
-	&.#{class('button', 'link')}.#{class('button', 'name')},
-	&.#{class('tooltip', 'top')} > .#{class('button', 'name')} {
-		@include button-styles(transparent) {
-			box-shadow     : none;
-			border         : none;
-			color          : theme('color', 'primary');
-			text-decoration: underline;
-			font-weight    : theme('typography', 'font-weight');
-			padding        : 0;
-			&:hover {
-				color: theme('color', 'text');
-			}
-			i {
-				color: theme('color', 'text');
-			}
-		};
 	}
 }

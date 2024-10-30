@@ -7,6 +7,7 @@
 /// 
 
 @use "Core/Theme/Getters" as *;
+@use "Core/Global/Sass" as *;
 @use "Core/Global/Colors" as color;
 
 $options: (
@@ -24,11 +25,11 @@ $options: (
 			'active': 'active'
 		),
 		'settings': (
-			'padding'    : .6rem 1rem,
-			'margin'     : 0 0 8px,
-			'width'      : 100%,
-			'font-size'  : 1.015em,
-			'font-weight': bold,
+			'padding'      : .6rem 1rem,
+			'margin'       : 0 0 8px,
+			'width'        : 100%,
+			'font-size'    : 1.015em,
+			'font-weight'  : bold,
 			'border-radius': theme('border', 'radius'),
 			'icon': (
 				'vertical-align': middle
@@ -68,7 +69,7 @@ $options: (
 			'border-radius': 500px,
 			'white-space'  : nowrap,
 			'font-weight'  : bold,
-			'border'       : theme('border', 'width') theme('border', 'style') darken(color.$grey, 6.5%),
+			'border'       : theme('border', 'width') theme('border', 'style') lighten(color.$grey, 6.5%),
 			'styles': (
 				// style name (class), theme variable
 				"primary": theme('color', 'primary'),
@@ -111,7 +112,7 @@ $options: (
 		),
 		'settings': (
 			'padding'     : 4.5rem 2.5rem,
-			'border-color': darken(theme('color', 'background'), 4.5%),
+			'border-color': darken(theme('color', 'background'), -4.5%),
 			'text-wrap'   : balance,
 			'body'        : (
 				'padding': 4.5rem 2.5rem
@@ -480,7 +481,7 @@ $options: (
 					lighten(theme('color', 'dark'), 7%), // input bg
 					white, // input color
 					lighten(theme('color', 'dark'), 25.75%), // input border color
-					lighten(theme('color', 'dark'), 12.55%) // divider color
+					lighten(theme('color', 'dark'), 12.55%) // divider color 
 				)
 			),
 			'sizes': (
@@ -841,7 +842,8 @@ $options: (
 				(
 					'primary', // class name
 					theme('color', 'primary'), // bg color
-					lighten(theme('color', 'primary'), 4%) // border color
+					lighten(theme('color', 'primary'), 4%) // border color 
+
 				),
 				(
 					'success', // class name

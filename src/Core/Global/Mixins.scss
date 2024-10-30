@@ -3,6 +3,7 @@
 /// Core/Global/Mixins.scss
 /// 
 
+@use "sass:color" as *;
 @use "Options" as *;
 
 ///
@@ -33,7 +34,7 @@
 	background: linear-gradient(
 		$direction, 
 		$color 0%,
-		lighten($color, $brightness) 100%
+		adjust($color, $lightness: $brightness) 100%
 	);
 }
 

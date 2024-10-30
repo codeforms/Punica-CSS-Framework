@@ -19,6 +19,6 @@
     "watch": "npm run prod -- -w"
   },
   "dependencies": {
-    "sass": "1.77.6"
+    "sass": "1.80.5"
   }
 }

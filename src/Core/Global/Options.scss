@@ -3,6 +3,8 @@
 /// Core/Global/Options.scss
 /// 
 
+@use "sass:map" as map;
+@use "sass:list" as *;
 @use "../Theme/Getters" as *;
 @use "Getters" as get;
 
@@ -60,7 +62,7 @@
 		@return theme($node, $module, 'features', $feature);
 	}
 
-	@return map-get(map-get(get.options($module), 'features'), $feature);
+	@return map.get(map.get(get.options($module), 'features'), $feature);
 }
 
 ///

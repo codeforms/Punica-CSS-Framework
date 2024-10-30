@@ -3,6 +3,8 @@
 /// Core/Theme/Getters.scss
 /// 
 
+@use "sass:map" as map;
+
 /// ======================================================
 	$theme-map: null !default;
 /// ======================================================
@@ -23,16 +25,16 @@
 /// 
 @function theme($node, $key: null, $child: null, $sub: null) 
 {
-	$value: if(map-has-key($theme-map, $node), map-get($theme-map, $node), null);
+	$value: if(map.has-key($theme-map, $node), map.get($theme-map, $node), null);
 
 	@if ($value != null) and $key {
-		$value: if(map-has-key($value, $key), map-get($value, $key), null);
+		$value: if(map.has-key($value, $key), map.get($value, $key), null);
 
 		@if ($value != null) and $child {
-			$value: if(map-has-key($value, $child), map-get($value, $child), null);
+			$value: if(map.has-key($value, $child), map.get($value, $child), null);
 
 			@if ($value != null) and $sub {
-				$value: if(map-has-key($value, $sub), map-get($value, $sub), null);
+				$value: if(map.has-key($value, $sub), map.get($value, $sub), null);
 			}
 		}
 	}

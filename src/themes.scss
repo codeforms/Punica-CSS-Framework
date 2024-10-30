@@ -6,6 +6,8 @@
 /// the "$active-theme" variable in the punica.scss file.
 /// 
 
+@use "Core/Global/Sass" as *;
+
 $themes: (
 	//
 	// 01. Default Theme
