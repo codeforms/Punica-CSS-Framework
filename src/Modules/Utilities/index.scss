@@ -45,6 +45,7 @@ $helpers: (
 	/// inside a flexbox or grid container.
 	///
 	/// @example align-self-auto
+	/// @example align-self-flex-end
 	///
 	'align-self': (
 		'property'   : 'align-self', // css property name (don't change it !)
@@ -61,6 +62,7 @@ $helpers: (
 	/// an element is the total size of the element, 
 	/// including padding and border (but not the margin).
 	/// 
+	/// @example bg-color
 	/// @example bg-primary
 	///
 	'background-color': (
@@ -216,6 +218,23 @@ $helpers: (
 		'values'     : (alias, default, grab, help, move, pointer, wait, zoom-in, zoom-out)
 	),
 	/// 
+	/// Display
+	///
+	/// The display property specifies the 
+	/// display behavior (the type of rendering box) of an element.
+	/// 
+	/// @example display-flex
+	/// @example display-inline-block
+	///
+	'display': (
+		'property'   : 'display', // css property name (don't change it !)
+		'prefix'     : 'display-', // prefix of class name
+		'specificity': !important, // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (inline, flex, inline-flex, grid, inline-grid, block, inline-block, table, inline-table, table-row, table-column, table-cell)
+	),
+	/// 
 	/// Filter
 	///
 	/// The filter property defines visual effects 
@@ -234,23 +253,6 @@ $helpers: (
 			("invert", invert(100%)),
 			("gray", grayscale(100%)),
 		)
-	),
-	/// 
-	/// Display
-	///
-	/// The display property specifies the 
-	/// display behavior (the type of rendering box) of an element.
-	/// 
-	/// @example display-flex
-	/// @example display-inline-block
-	///
-	'display': (
-		'property'   : 'display', // css property name (don't change it !)
-		'prefix'     : 'display-', // prefix of class name
-		'specificity': !important, // or null
-		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
-		'values'     : (inline, flex, inline-flex, grid, inline-grid, block, inline-block, table, inline-table, table-row, table-column, table-cell)
 	),
 	/// 
 	/// Flex Direction
@@ -365,6 +367,7 @@ $helpers: (
 	/// 
 	/// The font-size property sets the size of a font.
 	/// 
+	/// @example text-mini
 	/// @example text-large
 	///
 	'font-size': (
@@ -383,6 +386,22 @@ $helpers: (
 			("huge", 200%),
 			("giant", 350%)
 		)
+	),
+	/// 
+	/// Font Style
+	/// 
+	/// The font-style property is mostly used to specify italic text.
+	/// 
+	/// @example text-italic
+	/// @example text-normal
+	///
+	'font-style': (
+		'property'   : 'font-style', // css property name (don't change it !)
+		'prefix'     : 'text-', // prefix of class name
+		'specificity': !important, // or null
+		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
+		'specs'      : null,
+		'values'     : (normal,italic)
 	),
 	/// 
 	/// Font Weight

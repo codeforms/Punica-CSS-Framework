@@ -29,6 +29,7 @@
 	@include set_utils('flex', true);
 	@include set_utils('float');
 	@include set_utils('font-size', true);
+	@include set_utils('font-style');
 	@include set_utils('font-weight');
 	@include set_utils('height', true);
 	@include set_inset_helper('inset');
