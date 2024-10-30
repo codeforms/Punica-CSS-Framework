@@ -175,7 +175,7 @@
 					to top, 
 					components('navbar', 'background') 0%, 
 					lighten(components('navbar', 'background'), 11.5%) 2%, 
-					darken(components('navbar', 'background'), -3%) 97%, 
+					darken(components('navbar', 'background'), 3%) 97%, 
 					lighten(components('navbar', 'background'), 11.5%) 100%
 				);
 			}
