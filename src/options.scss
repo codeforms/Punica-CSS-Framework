@@ -29,7 +29,7 @@ $options: (
 			'margin'       : 0 0 8px,
 			'width'        : 100%,
 			'font-size'    : 1.015em,
-			'font-weight'  : bold,
+			'font-weight'  : 400,
 			'border-radius': theme('border', 'radius'),
 			'icon': (
 				'vertical-align': middle
@@ -45,13 +45,13 @@ $options: (
 			'sizes': (
 				(
 			    	"small", // size name (class)
-			    	.749rem, // font-size
-			    	.4rem // padding
+			    	.885rem, // font-size
+			    	.5rem 1rem // padding
 			    ),
 			    (
 			    	"large", // size name (class)
-			    	1.1rem, // font-size
-			    	.8rem // padding
+			    	1.14rem, // font-size
+			    	.7rem 1rem // padding
 			    )
 			)
 		),
@@ -68,9 +68,11 @@ $options: (
 		'settings': (
 			'border-radius': 500px,
 			'white-space'  : nowrap,
-			'font-weight'  : bold,
+			'font-size'    : .935rem,
+			'font-weight'  : 400,
+			'padding'      : 0 .45rem,
 			'border'       : theme('border', 'width') theme('border', 'style') darken(color.$grey, 6.5%),
-			'styles': (
+			'styles'       : (
 				// style name (class), theme variable
 				"primary": theme('color', 'primary'),
 				"success": theme('color', 'success'),
@@ -80,77 +82,14 @@ $options: (
 			),
 			'sizes': (
 				(
-					"tiny", // size name (class)
-					.659rem!important, // font-size
-					0 4px!important // padding
-				),
-				(
 					"small", // size name (class)
 					.749rem!important, // font-size
-					1px 4px!important // padding
+					0 .45rem!important // padding
 				),
 				(
 					"large", // size name (class)
 					1.1rem!important, // font-size
-					2px 8px!important // padding
-				)
-			)
-		)
-	),
-	'billboard': (
-		'enabled': true,
-		'features': (
-			'styles': true,
-			'sizes' : true,
-			'cover' : true
-		),
-		'classnames': (
-			'name' : 'billboard',
-			'media': 'media',
-			'body' : 'body',
-			'cover': 'cover'
-		),
-		'settings': (
-			'padding'     : 4.5rem 2.5rem,
-			'border-color': darken(theme('color', 'background'), 4.5%),
-			'text-wrap'   : balance,
-			'body'        : (
-				'padding': 4.5rem 2.5rem
-			),
-			'styles': (
-				// style name (class), theme variable
-				"primary": theme('color', 'primary'),
-				"success": theme('color', 'success'),
-				"warning": theme('color', 'warning'),
-				"error"  : theme('color', 'error'),
-				"dark"   : theme('color', 'dark'),
-			),
-			'sizes': (
-				(
-					"small", // size name (class)
-					2.5rem 1.5rem, // padding
-					1em // font-size
-				),
-				(
-					"large", // size name (class)
-					7.5rem 4rem, // padding
-					1.6em // font-size
-				)
-			),
-			'responsive': (
-				'padding'  : 2.5rem 1rem,
-				'img-width': 100%,
-				'sizes': (
-					(
-						"small", // size name (class)
-						1rem, // padding
-						1em // font-size
-					),
-					(
-						"large", // size name (class)
-						1rem, // padding
-						1.358em // font-size
-					)
+					0 .45rem!important // padding
 				)
 			)
 		)
@@ -299,7 +238,7 @@ $options: (
 		),
 		'settings': (
 			'font-size'      : .9195em,
-			'font-weight'    : bold,
+			'font-weight'    : 400,
 			'line-height'    : 1.2,
 			'padding'        : 0.28rem 0.9rem,
 			'margin'         : .1rem .05rem,

@@ -22,7 +22,8 @@
 			border         : components('badge', 'border');
 			border-radius  : components('badge', 'border-radius');
 		};
-		@include set-size(1em, 1px 6px);
+		// default badge size
+		@include set-size(components('badge', 'font-size'), components('badge', 'padding'));
 		///
 		/// STYLES
 		///
