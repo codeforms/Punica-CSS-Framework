@@ -17,8 +17,8 @@ $themes: (
 		'type'      : 'light', // light or dark (required*),
 		'typography': (
 			'font-family': 'Inter Tight',
-			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap', // embed/import url
-			'font-size'  : .945rem,
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;700&display=swap', // embed/import url
+			'font-size'  : 1rem,
 			'font-weight': 400,
 			'line-height': 1.7
 		),
@@ -71,13 +71,9 @@ $themes: (
 			*/
 		),
 		'elements': (
-			/*
 			'button': (
-				'features': (
-					'gradient': false
-				),
+				'font-weight': 500
 			)
-			*/
 		),
 		'utilities': (
 			/*

@@ -68,8 +68,9 @@
 			padding: components('card', 'padding');
 		}
 		>.#{class('card', 'description')} {
-			flex: 1 1 auto;
-			color: components('card', 'description', 'color');
+			flex     : 1 1 auto;
+			color    : components('card', 'description', 'color');
+			font-size: components('card', 'description', 'font-size');
 		}
 		///
 		/// MEDIA

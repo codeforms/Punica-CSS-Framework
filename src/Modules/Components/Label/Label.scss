@@ -17,11 +17,9 @@
 			font-weight    : components('label', 'font-weight');
 			line-height    : components('label', 'line-height');
 			margin         : components('label', 'margin');
-			border-radius  : components('label', 'border-radius');
 			text-decoration: components('label', 'text-decoration');
-			border-color   : components('label', 'border-color');
-			@include border();
-			@include shadow(0, .155em, 0, 0, rgba(0, 0, 0, 0.095));
+			box-shadow     : components('label', 'box-shadow');
+			border         : components('label', 'border');
 			@include set-size(components('label', 'font-size'), components('label', 'padding'));
 			>i {
 				vertical-align: text-top;

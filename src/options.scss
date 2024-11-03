@@ -7,6 +7,7 @@
 /// 
 
 @use "Core/Theme/Getters" as *;
+@use "Core/Theme/Setters" as *;
 @use "Core/Global/Sass" as *;
 @use "Core/Global/Colors" as color;
 
@@ -29,7 +30,7 @@ $options: (
 			'margin'       : 0 0 8px,
 			'width'        : 100%,
 			'font-size'    : 1.015em,
-			'font-weight'  : 400,
+			'font-weight'  : normal,
 			'border-radius': theme('border', 'radius'),
 			'icon': (
 				'vertical-align': middle
@@ -69,7 +70,7 @@ $options: (
 			'border-radius': 500px,
 			'white-space'  : nowrap,
 			'font-size'    : .935rem,
-			'font-weight'  : 400,
+			'font-weight'  : normal,
 			'padding'      : 0 .45rem,
 			'border'       : theme('border', 'width') theme('border', 'style') darken(color.$grey, 6.5%),
 			'styles'       : (
@@ -148,7 +149,7 @@ $options: (
 			'margin'     : 1.3em .2rem,
 			'font-size'  : 1.95rem,
 			'font-weight': bold,
-			'line-height': theme('typography', 'line-height') - .2,
+			'line-height': 1.3,
 			'text-wrap'  : balance,
 			'media'      : (
 				'margin': .559em,
@@ -202,7 +203,8 @@ $options: (
 				'line-height': initial
 			),
 			'description': (
-				'color': theme('color', 'text')
+				'color'    : theme('color', 'text'),
+				'font-size': 1rem
 			),
 			'group': (
 				'margin': .74rem // margin for each card
@@ -238,13 +240,13 @@ $options: (
 		),
 		'settings': (
 			'font-size'      : .9195em,
-			'font-weight'    : 400,
+			'font-weight'    : normal,
 			'line-height'    : 1.2,
 			'padding'        : 0.28rem 0.9rem,
 			'margin'         : .1rem .05rem,
-			'border-color'   : theme('border', 'color'),
-			'border-radius'  : theme('border', 'radius'),
+			'border'         : set-border(), // default border
 			'text-decoration': none,
+			'box-shadow'     : none,
 			'styles': (
 				// style name (class), theme variable
 				"primary": theme('color', 'primary'),
@@ -427,19 +429,19 @@ $options: (
 				(
 					"mini", // size name (class)
 					45px, // min-height
-					.9839em, // button font-size
+					.905rem, // button font-size
 					.445rem .9rem, // button padding
 			    ),
 			    (
 					"small", // size name (class)
 					65px, // min-height
-					1em, // button font-size
+					.946rem, // button font-size
 					.645rem 1.4rem, // button padding
 			    ),
 			    (
 					"large", // size name (class)
 					95px, // min-height
-					1.28em, // button font-size
+					1.145rem, // button font-size
 					.645rem 1.4rem, // button padding
 			    )
 			)
@@ -635,7 +637,6 @@ $options: (
 					"small", // class name
 					.9rem, // font-size
 					.685rem .885rem, // padding
-					bold // font-weight
 				),
 			)
 		)
@@ -740,8 +741,7 @@ $options: (
 			'styles'  : true,
 			'sizes'   : true,
 			'outlined': true,
-			'dropdown': true,
-			'gradient': true
+			'dropdown': true
 		),
 		'classnames': (
 			'name'              : 'button',
@@ -752,7 +752,6 @@ $options: (
 			'inactive'          : 'inactive',
 			'block'             : 'block',
 			'vertical'          : 'vertical',
-			'gradient'			: 'gradient',
 			// dropdown
 			'dropdown'          : 'dropdown',
 			'dropdown-right'    : 'right',
@@ -765,7 +764,7 @@ $options: (
 		'settings': (
 			'font-family'  : theme('typography', 'font-family'),
 			'font-weight'  : bold,
-			'font-size'    : 1.015em,
+			'font-size'    : 1.055em,
 			'line-height'  : 1,
 			'width'        : min-content,
 			'padding'      : .935rem 1.6rem,
@@ -859,7 +858,7 @@ $options: (
 				'border-color'    : inherit,
 				'height'          : initial,
 				'padding'         : .7rem .5rem,
-				'font-size'       : 1.088em,
+				'font-size'       : initial,
 				'border-width'    : theme('border', 'width'),
 				'border-style'    : theme('border', 'style'),
 				'border-radius'   : 0,
@@ -1001,7 +1000,7 @@ $options: (
 			),
 			'th': (
 				'color'           : theme('color', 'text'),
-				'font-size'       : .925rem,
+				'font-size'       : inherit,
 				'font-weight'     : bold,
 				'padding'         : .90rem .7rem,
 				'background-color': transparent

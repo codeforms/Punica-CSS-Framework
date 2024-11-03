@@ -20,25 +20,6 @@
 }
 
 ///
-/// Gradient
-/// 
-/// @param {Color} $color
-/// @param {String} $direction
-/// @param {Percentage} $brightness
-///
-@mixin set-gradient(
-	$color: null,
-	$direction: to top,
-	$brightness: 21%
-) {
-	background: linear-gradient(
-		$direction, 
-		$color 0%,
-		adjust($color, $lightness: $brightness) 100%
-	);
-}
-
-///
 /// Media Group Specs
 /// @param {String} $item-name
 /// @param {Size} $padding
