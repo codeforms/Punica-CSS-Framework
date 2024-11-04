@@ -12,9 +12,9 @@
 /// 
 /// Set default helpers
 /// 
-/// @param {Array|List} $helper
-/// @param {Bool} $two
-/// @param {Bool} $three
+/// @param {Array|List} $helper : key name in the index.scss file
+/// @param {Bool} $two : if two values in the map
+/// @param {Bool} $three : if three values in the map
 /// 
 /// @return mixed
 /// 

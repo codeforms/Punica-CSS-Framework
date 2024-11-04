@@ -102,7 +102,7 @@
 				margin        : elements('form', 'label', 'margin');
 				color         : elements('form', 'label', 'color');
 				font-size     : elements('form', 'label', 'font-size');
-				font-weight   : bold;
+				font-weight   : elements('form', 'label', 'font-weight');
 				text-transform: none;
 				height        : fit-content;
 			}
@@ -249,6 +249,9 @@
 				&::before {
 					clip-path: elements('form', 'radio-checkbox', 'radio-clip-path');
 				}
+			}
+			&>label {
+				font-weight: normal;
 			}
 		}
 	}
