@@ -21,8 +21,6 @@
 		>img,
 	    >i {
 	    	margin-right: components('caption', 'media', 'margin');
-	    }
-	    >i {
 	    	font-size: components('caption', 'font-size') * 1.4;
 	    }
 	    &.#{class('caption', 'divided')} {

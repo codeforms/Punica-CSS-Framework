@@ -59,9 +59,10 @@ html, body {
 	color  : theme('color', 'text');
 }
 a {
-	color          : theme('color', 'text');
 	outline        : none;
 	text-decoration: none;
+	cursor         : pointer;
+	color          : theme('color', 'primary');
 	&:focus,
 	&:hover {
 		color          : theme('color', 'primary');

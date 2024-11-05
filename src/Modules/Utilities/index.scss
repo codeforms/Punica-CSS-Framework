@@ -922,6 +922,7 @@ $helpers: (
 	/// with a lower stack order.
 	/// 
 	/// @example z-100
+	/// @example z--1 (-1)
 	///
 	'z-index': (
 		'property'   : 'z-index', // css property name (don't change it !)

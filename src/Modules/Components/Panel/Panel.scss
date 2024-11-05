@@ -88,8 +88,8 @@
 			}
 		}
 		&>.#{class('panel', 'bottom')} {
-			min-height: 50px;
-			border-top: set-border();
+			min-height: components('panel', 'bottom', 'min-height');
+			border-top: components('panel', 'bottom', 'border-top');
 			padding   : components('panel', 'bottom', 'padding');
 		}
 		///

@@ -16,6 +16,7 @@
 		a.#{class('breadcrumb', 'item')},
 		.#{class('breadcrumb', 'item')} {
 			text-decoration: none;
+			color          : components('breadcrumb', 'color');
 			font-size      : components('breadcrumb', 'font-size');
 			font-weight    : components('breadcrumb', 'font-weight');
 			&:focus,&:hover,&:active,&.active {

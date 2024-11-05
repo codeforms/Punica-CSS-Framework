@@ -13,7 +13,7 @@
 	a.#{class('label', 'name')},
 	.#{class('label', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
-			display        : inline-block;
+			display        : components('label', 'display');
 			font-weight    : components('label', 'font-weight');
 			line-height    : components('label', 'line-height');
 			margin         : components('label', 'margin');
@@ -22,15 +22,15 @@
 			border         : components('label', 'border');
 			@include set-size(components('label', 'font-size'), components('label', 'padding'));
 			>i {
-				vertical-align: text-top;
+				vertical-align: components('label', 'icon', 'vertical-align');
 			}
 		};
 		///
 		/// STYLES
 		///
 		@if features('components', 'label', 'styles') {
-			@each $style-name, $bg-color in components('label', 'styles') {
-				@include set-style($bg-color, white, $style-name) {
+			@each $style-name, $color, $bg-color in components('label', 'styles') {
+				@include set-style($bg-color, $color, $style-name) {
 					border-color: darken($bg-color, 3%);
 				};
 			}

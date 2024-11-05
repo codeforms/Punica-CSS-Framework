@@ -48,8 +48,12 @@
 				>.#{class('list', 'subtitle')} {
 					font-size    : components('list', 'subtitle', 'font-size');
 					font-weight  : components('list', 'subtitle', 'font-weight');
-					color        : components('list', 'subtitle', 'color');
 					margin-bottom: components('list', 'subtitle', 'margin-bottom');
+					@if theme('type') == 'light' {
+						color: darken(color.$grey, 20%);
+					} @else if theme('type') == 'dark' {
+						color: lighten(color.$grey, 20%);
+					}
 				}
 		    }
 		    >.#{class('list', 'actions')} {

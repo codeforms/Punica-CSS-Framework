@@ -26,22 +26,47 @@ $options: (
 			'active': 'active'
 		),
 		'settings': (
+			'display'      : block,
 			'padding'      : .6rem 1rem,
 			'margin'       : 0 0 8px,
 			'width'        : 100%,
 			'font-size'    : 1.015em,
 			'font-weight'  : normal,
+			'border'       : set-border(), // default border
 			'border-radius': theme('border', 'radius'),
+			'href'         : (
+				'color'          : theme('color', 'text'),
+				'text-decoration': underline
+			),
 			'icon': (
 				'vertical-align': middle
 			),
 			'styles': (
-				// style name (class), theme variable
-				"primary": theme('color', 'primary'),
-				"success": theme('color', 'success'),
-				"warning": theme('color', 'warning'),
-				"error"  : theme('color', 'error'),
-				"dark"   : theme('color', 'dark'),
+				(
+					"primary", // class name
+					white, // text color
+					theme('color', 'primary') // bg-color
+				),
+				(
+					"success", // class name
+					white, // text color
+					theme('color', 'success') // bg-color
+				),
+				(
+					"warning", // class name
+					white, // text color
+					theme('color', 'warning') // bg-color
+				),
+				(
+					"error", // class name
+					white, // text color
+					theme('color', 'error') // bg-color
+				),
+				(
+					"dark", // class name
+					white, // text color
+					theme('color', 'dark') // bg-color
+				)
 			),
 			'sizes': (
 				(
@@ -72,7 +97,7 @@ $options: (
 			'font-size'    : .935rem,
 			'font-weight'  : normal,
 			'padding'      : 0 .45rem,
-			'border'       : theme('border', 'width') theme('border', 'style') darken(color.$grey, 6.5%),
+			'border'       : set-border(), // default border
 			'styles'       : (
 				// style name (class), theme variable
 				"primary": theme('color', 'primary'),
@@ -109,6 +134,7 @@ $options: (
 			'font-size'     : 1rem,
 			'font-weight'   : normal,
 			'active-weight' : bold,
+			'color'         : theme('color', 'text'),
 			'active-color'  : theme('color', 'primary'),
 			'seperator'     : "\276D", // HTML Symbols
 			'padding'       : .3em, // seperator padding
@@ -195,7 +221,7 @@ $options: (
 			'width'           : 240px, // for only a single card
 			'height'          : 100%,
 			'padding'         : 1rem,
-			'border'          : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
+			'border'          : set-border(), // default border
 			'border-radius'   : theme('border', 'radius'),
 			'background-color': theme('color', 'background'),
 			'title'           : (
@@ -239,6 +265,7 @@ $options: (
 			'name': 'label'
 		),
 		'settings': (
+			'display'        : inline-block,
 			'font-size'      : .9195em,
 			'font-weight'    : normal,
 			'line-height'    : 1.2,
@@ -247,13 +274,35 @@ $options: (
 			'border'         : set-border(), // default border
 			'text-decoration': none,
 			'box-shadow'     : none,
+			'icon': (
+				'vertical-align': middle
+			),
 			'styles': (
-				// style name (class), theme variable
-				"primary": theme('color', 'primary'),
-				"success": theme('color', 'success'),
-				"warning": theme('color', 'warning'),
-				"error"  : theme('color', 'error'),
-				"dark"   : theme('color', 'dark'),
+				(
+					"primary", // class name
+					white, // text color
+					theme('color', 'primary') // bg-color
+				),
+				(
+					"success", // class name
+					white, // text color
+					theme('color', 'success') // bg-color
+				),
+				(
+					"warning", // class name
+					white, // text color
+					theme('color', 'warning') // bg-color
+				),
+				(
+					"error", // class name
+					white, // text color
+					theme('color', 'error') // bg-color
+				),
+				(
+					"dark", // class name
+					white, // text color
+					theme('color', 'dark') // bg-color
+				)
 			),
 			'sizes': (
 				(
@@ -308,7 +357,6 @@ $options: (
 				'line-height': 1
 			),
 			'subtitle': (
-				'color'        : theme('color', 'primary'),
 				'font-size'    : .889em,
 				'font-weight'  : theme('typography', 'font-weight'),
 				'margin-bottom': 7px
@@ -468,7 +516,7 @@ $options: (
 		),
 		'settings': (
 			'margin'          : 1rem 0,
-			'border'          : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
+			'border'          : set-border(), // default border
 			'border-radius'   : theme('border', 'radius'),
 			'background-color': theme('color', 'background'),
 			'header'          : (
@@ -490,7 +538,9 @@ $options: (
 				'padding': .85rem
 			),
 			'bottom': (
-				'padding': .85rem
+				'min-height': 3.125rem,
+				'border-top': set-border(), // default border
+				'padding'   : .85rem
 			),
 			'media': (
 				'margin-bottom': 32px
@@ -771,7 +821,7 @@ $options: (
 			'transition'   : .2s,
 			'color'        : theme('color', 'text'),
 			'background'   : theme('color', 'background'),
-			'border'       : theme('border', 'width') theme('border', 'style') theme('border', 'color'),
+			'border'       : set-border(), // default border
 			'border-radius': theme('border', 'radius'),
 			'icon'         : (
 				'font-size': 1.12rem
