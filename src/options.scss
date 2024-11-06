@@ -386,7 +386,7 @@ $options: (
 			'border-radius': 0,
 			'background'   : lighten(theme('color', 'background'), 2.5%),
 			'title': (
-				'font-size'     : 1.25em,
+				'font-size'     : 1.065rem,
 				'font-weight'   : bold,
 				'color'         : theme('color', 'text'),
 				'min-height'    : 2rem,
@@ -527,12 +527,12 @@ $options: (
 				'font-weight': bold
 			),
 			'headline': (
-				'font-size'     : 1.39em,
+				'font-size'     : 1.35rem,
 				'line-height'   : 1.5,
 				'margin-bottom' : 1.275rem,
 				'color'         : theme('color', 'text'),
 				'letter-spacing': -.0158em,
-				'text-wrap'     : balance
+				'text-wrap'     : auto
 			),
 			'content': (
 				'padding': .85rem
@@ -783,6 +783,29 @@ $options: (
 	///
 	/// ELEMENTS
 	/// 
+	'base': (
+		'settings': (
+			'selection': (
+				'color'           : white,
+				'background-color': theme('color', 'primary')
+			),
+			'horizontal-rule': (
+				'border'    : 0,
+				'border-top': 0.1rem solid theme('border', 'color'),
+				'margin'    : 2.0rem 0,
+				'box-sizing': content-box,
+				'overflow'  : visible
+			),
+			'embedded': (
+				'max-width'        : 100%,
+				'height'           : auto,
+				'vertical-align'   : middle,
+				'font-style'       : italic,
+				'background-repeat': no-repeat,
+				'background-size'  : cover
+			)
+		)
+	),
 	'button': (
 		'enabled': true,
 		'features': (
@@ -1069,6 +1092,57 @@ $options: (
 	),
 	'typography': (
 		'settings': (
+			'paragraph': (
+				'margin'   : 0 0 1em,
+				'text-wrap': pretty
+			),
+			'blockquote': (
+				'border-left': .1rem dotted theme('color', 'dark'),
+				'margin-left': 0,
+				'padding'    : .4rem .8rem,
+				'font-style' : italic,
+				'color'      : theme('color', 'text')
+			),
+			'href': (
+				'color'           : theme('color', 'primary'),
+				'hover-color'     : theme('color', 'primary'),
+				'text-decoration' : none,
+				'hover-decoration': underline,
+				'cursor'          : pointer
+			),
+			'placeholder': (
+				'opacity': .5,
+				'color'  : theme('color', 'text')
+			),
+			'abbreviation': (
+				'border-bottom'  : 1px dotted,
+				'cursor'         : help,
+				'text-decoration': none
+			),
+			'superscript': (
+				'font-size'     : 75%,
+				'line-height'   : 0,
+				'position'      : relative,
+				'vertical-align': baseline,
+				'bottom'        : -0.25em,
+				'top'           : -0.5em
+			),
+			'small': (
+				'font-size': 80%
+			),
+			'header': (
+				'margin-top'   : 0,
+				'color'        : inherit,
+				'line-height'  : 2,
+				'margin-bottom': 1em,
+				'overflow-wrap': break-word,
+				'text-wrap'    : balance
+			),
+			'divided-header': (
+				'border-width'  : 0 0 theme('border', 'width') 0 !important,
+				'padding-bottom': 10px,
+				'margin-bottom' : 20px
+			),
 			'headers': (
 				(
 					"h1", // class name

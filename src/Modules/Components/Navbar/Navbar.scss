@@ -25,7 +25,7 @@
 		// grid container
 		.#{class('grid', 'container')} {
 			display: flex;
-			width  : elements('grid', 'container', 'width'); // options->grid
+			width  : elements('grid', 'container', 'width');
 		}
 		// navbar brand
 		.#{class('navbar', 'brand')} {

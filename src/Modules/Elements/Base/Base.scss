@@ -20,10 +20,10 @@
 * {
 	margin                 : 0;
 	padding                : 0;
-	-webkit-font-smoothing : antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering         : optimizeLegibility;
 	text-shadow            : 1px 1px 1px rgba(0,0,0,0.004) !important;
+	text-rendering         : optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing : antialiased;
 }
 html {
 	box-sizing                 : border-box;
@@ -51,44 +51,44 @@ html, body {
 	-webkit-font-smoothing : antialiased;
 }
 ::selection {
-	color           : white;
-	background-color: theme('color', 'primary');
+	color           : elements('base', 'selection', 'color');
+	background-color: elements('base', 'selection', 'background-color');
 }
 ::placeholder {
-	opacity: .5;
-	color  : theme('color', 'text');
+	opacity: elements('typography', 'placeholder', 'opacity');
+	color  : elements('typography', 'placeholder', 'color');
 }
 a {
+	color          : elements('typography', 'href', 'color');
+	cursor         : elements('typography', 'href', 'cursor');
 	outline        : none;
-	text-decoration: none;
-	cursor         : pointer;
-	color          : theme('color', 'primary');
+	text-decoration: elements('typography', 'href', 'text-decoration');
 	&:focus,
 	&:hover {
-		color          : theme('color', 'primary');
-		text-decoration: underline;
+		color          : elements('typography', 'href', 'hover-color');
+		text-decoration: elements('typography', 'href', 'hover-decoration');
 	}
 }
 /// Headers
 @each $header, $font-size, $responsive-size in elements('typography', 'headers') {
 	#{$header} {
-		margin-top   : 0;
-		color        : inherit;
-		line-height  : 2;
-		margin-bottom: 1em;
-		overflow-wrap: break-word;
-		text-wrap    : balance;
+		margin-top   : elements('typography', 'header', 'margin-top');
+		color        : elements('typography', 'header', 'color');
+		line-height  : elements('typography', 'header', 'line-height');
+		margin-bottom: elements('typography', 'header', 'margin-bottom');
+		overflow-wrap: elements('typography', 'header', 'overflow-wrap');
+		text-wrap    : elements('typography', 'header', 'text-wrap');
 	}
 	#{$header},
 	.#{$header} {
 		font-size  : $font-size;
 		font-weight: bold;
 	}
-	#{$header}.bordered,
-	.#{$header}.bordered {
-		border-width  : 0 0 theme('border', 'width') 0 !important;
-		padding-bottom: 10px;
-		margin-bottom : 20px;
+	#{$header}.divided,
+	.#{$header}.divided {
+		border-width  : elements('typography', 'divided-header', 'border-width');
+		padding-bottom: elements('typography', 'divided-header', 'padding-bottom');
+		margin-bottom : elements('typography', 'divided-header', 'margin-bottom');
 	}
 	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
 		#{$header},
@@ -98,8 +98,8 @@ a {
 	}
 }
 p {
-	margin   : 0 0 1em;
-	text-wrap: pretty;
+	margin   : elements('typography', 'paragraph', 'margin');
+	text-wrap: elements('typography', 'paragraph', 'text-wrap');
 }
 b, strong {
 	font-weight: bolder;
@@ -108,40 +108,40 @@ a, ins, u {
 	text-decoration-skip: ink edges;
 }
 abbr[title] {
-	border-bottom  : 1px dotted;
-	cursor         : help;
-	text-decoration: none;
+	border-bottom  : elements('typography', 'abbreviation', 'border-bottom');
+	cursor         : elements('typography', 'abbreviation', 'cursor');
+	text-decoration: elements('typography', 'abbreviation', 'text-decoration');
 }
 blockquote {
-	border-left: .1rem dotted theme('color', 'dark');
-	margin-left: 0;
-	padding    : .4rem .8rem;
-	font-style : italic;
-	color      : theme('color', 'text');
+	border-left: elements('typography', 'blockquote', 'border-left');
+	margin-left: elements('typography', 'blockquote', 'margin-left');
+	padding    : elements('typography', 'blockquote', 'padding');
+	font-style : elements('typography', 'blockquote', 'font-style');
+	color      : elements('typography', 'blockquote', 'color');
 }
 small {
-	font-size: 80%;
+	font-size: elements('typography', 'small', 'font-size');
 }
 sub,
 sup {
-	font-size     : 75%;
-	line-height   : 0;
-	position      : relative;
-	vertical-align: baseline;
+	font-size     : elements('typography', 'superscript', 'font-size');
+	line-height   : elements('typography', 'superscript', 'line-height');
+	position      : elements('typography', 'superscript', 'position');
+	vertical-align: elements('typography', 'superscript', 'vertical-align');
 }
 sub {
-	bottom: -0.25em;
+	bottom: elements('typography', 'superscript', 'bottom');
 }
 
 sup {
-	top: -0.5em;
+	top: elements('typography', 'superscript', 'top');
 }
 hr {
-	border    : 0;
-	border-top: 0.1rem solid theme('border', 'color');
-	margin    : 2.0rem 0;
-	box-sizing: content-box;
-	overflow  : visible;
+	border    : elements('base', 'horizontal-rule', 'border');
+	border-top: elements('base', 'horizontal-rule', 'border-top');
+	margin    : elements('base', 'horizontal-rule', 'margin');
+	box-sizing: elements('base', 'horizontal-rule', 'box-sizing');
+	overflow  : elements('base', 'horizontal-rule', 'overflow');
 }
 /* List */
 ul, ol {
@@ -173,12 +173,12 @@ canvas,
 embed,
 object,
 video {
-	max-width        : 100%;
-	height           : auto;
-	vertical-align   : middle;
-	font-style       : italic; 
-	background-repeat: no-repeat;
-	background-size  : cover;
+	max-width        : elements('base', 'embedded', 'max-width');
+	height           : elements('base', 'embedded', 'height');
+	vertical-align   : elements('base', 'embedded', 'vertical-align');
+	font-style       : elements('base', 'embedded', 'font-style'); 
+	background-repeat: elements('base', 'embedded', 'background-repeat');
+	background-size  : elements('base', 'embedded', 'background-size');
 }
 img {
 	border-style: none;

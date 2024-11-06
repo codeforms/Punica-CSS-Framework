@@ -44,7 +44,6 @@
 		/// SIZES
 		///
 		@if features('components', 'breadcrumb', 'sizes') {
-			// size, font-size, seperator-padding, seperator-size
 			@each $size, $font-size, $seperator-padding, $seperator-size, $valign in components('breadcrumb', 'sizes') {
 				&.#{$size} {
 					.#{class('breadcrumb', 'item')} {
