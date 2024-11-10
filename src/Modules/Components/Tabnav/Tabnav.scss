@@ -18,7 +18,7 @@
 		display      : flex;
 		flex-wrap    : wrap;
 		align-items  : flex-end;
-		border-bottom: components('tabnav', 'border-width') theme('border', 'style') theme('border', 'color');
+		border-bottom: components('tabnav', 'thickness') theme('border', 'style') theme('border', 'color');
 		padding      : 0;
 		&>.#{class('button', 'group')} {
 			box-shadow   : none;
@@ -35,8 +35,8 @@
 			font-weight  : components('tabnav', 'font-weight');
 			color        : components('tabnav', 'color');
 			padding      : components('tabnav', 'padding');
-			border-bottom: components('tabnav', 'border-width') solid transparent;
-			margin-bottom: -#{components('tabnav', 'border-width')};
+			border-bottom: components('tabnav', 'border-bottom') solid transparent;
+			margin-bottom: -#{components('tabnav', 'thickness')};
 			&:hover {
 				color: theme('color', 'text');
 				@if theme('type') == 'light' {
@@ -76,10 +76,10 @@
 		@if features('components', 'tabnav', 'bottom') {
 			&.#{class('tabnav', 'bottom')} {
 				border-bottom: 0;
-				border-top   : components('tabnav', 'border-width') theme('border', 'style') color.$grey;
+				border-top   : components('tabnav', 'thickness') theme('border', 'style') color.$grey;
 				@include mixins.tab-buttons() {
-					margin-top   : -#{components('tabnav', 'border-width')};
-					border-top   : components('tabnav', 'border-width') solid transparent;
+					margin-top   : -#{components('tabnav', 'thickness')};
+					border-top   : components('tabnav', 'border-bottom') solid transparent;
 					border-bottom: 0;
 					margin-bottom: 0; 
 					&:hover {

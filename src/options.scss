@@ -658,13 +658,14 @@ $options: (
 			'bottom'  : 'bottom'
 		),
 		'settings': (
-			'color'       : theme('color', 'text'),
-			'border-width': 2px,
-			'font-size'   : 1.025em,
-			'font-weight' : bold,
-			'line-height' : unset,
-			'padding'     : .935rem 1.4rem,
-			'styles'      : (
+			'color'        : theme('color', 'text'),
+			'font-size'    : 1.025em,
+			'font-weight'  : bold,
+			'line-height'  : unset,
+			'padding'      : .935rem 1.4rem,
+			'thickness'    : 2px, // tab bar thickness
+			'border-bottom': 2px, // border-bottom-width of tab button
+			'styles'       : (
 				(
 					'success', // style name (class)
 					theme('color', 'success') // color
