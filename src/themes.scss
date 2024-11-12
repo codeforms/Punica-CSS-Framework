@@ -79,9 +79,13 @@ $themes: (
 			)
 		),
 		'utilities': (
+			//'enabled': false,
 			/*
-			'helpers': (
-				'enabled': false
+			'flex-wrap': (
+				'enabled': false 
+			),
+			'overflow': (
+				'prefix': 'flow-' 
 			)
 			*/
 		)

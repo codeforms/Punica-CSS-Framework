@@ -120,6 +120,10 @@
 ///
 @function utils($node, $key: null) 
 {
+	@if theme('utilities', $node, $key) != null {
+		@return theme('utilities', $node, $key);
+	}
+
 	$util: if(map.has-key(helper.$helpers, $node), map.get(helper.$helpers, $node), null);
 
 	@if ($util != null) and $key {

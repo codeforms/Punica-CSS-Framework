@@ -20,31 +20,33 @@
 /// 
 @mixin set_utils($helper, $two: false, $three: false)
 {
-	$list       : utils($helper);
-	$property   : map.get($list, 'property');
-	$prefix     : map.get($list, 'prefix');
-	$specificity: map.get($list, 'specificity');
-	$type       : map.get($list, 'type');
-	$values     : map.get($list, 'values');
+	$enabled    : utils($helper, 'enabled');
+	$property   : utils($helper, 'property');
+	$prefix     : utils($helper, 'prefix');
+	$specificity: utils($helper, 'specificity');
+	$type       : utils($helper, 'type');
+	$values     : utils($helper, 'values');
 
-	@if $two {
-		// suffix / value
-		@each $suffix, $value in $values {
-			.#{$prefix}#{$suffix} {
-				#{$property}: #{$value}#{$type} $specificity;
+	@if $enabled {
+		@if $two {
+			// suffix / value
+			@each $suffix, $value in $values {
+				.#{$prefix}#{$suffix} {
+					#{$property}: #{$value}#{$type} $specificity;
+				}
 			}
-		}
-	} @else if $three {
-		// suffix / css property / value
-		@each $suffix, $prop, $value in $values {
-			.#{$prefix}#{$suffix} {
-				#{$prop}: #{$value}#{$type} $specificity;
+		} @else if $three {
+			// suffix / css property / value
+			@each $suffix, $prop, $value in $values {
+				.#{$prefix}#{$suffix} {
+					#{$prop}: #{$value}#{$type} $specificity;
+				}
 			}
-		}
-	} @else {
-		@each $value in $values {
-			.#{$prefix}#{$value} {
-				#{$property}: #{$value}#{$type} $specificity;
+		} @else {
+			@each $value in $values {
+				.#{$prefix}#{$value} {
+					#{$property}: #{$value}#{$type} $specificity;
+				}
 			}
 		}
 	}
@@ -57,14 +59,16 @@
 /// 
 @mixin set_inset_helper($helper)
 {
-	$util       : utils($helper);
-	$list       : map.get($util, 'values');
-	$specificity: map.get($util, 'specificity');
+	$enabled    : utils($helper, 'enabled');
+	$list       : utils($helper, 'values');
+	$specificity: utils($helper, 'specificity');
 
-	@each $class, $values in $list {
-		@each $value in $values {
-			.#{$class}-#{$value} {
-				#{$class}: #{$value} $specificity;
+	@if $enabled {
+		@each $class, $values in $list {
+			@each $value in $values {
+				.#{$class}-#{$value} {
+					#{$class}: #{$value} $specificity;
+				}
 			}
 		}
 	}
@@ -79,16 +83,19 @@
 ///
 @mixin utils_with_specs($helpers)
 {
+	$enabled    : map.get($helpers, 'enabled');
 	$prefix     : map.get($helpers, 'prefix');
 	$specificity: map.get($helpers, 'specificity');
 	$type       : map.get($helpers, 'type');
 	$specs      : map.get($helpers, 'specs');
 	$values     : map.get($helpers, 'values');
 
-	@each $suffix, $property in $values {
-		@each $spec, $value in $specs {
-			.#{$prefix}#{$suffix}#{$spec} {
-				#{$property}: #{$value}#{$type} $specificity;
+	@if $enabled {
+		@each $suffix, $property in $values {
+			@each $spec, $value in $specs {
+				.#{$prefix}#{$suffix}#{$spec} {
+					#{$property}: #{$value}#{$type} $specificity;
+				}
 			}
 		}
 	}
@@ -104,20 +111,23 @@
 ///
 @mixin color_palette($colors) 
 {
+	$enabled    : map.get($colors, 'enabled');
 	$property   : map.get($colors, 'property');
 	$prefix     : map.get($colors, 'prefix');
 	$specificity: map.get($colors, 'specificity');
 	$values     : map.get($colors, 'values');
 
-	@for $i from 5 through 35 {
-		@each $class, $color in $values {
-			@if $i % 5 == 0 {
-				$percentage: $i*1%;
-				.#{$prefix}#{$class}-darken-#{$i} {
-					#{$property}: mix(black, $color, $percentage) $specificity;
-				}
-				.#{$prefix}#{$class}-lighten-#{$i} {
-					#{$property}: mix(white, $color, $percentage) $specificity;
+	@if $enabled {
+		@for $i from 5 through 35 {
+			@each $class, $color in $values {
+				@if $i % 5 == 0 {
+					$percentage: $i*1%;
+					.#{$prefix}#{$class}-darken-#{$i} {
+						#{$property}: mix(black, $color, $percentage) $specificity;
+					}
+					.#{$prefix}#{$class}-lighten-#{$i} {
+						#{$property}: mix(white, $color, $percentage) $specificity;
+					}
 				}
 			}
 		}
@@ -131,15 +141,21 @@
 /// 
 /// @return mixed
 /// 
-@mixin set_border_sides($borders) {
-	@each $class, $border in $borders {
-		.border-x-#{$class} {
-			border-left-width: #{$border}px !important;
-			border-right-width: #{$border}px !important;
-		}
-		.border-y-#{$class} {
-			border-top-width: #{$border}px !important;
-			border-bottom-width: #{$border}px !important;
+@mixin set_border_sides()
+{
+	$enabled: utils('border', 'enabled');
+	$borders: utils('border', 'specs');
+
+	@if $enabled {
+		@each $class, $border in $borders {
+			.border-x-#{$class} {
+				border-left-width: #{$border}px !important;
+				border-right-width: #{$border}px !important;
+			}
+			.border-y-#{$class} {
+				border-top-width: #{$border}px !important;
+				border-bottom-width: #{$border}px !important;
+			}
 		}
 	}
 }
@@ -158,18 +174,21 @@
 /// 
 @mixin set_sides($util, $side: 'margin') 
 {
-	$prefix: map.get($util, 'prefix');
-	$type  : map.get($util, 'type');
-	$values: map.get($util, 'specs');
+	$enabled: map.get($util, 'enabled');
+	$prefix : map.get($util, 'prefix');
+	$type   : map.get($util, 'type');
+	$values : map.get($util, 'specs');
 
-	@each $suffix, $value in $values {
-		.#{$prefix}x-#{$suffix} {
-			#{$side}-left: #{$value}#{$type} !important;
-			#{$side}-right: #{$value}#{$type} !important;
-		}
-		.#{$prefix}y-#{$suffix} {
-			#{$side}-top: #{$value}#{$type} !important;
-			#{$side}-bottom: #{$value}#{$type} !important;
+	@if $enabled {
+		@each $suffix, $value in $values {
+			.#{$prefix}x-#{$suffix} {
+				#{$side}-left: #{$value}#{$type} !important;
+				#{$side}-right: #{$value}#{$type} !important;
+			}
+			.#{$prefix}y-#{$suffix} {
+				#{$side}-top: #{$value}#{$type} !important;
+				#{$side}-bottom: #{$value}#{$type} !important;
+			}
 		}
 	}
 }

@@ -16,11 +16,12 @@ $helpers: (
 	/// @example align-content-center
 	/// 
 	'align-content': (
+		'enabled'    : true, // true or false
 		'property'   : 'align-content', // css property name (don't change it !)
 		'prefix'     : 'align-content-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (stretch, center, flex-start, flex-end, space-between, space-around, space-evenly, initial, inherit)
 	),
 	///
@@ -31,11 +32,12 @@ $helpers: (
 	/// @example align-items-flex-end
 	///
 	'align-items': (
+		'enabled'    : true, // true or false
 		'property'   : 'align-items', // css property name (don't change it !)
 		'prefix'     : 'align-items-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (baseline, flex-start, flex-end, center, stretch, initial, inherit)
 	),
 	///
@@ -48,11 +50,12 @@ $helpers: (
 	/// @example align-self-flex-end
 	///
 	'align-self': (
+		'enabled'    : true, // true or false
 		'property'   : 'align-self', // css property name (don't change it !)
 		'prefix'     : 'align-self-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (auto, baseline, flex-start, flex-end, center, stretch, initial, inherit)
 	),
 	///
@@ -66,11 +69,12 @@ $helpers: (
 	/// @example bg-primary
 	///
 	'background-color': (
+		'enabled'    : true, // true or false
 		'property'   : 'background-color', // css property name (don't change it !)
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), value
 			("color", theme('color', 'background')),
@@ -94,11 +98,12 @@ $helpers: (
 	/// @example border-primary
 	/// 
 	'border-color': (
+		'enabled'    : true, // true or false
 		'property'   : 'border-color', // css property name (don't change it !)
 		'prefix'     : 'border-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), value
 			("grey", color.$grey),
@@ -120,11 +125,12 @@ $helpers: (
 	/// @example radius-4
 	///
 	'border-radius': (
+		'enabled'    : true, // true or false
 		'property'   : 'border-radius', // css property name (don't change it !)
 		'prefix'     : 'radius-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : px, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (2,4,8,10,12,14,16,500),
 	),
 	/// 
@@ -136,11 +142,12 @@ $helpers: (
 	/// @example border-dotted
 	///
 	'border-style': (
+		'enabled'    : true, // true or false
 		'property'   : 'border-style', // css property name (don't change it !)
 		'prefix'     : 'border-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (solid, dashed, dotted, double, groove, ridge)
 	),
 	/// 
@@ -153,6 +160,7 @@ $helpers: (
 	/// @example border-right-2
 	///
 	'border':(
+		'enabled'    : true, // true or false
 		'property'   : 'border', // css property name (don't change it !)
 		'prefix'     : 'border', // prefix of class name
 		'specificity': !important, // or null
@@ -185,11 +193,12 @@ $helpers: (
 	/// @example color-text
 	///
 	'color': (
+		'enabled'    : true, // true or false
 		'property'   : 'color', // css property name (don't change it !)
 		'prefix'     : 'color-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), value
 			("grey", color.$grey),
@@ -213,11 +222,12 @@ $helpers: (
 	/// @example cursor-zoom-in
 	///
 	'cursor': (
+		'enabled'    : true, // true or false
 		'property'   : 'cursor', // css property name (don't change it !)
 		'prefix'     : 'cursor-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (alias, default, grab, help, move, pointer, wait, zoom-in, zoom-out)
 	),
 	/// 
@@ -230,11 +240,12 @@ $helpers: (
 	/// @example display-inline-block
 	///
 	'display': (
+		'enabled'    : true, // true or false
 		'property'   : 'display', // css property name (don't change it !)
 		'prefix'     : 'display-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (inline, flex, inline-flex, grid, inline-grid, block, inline-block, table, inline-table, table-row, table-column, table-cell)
 	),
 	/// 
@@ -246,11 +257,12 @@ $helpers: (
 	/// @example filter-gray
 	///
 	'filter': (
+		'enabled'    : true, // true or false
 		'property'   : 'filter', // css property name (don't change it !)
 		'prefix'     : 'filter-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), property, value
 			("invert", invert(100%)),
@@ -267,11 +279,12 @@ $helpers: (
 	/// @example flex-direction-column-reverse
 	///
 	'flex-direction': (
+		'enabled'    : true, // true or false
 		'property'   : 'flex-direction', // css property name (don't change it !)
 		'prefix'     : 'flex-direction-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (row, row-reverse, column, column-reverse, initial, inherit)
 	),
 	/// 
@@ -284,11 +297,12 @@ $helpers: (
 	/// @example grow-1
 	///
 	'flex-grow': (
+		'enabled'    : true, // true or false
 		'property'   : 'flex-grow', // css property name (don't change it !)
 		'prefix'     : 'grow-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (1,0)
 	),
 	/// 
@@ -301,11 +315,12 @@ $helpers: (
 	/// @example shrink-1
 	///
 	'flex-shrink': (
+		'enabled'    : true, // true or false
 		'property'   : 'flex-shrink', // css property name (don't change it !)
 		'prefix'     : 'shrink-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (1,0)
 	),
 	/// 
@@ -318,11 +333,12 @@ $helpers: (
 	/// @example flex-wrap-reverse
 	///
 	'flex-wrap': (
+		'enabled'    : true, // true or false
 		'property'   : 'flex-wrap', // css property name (don't change it !)
 		'prefix'     : 'flex-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (wrap, wrap-reverse, nowrap)
 	),
 	/// 
@@ -336,11 +352,12 @@ $helpers: (
 	/// @example flex-initial
 	///
 	'flex': (
+		'enabled'    : true, // true or false
 		'property'   : 'flex', // css property name (don't change it !)
 		'prefix'     : 'flex-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), value
 			("1", 1 1 0%),
@@ -358,11 +375,12 @@ $helpers: (
 	/// @example float-right
 	///
 	'float': (
+		'enabled'    : true, // true or false
 		'property'   : 'float', // css property name (don't change it !)
 		'prefix'     : 'float-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (right, left, none)
 	),
 	/// 
@@ -374,11 +392,12 @@ $helpers: (
 	/// @example text-large
 	///
 	'font-size': (
+		'enabled'    : true, // true or false
 		'property'   : 'font-size', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), value
 			("mini", 60%),
@@ -399,11 +418,12 @@ $helpers: (
 	/// @example text-normal
 	///
 	'font-style': (
+		'enabled'    : true, // true or false
 		'property'   : 'font-style', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (normal,italic)
 	),
 	/// 
@@ -416,11 +436,12 @@ $helpers: (
 	/// @example weight-bolder
 	///
 	'font-weight': (
+		'enabled'    : true, // true or false
 		'property'   : 'font-weight', // css property name (don't change it !)
 		'prefix'     : 'weight-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (100,200,300,400,500,600,700,800,900,normal,bold,bolder,lighter)
 	),
 	/// 
@@ -432,11 +453,12 @@ $helpers: (
 	/// @example height-max-content
 	///
 	'height': (
+		'enabled'    : true, // true or false
 		'property'   : 'height', // css property name (don't change it !)
 		'prefix'     : 'height-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), value
 			("min-content", min-content),
@@ -473,11 +495,12 @@ $helpers: (
 	/// @example bottom-auto
 	///
 	'inset': (
+		'enabled'    : true, // true or false
 		'property'   : null, // css property name
 		'prefix'     : null, // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name, [values]
 			'top'(0, auto),
@@ -497,11 +520,12 @@ $helpers: (
 	/// @example justify-content-space-around
 	///
 	'justify-content': (
+		'enabled'    : true, // true or false
 		'property'   : 'justify-content', // css property name (don't change it !)
 		'prefix'     : 'justify-content-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (baseline, flex-start, flex-end, center, space-between, space-around, initial, inherit)
 	),
 	/// 
@@ -514,11 +538,12 @@ $helpers: (
 	/// @example justify-items-start
 	///
 	'justify-items': (
+		'enabled'    : true, // true or false
 		'property'   : 'justify-items', // css property name (don't change it !)
 		'prefix'     : 'justify-items-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (stretch, start, left, center, end, right, initial, inherit)
 	),
 	/// 
@@ -531,11 +556,12 @@ $helpers: (
 	/// @example justify-self-first-baseline
 	///
 	'justify-self': (
+		'enabled'    : true, // true or false
 		'property'   : 'justify-self', // css property name (don't change it !)
 		'prefix'     : 'justify-self-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), value
 			("auto", auto),
@@ -560,11 +586,12 @@ $helpers: (
 	/// @example line-height-4
 	///
 	'line-height': (
+		'enabled'    : true, // true or false
 		'property'   : 'line-height', // css property name (don't change it !)
 		'prefix'     : 'line-height-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (0,1,2,3,4,5)
 	),
 	/// 
@@ -578,6 +605,7 @@ $helpers: (
 	/// @example my-2 / margin top and bottom
 	///
 	'margin': (
+		'enabled'    : true, // true or false
 		'property'   : 'margin', // css property name (don't change it !)
 		'prefix'     : 'm', // prefix of class name
 		'specificity': !important, // or null
@@ -627,11 +655,12 @@ $helpers: (
 	/// @example fit-scale-down
 	///
 	'object-fit': (
+		'enabled'    : true, // true or false
 		'property'   : 'object-fit', // css property name (don't change it !)
 		'prefix'     : 'fit-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (fill, contain, cover, none, scale-down, initial, inherit)
 	),
 	/// 
@@ -644,11 +673,12 @@ $helpers: (
 	/// @example order-4
 	///
 	'order': (
+		'enabled'    : true, // true or false
 		'property'   : 'order', // css property name (don't change it !)
 		'prefix'     : 'order-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (1,2,3,4,5)
 	),
 	/// 
@@ -661,11 +691,12 @@ $helpers: (
 	/// @example overflow-x-scroll
 	///
 	'overflow': (
+		'enabled'    : true, // true or false
 		'property'   : 'overflow', // css property name (don't change it !)
 		'prefix'     : 'overflow-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name, property, value
 			("auto", overflow, auto),
@@ -693,6 +724,7 @@ $helpers: (
 	/// @example py-3 / padding top and bottom
 	///
 	'padding': (
+		'enabled'    : true, // true or false
 		'property'   : 'padding', // css property name (don't change it !)
 		'prefix'     : 'p', // prefix of class name
 		'specificity': !important, // or null
@@ -740,11 +772,12 @@ $helpers: (
 	/// @example place-content-space-evenly
 	///
 	'place-content': (
+		'enabled'    : true, // true or false
 		'property'   : 'place-content', // css property name (don't change it !)
 		'prefix'     : 'place-content-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (stretch, start, end, center, space-between, space-around, space-evenly, initial, inherit)
 	),
 	/// 
@@ -757,11 +790,12 @@ $helpers: (
 	/// @example place-items-end
 	///
 	'place-items': (
+		'enabled'    : true, // true or false
 		'property'   : 'place-items', // css property name (don't change it !)
 		'prefix'     : 'place-items-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (stretch, start, end, center, baseline)
 	),
 	/// 
@@ -774,11 +808,12 @@ $helpers: (
 	/// @example place-self-right
 	///
 	'place-self': (
+		'enabled'    : true, // true or false
 		'property'   : 'place-self', // css property name (don't change it !)
 		'prefix'     : 'place-self-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (auto, stretch, start, left, center, end, right)
 	),
 	/// 
@@ -791,11 +826,12 @@ $helpers: (
 	/// @example position-absolute
 	///
 	'position': (
+		'enabled'    : true, // true or false
 		'property'   : 'position', // css property name (don't change it !)
 		'prefix'     : 'position-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (static, absolute, fixed, relative, sticky, initial, inherit)
 	),
 	/// 
@@ -807,11 +843,12 @@ $helpers: (
 	/// @example resize-both
 	///
 	'resize': (
+		'enabled'    : true, // true or false
 		'property'   : 'resize', // css property name (don't change it !)
 		'prefix'     : 'resize-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (none, both, horizontal, vertical, initial, inherit)
 	),
 	/// 
@@ -822,11 +859,12 @@ $helpers: (
 	/// @example text-center
 	///
 	'text-align': (
+		'enabled'    : true, // true or false
 		'property'   : 'text-align', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (left, right, center, justify, start, end)
 	),
 	/// 
@@ -837,11 +875,12 @@ $helpers: (
 	/// @example text-overline
 	///
 	'text-decoration': (
+		'enabled'    : true, // true or false
 		'property'   : 'text-decoration', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (underline, overline, line-through)
 	),
 	/// 
@@ -853,11 +892,12 @@ $helpers: (
 	/// @example text-uppercase
 	///
 	'text-transform': (
+		'enabled'    : true, // true or false
 		'property'   : 'text-transform', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (uppercase, lowercase, capitalize)
 	),
 	/// 
@@ -869,11 +909,12 @@ $helpers: (
 	/// @example select-text
 	///
 	'user-select': (
+		'enabled'    : true, // true or false
 		'property'   : 'user-select', // css property name (don't change it !)
 		'prefix'     : 'select-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (none, auto, text, all)
 	),
 	/// 
@@ -885,11 +926,12 @@ $helpers: (
 	/// @example width-fit-content
 	///
 	'width': (
+		'enabled'    : true, // true or false
 		'property'   : 'width', // css property name (don't change it !)
 		'prefix'     : 'width-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (
 			// class name (suffix), value
 			("min-content", min-content),
@@ -927,11 +969,12 @@ $helpers: (
 	/// @example z--1 (-1)
 	///
 	'z-index': (
+		'enabled'    : true, // true or false
 		'property'   : 'z-index', // css property name (don't change it !)
 		'prefix'     : 'z-', // prefix of class name
 		'specificity': !important, // or null
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
-		'specs'      : null,
+		'specs'      : null, // for extra variables
 		'values'     : (-1,0,1,10,20,30,40,50,100,999,9999,99999)
 	)
 )

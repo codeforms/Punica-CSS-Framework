@@ -4,6 +4,7 @@
 ///
 
 @use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
 @use "mixins" as *;
 
 @if enabled('utilities', 'helpers') {
@@ -16,7 +17,7 @@
 	@include set_utils('border-radius');
 	@include set_utils('border-style');
 	@include utils_with_specs(utils('border'));
-	@include set_border_sides(utils('border', 'specs'));
+	@include set_border_sides();
 	@include set_utils('color', true);
 	@include color_palette(utils('color'));
 	@include set_utils('cursor');
