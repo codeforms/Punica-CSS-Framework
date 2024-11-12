@@ -182,6 +182,7 @@ $helpers: (
 	/// The color property specifies the color of text.
 	/// 
 	/// @example color-success
+	/// @example color-text
 	///
 	'color': (
 		'property'   : 'color', // css property name (don't change it !)
@@ -194,6 +195,7 @@ $helpers: (
 			("grey", color.$grey),
 			("white", white),
 			("black", black),
+			("text", theme('color', 'text')),
 			("primary", theme('color', 'primary')),
 			("success", theme('color', 'success')),
 			("warning", theme('color', 'warning')),

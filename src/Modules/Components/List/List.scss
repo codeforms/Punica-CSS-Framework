@@ -43,7 +43,7 @@
 		    	>.#{class('list', 'title')} {
 					font-size  : components('list', 'title', 'font-size');
 					font-weight: components('list', 'title', 'font-weight');
-					line-height: components('list', 'body', 'line-height');
+					line-height: components('list', 'title', 'line-height');
 		    	}
 				>.#{class('list', 'subtitle')} {
 					font-size    : components('list', 'subtitle', 'font-size');
