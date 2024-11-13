@@ -73,7 +73,7 @@
 /// 
 /// @return bool
 ///
-@function enabled($node, $module) 
+@function enabled($node, $module: null) 
 {
 	@if theme($node,'enabled') != null {
 		@return theme($node, 'enabled');

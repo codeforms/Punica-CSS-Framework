@@ -2,6 +2,9 @@
 /// Punica CSS Framework
 /// Utilities : Default Helpers
 /// 
+/// Note: You can also override/change the all following 
+/// default settings from your theme map.
+/// 
 
 @use "../../Core/Global/Colors" as color;
 @use "../../Core/Theme/Getters" as *;
@@ -698,7 +701,7 @@ $helpers: (
 		'type'       : null, // value type (px, rem, em, %, vh, vw etc)
 		'specs'      : null, // for extra variables
 		'values'     : (
-			// class name, property, value
+			// class name (suffix), property, value
 			("auto", overflow, auto),
 			("hidden", overflow, hidden),
 			("visible", overflow, visible),
