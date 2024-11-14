@@ -265,7 +265,7 @@
 	$outlined    : false
 ) {
 	text-shadow: 0 1px 1px darken($bg-color, 6%);
-	border: theme('border', 'width') theme('border', 'style') $border-color;
+	border     : theme('border', 'width') theme('border', 'style') $border-color;
 	///
 	/// OUTLINED STYLE
 	///
@@ -275,6 +275,9 @@
 		color     : $textcolor;
 		i {
 			color: $textcolor;
+		}
+		&:hover {
+			background: $bg-color !important;
 		}
 	} @else {
 		background: $bg-color;
