@@ -24,7 +24,7 @@
 	$property   : utils($helper, 'property');
 	$prefix     : utils($helper, 'prefix');
 	$specificity: utils($helper, 'specificity');
-	$type       : utils($helper, 'type');
+	$unit       : utils($helper, 'unit');
 	$values     : utils($helper, 'values');
 
 	@if $enabled {
@@ -32,20 +32,20 @@
 			// suffix / value
 			@each $suffix, $value in $values {
 				.#{$prefix}#{$suffix} {
-					#{$property}: #{$value}#{$type} $specificity;
+					#{$property}: #{$value}#{$unit} $specificity;
 				}
 			}
 		} @else if $three {
 			// suffix / css property / value
 			@each $suffix, $prop, $value in $values {
 				.#{$prefix}#{$suffix} {
-					#{$prop}: #{$value}#{$type} $specificity;
+					#{$prop}: #{$value}#{$unit} $specificity;
 				}
 			}
 		} @else {
 			@each $value in $values {
 				.#{$prefix}#{$value} {
-					#{$property}: #{$value}#{$type} $specificity;
+					#{$property}: #{$value}#{$unit} $specificity;
 				}
 			}
 		}
@@ -86,7 +86,7 @@
 	$enabled    : map.get($helpers, 'enabled');
 	$prefix     : map.get($helpers, 'prefix');
 	$specificity: map.get($helpers, 'specificity');
-	$type       : map.get($helpers, 'type');
+	$unit       : map.get($helpers, 'unit');
 	$specs      : map.get($helpers, 'specs');
 	$values     : map.get($helpers, 'values');
 
@@ -94,7 +94,7 @@
 		@each $suffix, $property in $values {
 			@each $spec, $value in $specs {
 				.#{$prefix}#{$suffix}#{$spec} {
-					#{$property}: #{$value}#{$type} $specificity;
+					#{$property}: #{$value}#{$unit} $specificity;
 				}
 			}
 		}
@@ -176,18 +176,18 @@
 {
 	$enabled: map.get($util, 'enabled');
 	$prefix : map.get($util, 'prefix');
-	$type   : map.get($util, 'type');
+	$unit   : map.get($util, 'unit');
 	$values : map.get($util, 'specs');
 
 	@if $enabled {
 		@each $suffix, $value in $values {
 			.#{$prefix}x-#{$suffix} {
-				#{$side}-left: #{$value}#{$type} !important;
-				#{$side}-right: #{$value}#{$type} !important;
+				#{$side}-left: #{$value}#{$unit} !important;
+				#{$side}-right: #{$value}#{$unit} !important;
 			}
 			.#{$prefix}y-#{$suffix} {
-				#{$side}-top: #{$value}#{$type} !important;
-				#{$side}-bottom: #{$value}#{$type} !important;
+				#{$side}-top: #{$value}#{$unit} !important;
+				#{$side}-bottom: #{$value}#{$unit} !important;
 			}
 		}
 	}
