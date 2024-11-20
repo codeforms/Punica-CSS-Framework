@@ -25,8 +25,12 @@
 			visibility      : hidden;
 			background-color: components('tooltip', 'background-color');
 			border-radius   : components('tooltip', 'border-radius');
-			min-width       : components('tooltip', 'min-width');
+			width           : components('tooltip', 'width');
 			max-width       : components('tooltip', 'max-width');
+			text-wrap       : components('tooltip', 'text-wrap');
+			white-space     : components('tooltip', 'white-space');
+			text-align      : components('tooltip', 'text-align');
+			line-height     : components('tooltip', 'line-height');
 			padding         : components('tooltip', 'padding');
 			top             : 120%;
 			opacity         : 0;
