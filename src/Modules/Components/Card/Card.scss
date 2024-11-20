@@ -126,7 +126,7 @@
 			}
 		}
 	}
-	@include breakpoints(layouts('grid', 'breakpoints', 'medium'), 'max-width') {
+	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
 		.#{class('card', 'name')},
 		.#{class('card', 'cards')} > .#{class('card', 'name')} {
 			flex  : 0 0 100% !important;

@@ -27,6 +27,7 @@
 			border-bottom : set-border();
 			padding-bottom: components('caption', 'media', 'margin');
 	    }
+	    &>a,
 	    &>span,
 	    &>div {
 	    	/// ..children of a flex container are
@@ -58,7 +59,7 @@
 			}
 		}
 		//
-		@include breakpoints(layouts('grid', 'breakpoints', 'medium'), 'max-width') {
+		@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
 			flex-direction: column;
 			text-align    : center;
 			margin        : inherit;

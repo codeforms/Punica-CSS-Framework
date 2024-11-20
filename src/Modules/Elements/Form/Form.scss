@@ -177,12 +177,10 @@
 					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{elements('form', 'items', 'item-spacer')}));
 				}
 			}
-			@include breakpoints(layouts('grid', 'breakpoints', 'medium'), 'max-width') {
-				.#{$name}.#{class('form', 'name')} {
-					.#{$name}.#{class('form', 'items')} {
-						>.#{class('form', 'item')} {
-							flex: 0 0 100%;
-						}
+			@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
+				.#{$name}.#{class('form', 'items')} {
+					>.#{class('form', 'item')} {
+						flex: 0 0 100%;
 					}
 				}
 			}
