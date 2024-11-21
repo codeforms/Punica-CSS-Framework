@@ -29,22 +29,22 @@
 		}
 		// navbar brand
 		.#{class('navbar', 'brand')} {
-			padding        : components('navbar', 'brand', 'padding');
 			display        : flex;
 			justify-content: center;
 			min-height     : 100%;
 			align-items    : center;
-			margin-right   : components('navbar', 'brand', 'margin-right');
 			white-space    : nowrap;
+			padding        : components('navbar', 'brand', 'padding');
+			margin-right   : components('navbar', 'brand', 'margin-right');
 			img {
 				width: components('navbar', 'brand', 'img-width');
 			}
 			a,
 			a:visited {
-				font-size      : components('navbar', 'font-size');
 				text-decoration: none;
 				color          : white;
 				display        : flex;
+				font-size      : components('navbar', 'font-size');
 				font-weight    : components('navbar', 'brand', 'font-weight');
 			}
 		}
@@ -57,13 +57,13 @@
 			&::before {
 				display   : none;
 				position  : absolute;
+				cursor    : pointer;
+				right     : 0;
+				top       : 0;
 				content   : components('navbar', 'burger', 'symbol-open');
 				font-size : components('navbar', 'burger', 'icon-size');
 				min-height: components('navbar', 'min-height');
 				max-height: components('navbar', 'min-height');
-				cursor    : pointer;
-				right     : 0;
-				top       : 0;
 			}
 		}
 		// navbar links

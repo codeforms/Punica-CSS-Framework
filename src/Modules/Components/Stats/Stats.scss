@@ -17,6 +17,7 @@
 		display         : inline-flex;
 		flex-direction  : column;
 		background-color: transparent;
+		text-decoration : none;
 		margin          : components('stats', 'margin');
 		border-width    : components('stats', 'border-width');
 		border-color    : components('stats', 'border-color');
@@ -24,7 +25,6 @@
 		border-radius   : components('stats', 'border-radius');
 		padding         : components('stats', 'padding');
 		line-height     : components('stats', 'line-height');
-		text-decoration : none;
 		transition      : components('stats', 'transition');
 		>.#{class('stats', 'title')},
 		>.#{class('stats', 'subtitle')},

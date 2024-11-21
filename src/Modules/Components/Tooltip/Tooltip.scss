@@ -19,10 +19,13 @@
 			display         : flex;
 			align-items     : center;
 			justify-content : center;
+			visibility      : hidden;
+			top             : 120%;
+			opacity         : 0;
+			z-index         : 1;
 			color           : components('tooltip', 'color');
 			font-size       : components('tooltip', 'font-size');
 			font-weight     : components('tooltip', 'font-weight');
-			visibility      : hidden;
 			background-color: components('tooltip', 'background-color');
 			border-radius   : components('tooltip', 'border-radius');
 			width           : components('tooltip', 'width');
@@ -32,10 +35,7 @@
 			text-align      : components('tooltip', 'text-align');
 			line-height     : components('tooltip', 'line-height');
 			padding         : components('tooltip', 'padding');
-			top             : 120%;
-			opacity         : 0;
 			transition      : components('tooltip', 'transition');
-			z-index         : 1;
 			&::after {
 				content     : "";
 				position    : absolute;

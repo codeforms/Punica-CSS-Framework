@@ -32,10 +32,10 @@
 		    	display: contents;
 		    }
 		    >.#{class('list', 'body')} {
+				display    : initial;
 				flex       : 1;
 				line-height: components('list', 'body', 'line-height');
 				text-align : components('list', 'body', 'text-align');
-				display    : initial;
 		    	>.#{class('list', 'title')},
 		    	>.#{class('list', 'subtitle')} {
 					display: block;

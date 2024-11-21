@@ -10,6 +10,9 @@
 
 @if enabled('elements', 'form') {
 	@include mixins.form-inputs() {
+		font-family       : inherit;
+		box-sizing        : inherit;
+		appearance        : none;
 		-webkit-appearance: none;
 		background-color  : elements('form', 'input', 'background-color');
 		border-width      : elements('form', 'input', 'border-width');
@@ -18,13 +21,11 @@
 		height            : elements('form', 'input', 'height');
 		border-radius     : elements('form', 'input', 'border-radius');
 		outline           : elements('form', 'input', 'outline-width') solid transparent;
-		box-shadow        : none;
-		box-sizing        : inherit;
+		box-shadow        : elements('form', 'input', 'box-shadow');
 		outline-offset    : -#{elements('form', 'input', 'outline-width')};
 		padding           : elements('form', 'input', 'padding');
-		width             : 100%;
-		max-width         : 100%;
-		font-family       : inherit;
+		width             : elements('form', 'input', 'width');
+		max-width         : elements('form', 'input', 'max-width');
 		color             : elements('form', 'input', 'color');
 		font-size         : elements('form', 'input', 'font-size');
 		transition        : elements('form', 'input', 'transition');
@@ -219,37 +220,20 @@
 			grid-template-columns: 1em auto;
 			gap                  : 1rem;
 			input {
-				display           : grid;
-				place-content     : center;
-				margin            : 0;
-				width             : elements('form', 'radio-checkbox', 'width');
-				height            : elements('form', 'radio-checkbox', 'height');
-				border            : elements('form', 'radio-checkbox', 'border');
-				-webkit-appearance: none;
-				appearance        : none;
-				&::before {
-					content         : "";
-					width           : 0.7em;
-					height          : 0.7em;
-					transform       : scale(0);
-					background-color: elements('form', 'radio-checkbox', 'color');
-					clip-path       : elements('form', 'radio-checkbox', 'checkbox-clip-path');
-				}
-				&:checked::before {
-				  transform: scale(1.5);
-				}
+				display      : grid;
+				place-content: center;
+				margin       : 0;
+				width        : elements('form', 'radio-checkbox', 'width');
+				height       : elements('form', 'radio-checkbox', 'height');
+				border       : elements('form', 'radio-checkbox', 'border');
+				accent-color : elements('form', 'radio-checkbox', 'accent-color');
 				&:disabled {
 				  cursor: not-allowed;
 				}
 			}
-			input[type="radio"] {
-				border-radius: 500px;
-				&::before {
-					clip-path: elements('form', 'radio-checkbox', 'radio-clip-path');
-				}
-			}
 			&>label {
 				font-weight: normal;
+				user-select: none;
 			}
 		}
 	}

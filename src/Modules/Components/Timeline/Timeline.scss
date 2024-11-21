@@ -15,10 +15,10 @@
 	.#{class('timeline', 'name')} {
 		.#{class('timeline', 'item')} {
 			display        : flex;
-			padding        : components('timeline', 'item', 'padding');
 			position       : relative;
 			flex-direction : column;
 			justify-content: center;
+			padding        : components('timeline', 'item', 'padding');
 			&::before {
 				content         : "";
 				display         : block;
@@ -37,16 +37,16 @@
 				position        : absolute;
 				z-index         : 1;
 				display         : flex;
+				align-items     : center;
+				background-color: color.$grey;
+				justify-content : center;
+				flex-shrink     : 0;
 				width           : components('timeline', 'type-width');
 				height          : components('timeline', 'type-width');
 				top             : components('timeline', 'type', 'top');
 				left            : -(calc(components('timeline', 'type-width') / 2px) - components('timeline', 'border-width'));
-				align-items     : center;
-				background-color: color.$grey;
 				border          : components('timeline', 'type', 'border');
 				border-radius   : components('timeline', 'type', 'border-radius');
-				justify-content : center;
-				flex-shrink     : 0;
 				@include shadow();
 				///
 				/// STYLES

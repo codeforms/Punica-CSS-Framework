@@ -8,9 +8,11 @@
 @use "mixins" as *;
 
 @if enabled('utilities', 'helpers') {
+	@include set_utils('accent-color', true);
 	@include set_utils('align-content');
 	@include set_utils('align-items');
 	@include set_utils('align-self');
+	@include set_utils('appearance');
 	@include set_utils('background-color', true);
 	@include color_palette(utils('background-color'));
 	@include set_utils('border-color', true);
@@ -18,6 +20,7 @@
 	@include set_utils('border-style');
 	@include utils_with_specs(utils('border'));
 	@include set_border_sides();
+	@include set_utils('caret-color', true);
 	@include set_utils('color', true);
 	@include color_palette(utils('color'));
 	@include set_utils('cursor');

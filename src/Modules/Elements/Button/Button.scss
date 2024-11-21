@@ -13,31 +13,31 @@
 @if enabled('elements', 'button') {
 	a.#{class('button', 'name')},
 	.#{class('button', 'name')} {
-		display         : inline-flex;
+		display         : elements('button', 'display');
+		align-items     : elements('button', 'align-items');
+		justify-content : elements('button', 'justify-content');
 		font-family     : elements('button', 'font-family');
 		font-size       : elements('button', 'font-size');
 		font-weight     : elements('button', 'font-weight');
-		text-decoration : none;
-		white-space     : nowrap;
-		outline         : none;
-		width           : elements('button', 'width');
-		background      : elements('button', 'background');
-		background-image: none;
-		appearance      : none;
-		color           : elements('button', 'color');
-		border          : elements('button', 'border');
-		border-radius   : elements('button', 'border-radius');
-		box-sizing      : border-box;
-		cursor          : pointer;
 		line-height     : elements('button', 'line-height');
+		text-align      : elements('button', 'text-align');
+		text-decoration : elements('button', 'text-decoration');
+		white-space     : elements('button', 'white-space');
+		color           : elements('button', 'color');
+		background      : elements('button', 'background');
+		background-image: elements('button', 'background-image');
+		outline         : elements('button', 'outline');
+		width           : elements('button', 'width');
 		padding         : elements('button', 'padding');
 		transition      : elements('button', 'transition');
-		user-select     : none;
-		box-shadow      : none;
-		align-items     : center;
-		justify-content : center;
-		overflow        : visible;
-		text-align      : center;
+		appearance      : elements('button', 'appearance');
+		cursor          : elements('button', 'cursor');
+		border          : elements('button', 'border');
+		border-radius   : elements('button', 'border-radius');
+		user-select     : elements('button', 'user-select');
+		box-shadow      : elements('button', 'box-shadow');
+		overflow        : elements('button', 'overflow');
+		box-sizing      : border-box;
 		&:focus,
 		&:hover {
 			transition      : elements('button', 'transition');

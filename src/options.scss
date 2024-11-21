@@ -840,18 +840,31 @@ $options: (
 			'dropdown-clickable': 'clickable'
 		),
 		'settings': (
-			'font-family'  : theme('typography', 'font-family'),
-			'font-weight'  : bold,
-			'font-size'    : 1.055em,
-			'line-height'  : 1,
-			'width'        : min-content,
-			'padding'      : .935rem 1.6rem,
-			'transition'   : .2s,
-			'color'        : theme('color', 'text'),
-			'background'   : theme('color', 'background'),
-			'border'       : set-border(), // default border
-			'border-radius': theme('border', 'radius'),
-			'icon'         : (
+			'display'         : inline-flex,
+			'align-items'     : center,
+			'justify-content' : center,
+			'font-family'     : theme('typography', 'font-family'),
+			'font-size'       : 1.055em,
+			'font-weight'     : bold,
+			'line-height'     : 1,
+			'text-align'      : center,
+			'text-decoration' : none,
+			'white-space'     : nowrap,
+			'color'           : theme('color', 'text'),
+			'background'      : theme('color', 'background'),
+			'background-image': none,
+			'outline'         : none,
+			'width'           : min-content,
+			'padding'         : .935rem 1.6rem,
+			'transition'      : .2s,
+			'appearance'      : none,
+			'cursor'          : pointer,
+			'border'          : set-border(), // default border
+			'border-radius'   : theme('border', 'radius'),
+			'user-select'     : none,
+			'box-shadow'      : none,
+			'overflow'        : visible,
+			'icon'            : (
 				'font-size': 1.12rem
 			),
 			'styles': (
@@ -942,7 +955,10 @@ $options: (
 				'border-radius'   : 0,
 				'transition'      : .35s,
 				'outline-color'   : theme('color', 'primary'),
-				'outline-width'   : 2px
+				'outline-width'   : 2px,
+				'box-shadow'      : none,
+				'width'           : 100%,
+				'max-width'       : 100%,
 			),
 			'items': (
 				'margin'     : 0,
@@ -959,16 +975,10 @@ $options: (
 				'margin'     : 0
 			),
 			'radio-checkbox': (
-				'color'             : theme('color', 'primary'),
-				'width'             : 1.6em,
-				'height'            : 1.6em,
-				'border'            : 0.15em solid theme('border', 'color'),
-				'font-size'         : 1.35rem,
-				'top'               : -8px,
-				'left'              : 0,
-				'label-padding'     : 0 1.2rem 0 1.7rem,
-				'radio-clip-path'   : ellipse(45% 45% at 50% 50%),
-				'checkbox-clip-path': polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%),
+				'width'       : 1.6em,
+				'height'      : 1.6em,
+				'accent-color': theme('color', 'primary'),
+				'border'      : 0.15em solid theme('border', 'color')
 			),
 			// for input validations
 			'styles': (

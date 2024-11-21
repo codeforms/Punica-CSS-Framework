@@ -12,12 +12,12 @@
 	.#{class('caption', 'name')} {
 		display    : flex;
 		align-items: center;
+		text-align : left;
 		margin     : components('caption', 'margin');
 		font-size  : components('caption', 'font-size');
 		font-weight: components('caption', 'font-weight');
 		line-height: components('caption', 'line-height');
 		text-wrap  : components('caption', 'text-wrap');
-		text-align : left;
 		>img,
 	    >i {
 	    	margin-right: components('caption', 'media', 'margin');

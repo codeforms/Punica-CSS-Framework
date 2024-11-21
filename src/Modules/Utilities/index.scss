@@ -11,6 +11,33 @@
 
 $helpers: (
 	///
+	/// Accent Color
+	/// The accent-color property specifies the accent color 
+	/// for user-interface controls like: checkbox, radio, 
+	/// range, and progress.
+	/// 
+	/// @example accent-warning
+	/// 
+	'accent-color': (
+		'enabled'    : true, // true or false
+		'property'   : 'accent-color', // css property name (don't change it !)
+		'prefix'     : 'accent-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (
+			// class name (suffix), value
+			("primary", theme('color', 'primary')),
+			("success", theme('color', 'success')),
+			("warning", theme('color', 'warning')),
+			("error", theme('color', 'error')),
+			("dark", theme('color', 'dark')),
+			("grey", color.$grey),
+			("white", white),
+			("black", black)
+		)
+	),
+	///
 	/// Align Content
 	/// The align-content property specifies 
 	/// how flex lines are distributed along the 
@@ -60,6 +87,23 @@ $helpers: (
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'specs'      : null, // for extra variables
 		'values'     : (auto, baseline, flex-start, flex-end, center, stretch, initial, inherit)
+	),
+	///
+	/// Appearance
+	/// The appearance property in CSS is used to control 
+	/// the appearance of form controls such as buttons, 
+	/// checkboxes, radio buttons, and others. 
+	///
+	/// @example appearance-auto
+	///
+	'appearance': (
+		'enabled'    : true, // true or false
+		'property'   : 'appearance', // css property name (don't change it !)
+		'prefix'     : 'appearance-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (auto, none)
 	),
 	///
 	/// Background Colors
@@ -185,6 +229,33 @@ $helpers: (
 			("-right-", border-right-width)
 			("-bottom-", border-bottom-width)
 			("-left-", border-left-width)
+		)
+	),
+	///
+	/// Caret Color
+	/// The caret-color property specifies 
+	/// the color of the cursor (caret) in inputs, 
+	/// textareas, or any element that is editable.
+	/// 
+	/// @example caret-primary
+	/// 
+	'caret-color': (
+		'enabled'    : true, // true or false
+		'property'   : 'caret-color', // css property name (don't change it !)
+		'prefix'     : 'caret-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (
+			// class name (suffix), value
+			("primary", theme('color', 'primary')),
+			("success", theme('color', 'success')),
+			("warning", theme('color', 'warning')),
+			("error", theme('color', 'error')),
+			("dark", theme('color', 'dark')),
+			("grey", color.$grey),
+			("white", white),
+			("black", black)
 		)
 	),
 	/// 

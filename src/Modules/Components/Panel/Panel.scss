@@ -60,11 +60,11 @@
 			///
 			@if features('components', 'panel', 'media') {
 				&>.#{class('panel', 'media')} {
-					min-width    : 0;
-					flex         : auto;
-					margin-bottom: components('panel', 'media', 'margin-bottom');
-					flex-wrap    : wrap;
 					display      : flex;
+					flex         : auto;
+					min-width    : 0;
+					flex-wrap    : wrap;
+					margin-bottom: components('panel', 'media', 'margin-bottom');
 					@include embedded-media();
 					img {
 						display: block;
