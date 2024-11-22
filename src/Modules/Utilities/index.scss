@@ -33,10 +33,7 @@ $helpers: (
 			("success", theme('color', 'success')),
 			("warning", theme('color', 'warning')),
 			("error", theme('color', 'error')),
-			("dark", theme('color', 'dark')),
-			("grey", color.$grey),
-			("white", white),
-			("black", black)
+			("dark", theme('color', 'dark'))
 		)
 	),
 	///
@@ -253,11 +250,7 @@ $helpers: (
 			("primary", theme('color', 'primary')),
 			("success", theme('color', 'success')),
 			("warning", theme('color', 'warning')),
-			("error", theme('color', 'error')),
-			("dark", theme('color', 'dark')),
-			("grey", color.$grey),
-			("white", white),
-			("black", black)
+			("error", theme('color', 'error'))
 		)
 	),
 	/// 

@@ -979,8 +979,7 @@ $options: (
 			'radio-checkbox': (
 				'width'       : 1.6em,
 				'height'      : 1.6em,
-				'accent-color': theme('color', 'primary'),
-				'border'      : 0.15em solid theme('border', 'color')
+				'accent-color': theme('color', 'primary')
 			),
 			// for input validations
 			'styles': (

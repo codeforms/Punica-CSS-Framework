@@ -225,7 +225,6 @@
 				margin       : 0;
 				width        : elements('form', 'radio-checkbox', 'width');
 				height       : elements('form', 'radio-checkbox', 'height');
-				border       : elements('form', 'radio-checkbox', 'border');
 				accent-color : elements('form', 'radio-checkbox', 'accent-color');
 				&:disabled {
 				  cursor: not-allowed;
