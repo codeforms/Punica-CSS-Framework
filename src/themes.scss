@@ -118,13 +118,7 @@ $themes: (
 			'style' : solid,
 			'radius': 4px,
 		),
-		'shadow': (
-			'horizontal': 0,
-			'vertical'  : 1px,
-			'blur'      : 4px,
-			'spread'    : 0,
-			'color'     : rgba(0, 0, 0, 0.20),
-		),
+		'shadow': 0 1px 4px 0 rgba(0, 0, 0, 0.20),
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
 		// the all default variables in the options.scss API file.
