@@ -237,7 +237,7 @@
 				z-index   : 1;
 				margin    : 0 !important;
 				padding   : 0 !important;
-				@include shadow();
+				box-shadow: theme('shadow');
 				.#{class('navbar', 'section')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')},

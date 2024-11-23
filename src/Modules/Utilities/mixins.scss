@@ -258,7 +258,7 @@
 	.borderless {border: none !important;}
 	.rounded {border-radius: theme('border', 'radius');}
 	.radiusless {border-radius:0 !important;}
-	.shadowed {@include shadow();}
+	.shadowed {box-shadow: theme('shadow')!important;}
 	.shadowless {box-shadow:none !important;}
 	.inset-0 {
 		top: 0;

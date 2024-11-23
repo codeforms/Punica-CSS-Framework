@@ -47,7 +47,7 @@
 				left            : -(calc(components('timeline', 'type-width') / 2px) - components('timeline', 'border-width'));
 				border          : components('timeline', 'type', 'border');
 				border-radius   : components('timeline', 'type', 'border-radius');
-				@include shadow();
+				box-shadow: theme('shadow');
 				///
 				/// STYLES
 				///

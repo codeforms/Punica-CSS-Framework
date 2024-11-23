@@ -22,7 +22,7 @@
 		}
 
 		@if features('components', 'panel', 'shadow') {
-			@include shadow();
+			box-shadow: theme('shadow');
 		}
 		
 		&>.#{class('panel', 'header')},

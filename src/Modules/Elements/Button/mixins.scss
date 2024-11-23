@@ -65,11 +65,11 @@
 		}
 		&.#{class('button', 'dropdown-top')} {
 			&>.#{class('menu', 'name')} {
-				bottom: 100%;
-				top   : auto;
-				right : 0;
-				left  : auto;
-				@include shadow(0, -2px);
+				bottom    : 100%;
+				top       : auto;
+				right     : 0;
+				left      : auto;
+				box-shadow: 0 -2px .5em 0 rgba(0, 0, 0, 0.14);
 			}
 		}
 		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-left')},
@@ -137,7 +137,7 @@
 		flex-wrap    : wrap;
 		flex-shrink  : 0;
 		border-radius: elements('button', 'border-radius');
-		@include shadow();
+		box-shadow: theme('shadow');
 		width: fit-content;
 		.#{class('button', 'name')} {
 			box-shadow: none;

@@ -41,7 +41,7 @@
 
 		// has card shadow?
 		@if features('components', 'card', 'shadow') {
-			@include shadow();
+			box-shadow: theme('shadow');
 		}
 		
 		display       : flex;

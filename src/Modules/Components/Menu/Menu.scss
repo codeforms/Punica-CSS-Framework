@@ -20,7 +20,7 @@
 		padding         : components('menu', 'padding');
 		min-width       : max-content;
 		list-style      : none;
-		@include shadow();
+		box-shadow: theme('shadow');
 		z-index: 300;
 		// menu title
 		.#{class('menu', 'title')} {

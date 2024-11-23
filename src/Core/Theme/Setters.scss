@@ -6,27 +6,6 @@
 @use "Getters" as *;
 
 ///
-/// Shadow
-/// @param {Size} $h-offset - Horizontal offset
-/// @param {Size} $v-offset - Vertical offset
-/// @param {Size} $blur - Blur
-/// @param {Size} $spread - Spread
-/// @param {Color} $color - Color
-/// @param {String|Null} $inset - Inset
-///
-@mixin shadow(
-	$h-offset: theme('shadow', 'horizontal'),
-	$v-offset: theme('shadow', 'vertical'),
-	$blur: theme('shadow', 'blur'),
-	$spread: theme('shadow', 'spread'),
-	$color: theme('shadow', 'color'),
-	$inset: null
-) {
-	box-shadow: $inset $h-offset $v-offset $blur $spread $color;
-	@content;
-}
-
-///
 /// Border
 /// @param {Size} $width - Border width
 /// @param {String} $style - Border style
