@@ -79,9 +79,21 @@
 			&>.#{class('card', 'media')} {
 				display  : flex;
 				flex-wrap: wrap;
+				overflow : hidden;
 				img {
 					display: block;
 					width  : 100%;
+				}
+				@if features('components', 'card', 'zoom-in') {
+					&.#{class('card', 'zoom-in')} > img,
+					&.#{class('card', 'zoom-in')} a > img {
+						transform : scale(1);
+						transition: .3s ease-out;
+					}
+					&.#{class('card', 'zoom-in')} > img:hover,
+					&.#{class('card', 'zoom-in')} a > img:hover {
+						transform: scale(1.2);
+					}
 				}
 			}
 			///

@@ -206,7 +206,8 @@ $options: (
 			'media'      : true,
 			'media-group': true,
 			'border'     : true,
-			'shadow'     : true
+			'shadow'     : true,
+			'zoom-in'    : true // zoom-in effect for image on rollover
 		),
 		'classnames': (
 			'name'       : 'card',
@@ -217,7 +218,8 @@ $options: (
 			'description': 'description',
 			'media'      : 'media',
 			'horizontal' : 'horizontal',
-			'actions'    : 'actions'
+			'actions'    : 'actions',
+			'zoom-in'    : 'zoom-in'
 		),
 		'settings': (
 			'width'           : 240px, // for only a single card
