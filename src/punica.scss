@@ -8,7 +8,7 @@
 @use "themes" as get;
 
 /// ======================================================
-	$active-theme: default;
+	$active-theme: dark;
 /// ======================================================
 	$theme: if(map.has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
 	$theme-map: map.get(get.$themes, $theme) !global;

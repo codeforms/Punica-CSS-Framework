@@ -654,7 +654,7 @@ $options: (
 				"success": theme('color', 'success'),
 				"warning": theme('color', 'warning'),
 				"error"  : theme('color', 'error'),
-				"dark"   : lighten(theme('color', 'dark'), 7.85%),
+				"dark"   : color.$dark-grey,
 			)
 		)
 	),
@@ -906,7 +906,7 @@ $options: (
 				(
 					'dark', // class name
 					theme('color', 'dark'), // bg color
-					lighten(theme('color', 'dark'), 4%) // border color
+					color.$dark-grey // border color
 				)
 			),
 			'sizes': (

@@ -31,7 +31,7 @@ $themes: (
 			'success'   : #53970e,
 			'warning'   : #ac7c09,
 			'error'     : #c11c3a,
-			'dark'      : #393b42
+			'dark'      : #3f4359
 		),
 		'border': (
 			'color' : #c6c6c6,
@@ -91,32 +91,32 @@ $themes: (
 		//////////////////////////////////////////////////////////
 	),
 	//
-	// 02. Dark Theme (pre-alpha)
+	// 02. Dark Theme (beta)
 	//
 	dark: (
 		'name'      : 'Dark Theme',
 		'type'      : 'dark', // light or dark (required*),
 		'typography': (
-			'font-family': 'IBM Plex Sans Hebrew',
-			'font-url'   : 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;600;700&display=swap', // embed/import url
-			'font-size'  : 13px,
+			'font-family': 'Inter Tight',
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;700&display=swap', // embed/import url
+			'font-size'  : 1rem,
 			'font-weight': 400,
 			'line-height': 1.7
 		),
 		'color': (
 			'text'      : white,
-			'background': #252831,
-			'primary'   : #3e5bb2,
-			'success'   : #2f8f5d,
-			'warning'   : #ab7d2d,
-			'error'     : #ba3d3d,
-			'dark'      : lighten(#252831, 4.5%)
+			'background': #22232b,
+			'primary'   : #4975f9,
+			'success'   : #2ea668,
+			'warning'   : #b78122,
+			'error'     : #b94343,
+			'dark'      : darken(#22232b, 4.5%)
 		),
 		'border': (
-			'color' : lighten(#252831, 17%),
+			'color' : lighten(#22232b, 25%),
 			'width' : 1px,
 			'style' : solid,
-			'radius': 4px,
+			'radius': 2px,
 		),
 		'shadow': 0 1px 4px 0 rgba(0, 0, 0, 0.20),
 		//////////////////////////////////////////////////////////
@@ -124,8 +124,8 @@ $themes: (
 		// the all default variables in the options.scss API file.
 		'classnames': (),
 		'components': (
-			'card': (
-				'background-color' : lighten(#252831, 1.75%)
+			'tabnav': (
+				'border-bottom': 4px
 			),
 			'tooltip': (
 				'color'           : black,
@@ -134,11 +134,8 @@ $themes: (
 			)
 		),
 		'elements': (
-			'form': (
-				'input': (
-					'background-color': lighten(#252831, 4.5%),
-					'outline-color'   : white,
-				),
+			'button': (
+				'font-weight': 500
 			)
 		),
 		// You can use this section to override/change the 

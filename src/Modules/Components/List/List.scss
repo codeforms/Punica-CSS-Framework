@@ -61,7 +61,7 @@
 				margin-left: components('list', 'actions', 'margin-left');
 			}
 			&.#{class('list', 'active')} {
-				background: darken(theme('color', 'background'), 11%);
+				background: color.$grey;
 			}
 		}
 		///

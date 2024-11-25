@@ -6,5 +6,6 @@
 @use "sass:color" as color;
 @use "../Theme/Getters" as *;
 
-// Secondary color variables
-$grey : color.mix(theme('color', 'text'), theme('color', 'background'), 14.5%);
+// Secondary color variables/mixes
+$grey     : color.mix(theme('color', 'text'), theme('color', 'background'), 14.5%);
+$dark-grey: color.mix(theme('color', 'text'), theme('color', 'dark'), 20.5%);
