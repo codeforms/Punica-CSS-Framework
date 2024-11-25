@@ -110,15 +110,15 @@ $themes: (
 			'success'   : #2ea668,
 			'warning'   : #b78122,
 			'error'     : #b94343,
-			'dark'      : darken(#22232b, 4.5%)
+			'dark'      : #32343E
 		),
 		'border': (
-			'color' : lighten(#22232b, 25%),
+			'color' : #474a59,
 			'width' : 1px,
 			'style' : solid,
 			'radius': 2px,
 		),
-		'shadow': 0 1px 4px 0 rgba(0, 0, 0, 0.20),
+		'shadow': 0 .2em 1em 0 rgba(0,0,0,.17),
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
 		// the all default variables in the options.scss API file.
@@ -136,6 +136,11 @@ $themes: (
 		'elements': (
 			'button': (
 				'font-weight': 500
+			),
+			'form': (
+				'input': (
+					'border-color': #5f6171
+				)
 			)
 		),
 		// You can use this section to override/change the 
