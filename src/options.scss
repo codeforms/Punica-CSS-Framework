@@ -208,7 +208,8 @@ $options: (
 			'media-group': true,
 			'border'     : true,
 			'shadow'     : true,
-			'zoom-in'    : true // zoom-in effect for image on rollover
+			'zoom-in'    : true, // zoom-in effect for image on rollover
+			'hovered'    : true
 		),
 		'classnames': (
 			'name'       : 'card',
@@ -220,7 +221,8 @@ $options: (
 			'media'      : 'media',
 			'horizontal' : 'horizontal',
 			'actions'    : 'actions',
-			'zoom-in'    : 'zoom-in'
+			'zoom-in'    : 'zoom-in',
+			'hovered'    : 'hovered'
 		),
 		'settings': (
 			'width'           : 240px, // for only a single card
@@ -229,6 +231,7 @@ $options: (
 			'border'          : set-border(), // default border
 			'border-radius'   : theme('border', 'radius'),
 			'background-color': theme('color', 'background'),
+			'transition'      : .2s ease-out,
 			'title'           : (
 				'color'      : theme('color', 'text'),
 				'line-height': initial

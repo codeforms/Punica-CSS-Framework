@@ -15,6 +15,14 @@
 	.#{class('card', 'cards')} {
 		display  : flex;
 		flex-wrap: wrap;
+
+		// hover effect for cards
+		@if features('components', 'card', 'hovered') {
+			&.#{class('card', 'hovered')} > .#{class('card', 'name')}:hover {
+				background-color: darken(components('card', 'background-color'), 4%);
+				transition      : components('card', 'transition');
+			}
+		}
 	}
 	///
 	/// CARD GROUPS
@@ -32,6 +40,7 @@
 	}
 	.#{class('card', 'name')} {
 		background-color: components('card', 'background-color');
+		transition      : components('card', 'transition');
 
 		// has card border?
 		@if features('components', 'card', 'border') {
@@ -42,6 +51,14 @@
 		// has card shadow?
 		@if features('components', 'card', 'shadow') {
 			box-shadow: theme('shadow');
+		}
+
+		// hover effect for single card
+		@if features('components', 'card', 'hovered') {
+			&.#{class('card', 'hovered')}:hover {
+				background-color: darken(components('card', 'background-color'), 4%);
+				transition      : components('card', 'transition');
+			}
 		}
 		
 		display       : flex;
@@ -88,7 +105,7 @@
 					&.#{class('card', 'zoom-in')} > img,
 					&.#{class('card', 'zoom-in')} a > img {
 						transform : scale(1);
-						transition: .3s ease-out;
+						transition: components('card', 'transition');
 					}
 					&.#{class('card', 'zoom-in')} > img:hover,
 					&.#{class('card', 'zoom-in')} a > img:hover {
