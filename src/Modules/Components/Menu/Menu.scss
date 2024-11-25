@@ -13,7 +13,7 @@
 
 @if enabled('components', 'menu') {
 	.#{class('menu', 'name')} {
-		background-color: components('menu', 'background');
+		background-color: components('menu', 'background-color');
 		border-radius   : components('menu', 'border-radius');
 		margin          : components('menu', 'margin');
 		width           : components('menu', 'width');
@@ -47,16 +47,16 @@
 				font-weight    : components('menu', 'item', 'font-weight');
 				transition     : components('menu', 'item', 'transition');
 				&:hover {
-					background: components('menu', 'item', 'hover-bg');
-					color     : components('menu', 'item', 'hover-color');
-					transition: components('menu', 'item', 'transition');
+					color           : components('menu', 'item', 'hover-color');
+					transition      : components('menu', 'item', 'transition');
+					background-color: components('menu', 'item', 'hover-bg');
 				}
 				&:active,
 				&:focus,
 				&.#{class('menu', 'active')} {
-					background: components('menu', 'item', 'hover-bg');
-					color     : components('menu', 'item', 'hover-color');
-					transition: components('menu', 'item', 'transition');
+					color           : components('menu', 'item', 'hover-color');
+					transition      : components('menu', 'item', 'transition');
+					background-color: components('menu', 'item', 'hover-bg');
 				}
 			}
 			i {

@@ -106,10 +106,10 @@ $themes: (
 		'color': (
 			'text'      : white,
 			'background': #22232b,
-			'primary'   : #4975f9,
-			'success'   : #2ea668,
-			'warning'   : #b78122,
-			'error'     : #b94343,
+			'primary'   : #3266ec,
+			'success'   : #53970e,
+			'warning'   : #ac7c09,
+			'error'     : #ca2b47,
 			'dark'      : #32343E
 		),
 		'border': (
@@ -122,8 +122,10 @@ $themes: (
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
 		// the all default variables in the options.scss API file.
-		'classnames': (),
 		'components': (
+			'menu': (
+				'background-color': lighten(#22232b, 2.5%)
+			),
 			'tabnav': (
 				'border-bottom': 4px
 			),
@@ -139,14 +141,17 @@ $themes: (
 			),
 			'form': (
 				'input': (
-					'border-color': #5f6171
+					'border-color'    : #616375,
+					'background-color': lighten(#22232b, 4.2%)
+				)
+			),
+			'typography': (
+				'href': (
+					'color'      : #5580ff,
+					'hover-color': lighten(#5580ff, 3%)
 				)
 			)
-		),
-		// You can use this section to override/change the 
-		// all default variables of utilities in the 
-		// Modules/Utilities/index.scss API file.
-		'utilities': ()
+		)
 		//////////////////////////////////////////////////////////
 	),
 );

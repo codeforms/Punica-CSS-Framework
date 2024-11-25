@@ -388,15 +388,15 @@ $options: (
 			'small'  : 'small'
 		),
 		'settings': (
-			'width'        : 100%,
-			'padding'      : .9rem,
-			'margin'       : 0,
-			'border-radius': 0,
-			'background'   : lighten(theme('color', 'background'), 2.5%),
-			'min-width'    : max-content,
-			'list-style'   : none,
-			'box-shadow'   : theme('shadow'),
-			'z-index'      : 300,
+			'width'           : 100%,
+			'padding'         : .9rem,
+			'margin'          : 0,
+			'border-radius'   : 0,
+			'min-width'       : max-content,
+			'list-style'      : none,
+			'box-shadow'      : theme('shadow'),
+			'z-index'         : 300,
+			'background-color': lighten(theme('color', 'background'), 2.5%),
 			'title': (
 				'font-size'     : 1.065rem,
 				'font-weight'   : bold,
@@ -1139,7 +1139,8 @@ $options: (
 				'hover-color'     : theme('color', 'primary'),
 				'text-decoration' : none,
 				'hover-decoration': underline,
-				'cursor'          : pointer
+				'cursor'          : pointer,
+				'transition'      : .15s ease-out,
 			),
 			'placeholder': (
 				'opacity': .5,

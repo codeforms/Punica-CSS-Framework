@@ -63,10 +63,12 @@ a {
 	cursor         : elements('typography', 'href', 'cursor');
 	outline        : none;
 	text-decoration: elements('typography', 'href', 'text-decoration');
+	transition     : elements('typography', 'href', 'transition');
 	&:focus,
 	&:hover {
 		color          : elements('typography', 'href', 'hover-color');
 		text-decoration: elements('typography', 'href', 'hover-decoration');
+		transition     : elements('typography', 'href', 'transition');
 	}
 }
 /// Headers
