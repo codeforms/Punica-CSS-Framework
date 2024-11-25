@@ -133,14 +133,15 @@ $options: (
 			'active': 'active'
 		),
 		'settings': (
-			'font-size'     : 1rem,
-			'font-weight'   : normal,
-			'active-weight' : bold,
-			'color'         : theme('color', 'text'),
-			'active-color'  : theme('color', 'primary'),
-			'seperator'     : "\276D", // HTML Symbols
-			'padding'       : .3em, // seperator padding
-			'seperator-size': 1rem,
+			'font-size'      : 1rem,
+			'font-weight'    : normal,
+			'active-weight'  : bold,
+			'color'          : theme('color', 'text'),
+			'active-color'   : theme('color', 'primary'),
+			'seperator'      : "\276D", // HTML Symbols
+			'padding'        : .3em, // seperator padding
+			'seperator-size' : 1rem,
+			'text-decoration': none,
 			'sizes': (
 				(
 			    	'small', // size name (class)
@@ -389,6 +390,10 @@ $options: (
 			'margin'       : 0,
 			'border-radius': 0,
 			'background'   : lighten(theme('color', 'background'), 2.5%),
+			'min-width'    : max-content,
+			'list-style'   : none,
+			'box-shadow'   : theme('shadow'),
+			'z-index'      : 300,
 			'title': (
 				'font-size'     : 1.065rem,
 				'font-weight'   : bold,
@@ -398,13 +403,18 @@ $options: (
 				'letter-spacing': -.015rem
 			),
 			'item': (
-				'width'      : 100%,
-				'text-align' : left,
-				'padding'    : .28rem .9rem,
-				'font-size'  : 1em,
-				'small-size' : .945em,
-				'transition' : background .15s,
-				'sub-padding': .4rem // padding of sub items
+				'color'          : theme('color', 'text'),
+				'width'          : 100%,
+				'text-align'     : left,
+				'padding'        : .28rem .9rem,
+				'font-size'      : 1em,
+				'font-weight'    : theme('typography', 'font-weight'),
+				'small-size'     : .945em,
+				'transition'     : background .15s,
+				'sub-padding'    : .4rem, // padding of sub items
+				'text-decoration': none,
+				'hover-color'    : theme('color', 'text'),
+				'hover-bg'       : color.$grey,
 			),
 			'icon': (
 				'font-size'     : 1.2rem,

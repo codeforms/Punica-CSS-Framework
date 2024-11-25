@@ -18,10 +18,10 @@
 		margin          : components('menu', 'margin');
 		width           : components('menu', 'width');
 		padding         : components('menu', 'padding');
-		min-width       : max-content;
-		list-style      : none;
-		box-shadow: theme('shadow');
-		z-index: 300;
+		min-width       : components('menu', 'min-width');
+		list-style      : components('menu', 'list-style');
+		box-shadow      : components('menu', 'box-shadow');
+		z-index         : components('menu', 'z-index');
 		// menu title
 		.#{class('menu', 'title')} {
 			font-size     : components('menu', 'title', 'font-size');
@@ -35,27 +35,27 @@
 		.#{class('menu', 'item')} {
 			padding        : 0; // default container
 			position       : relative;
-			text-decoration: none;
+			text-decoration: components('menu', 'item', 'text-decoration');
 			text-align     : components('menu', 'item', 'text-align');
 			& > a {
 				display        : block;
-				text-decoration: none;
-				color          : theme('color', 'text');
+				text-decoration: components('menu', 'item', 'text-decoration');
+				color          : components('menu', 'item', 'color');
 				width          : components('menu', 'item', 'width');
 				padding        : components('menu', 'item', 'padding');
 				font-size      : components('menu', 'item', 'font-size');
-				font-weight    : theme('typography', 'font-weight');
+				font-weight    : components('menu', 'item', 'font-weight');
 				transition     : components('menu', 'item', 'transition');
 				&:hover {
-					background: color.$grey;
-					color     : theme('color', 'text');
+					background: components('menu', 'item', 'hover-bg');
+					color     : components('menu', 'item', 'hover-color');
 					transition: components('menu', 'item', 'transition');
 				}
 				&:active,
 				&:focus,
 				&.#{class('menu', 'active')} {
-					background: color.$grey;
-					color     : theme('color', 'text');
+					background: components('menu', 'item', 'hover-bg');
+					color     : components('menu', 'item', 'hover-color');
 					transition: components('menu', 'item', 'transition');
 				}
 			}

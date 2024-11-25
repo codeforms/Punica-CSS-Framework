@@ -120,8 +120,10 @@
 	@if $enabled {
 		@for $i from 5 through 35 {
 			@each $class, $color in $values {
+				// if the remainder of an integer
+				// division of $i by 5 is zero
 				@if $i % 5 == 0 {
-					$percentage: $i*1%;
+					$percentage: $i*1%; // convert remainder to percentage
 					.#{$prefix}#{$class}-darken-#{$i} {
 						#{$property}: mix(black, $color, $percentage) $specificity;
 					}
