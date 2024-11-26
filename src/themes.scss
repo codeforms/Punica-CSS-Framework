@@ -98,9 +98,9 @@ $themes: (
 		'type'      : 'dark', // light or dark (required*),
 		'typography': (
 			'font-family': 'Inter Tight',
-			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;700&display=swap', // embed/import url
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700&display=swap', // embed/import url
 			'font-size'  : 1rem,
-			'font-weight': 400,
+			'font-weight': 500,
 			'line-height': 1.7
 		),
 		'color': (
@@ -123,18 +123,6 @@ $themes: (
 		// You can use this section to override/change
 		// the all default variables in the options.scss API file.
 		'components': (
-			'alert': (
-				'font-weight': 500
-			),
-			'badge': (
-				'font-weight': 500
-			),
-			'breadcrumb': (
-				'font-weight': 500
-			),
-			'label': (
-				'font-weight': 500
-			),
 			'menu': (
 				'background-color': lighten(#22232b, 2.5%),
 				'item': (
@@ -142,8 +130,7 @@ $themes: (
 				)
 			),
 			'tabnav': (
-				'border-bottom': 4px,
-				'font-weight'  : 500
+				'border-bottom': 4px
 			),
 			'tooltip': (
 				'color'           : #22232b,
@@ -158,8 +145,7 @@ $themes: (
 			'form': (
 				'input': (
 					'border-color'    : #656679,
-					'background-color': #32343E,
-					'font-weight'     : 500
+					'background-color': #32343E
 				)
 			),
 			'table':(
