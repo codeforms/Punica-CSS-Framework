@@ -33,7 +33,7 @@ $options: (
 			'margin'       : 0 0 8px,
 			'width'        : 100%,
 			'font-size'    : 1.015em,
-			'font-weight'  : normal,
+			'font-weight'  : theme('typography', 'font-weight'),
 			'border'       : set-border(), // default border
 			'border-radius': theme('border', 'radius'),
 			'href'         : (
@@ -97,7 +97,7 @@ $options: (
 			'border-radius': 500px,
 			'white-space'  : nowrap,
 			'font-size'    : .935rem,
-			'font-weight'  : normal,
+			'font-weight'  : theme('typography', 'font-weight'),
 			'padding'      : 0 .45rem,
 			'border'       : set-border(), // default border
 			'styles'       : (
@@ -134,7 +134,7 @@ $options: (
 		),
 		'settings': (
 			'font-size'      : 1rem,
-			'font-weight'    : normal,
+			'font-weight'    : theme('typography', 'font-weight'),
 			'active-weight'  : bold,
 			'color'          : theme('color', 'text'),
 			'active-color'   : theme('color', 'primary'),
@@ -275,7 +275,7 @@ $options: (
 		'settings': (
 			'display'        : inline-block,
 			'font-size'      : .9195em,
-			'font-weight'    : normal,
+			'font-weight'    : theme('typography', 'font-weight'),
 			'line-height'    : 1.2,
 			'padding'        : 0.28rem 0.9rem,
 			'margin'         : .1rem .05rem,
@@ -657,7 +657,7 @@ $options: (
 				"success": theme('color', 'success'),
 				"warning": theme('color', 'warning'),
 				"error"  : theme('color', 'error'),
-				"dark"   : color.$dark-grey,
+				"dark"   : color.$sharp-grey,
 			)
 		)
 	),
@@ -909,7 +909,7 @@ $options: (
 				(
 					'dark', // class name
 					theme('color', 'dark'), // bg color
-					color.$dark-grey // border color
+					color.$sharp-grey // border color
 				)
 			),
 			'sizes': (
@@ -967,7 +967,7 @@ $options: (
 				'height'          : initial,
 				'padding'         : .7rem .5rem,
 				'font-size'       : initial,
-				'font-weight'     : normal,
+				'font-weight'     : theme('typography', 'font-weight'),
 				'border-width'    : theme('border', 'width'),
 				'border-style'    : theme('border', 'style'),
 				'border-radius'   : 0,
@@ -998,7 +998,7 @@ $options: (
 				'accent-color': theme('color', 'primary')
 			),
 			'small': (
-				'color': color.$dark-grey,
+				'color': color.$sharpen-grey,
 			),
 			// for input validations
 			'styles': (
