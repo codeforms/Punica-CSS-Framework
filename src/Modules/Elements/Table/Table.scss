@@ -35,10 +35,10 @@
 				tr,
 				tbody tr {
 					&.#{class('table', 'active')} {
-						background: color.$grey;
+						background-color: elements('table', 'hover-bg');
 					}
 					&:nth-of-type(odd) {
-						background: color.$grey;
+						background-color: elements('table', 'hover-bg');
 					}
 				}
 			}
@@ -51,8 +51,8 @@
 				tr,
 				tbody tr {
 					&:hover {
-						background: color.$grey;
-						color     : theme('color', 'text');
+						background-color: elements('table', 'hover-bg');
+						color           : theme('color', 'text');
 					}
 				}
 			}
@@ -62,7 +62,7 @@
 			transition: all 0.3s;
 			&.#{class('table', 'active')},
 			&.#{class('table', 'active')}:hover {
-				background: color.$grey;
+				background-color: elements('table', 'hover-bg');
 			}
 		}
 		td,

@@ -967,6 +967,7 @@ $options: (
 				'height'          : initial,
 				'padding'         : .7rem .5rem,
 				'font-size'       : initial,
+				'font-weight'     : normal,
 				'border-width'    : theme('border', 'width'),
 				'border-style'    : theme('border', 'style'),
 				'border-radius'   : 0,
@@ -995,6 +996,9 @@ $options: (
 				'width'       : 1.6em,
 				'height'      : 1.6em,
 				'accent-color': theme('color', 'primary')
+			),
+			'small': (
+				'color': color.$dark-grey,
 			),
 			// for input validations
 			'styles': (
@@ -1100,6 +1104,7 @@ $options: (
 			'border-spacing' : 0,
 			'border-collapse': collapse,
 			'position'       : relative,
+			'hover-bg'       : color.$grey,
 			'td': (
 				'padding': .313rem .7rem,
 			),

@@ -6,14 +6,13 @@
 @use "../../../Core/Global/Getters" as *;
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Global/Colors" as color;
 @use "mixins";
 
 @if enabled('elements', 'form') {
 	@include mixins.form-inputs() {
 		font-family       : inherit;
 		box-sizing        : inherit;
-		appearance        : none;
-		-webkit-appearance: none;
 		background-color  : elements('form', 'input', 'background-color');
 		border-width      : elements('form', 'input', 'border-width');
 		border-style      : elements('form', 'input', 'border-style');
@@ -28,6 +27,7 @@
 		max-width         : elements('form', 'input', 'max-width');
 		color             : elements('form', 'input', 'color');
 		font-size         : elements('form', 'input', 'font-size');
+		font-weight       : elements('form', 'input', 'font-weight');
 		transition        : elements('form', 'input', 'transition');
 		&:focus {
 			outline-color   : elements('form', 'input', 'outline-color');
@@ -51,16 +51,6 @@
 			}
 		}
 	};
-	select {
-		background-image:
-		url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=");
-		background-repeat  : no-repeat;
-		background-position: right 1rem center;
-		&[multiple] {
-			background: none;
-			height    : auto;
-		}
-	}
 	textarea {
 		min-height: 6.5rem;
 		resize    : vertical;
@@ -106,6 +96,9 @@
 				font-weight   : elements('form', 'label', 'font-weight');
 				text-transform: none;
 				height        : fit-content;
+			}
+			&>small {
+				color: elements('form', 'small', 'color');
 			}
 			///
 			/// Custom file input

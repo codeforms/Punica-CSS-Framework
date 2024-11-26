@@ -104,12 +104,12 @@ $themes: (
 			'line-height': 1.7
 		),
 		'color': (
-			'text'      : white,
+			'text'      : #e1e6ff,
 			'background': #22232b,
 			'primary'   : #3266ec,
 			'success'   : #53970e,
 			'warning'   : #ac7c09,
-			'error'     : #ca2b47,
+			'error'     : #bb2f48,
 			'dark'      : #32343E
 		),
 		'border': (
@@ -123,16 +123,32 @@ $themes: (
 		// You can use this section to override/change
 		// the all default variables in the options.scss API file.
 		'components': (
+			'alert': (
+				'font-weight': 500
+			),
+			'badge': (
+				'font-weight': 500
+			),
+			'breadcrumb': (
+				'font-weight': 500
+			),
+			'label': (
+				'font-weight': 500
+			),
 			'menu': (
-				'background-color': lighten(#22232b, 2.5%)
+				'background-color': lighten(#22232b, 2.5%),
+				'item': (
+					'hover-bg': darken(#22232b, 3.5%)
+				)
 			),
 			'tabnav': (
-				'border-bottom': 4px
+				'border-bottom': 4px,
+				'font-weight'  : 500
 			),
 			'tooltip': (
-				'color'           : black,
-				'font-weight'     : normal,
-				'background-color': white
+				'color'           : #22232b,
+				'font-weight'     : 500,
+				'background-color': #e1e6ff
 			)
 		),
 		'elements': (
@@ -141,8 +157,15 @@ $themes: (
 			),
 			'form': (
 				'input': (
-					'border-color'    : #616375,
-					'background-color': lighten(#22232b, 4.2%)
+					'border-color'    : #3a3b46,
+					'background-color': darken(#22232b, 3.5%),
+					'font-weight'     : 500
+				)
+			),
+			'table':(
+				'hover-bg': lighten(#22232b, 3%),
+				'caption' : (
+					'border-bottom': 4px solid #474a59
 				)
 			),
 			'typography': (
