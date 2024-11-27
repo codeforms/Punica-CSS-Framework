@@ -28,8 +28,8 @@
 		/// STYLES
 		///
 		@if features('components', 'badge', 'styles') {
-			@each $name, $bg-color in components('badge', 'styles') {
-				@include set-style($bg-color, white, $name) {
+			@each $name, $text-color, $bg-color in components('badge', 'styles') {
+				@include set-style($bg-color, $text-color, $name) {
 					border-color: darken($bg-color, 3%);
 				};
 			}

@@ -12,7 +12,7 @@
 /// Process Styles
 /// @param {Color} $color
 ///
-@mixin process-styles($color: $primary-color) {
+@mixin process-styles($color) {
 	.#{class('process', 'item')} {
 		&:not(:first-child)::before {
 			background: $color;

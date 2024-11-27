@@ -101,12 +101,31 @@ $options: (
 			'padding'      : 0 .45rem,
 			'border'       : set-border(), // default border
 			'styles'       : (
-				// style name (class), theme variable
-				"primary": theme('color', 'primary'),
-				"success": theme('color', 'success'),
-				"warning": theme('color', 'warning'),
-				"error"  : theme('color', 'error'),
-				"dark"   : theme('color', 'dark'),
+				(
+					"primary", // style name (class)
+					white, // text color
+					theme('color', 'primary') // bg-color
+				),
+				(
+					"success", // style name (class)
+					white, // text color
+					theme('color', 'success') // bg-color
+				),
+				(
+					"warning", // style name (class)
+					white, // text color
+					theme('color', 'warning') // bg-color
+				),
+				(
+					"error", // style name (class)
+					white, // text color
+					theme('color', 'error') // bg-color
+				),
+				(
+					"dark", // style name (class)
+					white, // text color
+					theme('color', 'dark') // bg-color
+				)
 			),
 			'sizes': (
 				(
@@ -470,6 +489,14 @@ $options: (
 				'symbol-open' : "\2630", // HTML Symbols
 				'symbol-close': "\2715" // HTML Symbols
 			),
+			'input': (
+				'color'            : white,
+				'background-color' : darken(theme('color', 'primary'), 7%),
+				'border-color'     : lighten(theme('color', 'primary'), 8%),
+				'border-width'     : theme('border', 'width'),
+				'placeholder-color': white,
+				'focus-outline'    : elements('form', 'input', 'outline-width') solid theme('color', 'primary')
+			),
 			'styles': (
 				(
 					"light", // theme name (class)
@@ -685,19 +712,19 @@ $options: (
 			'styles'       : (
 				(
 					'success', // style name (class)
-					theme('color', 'success') // color
+					theme('color', 'success') // style color
 				),
 				(
 					'warning', // style name (class)
-					theme('color', 'warning') // color
+					theme('color', 'warning') // style color
 				),
 				(
 					'error', // style name (class)
-					theme('color', 'error') // color
+					theme('color', 'error') // style color
 				),
 				(
 					'dark', // style name (class)
-					theme('color', 'text') // color
+					theme('color', 'text') // style color
 				)
 			),
 			'sizes': (
@@ -887,27 +914,32 @@ $options: (
 				(
 					'primary', // class name
 					theme('color', 'primary'), // bg color
+					white, // text color
 					lighten(theme('color', 'primary'), 4%) // border color 
 
 				),
 				(
 					'success', // class name
 					theme('color', 'success'), // bg color
+					white,
 					lighten(theme('color', 'success'), 4%) // border color
 				),
 				(
 					'warning', // class name
 					theme('color', 'warning'), // bg color
+					white, // text color
 					lighten(theme('color', 'warning'), 4%) // border color
 				),
 				(
 					'error', // class name
 					theme('color', 'error'), // bg color
+					white, // text color
 					lighten(theme('color', 'error'), 4%) // border color
 				),
 				(
 					'dark', // class name
 					theme('color', 'dark'), // bg color
+					white, // text color
 					color.$sharp-grey // border color
 				)
 			),
@@ -960,6 +992,8 @@ $options: (
 		'settings': (
 			'padding': 0 16px,
 			'input'  : (
+				'font-family'     : inherit,
+				'box-sizing'      : inherit,
 				'color'           : inherit,
 				'background-color': initial,
 				'border-color'    : inherit,
@@ -969,32 +1003,61 @@ $options: (
 				'font-weight'     : theme('typography', 'font-weight'),
 				'border-width'    : theme('border', 'width'),
 				'border-style'    : theme('border', 'style'),
-				'border-radius'   : 0,
+				'border-radius'   : theme('border', 'radius'),
 				'transition'      : .35s,
 				'outline-color'   : theme('color', 'primary'),
 				'outline-width'   : 2px,
 				'box-shadow'      : none,
 				'width'           : 100%,
-				'max-width'       : 100%,
+				'max-width'       : 100%
 			),
 			'items': (
 				'margin'     : 0,
 				'item-spacer': 1px
 			),
 			'item': (
-				'margin' : .495rem 0,
-				'padding': .295rem
+				'height'     : fit-content,
+				'margin'     : .495rem 0,
+				'display'    : inline-flex,
+				'flex-wrap'  : wrap,
+				'width'      : 100%,
+				'max-width'  : 100%,
+				'position'   : relative,
+				'align-items': center,
+				'padding'    : .295rem
 			),
 			'label': (
-				'color'      : theme('color', 'text'),
-				'font-size'  : .955rem,
-				'font-weight': bold,
-				'margin'     : 0
+				'color'         : theme('color', 'text'),
+				'font-size'     : .955rem,
+				'font-weight'   : bold,
+				'margin'        : 0,
+				'text-transform': none,
+				'height'        : fit-content
 			),
 			'radio-checkbox': (
-				'width'       : 1.6em,
-				'height'      : 1.6em,
-				'accent-color': theme('color', 'primary')
+				'display'              : grid,
+				'grid-template-columns': 1em auto,
+				'gap'                  : 1rem,
+				'place-content'        : center,
+				'margin'               : 0,
+				'width'                : 1.6em,
+				'height'               : 1.6em,
+				'accent-color'         : theme('color', 'primary')
+			),
+			'textarea': (
+				'min-height': 6.5rem,
+				'resize'    : vertical
+			),
+			'fieldset': (
+				'border-width': 0,
+				'padding'     : 0.6em
+			),
+			'legend': (
+				'display'      : block,
+				'font-size'    : 1.3rem,
+				'font-weight'  : bold,
+				'margin-bottom': .7rem,
+				'white-space'  : normal
 			),
 			'small': (
 				'color': color.$sharpen-grey,
@@ -1003,15 +1066,15 @@ $options: (
 			'styles': (
 				(
 					'success', // class name
-					theme('color', 'success') // color
+					theme('color', 'success') // style color
 				),
 				(
 					'warning', // class name
-					theme('color', 'warning') // color
+					theme('color', 'warning') // style color
 				),
 				(
 					'error', // class name
-					theme('color', 'error') // color
+					theme('color', 'error') // style color
 				)
 			),
 			// input sizes

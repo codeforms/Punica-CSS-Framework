@@ -24,7 +24,7 @@
 @function options($keys...) 
 {
 	@if null == map.get(option.$options, nth($keys, 1)) {
-		@warn "[INVALID KEY] #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA] ::: INVALID KEY: #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
@@ -34,17 +34,21 @@
 		@return $value;
 	}
 
+	@if length($keys) > 3 {
+		@warn "[PUNICA] ::: MAXIMUM NESTING DEPTH IS 3.";
+	}
+
 	$value: map.get($value, nth($keys, 2));
 
 	@if null == $value {
-		@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA] ::: INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
 	@if length($keys) > 2 {
 		$value: map.get($value, nth($keys, 3));
 		@if null == $value {
-			@warn "[INVALID KEY] #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
+			@warn "[PUNICA] ::: INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
 			@return null;
 		}
 	}
@@ -69,7 +73,7 @@
 	$settings: map.get(map.get(options($node), 'settings'), nth($keys, 1));
 
 	@if null == $settings {
-		@warn "[INVALID KEY] #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA] ::: INVALID KEY: #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 	
@@ -77,8 +81,12 @@
 		@return $settings;
 	}
 
+	@if length($keys) > 3 {
+		@warn "[PUNICA] ::: MAXIMUM NESTING DEPTH IS 3.";
+	}
+
 	@if null == map.get($settings, nth($keys, 2)) {
-		@warn "[INVALID KEY] #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA] ::: INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 

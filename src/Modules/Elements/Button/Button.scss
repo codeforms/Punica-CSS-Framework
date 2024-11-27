@@ -80,13 +80,13 @@
 		/// STYLES
 		///
 		@if features('elements', 'button', 'styles') {
-			@each $theme-name, $theme-color, $border-color in elements('button', 'styles') {
+			@each $theme-name, $bg-color, $text-color, $border-color in elements('button', 'styles') {
 				&.#{$theme-name} {
-					@include button-styles($theme-color, $border-color);
+					@include button-styles($bg-color, $text-color, $border-color);
 				}
 				@if features('elements', 'button', 'outlined') {
 					&.#{$theme-name}.#{class('button', 'outlined')} {
-						@include button-styles($theme-color, $border-color, true);
+						@include button-styles($bg-color, $text-color, $border-color, true);
 					}
 				}
 			}

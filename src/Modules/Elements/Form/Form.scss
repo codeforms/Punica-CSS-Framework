@@ -11,8 +11,8 @@
 
 @if enabled('elements', 'form') {
 	@include mixins.form-inputs() {
-		font-family       : inherit;
-		box-sizing        : inherit;
+		font-family       : elements('form', 'input', 'font-family');
+		box-sizing        : elements('form', 'input', 'box-sizing');
 		background-color  : elements('form', 'input', 'background-color');
 		border-width      : elements('form', 'input', 'border-width');
 		border-style      : elements('form', 'input', 'border-style');
@@ -52,24 +52,19 @@
 		}
 	};
 	textarea {
-		min-height: 6.5rem;
-		resize    : vertical;
+		min-height: elements('form', 'textarea', 'min-height');
+		resize    : elements('form', 'textarea', 'resize');
 	}
 	fieldset {
-		border-width: 0;
-		padding     : 0.6em;
+		border-width: elements('form', 'fieldset', 'border-width');
+		padding     : elements('form', 'fieldset', 'padding');
 	}
-	label,
 	legend {
-		display      : block;
-		font-size    : 1.3rem;
-		font-weight  : bold;
-		margin-bottom: .7rem;
-		white-space  : normal;
-	}
-	input[type='checkbox'],
-	input[type='radio'] {
-		display: inline;
+		display      : elements('form', 'legend', 'display');
+		font-size    : elements('form', 'legend', 'font-size');
+		font-weight  : elements('form', 'legend', 'font-weight');
+		margin-bottom: elements('form', 'legend', 'margin-bottom');
+		white-space  : elements('form', 'legend', 'white-space');
 	}
 	input:disabled {
 	  opacity: .59;
@@ -79,14 +74,14 @@
 		max-width: 100%;
 		padding  : elements('form', 'padding');
 		.#{class('form', 'item')} {
-			height     : fit-content;
+			height     : elements('form', 'item', 'height');
 			margin     : elements('form', 'item', 'margin');
-			display    : inline-flex;
-			flex-wrap  : wrap;
-			width      : 100%;
-			max-width  : 100%;
-			position   : relative;
-			align-items: center;
+			display    : elements('form', 'item', 'display');
+			flex-wrap  : elements('form', 'item', 'flex-wrap');
+			width      : elements('form', 'item', 'width');
+			max-width  : elements('form', 'item', 'max-width');
+			position   : elements('form', 'item', 'position');
+			align-items: elements('form', 'item', 'align-items');
 			padding    : elements('form', 'item', 'padding');
 			@at-root .#{class('form', 'name')} label,
 			&>label {
@@ -94,8 +89,8 @@
 				color         : elements('form', 'label', 'color');
 				font-size     : elements('form', 'label', 'font-size');
 				font-weight   : elements('form', 'label', 'font-weight');
-				text-transform: none;
-				height        : fit-content;
+				text-transform: elements('form', 'label', 'text-transform');
+				height        : elements('form', 'label', 'height');
 			}
 			&>small {
 				color: elements('form', 'small', 'color');
@@ -124,10 +119,10 @@
 					>* {
 						flex: 1 1 auto;
 						&:last-child {
-			    			margin-left: -1px;
+			    			margin-left: if(elements('form', 'input', 'border-width') != 0 , -1px , .5rem);
 						}
 						&:not(:first-child):not(:last-child) {
-							margin-left  : -1px;
+							margin-left  : if(elements('form', 'input', 'border-width') != 0 , -1px , .5rem);
 							margin-right : 0;
 							border-radius: 0;
 						}
@@ -148,6 +143,7 @@
 						}
 					}
 					@include mixins.form-inputs() {
+						box-shadow: none !important;
 						&:first-child {
 							border-bottom-right-radius: 0;
 							border-top-right-radius   : 0;
@@ -209,13 +205,13 @@
 	@if features('elements', 'form', 'checkbox-radio') {
 		.#{class('form', 'radio')},
 		.#{class('form', 'checkbox')} {
-			display              : grid;
-			grid-template-columns: 1em auto;
-			gap                  : 1rem;
+			display              : elements('form', 'radio-checkbox', 'display');
+			grid-template-columns: elements('form', 'radio-checkbox', 'grid-template-columns');
+			gap                  : elements('form', 'radio-checkbox', 'gap');
 			input {
-				display      : grid;
-				place-content: center;
-				margin       : 0;
+				display      : elements('form', 'radio-checkbox', 'display');
+				place-content: elements('form', 'radio-checkbox', 'place-content');
+				margin       : elements('form', 'radio-checkbox', 'margin');
 				width        : elements('form', 'radio-checkbox', 'width');
 				height       : elements('form', 'radio-checkbox', 'height');
 				accent-color : elements('form', 'radio-checkbox', 'accent-color');

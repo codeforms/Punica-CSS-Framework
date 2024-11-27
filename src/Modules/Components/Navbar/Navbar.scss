@@ -81,14 +81,15 @@
 					justify-content: flex-end;
 				}
 				input[type='text'] {
-					color           : white;
-					background-color: darken(components('navbar', 'background'), 7%);
-					border-color    : lighten(components('navbar', 'background'), 8%);
+					color           : components('navbar', 'input', 'color');
+					background-color: components('navbar', 'input', 'background-color');
+					border-color    : components('navbar', 'input', 'border-color');
+					border-width    : components('navbar', 'input', 'border-width');
 					&::placeholder {
-						color: white;
+						color: components('navbar', 'input', 'placeholder-color');
 					}
 					&:focus {
-						outline: theme('input', 'outline-width') solid lighten(components('navbar', 'background'), 26%);
+						outline: components('navbar', 'input', 'focus-outline');
 					}
 				}
 				///

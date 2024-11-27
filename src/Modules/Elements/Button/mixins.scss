@@ -137,7 +137,7 @@
 		flex-wrap    : wrap;
 		flex-shrink  : 0;
 		border-radius: elements('button', 'border-radius');
-		box-shadow: theme('shadow');
+		box-shadow   : theme('shadow');
 		width: fit-content;
 		.#{class('button', 'name')} {
 			box-shadow: none;
@@ -172,10 +172,10 @@
 		/// STYLES
 		///
 		@if features('elements', 'button', 'styles') {
-			@each $theme-name, $theme-color in elements('button', 'styles') {
+			@each $theme-name, $bg-color, $text-color in elements('button', 'styles') {
 				&.#{$theme-name} > .#{class('button', 'name')},
 				&.#{$theme-name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
-					@include button-styles($theme-color, darken($theme-color, 7%));
+					@include button-styles($bg-color, $text-color, darken($bg-color, 7%));
 				}
 			}
 		}
@@ -261,6 +261,7 @@
 ///
 @mixin button-styles(
 	$bg-color    : theme('color', 'primary'),
+	$text-color  : white,
 	$border-color: null,
 	$outlined    : false
 ) {
@@ -270,7 +271,7 @@
 	/// OUTLINED STYLE
 	///
 	@if $outlined {
-		$textcolor: if(theme('type') == 'dark', white, $bg-color);
+		$textcolor: if(theme('type') == 'dark', $text-color, $bg-color);
 		background: transparent;
 		color     : $textcolor;
 		i {
@@ -281,22 +282,22 @@
 		}
 	} @else {
 		background: $bg-color;
-		color     : white;
+		color     : $text-color;
 		i {
-			color: white;
+			color: $text-color;
 		}
 	}
 	&:hover {
 		background: lighten($bg-color, 7.5%);
-		color     : white;
+		color     : $text-color;
 		i {
-			color: white;
+			color: $text-color;
 		}
 	}
 	&:active,
 	&.#{class('button', 'active')} {
 		background: lighten($bg-color, 7.5%);
-		color     : white;
+		color     : $text-color;
 		&:focus,
 		&:hover {
 			background: lighten($bg-color, 12.5%);

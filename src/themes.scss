@@ -107,9 +107,9 @@ $themes: (
 			'text'      : #c5cae1,
 			'background': #22232b,
 			'primary'   : #3266ec,
-			'success'   : #53970e,
-			'warning'   : #ac7c09,
-			'error'     : #bb2f48,
+			'success'   : #57A85C,
+			'warning'   : #ac9309,
+			'error'     : #DA4E3D,
 			'dark'      : #32343E
 		),
 		'border': (
@@ -144,7 +144,7 @@ $themes: (
 			),
 			'form': (
 				'input': (
-					'border-color'    : #656679,
+					'border-width'    : 0,
 					'background-color': #32343E
 				)
 			),

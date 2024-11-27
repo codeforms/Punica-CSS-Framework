@@ -99,6 +99,10 @@
 	@if theme($module, nth($keys, 1), nth($keys, 2)) {
 		$value : theme($module, nth($keys, 1), nth($keys, 2));
 
+		@if length($keys) > 3 {
+			@warn "[PUNICA] ::: MAXIMUM NESTING DEPTH IS 3.";
+		}
+
 		@if length($keys) > 2 {
 			$value: theme($module, nth($keys, 1), nth($keys, 2), nth($keys, 3));
 		}
@@ -122,6 +126,10 @@
 @function get_default_settings($keys) 
 {
 	$value: get.settings(nth($keys, 1), nth($keys, 2));
+
+	@if length($keys) > 3 {
+		@warn "[PUNICA] ::: MAXIMUM NESTING DEPTH IS 3.";
+	}
 
 	@if length($keys) > 2 {
 		$value: get.settings(nth($keys, 1), nth($keys, 2), nth($keys, 3));

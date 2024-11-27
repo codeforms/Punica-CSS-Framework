@@ -4,6 +4,7 @@
 /// 
 
 @use "sass:map" as map;
+@use "sass:list" as list;
 
 /// ======================================================
 	$theme-map: null !default;
@@ -13,9 +14,7 @@
 /// Get active theme's value by key(s) from the theme map
 ///
 /// @param {String} $node
-/// @param {String} $key
-/// @param {String} $child
-/// @param {String} $sub
+/// @param {List} $key(s)
 ///
 /// @example theme('name')
 /// @example theme('color', 'primary')
@@ -23,18 +22,22 @@
 ///
 /// @return mixed
 /// 
-@function theme($node, $key: null, $child: null, $sub: null) 
+@function theme($node, $keys...) 
 {
 	$value: if(map.has-key($theme-map, $node), map.get($theme-map, $node), null);
 
-	@if ($value != null) and $key {
-		$value: if(map.has-key($value, $key), map.get($value, $key), null);
+	@if list.length($keys) > 3 {
+		@warn "[PUNICA] ::: MAXIMUM NESTING DEPTH IS 3.";
+	}
 
-		@if ($value != null) and $child {
-			$value: if(map.has-key($value, $child), map.get($value, $child), null);
+	@if ($value != null and list.length($keys) > 0) {
+		$value: if(map.has-key($value, list.nth($keys, 1)), map.get($value, list.nth($keys, 1)), null);
 
-			@if ($value != null) and $sub {
-				$value: if(map.has-key($value, $sub), map.get($value, $sub), null);
+		@if ($value != null and list.length($keys) > 1) {
+			$value: if(map.has-key($value, list.nth($keys, 2)), map.get($value, list.nth($keys, 2)), null);
+
+			@if ($value != null and list.length($keys) > 2) {
+				$value: if(map.has-key($value, list.nth($keys, 3)), map.get($value, list.nth($keys, 3)), null);
 			}
 		}
 	}
