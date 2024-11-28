@@ -8,6 +8,7 @@
 @use "../../../Core/Global/Sass" as *;
 @use "../../../Core/Global/Mixins" as *;
 @use "../../../Core/Global/Colors" as color;
+@use "../../../Core/Theme/Getters" as *;
 @use "mixins" as *;
 
 @if enabled('elements', 'button') {
@@ -24,7 +25,7 @@
 		text-decoration : elements('button', 'text-decoration');
 		white-space     : elements('button', 'white-space');
 		color           : elements('button', 'color');
-		background      : elements('button', 'background');
+		background-color: elements('button', 'background');
 		background-image: elements('button', 'background-image');
 		outline         : elements('button', 'outline');
 		width           : elements('button', 'width');
@@ -44,20 +45,23 @@
 			background-image: none;
 		}
 		&:hover {
-			background: color.$grey;
+			background-color: color.$grey;
 		}
 		&:active,
 		&:focus {
-			background: elements('button', 'background');
+			background-color: elements('button', 'background');
 		}
 		&.#{class('button', 'active')} {
 			color           : elements('button', 'color');
-			background      : color.$grey;
+			background-color: color.$grey;
 			background-image: none;
 			text-decoration : none;
-			&:focus,
 			&:hover {
-				background: lighten(color.$grey, 5%);
+				background-color: lighten(color.$grey, 5%);
+			}
+			&:active,
+			&:focus {
+				background-color: lighten(color.$grey, 15%);
 			}
 		}
         &.#{class('button', 'inactive')} {
@@ -65,6 +69,34 @@
 			cursor          : default;
 			background-image: none;
 		}
+
+		///
+		/// PRELOADER BUTTON
+		///
+		@if features('elements', 'button', 'preloader') {
+	        &.#{class('button', 'preloader')} {
+				position      : relative;
+				color         : transparent !important;
+				pointer-events: elements('button', 'preloader', 'pointer-events');
+	        	&::after {
+					position     : absolute !important;
+					content      : "";
+					width        : elements('button', 'preloader', 'width');
+					height       : elements('button', 'preloader', 'height');
+					border-radius: elements('button', 'preloader', 'border-radius');
+					border-bottom: elements('button', 'preloader', 'border-bottom');
+					border-left  : elements('button', 'preloader', 'border-left');
+					border-right : elements('button', 'preloader', 'border-right');
+					border-top   : elements('button', 'preloader', 'border-top');
+					animation    : elements('button', 'preloader', 'animation');
+				}
+			}
+			@keyframes spin {
+				0% {transform: rotate(0deg);}
+				100% {transform: rotate(360deg);}
+			}
+		}
+
 		// Block Button
 		&.#{class('button', 'block')} {
 			display: flex;

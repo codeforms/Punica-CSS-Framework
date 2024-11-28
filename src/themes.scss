@@ -105,12 +105,12 @@ $themes: (
 		),
 		'color': (
 			'text'      : #c5cae1,
-			'background': #22232b,
+			'background': #222226,
 			'primary'   : #3266ec,
-			'success'   : #57A85C,
-			'warning'   : #ac9309,
-			'error'     : #DA4E3D,
-			'dark'      : #32343E
+			'success'   : #369138,
+			'warning'   : #c17f2a,
+			'error'     : #CC2B52,
+			'dark'      : #2f2d35
 		),
 		'border': (
 			'color' : #474a59,
@@ -124,16 +124,13 @@ $themes: (
 		// the all default variables in the options.scss API file.
 		'components': (
 			'menu': (
-				'background-color': lighten(#22232b, 2.5%),
-				'item': (
-					'hover-bg': darken(#22232b, 3.5%)
-				)
+				'background-color': lighten(#222226, 2.5%)
 			),
 			'tabnav': (
 				'border-bottom': 4px
 			),
 			'tooltip': (
-				'color'           : #22232b,
+				'color'           : #222226,
 				'font-weight'     : 500,
 				'background-color': #e1e6ff
 			)
@@ -145,11 +142,11 @@ $themes: (
 			'form': (
 				'input': (
 					'border-width'    : 0,
-					'background-color': #32343E
+					'background-color': #2f2d35
 				)
 			),
 			'table':(
-				'hover-bg': lighten(#22232b, 3%),
+				'hover-bg': lighten(#222226, 3%),
 				'caption' : (
 					'border-bottom': 4px solid #474a59
 				)

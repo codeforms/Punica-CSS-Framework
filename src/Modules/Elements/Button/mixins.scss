@@ -271,36 +271,39 @@
 	/// OUTLINED STYLE
 	///
 	@if $outlined {
-		$textcolor: if(theme('type') == 'dark', $text-color, $bg-color);
-		background: transparent;
-		color     : $textcolor;
+		$textcolor      : if(theme('type') == 'dark', $text-color, $bg-color);
+		background-color: transparent;
+		color           : $textcolor;
 		i {
 			color: $textcolor;
 		}
 		&:hover {
-			background: $bg-color !important;
+			background-color: $bg-color !important;
 		}
 	} @else {
-		background: $bg-color;
-		color     : $text-color;
+		background-color: $bg-color;
+		color           : $text-color;
 		i {
 			color: $text-color;
 		}
 	}
 	&:hover {
-		background: lighten($bg-color, 7.5%);
-		color     : $text-color;
+		background-color: lighten($bg-color, 7.5%);
+		color           : $text-color;
 		i {
 			color: $text-color;
 		}
 	}
 	&:active,
 	&.#{class('button', 'active')} {
-		background: lighten($bg-color, 7.5%);
-		color     : $text-color;
-		&:focus,
+		background-color: lighten($bg-color, 7.5%);
+		color           : $text-color;
 		&:hover {
-			background: lighten($bg-color, 12.5%);
+			background-color: lighten($bg-color, 12.5%);
+		}
+		&:active,
+		&:focus {
+			background-color: lighten($bg-color, 22.5%);
 		}
 	}
 	@content;

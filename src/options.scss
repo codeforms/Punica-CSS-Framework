@@ -858,12 +858,13 @@ $options: (
 	'button': (
 		'enabled': true,
 		'features': (
-			'group'   : true,
-			'vertical': true,
-			'styles'  : true,
-			'sizes'   : true,
-			'outlined': true,
-			'dropdown': true
+			'group'    : true,
+			'vertical' : true,
+			'styles'   : true,
+			'sizes'    : true,
+			'outlined' : true,
+			'dropdown' : true,
+			'preloader': true
 		),
 		'classnames': (
 			'name'              : 'button',
@@ -873,6 +874,7 @@ $options: (
 			'inactive'          : 'inactive',
 			'block'             : 'block',
 			'vertical'          : 'vertical',
+			'preloader'			: 'preloader',
 			// dropdown
 			'dropdown'          : 'dropdown',
 			'dropdown-right'    : 'right',
@@ -909,6 +911,17 @@ $options: (
 			'overflow'        : visible,
 			'icon'            : (
 				'font-size': 1.12rem
+			),
+			'preloader': (
+				'pointer-events': none,
+				'width'         : 1.3rem,
+				'height'        : 1.3rem,
+				'border-radius' : 50%,
+				'border-bottom' : 3px solid theme('color', 'primary'),
+				'border-left'   : 3px solid theme('color', 'primary'),
+				'border-right'  : 3px solid transparent,
+				'border-top'    : 3px solid transparent,
+				'animation'     : spin .55s linear infinite
 			),
 			'styles': (
 				(
