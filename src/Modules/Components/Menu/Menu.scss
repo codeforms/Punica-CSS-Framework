@@ -13,6 +13,7 @@
 
 @if enabled('components', 'menu') {
 	.#{class('menu', 'name')} {
+		font-family     : components('menu', 'font-family');
 		background-color: components('menu', 'background-color');
 		border-radius   : components('menu', 'border-radius');
 		margin          : components('menu', 'margin');

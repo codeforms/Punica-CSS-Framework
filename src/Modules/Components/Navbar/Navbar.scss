@@ -18,6 +18,7 @@
 		flex-wrap      : wrap;
 		align-items    : stretch;
 		justify-content: space-between;
+		font-family    : components('navbar', 'font-family');
 		min-height     : components('navbar', 'min-height');
 		background     : components('navbar', 'background');
 		color          : components('navbar', 'color');
@@ -131,6 +132,7 @@
 			box-shadow: none;
 			.#{class('button', 'name')},
 			.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+				font-family  : components('navbar', 'font-family');
 				background   : transparent;
 				border-color : transparent;
 				color        : components('navbar', 'color');
