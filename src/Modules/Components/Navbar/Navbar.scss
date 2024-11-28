@@ -133,7 +133,7 @@
 			.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 				background   : transparent;
 				border-color : transparent;
-				color        : white;
+				color        : components('navbar', 'color');
 				min-height   : 100%;
 				border-radius: 0;
 				border       : 0;
@@ -141,17 +141,17 @@
 					color: white;
 				}
 				&:hover {
-					background: darken(components('navbar', 'background'), 10.15%);
+					background: darken(components('navbar', 'background'), 5%);
 					border-radius: 0;
 				}
 				&:active,
 				&.#{class('button', 'active')} {
-					color     : white;
-					background: darken(components('navbar', 'background'), 7%);
+					color     : components('navbar', 'color');
+					background: darken(components('navbar', 'background'), 5%);
 					transition: components('button', 'transition');
 					&:hover {
 						transition: components('button', 'transition');
-						background: darken(components('navbar', 'background'), 10%);
+						background: darken(components('navbar', 'background'), 7%);
 					}
 				}
 			}

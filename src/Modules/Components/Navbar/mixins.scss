@@ -57,7 +57,7 @@
 				color: $text-color;
 			}
 			&:hover {
-				background: darken($bg-color, 10.15%);
+				background: darken($bg-color, 5%);
 			}
 		}
 	}
@@ -86,11 +86,11 @@
 					&:active,
 					&.#{class('button', 'active')} {
 						color: $text-color;
-						background: darken($bg-color, 7%);
+						background: darken($bg-color, 5%);
 						transition: components('button', 'transition');
 						&:hover {
 							transition: components('button', 'transition');
-							background: darken($bg-color, 10%);
+							background: darken($bg-color, 7%);
 						}
 					}
 				}

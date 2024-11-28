@@ -28,10 +28,10 @@ $themes: (
 			'text'      : #202123,
 			'background': white,
 			'primary'   : #3266ec,
-			'success'   : #53970e,
-			'warning'   : #ac7c09,
-			'error'     : #c11c3a,
-			'dark'      : #3f4359
+			'success'   : #369138,
+			'warning'   : #c17f2a,
+			'error'     : #CC2B52,
+			'dark'      : #313035
 		),
 		'border': (
 			'color' : #c6c6c6,
@@ -98,7 +98,7 @@ $themes: (
 		'type'      : 'dark', // light or dark (required*),
 		'typography': (
 			'font-family': 'Inter Tight',
-			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700&display=swap', // embed/import url
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;700&display=swap', // embed/import url
 			'font-size'  : 1rem,
 			'font-weight': 500,
 			'line-height': 1.7
@@ -110,7 +110,7 @@ $themes: (
 			'success'   : #369138,
 			'warning'   : #c17f2a,
 			'error'     : #CC2B52,
-			'dark'      : #2f2d35
+			'dark'      : #313035
 		),
 		'border': (
 			'color' : #474a59,
@@ -125,6 +125,9 @@ $themes: (
 		'components': (
 			'menu': (
 				'background-color': lighten(#222226, 2.5%)
+			),
+			'navbar': (
+				'color': #c5cae1
 			),
 			'tabnav': (
 				'border-bottom': 4px
@@ -141,8 +144,8 @@ $themes: (
 			),
 			'form': (
 				'input': (
-					'border-width'    : 0,
-					'background-color': #2f2d35
+					//'border-width'    : 0,
+					'background-color': #302f35
 				)
 			),
 			'table':(
