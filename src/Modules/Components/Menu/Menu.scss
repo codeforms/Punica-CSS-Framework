@@ -23,7 +23,7 @@
 		list-style      : components('menu', 'list-style');
 		box-shadow      : components('menu', 'box-shadow');
 		z-index         : components('menu', 'z-index');
-		// menu title
+		// .menu .title
 		.#{class('menu', 'title')} {
 			font-size     : components('menu', 'title', 'font-size');
 			min-height    : components('menu', 'title', 'min-height');
@@ -32,34 +32,40 @@
 			font-weight   : components('menu', 'title', 'font-weight');
 			letter-spacing: components('menu', 'title', 'letter-spacing');
 		}
-		// menu item
+		// .menu .item
 		.#{class('menu', 'item')} {
-			padding        : 0; // default container
-			position       : relative;
+			padding        : components('menu', 'item', 'padding'); // default container
+			position       : components('menu', 'item', 'position');
 			text-decoration: components('menu', 'item', 'text-decoration');
 			text-align     : components('menu', 'item', 'text-align');
+			// .menu .item > a
 			& > a {
-				display        : block;
-				text-decoration: components('menu', 'item', 'text-decoration');
-				color          : components('menu', 'item', 'color');
-				width          : components('menu', 'item', 'width');
-				padding        : components('menu', 'item', 'padding');
-				font-size      : components('menu', 'item', 'font-size');
-				font-weight    : components('menu', 'item', 'font-weight');
-				transition     : components('menu', 'item', 'transition');
+				display        : components('menu', 'item', 'href', 'display');
+				text-decoration: components('menu', 'item', 'href', 'text-decoration');
+				color          : components('menu', 'item', 'href', 'color');
+				width          : components('menu', 'item', 'href', 'width');
+				padding        : components('menu', 'item', 'href', 'padding');
+				font-size      : components('menu', 'item', 'href', 'font-size');
+				font-weight    : components('menu', 'item', 'href', 'font-weight');
+				transition     : components('menu', 'item', 'href', 'transition');
+				// .menu .item > a:hover
 				&:hover {
 					color           : components('menu', 'item', 'hover', 'color');
-					transition      : components('menu', 'item', 'transition');
+					transition      : components('menu', 'item', 'href', 'transition');
 					background-color: components('menu', 'item', 'hover', 'background-color');
 				}
+				// .menu .item > a:active
+				// .menu .item > a:focus
+				// .menu .item > a.active
 				&:active,
 				&:focus,
 				&.#{class('menu', 'active')} {
 					color           : components('menu', 'item', 'hover', 'color');
-					transition      : components('menu', 'item', 'transition');
+					transition      : components('menu', 'item', 'href', 'transition');
 					background-color: components('menu', 'item', 'hover', 'background-color');
 				}
 			}
+			// .menu .item i
 			i {
 				@if theme('type') == 'light' {
 					color: darken(color.$grey, 28%);
@@ -70,11 +76,12 @@
 				margin-right  : components('menu', 'icon', 'margin-right');
 				vertical-align: components('menu', 'icon', 'vertical-align');
 			}
+			// .menu .item .menu
 			.#{class('menu', 'name')} {
 				padding: components('menu', 'item', 'sub-menu', 'padding');
 			}
 		}
-		// menu badge
+		// .menu .badge
 		.#{class('menu', 'badge')} {
 			position : absolute;
 			right    : components('menu', 'badge', 'right');
@@ -82,12 +89,13 @@
 			padding  : components('menu', 'badge', 'padding');
 			font-size: components('menu', 'badge', 'font-size');
 		}
-		// small menu
+		// .small.menu
 		&.#{class('menu', 'small')} > .#{class('menu', 'item')} a {
-			font-size: components('menu', 'item', 'small-menu', 'font-size');
+			font-size: components('menu', 'small', 'font-size');
 		}
-		// divided menu
+		// .divided.menu
 		&.#{class('menu', 'divided')} {
+			// .divided.menu .item
 			.#{class('menu', 'item')} {
 				border-bottom: set-border();
 				&:last-child {

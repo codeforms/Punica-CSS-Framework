@@ -21,6 +21,7 @@
 			box-shadow     : components('label', 'box-shadow');
 			border         : components('label', 'border');
 			@include set-size(components('label', 'font-size'), components('label', 'padding'));
+			// .label > i
 			>i {
 				vertical-align: components('label', 'icon', 'vertical-align');
 			}

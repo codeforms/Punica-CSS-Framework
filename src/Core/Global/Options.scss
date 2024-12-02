@@ -97,7 +97,7 @@
 @function set_variable($module, $keys...) 
 {
 	@if length($keys) > 4 {
-		@warn "[PUNICA]:: Maximum Nesting Depth is 4.";
+		@warn "[PUNICA] Maximum Nesting Depth is 4.";
 	}
 
 	@if theme($module, nth($keys, 1), nth($keys, 2)) {

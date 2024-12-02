@@ -148,15 +148,19 @@ $themes: (
 				)
 			),
 			'table':(
-				'hover-bg': lighten(#222226, 3%),
+				'hover': (
+					'background-color': lighten(#222226, 3%),
+				),
 				'caption' : (
 					'border-bottom': 4px solid #474a59
 				)
 			),
 			'typography': (
 				'href': (
-					'color'      : #5580ff,
-					'hover-color': lighten(#5580ff, 3%)
+					'color': #5580ff,
+					'hover': (
+						'color': lighten(#5580ff, 3%)
+					)
 				)
 			)
 		)

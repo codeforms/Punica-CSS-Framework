@@ -432,24 +432,30 @@ $options: (
 				'letter-spacing': -.015rem
 			),
 			'item': (
-				'color'          : theme('color', 'text'),
-				'width'          : 100%,
+				'position'       : relative,
+				'padding'        : 0,
 				'text-align'     : left,
-				'padding'        : .28rem .9rem,
-				'font-size'      : 1em,
-				'font-weight'    : theme('typography', 'font-weight'),
-				'transition'     : background .15s,
 				'text-decoration': none,
+				'href': (
+					'display'        : block,
+					'color'          : theme('color', 'text'),
+					'width'          : 100%,
+					'padding'        : .28rem .9rem,
+					'font-size'      : 1em,
+					'font-weight'    : theme('typography', 'font-weight'),
+					'text-decoration': none,
+					'transition'     : background .15s,
+				),
 				'hover': (
 					'color'           : theme('color', 'text'),
 					'background-color': color.$grey,
 				),
-				'small-menu': (
-					'font-size': .945em
-				),
 				'sub-menu': (
 					'padding': .4rem // padding of sub items
 				)
+			),
+			'small': (
+				'font-size': .945em // small menu font-size
 			),
 			'icon': (
 				'font-size'     : 1.2rem,
