@@ -61,11 +61,11 @@
 					color: theme('color', 'primary');
 					&::after {
 						position : absolute;
-						content  : components('process', 'symbol'); // HTML Symbols
-						top      : calc(-15px - #{components('process', 'symbol-size')});
+						content  : components('process', 'indicator', 'content');
+						top      : calc(-15px - #{components('process', 'indicator', 'font-size')});
 						left     : calc(50% - ((#{components('process', 'stickbar', 'width')} * 10) / 2));
 						color    : theme('color', 'primary');
-						font-size: components('process', 'symbol-size');
+						font-size: components('process', 'indicator', 'font-size');
 					}
 				}
 				&~.#{class('process', 'item')} {

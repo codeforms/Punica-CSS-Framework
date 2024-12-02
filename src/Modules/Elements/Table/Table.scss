@@ -35,10 +35,10 @@
 				tr,
 				tbody tr {
 					&.#{class('table', 'active')} {
-						background-color: elements('table', 'hover-bg');
+						background-color: elements('table', 'striped', 'background-color');
 					}
 					&:nth-of-type(odd) {
-						background-color: elements('table', 'hover-bg');
+						background-color: elements('table', 'striped', 'background-color');
 					}
 				}
 			}
@@ -51,7 +51,7 @@
 				tr,
 				tbody tr {
 					&:hover {
-						background-color: elements('table', 'hover-bg');
+						background-color: elements('table', 'hover', 'background-color');
 						color           : theme('color', 'text');
 					}
 				}
@@ -62,7 +62,7 @@
 			transition: all 0.3s;
 			&.#{class('table', 'active')},
 			&.#{class('table', 'active')}:hover {
-				background-color: elements('table', 'hover-bg');
+				background-color: elements('table', 'hover', 'background-color');
 			}
 		}
 		td,

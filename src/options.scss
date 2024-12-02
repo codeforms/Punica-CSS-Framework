@@ -154,13 +154,19 @@ $options: (
 		'settings': (
 			'font-size'      : 1rem,
 			'font-weight'    : theme('typography', 'font-weight'),
-			'active-weight'  : bold,
 			'color'          : theme('color', 'text'),
-			'active-color'   : theme('color', 'primary'),
-			'seperator'      : "\276D", // HTML Symbols
-			'padding'        : .3em, // seperator padding
-			'seperator-size' : 1rem,
 			'text-decoration': none,
+			'seperator': (
+				'content'  : "\276D",
+				'color'    : theme('color', 'primary'),
+				'font-size': 1rem, // HTML Symbols
+				'padding'  : .3em,
+				'cursor'   : default
+			),
+			'active': (
+				'font-weight': bold,
+				'color'      : theme('color', 'primary'),
+			),
 			'sizes': (
 				(
 			    	'small', // size name (class)
@@ -432,12 +438,18 @@ $options: (
 				'padding'        : .28rem .9rem,
 				'font-size'      : 1em,
 				'font-weight'    : theme('typography', 'font-weight'),
-				'small-size'     : .945em,
 				'transition'     : background .15s,
-				'sub-padding'    : .4rem, // padding of sub items
 				'text-decoration': none,
-				'hover-color'    : theme('color', 'text'),
-				'hover-bg'       : color.$grey,
+				'hover': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey,
+				),
+				'small-menu': (
+					'font-size': .945em
+				),
+				'sub-menu': (
+					'padding': .4rem // padding of sub items
+				)
 			),
 			'icon': (
 				'font-size'     : 1.2rem,
@@ -478,7 +490,9 @@ $options: (
 			'background'    : theme('color', 'primary'),
 			'width'         : 100%,
 			'min-height'    : 80px,
-			'button-padding': .935rem 1.4rem,
+			'button': (
+				'padding': .935rem 1.4rem
+			),
 			'brand'         : (
 				'padding'     : 0,
 				'margin-right': 1rem,
@@ -621,8 +635,10 @@ $options: (
 		'settings': (
 			'margin'     : 3em 0,
 			'min-height' : 4rem, // for each item
-			'symbol'     : "\2756", // HTML Symbols
-			'symbol-size': 1.8rem,
+			'indicator': (
+				'content'  : "\2756", // HTML Symbols,
+				'font-size': 1.8rem,
+			),
 			'stepbar'    : (
 				'height': 6px,
 			),
@@ -872,6 +888,7 @@ $options: (
 			'name'              : 'button',
 			'group'             : 'buttons',
 			'outlined'          : 'outlined',
+			'rounded'			: 'rounded',
 			'active'            : 'active',
 			'inactive'          : 'inactive',
 			'block'             : 'block',
@@ -915,15 +932,16 @@ $options: (
 				'font-size': 1.12rem
 			),
 			'preloader': (
-				'pointer-events': none,
-				'width'         : 1.3rem,
-				'height'        : 1.3rem,
-				'border-radius' : 50%,
-				'border-bottom' : 3px solid theme('color', 'primary'),
-				'border-left'   : 3px solid theme('color', 'primary'),
-				'border-right'  : 3px solid transparent,
-				'border-top'    : 3px solid transparent,
-				'animation'     : spin .55s linear infinite
+				'pointer-events'    : none,
+				'width'             : 1.3rem,
+				'height'            : 1.3rem,
+				'border-radius'     : 50%,
+				'border-width'      : 3px,
+				'border-style'      : solid,
+				'indicator-color'   : theme('color', 'primary'), // border color
+				'border-right-color': transparent,
+				'border-top-color'  : transparent,
+				'animation'         : spin .55s linear infinite
 			),
 			'styles': (
 				(
@@ -1019,12 +1037,18 @@ $options: (
 				'border-width'    : theme('border', 'width'),
 				'border-style'    : theme('border', 'style'),
 				'border-radius'   : theme('border', 'radius'),
-				'transition'      : .35s,
-				'outline-color'   : theme('color', 'primary'),
-				'outline-width'   : 2px,
 				'box-shadow'      : none,
 				'width'           : 100%,
-				'max-width'       : 100%
+				'max-width'       : 100%,
+				'transition'      : .35s,
+				'outline-color'   : transparent,
+				'outline-width'   : 2px,
+				'focus': (
+					'color'           : inherit,
+					'background-color': initial,
+					'outline-color'   : theme('color', 'primary'),
+					'outline-width'   : 2px
+				),
 			),
 			'items': (
 				'margin'     : 0,
@@ -1181,7 +1205,12 @@ $options: (
 			'border-spacing' : 0,
 			'border-collapse': collapse,
 			'position'       : relative,
-			'hover-bg'       : color.$grey,
+			'hover': (
+				'background-color': color.$grey
+			),
+			'striped': (
+				'background-color': color.$grey
+			),
 			'td': (
 				'padding': .313rem .7rem,
 			),
@@ -1217,12 +1246,14 @@ $options: (
 				'color'      : theme('color', 'text')
 			),
 			'href': (
-				'color'           : theme('color', 'primary'),
-				'hover-color'     : theme('color', 'primary'),
-				'text-decoration' : none,
-				'hover-decoration': underline,
-				'cursor'          : pointer,
-				'transition'      : .15s ease-out,
+				'color'          : theme('color', 'primary'),
+				'cursor'         : pointer,
+				'transition'     : .15s ease-out,
+				'text-decoration': none,
+				'hover': (
+					'color'          : theme('color', 'primary'),
+					'text-decoration': underline,
+				)
 			),
 			'placeholder': (
 				'opacity': .5,

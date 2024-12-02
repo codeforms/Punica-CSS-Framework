@@ -23,8 +23,12 @@
 ///
 @function options($keys...) 
 {
+	@if length($keys) > 4 {
+		@warn "[PUNICA]:: Maximum Nesting Depth is 4.";
+	}
+
 	@if map.get(option.$options, nth($keys, 1)) == null {
-		@warn "[PUNICA] ::: INVALID KEY: #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA]:: INVALID KEY: #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
@@ -34,22 +38,22 @@
 		@return $value;
 	}
 
-	@if length($keys) > 3 {
-		@warn "[PUNICA] ::: MAXIMUM NESTING DEPTH IS 3.";
-	}
-
 	$value: map.get($value, nth($keys, 2));
 
 	@if $value == null {
-		@warn "[PUNICA] ::: INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA]:: INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
 	@if length($keys) > 2 {
 		$value: map.get($value, nth($keys, 3));
 		@if $value == null {
-			@warn "[PUNICA] ::: INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
+			@warn "[PUNICA]:: INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
 			@return null;
+		}
+
+		@if length($keys) > 3 {
+			$value: map.get($value, nth($keys, 4));
 		}
 	}
 
@@ -73,7 +77,7 @@
 	$settings: map.get(map.get(options($node), 'settings'), nth($keys, 1));
 
 	@if $settings == null {
-		@warn "[PUNICA] ::: INVALID KEY: #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA]:: INVALID KEY: #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 	
@@ -81,16 +85,23 @@
 		@return $settings;
 	}
 
-	@if length($keys) > 3 {
-		@warn "[PUNICA] ::: MAXIMUM NESTING DEPTH IS 3.";
-	}
+	$settings : map.get($settings, nth($keys, 2));
 
-	@if map.get($settings, nth($keys, 2)) == null {
-		@warn "[PUNICA] ::: INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
+	@if $settings == null {
+		@warn "[PUNICA]:: INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
-	@return map.get($settings, nth($keys, 2));
+	@if length($keys) > 2 {
+		$settings : map.get($settings, nth($keys, 3));
+
+		@if $settings == null {
+			@warn "[PUNICA]:: INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
+			@return null;
+		}
+	}
+
+	@return $settings;
 }
 
 ///

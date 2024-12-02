@@ -12,29 +12,31 @@
 
 @if enabled('elements', 'form') {
 	@include mixins.form-inputs() {
-		font-family       : elements('form', 'input', 'font-family');
-		box-sizing        : elements('form', 'input', 'box-sizing');
-		background-color  : elements('form', 'input', 'background-color');
-		border-width      : elements('form', 'input', 'border-width');
-		border-style      : elements('form', 'input', 'border-style');
-		border-color      : elements('form', 'input', 'border-color');
-		height            : elements('form', 'input', 'height');
-		border-radius     : elements('form', 'input', 'border-radius');
-		outline           : elements('form', 'input', 'outline-width') solid transparent;
-		box-shadow        : elements('form', 'input', 'box-shadow');
-		outline-offset    : -#{elements('form', 'input', 'outline-width')};
-		padding           : elements('form', 'input', 'padding');
-		width             : elements('form', 'input', 'width');
-		max-width         : elements('form', 'input', 'max-width');
-		color             : elements('form', 'input', 'color');
-		font-size         : elements('form', 'input', 'font-size');
-		font-weight       : elements('form', 'input', 'font-weight');
-		transition        : elements('form', 'input', 'transition');
+		font-family     : elements('form', 'input', 'font-family');
+		box-sizing      : elements('form', 'input', 'box-sizing');
+		background-color: elements('form', 'input', 'background-color');
+		border-width    : elements('form', 'input', 'border-width');
+		border-style    : elements('form', 'input', 'border-style');
+		border-color    : elements('form', 'input', 'border-color');
+		height          : elements('form', 'input', 'height');
+		border-radius   : elements('form', 'input', 'border-radius');
+		outline         : elements('form', 'input', 'outline-width') solid transparent;
+		outline-color   : elements('form', 'input', 'outline-color');
+		outline-offset  : -#{elements('form', 'input', 'outline-width')};
+		box-shadow      : elements('form', 'input', 'box-shadow');
+		padding         : elements('form', 'input', 'padding');
+		width           : elements('form', 'input', 'width');
+		max-width       : elements('form', 'input', 'max-width');
+		color           : elements('form', 'input', 'color');
+		font-size       : elements('form', 'input', 'font-size');
+		font-weight     : elements('form', 'input', 'font-weight');
+		transition      : elements('form', 'input', 'transition');
 		&:focus {
-			outline-color   : elements('form', 'input', 'outline-color');
-			outline-width   : elements('form', 'input', 'outline-width');
-			outline-offset  : -#{elements('form', 'input', 'outline-width')};
-			background-color: elements('form', 'input', 'background-color');
+			outline-color   : elements('form', 'input', 'focus', 'outline-color');
+			outline-width   : elements('form', 'input', 'focus', 'outline-width');
+			outline-offset  : -#{elements('form', 'input', 'focus', 'outline-width')};
+			background-color: elements('form', 'input', 'focus', 'background-color');
+			color           : elements('form', 'input', 'focus', 'color');
 			z-index         : 0;
 		}
 		///

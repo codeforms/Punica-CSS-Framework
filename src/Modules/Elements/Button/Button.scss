@@ -64,12 +64,16 @@
 				background-color: lighten(color.$grey, 15%);
 			}
 		}
+		// inactive button
         &.#{class('button', 'inactive')} {
 			pointer-events  : none;
 			cursor          : default;
 			background-image: none;
 		}
-
+		// rounded button
+		&.#{class('button', 'rounded')} {
+			border-radius: 500px;
+		}
 		///
 		/// PRELOADER BUTTON
 		///
@@ -79,16 +83,17 @@
 				color         : transparent !important;
 				pointer-events: elements('button', 'preloader', 'pointer-events');
 	        	&::after {
-					position     : absolute !important;
-					content      : "";
-					width        : elements('button', 'preloader', 'width');
-					height       : elements('button', 'preloader', 'height');
-					border-radius: elements('button', 'preloader', 'border-radius');
-					border-bottom: elements('button', 'preloader', 'border-bottom');
-					border-left  : elements('button', 'preloader', 'border-left');
-					border-right : elements('button', 'preloader', 'border-right');
-					border-top   : elements('button', 'preloader', 'border-top');
-					animation    : elements('button', 'preloader', 'animation');
+					position          : absolute !important;
+					content           : "";
+					width             : elements('button', 'preloader', 'width');
+					height            : elements('button', 'preloader', 'height');
+					border-width      : elements('button', 'preloader', 'border-width');
+					border-style      : elements('button', 'preloader', 'border-style');
+					border-color      : elements('button', 'preloader', 'indicator-color');
+					border-radius     : elements('button', 'preloader', 'border-radius');
+					border-right-color: elements('button', 'preloader', 'border-right-color');
+					border-top-color  : elements('button', 'preloader', 'border-top-color');
+					animation         : elements('button', 'preloader', 'animation');
 				}
 			}
 			@keyframes spin {
@@ -96,7 +101,6 @@
 				100% {transform: rotate(360deg);}
 			}
 		}
-
 		// Block Button
 		&.#{class('button', 'block')} {
 			display: flex;

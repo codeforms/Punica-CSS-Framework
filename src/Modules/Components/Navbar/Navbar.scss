@@ -166,7 +166,7 @@
 		.#{class('button', 'name')},
 		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 			font-size  : components('navbar', 'font-size');
-			padding    : components('navbar', 'button-padding');
+			padding    : components('navbar', 'button', 'padding');
 			font-weight: components('navbar', 'font-weight');
 		}
 		///

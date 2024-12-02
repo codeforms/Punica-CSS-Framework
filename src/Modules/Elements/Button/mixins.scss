@@ -280,6 +280,10 @@
 		&:hover {
 			background-color: $bg-color !important;
 		}
+		&:active,
+		&:focus {
+			background-color: lighten($bg-color, 7.5%) !important;
+		}
 	} @else {
 		background-color: $bg-color;
 		color           : $text-color;

@@ -66,8 +66,8 @@ a {
 	transition     : elements('typography', 'href', 'transition');
 	&:focus,
 	&:hover {
-		color          : elements('typography', 'href', 'hover-color');
-		text-decoration: elements('typography', 'href', 'hover-decoration');
+		color          : elements('typography', 'href', 'hover', 'color');
+		text-decoration: elements('typography', 'href', 'hover', 'text-decoration');
 		transition     : elements('typography', 'href', 'transition');
 	}
 }

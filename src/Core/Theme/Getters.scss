@@ -24,11 +24,11 @@
 /// 
 @function theme($node, $keys...) 
 {
-	$value: if(map.has-key($theme-map, $node), map.get($theme-map, $node), null);
-
-	@if list.length($keys) > 3 {
-		@warn "[PUNICA] ::: MAXIMUM NESTING DEPTH IS 3.";
+	@if list.length($keys) > 4 {
+		@warn "[PUNICA]:: Maximum Nesting Depth is 4.";
 	}
+
+	$value: if(map.has-key($theme-map, $node), map.get($theme-map, $node), null);
 
 	@if ($value != null and list.length($keys) > 0) {
 		$value: if(map.has-key($value, list.nth($keys, 1)), map.get($value, list.nth($keys, 1)), null);
@@ -39,6 +39,9 @@
 			@if ($value != null and list.length($keys) > 2) {
 				$value: if(map.has-key($value, list.nth($keys, 3)), map.get($value, list.nth($keys, 3)), null);
 			}
+				@if ($value != null and list.length($keys) > 3) {
+					$value: if(map.has-key($value, list.nth($keys, 4)), map.get($value, list.nth($keys, 4)), null);
+				}
 		}
 	}
 

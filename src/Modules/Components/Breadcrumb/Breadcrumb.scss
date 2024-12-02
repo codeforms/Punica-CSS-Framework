@@ -22,19 +22,20 @@
 			&:focus,&:hover,&:active,&.active {
 				color: theme('color', 'primary');
 			}
+			// seperator
 			&::after {
-				content  : components('breadcrumb', 'seperator');
-				color    : theme('color', 'primary');
-				font-size: components('breadcrumb', 'seperator-size');
-				cursor   : default;
-				padding  : components('breadcrumb', 'padding'); // seperator padding
+				content  : components('breadcrumb', 'seperator', 'content');
+				color    : components('breadcrumb', 'seperator', 'color');
+				font-size: components('breadcrumb', 'seperator', 'font-size');
+				cursor   : components('breadcrumb', 'seperator', 'cursor');
+				padding  : components('breadcrumb', 'seperator', 'padding');
 			}
 			&:first-child {
 				margin-left: 0;
 			}
 			&.#{class('breadcrumb', 'active')} {
-				color      : components('breadcrumb', 'active-color');
-				font-weight: components('breadcrumb', 'active-weight');
+				color      : components('breadcrumb', 'active', 'color');
+				font-weight: components('breadcrumb', 'active', 'font-weight');
 				&::after {
 					content: none;
 				}

@@ -48,16 +48,16 @@
 				font-weight    : components('menu', 'item', 'font-weight');
 				transition     : components('menu', 'item', 'transition');
 				&:hover {
-					color           : components('menu', 'item', 'hover-color');
+					color           : components('menu', 'item', 'hover', 'color');
 					transition      : components('menu', 'item', 'transition');
-					background-color: components('menu', 'item', 'hover-bg');
+					background-color: components('menu', 'item', 'hover', 'background-color');
 				}
 				&:active,
 				&:focus,
 				&.#{class('menu', 'active')} {
-					color           : components('menu', 'item', 'hover-color');
+					color           : components('menu', 'item', 'hover', 'color');
 					transition      : components('menu', 'item', 'transition');
-					background-color: components('menu', 'item', 'hover-bg');
+					background-color: components('menu', 'item', 'hover', 'background-color');
 				}
 			}
 			i {
@@ -71,7 +71,7 @@
 				vertical-align: components('menu', 'icon', 'vertical-align');
 			}
 			.#{class('menu', 'name')} {
-				padding: components('menu', 'item', 'sub-padding');
+				padding: components('menu', 'item', 'sub-menu', 'padding');
 			}
 		}
 		// menu badge
@@ -84,7 +84,7 @@
 		}
 		// small menu
 		&.#{class('menu', 'small')} > .#{class('menu', 'item')} a {
-			font-size: components('menu', 'item', 'small-size');
+			font-size: components('menu', 'item', 'small-menu', 'font-size');
 		}
 		// divided menu
 		&.#{class('menu', 'divided')} {
