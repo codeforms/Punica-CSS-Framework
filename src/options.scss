@@ -157,9 +157,9 @@ $options: (
 			'color'          : theme('color', 'text'),
 			'text-decoration': none,
 			'seperator': (
-				'content'  : "\276D",
+				'content'  : "\276D", // HTML Symbols
 				'color'    : theme('color', 'primary'),
-				'font-size': 1rem, // HTML Symbols
+				'font-size': 1rem,
 				'padding'  : .3em,
 				'cursor'   : default
 			),
