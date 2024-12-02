@@ -8,6 +8,6 @@
 ///
 @function theme-not-found($theme) 
 {
-    $error: "Invalid theme name: #{$theme}. Punica's theme map does not contains a value associated with #{$theme}. Please check the 'themes.scss' file.";
+    $error: "[PUNICA]:: Invalid theme name: [#{$theme}]. Punica's theme map does not contains a key name associated with #{$theme}. Please check the 'themes.scss' file.";
     @error $error;
 }
