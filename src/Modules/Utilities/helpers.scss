@@ -13,6 +13,10 @@
 	@include set_utils('align-items');
 	@include set_utils('align-self');
 	@include set_utils('appearance');
+	@include set_utils('background-clip', true);
+	@include set_utils('background-origin', true);
+	@include set_utils('background-position', true);
+	@include set_utils('background-repeat');
 	@include set_utils('background-color', true);
 	@include color_palette(utils('background-color'));
 	@include set_utils('border-color', true);
@@ -22,6 +26,7 @@
 	@include set_border_sides();
 	@include set_utils('caret-color', true);
 	@include set_utils('color', true);
+	@include set_utils('columns');
 	@include color_palette(utils('color'));
 	@include set_utils('cursor');
 	@include set_utils('filter', true);
@@ -35,6 +40,7 @@
 	@include set_utils('font-size', true);
 	@include set_utils('font-style');
 	@include set_utils('font-weight');
+	@include utils_with_specs(utils('gap'));
 	@include set_utils('height', true);
 	@include set_inset_helper('inset');
 	@include set_utils('justify-content');

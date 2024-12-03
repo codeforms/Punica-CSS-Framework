@@ -105,6 +105,111 @@ $helpers: (
 		'values'     : (auto, none)
 	),
 	///
+	/// Background Clip
+	/// The background-clip property defines 
+	/// how far the background (color or image)
+	/// should extend within an element.
+	///
+	/// @example bg-clip-border
+	///
+	'background-clip': (
+		'enabled'    : true, // true or false
+		'property'   : 'background-clip', // css property name (don't change it !)
+		'prefix'     : 'bg-clip-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (
+			// class name (suffix), value
+			("border", border-box),
+			("padding", padding-box),
+			("content", content-box)
+		)
+	),
+	///
+	/// Background Origin
+	/// The background-origin property specifies 
+	/// the origin position (the background positioning area) 
+	/// of a background image.
+	///
+	/// @example bg-origin-padding
+	///
+	'background-origin': (
+		'enabled'    : true, // true or false
+		'property'   : 'background-origin', // css property name (don't change it !)
+		'prefix'     : 'bg-origin-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (
+			// class name (suffix), value
+			("border", border-box),
+			("padding", padding-box),
+			("content", content-box)
+		)
+	),
+	///
+	/// Background Position
+	/// The background-position property
+	/// sets the starting position of a background image.
+	///
+	/// @example bg-left-bottom
+	///
+	'background-position': (
+		'enabled'    : true, // true or false
+		'property'   : 'background-position', // css property name (don't change it !)
+		'prefix'     : 'bg-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (
+			// class name (suffix), value
+			("left", left),
+			("left-top", left top),
+			("left-center", left center),
+			("left-bottom", left bottom),
+			("right", right),
+			("right-top", right top),
+			("right-center", right center),
+			("right-bottom", right bottom),
+			("center", center),
+			("center-top", center top),
+			("center-bottom", center bottom)
+		)
+	),
+	///
+	/// Background Repeat
+	/// The background-repeat property sets 
+	/// if/how a background image will be repeated.
+	///
+	/// @example bg-repeat
+	///
+	'background-repeat': (
+		'enabled'    : true, // true or false
+		'property'   : 'background-repeat', // css property name (don't change it !)
+		'prefix'     : 'bg-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (repeat,repeat-x,repeat-y,no-repeat,space,round)
+	),
+	///
+	/// Background Size
+	/// The background-size property specifies
+	/// the size of the background images.
+	///
+	/// @example bg-repeat
+	///
+	'background-size': (
+		'enabled'    : true, // true or false
+		'property'   : 'background-size', // css property name (don't change it !)
+		'prefix'     : 'bg-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (auto,cover,contain)
+	),
+	///
 	/// Background Colors
 	/// The background-color property sets 
 	/// the background color of an element. The background of 
@@ -280,6 +385,24 @@ $helpers: (
 			("error", theme('color', 'error')),
 			("dark", theme('color', 'dark'))
 		)
+	),
+	/// 
+	/// Columns
+	/// 
+	/// The columns property specifies the 
+	/// number of columns within an element.
+	/// 
+	/// @example columns-auto
+	/// @example columns-4
+	///
+	'columns': (
+		'enabled'    : true, // true or false
+		'property'   : 'columns', // css property name (don't change it !)
+		'prefix'     : 'columns-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (auto,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
 	),
 	/// 
 	/// Cursor
@@ -512,6 +635,44 @@ $helpers: (
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'specs'      : null, // for extra variables
 		'values'     : (100,200,300,400,500,600,700,800,900,normal,bold,bolder,lighter)
+	),
+	/// 
+	/// Gap
+	/// 
+	/// The gap property defines the size of the gap 
+	/// between the rows and between the columns
+	/// in flexbox, grid or multi-column layout.
+	/// 
+	/// @example gap-0
+	/// @example gap-x-24
+	/// @example gap-y-8
+	///
+	'gap': (
+		'enabled'    : true, // true or false
+		'property'   : 'gap', // css property name (don't change it !)
+		'prefix'     : 'gap', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : (
+			// class name (suffix), value
+			(0, 0),
+			(1, 1px),
+			(2, 0.125rem), // 2px
+			(4, 0.25rem), // 4px
+			(6, 0.375rem), // 6px
+			(8, 0.5rem), // 8px
+			(10, 0.625rem), // 10px
+			(16, 1rem), // 16px
+			(24, 1.5rem), // 24px
+			(32, 2rem) // 32px
+
+		),
+		'values': (
+			// infix, property
+			("-", gap),
+			("-x-", column-gap),
+			("-y-", row-gap)
+		)
 	),
 	/// 
 	/// Height
