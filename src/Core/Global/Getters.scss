@@ -77,7 +77,7 @@
 	$settings: map.get(map.get(options($node), 'settings'), nth($keys, 1));
 
 	@if $settings == null {
-		@warn "[PUNICA]:: INVALID KEY: #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA] INVALID KEY: #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 	
@@ -88,7 +88,7 @@
 	$settings : map.get($settings, nth($keys, 2));
 
 	@if $settings == null {
-		@warn "[PUNICA]:: INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn "[PUNICA] INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
 		@return null;
 	}
 
@@ -96,7 +96,7 @@
 		$settings : map.get($settings, nth($keys, 3));
 
 		@if $settings == null {
-			@warn "[PUNICA]:: INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
+			@warn "[PUNICA] INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
 			@return null;
 		}
 	}
