@@ -38,10 +38,11 @@
 
 			@if ($value != null and list.length($keys) > 2) {
 				$value: if(map.has-key($value, list.nth($keys, 3)), map.get($value, list.nth($keys, 3)), null);
-			}
+
 				@if ($value != null and list.length($keys) > 3) {
 					$value: if(map.has-key($value, list.nth($keys, 4)), map.get($value, list.nth($keys, 4)), null);
 				}
+			}
 		}
 	}
 	

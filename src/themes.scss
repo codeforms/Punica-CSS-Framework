@@ -42,7 +42,7 @@ $themes: (
 		'shadow': 0 .25em .5em 0 rgba(0, 0, 0, 0.14),
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
-		// the all default variables in the options.scss API file.
+		// the all default settings in the options.scss API file.
 		'classnames': (
 			/*
 			'panel': (
@@ -75,7 +75,7 @@ $themes: (
 			)
 		),
 		// You can use this section to override/change the 
-		// all default utility variables in the 
+		// all default variable of utilities in the 
 		// Modules/Utilities/index.scss API file.
 		'utilities': (
 			//'enabled': false, // this option disables all helpers (default true).
@@ -121,7 +121,7 @@ $themes: (
 		'shadow': 0 .2em 1em 0 rgba(0,0,0,.17),
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
-		// the all default variables in the options.scss API file.
+		// the all default settings in the options.scss API file.
 		'components': (
 			'menu': (
 				'background-color': lighten(#222226, 2.5%)
