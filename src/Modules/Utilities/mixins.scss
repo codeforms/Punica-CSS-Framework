@@ -148,14 +148,15 @@
 	$enabled: utils('border', 'enabled');
 	$borders: utils('border', 'specs');
 	$unit   : utils('border', 'unit');
+	$prefix : utils('border', 'prefix');
 
 	@if $enabled {
 		@each $class, $border in $borders {
-			.border-x-#{$class} {
+			.#{$prefix}-x-#{$class} {
 				border-left-width: #{$border}#{$unit} !important;
 				border-right-width: #{$border}#{$unit} !important;
 			}
-			.border-y-#{$class} {
+			.#{$prefix}-y-#{$class} {
 				border-top-width: #{$border}#{$unit} !important;
 				border-bottom-width: #{$border}#{$unit} !important;
 			}
