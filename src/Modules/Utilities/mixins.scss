@@ -147,16 +147,17 @@
 {
 	$enabled: utils('border', 'enabled');
 	$borders: utils('border', 'specs');
+	$unit   : utils('border', 'unit');
 
 	@if $enabled {
 		@each $class, $border in $borders {
 			.border-x-#{$class} {
-				border-left-width: #{$border}px !important;
-				border-right-width: #{$border}px !important;
+				border-left-width: #{$border}#{$unit} !important;
+				border-right-width: #{$border}#{$unit} !important;
 			}
 			.border-y-#{$class} {
-				border-top-width: #{$border}px !important;
-				border-bottom-width: #{$border}px !important;
+				border-top-width: #{$border}#{$unit} !important;
+				border-bottom-width: #{$border}#{$unit} !important;
 			}
 		}
 	}

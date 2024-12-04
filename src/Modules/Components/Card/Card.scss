@@ -16,7 +16,7 @@
 		display  : flex;
 		flex-wrap: wrap;
 
-		// hover effect for cards
+		// hover effect for all cards
 		@if features('components', 'card', 'hovered') {
 			// .hovered.cards
 			&.#{class('card', 'hovered')} > .#{class('card', 'name')}:hover {
@@ -54,7 +54,7 @@
 			box-shadow: theme('shadow');
 		}
 
-		// hover effect for single card
+		// hover effect for single card only
 		@if features('components', 'card', 'hovered') {
 			&.#{class('card', 'hovered')}:hover {
 				background-color: darken(components('card', 'background-color'), 4%);

@@ -42,19 +42,19 @@
 				flex       : 1;
 				line-height: components('list', 'body', 'line-height');
 				text-align : components('list', 'body', 'text-align');
-				// .list > .item > body > title
-				// .list > .item > body > subtitle
+				// .list > .item > .body > .title
+				// .list > .item > .body > .subtitle
 		    	>.#{class('list', 'title')},
 		    	>.#{class('list', 'subtitle')} {
 					display: block;
 				}
-				// .list > .item > body > title
+				// .list > .item > .body > .title
 		    	>.#{class('list', 'title')} {
 					font-size  : components('list', 'title', 'font-size');
 					font-weight: components('list', 'title', 'font-weight');
 					line-height: components('list', 'title', 'line-height');
 		    	}
-		    	// .list > .item > body > subtitle
+		    	// .list > .item > .body > .subtitle
 				>.#{class('list', 'subtitle')} {
 					font-size    : components('list', 'subtitle', 'font-size');
 					font-weight  : components('list', 'subtitle', 'font-weight');
@@ -66,7 +66,7 @@
 					}
 				}
 		    }
-		    // .list > .item > actions
+		    // .list > .item > .actions
 		    >.#{class('list', 'actions')} {
 				width      : components('list', 'actions', 'width');
 				margin-left: components('list', 'actions', 'margin-left');
