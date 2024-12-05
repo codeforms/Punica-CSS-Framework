@@ -446,9 +446,13 @@ $options: (
 					'text-decoration': none,
 					'transition'     : background .15s,
 				),
+				'active': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey
+				),
 				'hover': (
 					'color'           : theme('color', 'text'),
-					'background-color': color.$grey,
+					'background-color': color.$grey
 				),
 				'sub-menu': (
 					'padding': .4rem // padding of sub items
@@ -1211,11 +1215,18 @@ $options: (
 			'border-spacing' : 0,
 			'border-collapse': collapse,
 			'position'       : relative,
+			'transition'     : all 0.3s,
 			'hover': (
-				'background-color': color.$grey
+				'color'           : theme('color', 'text'),
+				'background-color': color.$darken-grey
 			),
 			'striped': (
-				'background-color': color.$grey
+				'color'           : theme('color', 'text'),
+				'background-color': color.$darken-grey
+			),
+			'active': (
+				'color'           : theme('color', 'text'),
+				'background-color': color.$dark-grey
 			),
 			'td': (
 				'padding': .313rem .7rem,

@@ -60,9 +60,15 @@
 				&:active,
 				&:focus,
 				&.#{class('menu', 'active')} {
-					color           : components('menu', 'item', 'hover', 'color');
-					transition      : components('menu', 'item', 'href', 'transition');
-					background-color: components('menu', 'item', 'hover', 'background-color');
+					transition: components('menu', 'item', 'href', 'transition');
+				}
+				// .menu .item > a.active
+				&.#{class('menu', 'active')} {
+					color           : components('menu', 'item', 'active', 'color');
+					background-color: components('menu', 'item', 'active', 'background-color');
+					i {
+						color: components('menu', 'item', 'active', 'color') !important;
+					}
 				}
 			}
 			// .menu .item i

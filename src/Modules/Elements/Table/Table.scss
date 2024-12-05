@@ -35,7 +35,7 @@
 				tr,
 				tbody tr {
 					&.#{class('table', 'active')} {
-						background-color: elements('table', 'striped', 'background-color');
+						@extend .#{class('table', 'active')};
 					}
 					&:nth-of-type(odd) {
 						background-color: elements('table', 'striped', 'background-color');
@@ -52,17 +52,18 @@
 				tbody tr {
 					&:hover {
 						background-color: elements('table', 'hover', 'background-color');
-						color           : theme('color', 'text');
+						color           : elements('table', 'hover', 'color');
 					}
 				}
 			}
 		}
 		tr,
 		tbody tr {
-			transition: all 0.3s;
+			transition: elements('table', 'transition');
 			&.#{class('table', 'active')},
 			&.#{class('table', 'active')}:hover {
-				background-color: elements('table', 'hover', 'background-color');
+				color           : elements('table', 'active', 'color');
+				background-color: elements('table', 'active', 'background-color');
 			}
 		}
 		td,

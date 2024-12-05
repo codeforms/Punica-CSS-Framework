@@ -2,7 +2,7 @@
 /// Punica CSS Framework
 /// Core/Global/Sass.scss
 /// 
-@use "sass:color" as *;
+@use "sass:color" as color;
 
 ///
 /// @param $color
@@ -10,7 +10,7 @@
 ///
 @function lighten($color, $value)
 {
-	@return adjust($color, $lightness: $value);
+	@return color.adjust($color, $lightness: $value);
 }
 
 ///
@@ -19,5 +19,5 @@
 ///
 @function darken($color, $value)
 {
-	@return adjust($color, $lightness: -$value);
+	@return color.adjust($color, $lightness: -$value);
 }

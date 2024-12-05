@@ -124,7 +124,13 @@ $themes: (
 		// the all default settings in the options.scss API file.
 		'components': (
 			'menu': (
-				'background-color': lighten(#222226, 2.5%)
+				'background-color': lighten(#222226, 2.5%),
+				'item': (
+					'active': (
+						'color': white,
+						'background-color': #3266ec
+					)
+				)
 			),
 			'navbar': (
 				'color': #cfd4ec
@@ -148,9 +154,6 @@ $themes: (
 				)
 			),
 			'table':(
-				'hover': (
-					'background-color': lighten(#222226, 3%),
-				),
 				'caption' : (
 					'border-bottom': 4px solid #474a59
 				)
