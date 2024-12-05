@@ -30,17 +30,17 @@
 
 	$value: if(map.has-key($theme-map, $node), map.get($theme-map, $node), null);
 
-	@if ($value != null and list.length($keys) > 0) {
-		$value: if(map.has-key($value, list.nth($keys, 1)), map.get($value, list.nth($keys, 1)), null);
-
-		@if ($value != null and list.length($keys) > 1) {
-			$value: if(map.has-key($value, list.nth($keys, 2)), map.get($value, list.nth($keys, 2)), null);
-
-			@if ($value != null and list.length($keys) > 2) {
-				$value: if(map.has-key($value, list.nth($keys, 3)), map.get($value, list.nth($keys, 3)), null);
-
-				@if ($value != null and list.length($keys) > 3) {
-					$value: if(map.has-key($value, list.nth($keys, 4)), map.get($value, list.nth($keys, 4)), null);
+	@if (list.length($keys) > 0) {
+		@for $key from 1 through list.length($keys) {
+			@if ($value != null) {
+				$value: if(map.has-key($value, list.nth($keys, $key)), map.get($value, list.nth($keys, $key)), null);
+				@if (list.length($keys) == $key) {
+					@return $value;
+				}
+				@if ($value != null) {
+					@if (map.has-key($value, list.nth($keys, $key)) and list.length($keys) > $key) {
+						$value: if(map.has-key($value, list.nth($keys, $key)), map.get($value, list.nth($keys, $key)), null);
+					}
 				}
 			}
 		}
