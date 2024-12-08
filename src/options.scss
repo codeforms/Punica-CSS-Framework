@@ -590,7 +590,7 @@ $options: (
 			'border-radius'   : theme('border', 'radius'),
 			'background-color': theme('color', 'background'),
 			'header'          : (
-				'padding': 1.45rem,
+				'padding': 1rem,
 				'title': (
 					'font-size': 1.185rem,
 					'font-weight': bold
@@ -611,7 +611,7 @@ $options: (
 				)
 			),
 			'bottom': (
-				'min-height': 3.125rem,
+				'min-height': 2.4rem,
 				'border-top': set-border(), // default border
 				'padding'   : 1.45rem
 			),

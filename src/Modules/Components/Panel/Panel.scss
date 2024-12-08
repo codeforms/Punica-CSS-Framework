@@ -104,6 +104,12 @@
 							font-size: $font-size;
 						}
 					}
+					>.#{class('panel', 'content')} {
+						.#{class('panel', 'headline')},
+						p.#{class('panel', 'headline')} {
+							font-size: $font-size * 1.2;
+						}
+					}
 					>.#{class('panel', 'content')},
 					>.#{class('panel', 'bottom')} {
 						padding: $padding;
