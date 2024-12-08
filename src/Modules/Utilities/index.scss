@@ -955,10 +955,9 @@ $helpers: (
 	/// 
 	/// Outline Style
 	/// 
-	/// The outline-width property specifies 
-	/// the width of the outline.
+	/// The outline-style property specifies the style of an outline
 	/// 
-	/// @example outline-4
+	/// @example outline-dashed
 	///
 	'outline-style': (
 		'enabled'    : true, // true or false
@@ -988,7 +987,7 @@ $helpers: (
 		'values'     : (0,1,2,4,8)
 	),
 	/// 
-	/// Outline Offset
+	/// Outline Width
 	/// 
 	/// The outline-width property specifies 
 	/// the width of the outline.
