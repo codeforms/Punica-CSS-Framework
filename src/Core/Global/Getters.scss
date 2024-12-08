@@ -24,7 +24,7 @@
 @function options($keys...) 
 {
 	@if length($keys) > 4 {
-		@warn "[PUNICA] Maximum Nesting Depth is 4.";
+		@warn "[PUNICA] The Maximum Nesting Depth is Restricted to 4.";
 	}
 
 	@if map.get(option.$options, nth($keys, 1)) == null {
@@ -54,6 +54,10 @@
 
 		@if length($keys) > 3 {
 			$value: map.get($value, nth($keys, 4));
+			@if $value == null {
+				@warn "[PUNICA] INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)} > #{nth($keys, 4)}" + ' key is not found or key returns null in the [options.scss] file.';
+				@return null;
+			}
 		}
 	}
 
@@ -85,7 +89,7 @@
 		@return $settings;
 	}
 
-	$settings : map.get($settings, nth($keys, 2));
+	$settings: map.get($settings, nth($keys, 2));
 
 	@if $settings == null {
 		@warn "[PUNICA] INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';

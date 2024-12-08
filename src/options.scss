@@ -375,28 +375,28 @@ $options: (
 			'item': (
 				'padding'   : .55em,
 				'margin'    : 0,
-				'transition': .15s
-			),
-			'media': (
-				'margin-right': 1rem
-			),
-			'body': (
-				'line-height': 1.4,
-				'text-align' : left
-			),
-			'title': (
-				'font-size'  : 1.15rem,
-				'font-weight': bold,
-				'line-height': 1.4
-			),
-			'subtitle': (
-				'font-size'    : .889em,
-				'font-weight'  : theme('typography', 'font-weight'),
-				'margin-bottom': 7px
-			),
-			'actions': (
-				'width'      : auto,
-				'margin-left': 1rem
+				'transition': .15s,
+				'media': (
+					'margin-right': 1rem
+				),
+				'body': (
+					'line-height': 1.4,
+					'text-align' : left
+				),
+				'title': (
+					'font-size'  : 1.15rem,
+					'font-weight': bold,
+					'line-height': 1.4
+				),
+				'subtitle': (
+					'font-size'    : .889em,
+					'font-weight'  : theme('typography', 'font-weight'),
+					'margin-bottom': 7px
+				),
+				'actions': (
+					'width'      : auto,
+					'margin-left': 1rem
+				)
 			)
 		)
 	),
@@ -590,41 +590,41 @@ $options: (
 			'border-radius'   : theme('border', 'radius'),
 			'background-color': theme('color', 'background'),
 			'header'          : (
-				'padding': .85rem
-			),
-			'title': (
-				'font-size': 1.185rem,
-				'font-weight': bold
-			),
-			'headline': (
-				'font-size'     : 1.35rem,
-				'line-height'   : 1.5,
-				'margin-bottom' : 1.275rem,
-				'color'         : theme('color', 'text'),
-				'letter-spacing': -.0158em,
-				'text-wrap'     : auto
+				'padding': 1.45rem,
+				'title': (
+					'font-size': 1.185rem,
+					'font-weight': bold
+				)
 			),
 			'content': (
-				'padding': .85rem
+				'padding': 1.45rem,
+				'headline': (
+					'font-size'     : 1.35rem,
+					'line-height'   : 1.5,
+					'margin-bottom' : 1.275rem,
+					'color'         : theme('color', 'text'),
+					'letter-spacing': -.0158em,
+					'text-wrap'     : auto
+				),
+				'media': (
+					'margin-bottom': 32px
+				)
 			),
 			'bottom': (
 				'min-height': 3.125rem,
 				'border-top': set-border(), // default border
-				'padding'   : .85rem
-			),
-			'media': (
-				'margin-bottom': 32px
+				'padding'   : 1.45rem
 			),
 			'sizes': (
 				(
 			    	"mini", // size name (class)
 			    	.985rem, // font-size (title)
-			    	.25rem .9rem // padding (title/content/bottom)
+			    	.25rem 1.45rem // padding (title/content/bottom)
 			    ),
 			    (
 			    	"small", // size name (class)
 			    	1.038rem, // font-size (title)
-			    	.5rem .9rem // padding (title/content/bottom)
+			    	.5rem 1.45rem // padding (title/content/bottom)
 			    )
 			)
 		)
@@ -643,18 +643,20 @@ $options: (
 			'reversed': 'reversed'
 		),
 		'settings': (
-			'margin'     : 3em 0,
-			'min-height' : 4rem, // for each item
-			'indicator': (
-				'content'  : "\2756", // HTML Symbols,
-				'font-size': 1.8rem,
-			),
-			'stepbar'    : (
-				'height': 6px,
-			),
-			'stickbar': (
-				'width' : 3px,
-				'height': .8rem
+			'margin'    : 3em 0,
+			'min-height': 4rem, // for each item
+			'item': (
+				'stepbar'    : (
+					'height': 6px,
+				),
+				'stickbar': (
+					'width' : 3px,
+					'height': .8rem
+				),
+				'indicator': (
+					'content'  : "\2756", // HTML Symbols,
+					'font-size': 1.8rem,
+				),
 			),
 			'vertical': (
 				'margin'   : 1em 0,
@@ -782,25 +784,25 @@ $options: (
 			'actions': 'actions'
 		),
 		'settings': (
-			'type-width'  : 32px,
 			'border-width': 1px,
 			'item': (
 				'background-color': color.$grey,
 				'padding'         : 1.25em 2em 2.85em,
-			),
-			'type': (
-				'top'          : 17px,
-				'border-radius': 500px,
-				'border'       : 2px theme('border', 'style') theme('border', 'color'),
-			),
-			'author': (
-				'color'      : theme('color', 'text'),
-				'font-size'  : 1rem,
-				'font-weight': bold
-			),
-			'date': (
-				'font-size': .9em,
-				'opacity'  : .6
+				'type': (
+					'width'        : 32px,
+					'top'          : 17px,
+					'border-radius': 500px,
+					'border'       : 2px theme('border', 'style') theme('border', 'color'),
+				),
+				'author': (
+					'color'      : theme('color', 'text'),
+					'font-size'  : 1rem,
+					'font-weight': bold
+				),
+				'date': (
+					'font-size': .9em,
+					'opacity'  : .6
+				)
 			),
 			'styles': (
 				(
@@ -1061,12 +1063,12 @@ $options: (
 				),
 			),
 			'items': (
-				'margin'     : 0,
-				'item-spacer': 1px
+				'margin': 0
 			),
 			'item': (
 				'height'     : fit-content,
-				'margin'     : .495rem 0,
+				'margin-y'   : .495rem,
+				'margin-x'   : 5px,
 				'display'    : inline-flex,
 				'flex-wrap'  : wrap,
 				'width'      : 100%,

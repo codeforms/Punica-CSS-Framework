@@ -925,6 +925,86 @@ $helpers: (
 		'values'     : (1,2,3,4,5)
 	),
 	/// 
+	/// Outline Color
+	/// 
+	/// The outline-color property is used to set 
+	/// the color of the outline.
+	/// 
+	/// @example outline-primary
+	///
+	'outline-color': (
+		'enabled'    : true, // true or false
+		'property'   : 'outline-color', // css property name (don't change it !)
+		'prefix'     : 'outline-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (
+			// class name (suffix), value
+			("grey", color.$grey),
+			("white", white),
+			("black", black),
+			("text", theme('color', 'text')),
+			("primary", theme('color', 'primary')),
+			("success", theme('color', 'success')),
+			("warning", theme('color', 'warning')),
+			("error", theme('color', 'error')),
+			("dark", theme('color', 'dark'))
+		)
+	),
+	/// 
+	/// Outline Style
+	/// 
+	/// The outline-width property specifies 
+	/// the width of the outline.
+	/// 
+	/// @example outline-4
+	///
+	'outline-style': (
+		'enabled'    : true, // true or false
+		'property'   : 'outline-style', // css property name (don't change it !)
+		'prefix'     : 'outline-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (solid,dashed,dotted,double)
+	),
+	/// 
+	/// Outline Offset
+	/// 
+	/// The outline-offset property adds space between 
+	/// an outline and the edge/border of an element.
+	/// The space between an element and its outline is transparent.
+	/// 
+	/// @example outline-offset-2
+	///
+	'outline-offset': (
+		'enabled'    : true, // true or false
+		'property'   : 'outline-offset', // css property name (don't change it !)
+		'prefix'     : 'outline-offset-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (0,1,2,4,8)
+	),
+	/// 
+	/// Outline Offset
+	/// 
+	/// The outline-width property specifies 
+	/// the width of the outline.
+	/// 
+	/// @example outline-4
+	///
+	'outline-width': (
+		'enabled'    : true, // true or false
+		'property'   : 'outline-width', // css property name (don't change it !)
+		'prefix'     : 'outline-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (0,1,2,4,8)
+	),
+	/// 
 	/// Overflow
 	/// 
 	/// The overflow property specifies what should 

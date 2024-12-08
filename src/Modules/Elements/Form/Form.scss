@@ -79,7 +79,7 @@
 		padding  : elements('form', 'padding');
 		.#{class('form', 'item')} {
 			height     : elements('form', 'item', 'height');
-			margin     : elements('form', 'item', 'margin');
+			margin     : elements('form', 'item', 'margin-y') elements('form', 'item', 'margin-x');
 			display    : elements('form', 'item', 'display');
 			flex-wrap  : elements('form', 'item', 'flex-wrap');
 			width      : elements('form', 'item', 'width');
@@ -168,7 +168,7 @@
 		@each $name, $number in elements('form', 'columns') {
 			.#{$name}.#{class('form', 'items')} {
 				>.#{class('form', 'item')} {
-					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{elements('form', 'items', 'item-spacer')}));
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{elements('form', 'item', 'margin-x')}));
 				}
 			}
 			@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {

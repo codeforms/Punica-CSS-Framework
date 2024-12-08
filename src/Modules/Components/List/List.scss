@@ -26,7 +26,7 @@
 			// .list > .item > i
 		    >img,
 		    >i {
-		    	margin-right: components('list', 'media', 'margin-right');
+		    	margin-right: components('list', 'item', 'media', 'margin-right');
 		    }
 		    // .list > .item > span
 			// .list > .item > div
@@ -40,8 +40,8 @@
 		    >.#{class('list', 'body')} {
 				display    : initial;
 				flex       : 1;
-				line-height: components('list', 'body', 'line-height');
-				text-align : components('list', 'body', 'text-align');
+				line-height: components('list', 'item', 'body', 'line-height');
+				text-align : components('list', 'item', 'body', 'text-align');
 				// .list > .item > .body > .title
 				// .list > .item > .body > .subtitle
 		    	>.#{class('list', 'title')},
@@ -50,15 +50,15 @@
 				}
 				// .list > .item > .body > .title
 		    	>.#{class('list', 'title')} {
-					font-size  : components('list', 'title', 'font-size');
-					font-weight: components('list', 'title', 'font-weight');
-					line-height: components('list', 'title', 'line-height');
+					font-size  : components('list', 'item', 'title', 'font-size');
+					font-weight: components('list', 'item', 'title', 'font-weight');
+					line-height: components('list', 'item', 'title', 'line-height');
 		    	}
 		    	// .list > .item > .body > .subtitle
 				>.#{class('list', 'subtitle')} {
-					font-size    : components('list', 'subtitle', 'font-size');
-					font-weight  : components('list', 'subtitle', 'font-weight');
-					margin-bottom: components('list', 'subtitle', 'margin-bottom');
+					font-size    : components('list', 'item', 'subtitle', 'font-size');
+					font-weight  : components('list', 'item', 'subtitle', 'font-weight');
+					margin-bottom: components('list', 'item', 'subtitle', 'margin-bottom');
 					@if theme('type') == 'light' {
 						color: darken(color.$grey, 20%);
 					} @else if theme('type') == 'dark' {
@@ -68,8 +68,8 @@
 		    }
 		    // .list > .item > .actions
 		    >.#{class('list', 'actions')} {
-				width      : components('list', 'actions', 'width');
-				margin-left: components('list', 'actions', 'margin-left');
+				width      : components('list', 'item', 'actions', 'width');
+				margin-left: components('list', 'item', 'actions', 'margin-left');
 			}
 			// .list > .item.active
 			&.#{class('list', 'active')} {

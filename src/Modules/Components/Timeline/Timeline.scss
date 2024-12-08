@@ -41,12 +41,12 @@
 				background-color: color.$grey;
 				justify-content : center;
 				flex-shrink     : 0;
-				width           : components('timeline', 'type-width');
-				height          : components('timeline', 'type-width');
-				top             : components('timeline', 'type', 'top');
-				left            : -(calc(components('timeline', 'type-width') / 2px) - components('timeline', 'border-width'));
-				border          : components('timeline', 'type', 'border');
-				border-radius   : components('timeline', 'type', 'border-radius');
+				width           : components('timeline', 'item', 'type', 'width');
+				height          : components('timeline', 'item', 'type', 'width');
+				top             : components('timeline', 'item', 'type', 'top');
+				left            : -(calc(components('timeline', 'item', 'type', 'width') / 2px) - components('timeline', 'border-width'));
+				border          : components('timeline', 'item', 'type', 'border');
+				border-radius   : components('timeline', 'item', 'type', 'border-radius');
 				box-shadow: theme('shadow');
 				///
 				/// STYLES
@@ -74,13 +74,13 @@
 				width      : 100%;
 			}
 			.#{class('timeline', 'author')} {
-				font-weight: components('timeline', 'author', 'font-weight');
-				font-size  : components('timeline', 'author', 'font-size');
-				color      : components('timeline', 'author', 'color');
+				font-weight: components('timeline', 'item', 'author', 'font-weight');
+				font-size  : components('timeline', 'item', 'author', 'font-size');
+				color      : components('timeline', 'item', 'author', 'color');
 			}
 			.#{class('timeline', 'date')} {
-				font-size: components('timeline', 'date', 'font-size');
-				opacity  : components('timeline', 'date', 'opacity');
+				font-size: components('timeline', 'item', 'date', 'font-size');
+				opacity  : components('timeline', 'item', 'date', 'opacity');
 			}
 			///
 			/// MEDIA

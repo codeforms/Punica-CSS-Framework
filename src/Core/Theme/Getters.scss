@@ -24,8 +24,8 @@
 /// 
 @function theme($node, $keys...) 
 {
-	@if list.length($keys) > 4 {
-		@warn "[PUNICA] Maximum Nesting Depth is 4.";
+	@if list.length($keys) > 5 {
+		@warn "[PUNICA] The Maximum Nesting Depth is Restricted to 5.";
 	}
 
 	$value: if(map.has-key($theme-map, $node), map.get($theme-map, $node), null);

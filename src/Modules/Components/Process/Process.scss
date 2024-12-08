@@ -34,7 +34,7 @@
 				top       : 0;
 				width     : 100%;
 				background: theme('color', 'primary');
-				height    : components('process', 'stepbar', 'height');
+				height    : components('process', 'item', 'stepbar', 'height');
 			}
 			a {
 				color          : theme('color', 'text');
@@ -48,12 +48,12 @@
 					top       : 0;
 					left      : 50%;
 					background: theme('color', 'primary');
-					height    : components('process', 'stickbar', 'height');
-					width     : components('process', 'stickbar', 'width');
+					height    : components('process', 'item', 'stickbar', 'height');
+					width     : components('process', 'item', 'stickbar', 'width');
 					z-index   : 1;
 				}
 				&:first-child::before {
-					left: calc(50% - (#{variables('process', 'stickbar', 'width')} - 1px));
+					left: calc(50% - (#{variables('process', 'item', 'stickbar', 'width')} - 1px));
 				}
 			}
 			&.#{class('process', 'active')} {
@@ -61,11 +61,11 @@
 					color: theme('color', 'primary');
 					&::after {
 						position : absolute;
-						content  : components('process', 'indicator', 'content');
-						top      : calc(-15px - #{components('process', 'indicator', 'font-size')});
-						left     : calc(50% - ((#{components('process', 'stickbar', 'width')} * 10) / 2));
+						content  : components('process', 'item', 'indicator', 'content');
+						top      : calc(-15px - #{components('process', 'item', 'indicator', 'font-size')});
+						left     : calc(50% - ((#{components('process', 'item', 'stickbar', 'width')} * 10) / 2));
 						color    : theme('color', 'primary');
-						font-size: components('process', 'indicator', 'font-size');
+						font-size: components('process', 'item', 'indicator', 'font-size');
 					}
 				}
 				&~.#{class('process', 'item')} {

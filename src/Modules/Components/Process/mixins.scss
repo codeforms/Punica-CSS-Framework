@@ -60,7 +60,7 @@
 			border-top: set-border();
 		}
 		&:not(:first-child)::before {
-			width : components('process', 'stickbar', 'width');
+			width : components('process', 'item', 'stickbar', 'width');
 			height: 100%;
 			left  : 0;
 		}
@@ -78,7 +78,7 @@
 				font-weight: bold;
 				&::after {
 					top : 15px;
-					left: calc(-15px - #{components('process', 'indicator', 'font-size')});
+					left: calc(-15px - #{components('process', 'item', 'indicator', 'font-size')});
 				}
 			}
 		}
