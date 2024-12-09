@@ -37,11 +37,6 @@
 				@if (list.length($keys) == $key) {
 					@return $value;
 				}
-				@if ($value != null) {
-					@if (map.has-key($value, list.nth($keys, $key)) and list.length($keys) > $key) {
-						$value: if(map.has-key($value, list.nth($keys, $key)), map.get($value, list.nth($keys, $key)), null);
-					}
-				}
 			}
 		}
 	}
