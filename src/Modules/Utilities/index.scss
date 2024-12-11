@@ -894,17 +894,48 @@ $helpers: (
 	/// in a variety of ways; such as "preserve that aspect ratio"
 	/// or "stretch up and take up as much space as possible".
 	/// 
-	/// @example fit-cover
-	/// @example fit-scale-down
+	/// @example object-cover
+	/// @example object-scale-down
 	///
 	'object-fit': (
 		'enabled'    : true, // true or false
 		'property'   : 'object-fit', // css property name (don't change it !)
-		'prefix'     : 'fit-', // prefix of class name
+		'prefix'     : 'object-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'specs'      : null, // for extra variables
 		'values'     : (fill, contain, cover, none, scale-down)
+	),
+	/// 
+	/// Object Position
+	/// 
+	/// The object-position property is used together 
+	/// with object-fit to specify how an <img> or <video> 
+	/// should be positioned with x/y coordinates inside 
+	/// its "own content box".
+	/// 
+	/// @example object-left
+	/// @example object-left-bottom
+	///
+	'object-position': (
+		'enabled'    : true, // true or false
+		'property'   : 'object-position', // css property name (don't change it !)
+		'prefix'     : 'object-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (
+			// class name (suffix), value
+			("bottom", bottom),
+			("center", center),
+			("left", left),
+			("left-bottom", left bottom),
+			("left-top", left top),
+			("right", right),
+			("right-bottom", right bottom),
+			("right-top", right top),
+			("top", top)
+		)
 	),
 	/// 
 	/// Order
@@ -1258,6 +1289,23 @@ $helpers: (
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'specs'      : null, // for extra variables
 		'values'     : (none, auto, text, all)
+	),
+	/// 
+	/// Vertical Align
+	/// 
+	/// The vertical-align property sets 
+	/// the vertical alignment of an element.
+	/// 
+	/// @example align-middle
+	///
+	'vertical-align': (
+		'enabled'    : true, // true or false
+		'property'   : 'vertical-align', // css property name (don't change it !)
+		'prefix'     : 'align-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'values'     : (baseline, top, middle, bottom, text-top, text-bottom, sub, super)
 	),
 	/// 
 	/// Width

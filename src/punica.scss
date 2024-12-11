@@ -7,12 +7,15 @@
 @use "Core/Global/Helpers" as *;
 @use "themes" as get;
 
-/// ======================================================
+////////////////////////////////////////////////////////////////
+///-------------------------------------------------------------
 	$active-theme: default;
-/// ======================================================
-	$theme-name: if(map.has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
+///-------------------------------------------------------------
+////////////////////////////////////////////////////////////////
+	$theme-name: if(map.has-key(get.$themes, $active-theme), 
+	$active-theme, theme-not-found($active-theme));
 	$theme     : map.get(get.$themes, $theme-name) !global;
-/// ======================================================
+////////////////////////////////////////////////////////////////
 
 /*! 
  * Punica CSS Framework - #{theme('name')}

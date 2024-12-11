@@ -24,7 +24,7 @@
 	.#{class('grid', 'row')} {
 		display              : grid;
 		grid-gap             : elements('grid', 'gap');
-		grid-template-columns: repeat($column-size, 1fr);
+		grid-template-columns: repeat($column-size, minmax(0, 1fr));
 		&> [class^="#{class('grid', 'column')}"] {
 			height    : fit-content;
 			padding   : elements('grid', 'columns', 'padding');

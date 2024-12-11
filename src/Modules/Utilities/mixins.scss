@@ -151,12 +151,12 @@
 	$prefix : utils('border', 'prefix');
 
 	@if $enabled {
-		@each $class, $border in $borders {
-			.#{$prefix}-x-#{$class} {
+		@each $suffix, $border in $borders {
+			.#{$prefix}-x-#{$suffix} {
 				border-left-width: #{$border}#{$unit} !important;
 				border-right-width: #{$border}#{$unit} !important;
 			}
-			.#{$prefix}-y-#{$class} {
+			.#{$prefix}-y-#{$suffix} {
 				border-top-width: #{$border}#{$unit} !important;
 				border-bottom-width: #{$border}#{$unit} !important;
 			}

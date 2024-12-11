@@ -50,6 +50,7 @@
 	@include utils_with_specs(utils('margin'));
 	@include set_sides(utils('margin'));
 	@include set_utils('object-fit');
+	@include set_utils('object-position', true);
 	@include set_utils('order');
 	@include set_utils('outline-color', true);
 	@include set_utils('outline-offset');
@@ -68,6 +69,7 @@
 	@include set_utils('text-transform');
 	@include set_utils('text-wrap');
 	@include set_utils('user-select');
+	@include set_utils('vertical-align');
 	@include set_utils('width', true); 
 	@include set_utils('z-index');
 	@include other_helpers();	
