@@ -7,6 +7,7 @@
 @use "sass:list" as *;
 @use "../Theme/Getters" as *;
 @use "Getters" as get;
+@use "Helpers" as helper;
 
 ///
 /// Get a specific component's variable from the theme map
@@ -97,7 +98,7 @@
 @function set_variable($module, $keys...) 
 {
 	@if length($keys) > 4 {
-		@warn "[PUNICA] The Maximum Nesting Depth is Restricted to 4.";
+		@warn helper.$nesting-depth;
 	}
 
 	@if theme($module, nth($keys, 1), nth($keys, 2)) {

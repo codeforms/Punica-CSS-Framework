@@ -10,8 +10,8 @@
 /// ======================================================
 	$active-theme: default;
 /// ======================================================
-	$theme: if(map.has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
-	$theme-map: map.get(get.$themes, $theme) !global;
+	$theme-name: if(map.has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
+	$theme     : map.get(get.$themes, $theme-name) !global;
 /// ======================================================
 
 /*! 
@@ -28,4 +28,4 @@
 @use "Modules/Components/index" as components;
 @use "Modules/Utilities/helpers";
 @debug "#{theme('name')} is compiled successfully.";
-$theme-map: null !global;
+$theme: null !global;

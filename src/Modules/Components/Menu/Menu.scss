@@ -82,9 +82,10 @@
 				margin-right  : components('menu', 'icon', 'margin-right');
 				vertical-align: components('menu', 'icon', 'vertical-align');
 			}
+			// Sub Menu
 			// .menu .item .menu
 			.#{class('menu', 'name')} {
-				padding: components('menu', 'item', 'sub-menu', 'padding');
+				padding: components('menu', 'item', 'menu', 'padding');
 			}
 		}
 		// .menu .badge

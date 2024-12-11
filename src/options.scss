@@ -454,7 +454,8 @@ $options: (
 					'color'           : theme('color', 'text'),
 					'background-color': color.$grey
 				),
-				'sub-menu': (
+				// sub menu
+				'menu': (
 					'padding': .4rem // padding of sub items
 				)
 			),

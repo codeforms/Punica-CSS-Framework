@@ -5,9 +5,10 @@
 
 @use "sass:map" as map;
 @use "sass:list" as list;
+@use "../Global/Helpers" as helper;
 
 /// ======================================================
-	$theme-map: null !default;
+	$theme: null !default;
 /// ======================================================
 
 ///
@@ -25,10 +26,10 @@
 @function theme($node, $keys...) 
 {
 	@if list.length($keys) > 4 {
-		@warn "[PUNICA] The Maximum Nesting Depth is Restricted to 4.";
+		@warn helper.$nesting-depth;
 	}
 
-	$value: if(map.has-key($theme-map, $node), map.get($theme-map, $node), null);
+	$value: if(map.has-key($theme, $node), map.get($theme, $node), null);
 
 	@if (list.length($keys) > 0) {
 		@for $key from 1 through list.length($keys) {

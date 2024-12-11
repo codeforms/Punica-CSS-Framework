@@ -7,8 +7,8 @@
 @use "sass:list" as *;
 @use "../Theme/Getters" as *;
 @use "../../options" as option;
-@use "../../Modules/Utilities/index" as helper;
-@use "Helpers";
+@use "../../Modules/Utilities/index" as utility;
+@use "Helpers" as helper;
 
 ///
 /// Get options value by key
@@ -24,11 +24,11 @@
 @function options($keys...) 
 {
 	@if length($keys) > 4 {
-		@warn "[PUNICA] The Maximum Nesting Depth is Restricted to 4.";
+		@warn helper.$nesting-depth;
 	}
 
 	@if map.get(option.$options, nth($keys, 1)) == null {
-		@warn "[PUNICA] INVALID KEY: #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn helper.$invalid-key + " #{nth($keys, 1)} " + helper.$key-not-found;
 		@return null;
 	}
 
@@ -41,21 +41,21 @@
 	$value: map.get($value, nth($keys, 2));
 
 	@if $value == null {
-		@warn "[PUNICA] INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn helper.$invalid-key + " #{nth($keys, 1)} > #{nth($keys, 2)} " + helper.$key-not-found;
 		@return null;
 	}
 
 	@if length($keys) > 2 {
 		$value: map.get($value, nth($keys, 3));
 		@if $value == null {
-			@warn "[PUNICA] INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
+			@warn helper.$invalid-key + " #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)} " + helper.$key-not-found;
 			@return null;
 		}
 
 		@if length($keys) > 3 {
 			$value: map.get($value, nth($keys, 4));
 			@if $value == null {
-				@warn "[PUNICA] INVALID KEY: #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)} > #{nth($keys, 4)}" + ' key is not found or key returns null in the [options.scss] file.';
+				@warn helper.$invalid-key + " #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)} > #{nth($keys, 4)} " + helper.$key-not-found;
 				@return null;
 			}
 		}
@@ -81,7 +81,7 @@
 	$settings: map.get(map.get(options($node), 'settings'), nth($keys, 1));
 
 	@if $settings == null {
-		@warn "[PUNICA] INVALID KEY: #{$node} > settings > #{nth($keys, 1)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn helper.$invalid-key + " #{$node} > settings > #{nth($keys, 1)} " + helper.$key-not-found;
 		@return null;
 	}
 	
@@ -92,7 +92,7 @@
 	$settings: map.get($settings, nth($keys, 2));
 
 	@if $settings == null {
-		@warn "[PUNICA] INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)}" + ' key is not found or key returns null in the [options.scss] file.';
+		@warn helper.$invalid-key + " #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)} " + helper.$key-not-found;
 		@return null;
 	}
 
@@ -100,7 +100,7 @@
 		$settings : map.get($settings, nth($keys, 3));
 
 		@if $settings == null {
-			@warn "[PUNICA] INVALID KEY: #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)}" + ' key is not found or key returns null in the [options.scss] file.';
+			@warn helper.$invalid-key + " #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)} " + helper.$key-not-found;
 			@return null;
 		}
 	}
@@ -147,7 +147,7 @@
 		@return theme('utilities', $node, $key);
 	}
 
-	$util: if(map.has-key(helper.$helpers, $node), map.get(helper.$helpers, $node), null);
+	$util: if(map.has-key(utility.$helpers, $node), map.get(utility.$helpers, $node), null);
 
 	@if ($util != null) and $key {
 		$util: if(map.has-key($util, $key), map.get($util, $key), null);
