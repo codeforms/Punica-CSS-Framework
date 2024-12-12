@@ -102,7 +102,7 @@
 	}
 
 	@if theme($module, nth($keys, 1), nth($keys, 2)) {
-		$value : theme($module, nth($keys, 1), nth($keys, 2));
+		$value: theme($module, nth($keys, 1), nth($keys, 2));
 
 		@if length($keys) > 2 {
 			$value: theme($module, nth($keys, 1), nth($keys, 2), nth($keys, 3));
