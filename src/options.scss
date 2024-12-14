@@ -15,7 +15,7 @@
 
 $options: (
 	///
-	/// COMPONENTS
+	/// 01.COMPONENTS
 	/// 
 	'alert': (
 		'enabled': true,
@@ -861,7 +861,7 @@ $options: (
 		)
 	),
 	///
-	/// ELEMENTS
+	/// 02.ELEMENTS
 	/// 
 	'base': (
 		'settings': (
@@ -1235,19 +1235,20 @@ $options: (
 				'padding': .313rem .7rem,
 			),
 			'th': (
-				'color'           : theme('color', 'text'),
-				'font-size'       : inherit,
-				'font-weight'     : bold,
-				'padding'         : .90rem .7rem,
-				'background-color': transparent
+				'color'              : theme('color', 'text'),
+				'font-size'          : inherit,
+				'font-weight'        : bold,
+				'padding'            : .90rem .7rem,
+				'background-color'   : transparent,
+				'border-bottom-color': theme('color', 'text')
 			),
 			'caption': (
 				'text-align'      : inherit,
 				'color'           : theme('color', 'text'),
 				'font-size'       : 1.15rem,
 				'font-weight'     : bold,
-				'padding'         : 1rem .7rem,
-				'border-bottom'   : 2px theme('border', 'style') theme('color', 'text'),
+				'padding'         : 1rem .6rem,
+				'border-bottom'   : 1px theme('border', 'style') theme('color', 'text'),
 				'background-color': transparent
 			)
 		)
@@ -1343,7 +1344,7 @@ $options: (
 		)
 	),
 	///
-	/// UTILITIES
+	/// 03.UTILITIES
 	/// 
 	'helpers': (
 		'enabled': true

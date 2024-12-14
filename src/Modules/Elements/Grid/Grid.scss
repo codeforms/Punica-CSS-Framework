@@ -5,7 +5,6 @@
 
 @use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Getters" as *;
-@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Mixins" as *;
 
 @if enabled('elements', 'grid') {

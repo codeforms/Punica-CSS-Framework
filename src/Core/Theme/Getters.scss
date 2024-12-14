@@ -31,10 +31,11 @@
 
 	$value: if(map.has-key($theme, $node), map.get($theme, $node), null);
 
-	@if (list.length($keys) > 0) {
+	@if ($value != null and list.length($keys) > 0) {
 		@for $key from 1 through list.length($keys) {
 			@if ($value != null) {
 				$value: if(map.has-key($value, list.nth($keys, $key)), map.get($value, list.nth($keys, $key)), null);
+				// if key is the last item
 				@if (list.length($keys) == $key) {
 					@return $value;
 				}

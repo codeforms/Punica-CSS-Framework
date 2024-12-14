@@ -74,15 +74,17 @@
 		td {
 			padding: elements('table', 'td', 'padding');
 		}
+		th {
+			border-bottom-color: elements('table', 'th', 'border-bottom-color');
+		}
 		thead tr {
 			background: transparent !important;
 			th {
-				border-bottom-color: theme('border', 'color');
-				font-size          : elements('table', 'th', 'font-size');
-				font-weight        : elements('table', 'th', 'font-weight');
-				color              : elements('table', 'th', 'color');
-				padding            : elements('table', 'th', 'padding');
-				background-color   : elements('table', 'th', 'background-color');
+				font-size       : elements('table', 'th', 'font-size');
+				font-weight     : elements('table', 'th', 'font-weight');
+				color           : elements('table', 'th', 'color');
+				padding         : elements('table', 'th', 'padding');
+				background-color: elements('table', 'th', 'background-color');
 			}
 		}
 	}
