@@ -39,56 +39,7 @@ $themes: (
 			'style' : solid,
 			'radius': 2px,
 		),
-		'shadow': 0 .25em .5em 0 rgba(0, 0, 0, 0.14),
-		//////////////////////////////////////////////////////////
-		// You can use this section to override/change
-		// the all default settings in the options.scss API file.
-		'classnames': (
-			/*
-			'panel': (
-				'name'    : 'box',
-				'headline': 'spot'
-			),
-			'grid': (
-				'offset': 'off'
-			)
-			*/
-		),
-		'components': (
-			/*'tabnav': (
-				'border-bottom': 4px
-			),*/
-			/*
-			'navbar': (
-				'brand': (
-					'img-width': 9rem
-				)
-			),
-			'alert': (
-				'enabled': false
-			)
-			*/
-		),
-		'elements': (
-			/*'button': (
-				'font-weight': 500
-			)*/
-		),
-		// You can use this section to override/change the 
-		// all default variable of utilities in the 
-		// Modules/Utilities/index.scss API file.
-		'utilities': (
-			//'enabled': false, // this option disables all helpers (default true).
-			/*
-			'flex-wrap': (
-				'enabled': false 
-			),
-			'overflow': (
-				'prefix': 'flow-' 
-			)
-			*/
-		)
-		//////////////////////////////////////////////////////////
+		'shadow': 0 .25em .5em 0 rgba(0, 0, 0, 0.14)
 	),
 	//
 	// 02. Dark Theme (beta)
@@ -122,6 +73,17 @@ $themes: (
 		//////////////////////////////////////////////////////////
 		// You can use this section to override/change
 		// the all default settings in the options.scss API file.
+		'classnames': (
+			/*
+			'panel': (
+				'name'    : 'box',
+				'headline': 'spot'
+			),
+			'grid': (
+				'offset': 'off'
+			)
+			*/
+		),
 		'components': (
 			'menu': (
 				'background-color': lighten(#222226, 2.5%),
@@ -150,11 +112,6 @@ $themes: (
 					'background-color': #302f35
 				)
 			),
-			'table':(
-				'caption' : (
-					'border-bottom': 4px solid #474a59
-				)
-			),
 			'typography': (
 				'href': (
 					'color': #5580ff,
@@ -163,6 +120,20 @@ $themes: (
 					)
 				)
 			)
+		),
+		// You can use this section to override/change the 
+		// all default variable of utilities in the 
+		// Modules/Utilities/index.scss API file.
+		'utilities': (
+			//'enabled': false, // this option disables all helpers (default true).
+			/*
+			'flex-wrap': (
+				'enabled': false 
+			),
+			'overflow': (
+				'prefix': 'flow-' 
+			)
+			*/
 		)
 		//////////////////////////////////////////////////////////
 	),

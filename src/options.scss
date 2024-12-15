@@ -867,7 +867,7 @@ $options: (
 		'settings': (
 			'selection': (
 				'color'           : white,
-				'background-color': theme('color', 'primary')
+				'background-color': lighten(theme('color', 'primary'), 8.5%)
 			),
 			'horizontal-rule': (
 				'border'    : 0,
