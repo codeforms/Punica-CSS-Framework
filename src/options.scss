@@ -504,7 +504,7 @@ $options: (
 			'button': (
 				'padding': .935rem 1.4rem
 			),
-			'brand'         : (
+			'brand': (
 				'padding'     : 0,
 				'margin-right': 1rem,
 				'font-weight' : bold,
@@ -523,6 +523,16 @@ $options: (
 				'border-width'     : theme('border', 'width'),
 				'placeholder-color': white,
 				'focus-outline'    : elements('form', 'input', 'outline-width') solid theme('color', 'primary')
+			),
+			'menu': ( // settings of dropdown menu in navbar
+				'background-color': components('menu', 'background-color'),
+				'item': (
+					'color': components('menu', 'item', 'href', 'color')
+				),
+				'hover': (
+					'color'           : components('menu', 'item', 'hover', 'color'),
+					'background-color': components('menu', 'item', 'hover', 'background-color')
+				)
 			),
 			'styles': (
 				(

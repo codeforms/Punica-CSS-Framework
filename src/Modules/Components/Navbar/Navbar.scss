@@ -157,6 +157,17 @@
 					}
 				}
 			}
+			// dropdown menu
+			.#{class('button', 'dropdown')} > .#{class('menu', 'name')} {
+				background-color: components('navbar', 'menu', 'background-color');
+				.#{class('menu', 'item')} a {
+					color: components('navbar', 'menu', 'item', 'color');
+					&:hover {
+						color           : components('navbar', 'menu', 'hover', 'color');
+						background-color: components('navbar', 'menu', 'hover', 'background-color');
+					}
+				}
+			}
 			.#{class('button', 'dropdown')}:last-child,
 			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:first-child,
 			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:last-child {
