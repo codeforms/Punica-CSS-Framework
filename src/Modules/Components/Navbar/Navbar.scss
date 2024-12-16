@@ -166,6 +166,11 @@
 						color           : components('navbar', 'menu', 'hover', 'color');
 						background-color: components('navbar', 'menu', 'hover', 'background-color');
 					}
+					&:active,
+					&.#{class('button', 'active')} {
+						color           : components('navbar', 'menu', 'active', 'color');
+						background-color: components('navbar', 'menu', 'active', 'background-color');
+					}
 				}
 			}
 			.#{class('button', 'dropdown')}:last-child,

@@ -532,6 +532,10 @@ $options: (
 				'hover': (
 					'color'           : components('menu', 'item', 'hover', 'color'),
 					'background-color': components('menu', 'item', 'hover', 'background-color')
+				),
+				'active': (
+					'color'           : components('menu', 'item', 'active', 'color'),
+					'background-color': components('menu', 'item', 'active', 'background-color')
 				)
 			),
 			'styles': (
