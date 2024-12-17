@@ -127,6 +127,40 @@ $helpers: (
 		)
 	),
 	///
+	/// Background Colors
+	/// The background-color property sets 
+	/// the background color of an element. The background of 
+	/// an element is the total size of the element, 
+	/// including padding and border (but not the margin).
+	/// 
+	/// @example bg-color
+	/// @example bg-primary
+	///
+	'background-color': (
+		'enabled'    : true, // true or false
+		'property'   : 'background-color', // css property name (don't change it !)
+		'prefix'     : 'bg-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'specs'      : null, // for extra variables
+		'palette'    : (
+			'shade-step': 5,
+			'max-range' : 50
+		),
+		'values'     : (
+			// class name (suffix), value
+			("color", theme('color', 'background')),
+			("grey", color.$grey),
+			("white", white),
+			("black", black),
+			("dark", theme('color', 'dark')),
+			("primary", theme('color', 'primary')),
+			("success", theme('color', 'success')),
+			("warning", theme('color', 'warning')),
+			("error", theme('color', 'error'))
+		)
+	),
+	///
 	/// Background Origin
 	/// The background-origin property specifies 
 	/// the origin position (the background positioning area) 
@@ -208,36 +242,6 @@ $helpers: (
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'specs'      : null, // for extra variables
 		'values'     : (auto,cover,contain)
-	),
-	///
-	/// Background Colors
-	/// The background-color property sets 
-	/// the background color of an element. The background of 
-	/// an element is the total size of the element, 
-	/// including padding and border (but not the margin).
-	/// 
-	/// @example bg-color
-	/// @example bg-primary
-	///
-	'background-color': (
-		'enabled'    : true, // true or false
-		'property'   : 'background-color', // css property name (don't change it !)
-		'prefix'     : 'bg-', // prefix of class name
-		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
-			// class name (suffix), value
-			("color", theme('color', 'background')),
-			("grey", color.$grey),
-			("white", white),
-			("black", black),
-			("dark", theme('color', 'dark')),
-			("primary", theme('color', 'primary')),
-			("success", theme('color', 'success')),
-			("warning", theme('color', 'warning')),
-			("error", theme('color', 'error'))
-		)
 	),
 	///
 	/// Border Color
@@ -373,6 +377,10 @@ $helpers: (
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'specs'      : null, // for extra variables
+		'palette'    : (
+			'shade-step': 5,
+			'max-range' : 50
+		),
 		'values'     : (
 			// class name (suffix), value
 			("grey", color.$grey),

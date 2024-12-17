@@ -116,13 +116,15 @@
 	$prefix     : map.get($colors, 'prefix');
 	$specificity: map.get($colors, 'specificity');
 	$values     : map.get($colors, 'values');
+	$shade-step : map.get(map.get($colors, 'palette'), 'shade-step');
+	$max-range  : map.get(map.get($colors, 'palette'), 'max-range');
 
 	@if $enabled {
-		@for $i from 5 through 35 {
+		@for $i from $shade-step through $max-range {
 			@each $suffix, $color in $values {
 				// if the remainder of an integer
-				// division of $i by 5 is zero
-				@if $i % 5 == 0 {
+				// division of $i by $shade-step is zero
+				@if $i % $shade-step == 0 {
 					$percentage: $i*1%; // convert remainder to percentage
 					.#{$prefix}#{$suffix}-darken-#{$i} {
 						#{$property}: mix(black, $color, $percentage) $specificity;
