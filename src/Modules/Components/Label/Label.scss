@@ -20,6 +20,7 @@
 			text-decoration: components('label', 'text-decoration');
 			box-shadow     : components('label', 'box-shadow');
 			border         : components('label', 'border');
+			border-radius  : components('label', 'border-radius');
 			@include set-size(components('label', 'font-size'), components('label', 'padding'));
 			// .label > i
 			>i {

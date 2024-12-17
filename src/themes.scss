@@ -37,7 +37,7 @@ $themes: (
 			'color' : #c6c6c6,
 			'width' : 1px,
 			'style' : solid,
-			'radius': 2px,
+			'radius': .25rem,
 		),
 		'shadow': 0 .25em .5em 0 rgba(0, 0, 0, 0.14)
 	),
@@ -93,9 +93,6 @@ $themes: (
 						'background-color': #3266ec
 					)
 				)
-			),
-			'tabnav': (
-				'border-bottom': 4px
 			),
 			'tooltip': (
 				'color'           : #222226,

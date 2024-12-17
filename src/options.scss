@@ -307,6 +307,7 @@ $options: (
 			'border'         : set-border(), // default border
 			'text-decoration': none,
 			'box-shadow'     : none,
+			'border-radius'  : theme('border', 'radius'),
 			'icon': (
 				'vertical-align': middle
 			),
@@ -753,7 +754,7 @@ $options: (
 			'line-height'  : unset,
 			'padding'      : .935rem 1.4rem,
 			'thickness'    : 2px, // tab bar thickness
-			'border-bottom': 2px, // border-bottom-width of tab button
+			'border-bottom': 4px, // border-bottom-width of tab button
 			'styles'       : (
 				(
 					'success', // style name (class)
