@@ -43,7 +43,7 @@
 			a,
 			a:visited {
 				text-decoration: none;
-				color          : white;
+				color          : components('navbar', 'brand', 'href', 'color');
 				display        : flex;
 				font-size      : components('navbar', 'font-size');
 				font-weight    : components('navbar', 'brand', 'font-weight');
@@ -140,7 +140,7 @@
 				border-radius: 0;
 				border       : 0;
 				i {
-					color: white;
+					color: components('navbar', 'button', 'icon', 'color');
 				}
 				&:hover {
 					background: darken(components('navbar', 'background'), 5%);

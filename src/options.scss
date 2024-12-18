@@ -495,21 +495,27 @@ $options: (
 			'gradient' : 'gradient'
 		),
 		'settings': (
-			'font-family'   : inherit,
-			'font-size'     : 1rem,
-			'color'         : white,
-			'font-weight'   : bold,
-			'background'    : theme('color', 'primary'),
-			'width'         : 100%,
-			'min-height'    : 80px,
-			'button': (
-				'padding': .935rem 1.4rem
+			'font-family': inherit,
+			'font-size'  : 1rem,
+			'color'      : theme('color', 'text'),
+			'font-weight': bold,
+			'background' : white,
+			'width'      : 100%,
+			'min-height' : 80px,
+			'button'     : (
+				'padding': .935rem 1.4rem,
+				'icon'   : (
+					'color': theme('color', 'text')
+				)
 			),
 			'brand': (
 				'padding'     : 0,
 				'margin-right': 1rem,
 				'font-weight' : bold,
-				'img-width'   : 7rem
+				'img-width'   : 7rem,
+				'href'        : (
+					'color': theme('color', 'text')
+				)
 			),
 			'burger': (
 				'padding'     : 0 1.5rem,
@@ -518,9 +524,9 @@ $options: (
 				'symbol-close': "\2715" // HTML Symbols
 			),
 			'input': (
-				'color'            : white,
-				'background-color' : darken(theme('color', 'primary'), 7%),
-				'border-color'     : lighten(theme('color', 'primary'), 8%),
+				'color'            : theme('color', 'text'),
+				'background-color' : white,
+				'border-color'     : theme('color', 'dark'),
 				'border-width'     : theme('border', 'width'),
 				'placeholder-color': white,
 				'focus-outline'    : elements('form', 'input', 'outline-width') solid theme('color', 'primary')
@@ -541,13 +547,13 @@ $options: (
 			),
 			'styles': (
 				(
-					"light", // theme name (class)
-					white, // bg color
-					#303232, // text color
-					white, // input bg
-					#303232, // input color
-					theme('color', 'dark'), // input border color
-					color.$grey // divider color
+					"primary", // theme name (class)
+					theme('color', 'primary'), // bg color
+					white, // text color
+					darken(theme('color', 'primary'), 7%), // input bg
+					white, // input color
+					lighten(theme('color', 'primary'), 4%), // input border color
+					darken(theme('color', 'primary'), 5%) // divider color
 				),
 				(
 					"dark", // theme name (class)
@@ -730,7 +736,7 @@ $options: (
 				"success": theme('color', 'success'),
 				"warning": theme('color', 'warning'),
 				"error"  : theme('color', 'error'),
-				"dark"   : color.$sharp-grey,
+				"dark"   : color.$dark-grey,
 			)
 		)
 	),
@@ -1001,7 +1007,7 @@ $options: (
 					'dark', // class name
 					theme('color', 'dark'), // bg color
 					white, // text color
-					color.$sharp-grey // border color
+					color.$dark-grey // border color
 				)
 			),
 			'sizes': (
@@ -1127,7 +1133,7 @@ $options: (
 				'white-space'  : normal
 			),
 			'small': (
-				'color': color.$sharpen-grey,
+				'color': color.$darken-grey,
 			),
 			// for input validations
 			'styles': (
@@ -1236,15 +1242,15 @@ $options: (
 			'transition'     : all 0.3s,
 			'hover': (
 				'color'           : theme('color', 'text'),
-				'background-color': color.$darken-grey
+				'background-color': color.$lighten-grey
 			),
 			'striped': (
 				'color'           : theme('color', 'text'),
-				'background-color': color.$darken-grey
+				'background-color': color.$lighten-grey
 			),
 			'active': (
 				'color'           : theme('color', 'text'),
-				'background-color': color.$dark-grey
+				'background-color': color.$light-grey
 			),
 			'td': (
 				'padding': .313rem .7rem,
@@ -1255,7 +1261,7 @@ $options: (
 				'font-weight'        : bold,
 				'padding'            : .90rem .7rem,
 				'background-color'   : transparent,
-				'border-bottom-color': theme('color', 'text')
+				'border-bottom-color': color.$dark-grey
 			),
 			'caption': (
 				'text-align'      : inherit,
@@ -1263,7 +1269,7 @@ $options: (
 				'font-size'       : 1.15rem,
 				'font-weight'     : bold,
 				'padding'         : 1rem .6rem,
-				'border-bottom'   : 1px theme('border', 'style') theme('color', 'text'),
+				'border-bottom'   : 1px theme('border', 'style') color.$darken-grey,
 				'background-color': transparent
 			)
 		)
