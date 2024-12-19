@@ -20,7 +20,7 @@
 		justify-content: space-between;
 		font-family    : components('navbar', 'font-family');
 		min-height     : components('navbar', 'min-height');
-		background     : components('navbar', 'background');
+		background     : components('navbar', 'background-color');
 		color          : components('navbar', 'color');
 		width          : components('navbar', 'width');
 		// grid container
@@ -102,7 +102,7 @@
 						.#{class('button', 'group')} {
 							.#{class('button', 'name')},
 							.#{class('button', 'dropdown')} .#{class('button', 'name')} {
-								border: solid darken(components('navbar', 'background'), 7.15%);
+								border: solid darken(components('navbar', 'background-color'), 15%);
 							}
 						}
 						@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
@@ -143,17 +143,17 @@
 					color: components('navbar', 'button', 'icon', 'color');
 				}
 				&:hover {
-					background: darken(components('navbar', 'background'), 5%);
+					background: darken(components('navbar', 'background-color'), 5%);
 					border-radius: 0;
 				}
 				&:active,
 				&.#{class('button', 'active')} {
-					color     : components('navbar', 'color');
-					background: darken(components('navbar', 'background'), 5%);
-					transition: components('button', 'transition');
+					color           : components('navbar', 'button', 'active', 'color');
+					background-color: components('navbar', 'button', 'active', 'background-color');
+					transition      : components('button', 'transition');
 					&:hover {
 						transition: components('button', 'transition');
-						background: darken(components('navbar', 'background'), 7%);
+						background: darken(components('navbar', 'background-color'), 7%);
 					}
 				}
 			}
@@ -192,19 +192,19 @@
 			&.#{class('navbar', 'gradient')} {
 				background: linear-gradient(
 					to top, 
-					components('navbar', 'background') 0%, 
-					lighten(components('navbar', 'background'), 11.5%) 2%, 
-					darken(components('navbar', 'background'), 3%) 97%, 
-					lighten(components('navbar', 'background'), 11.5%) 100%
+					components('navbar', 'background-color') 0%, 
+					lighten(components('navbar', 'background-color'), 11.5%) 2%, 
+					darken(components('navbar', 'background-color'), 3%) 97%, 
+					lighten(components('navbar', 'background-color'), 11.5%) 100%
 				);
 			}
 			/// Gradient Left-To-Right
 			&.#{class('navbar', 'gradient')}#{'-ltr'} {
-				background: linear-gradient(135deg, lighten(components('navbar', 'background'), 7.5%), components('navbar', 'background'));
+				background: linear-gradient(135deg, lighten(components('navbar', 'background-color'), 7.5%), components('navbar', 'background-color'));
 			}
 			/// Gradient Right-To-Left
 			&.#{class('navbar', 'gradient')}#{'-rtl'} {
-				background: linear-gradient(-135deg, lighten(components('navbar', 'background'), 7.5%), components('navbar', 'background'));
+				background: linear-gradient(-135deg, lighten(components('navbar', 'background-color'), 7.5%), components('navbar', 'background-color'));
 			}
 		}
 		/// 

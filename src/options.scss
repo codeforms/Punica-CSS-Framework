@@ -36,6 +36,7 @@ $options: (
 			'font-weight'  : theme('typography', 'font-weight'),
 			'border'       : set-border(), // default border
 			'border-radius': theme('border', 'radius'),
+			'line-height'  : theme('typography', 'line-height'),
 			'href'         : (
 				'color'          : theme('color', 'text'),
 				'text-decoration': underline
@@ -423,7 +424,7 @@ $options: (
 			'list-style'      : none,
 			'box-shadow'      : theme('shadow'),
 			'z-index'         : 300,
-			'background-color': lighten(theme('color', 'background'), 2.5%),
+			'background-color': theme('color', 'background'),
 			'title': (
 				'font-size'     : 1.065rem,
 				'font-weight'   : bold,
@@ -449,7 +450,7 @@ $options: (
 				),
 				'active': (
 					'color'           : theme('color', 'text'),
-					'background-color': color.$grey
+					'background-color': color.$light-grey
 				),
 				'hover': (
 					'color'           : theme('color', 'text'),
@@ -495,17 +496,21 @@ $options: (
 			'gradient' : 'gradient'
 		),
 		'settings': (
-			'font-family': inherit,
-			'font-size'  : 1rem,
-			'color'      : theme('color', 'text'),
-			'font-weight': bold,
-			'background' : white,
-			'width'      : 100%,
-			'min-height' : 80px,
-			'button'     : (
+			'font-family'     : inherit,
+			'font-size'       : 1rem,
+			'color'           : theme('color', 'text'),
+			'font-weight'     : bold,
+			'background-color': #fff,
+			'width'           : 100%,
+			'min-height'      : 80px,
+			'button'          : (
 				'padding': .935rem 1.4rem,
 				'icon'   : (
 					'color': theme('color', 'text')
+				),
+				'active': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$light-grey
 				)
 			),
 			'brand': (
@@ -526,23 +531,23 @@ $options: (
 			'input': (
 				'color'            : theme('color', 'text'),
 				'background-color' : white,
-				'border-color'     : theme('color', 'dark'),
+				'border-color'     : theme('border', 'color'),
 				'border-width'     : theme('border', 'width'),
 				'placeholder-color': white,
-				'focus-outline'    : elements('form', 'input', 'outline-width') solid theme('color', 'primary')
+				'focus-outline'    : 2px solid theme('color', 'primary')
 			),
 			'menu': ( // settings of dropdown menu in navbar
-				'background-color': components('menu', 'background-color'),
+				'background-color': theme('color', 'background'),
 				'item': (
-					'color': components('menu', 'item', 'href', 'color')
+					'color': theme('color', 'text')
 				),
 				'hover': (
-					'color'           : components('menu', 'item', 'hover', 'color'),
-					'background-color': components('menu', 'item', 'hover', 'background-color')
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey
 				),
 				'active': (
-					'color'           : components('menu', 'item', 'active', 'color'),
-					'background-color': components('menu', 'item', 'active', 'background-color')
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey
 				)
 			),
 			'styles': (
@@ -553,7 +558,7 @@ $options: (
 					darken(theme('color', 'primary'), 7%), // input bg
 					white, // input color
 					lighten(theme('color', 'primary'), 4%), // input border color
-					darken(theme('color', 'primary'), 5%) // divider color
+					darken(theme('color', 'primary'), 8%) // divider color
 				),
 				(
 					"dark", // theme name (class)

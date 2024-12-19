@@ -26,8 +26,8 @@
 	@include set_border_sides();
 	@include set_utils('caret-color', true);
 	@include set_utils('color', true);
-	@include set_utils('columns');
 	@include color_palette(utils('color'));
+	@include set_utils('columns');
 	@include set_utils('cursor');
 	@include set_utils('filter', true);
 	@include set_utils('display');

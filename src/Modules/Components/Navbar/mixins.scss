@@ -4,6 +4,7 @@
 ///
 
 @use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
 @use "../../../Core/Global/Sass" as *;
 @use "../../../Core/Theme/Getters" as *;
 
@@ -77,7 +78,7 @@
 					color: $text-color;
 				}
 				&:focus {
-					outline: theme('input', 'outline-width') solid lighten($input-border-color, 13%);
+					outline: elements('form', 'input', 'focus', 'outline-width') solid lighten($input-border-color, 13%);
 				}
 			}
 			.#{class('button', 'group')} {

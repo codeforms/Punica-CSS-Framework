@@ -20,6 +20,7 @@
 			font-weight  : components('alert', 'font-weight');
 			border       : components('alert', 'border');
 			border-radius: components('alert', 'border-radius');
+			line-height  : components('alert', 'line-height');
 			a {
 				color          : components('alert', 'href', 'color');
 				text-decoration: components('alert', 'href', 'text-decoration');
