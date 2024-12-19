@@ -283,6 +283,9 @@
 		&:active,
 		&:focus {
 			background-color: lighten($bg-color, 7.5%) !important;
+			i {
+				color: $text-color;
+			}
 		}
 	} @else {
 		background-color: $bg-color;
