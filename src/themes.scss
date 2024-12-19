@@ -94,6 +94,15 @@ $themes: (
 					)
 				)
 			),
+			'navbar': (
+				'background-color': lighten(#222226, 2.5%),
+				'input': (
+					'background-color': #222226
+				),
+				'menu': (
+					'background-color': lighten(#222226, 2.5%),
+				)
+			),
 			'tooltip': (
 				'color'           : #222226,
 				'font-weight'     : 500,
