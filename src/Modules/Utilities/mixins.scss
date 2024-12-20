@@ -13,8 +13,8 @@
 /// Set default helpers
 /// 
 /// @param {Array|List} $helper : key name in the index.scss file
-/// @param {Bool} $two : if two values in the map
-/// @param {Bool} $three : if three values in the map
+/// @param {Bool} $two : if two variables in the map
+/// @param {Bool} $three : if three variables in the map
 /// 
 /// @return mixed
 /// 
@@ -25,25 +25,25 @@
 	$prefix     : utils($helper, 'prefix');
 	$specificity: utils($helper, 'specificity');
 	$unit       : utils($helper, 'unit');
-	$values     : utils($helper, 'values');
+	$variables  : utils($helper, 'variables');
 
 	@if $enabled {
 		@if $two {
 			// suffix / value
-			@each $suffix, $value in $values {
+			@each $suffix, $value in $variables {
 				.#{$prefix}#{$suffix} {
 					#{$property}: #{$value}#{$unit} $specificity;
 				}
 			}
 		} @else if $three {
 			// suffix / css property / value
-			@each $suffix, $prop, $value in $values {
+			@each $suffix, $prop, $value in $variables {
 				.#{$prefix}#{$suffix} {
 					#{$prop}: #{$value}#{$unit} $specificity;
 				}
 			}
 		} @else {
-			@each $value in $values {
+			@each $value in $variables {
 				.#{$prefix}#{$value} {
 					#{$property}: #{$value}#{$unit} $specificity;
 				}
@@ -60,12 +60,12 @@
 @mixin set_inset_helper($helper)
 {
 	$enabled    : utils($helper, 'enabled');
-	$list       : utils($helper, 'values');
+	$list       : utils($helper, 'variables');
 	$specificity: utils($helper, 'specificity');
 
 	@if $enabled {
-		@each $class, $values in $list {
-			@each $value in $values {
+		@each $class, $variables in $list {
+			@each $value in $variables {
 				.#{$class}-#{$value} {
 					#{$class}: #{$value} $specificity;
 				}
@@ -75,24 +75,24 @@
 }
 
 ///
-/// Set helper list with specs
+/// Set helper list with args
 /// 
 /// @param {Array|List} $helpers
 /// 
 /// @return mixed
 ///
-@mixin utils_with_specs($helpers)
+@mixin utils_with_args($helpers)
 {
 	$enabled    : map.get($helpers, 'enabled');
 	$prefix     : map.get($helpers, 'prefix');
 	$specificity: map.get($helpers, 'specificity');
 	$unit       : map.get($helpers, 'unit');
-	$specs      : map.get($helpers, 'specs');
-	$values     : map.get($helpers, 'values');
+	$args       : map.get($helpers, 'args');
+	$variables  : map.get($helpers, 'variables');
 
 	@if $enabled {
-		@each $infix, $property in $values {
-			@each $suffix, $value in $specs {
+		@each $infix, $property in $variables {
+			@each $suffix, $value in $args {
 				.#{$prefix}#{$infix}#{$suffix} {
 					#{$property}: #{$value}#{$unit} $specificity;
 				}
@@ -115,13 +115,13 @@
 	$property   : map.get($colors, 'property');
 	$prefix     : map.get($colors, 'prefix');
 	$specificity: map.get($colors, 'specificity');
-	$values     : map.get($colors, 'values');
+	$variables  : map.get($colors, 'variables');
 	$shade-step : map.get(map.get($colors, 'palette'), 'shade-step');
 	$max-range  : map.get(map.get($colors, 'palette'), 'max-range');
 
 	@if $enabled {
 		@for $i from $shade-step through $max-range {
-			@each $suffix, $color in $values {
+			@each $suffix, $color in $variables {
 				// if the remainder of an integer
 				// division of $i by $shade-step is zero
 				@if $i % $shade-step == 0 {
@@ -148,7 +148,7 @@
 @mixin set_border_sides()
 {
 	$enabled: utils('border', 'enabled');
-	$borders: utils('border', 'specs');
+	$borders: utils('border', 'args');
 	$unit   : utils('border', 'unit');
 	$prefix : utils('border', 'prefix');
 
@@ -183,10 +183,10 @@
 	$enabled: map.get($util, 'enabled');
 	$prefix : map.get($util, 'prefix');
 	$unit   : map.get($util, 'unit');
-	$values : map.get($util, 'specs');
+	$args   : map.get($util, 'args');
 
 	@if $enabled {
-		@each $suffix, $value in $values {
+		@each $suffix, $value in $args {
 			.#{$prefix}x-#{$suffix} {
 				#{$side}-left: #{$value}#{$unit} !important;
 				#{$side}-right: #{$value}#{$unit} !important;

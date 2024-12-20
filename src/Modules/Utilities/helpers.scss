@@ -22,7 +22,7 @@
 	@include set_utils('border-color', true);
 	@include set_utils('border-radius');
 	@include set_utils('border-style');
-	@include utils_with_specs(utils('border'));
+	@include utils_with_args(utils('border'));
 	@include set_border_sides();
 	@include set_utils('caret-color', true);
 	@include set_utils('color', true);
@@ -40,14 +40,14 @@
 	@include set_utils('font-size', true);
 	@include set_utils('font-style');
 	@include set_utils('font-weight');
-	@include utils_with_specs(utils('gap'));
+	@include utils_with_args(utils('gap'));
 	@include set_utils('height', true);
 	@include set_inset_helper('inset');
 	@include set_utils('justify-content');
 	@include set_utils('justify-items');
 	@include set_utils('justify-self', true);
 	@include set_utils('line-height', true);
-	@include utils_with_specs(utils('margin'));
+	@include utils_with_args(utils('margin'));
 	@include set_sides(utils('margin'));
 	@include set_utils('object-fit');
 	@include set_utils('object-position', true);
@@ -57,7 +57,7 @@
 	@include set_utils('outline-style');
 	@include set_utils('outline-width');
 	@include set_utils('overflow', false, true);
-	@include utils_with_specs(utils('padding'));
+	@include utils_with_args(utils('padding'));
 	@include set_sides(utils('padding'), 'padding');
 	@include set_utils('place-content');
 	@include set_utils('place-items');

@@ -26,8 +26,8 @@ $helpers: (
 		'prefix'     : 'accent-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("primary", theme('color', 'primary')),
 			("success", theme('color', 'success')),
@@ -50,8 +50,8 @@ $helpers: (
 		'prefix'     : 'align-content-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (stretch, center, flex-start, flex-end, space-between, space-around, space-evenly)
+		'args'       : null, // for extra variables
+		'variables'  : (stretch, center, flex-start, flex-end, space-between, space-around, space-evenly)
 	),
 	///
 	/// Align Items
@@ -66,8 +66,8 @@ $helpers: (
 		'prefix'     : 'align-items-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (baseline, flex-start, flex-end, center, stretch)
+		'args'       : null, // for extra variables
+		'variables'  : (baseline, flex-start, flex-end, center, stretch)
 	),
 	///
 	/// Align Self
@@ -84,8 +84,8 @@ $helpers: (
 		'prefix'     : 'align-self-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (auto, baseline, flex-start, flex-end, center, stretch)
+		'args'       : null, // for extra variables
+		'variables'  : (auto, baseline, flex-start, flex-end, center, stretch)
 	),
 	///
 	/// Appearance
@@ -101,8 +101,8 @@ $helpers: (
 		'prefix'     : 'appearance-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (auto, none)
+		'args'       : null, // for extra variables
+		'variables'  : (auto, none)
 	),
 	///
 	/// Background Clip
@@ -118,8 +118,8 @@ $helpers: (
 		'prefix'     : 'bg-clip-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("border", border-box),
 			("padding", padding-box),
@@ -142,12 +142,12 @@ $helpers: (
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
+		'args'       : null, // for extra variables
 		'palette'    : (
 			'shade-step': 5,
 			'max-range' : 50
 		),
-		'values'     : (
+		'variables': (
 			// class name (suffix), value
 			("color", theme('color', 'background')),
 			("grey", color.$grey),
@@ -174,8 +174,8 @@ $helpers: (
 		'prefix'     : 'bg-origin-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("border", border-box),
 			("padding", padding-box),
@@ -195,8 +195,8 @@ $helpers: (
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("left", left),
 			("left-top", left top),
@@ -224,8 +224,8 @@ $helpers: (
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (repeat,repeat-x,repeat-y,no-repeat,space,round)
+		'args'       : null, // for extra variables
+		'variables'  : (repeat,repeat-x,repeat-y,no-repeat,space,round)
 	),
 	///
 	/// Background Size
@@ -240,15 +240,15 @@ $helpers: (
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (auto,cover,contain)
+		'args'       : null, // for extra variables
+		'variables'  : (auto,cover,contain)
 	),
 	///
 	/// Border Color
 	/// 
 	/// The border-color property sets the color
 	/// of an element's four borders. This property 
-	/// can have from one to four values.
+	/// can have from one to four variables.
 	///
 	/// @example border-primary
 	/// 
@@ -258,8 +258,8 @@ $helpers: (
 		'prefix'     : 'border-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("grey", color.$grey),
 			("white", white),
@@ -285,8 +285,8 @@ $helpers: (
 		'prefix'     : 'radius-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : px, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (2,4,6,8,10,12,14,16,500),
+		'args'       : null, // for extra variables
+		'variables'  : (2,4,6,8,10,12,14,16,500),
 	),
 	/// 
 	/// Border Style
@@ -302,8 +302,8 @@ $helpers: (
 		'prefix'     : 'border-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (solid, dashed, dotted, double, groove, ridge)
+		'args'       : null, // for extra variables
+		'variables'  : (solid, dashed, dotted, double, groove, ridge)
 	),
 	/// 
 	/// Border
@@ -320,7 +320,7 @@ $helpers: (
 		'prefix'     : 'border', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : rem, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : (
+		'args'       : (
 			// suffix, value
 			(0, 0), // 0
 			(1, 0.063), // 1px
@@ -332,7 +332,7 @@ $helpers: (
 			(8, 0.5), // 8px
 			(10, 0.625) // 10px
 		),
-		'values': (
+		'variables': (
 			// infix, property
 			("-", border-width)
 			("-top-", border-top-width)
@@ -355,8 +355,8 @@ $helpers: (
 		'prefix'     : 'caret-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("primary", theme('color', 'primary')),
 			("success", theme('color', 'success')),
@@ -378,12 +378,12 @@ $helpers: (
 		'prefix'     : 'color-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
+		'args'       : null, // for extra variables
 		'palette'    : (
 			'shade-step': 5,
 			'max-range' : 50
 		),
-		'values'     : (
+		'variables': (
 			// class name (suffix), value
 			("grey", color.$grey),
 			("white", white),
@@ -411,8 +411,8 @@ $helpers: (
 		'prefix'     : 'columns-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (auto,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+		'args'       : null, // for extra variables
+		'variables'  : (auto,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
 	),
 	/// 
 	/// Cursor
@@ -429,8 +429,8 @@ $helpers: (
 		'prefix'     : 'cursor-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (alias, default, grab, help, move, pointer, wait, zoom-in, zoom-out)
+		'args'       : null, // for extra variables
+		'variables'  : (alias, default, grab, help, move, pointer, wait, zoom-in, zoom-out)
 	),
 	/// 
 	/// Display
@@ -447,8 +447,8 @@ $helpers: (
 		'prefix'     : 'display-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (inline, flex, inline-flex, grid, inline-grid, block, inline-block, table, inline-table, table-row, table-column, table-cell)
+		'args'       : null, // for extra variables
+		'variables'  : (inline, flex, inline-flex, grid, inline-grid, block, inline-block, table, inline-table, table-row, table-column, table-cell)
 	),
 	/// 
 	/// Filter
@@ -464,8 +464,8 @@ $helpers: (
 		'prefix'     : 'filter-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), property, value
 			("invert", invert(100%)),
 			("gray", grayscale(100%)),
@@ -486,8 +486,8 @@ $helpers: (
 		'prefix'     : 'flex-direction-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (row, row-reverse, column, column-reverse)
+		'args'       : null, // for extra variables
+		'variables'  : (row, row-reverse, column, column-reverse)
 	),
 	/// 
 	/// Flex Grow
@@ -496,7 +496,7 @@ $helpers: (
 	/// will grow relative to the rest of the flexible items 
 	/// inside the same container.
 	/// 
-	/// @example grow-1
+	/// @example grow-1h
 	///
 	'flex-grow': (
 		'enabled'    : true, // true or false
@@ -504,8 +504,8 @@ $helpers: (
 		'prefix'     : 'grow-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (1,0)
+		'args'       : null, // for extra variables
+		'variables'  : (1,0)
 	),
 	/// 
 	/// Flex Shrink
@@ -522,8 +522,8 @@ $helpers: (
 		'prefix'     : 'shrink-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (1,0)
+		'args'       : null, // for extra variables
+		'variables'  : (1,0)
 	),
 	/// 
 	/// Flex Wrap
@@ -540,8 +540,8 @@ $helpers: (
 		'prefix'     : 'flex-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (wrap, wrap-reverse, nowrap)
+		'args'       : null, // for extra variables
+		'variables'  : (wrap, wrap-reverse, nowrap)
 	),
 	/// 
 	/// Flex
@@ -559,8 +559,8 @@ $helpers: (
 		'prefix'     : 'flex-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("1", 1 1 0%),
 			("auto", 1 1 auto),
@@ -582,8 +582,8 @@ $helpers: (
 		'prefix'     : 'float-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (right, left, none)
+		'args'       : null, // for extra variables
+		'variables'  : (right, left, none)
 	),
 	/// 
 	/// Font Size
@@ -599,8 +599,8 @@ $helpers: (
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("mini", 60%),
 			("tiny", 73%),
@@ -629,8 +629,8 @@ $helpers: (
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (normal,italic)
+		'args'       : null, // for extra variables
+		'variables'  : (normal,italic)
 	),
 	/// 
 	/// Font Weight
@@ -647,8 +647,8 @@ $helpers: (
 		'prefix'     : 'weight-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (100,200,300,400,500,600,700,800,900,normal,bold,bolder,lighter)
+		'args'       : null, // for extra variables
+		'variables'  : (100,200,300,400,500,600,700,800,900,normal,bold,bolder,lighter)
 	),
 	/// 
 	/// Gap
@@ -667,7 +667,7 @@ $helpers: (
 		'prefix'     : 'gap', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : (
+		'args'       : (
 			// class name (suffix), value
 			(0, 0),
 			(1, 1px),
@@ -680,7 +680,7 @@ $helpers: (
 			(24, 1.5rem), // 24px
 			(32, 2rem) // 32px
 		),
-		'values': (
+		'variables': (
 			// infix, property
 			("-", gap),
 			("-x-", column-gap),
@@ -701,8 +701,8 @@ $helpers: (
 		'prefix'     : 'height-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("min-content", min-content),
 			("max-content", max-content),
@@ -743,9 +743,9 @@ $helpers: (
 		'prefix'     : null, // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
-			// class name, [values]
+		'args'       : null, // for extra variables
+		'variables'  : (
+			// class name, [variables]
 			'top'(0, auto),
 			'bottom'(0, auto),
 			'left'(0, auto),
@@ -768,8 +768,8 @@ $helpers: (
 		'prefix'     : 'justify-content-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (baseline, flex-start, flex-end, center, space-between, space-around)
+		'args'       : null, // for extra variables
+		'variables'  : (baseline, flex-start, flex-end, center, space-between, space-around)
 	),
 	/// 
 	/// Justify Items
@@ -786,8 +786,8 @@ $helpers: (
 		'prefix'     : 'justify-items-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (stretch, start, left, center, end, right)
+		'args'       : null, // for extra variables
+		'variables'  : (stretch, start, left, center, end, right)
 	),
 	/// 
 	/// Justify Self
@@ -804,8 +804,8 @@ $helpers: (
 		'prefix'     : 'justify-self-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("auto", auto),
 			("normal", normal),
@@ -834,8 +834,8 @@ $helpers: (
 		'prefix'     : 'leading-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			(1, 1), // none
 			(3, .75rem), // 12px
 			(4, 1rem), // 16px
@@ -863,7 +863,7 @@ $helpers: (
 		'prefix'     : 'm', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : (
+		'args'       : (
 			// class name (suffix), value
 			(auto, auto),
 			(0, 0), // 0
@@ -889,7 +889,7 @@ $helpers: (
 			(175, 10.938rem), // 175px
 			(200, 12.5rem), // 200px
 		),
-		'values'     : (
+		'variables': (
 			// infix, property
 			("-", margin),
 			("t-", margin-top),
@@ -916,8 +916,8 @@ $helpers: (
 		'prefix'     : 'object-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (fill, contain, cover, none, scale-down)
+		'args'       : null, // for extra variables
+		'variables'  : (fill, contain, cover, none, scale-down)
 	),
 	/// 
 	/// Object Position
@@ -936,8 +936,8 @@ $helpers: (
 		'prefix'     : 'object-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("bottom", bottom),
 			("center", center),
@@ -965,8 +965,8 @@ $helpers: (
 		'prefix'     : 'order-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (1,2,3,4,5)
+		'args'       : null, // for extra variables
+		'variables'  : (1,2,3,4,5)
 	),
 	/// 
 	/// Outline Color
@@ -982,8 +982,8 @@ $helpers: (
 		'prefix'     : 'outline-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("grey", color.$grey),
 			("white", white),
@@ -1009,8 +1009,8 @@ $helpers: (
 		'prefix'     : 'outline-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (solid,dashed,dotted,double)
+		'args'       : null, // for extra variables
+		'variables'  : (solid,dashed,dotted,double)
 	),
 	/// 
 	/// Outline Offset
@@ -1027,8 +1027,8 @@ $helpers: (
 		'prefix'     : 'outline-offset-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (0,1,2,4,8)
+		'args'       : null, // for extra variables
+		'variables'  : (0,1,2,4,8)
 	),
 	/// 
 	/// Outline Width
@@ -1044,8 +1044,8 @@ $helpers: (
 		'prefix'     : 'outline-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (0,1,2,4,8)
+		'args'       : null, // for extra variables
+		'variables'  : (0,1,2,4,8)
 	),
 	/// 
 	/// Overflow
@@ -1062,8 +1062,8 @@ $helpers: (
 		'prefix'     : 'overflow-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), property, value
 			("auto", overflow, auto),
 			("hidden", overflow, hidden),
@@ -1095,7 +1095,7 @@ $helpers: (
 		'prefix'     : 'p', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : (
+		'args'       : (
 			// class name (suffix), value
 			(auto, auto),
 			(0, 0), // 0
@@ -1121,7 +1121,7 @@ $helpers: (
 			(175, 10.938rem), // 175px
 			(200, 12.5rem), // 200px
 		),
-		'values'     : (
+		'variables': (
 			// infix, property
 			("-", padding),
 			("t-", padding-top),
@@ -1146,8 +1146,8 @@ $helpers: (
 		'prefix'     : 'place-content-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (stretch, start, end, center, space-between, space-around, space-evenly)
+		'args'       : null, // for extra variables
+		'variables'  : (stretch, start, end, center, space-between, space-around, space-evenly)
 	),
 	/// 
 	/// Place Items
@@ -1164,8 +1164,8 @@ $helpers: (
 		'prefix'     : 'place-items-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (stretch, start, end, center, baseline)
+		'args'       : null, // for extra variables
+		'variables'  : (stretch, start, end, center, baseline)
 	),
 	/// 
 	/// Place Self
@@ -1182,8 +1182,8 @@ $helpers: (
 		'prefix'     : 'place-self-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (auto, stretch, start, left, center, end, right)
+		'args'       : null, // for extra variables
+		'variables'  : (auto, stretch, start, left, center, end, right)
 	),
 	/// 
 	/// Position
@@ -1200,8 +1200,8 @@ $helpers: (
 		'prefix'     : 'position-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (static, absolute, fixed, relative, sticky)
+		'args'       : null, // for extra variables
+		'variables'  : (static, absolute, fixed, relative, sticky)
 	),
 	/// 
 	/// Resize
@@ -1217,8 +1217,8 @@ $helpers: (
 		'prefix'     : 'resize-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (none, both, horizontal, vertical)
+		'args'       : null, // for extra variables
+		'variables'  : (none, both, horizontal, vertical)
 	),
 	/// 
 	/// Text Align
@@ -1233,8 +1233,8 @@ $helpers: (
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (left, right, center, justify, start, end)
+		'args'       : null, // for extra variables
+		'variables'  : (left, right, center, justify, start, end)
 	),
 	/// 
 	/// Text Decoration
@@ -1249,8 +1249,8 @@ $helpers: (
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (underline, overline, line-through)
+		'args'       : null, // for extra variables
+		'variables'  : (underline, overline, line-through)
 	),
 	/// 
 	/// Text Transform
@@ -1266,8 +1266,8 @@ $helpers: (
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (uppercase, lowercase, capitalize)
+		'args'       : null, // for extra variables
+		'variables'  : (uppercase, lowercase, capitalize)
 	),
 	/// 
 	/// Text Wrap
@@ -1283,8 +1283,8 @@ $helpers: (
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (wrap, nowrap, balance, pretty)
+		'args'       : null, // for extra variables
+		'variables'  : (wrap, nowrap, balance, pretty)
 	),
 	/// 
 	/// User Select
@@ -1300,8 +1300,8 @@ $helpers: (
 		'prefix'     : 'select-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (none, auto, text, all)
+		'args'       : null, // for extra variables
+		'variables'  : (none, auto, text, all)
 	),
 	/// 
 	/// Vertical Align
@@ -1317,8 +1317,8 @@ $helpers: (
 		'prefix'     : 'align-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (baseline, top, middle, bottom, text-top, text-bottom, sub, super)
+		'args'       : null, // for extra variables
+		'variables'  : (baseline, top, middle, bottom, text-top, text-bottom, sub, super)
 	),
 	/// 
 	/// Width
@@ -1334,8 +1334,8 @@ $helpers: (
 		'prefix'     : 'width-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (
+		'args'       : null, // for extra variables
+		'variables'  : (
 			// class name (suffix), value
 			("min-content", min-content),
 			("max-content", max-content),
@@ -1379,7 +1379,7 @@ $helpers: (
 		'prefix'     : 'z-', // prefix of class name
 		'specificity': !important, // or null
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'specs'      : null, // for extra variables
-		'values'     : (auto,-1,0,1,10,20,30,40,50,99)
+		'args'       : null, // for extra variables
+		'variables'  : (auto,-1,0,1,10,20,30,40,50,99)
 	)
 )
