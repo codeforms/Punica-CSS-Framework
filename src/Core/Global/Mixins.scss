@@ -14,7 +14,7 @@
 @mixin breakpoints(
 	$size, $width: 'min-width'
 ) {
-	@media only screen and ($width: $size) {
+	@media ($width: $size) {
 		@content;
 	}
 }

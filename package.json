@@ -14,9 +14,10 @@
     "multi-theme"
   ],
   "scripts": {
-    "prod"    : "sass src/punica.scss dist/punica.min.css --no-source-map --style compressed",
-    "unminify": "sass src/punica.scss dist/punica.css --no-source-map",
-    "watch"   : "npm run prod -- -w"
+    "prod"          : "sass src/punica.scss dist/punica.min.css --no-source-map --style compressed",
+    "unminify"      : "sass src/punica.scss dist/punica.css --no-source-map",
+    "unminify-watch": "npm run unminify -- -w",
+    "watch"         : "npm run prod -- -w"
   },
   "dependencies": {
     "sass": "1.82.0"

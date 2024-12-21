@@ -10,16 +10,28 @@
 @if enabled('elements', 'grid') {
 	$column-size: elements('grid', 'columns', 'size');
 
-	.#{class('grid', 'container')} {
+	// Containers
+	.#{class('grid', 'container')},
+	[class^="#{class('grid', 'container')}-"] {
 		width  : elements('grid', 'container', 'width');
 		margin : elements('grid', 'container', 'margin');
 		padding: 0 elements('grid', 'container', 'padding');
 	}
 	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
-		.#{class('grid', 'container')} {
+		.#{class('grid', 'container')},
+		[class^="#{class('grid', 'container')}-"] {
 			padding: 0 calc(elements('grid', 'container', 'padding') / 3);
 		}
 	}
+	@each $label, $breakpoint in elements('grid', 'container', 'viewports') {
+		@include breakpoints($breakpoint) {
+			.#{class('grid', 'container')}-#{$label} {
+				max-width: calc(#{$breakpoint} - 1.7%);
+			}
+		}
+	}
+
+	// Row
 	.#{class('grid', 'row')} {
 		display              : grid;
 		grid-gap             : elements('grid', 'gap');
@@ -36,12 +48,14 @@
 			}
 		}
 	}
+
 	// Default Grid System
 	@for $id from 1 through $column-size {
 		.#{class('grid', 'column')}-#{$id} {
 			grid-column: span #{$id};
 		}
 	}
+
 	// Breakpoints
 	@each $label, $breakpoint in elements('grid', 'viewports') {
 		@include breakpoints($breakpoint) {
@@ -52,6 +66,7 @@
 			}
 		}
 	}
+	
 	// Offset
 	@if features('elements', 'grid', 'offset') {
 		@each $label, $breakpoint in elements('grid', 'viewports') {

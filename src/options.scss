@@ -1204,7 +1204,14 @@ $options: (
 			'container': (
 				'width'  : 100%,
 				'padding': 40px, // for left and right sides
-				'margin' : 0 auto
+				'margin' : 0 auto,
+				'viewports': ( // only for containers
+					('sm', 500px),
+					('md', 768px),
+					('lg', 992px),
+					('xl', 1260px),
+					('xxl', 1400px)
+				)
 			),
 			'breakpoints': (
 				'extra-small'      : 0,
