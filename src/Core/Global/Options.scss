@@ -53,7 +53,7 @@
 /// @param {String|null} $feature
 /// 
 /// @example features('components', 'card', 'horizontal')
-/// @example features('elements', 'button', 'gradient')
+/// @example features('elements', 'button', 'preloader')
 ///
 /// @return bool
 ///
@@ -71,6 +71,9 @@
 ///
 /// @param {String} $node
 /// @param {String} $module
+/// 
+/// @example enabled('elements', 'grid')
+/// @example enabled('components', 'navbar')
 /// 
 /// @return bool
 ///
@@ -101,20 +104,10 @@
 		@warn helper.$nesting-depth;
 	}
 
-	@if theme($module, nth($keys, 1), nth($keys, 2)) {
-		$value: theme($module, nth($keys, 1), nth($keys, 2));
+	$value: theme($module, $keys...);
 
-		@if length($keys) > 2 {
-			$value: theme($module, nth($keys, 1), nth($keys, 2), nth($keys, 3));
-
-			@if length($keys) > 3 {
-				$value: theme($module, nth($keys, 1), nth($keys, 2), nth($keys, 3), nth($keys, 4));
-			}
-		}
-
-		@if($value != null) {
-			@return $value;
-		}
+	@if($value != null) {
+		@return $value;
 	}
 	
 	@return get_default_settings($keys);
@@ -130,15 +123,5 @@
 /// 
 @function get_default_settings($keys) 
 {
-	$value: get.settings(nth($keys, 1), nth($keys, 2));
-
-	@if length($keys) > 2 {
-		$value: get.settings(nth($keys, 1), nth($keys, 2), nth($keys, 3));
-
-		@if length($keys) > 3 {
-			$value: get.settings(nth($keys, 1), nth($keys, 2), nth($keys, 3), nth($keys, 4));
-		}
-	}
-
-	@return $value;
+	@return get.settings($keys...);
 }
