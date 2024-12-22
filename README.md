@@ -15,3 +15,4 @@ Punica's API-based structure allows you to create or customize a CSS framework t
 * Customizable settings for every component, element, and utility
 * Dynamic color scale generation based on specified color variables
 * Simple and functional debugging
+* Clean and readable code structure
