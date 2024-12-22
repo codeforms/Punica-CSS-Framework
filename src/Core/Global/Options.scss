@@ -110,18 +110,5 @@
 		@return $value;
 	}
 	
-	@return get_default_settings($keys);
-}
-
-///
-/// Get default settings
-/// from the options.scss API file
-///
-/// @param {String(s)} $keys
-/// 
-/// @return mixed
-/// 
-@function get_default_settings($keys) 
-{
 	@return get.settings($keys...);
 }
