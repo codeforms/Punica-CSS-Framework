@@ -78,6 +78,10 @@
 ///
 @function settings($node, $keys...) 
 {
+	@if length($keys) > 4 {
+		@warn helper.$nesting-depth;
+	}
+	
 	$settings: map.get(map.get(options($node), 'settings'), nth($keys, 1));
 
 	@if $settings == null {

@@ -100,10 +100,6 @@
 ///
 @function set_variable($module, $keys...) 
 {
-	@if length($keys) > 4 {
-		@warn helper.$nesting-depth;
-	}
-
 	$value: theme($module, $keys...);
 
 	@if($value != null) {
