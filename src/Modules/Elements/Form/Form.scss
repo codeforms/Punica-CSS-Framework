@@ -39,6 +39,9 @@
 			color           : elements('form', 'input', 'focus', 'color');
 			z-index         : 0;
 		}
+		&::placeholder {
+			color: components('form', 'input', 'placeholder', 'color');
+		}
 		///
 		/// VALIDATION STYLES
 		///

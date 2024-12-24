@@ -38,7 +38,7 @@
 			padding        : components('navbar', 'brand', 'padding');
 			margin-right   : components('navbar', 'brand', 'margin-right');
 			img {
-				width: components('navbar', 'brand', 'img-width');
+				width: components('navbar', 'brand', 'img', 'width');
 			}
 			a,
 			a:visited {
@@ -87,10 +87,10 @@
 					border-color    : components('navbar', 'input', 'border-color');
 					border-width    : components('navbar', 'input', 'border-width');
 					&::placeholder {
-						color: components('navbar', 'input', 'placeholder-color');
+						color: components('navbar', 'input', 'placeholder', 'color');
 					}
 					&:focus {
-						outline: components('navbar', 'input', 'focus-outline');
+						outline: components('navbar', 'input', 'focus', 'outline');
 					}
 				}
 				///

@@ -510,15 +510,17 @@ $options: (
 				),
 				'active': (
 					'color'           : theme('color', 'text'),
-					'background-color': color.$light-grey
+					'background-color': color.$grey
 				)
 			),
 			'brand': (
 				'padding'     : 0,
 				'margin-right': 1rem,
 				'font-weight' : bold,
-				'img-width'   : 7rem,
-				'href'        : (
+				'img'         : (
+					'width': 7rem
+				),
+				'href': (
 					'color': theme('color', 'text')
 				)
 			),
@@ -529,12 +531,16 @@ $options: (
 				'symbol-close': "\2715" // HTML Symbols
 			),
 			'input': (
-				'color'            : theme('color', 'text'),
-				'background-color' : white,
-				'border-color'     : theme('border', 'color'),
-				'border-width'     : theme('border', 'width'),
-				'placeholder-color': white,
-				'focus-outline'    : 2px solid theme('color', 'primary')
+				'color'           : theme('color', 'text'),
+				'background-color': white,
+				'border-color'    : theme('border', 'color'),
+				'border-width'    : theme('border', 'width'),
+				'focus'           : (
+					'outline': 2px solid theme('color', 'primary')
+				),
+				'placeholder': (
+					'color': color.$dark-grey
+				)
 			),
 			'menu': ( // settings of dropdown menu in navbar
 				'background-color': theme('color', 'background'),
@@ -1012,7 +1018,7 @@ $options: (
 					'dark', // class name
 					theme('color', 'dark'), // bg color
 					white, // text color
-					color.$dark-grey // border color
+					if((theme('type') == "light"), color.$dark-grey, color.$grey) // border color
 				)
 			),
 			'sizes': (
@@ -1088,6 +1094,9 @@ $options: (
 					'outline-color'   : theme('color', 'primary'),
 					'outline-width'   : 2px
 				),
+				'placeholder': (
+					'color': color.$dark-grey
+				)
 			),
 			'items': (
 				'margin': 0
