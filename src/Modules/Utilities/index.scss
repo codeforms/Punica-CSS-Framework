@@ -717,6 +717,7 @@ $helpers: (
 			(8, 5rem), // 80px
 			(10, 6.25rem), // 100px
 			(16, 10rem), // 160px
+			(20, 12.5rem), // 200px
 			(24, 15rem), // 240px
 			(32, 20rem), // 320px
 			(40, 25rem), // 400px
@@ -817,6 +818,33 @@ $helpers: (
 			("right", right),
 			("first-baseline", first baseline),
 			("last-baseline", last baseline)
+		)
+	),
+	/// 
+	/// Letter Spacing
+	///
+	/// The letter-spacing property increases or 
+	/// decreases the space between characters in a text.
+	/// 
+	/// @example letter-tighter
+	/// @example letter-wide
+	///
+	'letter-spacing': (
+		'enabled'    : true, // true or false
+		'property'   : 'letter-spacing', // css property name (don't change it !)
+		'prefix'     : 'letter-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : rem, // length units (px, rem, em, %, vh, vw etc)
+		'args'       : null, // for extra variables
+		'variables'  : (
+			// class name (suffix), value
+			("tightest", -0.094), // -1.5px
+			("tighter", -0.063), // -1px
+			("tight", -0.031), // -0.5px
+			("normal", 0),
+			("wide", 0.031), // 0.5px
+			("wider", 0.063), // 1px
+			("widest", 0.094) // 1.5px
 		)
 	),
 	///
@@ -1350,6 +1378,7 @@ $helpers: (
 			(8, 5rem), // 80px
 			(10, 6.25rem), // 100px
 			(16, 10rem), // 160px
+			(20, 12.5rem), // 200px
 			(24, 15rem), // 240px
 			(32, 20rem), // 320px
 			(40, 25rem), // 400px

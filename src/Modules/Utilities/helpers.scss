@@ -46,6 +46,7 @@
 	@include set_utils('justify-content');
 	@include set_utils('justify-items');
 	@include set_utils('justify-self', true);
+	@include set_utils('letter-spacing', true);
 	@include set_utils('line-height', true);
 	@include utils_with_args(utils('margin'));
 	@include set_sides(utils('margin'));
