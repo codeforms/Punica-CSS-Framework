@@ -25,7 +25,7 @@ $helpers: (
 		'property'   : 'accent-color', // css property name (don't change it !)
 		'prefix'     : 'accent-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -49,7 +49,7 @@ $helpers: (
 		'property'   : 'align-content', // css property name (don't change it !)
 		'prefix'     : 'align-content-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (stretch, center, flex-start, flex-end, space-between, space-around, space-evenly)
 	),
@@ -65,7 +65,7 @@ $helpers: (
 		'property'   : 'align-items', // css property name (don't change it !)
 		'prefix'     : 'align-items-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (baseline, flex-start, flex-end, center, stretch)
 	),
@@ -83,7 +83,7 @@ $helpers: (
 		'property'   : 'align-self', // css property name (don't change it !)
 		'prefix'     : 'align-self-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (auto, baseline, flex-start, flex-end, center, stretch)
 	),
@@ -100,7 +100,7 @@ $helpers: (
 		'property'   : 'appearance', // css property name (don't change it !)
 		'prefix'     : 'appearance-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (auto, none)
 	),
@@ -117,7 +117,7 @@ $helpers: (
 		'property'   : 'background-clip', // css property name (don't change it !)
 		'prefix'     : 'bg-clip-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -141,7 +141,7 @@ $helpers: (
 		'property'   : 'background-color', // css property name (don't change it !)
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'palette'    : (
 			'shade-step': 5,
@@ -173,7 +173,7 @@ $helpers: (
 		'property'   : 'background-origin', // css property name (don't change it !)
 		'prefix'     : 'bg-origin-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -194,7 +194,7 @@ $helpers: (
 		'property'   : 'background-position', // css property name (don't change it !)
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -223,7 +223,7 @@ $helpers: (
 		'property'   : 'background-repeat', // css property name (don't change it !)
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (repeat,repeat-x,repeat-y,no-repeat,space,round)
 	),
@@ -239,7 +239,7 @@ $helpers: (
 		'property'   : 'background-size', // css property name (don't change it !)
 		'prefix'     : 'bg-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (auto,cover,contain)
 	),
@@ -257,7 +257,7 @@ $helpers: (
 		'property'   : 'border', // css property name (don't change it !)
 		'prefix'     : 'border', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : rem, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : rem, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : (
 			// suffix, value
 			(0, 0), // 0
@@ -293,7 +293,7 @@ $helpers: (
 		'property'   : 'border-color', // css property name (don't change it !)
 		'prefix'     : 'border-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -320,7 +320,7 @@ $helpers: (
 		'property'   : 'border-radius', // css property name (don't change it !)
 		'prefix'     : 'radius-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : px, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : px, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (2,4,6,8,10,12,14,16,500),
 	),
@@ -337,7 +337,7 @@ $helpers: (
 		'property'   : 'border-style', // css property name (don't change it !)
 		'prefix'     : 'border-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (solid, dashed, dotted, double, groove, ridge)
 	),
@@ -354,7 +354,7 @@ $helpers: (
 		'property'   : 'caret-color', // css property name (don't change it !)
 		'prefix'     : 'caret-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -377,7 +377,7 @@ $helpers: (
 		'property'   : 'color', // css property name (don't change it !)
 		'prefix'     : 'color-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'palette'    : (
 			'shade-step': 5,
@@ -410,7 +410,7 @@ $helpers: (
 		'property'   : 'columns', // css property name (don't change it !)
 		'prefix'     : 'columns-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (auto,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
 	),
@@ -428,7 +428,7 @@ $helpers: (
 		'property'   : 'cursor', // css property name (don't change it !)
 		'prefix'     : 'cursor-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (alias, default, grab, help, move, pointer, wait, zoom-in, zoom-out)
 	),
@@ -446,7 +446,7 @@ $helpers: (
 		'property'   : 'display', // css property name (don't change it !)
 		'prefix'     : 'display-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (inline, flex, inline-flex, grid, inline-grid, block, inline-block, table, inline-table, table-row, table-column, table-cell)
 	),
@@ -463,7 +463,7 @@ $helpers: (
 		'property'   : 'filter', // css property name (don't change it !)
 		'prefix'     : 'filter-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), property, value
@@ -486,7 +486,7 @@ $helpers: (
 		'property'   : 'flex', // css property name (don't change it !)
 		'prefix'     : 'flex-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -510,7 +510,7 @@ $helpers: (
 		'property'   : 'flex-direction', // css property name (don't change it !)
 		'prefix'     : 'flex-direction-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (row, row-reverse, column, column-reverse)
 	),
@@ -528,7 +528,7 @@ $helpers: (
 		'property'   : 'flex-grow', // css property name (don't change it !)
 		'prefix'     : 'grow-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (1,0)
 	),
@@ -546,7 +546,7 @@ $helpers: (
 		'property'   : 'flex-shrink', // css property name (don't change it !)
 		'prefix'     : 'shrink-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (1,0)
 	),
@@ -564,7 +564,7 @@ $helpers: (
 		'property'   : 'flex-wrap', // css property name (don't change it !)
 		'prefix'     : 'flex-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (wrap, wrap-reverse, nowrap)
 	),
@@ -581,7 +581,7 @@ $helpers: (
 		'property'   : 'float', // css property name (don't change it !)
 		'prefix'     : 'float-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (right, left, none)
 	),
@@ -598,7 +598,7 @@ $helpers: (
 		'property'   : 'font-size', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -628,7 +628,7 @@ $helpers: (
 		'property'   : 'font-style', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (normal,italic)
 	),
@@ -646,7 +646,7 @@ $helpers: (
 		'property'   : 'font-weight', // css property name (don't change it !)
 		'prefix'     : 'weight-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (100,200,300,400,500,600,700,800,900,normal,bold,bolder,lighter)
 	),
@@ -666,7 +666,7 @@ $helpers: (
 		'property'   : 'gap', // css property name (don't change it !)
 		'prefix'     : 'gap', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : (
 			// class name (suffix), value
 			(0, 0),
@@ -700,7 +700,7 @@ $helpers: (
 		'property'   : 'height', // css property name (don't change it !)
 		'prefix'     : 'height-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -743,7 +743,7 @@ $helpers: (
 		'property'   : null, // css property name
 		'prefix'     : null, // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name, [variables]
@@ -768,7 +768,7 @@ $helpers: (
 		'property'   : 'justify-content', // css property name (don't change it !)
 		'prefix'     : 'justify-content-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (baseline, flex-start, flex-end, center, space-between, space-around)
 	),
@@ -786,7 +786,7 @@ $helpers: (
 		'property'   : 'justify-items', // css property name (don't change it !)
 		'prefix'     : 'justify-items-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (stretch, start, left, center, end, right)
 	),
@@ -804,7 +804,7 @@ $helpers: (
 		'property'   : 'justify-self', // css property name (don't change it !)
 		'prefix'     : 'justify-self-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -834,7 +834,7 @@ $helpers: (
 		'property'   : 'letter-spacing', // css property name (don't change it !)
 		'prefix'     : 'letter-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : rem, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : rem, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -861,7 +861,7 @@ $helpers: (
 		'property'   : 'line-height', // css property name (don't change it !)
 		'prefix'     : 'leading-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			(1, 1), // none
@@ -890,7 +890,7 @@ $helpers: (
 		'property'   : 'margin', // css property name (don't change it !)
 		'prefix'     : 'm', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : (
 			// class name (suffix), value
 			(auto, auto),
@@ -943,7 +943,7 @@ $helpers: (
 		'property'   : 'object-fit', // css property name (don't change it !)
 		'prefix'     : 'object-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (fill, contain, cover, none, scale-down)
 	),
@@ -963,7 +963,7 @@ $helpers: (
 		'property'   : 'object-position', // css property name (don't change it !)
 		'prefix'     : 'object-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -992,7 +992,7 @@ $helpers: (
 		'property'   : 'order', // css property name (don't change it !)
 		'prefix'     : 'order-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (1,2,3,4,5)
 	),
@@ -1009,7 +1009,7 @@ $helpers: (
 		'property'   : 'outline-color', // css property name (don't change it !)
 		'prefix'     : 'outline-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -1038,7 +1038,7 @@ $helpers: (
 		'property'   : 'outline-offset', // css property name (don't change it !)
 		'prefix'     : 'outline-offset-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (0,1,2,4,8)
 	),
@@ -1054,7 +1054,7 @@ $helpers: (
 		'property'   : 'outline-style', // css property name (don't change it !)
 		'prefix'     : 'outline-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (solid,dashed,dotted,double)
 	),
@@ -1071,7 +1071,7 @@ $helpers: (
 		'property'   : 'outline-width', // css property name (don't change it !)
 		'prefix'     : 'outline-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (0,1,2,4,8)
 	),
@@ -1089,7 +1089,7 @@ $helpers: (
 		'property'   : 'overflow', // css property name (don't change it !)
 		'prefix'     : 'overflow-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), property, value
@@ -1122,7 +1122,7 @@ $helpers: (
 		'property'   : 'padding', // css property name (don't change it !)
 		'prefix'     : 'p', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : (
 			// class name (suffix), value
 			(auto, auto),
@@ -1173,7 +1173,7 @@ $helpers: (
 		'property'   : 'place-content', // css property name (don't change it !)
 		'prefix'     : 'place-content-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (stretch, start, end, center, space-between, space-around, space-evenly)
 	),
@@ -1191,7 +1191,7 @@ $helpers: (
 		'property'   : 'place-items', // css property name (don't change it !)
 		'prefix'     : 'place-items-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (stretch, start, end, center, baseline)
 	),
@@ -1209,7 +1209,7 @@ $helpers: (
 		'property'   : 'place-self', // css property name (don't change it !)
 		'prefix'     : 'place-self-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (auto, stretch, start, left, center, end, right)
 	),
@@ -1227,7 +1227,7 @@ $helpers: (
 		'property'   : 'position', // css property name (don't change it !)
 		'prefix'     : 'position-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (static, absolute, fixed, relative, sticky)
 	),
@@ -1244,9 +1244,26 @@ $helpers: (
 		'property'   : 'resize', // css property name (don't change it !)
 		'prefix'     : 'resize-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (none, both, horizontal, vertical)
+	),
+	/// 
+	/// Rotate
+	/// 
+	/// The rotate property allows you 
+	/// to rotate elements.
+	/// 
+	/// @example rotate-33
+	///
+	'rotate': (
+		'enabled'    : true, // true or false
+		'property'   : 'rotate', // css property name (don't change it !)
+		'prefix'     : 'rotate-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : deg, // length/angle units (px, rem, em, %, vh, vw etc)
+		'args'       : null, // for extra variables
+		'variables'  : (3,6,9,12,24,33,45,66,90,180)
 	),
 	/// 
 	/// Text Align
@@ -1260,7 +1277,7 @@ $helpers: (
 		'property'   : 'text-align', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (left, right, center, justify, start, end)
 	),
@@ -1276,7 +1293,7 @@ $helpers: (
 		'property'   : 'text-decoration', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (underline, overline, line-through)
 	),
@@ -1293,7 +1310,7 @@ $helpers: (
 		'property'   : 'text-transform', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (uppercase, lowercase, capitalize)
 	),
@@ -1310,7 +1327,7 @@ $helpers: (
 		'property'   : 'text-wrap', // css property name (don't change it !)
 		'prefix'     : 'text-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (wrap, nowrap, balance, pretty)
 	),
@@ -1327,7 +1344,7 @@ $helpers: (
 		'property'   : 'user-select', // css property name (don't change it !)
 		'prefix'     : 'select-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (none, auto, text, all)
 	),
@@ -1344,7 +1361,7 @@ $helpers: (
 		'property'   : 'vertical-align', // css property name (don't change it !)
 		'prefix'     : 'align-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (baseline, top, middle, bottom, text-top, text-bottom, sub, super)
 	),
@@ -1361,7 +1378,7 @@ $helpers: (
 		'property'   : 'width', // css property name (don't change it !)
 		'prefix'     : 'width-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
@@ -1407,7 +1424,7 @@ $helpers: (
 		'property'   : 'z-index', // css property name (don't change it !)
 		'prefix'     : 'z-', // prefix of class name
 		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (auto,-1,0,1,10,20,30,40,50,99)
 	)

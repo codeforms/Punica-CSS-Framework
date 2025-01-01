@@ -19,22 +19,22 @@ $themes: (
 		'type'      : 'light', // light or dark (required*),
 		'typography': (
 			'font-family': 'Inter Tight',
-			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap', // embed/import url
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap', // embed/import url
 			'font-size'  : 1rem,
 			'font-weight': 400,
 			'line-height': 1.7
 		),
 		'color': (
-			'text'      : #202123,
+			'text'      : #1e2126,
 			'background': white,
 			'primary'   : #3266ec,
 			'success'   : #369138,
 			'warning'   : #c17f2a,
 			'error'     : #CC2B52,
-			'dark'      : #313035
+			'dark'      : #393644
 		),
 		'border': (
-			'color' : #c6c6c6,
+			'color' : #cbd3db,
 			'width' : 1px,
 			'style' : solid,
 			'radius': .25rem,
@@ -61,7 +61,7 @@ $themes: (
 			'success'   : #369138,
 			'warning'   : #c17f2a,
 			'error'     : #CC2B52,
-			'dark'      : #313035
+			'dark'      : #393644
 		),
 		'border': (
 			'color' : #373a48,

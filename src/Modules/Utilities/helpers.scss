@@ -66,6 +66,7 @@
 	@include set_utils('place-self');
 	@include set_utils('position');
 	@include set_utils('resize');
+	@include set_utils('rotate');
 	@include set_utils('text-align');
 	@include set_utils('text-decoration');
 	@include set_utils('text-transform');
