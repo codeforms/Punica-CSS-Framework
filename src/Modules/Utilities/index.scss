@@ -243,6 +243,42 @@ $helpers: (
 		'args'       : null, // for extra variables
 		'variables'  : (auto,cover,contain)
 	),
+	/// 
+	/// Border
+	///
+	/// The border property is a shorthand property for
+	/// border-width, border-style and border-color.
+	/// 
+	/// @example border-3
+	/// @example border-right-2
+	///
+	'border':(
+		'enabled'    : true, // true or false
+		'property'   : 'border', // css property name (don't change it !)
+		'prefix'     : 'border', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : rem, // length units (px, rem, em, %, vh, vw etc)
+		'args'       : (
+			// suffix, value
+			(0, 0), // 0
+			(1, 0.063), // 1px
+			(2, 0.125), // 2px
+			(3, 0.188), // 3px
+			(4, 0.25), // 4px
+			(5, 0.313), // 5px
+			(6, 0.375), // 6px
+			(8, 0.5), // 8px
+			(10, 0.625) // 10px
+		),
+		'variables': (
+			// infix, property
+			("-", border-width)
+			("-top-", border-top-width)
+			("-right-", border-right-width)
+			("-bottom-", border-bottom-width)
+			("-left-", border-left-width)
+		)
+	),
 	///
 	/// Border Color
 	/// 
@@ -304,42 +340,6 @@ $helpers: (
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (solid, dashed, dotted, double, groove, ridge)
-	),
-	/// 
-	/// Border
-	///
-	/// The border property is a shorthand property for
-	/// border-width, border-style and border-color.
-	/// 
-	/// @example border-3
-	/// @example border-right-2
-	///
-	'border':(
-		'enabled'    : true, // true or false
-		'property'   : 'border', // css property name (don't change it !)
-		'prefix'     : 'border', // prefix of class name
-		'specificity': !important, // or null
-		'unit'       : rem, // length units (px, rem, em, %, vh, vw etc)
-		'args'       : (
-			// suffix, value
-			(0, 0), // 0
-			(1, 0.063), // 1px
-			(2, 0.125), // 2px
-			(3, 0.188), // 3px
-			(4, 0.25), // 4px
-			(5, 0.313), // 5px
-			(6, 0.375), // 6px
-			(8, 0.5), // 8px
-			(10, 0.625) // 10px
-		),
-		'variables': (
-			// infix, property
-			("-", border-width)
-			("-top-", border-top-width)
-			("-right-", border-right-width)
-			("-bottom-", border-bottom-width)
-			("-left-", border-left-width)
-		)
 	),
 	///
 	/// Caret Color
@@ -472,6 +472,31 @@ $helpers: (
 		)
 	),
 	/// 
+	/// Flex
+	///
+	/// The flex property sets the flexible length on flexible items.
+	/// The flex property is a shorthand property for flex-grow, flex-shrink
+	/// and flex-basis.
+	/// 
+	/// @example flex-1
+	/// @example flex-initial
+	///
+	'flex': (
+		'enabled'    : true, // true or false
+		'property'   : 'flex', // css property name (don't change it !)
+		'prefix'     : 'flex-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'args'       : null, // for extra variables
+		'variables'  : (
+			// class name (suffix), value
+			("1", 1 1 0%),
+			("auto", 1 1 auto),
+			("initial", 0 1 auto),
+			("none", none)
+		)
+	),
+	/// 
 	/// Flex Direction
 	///
 	/// The flex-direction property specifies 
@@ -542,31 +567,6 @@ $helpers: (
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (wrap, wrap-reverse, nowrap)
-	),
-	/// 
-	/// Flex
-	///
-	/// The flex property sets the flexible length on flexible items.
-	/// The flex property is a shorthand property for flex-grow, flex-shrink
-	/// and flex-basis.
-	/// 
-	/// @example flex-1
-	/// @example flex-initial
-	///
-	'flex': (
-		'enabled'    : true, // true or false
-		'property'   : 'flex', // css property name (don't change it !)
-		'prefix'     : 'flex-', // prefix of class name
-		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'args'       : null, // for extra variables
-		'variables'  : (
-			// class name (suffix), value
-			("1", 1 1 0%),
-			("auto", 1 1 auto),
-			("initial", 0 1 auto),
-			("none", none)
-		)
 	),
 	/// 
 	/// Float
@@ -1025,22 +1025,6 @@ $helpers: (
 		)
 	),
 	/// 
-	/// Outline Style
-	/// 
-	/// The outline-style property specifies the style of an outline
-	/// 
-	/// @example outline-dashed
-	///
-	'outline-style': (
-		'enabled'    : true, // true or false
-		'property'   : 'outline-style', // css property name (don't change it !)
-		'prefix'     : 'outline-', // prefix of class name
-		'specificity': !important, // or null
-		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
-		'args'       : null, // for extra variables
-		'variables'  : (solid,dashed,dotted,double)
-	),
-	/// 
 	/// Outline Offset
 	/// 
 	/// The outline-offset property adds space between 
@@ -1057,6 +1041,22 @@ $helpers: (
 		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
 		'args'       : null, // for extra variables
 		'variables'  : (0,1,2,4,8)
+	),
+	/// 
+	/// Outline Style
+	/// 
+	/// The outline-style property specifies the style of an outline
+	/// 
+	/// @example outline-dashed
+	///
+	'outline-style': (
+		'enabled'    : true, // true or false
+		'property'   : 'outline-style', // css property name (don't change it !)
+		'prefix'     : 'outline-', // prefix of class name
+		'specificity': !important, // or null
+		'unit'       : null, // length units (px, rem, em, %, vh, vw etc)
+		'args'       : null, // for extra variables
+		'variables'  : (solid,dashed,dotted,double)
 	),
 	/// 
 	/// Outline Width
