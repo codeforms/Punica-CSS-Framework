@@ -23,10 +23,11 @@
 			align-items    : center;
 			justify-content: center;
 			display        : flex;
-			word-break     : break-word;
-			line-height    : 1.3;
-			text-align     : center;
+			word-break     : components('process', 'item', 'word-break');
+			line-height    : components('process', 'item', 'line-height');
+			text-align     : components('process', 'item', 'text-align');
 			min-height     : components('process', 'min-height');
+			font-weight    : components('process', 'item', 'font-weight');
 			&:not(:first-child)::before {
 				content   : "";
 				left      : -50%;
@@ -41,7 +42,6 @@
 				display        : inline-block;
 				padding        : 10px 10px 0;
 				text-decoration: none;
-				font-weight    : bold;
 				&::before {
 					position  : absolute;
 					content   : "";
@@ -58,7 +58,8 @@
 			}
 			&.#{class('process', 'active')} {
 				a {
-					color: theme('color', 'primary');
+					color      : theme('color', 'primary');
+					font-weight: components('process', 'item', 'active', 'font-weight');
 					&::after {
 						position : absolute;
 						content  : components('process', 'item', 'indicator', 'content');
