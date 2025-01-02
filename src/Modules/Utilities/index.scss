@@ -692,8 +692,9 @@ $helpers: (
 	/// 
 	/// The height property sets the height of an element.
 	/// 
-	/// @example height-6
+	/// @example height-60
 	/// @example height-max-content
+	/// @example height-800
 	///
 	'height': (
 		'enabled'    : true, // true or false
@@ -1371,6 +1372,7 @@ $helpers: (
 	/// The width property sets the width of an element.
 	/// 
 	/// @example width-40
+	/// @example width-1400
 	/// @example width-fit-content
 	///
 	'width': (
