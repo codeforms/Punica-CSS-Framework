@@ -7,7 +7,7 @@
 @use "sass:list" as *;
 @use "../Theme/Getters" as *;
 @use "../../options" as option;
-@use "../../Modules/Utilities/index" as utility;
+@use "../../utilities" as utility;
 @use "Helpers" as helper;
 
 ///

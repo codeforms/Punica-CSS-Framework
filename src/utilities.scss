@@ -8,8 +8,8 @@
 /// default settings from your theme map.
 /// 
 
-@use "../../Core/Global/Colors" as color;
-@use "../../Core/Theme/Getters" as *;
+@use "Core/Global/Colors" as color;
+@use "Core/Theme/Getters" as *;
 
 $helpers: (
 	///
