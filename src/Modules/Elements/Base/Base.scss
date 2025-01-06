@@ -72,7 +72,7 @@ a {
 	}
 }
 /// Headers
-@each $header, $font-size, $responsive-size in elements('typography', 'headers') {
+@each $header, $font-size in elements('typography', 'headers') {
 	#{$header} {
 		margin-top   : elements('typography', 'header', 'margin-top');
 		color        : elements('typography', 'header', 'color');
@@ -83,7 +83,7 @@ a {
 	}
 	#{$header},
 	.#{$header} {
-		font-size  : $font-size;
+		font-size  : #{$font-size};
 		font-weight: bold;
 	}
 	#{$header}.divided,
@@ -91,12 +91,6 @@ a {
 		border-width  : elements('typography', 'divided-header', 'border-width');
 		padding-bottom: elements('typography', 'divided-header', 'padding-bottom');
 		margin-bottom : elements('typography', 'divided-header', 'margin-bottom');
-	}
-	@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
-		#{$header},
-		.#{$header} {
-			font-size: $responsive-size;
-		}
 	}
 }
 p {

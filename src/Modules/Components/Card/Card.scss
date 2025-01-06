@@ -76,7 +76,6 @@
 				} @else if theme('type') == 'dark' {
 					color: lighten(color.$grey, 20%);
 				}
-				flex: 1 1 auto;
 			}
 		}
 		>.#{class('card', 'title')}, 

@@ -1361,33 +1361,27 @@ $options: (
 			'headers': (
 				(
 					"h1", // class name
-					2em, // font-size
-					1.7em // responsive font-size
+					clamp(1.6rem, 2.34vw + .75rem, 2.05rem) // font-size
 				),
 				(
 					"h2", // class name
-					1.8em, // font-size
-					1.5em // responsive font-size
+					clamp(1.47rem, 2.34vw + .7rem, 1.85rem) // font-size
 				),
 				(
 					"h3", // class name
-					1.6em, // font-size
-					1.3em // responsive font-size
+					clamp(1.33rem, 2.34vw + .65rem, 1.65rem) // font-size
 				),
 				(
 					"h4", // class name
-					1.4em, // font-size
-					1.1em // responsive font-size
+					clamp(1.2rem, 2.34vw + .6rem, 1.45rem) // font-size
 				),
 				(
 					"h5", // class name
-					1.2em, // font-size
-					.9em // responsive font-size
+					clamp(1rem, 2.34vw + .55rem, 1.3rem), // font-size
 				),
 				(
 					"h6", // class name
-					1em, // font-size
-					inherit // responsive font-size
+					clamp(.95rem, 2.34vw + .5rem, 1.15rem) // font-size
 				)
 			)
 		)
