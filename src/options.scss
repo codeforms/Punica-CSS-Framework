@@ -251,7 +251,7 @@ $options: (
 			'hovered'    : 'hovered'
 		),
 		'settings': (
-			'width'           : 240px, // for only a single card
+			'width'           : 18rem, // for only a single card
 			'height'          : 100%,
 			'padding'         : 1rem,
 			'border'          : set-border(), // default border
@@ -273,7 +273,7 @@ $options: (
 				'margin-bottom': 1rem
 			),
 			'columns': (
-				// maximum number of cards in a single row (default : 12)
+				// maximum number of cards in a single row (default : 2 through 12)
 				// class name, value
 				"two"   : 2,
 				"three" : 3,
