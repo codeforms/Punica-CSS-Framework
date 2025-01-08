@@ -56,13 +56,14 @@
 					left: calc(50% - (#{variables('process', 'item', 'stickbar', 'width')} - 1px));
 				}
 			}
+			&.#{class('process', 'failed')},
 			&.#{class('process', 'active')} {
 				a {
 					color      : theme('color', 'primary');
 					font-weight: components('process', 'item', 'active', 'font-weight');
 					&::after {
 						position : absolute;
-						content  : components('process', 'item', 'indicator', 'content');
+						content  : components('process', 'item', 'indicator', 'active');
 						top      : calc(-15px - #{components('process', 'item', 'indicator', 'font-size')});
 						left     : calc(50% - ((#{components('process', 'item', 'stickbar', 'width')} * 10) / 2));
 						color    : theme('color', 'primary');
@@ -81,6 +82,21 @@
 						&::before {
 							background: theme('border', 'color');
 						}
+					}
+				}
+			}
+			&.#{class('process', 'failed')} {
+				&:not(:first-child)::before {
+					background: theme('color', 'error');
+				}
+				a {
+					color: theme('color', 'error');
+					&::before {
+						background: theme('color', 'error');
+					}
+					&::after {
+						content: components('process', 'item', 'indicator', 'failed');
+						color  : theme('color', 'error');
 					}
 				}
 			}

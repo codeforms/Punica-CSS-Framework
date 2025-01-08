@@ -126,11 +126,15 @@
 				// division of $i by $shade-step is zero
 				@if $i % $shade-step == 0 {
 					$percentage: $i*1%; // convert remainder to percentage
-					.#{$prefix}#{$suffix}-darken-#{$i} {
-						#{$property}: mix(black, $color, $percentage) $specificity;
+					@if($color != black) {
+						.#{$prefix}#{$suffix}-darken-#{$i} {
+							#{$property}: mix(black, $color, $percentage) $specificity;
+						}
 					}
-					.#{$prefix}#{$suffix}-lighten-#{$i} {
-						#{$property}: mix(white, $color, $percentage) $specificity;
+					@if($color != white) {
+						.#{$prefix}#{$suffix}-lighten-#{$i} {
+							#{$property}: mix(white, $color, $percentage) $specificity;
+						}
 					}
 				}
 			}

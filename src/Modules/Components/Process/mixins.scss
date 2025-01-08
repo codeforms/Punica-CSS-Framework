@@ -73,12 +73,13 @@
 				height: 100%;
 			}
 		}
+		&.#{class('process', 'failed')},
 		&.#{class('process', 'active')} {
 			a {
 				font-weight: bold;
 				&::after {
-					top : 15px;
-					left: calc(-15px - #{components('process', 'item', 'indicator', 'font-size')});
+					top : 8px;
+					left: calc(-3px - #{components('process', 'item', 'indicator', 'font-size')});
 				}
 			}
 		}

@@ -672,11 +672,12 @@ $options: (
 			'name'    : 'process',
 			'item'    : 'item',
 			'active'  : 'active',
+			'failed'  : 'failed',
 			'vertical': 'vertical',
 			'reversed': 'reversed'
 		),
 		'settings': (
-			'margin'    : 3em 0,
+			'margin'    : 3em 0 1em,
 			'min-height': 4rem, // for each item
 			'item': (
 				'font-weight': normal,
@@ -691,8 +692,9 @@ $options: (
 					'height': .8rem
 				),
 				'indicator': (
-					'content'  : "\2756", // HTML Symbols,
-					'font-size': 1.8rem,
+					'active'   : "\2611", // HTML Symbols
+					'failed'   : "\2612", // HTML Symbols
+					'font-size': 2.16rem,
 				),
 				'active': (
 					'font-weight': bold
@@ -815,7 +817,7 @@ $options: (
 		),
 		'classnames': (
 			'name'   : 'timeline',
-			'item'   : 'activity',
+			'item'   : 'item',
 			'author' : 'author',
 			'body'   : 'body',
 			'type'   : 'type',
