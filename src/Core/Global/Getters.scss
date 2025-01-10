@@ -151,7 +151,7 @@
 		@return theme('utilities', $node, $key);
 	}
 
-	$util: if(map.has-key(utility.$helpers, $node), map.get(utility.$helpers, $node), null);
+	$util: if(map.has-key(utility.$utilities, $node), map.get(utility.$utilities, $node), null);
 
 	@if ($util != null) and $key {
 		$util: if(map.has-key($util, $key), map.get($util, $key), null);

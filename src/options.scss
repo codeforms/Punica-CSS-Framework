@@ -1320,7 +1320,7 @@ $options: (
 				'margin-left': 0,
 				'padding'    : .4rem .8rem,
 				'font-style' : italic,
-				'color'      : theme('color', 'text')
+				'color'      : rgba(theme('color', 'text'), .75)
 			),
 			'href': (
 				'color'          : theme('color', 'primary'),
