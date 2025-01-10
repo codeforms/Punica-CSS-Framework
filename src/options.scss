@@ -1107,6 +1107,11 @@ $options: (
 					'color': color.$dark-grey
 				)
 			),
+			'group': (
+				'button': (
+					'padding': .7rem 1.75rem
+				)
+			),
 			'items': (
 				'margin': 0
 			),
@@ -1189,7 +1194,7 @@ $options: (
 				)
 			),
 			'columns': (
-				// maximum number of form items in a single row (default : 6)
+				// maximum number of form items in a single row (default : 2 through 6)
 				// class name, value
 				"two"  : 2,
 				"three": 3,

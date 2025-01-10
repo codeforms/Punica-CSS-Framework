@@ -138,7 +138,7 @@
 						box-shadow: none;
 					}
 					>.#{class('button', 'name')} {
-						padding   : elements('form', 'input', 'padding');
+						padding   : elements('form', 'group', 'button', 'padding');
 						box-shadow: none;
 						&:first-child {
 							border-bottom-right-radius: 0;
