@@ -1,0 +1,23 @@
+///
+/// Punica CSS Framework
+/// Core/Global/Sass.scss
+/// 
+@use "sass:color" as color;
+
+///
+/// @param $color
+/// @param $value
+///
+@function lighten($color, $value)
+{
+	@return color.adjust($color, $lightness: $value);
+}
+
+///
+/// @param $color
+/// @param $value
+///
+@function darken($color, $value)
+{
+	@return color.adjust($color, $lightness: -$value);
+}

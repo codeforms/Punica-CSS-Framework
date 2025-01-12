@@ -1,0 +1,213 @@
+///
+/// Punica CSS Framework
+/// Elements : Base
+///
+
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
+@use "../../../Core/Global/Mixins" as *;
+
+/// Font
+@import url('#{theme('typography', 'font-url')}');
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	border    : 0 solid theme('border', 'color');
+}
+* {
+	margin                 : 0;
+	padding                : 0;
+	text-shadow            : 1px 1px 1px rgba(0,0,0,0.004) !important;
+	text-rendering         : optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing : antialiased;
+}
+html {
+	box-sizing                 : border-box;
+	-webkit-text-size-adjust   : 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+body {
+	font-family     : theme('typography', 'font-family'), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size       : theme('typography', 'font-size');
+	font-weight     : theme('typography', 'font-weight');
+	line-height     : theme('typography', 'line-height');
+	color           : theme('color', 'text');
+	background-color: theme('color', 'background');
+}
+html, body {
+	min-height             : 100%;
+	height                 : 100%;
+	padding                : 0;
+	margin                 : 0;
+	border                 : none;
+	scroll-behavior        : smooth;
+	text-rendering         : optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing         : antialiased;
+	-webkit-font-smoothing : antialiased;
+}
+::selection {
+	color           : elements('base', 'selection', 'color');
+	background-color: elements('base', 'selection', 'background-color');
+}
+::placeholder {
+	opacity: elements('typography', 'placeholder', 'opacity');
+	color  : elements('typography', 'placeholder', 'color');
+}
+a {
+	color          : elements('typography', 'href', 'color');
+	cursor         : elements('typography', 'href', 'cursor');
+	outline        : none;
+	text-decoration: elements('typography', 'href', 'text-decoration');
+	transition     : elements('typography', 'href', 'transition');
+	&:focus,
+	&:hover {
+		color          : elements('typography', 'href', 'hover', 'color');
+		text-decoration: elements('typography', 'href', 'hover', 'text-decoration');
+		transition     : elements('typography', 'href', 'transition');
+	}
+}
+/// Headers
+@each $header, $font-size in elements('typography', 'headers') {
+	#{$header} {
+		margin-top   : elements('typography', 'header', 'margin-top');
+		color        : elements('typography', 'header', 'color');
+		line-height  : elements('typography', 'header', 'line-height');
+		margin-bottom: elements('typography', 'header', 'margin-bottom');
+		overflow-wrap: elements('typography', 'header', 'overflow-wrap');
+		text-wrap    : elements('typography', 'header', 'text-wrap');
+	}
+	#{$header},
+	.#{$header} {
+		font-size  : #{$font-size};
+		font-weight: bold;
+	}
+	#{$header}.divided,
+	.#{$header}.divided {
+		border-width  : elements('typography', 'divided-header', 'border-width');
+		padding-bottom: elements('typography', 'divided-header', 'padding-bottom');
+		margin-bottom : elements('typography', 'divided-header', 'margin-bottom');
+	}
+}
+p {
+	margin   : elements('typography', 'paragraph', 'margin');
+	text-wrap: elements('typography', 'paragraph', 'text-wrap');
+}
+b, strong {
+	font-weight: bolder;
+}
+a, ins, u {
+	text-decoration-skip: ink edges;
+}
+abbr[title] {
+	border-bottom  : elements('typography', 'abbreviation', 'border-bottom');
+	cursor         : elements('typography', 'abbreviation', 'cursor');
+	text-decoration: elements('typography', 'abbreviation', 'text-decoration');
+}
+blockquote {
+	border-left: elements('typography', 'blockquote', 'border-left');
+	margin-left: elements('typography', 'blockquote', 'margin-left');
+	padding    : elements('typography', 'blockquote', 'padding');
+	font-style : elements('typography', 'blockquote', 'font-style');
+	color      : elements('typography', 'blockquote', 'color');
+}
+small {
+	font-size: elements('typography', 'small', 'font-size');
+}
+sub,
+sup {
+	font-size     : elements('typography', 'superscript', 'font-size');
+	line-height   : elements('typography', 'superscript', 'line-height');
+	position      : elements('typography', 'superscript', 'position');
+	vertical-align: elements('typography', 'superscript', 'vertical-align');
+}
+sub {
+	bottom: elements('typography', 'superscript', 'bottom');
+}
+
+sup {
+	top: elements('typography', 'superscript', 'top');
+}
+hr {
+	border    : elements('base', 'horizontal-rule', 'border');
+	border-top: elements('base', 'horizontal-rule', 'border-top');
+	margin    : elements('base', 'horizontal-rule', 'margin');
+	box-sizing: elements('base', 'horizontal-rule', 'box-sizing');
+	overflow  : elements('base', 'horizontal-rule', 'overflow');
+}
+/* List */
+ul, ol {
+	margin : .8rem 0 .8rem .8rem;
+	padding: 0;
+	ul, ol {
+		margin: .8rem 0 .8rem .8rem;
+	}
+	li {
+		margin-top: .4rem;
+	}
+}
+ul {
+	list-style: disc inside;
+}
+ol {
+	list-style: decimal inside;
+}
+dl {
+	dt {
+		font-weight: bold;
+	}
+}
+/* embedded content */
+img,
+picture,
+svg,
+canvas,
+embed,
+object,
+video {
+	max-width        : elements('base', 'embedded', 'max-width');
+	height           : elements('base', 'embedded', 'height');
+	vertical-align   : elements('base', 'embedded', 'vertical-align');
+	font-style       : elements('base', 'embedded', 'font-style'); 
+	background-repeat: elements('base', 'embedded', 'background-repeat');
+	background-size  : elements('base', 'embedded', 'background-size');
+}
+img {
+	border-style: none;
+}
+iframe {
+	outline: 0;
+}
+pre {
+	font-family: monospace, monospace;
+	font-size  : 1em;
+	code {
+		border-radius: 0;
+		display      : block;
+		padding      : 1rem 1.5rem;
+		white-space  : pre;
+	}
+}
+:not(pre)>code, 
+:not(pre)>kbd, 
+:not(pre)>samp {
+	color      : theme('color', 'error');
+	white-space: nowrap;
+	padding    : 2px 6px;
+	font-size  : 1em;
+}
+[hidden],
+.hidden {
+	display: none;
+}
+[disabled],
+:disabled,
+.disabled {
+	opacity       : .49;
+	cursor        : default;
+	pointer-events: none;
+}

@@ -1,0 +1,15 @@
+///
+/// Punica CSS Framework
+/// [Core/Global/Colors.scss]
+/// Secondary Color Variables/Mixes
+/// 
+
+@use "sass:color" as color;
+@use "../Theme/Getters" as *;
+
+// Grey
+$lighten-grey: color.mix(theme('color', 'text'), theme('color', 'background'), 4.5%);
+$light-grey  : color.mix(theme('color', 'text'), theme('color', 'background'), 9.5%);
+$grey        : color.mix(theme('color', 'text'), theme('color', 'background'), 14.5%);
+$dark-grey   : color.mix(theme('color', 'text'), theme('color', 'background'), 38.5%);
+$darken-grey : color.mix(theme('color', 'text'), theme('color', 'background'), 64%);

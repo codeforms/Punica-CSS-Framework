@@ -1,0 +1,46 @@
+///
+/// Punica CSS Framework
+/// Components : Badge
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
+@use "../../../Core/Global/Sass" as *;
+@use "../../../Core/Global/Colors" as color;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+
+@if enabled('components', 'badge') {
+	.#{class('badge', 'name')} {
+		@include set-style(color.$grey, theme('color', 'text')) {
+			position       : relative;
+			display        : inline-flex;
+			justify-content: center;
+			align-items    : center;
+			font-weight    : components('badge', 'font-weight');
+			white-space    : components('badge', 'white-space');
+			border         : components('badge', 'border');
+			border-radius  : components('badge', 'border-radius');
+		};
+		// default badge size
+		@include set-size(components('badge', 'font-size'), components('badge', 'padding'));
+		///
+		/// STYLES
+		///
+		@if features('components', 'badge', 'styles') {
+			@each $name, $text-color, $bg-color in components('badge', 'styles') {
+				@include set-style($bg-color, $text-color, $name) {
+					border-color: darken($bg-color, 3%);
+				};
+			}
+		}
+		///
+		/// SIZES
+		///
+		@if features('components', 'badge', 'sizes') {
+			@each $size-name, $font-size, $padding in components('badge', 'sizes') {
+				@include set-size($font-size, $padding, $size-name);
+			}
+		}
+	}
+}

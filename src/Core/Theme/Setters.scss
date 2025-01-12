@@ -1,0 +1,77 @@
+///
+/// Punica CSS Framework
+/// Core/Theme/Setters.scss
+/// 
+
+@use "Getters" as *;
+
+///
+/// Border
+/// @param {Size} $width - Border width
+/// @param {String} $style - Border style
+/// @param {Color} $color - Border color
+/// @param {Boolean} $specificity - Specificity
+///
+@mixin border(
+	$width: theme('border', 'width'),
+	$style: theme('border', 'style'),
+	$color: theme('border', 'color'),
+	$specificity: false
+) {
+	@if $specificity {
+		border: $width $style $color !important;
+	} @else {
+		border: $width $style $color;
+	}
+	@content;
+}
+
+///
+/// Set default border
+///
+@function set-border() 
+{
+	@return theme('border', 'width') theme('border', 'style') theme('border', 'color');
+};
+
+///
+/// @param {Size} $font-size
+/// @param {Integer} $padding
+/// @param {String|Boolean} $size-name
+///
+@mixin set-size(
+	$font-size, $padding, $size-name: null
+) {
+	@if $size-name {
+		&.#{$size-name} {
+			padding: $padding;
+			font-size: $font-size;
+			@content;
+		}
+	} @else {
+		padding: $padding;
+		font-size: $font-size;
+		@content;
+	}
+}
+
+///
+/// @param {Color} $bg-color
+/// @param {Color} $color
+/// @param {String|Boolean} $style-name
+///
+@mixin set-style(
+	$bg-color, $color, $style-name: null
+) {
+	@if $style-name {
+		&.#{$style-name} {
+			background-color: $bg-color;
+			color: $color; 
+			@content;
+		}
+	} @else {
+		background-color: $bg-color;
+		color: $color;
+		@content;
+	}
+}

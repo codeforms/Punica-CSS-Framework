@@ -1,181 +1,467 @@
 ///
-/// Punica CSS Framework : Options & Variables
+/// Punica CSS Framework
+/// Default Options, Variables & Class names
+/// v3.0 Options API
 /// 
+/// Note: You can also override/change the all following 
+/// default settings from your theme map.
+/// 
+
+@use "Core/Theme/Getters" as *;
+@use "Core/Theme/Setters" as *;
+@use "Core/Global/Sass" as *;
+@use "Core/Global/Colors" as color;
+
 $options: (
 	///
-	/// LAYOUT
-	/// 
-	/// total estimated size is [59KB] if the grid
-	/// and it's features enabled.
-	/// 
-	'grid': (
-		'enable': true, // estimated 59KB with offset feature
-		'features': (
-			'equal' : true, // equal height
-			'offset': true // [!] increases the size (estimated 52KB)
-		),
-		'variables': (
-			'gap'    : 6px,
-			'columns': (
-				'size'      : 16,
-				'padding'   : .3rem,
-				'min-height': .125rem
-			),
-			'container': (
-				'width'  : 100%,
-				'padding': 40px,
-				'margin' : 0 auto
-			),
-			'breakpoints': (
-				'extra-small'		: 0,
-				'small'      		: 500px,
-				'medium'     		: 768px,
-				'large'      		: 992px,
-				'extra-large'		: 1260px,
-				'extra-extra-large'	: 1400px
-			)
-		)
-	),
-	///
-	/// COMPONENTS
-	/// 
-	/// total estimated size is [41KB] if all components
-	/// and it's features enabled.
+	/// 01.COMPONENTS
 	/// 
 	'alert': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'styles': true,
 			'sizes' : true
 		),
-		'variables': (
-			'padding': .6rem,
-			'margin' : 0 0 8px,
-			'width'  : 100%,
+		'classnames': (
+			'name'  : 'alert',
+			'active': 'active'
+		),
+		'settings': (
+			'display'      : block,
+			'padding'      : .6rem 1rem,
+			'margin'       : 0 0 8px,
+			'width'        : 100%,
+			'font-size'    : 1.015em,
+			'font-weight'  : theme('typography', 'font-weight'),
+			'border'       : set-border(), // default border
+			'border-radius': theme('border', 'radius'),
+			'line-height'  : theme('typography', 'line-height'),
+			'href'         : (
+				'color'          : theme('color', 'text'),
+				'text-decoration': underline
+			),
 			'icon': (
-				'vertical-align': text-top
+				'vertical-align': middle
+			),
+			'styles': (
+				(
+					"primary", // class name
+					white, // text color
+					theme('color', 'primary') // bg-color
+				),
+				(
+					"success", // class name
+					white, // text color
+					theme('color', 'success') // bg-color
+				),
+				(
+					"warning", // class name
+					white, // text color
+					theme('color', 'warning') // bg-color
+				),
+				(
+					"error", // class name
+					white, // text color
+					theme('color', 'error') // bg-color
+				),
+				(
+					"dark", // class name
+					white, // text color
+					theme('color', 'dark') // bg-color
+				)
+			),
+			'sizes': (
+				(
+			    	"small", // size name (class)
+			    	.885rem, // font-size
+			    	.5rem 1rem // padding
+			    ),
+			    (
+			    	"large", // size name (class)
+			    	1.14rem, // font-size
+			    	.7rem 1rem // padding
+			    )
 			)
-		)
+		),
 	),
 	'badge': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'styles': true,
 			'sizes' : true
 		),
-		'variables': (
-			'border-radius': 500px
-		)
-	),
-	'billboard': (
-		'enable': true, // estimated 2KB
-		'features': (
-			'styles': true,
-			'sizes' : true,
-			'cover' : true
+		'classnames': (
+			'name': 'badge'
 		),
-		'variables': (
-			'padding': 4.5rem 2.5rem,
-			'body'   : (
-				'padding': 4.5rem 2.5rem
+		'settings': (
+			'border-radius': 500px,
+			'white-space'  : nowrap,
+			'font-size'    : .935rem,
+			'font-weight'  : theme('typography', 'font-weight'),
+			'padding'      : 0 .45rem,
+			'border'       : set-border(), // default border
+			'styles'       : (
+				(
+					"primary", // style name (class)
+					white, // text color
+					theme('color', 'primary') // bg-color
+				),
+				(
+					"success", // style name (class)
+					white, // text color
+					theme('color', 'success') // bg-color
+				),
+				(
+					"warning", // style name (class)
+					white, // text color
+					theme('color', 'warning') // bg-color
+				),
+				(
+					"error", // style name (class)
+					white, // text color
+					theme('color', 'error') // bg-color
+				),
+				(
+					"dark", // style name (class)
+					white, // text color
+					theme('color', 'dark') // bg-color
+				)
+			),
+			'sizes': (
+				(
+					"small", // size name (class)
+					.749rem!important, // font-size
+					0 .45rem!important // padding
+				),
+				(
+					"large", // size name (class)
+					1.1rem!important, // font-size
+					0 .45rem!important // padding
+				)
 			)
 		)
 	),
 	'breadcrumb': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'sizes': true
 		),
-		'variables': (
-			'font-weight'  : bold,
-			'active-weight': bold,
-			'seperator'    : ( // icon
-				'padding'       : 0 .25em,
-				'vertical-align': middle,
-				'font-size'     : 1.4rem,
-				'cursor'        : auto
+		'classnames': (
+			'name'  : 'breadcrumb',
+			'item'  : 'item',
+			'active': 'active'
+		),
+		'settings': (
+			'font-size'      : 1rem,
+			'font-weight'    : theme('typography', 'font-weight'),
+			'color'          : theme('color', 'text'),
+			'text-decoration': none,
+			'seperator': (
+				'content'  : "\276D", // HTML Symbols
+				'color'    : theme('color', 'primary'),
+				'font-size': 1rem,
+				'padding'  : .3em,
+				'cursor'   : default
+			),
+			'active': (
+				'font-weight': bold,
+				'color'      : theme('color', 'primary'),
+			),
+			'sizes': (
+				(
+			    	'small', // size name (class)
+			    	.946rem, // font-size
+			    	.3em, // seperator-padding
+			    	null, // seperator-size
+			        unset, // vertical align
+			    ),
+			    (
+			    	'large', // size name (class)
+			    	1.075rem, // font-size
+			    	.3em, // seperator-padding
+			    	null, // seperator-size
+			        text-bottom, // vertical align
+			    )
+			),
+			'responsive': (
+				'font-size'     : 1rem,
+				'vertical-align': middle
+			)
+		)
+	),
+	'caption': (
+		'enabled': true,
+		'features': (
+			'sizes': true,
+		),
+		'classnames': (
+			'name'    : 'caption',
+			'centered': 'centered',
+			'divided' : 'divided'
+		),
+		'settings': (
+			'margin'     : 1.3em .2rem,
+			'font-size'  : 1.95rem,
+			'font-weight': bold,
+			'line-height': 1.3,
+			'text-wrap'  : balance,
+			'media'      : (
+				'margin': .559em,
+			),
+			'sizes': (
+				(
+			    	"small", // size name (class)
+			    	1em .1rem, // margin
+			    	1.65rem, // font-size
+			    	theme('typography', 'font-weight') // font-weight
+			    ),
+			    (
+			    	"large", // size name (class)
+			    	1.4em .3rem, // margin
+			    	2.35rem, // font-size
+			    	bold // font-weight
+			    )
 			)
 		)
 	),
 	'card': (
-		'enable': true, // estimated 5KB
+		'enabled': true,
 		'features': (
 			'group'      : true,
 			'horizontal' : true,
 			'media'      : true,
 			'media-group': true,
 			'border'     : true,
-			'shadow'     : true
+			'shadow'     : true,
+			'zoom-in'    : true, // zoom-in effect for image on rollover
+			'hovered'    : true
 		),
-		'variables': (
-			'width'  : 240px, // for only a single card
-			'height' : 100%,
-			'padding': 16px,
-			'group'  : (
-				'margin': 10px // margin for each card
+		'classnames': (
+			'name'       : 'card',
+			'cards'      : 'cards',
+			'body'       : 'body',
+			'title'      : 'title',
+			'subtitle'   : 'subtitle',
+			'description': 'description',
+			'media'      : 'media',
+			'horizontal' : 'horizontal',
+			'actions'    : 'actions',
+			'zoom-in'    : 'zoom-in',
+			'hovered'    : 'hovered'
+		),
+		'settings': (
+			'width'           : 18rem, // for only a single card
+			'height'          : 100%,
+			'padding'         : 1rem,
+			'border'          : set-border(), // default border
+			'border-radius'   : theme('border', 'radius'),
+			'background-color': theme('color', 'background'),
+			'transition'      : .2s ease-out,
+			'title'           : (
+				'color'      : theme('color', 'text'),
+				'line-height': initial
+			),
+			'description': (
+				'color'    : theme('color', 'text'),
+				'font-size': 1rem
+			),
+			'group': (
+				'margin': .74rem // margin for each card
 			),
 			'horizontal': (
-				'margin-bottom': 15px
+				'margin-bottom': 1rem
+			),
+			'columns': (
+				// maximum number of cards in a single row (default : 2 through 12)
+				// class name, value
+				"two"   : 2,
+				"three" : 3,
+				"four"  : 4,
+				"five"  : 5,
+				"six"   : 6,
+				"seven" : 7,
+				"eight" : 8,
+				"nine"  : 9,
+				"ten"   : 10,
+				"eleven": 11,
+				"twelve": 12
+			)
+		)
+	),
+	'label': (
+		'enabled': true,
+		'features': (
+			'styles': true,
+			'sizes' : true
+		),
+		'classnames': (
+			'name': 'label'
+		),
+		'settings': (
+			'display'        : inline-block,
+			'font-size'      : .9195em,
+			'font-weight'    : theme('typography', 'font-weight'),
+			'line-height'    : 1.2,
+			'padding'        : 0.28rem 0.9rem,
+			'margin'         : .1rem .05rem,
+			'border'         : set-border(), // default border
+			'text-decoration': none,
+			'box-shadow'     : none,
+			'border-radius'  : theme('border', 'radius'),
+			'icon': (
+				'vertical-align': middle
+			),
+			'styles': (
+				(
+					"primary", // class name
+					white, // text color
+					theme('color', 'primary') // bg-color
+				),
+				(
+					"success", // class name
+					white, // text color
+					theme('color', 'success') // bg-color
+				),
+				(
+					"warning", // class name
+					white, // text color
+					theme('color', 'warning') // bg-color
+				),
+				(
+					"error", // class name
+					white, // text color
+					theme('color', 'error') // bg-color
+				),
+				(
+					"dark", // class name
+					white, // text color
+					theme('color', 'dark') // bg-color
+				)
+			),
+			'sizes': (
+				(
+			    	"small", // size name (class)
+			    	.18rem .85rem, // padding
+			    	.8195em // font-size
+			    ),
+			    (
+			    	"large", // size name (class)
+			    	.415rem 1.159rem, // padding
+			    	1em // font-size
+			    )
 			)
 		)
 	),
 	'list': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'divided': true,
 			'hovered': true,
 			'striped': true
 		),
-		'variables': (
+		'classnames': (
+			'name'    : 'list',
+			'item'    : 'item',
+			'body'    : 'body',
+			'title'   : 'title',
+			'active'  : 'active',
+			'subtitle': 'subtitle',
+			'divided' : 'divided',
+			'actions' : 'actions',
+			'hovered' : 'hovered',
+			'striped' : 'striped'
+		),
+		'settings': (
 			'margin': 1rem 0,
-			'item'  : (
+			'item': (
 				'padding'   : .55em,
 				'margin'    : 0,
-				'transition': .15s
-			),
-			'media': (
-				'margin-right': 1rem
-			),
-			'body': (
-				'line-height': 1.4,
-				'text-align' : left
-			),
-			'title': (
-				'font-size'  : 1.28rem,
-				'line-height': 1
-			),
-			'subtitle': (
-				'font-size'    : .889em,
-				'margin-bottom': 7px
-			),
-			'actions': (
-				'width'      : auto,
-				'margin-left': 1rem
+				'transition': .15s,
+				'media': (
+					'margin-right': 1rem
+				),
+				'body': (
+					'line-height': 1.4,
+					'text-align' : left
+				),
+				'title': (
+					'font-size'  : 1.15rem,
+					'font-weight': bold,
+					'line-height': 1.4
+				),
+				'subtitle': (
+					'font-size'    : .889em,
+					'font-weight'  : theme('typography', 'font-weight'),
+					'margin-bottom': 7px
+				),
+				'actions': (
+					'width'      : auto,
+					'margin-left': 1rem
+				)
 			)
 		)
 	),
 	'menu': (
-		'enable': true, // estimated 1KB
-		'features': (),
-		'variables': (
-			'width'        : 100%,
-			'padding'      : .9rem,
-			'margin'       : 0,
-			'border-radius': 0,
-			'title'        : (
-				'font-size'     : 1.25em,
+		'enabled'   : true,
+		'features'  : (),
+		'classnames': (
+			'name'   : 'menu',
+			'title'  : 'title',
+			'item'   : 'item',
+			'active' : 'active',
+			'badge'  : 'badge',
+			'divided': 'divided',
+			'small'  : 'small'
+		),
+		'settings': (
+			'font-family'     : inherit,
+			'width'           : 100%,
+			'padding'         : .9rem,
+			'margin'          : 0,
+			'border-radius'   : 0,
+			'min-width'       : max-content,
+			'list-style'      : none,
+			'box-shadow'      : theme('shadow'),
+			'z-index'         : 300,
+			'background-color': theme('color', 'background'),
+			'title': (
+				'font-size'     : 1.065rem,
+				'font-weight'   : bold,
+				'color'         : theme('color', 'text'),
 				'min-height'    : 2rem,
 				'padding'       : .6rem 0,
 				'letter-spacing': -.015rem
 			),
 			'item': (
-				'width'      : 100%,
-				'text-align' : left,
-				'padding'    : .28rem .9rem,
-				'font-size'  : 1em,
-				'small-size' : .945em,
-				'transition' : background .15s,
-				'sub-padding': .4rem
+				'position'       : relative,
+				'padding'        : 0,
+				'text-align'     : left,
+				'text-decoration': none,
+				'href': (
+					'display'        : block,
+					'color'          : theme('color', 'text'),
+					'width'          : 100%,
+					'padding'        : .28rem .9rem,
+					'font-size'      : 1em,
+					'font-weight'    : theme('typography', 'font-weight'),
+					'text-decoration': none,
+					'transition'     : background .15s,
+				),
+				'active': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$light-grey
+				),
+				'hover': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey
+				),
+				// sub menu
+				'menu': (
+					'padding': .4rem // padding of sub items
+				)
+			),
+			'small': (
+				'font-size': .945em // small menu font-size
 			),
 			'icon': (
 				'font-size'     : 1.2rem,
@@ -191,32 +477,128 @@ $options: (
 		)
 	),
 	'navbar': (
-		'enable': true, // estimated 8KB
+		'enabled': true,
 		'features': (
-			'themes'   : true,
-			'sizes'    : true,
-			'divided'  : true,
-			'gradient' : true
+			'themes'  : true,
+			'sizes'   : true,
+			'divided' : true,
+			'gradient': true
 		),
-		'variables': (
-			'min-height'    : 80px,
-			'spacer-top'    : 105px, // min-height + 25px
-			'font-size'     : 1.128em,
-			'button-padding': .935rem 1.4rem,
+		'classnames': (
+			'name'     : 'navbar',
+			'section'  : 'section',
+			'fixed'    : 'fixed',
+			'brand'    : 'brand',
+			'links'    : 'links',
+			'burger'   : 'burger',
+			'divided'  : 'divided',
+			'gradient' : 'gradient'
+		),
+		'settings': (
+			'font-family'     : inherit,
+			'font-size'       : 1rem,
+			'color'           : theme('color', 'text'),
+			'font-weight'     : bold,
+			'background-color': #fff,
+			'width'           : 100%,
+			'min-height'      : 5rem,
+			'button'          : (
+				'padding': .935rem 1.4rem,
+				'icon'   : (
+					'color': theme('color', 'text')
+				),
+				'active': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey
+				)
+			),
 			'brand': (
 				'padding'     : 0,
 				'margin-right': 1rem,
 				'font-weight' : bold,
-				'img-width'   : 7rem
+				'img'         : (
+					'width': 7rem
+				),
+				'href': (
+					'color': theme('color', 'text')
+				)
 			),
 			'burger': (
-				'padding'  : 0 1.5rem,
-				'icon-size': 2.459rem
+				'padding'     : 0 1.5rem,
+				'icon-size'   : 2.459rem,
+				'symbol-open' : "\2630", // HTML Symbols
+				'symbol-close': "\2715" // HTML Symbols
+			),
+			'input': (
+				'color'           : theme('color', 'text'),
+				'background-color': white,
+				'border-color'    : theme('border', 'color'),
+				'border-width'    : theme('border', 'width'),
+				'focus'           : (
+					'outline': 2px solid theme('color', 'primary')
+				),
+				'placeholder': (
+					'color': color.$dark-grey
+				)
+			),
+			'menu': ( // settings of dropdown menu in navbar
+				'background-color': theme('color', 'background'),
+				'item': (
+					'color': theme('color', 'text')
+				),
+				'hover': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey
+				),
+				'active': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey
+				)
+			),
+			'styles': (
+				(
+					"primary", // theme name (class)
+					theme('color', 'primary'), // bg color
+					white, // text color
+					darken(theme('color', 'primary'), 7%), // input bg
+					white, // input color
+					lighten(theme('color', 'primary'), 4%), // input border color
+					darken(theme('color', 'primary'), 8%) // divider color
+				),
+				(
+					"dark", // theme name (class)
+					theme('color', 'dark'), // bg color
+					white, // text color
+					lighten(theme('color', 'dark'), 7%), // input bg
+					white, // input color
+					lighten(theme('color', 'dark'), 25.75%), // input border color
+					lighten(theme('color', 'dark'), 12.55%) // divider color 
+				)
+			),
+			'sizes': (
+				(
+					"mini", // size name (class)
+					2.813rem, // min-height
+					.875rem, // button font-size
+					.445rem .9rem, // button padding
+			    ),
+			    (
+					"small", // size name (class)
+					4.063rem, // min-height
+					.945rem, // button font-size
+					.65rem 1.2rem, // button padding
+			    ),
+			    (
+					"large", // size name (class)
+					5.938rem, // min-height
+					1.08rem, // button font-size
+					.845rem 1.4rem, // button padding
+			    )
 			)
 		)
 	),
 	'panel': (
-		'enable': true, // estimated 5KB
+		'enabled': true,
 		'features': (
 			'media'      : true,
 			'media-group': true,
@@ -224,57 +606,132 @@ $options: (
 			'shadow'     : true,
 			'sizes'      : true
 		),
-		'variables': (
-			'padding'      : 16px,
-			'margin'       : 16px 0,
-			'title-padding': 12px 16px
+		'classnames': (
+			'name'    : 'panel',
+			'header'  : 'header',
+			'title'   : 'title',
+			'headline': 'headline',
+			'bottom'  : 'bottom',
+			'content' : 'content',
+			'media'   : 'media',
+			'actions' : 'actions'
+		),
+		'settings': (
+			'margin'          : 1rem 0,
+			'border'          : set-border(), // default border
+			'border-radius'   : theme('border', 'radius'),
+			'background-color': theme('color', 'background'),
+			'header'          : (
+				'padding': 1.45rem,
+				'title': (
+					'font-size': 1.185rem,
+					'font-weight': bold
+				)
+			),
+			'content': (
+				'padding': 1.45rem,
+				'headline': (
+					'font-size'     : 1.35rem,
+					'line-height'   : 1.5,
+					'margin-bottom' : 1.275rem,
+					'color'         : theme('color', 'text'),
+					'letter-spacing': -.0158em,
+					'text-wrap'     : auto
+				),
+				'media': (
+					'margin-bottom': 32px
+				)
+			),
+			'bottom': (
+				'min-height': 2.4rem,
+				'border-top': set-border(), // default border
+				'padding'   : 1.45rem
+			),
+			'sizes': (
+				(
+			    	"mini", // size name (class)
+			    	.985rem, // font-size (title)
+			    	.25rem 1.45rem // padding (title/content/bottom)
+			    ),
+			    (
+			    	"small", // size name (class)
+			    	1.038rem, // font-size (title)
+			    	.5rem 1.45rem // padding (title/content/bottom)
+			    )
+			)
 		)
 	),
 	'process': (
-		'enable': true, // estimated 4KB
+		'enabled': true,
 		'features': (
 			'styles'  : true,
 			'vertical': true
 		),
-		'variables': (
-			'margin'    : 1em 0 5em,
+		'classnames': (
+			'name'    : 'process',
+			'item'    : 'item',
+			'active'  : 'active',
+			'failed'  : 'failed',
+			'vertical': 'vertical',
+			'reversed': 'reversed'
+		),
+		'settings': (
+			'margin'    : 3em 0 1em,
 			'min-height': 4rem, // for each item
-			'icon-size' : 1.8rem,
-			'stepbar': (
-				'height': 6px,
-			),
-			'stickbar': (
-				'width' : 3px,
-				'height': .8rem
+			'item': (
+				'font-weight': normal,
+				'text-align' : center,
+				'line-height': 1.3,
+				'word-break' : break-word,
+				'stepbar'    : (
+					'height': 6px,
+				),
+				'stickbar': (
+					'width' : 3px,
+					'height': .8rem
+				),
+				'indicator': (
+					'active'   : "\2611", // HTML Symbols
+					'failed'   : "\2612", // HTML Symbols
+					'font-size': 2.16rem,
+				),
+				'active': (
+					'font-weight': bold
+				)
 			),
 			'vertical': (
-				'margin'        : 1em 0,
-				'stickbar-width': 9px
+				'margin'   : 1em 0,
+				'padding'  : 1.25em 2em 2.85em,
+				'bar-width': 9px
+			),
+			'styles': (
+				// style name (class), color theme
+				"success": theme('color', 'success'),
+				"warning": theme('color', 'warning'),
+				"error"  : theme('color', 'error'),
+				"dark"   : theme('color', 'text'),
 			)
 		)
 	),
-	'progress': (
-		'enable': true,  // estimated 1KB
-		'features': (
-			'styles': true
-		),
-		'variables': (
-			'width'        : 100%,
-			'height'       : 12px,
-			'border-radius': 16px
-		)
-	),
 	'stats': (
-		'enable': true, // estimated 2KB
+		'enabled': true,
 		'features': (
 			'styles': true
 		),
-		'variables': (
+		'classnames': (
+			'name'    : 'stats',
+			'title'   : 'title',
+			'subtitle': 'subtitle',
+			'value'   : 'value'
+		),
+		'settings': (
 			'margin'       : 0 1.1em .8em,
 			'padding'      : 8px 2.76em,
 			'border-radius': 4px,
 			'line-height'  : 2.1em,
 			'border-width' : 1px,
+			'border-style' : theme('border', 'style'),
+			'border-color' : theme('border', 'color'),
 			'transition'   : .15s,
 			'title'        : (
 				'font-size': 1.1em
@@ -291,90 +748,318 @@ $options: (
 			'media': (
 				'font-size'   : 1em, // icon
 				'margin-right': .5em
+			),
+			'styles': (
+				// style name (class), theme variable
+				"primary": theme('color', 'primary'),
+				"success": theme('color', 'success'),
+				"warning": theme('color', 'warning'),
+				"error"  : theme('color', 'error'),
+				"dark"   : color.$dark-grey,
 			)
 		)
 	),
 	'tabnav': (
-		'enable': true, // estimated 5KB
+		'enabled': true,
 		'features': (
-			'styles'         : true,
-			'bottom-position': true
+			'styles': true,
+			'sizes' : true,
+			'bottom': true
 		),
-		'variables': (
-			'border-width': 2px
+		'classnames': (
+			'name'    : 'tab',
+			'active'  : 'active',
+			'centered': 'centered',
+			'bottom'  : 'bottom'
+		),
+		'settings': (
+			'color'        : theme('color', 'text'),
+			'font-size'    : 1.025em,
+			'font-weight'  : bold,
+			'line-height'  : unset,
+			'padding'      : .935rem 1.4rem,
+			'thickness'    : 2px, // tab bar thickness
+			'border-bottom': 4px, // border-bottom-width of tab button
+			'styles'       : (
+				(
+					'success', // style name (class)
+					theme('color', 'success') // style color
+				),
+				(
+					'warning', // style name (class)
+					theme('color', 'warning') // style color
+				),
+				(
+					'error', // style name (class)
+					theme('color', 'error') // style color
+				),
+				(
+					'dark', // style name (class)
+					theme('color', 'text') // style color
+				)
+			),
+			'sizes': (
+				(
+					"small", // class name
+					.9rem, // font-size
+					.685rem .885rem, // padding
+				),
+			)
 		)
 	),
 	'timeline': (
-		'enable': true, // estimated 5KB
+		'enabled': true,
 		'features': (
 			'styles'     : true,
 			'media'      : true,
 			'media-group': true
 		),
-		'variables': (
-			'type-width'  : 32px,
+		'classnames': (
+			'name'   : 'timeline',
+			'item'   : 'item',
+			'author' : 'author',
+			'body'   : 'body',
+			'type'   : 'type',
+			'date'   : 'date',
+			'media'  : 'media',
+			'actions': 'actions'
+		),
+		'settings': (
 			'border-width': 1px,
 			'item': (
-				'padding': 1.25em 2em 2.85em
+				'background-color': color.$grey,
+				'padding'         : 1.25em 2em 2.85em,
+				'type': (
+					'width'        : 32px,
+					'top'          : 17px,
+					'border-radius': 500px,
+					'border'       : 2px theme('border', 'style') theme('border', 'color'),
+				),
+				'author': (
+					'color'      : theme('color', 'text'),
+					'font-size'  : 1rem,
+					'font-weight': bold
+				),
+				'date': (
+					'font-size': .9em,
+					'opacity'  : .6
+				)
+			),
+			'styles': (
+				(
+					"primary", // style name (class)
+					theme('color', 'primary'), // bg color
+					white // text color
+				),
+				(
+					"success", // style name (class)
+					theme('color', 'success'), // bg color
+					white // text color
+				),
+				(
+					"warning", // style name (class)
+					theme('color', 'warning'), // bg color
+					white // text color
+				),
+				(
+					"error", // style name (class)
+					theme('color', 'error'), // bg color
+					white // text color
+				),
+				(
+					"dark", // style name (class)
+					theme('color', 'text'), // bg color
+					lighten(color.$grey, 20%) // text color
+				),
 			)
 		)
 	),
 	'tooltip': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features' : (),
-		'variables': (
-			'font-size'  : .9em,
-			'font-weight': bold,
-			'min-width'  : 100px,
-			'max-width'  : 180px,
-			'padding'    : 5px,
-			'transition' : opacity 0.18s
+		'classnames': (
+			'name' : 'tooltip',
+			'text' : 'text',
+			'right': 'right',
+			'left' : 'left',
+			'top'  : 'top'
+		),
+		'settings': (
+			'color'           : white,
+			'font-size'       : .9em,
+			'font-weight'     : bold,
+			'width'           : max-content,
+			'max-width'       : 12.5rem,
+			'text-wrap'       : auto,
+			'white-space'     : normal,
+			'text-align'      : center,
+			'line-height'     : 1.25rem,
+			'padding'         : 0.45rem .7rem,
+			'transition'      : opacity 0.18s,
+			'background-color': theme('color', 'dark'),
+			'border-radius'   : theme('border', 'radius')
 		)
 	),
 	///
-	/// ELEMENTS
+	/// 02.ELEMENTS
 	/// 
-	/// total estimated size is [60kb] if all elements
-	/// and it's features enabled.
-	/// 
+	'base': (
+		'settings': (
+			'selection': (
+				'color'           : white,
+				'background-color': lighten(theme('color', 'primary'), 8.5%)
+			),
+			'horizontal-rule': (
+				'border'    : 0,
+				'border-top': 0.1rem solid theme('border', 'color'),
+				'margin'    : 2.0rem 0,
+				'box-sizing': content-box,
+				'overflow'  : visible
+			),
+			'embedded': (
+				'max-width'        : 100%,
+				'height'           : auto,
+				'vertical-align'   : middle,
+				'font-style'       : italic,
+				'background-repeat': no-repeat,
+				'background-size'  : cover
+			)
+		)
+	),
 	'button': (
-		'enable': true, // estimated 50KB
+		'enabled': true,
 		'features': (
 			'group'    : true,
 			'vertical' : true,
 			'styles'   : true,
 			'sizes'    : true,
 			'outlined' : true,
-			'secondary': true,
 			'dropdown' : true,
-			'gradient' : true
+			'preloader': true
 		),
-		'variables': (
-			'font-size'  : 1em,
-			'line-height': 1,
-			'width'      : min-content,
-			'padding'    : .935rem 1.6rem,
-			'transition' : .2s,
-			'icon': (
+		'classnames': (
+			'name'              : 'button',
+			'group'             : 'buttons',
+			'outlined'          : 'outlined',
+			'rounded'			: 'rounded',
+			'active'            : 'active',
+			'inactive'          : 'inactive',
+			'block'             : 'block',
+			'vertical'          : 'vertical',
+			'preloader'			: 'preloader',
+			// dropdown
+			'dropdown'          : 'dropdown',
+			'dropdown-right'    : 'right',
+			'dropdown-left'     : 'left',
+			'dropdown-top'      : 'top',
+			'dropdown-bottom'   : 'bottom',
+			'dropdown-toggle'   : 'toggle',
+			'dropdown-clickable': 'clickable'
+		),
+		'settings': (
+			'display'         : inline-flex,
+			'align-items'     : center,
+			'justify-content' : center,
+			'font-family'     : inherit,
+			'font-size'       : 1rem,
+			'font-weight'     : normal,
+			'line-height'     : 1,
+			'text-align'      : center,
+			'text-decoration' : none,
+			'white-space'     : nowrap,
+			'color'           : theme('color', 'text'),
+			'background'      : theme('color', 'background'),
+			'background-image': none,
+			'outline'         : none,
+			'width'           : min-content,
+			'padding'         : .935rem 1.6rem,
+			'transition'      : .2s,
+			'appearance'      : none,
+			'cursor'          : pointer,
+			'border'          : set-border(), // default border
+			'border-radius'   : theme('border', 'radius'),
+			'user-select'     : none,
+			'box-shadow'      : none,
+			'overflow'        : visible,
+			'icon'            : (
 				'font-size': 1.12rem
+			),
+			'preloader': (
+				'pointer-events'    : none,
+				'width'             : 1.3rem,
+				'height'            : 1.3rem,
+				'border-radius'     : 50%,
+				'border-width'      : 3px,
+				'border-style'      : solid,
+				'indicator-color'   : theme('color', 'primary'), // border color
+				'border-right-color': transparent,
+				'border-top-color'  : transparent,
+				'animation'         : spin .55s linear infinite
+			),
+			'styles': (
+				(
+					'primary', // class name
+					theme('color', 'primary'), // bg color
+					white, // text color
+					lighten(theme('color', 'primary'), 4%) // border color 
+
+				),
+				(
+					'success', // class name
+					theme('color', 'success'), // bg color
+					white,
+					lighten(theme('color', 'success'), 4%) // border color
+				),
+				(
+					'warning', // class name
+					theme('color', 'warning'), // bg color
+					white, // text color
+					lighten(theme('color', 'warning'), 4%) // border color
+				),
+				(
+					'error', // class name
+					theme('color', 'error'), // bg color
+					white, // text color
+					lighten(theme('color', 'error'), 4%) // border color
+				),
+				(
+					'dark', // class name
+					theme('color', 'dark'), // bg color
+					white, // text color
+					if((theme('type') == "light"), color.$dark-grey, color.$grey) // border color
+				)
+			),
+			'sizes': (
+				(
+					"tiny", // size name (class)
+					.809em, // font-size
+					.415rem .5rem // padding
+				),
+				(
+					"mini", // size name (class)
+					.909em, // font-size
+					.445rem .9rem // padding
+				),
+				(
+					"small", // size name (class)
+					.979em, // font-size
+					.645rem 1.4rem // padding
+				),
+				(
+					"large", // size name (class)
+					1.25em, // font-size
+					1.15rem 2.1rem // padding
+				),
+				(
+					"huge", // size name (class)
+					1.45em, // font-size
+					1.3rem 2.4rem // padding
+				)
 			)
 		)
 	),
-	'caption': (
-		'enable': true, // estimated 1KB
-		'features': (
-			'sizes': true,
-		),
-		'variables': (
-			'margin'   : 1.3em .2rem,
-			'font-size': 1.95rem,
-			'media'    : (
-				'margin': .559em,
-			),
-		)
-	),
 	'form': (
-		'enable': true, // estimated 9KB
+		'enabled': true,
 		'features': (
 			'group'            : true,
 			'sizes'            : true,
@@ -382,94 +1067,335 @@ $options: (
 			'checkbox-radio'   : true,
 			'upload'           : true
 		),
-		'variables': (
+		'classnames': (
+			'name'    : 'form',
+			'items'   : 'items',
+			'item'    : 'item',
+			'checkbox': 'checkbox',
+			'radio'   : 'radio',
+			'group'   : 'group'
+		),
+		'settings': (
 			'padding': 0 16px,
 			'input'  : (
-				'height'       : 2.5rem,
-				'padding'      : .4rem .5rem,
-				'font-size'    : 1.088em,
-				'border-radius': 0
+				'font-family'     : inherit,
+				'box-sizing'      : inherit,
+				'color'           : inherit,
+				'background-color': initial,
+				'border-color'    : inherit,
+				'height'          : initial,
+				'padding'         : .7rem .5rem,
+				'font-size'       : initial,
+				'font-weight'     : theme('typography', 'font-weight'),
+				'border-width'    : theme('border', 'width'),
+				'border-style'    : theme('border', 'style'),
+				'border-radius'   : theme('border', 'radius'),
+				'box-shadow'      : none,
+				'width'           : 100%,
+				'max-width'       : 100%,
+				'transition'      : .35s,
+				'outline-color'   : transparent,
+				'outline-width'   : 2px,
+				'focus': (
+					'color'           : inherit,
+					'background-color': initial,
+					'outline-color'   : theme('color', 'primary'),
+					'outline-width'   : 2px
+				),
+				'placeholder': (
+					'color': color.$dark-grey
+				)
+			),
+			'group': (
+				'button': (
+					'padding': .7rem 1.75rem
+				)
 			),
 			'items': (
-				'margin': 6px 0 .75em
+				'margin': 0
 			),
 			'item': (
-				'margin': 6px
+				'height'     : fit-content,
+				'margin-y'   : .495rem,
+				'margin-x'   : 5px,
+				'display'    : inline-flex,
+				'flex-wrap'  : wrap,
+				'width'      : 100%,
+				'max-width'  : 100%,
+				'position'   : relative,
+				'align-items': center,
+				'padding'    : .295rem
 			),
 			'label': (
-				'font-size': .8579rem,
-				'margin'   : 0
+				'color'         : theme('color', 'text'),
+				'font-size'     : .955rem,
+				'font-weight'   : bold,
+				'margin'        : 0,
+				'text-transform': none,
+				'height'        : fit-content
 			),
 			'radio-checkbox': (
-				'font-size'    : 1.35rem,
-				'top'          : -8px,
-				'left'         : 0,
-				'label-padding': 0 1.2rem 0 1.7rem
+				'display'              : grid,
+				'grid-template-columns': 1em auto,
+				'gap'                  : 1rem,
+				'place-content'        : center,
+				'margin'               : 0,
+				'width'                : 1.6em,
+				'height'               : 1.6em,
+				'accent-color'         : theme('color', 'primary')
+			),
+			'textarea': (
+				'min-height': 6.5rem,
+				'resize'    : vertical
+			),
+			'fieldset': (
+				'border-width': 0,
+				'padding'     : 0.6em
+			),
+			'legend': (
+				'display'      : block,
+				'font-size'    : 1.3rem,
+				'font-weight'  : bold,
+				'margin-bottom': .7rem,
+				'white-space'  : normal
+			),
+			'small': (
+				'color': color.$darken-grey,
+			),
+			// for input validations
+			'styles': (
+				(
+					'success', // class name
+					theme('color', 'success') // style color
+				),
+				(
+					'warning', // class name
+					theme('color', 'warning') // style color
+				),
+				(
+					'error', // class name
+					theme('color', 'error') // style color
+				)
+			),
+			// input sizes
+			'sizes': (
+				(
+					'small', // class name
+					.875rem, // font-size
+					2.5rem, // input height
+					.645rem 1.4rem, // button padding
+				),
+				(
+					'large', // class name
+					1.05rem, // font-size
+					3.2rem, // input height
+					1.15rem 2.1rem, // button padding
+				)
+			),
+			'columns': (
+				// maximum number of form items in a single row (default : 2 through 6)
+				// class name, value
+				"two"  : 2,
+				"three": 3,
+				"four" : 4,
+				"five" : 5,
+				"six"  : 6
 			)
 		)
 	),
-	'icon': (
-		'enable': true, // estimated 1KB
-		'features' : (),
-		'variables': (
-			'font-family'   : 'Material Symbols Outlined',
-			'font-size'     : 1.12rem,
-			'line-height'   : 1,
-			'vertical-align': middle,
-			'form': (
-				'radio-before'   : 'radio_button_unchecked',
-				'radio-after'    : 'radio_button_checked',
-				'checkbox-before': 'check_box_outline_blank',
-				'checkbox-after' : 'check_box'
-			),
-			'breadcrumb': (
-				'seperator': 'keyboard_arrow_right'
-			),
-			'navbar': (
-				'open' : 'dehaze',
-				'close': 'close'
-			),
-			'process': (
-				'current': 'beenhere'
-			)
-		)
-	),
-	'label': (
-		'enable': true, // estimated 1KB
+	'grid': (
+		'enabled': true, 
 		'features': (
-			'styles': true,
-			'sizes' : true
+			'equal' : true, // equal height
+			'offset': true // [!] increases the size
 		),
-		'variables': (
-			'font-size': .9195em,
-			'padding'  : 0.28rem 0.9rem,
-			'margin'   : .1rem .05rem
+		'classnames': (
+			'row'      : 'row',
+			'container': 'container',
+			'column'   : 'col',
+			'offset'   : 'offset',
+			'equal'    : 'equal'
+		),
+		'settings': (
+			'gap': .375rem,
+			'columns': (
+				'size'      : 16,
+				'padding'   : .3rem,
+				'min-height': .125rem
+			),
+			'container': (
+				'width'  : 100%,
+				'padding': 40px, // for left and right sides
+				'margin' : 0 auto,
+				'viewports': ( // only for containers
+					('sm', 500px),
+					('md', 768px),
+					('lg', 992px),
+					('xl', 1260px),
+					('xxl', 1400px)
+				)
+			),
+			'breakpoints': (
+				'extra-small'      : 0,
+				'small'            : 500px,
+				'medium'           : 768px,
+				'large'            : 992px,
+				'extra-large'      : 1260px,
+				'extra-extra-large': 1400px
+			),
+			'viewports': (
+				('xs', 0),
+				('sm', 500px),
+				('md', 768px),
+				('lg', 992px),
+				('xl', 1260px),
+				('xxl', 1400px)
+			)
 		)
 	),
 	'table': (
-		'enable': true, // estimated 1KB
+		'enabled': true,
 		'features': (
 			'hovered': true,
 			'striped': true
 		),
-		'variables': (
+		'classnames': (
+			'name'   : 'table',
+			'striped': 'striped',
+			'hovered': 'hovered',
+			'active' : 'active'
+		),
+		'settings': (
+			'width'          : 100%,
+			'max-width'      : 100%,
+			'text-align'     : left,
+			'margin-bottom'  : margin-bottom,
+			'border-spacing' : 0,
+			'border-collapse': collapse,
+			'position'       : relative,
+			'transition'     : all 0.3s,
+			'hover': (
+				'color'           : theme('color', 'text'),
+				'background-color': color.$lighten-grey
+			),
+			'striped': (
+				'color'           : theme('color', 'text'),
+				'background-color': color.$lighten-grey
+			),
+			'active': (
+				'color'           : theme('color', 'text'),
+				'background-color': color.$light-grey
+			),
 			'td': (
-				'padding': 5px .7rem,
+				'padding': .313rem .7rem,
 			),
 			'th': (
-				'padding': .7rem,
+				'color'              : theme('color', 'text'),
+				'font-size'          : inherit,
+				'font-weight'        : bold,
+				'padding'            : .90rem .7rem,
+				'background-color'   : transparent,
+				'border-bottom-color': color.$dark-grey
+			),
+			'caption': (
+				'text-align'      : inherit,
+				'color'           : theme('color', 'text'),
+				'font-size'       : 1.15rem,
+				'font-weight'     : bold,
+				'padding'         : 1rem .6rem,
+				'border-bottom'   : 1px theme('border', 'style') color.$darken-grey,
+				'background-color': transparent
+			)
+		)
+	),
+	'typography': (
+		'settings': (
+			'paragraph': (
+				'margin'   : 0 0 1em,
+				'text-wrap': pretty
+			),
+			'blockquote': (
+				'border-left': .1rem dotted theme('color', 'dark'),
+				'margin-left': 0,
+				'padding'    : .4rem .8rem,
+				'font-style' : italic,
+				'color'      : rgba(theme('color', 'text'), .75)
+			),
+			'href': (
+				'color'          : theme('color', 'primary'),
+				'cursor'         : pointer,
+				'transition'     : .15s ease-out,
+				'text-decoration': none,
+				'hover': (
+					'color'          : theme('color', 'primary'),
+					'text-decoration': underline,
+				)
+			),
+			'placeholder': (
+				'opacity': .5,
+				'color'  : theme('color', 'text')
+			),
+			'abbreviation': (
+				'border-bottom'  : 1px dotted,
+				'cursor'         : help,
+				'text-decoration': none
+			),
+			'superscript': (
+				'font-size'     : 75%,
+				'line-height'   : 0,
+				'position'      : relative,
+				'vertical-align': baseline,
+				'bottom'        : -0.25em,
+				'top'           : -0.5em
+			),
+			'small': (
+				'font-size': 80%
+			),
+			'header': (
+				'margin-top'   : 0,
+				'color'        : inherit,
+				'line-height'  : 2,
+				'margin-bottom': 1em,
+				'overflow-wrap': break-word,
+				'text-wrap'    : balance
+			),
+			'divided-header': (
+				'border-width'  : 0 0 theme('border', 'width') 0 !important,
+				'padding-bottom': 10px,
+				'margin-bottom' : 20px
+			),
+			'headers': (
+				(
+					"h1", // class name
+					clamp(1.6rem, 2.34vw + .75rem, 2.05rem) // font-size
+				),
+				(
+					"h2", // class name
+					clamp(1.47rem, 2.34vw + .7rem, 1.85rem) // font-size
+				),
+				(
+					"h3", // class name
+					clamp(1.33rem, 2.34vw + .65rem, 1.65rem) // font-size
+				),
+				(
+					"h4", // class name
+					clamp(1.2rem, 2.34vw + .6rem, 1.45rem) // font-size
+				),
+				(
+					"h5", // class name
+					clamp(1rem, 2.34vw + .55rem, 1.3rem), // font-size
+				),
+				(
+					"h6", // class name
+					clamp(.95rem, 2.34vw + .5rem, 1.15rem) // font-size
+				)
 			)
 		)
 	),
 	///
-	/// UTILITIES
-	/// 
-	/// total estimated size is [35KB] if all helpers
-	/// and it's features enabled.
+	/// 03.UTILITIES
 	/// 
 	'helpers': (
-		'enable'   : true,
-		'features' : (),
-		'variables': ()
+		'enabled': true
 	)
 ) !default;

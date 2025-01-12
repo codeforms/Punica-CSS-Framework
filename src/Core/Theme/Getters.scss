@@ -1,0 +1,47 @@
+///
+/// Punica CSS Framework
+/// Core/Theme/Getters.scss
+/// 
+
+@use "sass:map" as map;
+@use "sass:list" as list;
+@use "../Global/Helpers" as helper;
+
+/// ======================================================
+	$theme: null !default;
+/// ======================================================
+
+///
+/// Get active theme's value by key(s) from the theme map
+///
+/// @param {String} $node
+/// @param {List} $key(s)
+///
+/// @example theme('name')
+/// @example theme('color', 'primary')
+/// @example theme('elements', 'button', 'font-weight')
+///
+/// @return mixed
+/// 
+@function theme($node, $keys...) 
+{
+	@if list.length($keys) > 4 {
+		@warn helper.$nesting-depth;
+	}
+
+	$value: if(map.has-key($theme, $node), map.get($theme, $node), null);
+
+	@if (list.length($keys) > 0) {
+		@for $key from 1 through list.length($keys) {
+			@if ($value != null) {
+				$value: if(map.has-key($value, list.nth($keys, $key)), map.get($value, list.nth($keys, $key)), null);
+				// if the $key is the last item
+				@if (list.length($keys) == $key) {
+					@return $value;
+				}
+			}
+		}
+	}
+	
+	@return $value;
+}

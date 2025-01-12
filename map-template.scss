@@ -1,0 +1,43 @@
+///
+/// Punica CSS Framework
+/// v3.0 Theme API
+/// 
+
+theme_slug: (
+	'name': '',
+	'type': '', // light or dark (required*),
+	'typography': (
+		'font-family': '',
+		'font-url'   : '', // embed/import url
+		'font-size'  : ,
+		'font-weight': ,
+		'line-height': 
+	),
+	'color': (
+		'text'      : ,
+		'background': ,
+		'primary'   : ,
+		'success'   : ,
+		'warning'   : ,
+		'error'     : ,
+		'dark'      : 
+	),
+	'border': (
+		'color' : ,
+		'width' : ,
+		'style' : ,
+		'radius': ,
+	),
+	'shadow': ,
+	//////////////////////////////////////////////////////////
+	// You can use this section to override/change
+	// the all default variables in the options.scss API file.
+	'classnames': (),
+	'components': (),
+	'elements'  : (),
+	// You can use this section to override/change the 
+	// all default utility variables in the 
+	// Modules/Utilities/index.scss API file.
+	'utilities' : ()
+	//////////////////////////////////////////////////////////
+)

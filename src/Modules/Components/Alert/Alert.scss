@@ -1,0 +1,62 @@
+///
+/// Punica CSS Framework
+/// Components : Alert
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
+@use "../../../Core/Global/Sass" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+
+@if enabled('components', 'alert') {
+	.#{class('alert', 'name')} {
+		@include set-style(theme('color', 'background'), theme('color', 'text')) {
+			display      : components('alert', 'display');
+			padding      : components('alert', 'padding');
+			margin       : components('alert', 'margin');
+			width        : components('alert', 'width');
+			font-size    : components('alert', 'font-size');
+			font-weight  : components('alert', 'font-weight');
+			border       : components('alert', 'border');
+			border-radius: components('alert', 'border-radius');
+			line-height  : components('alert', 'line-height');
+			a {
+				color          : components('alert', 'href', 'color');
+				text-decoration: components('alert', 'href', 'text-decoration');
+				&:focus,&:hover,&:active,&.#{class('alert', 'active')} {
+					opacity: .75;
+				}
+			}
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			>i {
+				vertical-align: components('alert', 'icon', 'vertical-align');
+			}
+		}
+		///
+		/// STYLES
+		///
+		@if features('components', 'alert', 'styles') {
+			@each $style-name, $color, $bg-color in components('alert', 'styles') {
+				@include set-style($bg-color, $color, $style-name) {
+					border-color: darken($bg-color, 3%);
+					a {
+						color: $color;
+					}
+				};
+			}
+		}
+		///
+		/// SIZES
+		///
+		@if features('components', 'alert', 'sizes') {
+			@each $size-name, $font-size, $padding in components('alert', 'sizes') {
+				@include set-size($font-size, $padding, $size-name);
+			}
+		}
+	}
+}

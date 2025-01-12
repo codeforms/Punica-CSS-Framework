@@ -1,0 +1,80 @@
+///
+/// Punica CSS Framework
+/// Utilities : Helpers
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "mixins" as *;
+
+@if enabled('utilities', 'helpers') {
+	@include set_utils('accent-color', true);
+	@include set_utils('align-content');
+	@include set_utils('align-items');
+	@include set_utils('align-self');
+	@include set_utils('appearance');
+	@include set_utils('background-clip', true);
+	@include set_utils('background-origin', true);
+	@include set_utils('background-position', true);
+	@include set_utils('background-repeat');
+	@include set_utils('background-size');
+	@include set_utils('background-color', true);
+	@include color_palette(utils('background-color'));
+	@include set_utils('border-color', true);
+	@include set_utils('border-radius');
+	@include set_utils('border-style');
+	@include utils_with_args(utils('border'));
+	@include set_border_sides();
+	@include set_utils('caret-color', true);
+	@include set_utils('color', true);
+	@include color_palette(utils('color'));
+	@include set_utils('columns');
+	@include set_utils('cursor');
+	@include set_utils('filter', true);
+	@include set_utils('display');
+	@include set_utils('flex-direction');
+	@include set_utils('flex-grow');
+	@include set_utils('flex-shrink');
+	@include set_utils('flex-wrap');
+	@include set_utils('flex', true);
+	@include set_utils('float');
+	@include set_utils('font-size', true);
+	@include set_utils('font-style');
+	@include set_utils('font-weight');
+	@include utils_with_args(utils('gap'));
+	@include set_utils('height', true);
+	@include set_inset_helper('inset');
+	@include set_utils('justify-content');
+	@include set_utils('justify-items');
+	@include set_utils('justify-self', true);
+	@include set_utils('letter-spacing', true);
+	@include set_utils('line-height', true);
+	@include utils_with_args(utils('margin'));
+	@include set_sides(utils('margin'));
+	@include set_utils('object-fit');
+	@include set_utils('object-position', true);
+	@include set_utils('opacity', true);
+	@include set_utils('order');
+	@include set_utils('outline-color', true);
+	@include set_utils('outline-offset');
+	@include set_utils('outline-style');
+	@include set_utils('outline-width');
+	@include set_utils('overflow', false, true);
+	@include utils_with_args(utils('padding'));
+	@include set_sides(utils('padding'), 'padding');
+	@include set_utils('place-content');
+	@include set_utils('place-items');
+	@include set_utils('place-self');
+	@include set_utils('position');
+	@include set_utils('resize');
+	@include set_utils('rotate');
+	@include set_utils('text-align');
+	@include set_utils('text-decoration');
+	@include set_utils('text-transform');
+	@include set_utils('text-wrap');
+	@include set_utils('user-select');
+	@include set_utils('vertical-align');
+	@include set_utils('width', true); 
+	@include set_utils('z-index');
+	@include other_helpers();
+}

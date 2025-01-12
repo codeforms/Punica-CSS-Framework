@@ -1,0 +1,146 @@
+///
+/// Punica CSS Framework
+/// v3.0 Theme API
+/// 
+/// Note: you can also add your custom theme map here.
+/// 
+/// If you want to compile your own theme map, don't forget to change 
+/// the "$active-theme" variable in the punica.scss file.
+/// 
+
+@use "Core/Global/Sass" as *;
+
+$themes: (
+	//
+	// 01. Default Theme (beta)
+	//
+	default: (
+		'name'      : 'Default Theme',
+		'type'      : 'light', // light or dark (required*),
+		'typography': (
+			'font-family': 'Inter Tight',
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap', // embed/import url
+			'font-size'  : 1rem,
+			'font-weight': 400,
+			'line-height': 1.7
+		),
+		'color': (
+			'text'      : #1e2126,
+			'background': white,
+			'primary'   : #3266ec,
+			'success'   : #369138,
+			'warning'   : #c17f2a,
+			'error'     : #CC2B52,
+			'dark'      : #393644
+		),
+		'border': (
+			'color' : #cbd3db,
+			'width' : 1px,
+			'style' : solid,
+			'radius': .25rem,
+		),
+		'shadow': 0 .25em .5em 0 rgba(0, 0, 0, 0.14)
+	),
+	//
+	// 02. Dark Theme (beta)
+	//
+	dark: (
+		'name'      : 'Dark Theme',
+		'type'      : 'dark', // light or dark (required*),
+		'typography': (
+			'font-family': 'Inter Tight',
+			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap', // embed/import url
+			'font-size'  : 1rem,
+			'font-weight': 500,
+			'line-height': 1.7
+		),
+		'color': (
+			'text'      : #c5cae1,
+			'background': #222226,
+			'primary'   : #3266ec,
+			'success'   : #369138,
+			'warning'   : #c17f2a,
+			'error'     : #CC2B52,
+			'dark'      : #393644
+		),
+		'border': (
+			'color' : #373a48,
+			'width' : 1px,
+			'style' : solid,
+			'radius': 2px,
+		),
+		'shadow': 0 .2em 1em 0 rgba(0,0,0,.17),
+		//////////////////////////////////////////////////////////
+		// You can use this section to override/change
+		// the all default settings in the options.scss API file.
+		'classnames': (
+			/*
+			'panel': (
+				'name'    : 'box',
+				'headline': 'spot'
+			),
+			'grid': (
+				'offset': 'off'
+			)
+			*/
+		),
+		'components': (
+			'menu': (
+				'background-color': lighten(#222226, 2.5%),
+				'item': (
+					'active': (
+						'color': white,
+						'background-color': #3266ec
+					)
+				)
+			),
+			'navbar': (
+				'background-color': lighten(#222226, 2.5%),
+				'input': (
+					'background-color': #2f2f35
+				),
+				'menu': (
+					'background-color': lighten(#222226, 2.5%),
+				)
+			),
+			'tooltip': (
+				'color'           : #222226,
+				'font-weight'     : 500,
+				'background-color': #e1e6ff
+			)
+		),
+		'elements': (
+			'button': (
+				'font-weight': 500
+			),
+			'form': (
+				'input': (
+					'background-color': #2e2d33
+				)
+			),
+			'typography': (
+				'href': (
+					'color': #5580ff,
+					'hover': (
+						'color': lighten(#5580ff, 3%)
+					)
+				)
+			)
+		),
+		// You can use this section to override/change the 
+		// all default variable of utilities in the 
+		// utilities.scss API file.
+		'utilities': (
+			//'enabled': false, // this option disables all helpers (default true).
+			/*
+			'flex-wrap': (
+				'enabled': false 
+			),
+			'overflow': (
+				'prefix': 'flow-' 
+			)
+			*/
+		)
+		//////////////////////////////////////////////////////////
+	),
+);

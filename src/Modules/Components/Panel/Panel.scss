@@ -1,0 +1,121 @@
+///
+/// Punica CSS Framework
+/// Components : Panel
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+
+@if enabled('components', 'panel') {
+	.#{class('panel', 'name')} {
+		display         : flex;
+		flex-direction  : column;
+		background-color: components('panel', 'background-color');
+		margin          : components('panel', 'margin');
+
+		@if features('components', 'panel', 'border') {
+			border       : components('panel', 'border');
+			border-radius: components('panel', 'border-radius');
+		}
+
+		@if features('components', 'panel', 'shadow') {
+			box-shadow: theme('shadow');
+		}
+		
+		&>.#{class('panel', 'header')},
+		&>.#{class('panel', 'bottom')} {
+			display       : flex;
+			flex-direction: row;
+			align-items   : center;
+			.#{class('panel', 'actions')} {
+				margin-left: auto;
+				&:before {
+					flex-grow: 1;
+				}
+			}
+		}
+		&>.#{class('panel', 'header')} {
+			border-bottom: set-border();
+			padding      : components('panel', 'header', 'padding');
+			&.dashed {
+				border-bottom-style: dashed;
+			}
+			&.dotted {
+				border-bottom-style: dotted;
+			}
+			>.#{class('panel', 'title')} {
+				font-size  : components('panel', 'header', 'title', 'font-size');
+				font-weight: components('panel', 'header', 'title', 'font-weight');
+			}
+		}
+		&>.#{class('panel', 'content')} {
+			flex   : 1 1 auto;
+			padding: components('panel', 'content', 'padding');
+			height : auto;
+			///
+			/// MEDIA
+			///
+			@if features('components', 'panel', 'media') {
+				&>.#{class('panel', 'media')} {
+					display      : flex;
+					flex         : auto;
+					min-width    : 0;
+					flex-wrap    : wrap;
+					margin-bottom: components('panel', 'content', 'media', 'margin-bottom');
+					@include embedded-media();
+					img {
+						display: block;
+					}
+				}
+				///
+				/// MEDIA GROUP
+				///
+				@if features('components', 'panel', 'media-group') {
+					@include media-group-specs(class('panel', 'media'));
+				}
+			}
+			.#{class('panel', 'headline')},
+			p.#{class('panel', 'headline')} {
+				font-size     : components('panel', 'content', 'headline', 'font-size');
+				line-height   : components('panel', 'content', 'headline', 'line-height');
+				margin-bottom : components('panel', 'content', 'headline', 'margin-bottom');
+				color         : components('panel', 'content', 'headline', 'color');
+				letter-spacing: components('panel', 'content', 'headline', 'letter-spacing');
+				text-wrap     : components('panel', 'content', 'headline', 'text-wrap')
+			}
+		}
+		&>.#{class('panel', 'bottom')} {
+			min-height: components('panel', 'bottom', 'min-height');
+			border-top: components('panel', 'bottom', 'border-top');
+			padding   : components('panel', 'bottom', 'padding');
+		}
+		///
+		/// SIZES
+		///
+		@if features('components', 'panel', 'sizes') {
+			@each $size-name, $font-size, $padding in components('panel', 'sizes') {
+				&.#{$size-name} {
+					>.#{class('panel', 'header')} {
+						padding: $padding;
+						.#{class('panel', 'title')} {
+							font-size: $font-size;
+						}
+					}
+					>.#{class('panel', 'content')} {
+						.#{class('panel', 'headline')},
+						p.#{class('panel', 'headline')} {
+							font-size: $font-size * 1.2;
+						}
+					}
+					>.#{class('panel', 'content')},
+					>.#{class('panel', 'bottom')} {
+						padding: $padding;
+					}
+				}
+			}
+		}
+	}
+}

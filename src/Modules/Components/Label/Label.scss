@@ -1,0 +1,49 @@
+///
+/// Punica CSS Framework
+/// Components : Label
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
+@use "../../../Core/Global/Sass" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+
+@if enabled('components', 'label') {
+	a.#{class('label', 'name')},
+	.#{class('label', 'name')} {
+		@include set-style(theme('color', 'background'), theme('color', 'text')) {
+			display        : components('label', 'display');
+			font-weight    : components('label', 'font-weight');
+			line-height    : components('label', 'line-height');
+			margin         : components('label', 'margin');
+			text-decoration: components('label', 'text-decoration');
+			box-shadow     : components('label', 'box-shadow');
+			border         : components('label', 'border');
+			border-radius  : components('label', 'border-radius');
+			@include set-size(components('label', 'font-size'), components('label', 'padding'));
+			// .label > i
+			>i {
+				vertical-align: components('label', 'icon', 'vertical-align');
+			}
+		};
+		///
+		/// STYLES
+		///
+		@if features('components', 'label', 'styles') {
+			@each $style-name, $color, $bg-color in components('label', 'styles') {
+				@include set-style($bg-color, $color, $style-name) {
+					border-color: darken($bg-color, 3%);
+				};
+			}
+		}
+		///
+		/// SIZES
+		///
+		@if features('components', 'label', 'sizes') {
+			@each $size-name, $padding, $font-size in components('label', 'sizes') {
+				@include set-size($font-size, $padding, $size-name);
+			}
+		}
+	}
+}

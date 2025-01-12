@@ -1,0 +1,161 @@
+///
+/// Punica CSS Framework
+/// Core/Global/Getters.scss
+/// 
+
+@use "sass:map" as map;
+@use "sass:list" as *;
+@use "../Theme/Getters" as *;
+@use "../../options" as option;
+@use "../../utilities" as utility;
+@use "Helpers" as helper;
+
+///
+/// Get options value by key
+/// from the options.scss API file
+///
+/// @param {String(s)} $keys
+///
+/// @example options('grid', 'enable')
+/// @example options('grid', 'features', 'equal')
+///
+/// @return boolean
+///
+@function options($keys...) 
+{
+	@if length($keys) > 4 {
+		@warn helper.$nesting-depth;
+	}
+
+	@if map.get(option.$options, nth($keys, 1)) == null {
+		@warn helper.$invalid-key + " #{nth($keys, 1)} " + helper.$key-not-found;
+		@return null;
+	}
+
+	$value: map.get(option.$options, nth($keys, 1));
+
+	@if length($keys) == 1 {
+		@return $value;
+	}
+
+	$value: map.get($value, nth($keys, 2));
+
+	@if $value == null {
+		@warn helper.$invalid-key + " #{nth($keys, 1)} > #{nth($keys, 2)} " + helper.$key-not-found;
+		@return null;
+	}
+
+	@if length($keys) > 2 {
+		$value: map.get($value, nth($keys, 3));
+		@if $value == null {
+			@warn helper.$invalid-key + " #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)} " + helper.$key-not-found;
+			@return null;
+		}
+
+		@if length($keys) > 3 {
+			$value: map.get($value, nth($keys, 4));
+			@if $value == null {
+				@warn helper.$invalid-key + " #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)} > #{nth($keys, 4)} " + helper.$key-not-found;
+				@return null;
+			}
+		}
+	}
+
+	@return $value;
+}
+
+///
+/// Get default "settings" of a specific component/element
+/// from the options.scss API file
+///
+/// @param {String} $node
+/// @param {String} $key(s)
+///
+/// @example settings('grid', 'gap')
+/// @example settings('grid', 'columns', 'size')
+///
+/// @return mixed
+///
+@function settings($node, $keys...) 
+{
+	@if length($keys) > 4 {
+		@warn helper.$nesting-depth;
+	}
+	
+	$settings: map.get(map.get(options($node), 'settings'), nth($keys, 1));
+
+	@if $settings == null {
+		@warn helper.$invalid-key + " #{$node} > settings > #{nth($keys, 1)} " + helper.$key-not-found;
+		@return null;
+	}
+	
+	@if length($keys) == 1 {
+		@return $settings;
+	}
+
+	$settings: map.get($settings, nth($keys, 2));
+
+	@if $settings == null {
+		@warn helper.$invalid-key + " #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)} " + helper.$key-not-found;
+		@return null;
+	}
+
+	@if length($keys) > 2 {
+		$settings : map.get($settings, nth($keys, 3));
+
+		@if $settings == null {
+			@warn helper.$invalid-key + " #{$node} > settings > #{nth($keys, 1)} > #{nth($keys, 2)} > #{nth($keys, 3)} " + helper.$key-not-found;
+			@return null;
+		}
+	}
+
+	@return $settings;
+}
+
+///
+/// Get class name of a specific component/element
+/// from the options.scss API file
+///
+/// @param {String} $node
+/// @param {String} $key
+///
+/// @example class('alert', 'name')
+/// @example class('button', 'dropdown')
+///
+/// @return string
+///
+@function class($node, $key) 
+{
+	@if theme('classnames', $node, $key) != null {
+		@return theme('classnames', $node, $key);
+	}
+
+	@return options($node, 'classnames', $key);
+}
+
+///
+/// Get variable of a specific utility
+/// from the Modules/Utilities/index.scss file.
+/// 
+/// @param {String} $node
+/// @param {String|null} $key
+///
+/// @example utils('align-items')
+/// @example utils('align-items', 'property')
+///
+/// @return string
+///
+@function utils($node, $key: null) 
+{
+	@if theme('utilities', $node, $key) != null {
+		@return theme('utilities', $node, $key);
+	}
+
+	$util: if(map.has-key(utility.$utilities, $node), map.get(utility.$utilities, $node), null);
+
+	@if ($util != null) and $key {
+		$util: if(map.has-key($util, $key), map.get($util, $key), null);
+	}
+
+	@return $util;
+}

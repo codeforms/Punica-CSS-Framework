@@ -1,0 +1,19 @@
+///
+/// Punica CSS Framework
+/// Core/Global/Helpers.scss
+//
+
+$invalid-key  : "[PUNICA] INVALID KEY:";
+$key-not-found: "key is not found or key returns null in the [options.scss] file.";
+$nesting-depth: "[PUNICA] The maximum nesting depth is restricted to 4.";
+
+/// 
+/// @param {String} $theme
+///
+/// @return string
+///
+@function theme-not-found($theme) 
+{
+    $error: "[PUNICA] Invalid theme name: [#{$theme}]. Punica's theme map does not contains a key name associated with '#{$theme}'. Please check the 'themes.scss' file.";
+    @error $error;
+}

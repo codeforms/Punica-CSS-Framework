@@ -1,0 +1,69 @@
+///
+/// Punica CSS Framework
+/// Core/Global/Mixins.scss
+/// 
+
+@use "sass:color" as *;
+@use "Options" as *;
+
+///
+/// Breakpoints
+/// @param {Size} $size
+/// @param {Size} $width
+///
+@mixin breakpoints(
+	$size, $width: 'min-width'
+) {
+	@media ($width: $size) {
+		@content;
+	}
+}
+
+///
+/// Media Group Specs
+/// @param {String} $item-name
+/// @param {Size} $padding
+///
+@mixin media-group-specs(
+	$item-name, $padding: 1px
+) {
+	@each $name, $number in components('card', 'columns') {
+		&>.#{$item-name}.#{$name} {
+			padding-bottom: initial !important;
+			height: auto;
+			&>div, &>a {
+				flex: 0 0 calc(100% * (1 / #{$number}));
+				flex-grow: 1;
+				padding: $padding;
+			}
+		}
+	}
+}
+
+///
+/// Reference;
+/// https://css-tricks.com/fluid-width-video/
+///
+@mixin embedded-media {
+	position: relative;
+	padding-bottom: 56.25% !important;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	video {
+		max-width: 100%;
+		height: auto;
+		box-sizing: border-box;
+	}
+}

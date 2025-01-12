@@ -1,19 +1,25 @@
 {
-  "name": "Punica-CSS-Framework",
-  "description": "Punica CSS is a clean, lightweight, responsive, modern and fully customizable (even class names) pure CSS Framework based on SASS/SCSS with multi-theme support.",
-  "version": "2.8.20",
-  "homepage": "http://www.punicacss.com/",
-  "author": "CodeForms (https://github.com/codeforms)",
-  "license": "MIT",
-  "keywords": [
-    "css", "framework", "sass", "responsive", "customizable", "multi-theme"
+  "name"       : "Punica-CSS-Framework",
+  "description": "Punica CSS Framework is a clean, lightweight, responsive, modern, and fully customizable API-Driven Framework built with SASS/SCSS, offering multi-theme support.",
+  "version"    : "3.0.0",
+  "homepage"   : "https://github.com/codeforms/Punica-CSS-Framework",
+  "author"     : "Fatih Keçeci",
+  "license"    : "MIT",
+  "keywords"   : [
+    "css",
+    "framework",
+    "sass",
+    "responsive",
+    "customizable",
+    "multi-theme"
   ],
   "scripts": {
-    "prod": "sass src/punica.scss dist/punica.min.css --no-source-map --style compressed",
-    "unminify": "sass src/punica.scss dist/punica.css --no-source-map",
-    "watch": "npm run prod -- -w"
+    "prod"          : "sass src/punica.scss dist/punica.min.css --no-source-map --style compressed",
+    "unminify"      : "sass src/punica.scss dist/punica.css --no-source-map",
+    "unminify-watch": "npm run unminify -- -w",
+    "watch"         : "npm run prod -- -w"
   },
   "dependencies": {
-    "dart-sass": "^1.25.0"
+    "sass": "1.83.0"
   }
 }

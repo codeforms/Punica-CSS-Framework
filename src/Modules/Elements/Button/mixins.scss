@@ -1,0 +1,338 @@
+///
+/// Punica CSS Framework
+/// Elements : Button -> Mixins
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
+@use "../../../Core/Global/Sass" as *;
+@use "../../../Core/Global/Mixins" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+
+///
+/// Dropdown
+///
+@mixin dropdown() {
+	.#{class('button', 'dropdown')} {
+		display : inline-block;
+		position: relative;
+		&>.#{class('menu', 'name')} {
+			animation : slide-down .15s ease 1;
+			display   : none;
+			left      : 0;
+			max-height: 45vh;
+			overflow-y: auto;
+			position  : absolute;
+			top       : 100%;
+			z-index   : 300 + 1; // menu z-index + 1
+			width     : auto;
+			&>.#{class('menu', 'item')} {
+				& > a {
+					padding: .1rem .9rem;
+				}
+			}
+		}
+		&.#{class('button', 'dropdown-right')},
+		&.#{class('button', 'dropdown-left')} {
+			&>.#{class('menu', 'name')} {
+				top: 0;
+			}
+		}
+		&.#{class('button', 'dropdown-right')} {
+			&>.#{class('menu', 'name')} {
+				left : 100%;
+				right: auto;
+			}
+		}
+		&.#{class('button', 'dropdown-left')} {
+			&>.#{class('menu', 'name')} {
+				left : auto;
+				right: 100%;
+			}
+		}
+		&.#{class('button', 'dropdown-top')}.#{class('button', 'dropdown-left')} {
+			&>.#{class('menu', 'name')} {
+				right: auto !important;
+				left : 0 !important;
+			}
+		}
+		&.#{class('button', 'dropdown-top')}.#{class('button', 'dropdown-right')} {
+			&>.#{class('menu', 'name')} {
+				right: 0 !important;
+				left : auto !important;
+			}
+		}
+		&.#{class('button', 'dropdown-top')} {
+			&>.#{class('menu', 'name')} {
+				bottom    : 100%;
+				top       : auto;
+				right     : 0;
+				left      : auto;
+				box-shadow: 0 -2px .5em 0 rgba(0, 0, 0, 0.14);
+			}
+		}
+		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-left')},
+		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-right')} {
+			&>.#{class('menu', 'name')} {
+				top: 100%;
+			}
+		}
+		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-left')} {
+			&>.#{class('menu', 'name')} {
+				right: auto !important;
+				left : 0 !important;
+			}
+		}
+		&.#{class('button', 'dropdown-bottom')}.#{class('button', 'dropdown-right')} {
+			&>.#{class('menu', 'name')} {
+				right: 0 !important;
+				left : auto !important;
+			}
+		}
+		// dropdown hover (default)
+		&.#{class('menu', 'active')} > .#{class('menu', 'name')},
+		&>.#{class('button', 'dropdown-toggle')}:focus + .#{class('menu', 'name')},
+		&>.#{class('button', 'dropdown-toggle')}:hover + .#{class('menu', 'name')},
+		&>.#{class('menu', 'name')}:focus,
+		&>.#{class('menu', 'name')}:hover {
+			display: block;
+		}
+		// clickable dropdown
+		&.#{class('button', 'dropdown-clickable')} {
+			&>.#{class('button', 'dropdown-toggle')}:hover + .#{class('menu', 'name')} {
+				display: none;
+			}
+			&>.#{class('button', 'dropdown-toggle')}:focus + .#{class('menu', 'name')},
+			&>.#{class('button', 'dropdown-toggle')}:active + .#{class('menu', 'name')} {
+				display: block;
+			}
+		}
+		///
+		/// BUTTON GROUPS
+		///
+		@if features('elements', 'button', 'group') {
+			&>.#{class('button', 'group')} {
+				&>.#{class('button', 'dropdown-toggle')}:nth-last-child(2) {
+					border-bottom-right-radius: elements('button', 'border-radius');
+					border-top-right-radius   : elements('button', 'border-radius');
+				}
+			}
+		}
+		///
+		/// SIZES
+		///
+		@if features('elements', 'button', 'sizes') {
+			@include button-sizes(true);
+		}
+	}
+}
+
+///
+/// Button Group
+///
+@mixin button-group() {
+	.#{class('button', 'group')} {
+		display      : inline-flex;
+		flex-wrap    : wrap;
+		flex-shrink  : 0;
+		border-radius: elements('button', 'border-radius');
+		box-shadow   : theme('shadow');
+		width: fit-content;
+		.#{class('button', 'name')} {
+			box-shadow: none;
+			&:first-child:not(:last-child) {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+				}
+			&:not(:first-child):not(:last-child) {
+				border-radius: 0;
+				margin-left  : -#{theme('border', 'width')};
+			}
+			&:last-child:not(:first-child) {
+				border-bottom-left-radius: 0;
+				border-top-left-radius   : 0;
+				margin-left              : -#{theme('border', 'width')};
+			}
+		}
+		&.#{class('button', 'block')} {
+			display: flex;
+			width: auto;
+			.#{class('button', 'name')} {
+				flex: 1 0 0;
+			}
+		}
+		///
+		/// SIZES
+		/// 
+		@if features('elements', 'button', 'sizes') {
+			@include button-sizes(true);
+		}
+		///
+		/// STYLES
+		///
+		@if features('elements', 'button', 'styles') {
+			@each $theme-name, $bg-color, $text-color in elements('button', 'styles') {
+				&.#{$theme-name} > .#{class('button', 'name')},
+				&.#{$theme-name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
+					@include button-styles($bg-color, $text-color, darken($bg-color, 7%));
+				}
+			}
+		}
+		///
+		/// DROPDOWN
+		///
+		@if features('elements', 'button', 'dropdown') {
+			.#{class('button', 'dropdown')}:last-child:not(:first-child),
+			.#{class('button', 'dropdown')}:last-child:not(:first-child) > .#{class('button', 'name')} {
+				border-bottom-left-radius: 0;
+				border-top-left-radius   : 0;
+				margin-left              : -1px;
+			}
+			.#{class('button', 'dropdown')}:last-child,
+			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:first-child,
+			.#{class('button', 'dropdown')}:last-child > .#{class('button', 'name')}:last-child {
+				border-bottom-right-radius: elements('button', 'border-radius');
+				border-top-right-radius   : elements('button', 'border-radius');
+			}
+			.#{class('button', 'dropdown')}:not(:first-child):not(:last-child) > .#{class('button', 'name')} {
+				border-radius: 0;
+				margin-left  : -1px;
+			}
+		}
+		@include breakpoints(elements('grid', 'breakpoints', 'medium'), 'max-width') {
+			//button-class-group
+			box-shadow: none;
+		}
+		///
+		/// VERTICAL BUTTONS
+		///
+		@if features('elements', 'button', 'vertical') {
+			&.#{class('button', 'vertical')} {
+				flex-flow: column;
+				>.#{class('button', 'name')},
+				&.#{class('button', 'block')},
+				&.#{class('button', 'block')} > .#{class('button', 'name')},
+				&>.#{class('button', 'dropdown')} >.#{class('button', 'name')} {
+					width: 100%;
+				}
+				>.#{class('button', 'name')} {
+					border-radius: 0;
+					&:last-child:not(:first-child),
+					&:not(:first-child):not(:last-child) {
+						margin: -#{theme('border', 'width')} 0 0;
+					}
+				}
+				&.#{class('button', 'block')} {
+					display: inline-flex;
+				}
+				///
+				/// DROPDOWN FOR VERTICAL BUTTONS
+				///
+				@if features('elements', 'button', 'dropdown') {
+					&>.#{class('button', 'dropdown')}:last-child:not(:first-child),
+					&>.#{class('button', 'dropdown')}:last-child:not(:first-child) > .#{class('button', 'name')},
+					&>.#{class('button', 'dropdown')}:not(:first-child):not(:last-child) > .#{class('button', 'name')} {
+						margin       : -#{theme('border', 'width')} 0 0;
+						border-radius: 0;
+					}
+				}
+				///
+				/// STYLES
+				///
+				@if features('elements', 'button', 'styles') {
+					@each $theme-name, $theme-color in elements('button', 'styles') {
+						&>.#{$theme-name}.#{class('button', 'name')},
+						&>.#{class('button', 'dropdown')} > .#{$theme-name}.#{class('button', 'name')} {
+							border: theme('border', 'width') solid darken($theme-color, 6%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+///
+/// Button Styles
+/// @param {Color} $bg-color
+/// @param {Color} $border-color
+/// @param {Boolean} $outlined
+///
+@mixin button-styles(
+	$bg-color    : theme('color', 'primary'),
+	$text-color  : white,
+	$border-color: null,
+	$outlined    : false
+) {
+	text-shadow: 0 1px 1px darken($bg-color, 6%);
+	border     : theme('border', 'width') theme('border', 'style') $border-color;
+	///
+	/// OUTLINED STYLE
+	///
+	@if $outlined {
+		$textcolor      : if(theme('type') == 'dark', $text-color, $bg-color);
+		background-color: transparent;
+		color           : $textcolor;
+		i {
+			color: $textcolor;
+		}
+		&:hover {
+			background-color: $bg-color !important;
+		}
+		&:active,
+		&:focus {
+			background-color: lighten($bg-color, 7.5%) !important;
+			i {
+				color: $text-color;
+			}
+		}
+	} @else {
+		background-color: $bg-color;
+		color           : $text-color;
+		i {
+			color: $text-color;
+		}
+	}
+	&:hover {
+		background-color: lighten($bg-color, 7.5%);
+		color           : $text-color;
+		i {
+			color: $text-color;
+		}
+	}
+	&:active,
+	&.#{class('button', 'active')} {
+		background-color: lighten($bg-color, 7.5%);
+		color           : $text-color;
+		&:hover {
+			background-color: lighten($bg-color, 12.5%);
+		}
+		&:active,
+		&:focus {
+			background-color: lighten($bg-color, 22.5%);
+		}
+	}
+	@content;
+}
+
+///
+/// Button Sizes
+/// @param {Boolean} $class-name
+///
+@mixin button-sizes($class-name: false) {
+	@each $name, $font-size, $padding in elements('button', 'sizes') {
+		@if $class-name {
+			&.#{$name} > .#{class('button', 'name')},
+			&.#{$name} > .#{class('button', 'dropdown')} > .#{class('button', 'name')} {
+				font-size: $font-size;
+				padding  : $padding;
+			}
+		} @else {
+			&.#{$name} {
+				font-size: $font-size;
+				padding  : $padding;
+			}
+		}
+	}
+}

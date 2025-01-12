@@ -1,0 +1,98 @@
+///
+/// Punica CSS Framework
+/// Components : Process -> Mixins
+///
+
+@use "../../../Core/Global/Getters" as *;
+@use "../../../Core/Global/Options" as *;
+@use "../../../Core/Theme/Getters" as *;
+@use "../../../Core/Theme/Setters" as *;
+
+///
+/// Process Styles
+/// @param {Color} $color
+///
+@mixin process-styles($color) {
+	.#{class('process', 'item')} {
+		&:not(:first-child)::before {
+			background: $color;
+		}
+		a {
+			padding: 10px;
+			&::before {
+				background: $color;
+			}
+		}
+		&.#{class('process', 'active')} {
+			a {
+				color: $color;
+				&::after {
+					color: $color;
+				}
+			}
+			&~.#{class('process', 'item')} {
+				&::before {
+					background: theme('border', 'color');
+				}
+			}
+		}
+	}
+}
+
+///
+/// Vertical Process
+///
+@mixin process-vertical() {
+	display       : flex;
+	padding       : components('process', 'vertical', 'padding');
+	margin        : components('process', 'vertical', 'margin');
+	flex-direction: column;
+	align-items   : flex-start;
+	.#{class('process', 'item')} {
+		justify-content: flex-start;
+		align-items    : center;
+		max-width      : 100%;
+		min-width      : 100%;
+		border-bottom  : set-border();
+		border-right   : set-border();
+		padding-left   : 20px;
+		&:first-child {
+			border-top: set-border();
+		}
+		&:not(:first-child)::before {
+			width : components('process', 'item', 'stickbar', 'width');
+			height: 100%;
+			left  : 0;
+		}
+		a {
+			&::before {
+				width: components('process', 'vertical', 'bar-width');
+			}
+			&:first-child::before {
+				left  : 0;
+				height: 100%;
+			}
+		}
+		&.#{class('process', 'failed')},
+		&.#{class('process', 'active')} {
+			a {
+				font-weight: bold;
+				&::after {
+					top : 8px;
+					left: calc(-3px - #{components('process', 'item', 'indicator', 'font-size')});
+				}
+			}
+		}
+	}
+	&.#{class('process', 'reversed')} {
+		flex-direction: column-reverse;
+		.#{class('process', 'item')} {
+			&:last-child {
+				border-top: set-border();
+			}
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+}

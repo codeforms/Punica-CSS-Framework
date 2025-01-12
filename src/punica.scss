@@ -1,32 +1,33 @@
-/// 
+///
 /// Punica CSS Framework
 /// 
-/// @link http://www.punicacss.com
-/// @link http://github.com/codeforms/Punica-CSS-Framework
-/// 
-/// Released under the MIT license
-/// @link http://opensource.org/licenses/MIT
-///
 
-/// ======================================================
-	$active-theme: default; // _themes/index
-/// ======================================================
+@use "sass:map" as map;
+@use "Core/Theme/Getters" as *;
+@use "Core/Global/Helpers" as *;
+@use "themes" as get;
 
-@use "_themes/_getters" as *;
-@use "_themes/index" as get;
+////////////////////////////////////////////////////////////////
+///-------------------------------------------------------------
+	$active-theme: default;
+///-------------------------------------------------------------
+////////////////////////////////////////////////////////////////
+	$theme-name: if(map.has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
+	$theme     : map.get(get.$themes, $theme-name) !global;
+////////////////////////////////////////////////////////////////
 
-$theme: if(map-has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
-$theme-map: map-get(get.$themes, $theme) !global;
+/*! 
+ * Punica CSS Framework - #{theme('name')}
+ * v3.0.0 Beta
+ * 
+ * @link http://github.com/codeforms/Punica-CSS-Framework
+ * 
+ * Released under the MIT license
+ * @link http://opensource.org/licenses/MIT
+ */
 
-/// ======================================================
-@use "Layout/index" as layout;
-@use "Elements/index" as elements;
-@use "Components/index" as components;
-@use "Utilities/helpers";
-/// ======================================================
-
-@debug "DONE \1F5F8";
-@debug "The #{$theme} theme is compiled successfully.";
-
-$theme-map: null !global;
-/// ======================================================
+@use "Modules/Elements/index" as elements;
+@use "Modules/Components/index" as components;
+@use "Modules/Utilities/helpers";
+@debug "#{theme('name')} is compiled successfully.";
+$theme: null !global;
