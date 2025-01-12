@@ -1,8 +1,7 @@
 ///
 /// Punica CSS Framework
-/// v3.0 Options API
-/// 
 /// Default Options, Variables & Class names
+/// v3.0 Options API
 /// 
 /// Note: You can also override/change the all following 
 /// default settings from your theme map.
@@ -502,7 +501,7 @@ $options: (
 			'font-weight'     : bold,
 			'background-color': #fff,
 			'width'           : 100%,
-			'min-height'      : 80px,
+			'min-height'      : 5rem,
 			'button'          : (
 				'padding': .935rem 1.4rem,
 				'icon'   : (
@@ -579,19 +578,19 @@ $options: (
 			'sizes': (
 				(
 					"mini", // size name (class)
-					45px, // min-height
+					2.813rem, // min-height
 					.875rem, // button font-size
 					.445rem .9rem, // button padding
 			    ),
 			    (
 					"small", // size name (class)
-					65px, // min-height
+					4.063rem, // min-height
 					.945rem, // button font-size
 					.65rem 1.2rem, // button padding
 			    ),
 			    (
 					"large", // size name (class)
-					95px, // min-height
+					5.938rem, // min-height
 					1.08rem, // button font-size
 					.845rem 1.4rem, // button padding
 			    )
@@ -1218,7 +1217,7 @@ $options: (
 			'equal'    : 'equal'
 		),
 		'settings': (
-			'gap': 6px,
+			'gap': .375rem,
 			'columns': (
 				'size'      : 16,
 				'padding'   : .3rem,
