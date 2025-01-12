@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/components/list">
+        <title> List - Punica CSS Framework v3 </title>
+        <meta name="description" content="The List component is a versatile tool for organizing and displaying items in a structured and sequential manner. It supports both ordered and unordered formats and can include form elements or visuals alongside text for enhanced functionality and design. With customizable styles and layouts, the List component adapts seamlessly to various use cases. To apply this component, add the &lt;code&gt;.list&lt;/code&gt; class to an unordered/ordered list or even &lt;code&gt;div&lt;/code&gt; element. And also, use the &lt;code&gt;.item&lt;/code&gt; class for each list items.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica.min.css">
+        <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
+    </head>
+    <body class="overflow-auto">
+        <div class="reset container">
+            <header class="fixed small navbar border-bottom-1">
+    <div class="container reset">
+        <!-- responsive hamburger menu -->
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burger"></label>
+        <!-- /responsive hamburger menu-->
+
+        <section class="brand width-240">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/" class="display-flex align-items-center">
+                Punica CSS <span class="weight-normal ml-5 text-small">v3</span>
+            </a>
+        </section>
+
+        <section class="links">
+            <div class="divided section justify-content-flex-start">
+                <div class="dark full height borderless tab align-items-center">
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">Components</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
+                    <a href="javascript:" class="disabled button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">
+                        API Docs
+                    </a>
+                </div>
+            </div>
+            <div class="section justify-content-flex-end flex-initial px-50">
+                <div class="buttons">
+                    <div class="dropdown bottom right">
+                        <a class="button toggle" tabindex="0">
+                            Github <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                        </a>
+                        <ul class="small menu">
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">cabin</i> Github Repo
+                                </a>    
+                            </li>   
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">code</i> Changelog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+            <div class="main-container display-flex" style="margin-top: 65px;">
+                                <div class="sidebar display-flex border-right-1 width-240 shrink-0 position-fixed left-0" style="height: calc(-65px + 100vh); padding-bottom: calc(-65px + 100vh); top: 65px;">
+                    <div class="position-sticky top-0 left-0 height-100 border-bottom-1 border-x-0 border-top-0 border-grey weight-normal border-solid mb-10 pt-0 full width display-block position-relative">
+    <div class="leading-1 display-flex align-items-center full height width border-left-10 border-dark">
+        <div class="full width px-40">
+            <div class="h5 weight-normal">Components</div>
+            <small class="color-grey-darken-25 letter-widest">List</small>
+        </div>
+    </div>
+    <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
+                <li class="item" id="alert">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert#alert" class="py-0 ">
+                <span class="color-text-lighten-20">Alert</span> 
+            </a>
+        </li>
+                <li class="item" id="badge">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/badge#badge" class="py-0 ">
+                <span class="color-text-lighten-20">Badge</span> 
+            </a>
+        </li>
+                <li class="item" id="breadcrumb">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/breadcrumb#breadcrumb" class="py-0 ">
+                <span class="color-text-lighten-20">Breadcrumb</span> 
+            </a>
+        </li>
+                <li class="item" id="caption">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/caption#caption" class="py-0 ">
+                <span class="color-text-lighten-20">Caption</span> 
+            </a>
+        </li>
+                <li class="item" id="card">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/card#card" class="py-0 ">
+                <span class="color-text-lighten-20">Card</span> 
+            </a>
+        </li>
+                <li class="item" id="label">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/label#label" class="py-0 ">
+                <span class="color-text-lighten-20">Label</span> 
+            </a>
+        </li>
+                <li class="item" id="list">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/list#list" class="py-0 active border-left-4 border-dark transparent weight-bold">
+                <span class="color-text-lighten-20">List</span> 
+            </a>
+        </li>
+                <li class="item" id="menu">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/menu#menu" class="py-0 ">
+                <span class="color-text-lighten-20">Menu</span> 
+            </a>
+        </li>
+                <li class="item" id="navbar">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/navbar#navbar" class="py-0 ">
+                <span class="color-text-lighten-20">Navbar</span> 
+            </a>
+        </li>
+                <li class="item" id="panel">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/panel#panel" class="py-0 ">
+                <span class="color-text-lighten-20">Panel</span> 
+            </a>
+        </li>
+                <li class="item" id="process">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/process#process" class="py-0 ">
+                <span class="color-text-lighten-20">Process</span> 
+            </a>
+        </li>
+                <li class="item" id="stats">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/stats#stats" class="py-0 ">
+                <span class="color-text-lighten-20">Stats</span> 
+            </a>
+        </li>
+                <li class="item" id="tabnav">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tabnav#tabnav" class="py-0 ">
+                <span class="color-text-lighten-20">Tabnav</span> 
+            </a>
+        </li>
+                <li class="item" id="timeline">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/timeline#timeline" class="py-0 ">
+                <span class="color-text-lighten-20">Timeline</span> 
+            </a>
+        </li>
+                <li class="item" id="tooltip">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tooltip#tooltip" class="py-0 ">
+                <span class="color-text-lighten-20">Tooltip</span> 
+            </a>
+        </li>
+            </div>
+</div>
+                </div>
+                                <main class="content-container display-flex flex-direction-column flex-1  ml-240 ">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">
+                                	<main class="row position-relative">
+    <div class="col-16">
+        <div class="row py-20 height-32 radius-8 align-items-center">
+            <div class="col-16 px-20 opacity-1">
+                <div class="display-flex align-items-center border-bottom-1">
+                    <h2 class="display-flex mb-10">
+                        List
+                    </h2>
+                    <div class="spacer"></div>
+                    <div>
+                        <div class="mini buttons">
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Modules/Components/List/List.scss" class="button" target="_blank">Source</a>
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/options.scss" class="button" target="_blank">API</a>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="mt-20">The List component is a versatile tool for organizing and displaying items in a structured and sequential manner. It supports both ordered and unordered formats and can include form elements or visuals alongside text for enhanced functionality and design. With customizable styles and layouts, the List component adapts seamlessly to various use cases. To apply this component, add the <code>.list</code> class to an unordered/ordered list or even <code>div</code> element. And also, use the <code>.item</code> class for each list items.</div>
+                            </div>
+        </div>
+    </div>
+</main>     <div class="container">   
+	        <div class="pure panel reset">
+        <div class="content">
+            <div class="row">
+                <div class="col-xs-16 col-lg-5">
+                    <div class="h5">
+                        Unordered List
+                    </div>
+                    <ul class="list">
+                        <li class="active item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        <li class="item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        <li class="item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-16 col-lg-5">
+                    <div class="h5">
+                        Ordered List
+                    </div>
+                    <ol class="list">
+                        <li class="item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        <li class="active item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        <li class="item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-16 col-lg-5">
+                    <div class="h5">
+                        List Title
+                    </div>
+                    <div class="list">
+                        <div class="item">
+                            Lorem ipsum dolor sit amet
+                        </div>
+                        <div class="item">
+                            Lorem ipsum dolor sit amet
+                        </div>
+                        <div class="active item">
+                            Lorem ipsum dolor sit amet
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+        <ul class="list">
+            <li class="active item">..</li>
+            <li class="item">..</li>
+            <li class="item">..</li>
+        </ul>
+        </script>
+        </div>
+        <div class="header mt-50">
+            <div class="title">Striped, Divided, and Hovered List</div>
+        </div>
+        <div class="content">
+            <p>
+                You can add the zebra-striping to a list by adding the <code>.striped</code> class and add the
+                <code>.hovered</code> class to display a hover state on list items.
+            </p>
+            <div class="equal row mt-50">
+                <div class="col-xs-16 col-lg-5">
+                    <div class="striped list">
+                        <div class="h6">
+                            Striped List
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/plain" class="language-markup mt-50">
+                <div class="striped list">
+                    ...
+                </div>
+                </script>
+                </div>
+                <div class="col-xs-16 col-lg-5">
+                    <div class="hovered list">
+                        <div class="h6">
+                            Hovered List
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/plain" class="language-markup mt-50">
+                    <div class="hovered list">
+                        ...
+                    </div>
+                    </script>
+                </div>
+                <div class="col-xs-16 col-lg-5">
+                    <div class="divided list">
+                        <div class="h6">
+                            Divided List
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="body">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="text/plain" class="language-markup mt-50">
+                <div class="divided list">
+                    ...
+                </div>
+                </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="header mt-50">
+            <div class="title">List with inputs</div>
+        </div>
+        <div class="content">
+            <p>
+                Lists can contain variety of form inputs.
+            </p>
+            <div class="row">
+                <div class="col-16">
+                    <div class="divided list">
+                        <div class="item">
+                            <i class="material-symbols-outlined cursor-move">reorder</i>
+                            <div class="body">
+                                <div class="form reset small">
+                                    <div class="item reset">
+                                        <div class="group">
+                                            <input type="text" placeholder="key...">
+                                            <input type="text" placeholder="value...">
+                                            <a class="button error">
+                                                <i class="material-symbols-outlined">clear</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="material-symbols-outlined cursor-move">reorder</i>
+                            <div class="body">
+                                <div class="form reset small">
+                                    <div class="item reset">
+                                        <div class="group">
+                                            <input type="text" placeholder="key...">
+                                            <input type="text" placeholder="value...">
+                                            <a class="button error">
+                                                <i class="material-symbols-outlined">clear</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="material-symbols-outlined cursor-move">reorder</i>
+                            <div class="body">
+                                <div class="form reset small">
+                                    <div class="item reset">
+                                        <div class="group">
+                                            <input type="text" placeholder="key...">
+                                            <input type="text" placeholder="value...">
+                                            <a class="button error">
+                                                <i class="material-symbols-outlined">clear</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header mt-50">
+            <div class="title">Media List</div>
+        </div>
+        <div class="content">
+            <p>
+                Also, Lists can contain variety of media elements and actions buttons.
+            </p>
+            <div class="row">
+                <div class="col-xs-16 col-lg-5">
+                    <div class="divided list">
+                        <div class="item">
+                            <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg" class="rounded" width="80">
+                            <div class="body">
+                                <a href="javascript:" class="title">Title</a>
+                                <span class="subtitle">Subtitle</span>
+                                Lorem ipsum dolor sit amet.
+                            </div>
+                            <div class="actions">
+                                <div class="tiny buttons">
+                                    <div class="dropdown bottom right">
+                                        <a tabindex="0" class="button toggle">
+                                            <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                                        </a>
+                                        <ul class="small menu">
+                                            <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                            <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                            <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg" class="rounded" width="80">
+                            <div class="body">
+                                <a href="javascript:" class="title">Title</a>
+                                <span class="subtitle">Subtitle</span>
+                                Lorem ipsum dolor sit amet.
+                            </div>
+                            <div class="actions">
+                                <div class="tiny buttons">
+                                    <div class="dropdown bottom right">
+                                        <a tabindex="0" class="button toggle">
+                                            <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                                        </a>
+                                        <ul class="small menu">
+                                            <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                            <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                            <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg" class="rounded" width="80">
+                            <div class="body">
+                                <a href="javascript:" class="title">Title</a>
+                                <span class="subtitle">Subtitle</span>
+                                Lorem ipsum dolor sit amet.
+                            </div>
+                            <div class="actions">
+                                <div class="tiny buttons">
+                                    <div class="dropdown bottom right">
+                                        <a tabindex="0" class="button toggle">
+                                            <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                                        </a>
+                                        <ul class="small menu">
+                                            <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                            <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                            <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-16 col-lg-8 offset-lg-8">
+                    <script type="text/plain" class="language-markup">
+                <div class="divided list">
+                    <div class="item">
+                        <img src="" class="rounded" width="80">
+                        <div class="body">
+                            <a href="" class="title"></a>
+                            <span class="subtitle"></span>
+                            ...
+                        </div>
+                        <div class="actions">
+                            ...
+                        </div>
+                    </div>
+                </script>
+                </div>
+            </div>
+        </div>
+        <div class="content overflow-auto">
+            <table class="table text-small">
+                <caption>Props</caption>
+                <thead>
+                    <tr>
+                        <th>Default Class Name</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>list</code></td>
+                        <td><code>.list</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>item</code></td>
+                        <td><code>.list > .item</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>active</code></td>
+                        <td><code>.list > .active.item</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>body</code></td>
+                        <td><code>.list > .item > .body</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code></td>
+                        <td><code>.list > .item > .body > .title</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>subtitle</code></td>
+                        <td><code>.list > .item > .body > .body</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>actions</code></td>
+                        <td><code>.list > .item > .actions</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>States</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>divided</code></td>
+                        <td><code>.divided.list</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>hovered</code></td>
+                        <td><code>.hovered.list</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>striped</code></td>
+                        <td><code>.striped.list</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://codeforms.github.io/Punica-CSS-Framework/assets/build/js/prism.js"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 1024px) {
+                .sidebar {
+                    position: relative !important;
+                    top: auto !important;
+                    width: 100% !important;
+                    z-index: 0;
+                }
+                .main-container {
+                    flex-direction: column !important;                
+                }
+                .content-container,
+                .main-container {
+                    margin: 0 !important;
+                }
+                .navbar .section .dark.tab {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                }
+                .navbar .section .dark.tab > .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </body>
+</html>

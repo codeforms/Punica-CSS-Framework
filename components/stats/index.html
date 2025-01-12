@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/components/stats">
+        <title> Stats - Punica CSS Framework v3 </title>
+        <meta name="description" content="The Stats component is designed to display key information in a visually engaging format. It includes a title, subtitle, and value sections, and supports the use of icons or images for enhanced presentation. Ideal for showcasing statistics, metrics, or important data, the Stats component can be customized to fit various design needs. Add the &lt;code&gt;.stats&lt;/code&gt; class to a container to make a status/statistic bar.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica.min.css">
+        <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
+    </head>
+    <body class="overflow-auto">
+        <div class="reset container">
+            <header class="fixed small navbar border-bottom-1">
+    <div class="container reset">
+        <!-- responsive hamburger menu -->
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burger"></label>
+        <!-- /responsive hamburger menu-->
+
+        <section class="brand width-240">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/" class="display-flex align-items-center">
+                Punica CSS <span class="weight-normal ml-5 text-small">v3</span>
+            </a>
+        </section>
+
+        <section class="links">
+            <div class="divided section justify-content-flex-start">
+                <div class="dark full height borderless tab align-items-center">
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">Components</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
+                    <a href="javascript:" class="disabled button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">
+                        API Docs
+                    </a>
+                </div>
+            </div>
+            <div class="section justify-content-flex-end flex-initial px-50">
+                <div class="buttons">
+                    <div class="dropdown bottom right">
+                        <a class="button toggle" tabindex="0">
+                            Github <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                        </a>
+                        <ul class="small menu">
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">cabin</i> Github Repo
+                                </a>    
+                            </li>   
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">code</i> Changelog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+            <div class="main-container display-flex" style="margin-top: 65px;">
+                                <div class="sidebar display-flex border-right-1 width-240 shrink-0 position-fixed left-0" style="height: calc(-65px + 100vh); padding-bottom: calc(-65px + 100vh); top: 65px;">
+                    <div class="position-sticky top-0 left-0 height-100 border-bottom-1 border-x-0 border-top-0 border-grey weight-normal border-solid mb-10 pt-0 full width display-block position-relative">
+    <div class="leading-1 display-flex align-items-center full height width border-left-10 border-dark">
+        <div class="full width px-40">
+            <div class="h5 weight-normal">Components</div>
+            <small class="color-grey-darken-25 letter-widest">Stats</small>
+        </div>
+    </div>
+    <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
+                <li class="item" id="alert">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert#alert" class="py-0 ">
+                <span class="color-text-lighten-20">Alert</span> 
+            </a>
+        </li>
+                <li class="item" id="badge">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/badge#badge" class="py-0 ">
+                <span class="color-text-lighten-20">Badge</span> 
+            </a>
+        </li>
+                <li class="item" id="breadcrumb">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/breadcrumb#breadcrumb" class="py-0 ">
+                <span class="color-text-lighten-20">Breadcrumb</span> 
+            </a>
+        </li>
+                <li class="item" id="caption">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/caption#caption" class="py-0 ">
+                <span class="color-text-lighten-20">Caption</span> 
+            </a>
+        </li>
+                <li class="item" id="card">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/card#card" class="py-0 ">
+                <span class="color-text-lighten-20">Card</span> 
+            </a>
+        </li>
+                <li class="item" id="label">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/label#label" class="py-0 ">
+                <span class="color-text-lighten-20">Label</span> 
+            </a>
+        </li>
+                <li class="item" id="list">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/list#list" class="py-0 ">
+                <span class="color-text-lighten-20">List</span> 
+            </a>
+        </li>
+                <li class="item" id="menu">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/menu#menu" class="py-0 ">
+                <span class="color-text-lighten-20">Menu</span> 
+            </a>
+        </li>
+                <li class="item" id="navbar">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/navbar#navbar" class="py-0 ">
+                <span class="color-text-lighten-20">Navbar</span> 
+            </a>
+        </li>
+                <li class="item" id="panel">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/panel#panel" class="py-0 ">
+                <span class="color-text-lighten-20">Panel</span> 
+            </a>
+        </li>
+                <li class="item" id="process">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/process#process" class="py-0 ">
+                <span class="color-text-lighten-20">Process</span> 
+            </a>
+        </li>
+                <li class="item" id="stats">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/stats#stats" class="py-0 active border-left-4 border-dark transparent weight-bold">
+                <span class="color-text-lighten-20">Stats</span> 
+            </a>
+        </li>
+                <li class="item" id="tabnav">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tabnav#tabnav" class="py-0 ">
+                <span class="color-text-lighten-20">Tabnav</span> 
+            </a>
+        </li>
+                <li class="item" id="timeline">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/timeline#timeline" class="py-0 ">
+                <span class="color-text-lighten-20">Timeline</span> 
+            </a>
+        </li>
+                <li class="item" id="tooltip">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tooltip#tooltip" class="py-0 ">
+                <span class="color-text-lighten-20">Tooltip</span> 
+            </a>
+        </li>
+            </div>
+</div>
+                </div>
+                                <main class="content-container display-flex flex-direction-column flex-1  ml-240 ">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">
+                                	<main class="row position-relative">
+    <div class="col-16">
+        <div class="row py-20 height-32 radius-8 align-items-center">
+            <div class="col-16 px-20 opacity-1">
+                <div class="display-flex align-items-center border-bottom-1">
+                    <h2 class="display-flex mb-10">
+                        Stats
+                    </h2>
+                    <div class="spacer"></div>
+                    <div>
+                        <div class="mini buttons">
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Modules/Components/Stats/Stats.scss" class="button" target="_blank">Source</a>
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/options.scss" class="button" target="_blank">API</a>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="mt-20">The Stats component is designed to display key information in a visually engaging format. It includes a title, subtitle, and value sections, and supports the use of icons or images for enhanced presentation. Ideal for showcasing statistics, metrics, or important data, the Stats component can be customized to fit various design needs. Add the <code>.stats</code> class to a container to make a status/statistic bar.</div>
+                            </div>
+        </div>
+    </div>
+</main>     <div class="container">   
+	        <div class="panel pure reset">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-16 col-xs-16 col-lg-5">
+                    <div class="stats">
+                        <div class="title">Title</div>
+                        <div class="value">Value</div>
+                        <div class="subtitle">This is a subtitle.</div>
+                    </div>
+                </div>
+                <div class="col-sm-16 col-xs-16 col-lg-10 offset-lg-7">
+                    <div class="content">
+                        <script type="text/plain" class="language-markup">
+                    <div class="stats">
+			            <div class="title">Title</div>
+			            <div class="value">Value</div>
+			            <div class="subtitle">This is a subtitle.</div>
+			        </div>
+                    </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mt-50">
+            <div class="title">
+                Styles
+            </div>
+        </div>
+        <div class="content">
+            <a href="javascript:" class="primary stats">
+                <div class="title">Primary style</div>
+                <div class="value">46,6K </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </a>
+            <div class="success stats">
+                <div class="title">Success style</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">redeem</i> 83K
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+            <div class="warning stats">
+                <div class="title">Warning style</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">surfing</i> 7K
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+            <div class="error stats">
+                <div class="title">Error style</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">beenhere</i> 3.765
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+            <div class="dark stats">
+                <div class="title">Dark style</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">ads_click</i> 549
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+            <div class="stats">
+                <div class="title">Stats with Photo</div>
+                <div class="value">
+                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg" class="avatar width-30 height-30"> 15K
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <div class="primary stats">
+	            <div class="title">Title</div>
+	            <div class="value">Value</div>
+	            <div class="subtitle">This is a subtitle.</div>
+	        </div>
+        </script>
+        </div>
+        <div class="header mt-50">
+            <div class="title">
+                Using Helpers
+            </div>
+        </div>
+        <div class="content">
+            <div class="borderless stats">
+                <div class="title">Borderless Stats</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">shopping_cart</i> 16
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+            <div class="primary stats align-items-center">
+                <div class="title">Centered Stats</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">view_in_ar</i> 9k
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+            <div class="shadowed stats">
+                <div class="title">Shadowed Stats</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">pets</i> 234
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+            <div class="disabled stats">
+                <div class="title">Disabled Stats</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">flutter_dash</i> 234
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+
+            <div class="primary stats full width mt-30">
+                <div class="title">Full width</div>
+                <div class="value">
+                    <i class="material-symbols-outlined">webhook</i> 9k
+                </div>
+                <div class="subtitle">This is a subtitle.</div>
+            </div>
+
+            <div class="row mt-30 equal">
+                <div class="col-lg-8 col-sm-16 col-xs-16">
+                    <div class="success stats full width border-dotted border-2">
+                        <div class="title">Dotted Border</div>
+                        <div class="value">
+                            <i class="material-symbols-outlined">coronavirus</i> 2px
+                        </div>
+                        <div class="subtitle">This is a subtitle.</div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-sm-16 col-xs-16">
+                    <div class="warning stats full width border-dashed border-2">
+                        <div class="title">Dashed Border</div>
+                        <div class="value">
+                            <i class="material-symbols-outlined">hive</i> 2px
+                        </div>
+                        <div class="subtitle">This is a subtitle.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content overflow-auto">
+            <table class="table text-small">
+                <caption>Props</caption>
+                <thead>
+                    <tr>
+                        <th>Default Class Name</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>stats</code></td>
+                        <td><code>.stats</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code></td>
+                        <td><code>.stats &gt; .title</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>value</code></td>
+                        <td><code>.stats &gt; .value</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>subtitle</code></td>
+                        <td><code>.stats &gt; .subtitle</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Styles</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>primary</code></td>
+                        <td><code>.primary.stats</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>success</code></td>
+                        <td><code>.success.stats</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>warning</code></td>
+                        <td><code>.warning.stats</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>error</code></td>
+                        <td><code>.error.stats</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>.dark.stats</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://codeforms.github.io/Punica-CSS-Framework/assets/build/js/prism.js"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 1024px) {
+                .sidebar {
+                    position: relative !important;
+                    top: auto !important;
+                    width: 100% !important;
+                    z-index: 0;
+                }
+                .main-container {
+                    flex-direction: column !important;                
+                }
+                .content-container,
+                .main-container {
+                    margin: 0 !important;
+                }
+                .navbar .section .dark.tab {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                }
+                .navbar .section .dark.tab > .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </body>
+</html>

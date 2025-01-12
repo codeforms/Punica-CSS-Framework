@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/components/panel">
+        <title> Panel - Punica CSS Framework v3 </title>
+        <meta name="description" content="The Panel component is a versatile container used to group and organize content into distinct sections. It includes a header, content area, and footer, and can be customized with elements like buttons, links, or forms. Panels are ideal for separating information or actions within a layout, helping to provide clarity and structure. To apply this component, just add the &lt;code&gt;.panel&lt;/code&gt; class to a container element.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica.min.css">
+        <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
+    </head>
+    <body class="overflow-auto">
+        <div class="reset container">
+            <header class="fixed small navbar border-bottom-1">
+    <div class="container reset">
+        <!-- responsive hamburger menu -->
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burger"></label>
+        <!-- /responsive hamburger menu-->
+
+        <section class="brand width-240">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/" class="display-flex align-items-center">
+                Punica CSS <span class="weight-normal ml-5 text-small">v3</span>
+            </a>
+        </section>
+
+        <section class="links">
+            <div class="divided section justify-content-flex-start">
+                <div class="dark full height borderless tab align-items-center">
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">Components</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
+                    <a href="javascript:" class="disabled button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">
+                        API Docs
+                    </a>
+                </div>
+            </div>
+            <div class="section justify-content-flex-end flex-initial px-50">
+                <div class="buttons">
+                    <div class="dropdown bottom right">
+                        <a class="button toggle" tabindex="0">
+                            Github <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                        </a>
+                        <ul class="small menu">
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">cabin</i> Github Repo
+                                </a>    
+                            </li>   
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">code</i> Changelog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+            <div class="main-container display-flex" style="margin-top: 65px;">
+                                <div class="sidebar display-flex border-right-1 width-240 shrink-0 position-fixed left-0" style="height: calc(-65px + 100vh); padding-bottom: calc(-65px + 100vh); top: 65px;">
+                    <div class="position-sticky top-0 left-0 height-100 border-bottom-1 border-x-0 border-top-0 border-grey weight-normal border-solid mb-10 pt-0 full width display-block position-relative">
+    <div class="leading-1 display-flex align-items-center full height width border-left-10 border-dark">
+        <div class="full width px-40">
+            <div class="h5 weight-normal">Components</div>
+            <small class="color-grey-darken-25 letter-widest">Panel</small>
+        </div>
+    </div>
+    <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
+                <li class="item" id="alert">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert#alert" class="py-0 ">
+                <span class="color-text-lighten-20">Alert</span> 
+            </a>
+        </li>
+                <li class="item" id="badge">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/badge#badge" class="py-0 ">
+                <span class="color-text-lighten-20">Badge</span> 
+            </a>
+        </li>
+                <li class="item" id="breadcrumb">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/breadcrumb#breadcrumb" class="py-0 ">
+                <span class="color-text-lighten-20">Breadcrumb</span> 
+            </a>
+        </li>
+                <li class="item" id="caption">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/caption#caption" class="py-0 ">
+                <span class="color-text-lighten-20">Caption</span> 
+            </a>
+        </li>
+                <li class="item" id="card">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/card#card" class="py-0 ">
+                <span class="color-text-lighten-20">Card</span> 
+            </a>
+        </li>
+                <li class="item" id="label">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/label#label" class="py-0 ">
+                <span class="color-text-lighten-20">Label</span> 
+            </a>
+        </li>
+                <li class="item" id="list">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/list#list" class="py-0 ">
+                <span class="color-text-lighten-20">List</span> 
+            </a>
+        </li>
+                <li class="item" id="menu">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/menu#menu" class="py-0 ">
+                <span class="color-text-lighten-20">Menu</span> 
+            </a>
+        </li>
+                <li class="item" id="navbar">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/navbar#navbar" class="py-0 ">
+                <span class="color-text-lighten-20">Navbar</span> 
+            </a>
+        </li>
+                <li class="item" id="panel">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/panel#panel" class="py-0 active border-left-4 border-dark transparent weight-bold">
+                <span class="color-text-lighten-20">Panel</span> 
+            </a>
+        </li>
+                <li class="item" id="process">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/process#process" class="py-0 ">
+                <span class="color-text-lighten-20">Process</span> 
+            </a>
+        </li>
+                <li class="item" id="stats">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/stats#stats" class="py-0 ">
+                <span class="color-text-lighten-20">Stats</span> 
+            </a>
+        </li>
+                <li class="item" id="tabnav">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tabnav#tabnav" class="py-0 ">
+                <span class="color-text-lighten-20">Tabnav</span> 
+            </a>
+        </li>
+                <li class="item" id="timeline">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/timeline#timeline" class="py-0 ">
+                <span class="color-text-lighten-20">Timeline</span> 
+            </a>
+        </li>
+                <li class="item" id="tooltip">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tooltip#tooltip" class="py-0 ">
+                <span class="color-text-lighten-20">Tooltip</span> 
+            </a>
+        </li>
+            </div>
+</div>
+                </div>
+                                <main class="content-container display-flex flex-direction-column flex-1  ml-240 ">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">
+                                	<main class="row position-relative">
+    <div class="col-16">
+        <div class="row py-20 height-32 radius-8 align-items-center">
+            <div class="col-16 px-20 opacity-1">
+                <div class="display-flex align-items-center border-bottom-1">
+                    <h2 class="display-flex mb-10">
+                        Panel
+                    </h2>
+                    <div class="spacer"></div>
+                    <div>
+                        <div class="mini buttons">
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Modules/Components/Panel/Panel.scss" class="button" target="_blank">Source</a>
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/options.scss" class="button" target="_blank">API</a>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="mt-20">The Panel component is a versatile container used to group and organize content into distinct sections. It includes a header, content area, and footer, and can be customized with elements like buttons, links, or forms. Panels are ideal for separating information or actions within a layout, helping to provide clarity and structure. To apply this component, just add the <code>.panel</code> class to a container element.</div>
+                            </div>
+        </div>
+    </div>
+</main>     <div class="container">   
+	        <div class="pure panel reset">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-16 col-xs-16 col-lg-6">
+                    <div class="panel">
+                        <div class="header">
+                            <div class="title">Title</div>
+                            <div class="actions">Actions</div>
+                        </div>
+                        <div class="content">
+                            <div class="headline">
+                                Headline
+                            </div>
+                            <p>Content</p>
+                        </div>
+                        <div class="bottom">
+                            Bottom
+                            <div class="actions">
+                                Actions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-16 col-xs-16 col-lg-8 offset-lg-8">
+                    <script type="text/plain" class="language-markup">
+                <div class="panel">
+                    <div class="header">
+                        <div class="title">Title</div>
+                        <div class="actions">Actions</div>
+                    </div>
+                    <div class="content">
+                        <div class="headline">Headline</div>
+                        <p>Content</p>
+                    </div>
+                    <div class="bottom">
+                        Bottom
+                        <div class="actions">Actions</div>
+                    </div>
+                </div>
+                </script>
+                </div>
+            </div>
+        </div>
+        <div class="header mt-50">
+            <div class="title">Sizes of Panel</div>
+        </div>
+        <div class="content">
+            <p>Add the <code>.mini</code> or <code>.small</code> class to a panel to make it smaller or larger.</p>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-16 col-xs-16 col-lg-7">
+                    <div class="mini panel">
+                        <div class="header dashed">
+                            <div class="title">Mini Panel</div>
+                            <div class="actions">Actions</div>
+                        </div>
+                        <div class="content">
+                            <div class="headline">
+                                Headline
+                            </div>
+                            <p>Content</p>
+                        </div>
+                        <div class="bottom">
+                            Bottom
+                            <div class="actions">Actions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-16 col-xs-16 col-lg-7 offset-lg-9">
+                    <div class="small panel">
+                        <div class="header dashed">
+                            <div class="title">Small Panel</div>
+                            <div class="actions">Actions</div>
+                        </div>
+                        <div class="content">
+                            <div class="headline">
+                                Headline
+                            </div>
+                            <p>Content</p>
+                        </div>
+                        <div class="bottom">
+                            Bottom
+                            <div class="actions">Actions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mt-50">
+            <div class="title">Pure Panel</div>
+        </div>
+        <div class="content">
+            <p>
+                To remove border and shadow from the panel, just add the <code>.pure</code> helper class to
+                <code>.panel</code> container element.
+            </p>
+            <div class="row mt-30">
+                <div class="col-sm-16 col-xs-16 col-lg-7">
+                    <div class="panel pure">
+                        <div class="header">
+                            <div class="title">Panel Title</div>
+                            <div class="actions">
+                                <div class="shadowless tiny buttons">
+                                    <a href="javascript:" class="button">
+                                        <i class="material-symbols-outlined">launch</i>
+                                    </a>
+                                    <a href="javascript:" class="button">
+                                        <i class="material-symbols-outlined">person</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="headline">
+                                Lorem ipsum dolor sit amet, eu duo inermis vocibus similique, vix ei facer mediocrem.
+                            </div>
+                            <p>
+                                Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal <code>integre</code> est cu, sea
+                                tacimates
+                                percipitur.
+                            </p>
+                        </div>
+                        <div class="bottom">
+                            <div class="button small dark">Button</div>
+                            <div class="actions">
+                                <div class="shadowless mini buttons">
+                                    <a href="javascript:" class="button primary">
+                                        <i class="material-symbols-outlined">launch</i>
+                                    </a>
+                                    <div class="dropdown top right">
+                                        <a class="button toggle" tabindex="0">
+                                            <i class="material-symbols-outlined">keyboard_arrow_up</i>
+                                        </a>
+                                        <ul class="small menu">
+                                            <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                            <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                            <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-16 col-xs-16 col-lg-7 offset-lg-9">
+                    <div class="panel pure">
+                        <div class="header dashed">
+                            <div class="title">Panel Title</div>
+                        </div>
+                        <div class="content">
+                            <div class="headline">
+                                Lorem ipsum dolor sit amet, eu duo inermis vocibus similique, vix ei facer mediocrem.
+                            </div>
+                            <p>
+                                Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal <code>integre</code> est cu, sea
+                                tacimates
+                                percipitur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mt-50">
+            <div class="title">Panel with Media Elements</div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-7 col-sm-16 col-xs-16">
+                    <div class="panel">
+                        <div class="header">
+                            <div class="title">Panel with Media</div>
+                        </div>
+                        <div class="content">
+                            <div class="media">
+                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg" class="rounded">
+                            </div>
+                            <p>
+                                Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal <code>integre</code> est cu, sea
+                                tacimates
+                                percipitur adversarium ei,
+                                justo volumus assentior cu nec. Ut facilisi consequat duo, te ius eleifend sadipscing
+                                scriptorem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-16 col-xs-16 offset-lg-9">
+                    <div class="panel pure">
+                        <div class="header">
+                            <div class="title">Pure Panel with Photos</div>
+                        </div>
+                        <div class="content">
+                            <div class="three media">
+                                <div>
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                                </div>
+                                <div>
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg">
+                                </div>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg">
+                                </a>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg">
+                                </a>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg">
+                                </a>
+                            </div>
+                            <p>
+                                Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal <code>integre</code> est cu, sea
+                                tacimates
+                                percipitur adversarium ei,
+                                justo volumus assentior cu nec. Ut facilisi consequat duo, te ius eleifend sadipscing
+                                scriptorem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content overflow-auto">
+            <table class="table text-small">
+                <caption>Props</caption>
+                <thead>
+                    <tr>
+                        <th>Default Class Name</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>panel</code></td>
+                        <td><code>.panel</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>header</code></td>
+                        <td><code>.panel > .header</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code></td>
+                        <td><code>.panel > .header > .title</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>content</code></td>
+                        <td><code>.panel > .content</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>headline</code></td>
+                        <td><code>.panel > .content > .headline</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>media</code></td>
+                        <td><code>.panel > .content > .media</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>bottom</code></td>
+                        <td><code>.panel > .bottom</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>actions</code></td>
+                        <td><code>.panel > .bottom > .actions</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Sizes</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>mini</code></td>
+                        <td><code>.mini.panel</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>small</code></td>
+                        <td><code>.small.panel</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://codeforms.github.io/Punica-CSS-Framework/assets/build/js/prism.js"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 1024px) {
+                .sidebar {
+                    position: relative !important;
+                    top: auto !important;
+                    width: 100% !important;
+                    z-index: 0;
+                }
+                .main-container {
+                    flex-direction: column !important;                
+                }
+                .content-container,
+                .main-container {
+                    margin: 0 !important;
+                }
+                .navbar .section .dark.tab {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                }
+                .navbar .section .dark.tab > .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </body>
+</html>

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/elements/button">
+        <title> Button - Punica CSS Framework v3 </title>
+        <meta name="description" content="The Button component in Punica CSS Framework is a versatile element designed for triggering actions or navigating users. It supports various styles, sizes, and states, allowing seamless customization to suit different use cases. To apply this component, add the &lt;code&gt;.button&lt;/code&gt; class to an &lt;code&gt;a&lt;/code&gt; or &lt;code&gt;button&lt;/code&gt; element.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica.min.css">
+        <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
+    </head>
+    <body class="overflow-auto">
+        <div class="reset container">
+            <header class="fixed small navbar border-bottom-1">
+    <div class="container reset">
+        <!-- responsive hamburger menu -->
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burger"></label>
+        <!-- /responsive hamburger menu-->
+
+        <section class="brand width-240">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/" class="display-flex align-items-center">
+                Punica CSS <span class="weight-normal ml-5 text-small">v3</span>
+            </a>
+        </section>
+
+        <section class="links">
+            <div class="divided section justify-content-flex-start">
+                <div class="dark full height borderless tab align-items-center">
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Components</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
+                    <a href="javascript:" class="disabled button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">
+                        API Docs
+                    </a>
+                </div>
+            </div>
+            <div class="section justify-content-flex-end flex-initial px-50">
+                <div class="buttons">
+                    <div class="dropdown bottom right">
+                        <a class="button toggle" tabindex="0">
+                            Github <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                        </a>
+                        <ul class="small menu">
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">cabin</i> Github Repo
+                                </a>    
+                            </li>   
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">code</i> Changelog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+            <div class="main-container display-flex" style="margin-top: 65px;">
+                                <div class="sidebar display-flex border-right-1 width-240 shrink-0 position-fixed left-0" style="height: calc(-65px + 100vh); padding-bottom: calc(-65px + 100vh); top: 65px;">
+                    <div class="position-sticky top-0 left-0 height-100 border-bottom-1 border-x-0 border-top-0 border-grey weight-normal border-solid mb-10 pt-0 full width display-block position-relative">
+    <div class="leading-1 display-flex align-items-center full height width border-left-10 border-dark">
+        <div class="full width px-40">
+            <div class="h5 weight-normal">Elements</div>
+            <small class="color-grey-darken-25 letter-widest">Button</small>
+        </div>
+    </div>
+    <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
+                <li class="item" id="button">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button#button" class="py-0 active border-left-4 border-dark transparent weight-bold">
+                <span class="color-text-lighten-20">Button</span> 
+            </a>
+        </li>
+                <li class="item" id="form">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/form#form" class="py-0 ">
+                <span class="color-text-lighten-20">Form</span> 
+            </a>
+        </li>
+                <li class="item" id="grid">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/grid#grid" class="py-0 ">
+                <span class="color-text-lighten-20">Grid</span> 
+            </a>
+        </li>
+                <li class="item" id="table">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/table#table" class="py-0 ">
+                <span class="color-text-lighten-20">Table</span> 
+            </a>
+        </li>
+            </div>
+</div>
+                </div>
+                                <main class="content-container display-flex flex-direction-column flex-1  ml-240 ">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">
+                                    <main class="row position-relative">
+    <div class="col-16">
+        <div class="row py-20 height-32 radius-8 align-items-center">
+            <div class="col-16 px-20 opacity-1">
+                <div class="display-flex align-items-center border-bottom-1">
+                    <h2 class="display-flex mb-10">
+                        Button
+                    </h2>
+                    <div class="spacer"></div>
+                    <div>
+                        <div class="mini buttons">
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Modules/Elements/Button/Button.scss" class="button" target="_blank">Source</a>
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/options.scss" class="button" target="_blank">API</a>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="mt-20">The Button component in Punica CSS Framework is a versatile element designed for triggering actions or navigating users. It supports various styles, sizes, and states, allowing seamless customization to suit different use cases. To apply this component, add the <code>.button</code> class to an <code>a</code> or <code>button</code> element.</div>
+                            </div>
+        </div>
+    </div>
+</main>     <div class="container">   
+	        <div class="panel pure mt-0">
+        <div class="content pb-5">
+            <div class="button">Default</div>
+            <div class="button active">Active</div>
+            <div class="button disabled">Disabled</div>
+            <div class="button inactive">Inactive</div>
+            <div class="preloader button">Preloader</div>
+            <div class="rounded button">Rounded</div>
+        </div>
+        <div class="content pt-0 pb-5">
+            <button class="primary button">Button</button>
+            <div class="primary outlined button">Outlined</div>
+            <a class="primary active button">Active</a>
+            <div class="primary disabled button">Disabled</div>
+            <div class="primary inactive button">Inactive</div>
+            <div class="primary rounded button">Rounded</div>
+        </div>
+        <div class="content pt-0 pb-5">
+            <button class="success button">Button</button>
+            <div class="success outlined button">Outlined</div>
+            <a class="success active button">Active</a>
+            <div class="success disabled button">Disabled</div>
+            <div class="success inactive button">Inactive</div>
+            <div class="success rounded button">Rounded</div>
+        </div>
+        <div class="content pt-0 pb-5">
+            <button class="warning button">Button</button>
+            <div class="warning outlined button">Outlined</div>
+            <a class="warning active button">Active</a>
+            <div class="warning disabled button">Disabled</div>
+            <div class="warning inactive button">Inactive</div>
+            <div class="warning rounded button">Rounded</div>
+        </div>
+        <div class="content pt-0 pb-5">
+            <button class="error button">Button</button>
+            <div class="error button outlined">Outlined</div>
+            <a class="error button active">Active</a>
+            <div class="error button disabled">Disabled</div>
+            <div class="error button inactive">Inactive</div>
+            <div class="error rounded button">Rounded</div>
+        </div>
+        <div class="content pt-0">
+            <button class="dark button">Button</button>
+            <div class="dark outlined button">Outlined</div>
+            <a class="active dark button">Active</a>
+            <div class="dark disabled button">Disabled</div>
+            <div class="dark inactive button">Inactive</div>
+            <div class="dark rounded button">Rounded</div>
+        </div>
+
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+		<button class="button"></button>
+		<a class="primary button"></a>
+		<div class="preloader button">Text</div>
+        </script>
+        </div>
+
+        <!-- BUTTON SIZES -->
+        <div class="header mt-50">
+            <span class="title">
+                Sizes of Button
+            </span>
+        </div>
+        <div class="content">
+            <p>
+                Add the <code>.tiny, .mini, .small, .large</code> or <code>.huge</code> class to a button to make it smaller
+                or larger.
+                Also, you can add the <code>.block</code> class for a full-width button.
+            </p>
+        </div>
+        <div class="content">
+            <a class="button tiny mr-5">Tiny</a>
+            <a class="button mini mr-5">Mini</a>
+            <a class="button small mr-5">Small</a>
+            <a class="button mr-5">Default</a>
+            <a class="button large mr-5">Large</a>
+            <a class="button huge">Huge</a>
+            <p></p>
+            <a class="button block">Block Button</a>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <button class="tiny button"></button>
+            <a class="large primary button"></a>
+        </script>
+        </div>
+
+        <!-- BUTTON GROUPS -->
+        <div class="header mt-50">
+            <span class="title">
+                Button Groups
+            </span>
+        </div>
+        <div class="content">
+            <p class="mb-30">
+                To create a button group, add the <code>.buttons</code> class to a <code>div</code> element around the
+                buttons.
+            </p>
+            <div class="col-16 mt-40">
+                <div class="buttons mt-20">
+                    <button class="button">
+                        Button
+                    </button>
+                    <a href="javascript:" class="button active">
+                        Button
+                    </a>
+                    <button class="button">
+                        Button
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-16 mt-40">
+                <div class="buttons mini">
+                    <a href="javascript:" class="button">
+                        <i class="material-symbols-outlined">person</i>
+                    </a>
+                    <div class="button inactive">254</div>
+                </div>
+                <div class="buttons mini ml-20">
+                    <a href="javascript:" class="button error">
+                        <i class="material-symbols-outlined">thumb_up</i>
+                    </a>
+                    <div class="button inactive">276</div>
+                </div>
+                <div class="buttons mini ml-20">
+                    <a href="javascript:" class="button primary">
+                        <i class="material-symbols-outlined">lock</i>
+                    </a>
+                    <div class="button inactive">63</div>
+                </div>
+            </div>
+
+            <div class="col-16 mt-40">
+                <div class="buttons">
+                    <div class="button inactive">
+                        <i class="material-symbols-outlined mr-10 ml-10">shopping_cart</i>
+                    </div>
+                    <div class="button">
+                        <span class="weight-900 large-text">$175</span>
+                    </div>
+                    <div class="button primary weight-900">
+                        Checkout Now !
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+	        <div class="buttons">
+	            <button class="button">
+	                Button
+	            </button>
+	            <a href="" class="active button">
+	                Button
+	            </a>
+	            <button class="button">
+	                Button
+	            </button>
+	        </div>
+	    </script>
+        </div>
+
+        <!-- BUTTON GROUPS : sizes of button groups -->
+        <div class="header">
+            <div class="title">Sizes of button groups</div>
+        </div>
+        <div class="content mt-20">
+            Also, add the <code>.tiny, .mini, .small, .large</code> or <code>.huge</code> class to <code>.buttons</code> to
+            make
+            it smaller or larger group buttons.
+        </div>
+        <div class="content">
+            <div class="mini buttons">
+                <button class="button">
+                    Button
+                </button>
+                <a href="" class="active button">
+                    Mini
+                </a>
+                <button class="button">
+                    Button
+                </button>
+            </div>
+            <div class="large buttons ml-20">
+                <button class="button">
+                    Button
+                </button>
+                <a href="" class="active button">
+                    Large
+                </a>
+                <button class="button">
+                    Button
+                </button>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+	        <div class="mini buttons">
+	            <button class="button">
+	                Button
+	            </button>
+	            <a href="" class="active button">
+	                Button
+	            </a>
+	            <button class="button">
+	                Button
+	            </button>
+	        </div>
+	    </script>
+        </div>
+
+        <!-- BUTTON GROUPS : block buttons -->
+        <div class="header">
+            <div class="title">Full-width Button Groups</div>
+        </div>
+        <div class="content">
+            And you can add the <code>.block</code> class to <code>.buttons</code> for a full-width button group.
+        </div>
+        <div class="content">
+            <div class="block buttons">
+                <a href="javascript:" class="button">
+                    Button
+                </a>
+                <a href="javascript:" class="button">
+                    Button
+                </a>
+                <a href="javascript:" class="button">
+                    Button
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+	        <div class="block buttons">
+	            <button class="button">
+	                Button
+	            </button>
+	            <a href="" class="active button">
+	                Button
+	            </a>
+	            <button class="button">
+	                Button
+	            </button>
+	        </div>
+	    </script>
+        </div>
+
+        <!-- DROPDOWN -->
+        <div class="header mt-50">
+            <span class="title">
+                Button with Dropdown
+            </span>
+        </div>
+        <div class="content">
+            <p>
+                A button can be used to trigger a dropdown menu.
+            </p>
+            <div class="row">
+                <div class="col-16 mt-30">
+                    <div class="buttons">
+                        <div class="dropdown">
+                            <a class="toggle button">
+                                Default Dropdown <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="#">Dropdown 1</a></li>
+                                <li class="item"><a href="#">Dropdown 2</a></li>
+                                <li class="item"><a href="#">Dropdown 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="clickable dropdown">
+                            <a class="toggle button" tabindex="0">
+                                Clickable Dropdown <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="#">Dropdown 1</a></li>
+                                <li class="item"><a href="#">Dropdown 2</a></li>
+                                <li class="item"><a href="#">Dropdown 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="button">Dropdown</div>
+                        <div class="right bottom dropdown">
+                            <a class="toggle button">
+                                <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="#">Dropdown 1</a></li>
+                                <li class="item"><a href="#">Dropdown 2</a></li>
+                                <li class="item"><a href="#">Dropdown 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-16 mt-20">
+                    <div class="mini buttons mr-20">
+                        <div class="primary button">
+                            <i class="material-symbols-outlined mr-5">drafts</i> Mini
+                        </div>
+                        <div class="inactive button">254</div>
+                        <div class="right top dropdown">
+                            <a class="toggle button">
+                                <i class="material-symbols-outlined">keyboard_arrow_up</i>
+                            </a>
+                            <ul class="small menu">
+                                <li class="item"><a href="#">Dropdown 1</a></li>
+                                <li class="item"><a href="#">Dropdown 2</a></li>
+                                <li class="item"><a href="#">Dropdown 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mini buttons">
+                        <div class="top left dropdown">
+                            <a class="toggle button">
+                                <i class="material-symbols-outlined">keyboard_arrow_up</i>
+                            </a>
+                            <ul class="small menu">
+                                <li class="item"><a href="#">Dropdown 1</a></li>
+                                <li class="item"><a href="#">Dropdown 2</a></li>
+                                <li class="item"><a href="#">Dropdown 3</a></li>
+                            </ul>
+                        </div>
+                        <div class="inactive button">254</div>
+                        <div class="button">
+                            <i class="material-symbols-outlined">drafts</i>
+                        </div>
+                    </div>
+                    <div class="primary mini buttons ml-20">
+                        <div class="dropdown">
+                            <a class="toggle button">
+                                <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                            </a>
+                            <ul class="small menu">
+                                <li class="item"><a href="#">Dropdown 1</a></li>
+                                <li class="item"><a href="#">Dropdown 2</a></li>
+                                <li class="item"><a href="#">Dropdown 3</a></li>
+                            </ul>
+                        </div>
+                        <div class="inactive button">254</div>
+                        <div class="button">
+                            <i class="material-symbols-outlined">drafts</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                You can change the direction of the dropdown by adding any <code style="white-space: inherit;">.right .left
+                    .top .top.left .top.right .bottom.left .bottom.right </code> classes to <code>.dropdown</code>
+                container.
+            </p>
+            <div class="row mt-40">
+                <div class="col-4 align right">
+                    <div class="dropdown top left">
+                        <a class="button large toggle">
+                            <i class="material-symbols-outlined">north_west</i>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="#">Dropdown 1</a></li>
+                            <li class="item"><a href="#">Dropdown 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4 align left">
+                    <div class="dropdown top right">
+                        <a class="button large toggle">
+                            <i class="material-symbols-outlined">north_east</i>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="#">Dropdown 1</a></li>
+                            <li class="item"><a href="#">Dropdown 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 align right">
+                    <div class="dropdown left">
+                        <a class="button large toggle">
+                            <i class="material-symbols-outlined">west</i>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="#">Dropdown 1</a></li>
+                            <li class="item"><a href="#">Dropdown 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4 align left">
+                    <div class="dropdown right">
+                        <a class="button large toggle">
+                            <i class="material-symbols-outlined">east</i>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="#">Dropdown 1</a></li>
+                            <li class="item"><a href="#">Dropdown 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 align right">
+                    <div class="dropdown bottom left">
+                        <a class="button large toggle">
+                            <i class="material-symbols-outlined">south_west</i>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="#">Dropdown 1</a></li>
+                            <li class="item"><a href="#">Dropdown 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4 align left">
+                    <div class="dropdown bottom right">
+                        <a class="button large toggle">
+                            <i class="material-symbols-outlined">south_east</i>
+                        </a>
+                        <ul class="menu">
+                            <li class="item"><a href="#">Dropdown 1</a></li>
+                            <li class="item"><a href="#">Dropdown 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+		<div class="buttons">
+			<div class="top left dropdown">
+				<a class="toggle button">
+					...
+				</a>
+				<ul class="menu">
+					...
+				</ul>
+			</div>
+		</div>
+		</script>
+        </div>
+
+        <!-- vertical button groups -->
+        <div class="header mt-40">
+            <div class="title">
+                Vertical Button Groups
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Also, just add the <code>.vertical</code> class to <code>.buttons</code> to make it vertical button group.
+            </p>
+        </div>
+        <div class="content">
+            <div class="vertical tiny buttons">
+                <button class="button">
+                    <i class="material-symbols-outlined">group_work</i>
+                </button>
+                <button class="button">
+                    <i class="material-symbols-outlined">verified_user</i>
+                </button>
+                <button class="button">
+                    <i class="material-symbols-outlined">settings</i>
+                </button>
+            </div>
+            <div class="small success vertical buttons ml-30">
+                <button class="button">
+                    <i class="material-symbols-outlined">group_work</i>
+                </button>
+                <button class="button">
+                    <i class="material-symbols-outlined">verified_user</i>
+                </button>
+                <button class="button">
+                    <i class="material-symbols-outlined">settings</i>
+                </button>
+            </div>
+            <div class="warning vertical buttons ml-30">
+                <button class="button">
+                    <i class="material-symbols-outlined">group_work</i>
+                </button>
+                <div class="left dropdown">
+                    <a class="button toggle">
+                        <i class="material-symbols-outlined mr-5">keyboard_arrow_left</i> <i
+                            class="material-symbols-outlined">verified_user</i>
+                    </a>
+                    <ul class="menu">
+                        <li class="item"><a href="#">Dropdown 1</a></li>
+                        <li class="item"><a href="#">Dropdown 2</a></li>
+                        <li class="item"><a href="#">Dropdown 3</a></li>
+                    </ul>
+                </div>
+                <div class="right dropdown">
+                    <a class="button toggle">
+                        <i class="material-symbols-outlined">settings</i> <i
+                            class="material-symbols-outlined ml-5">keyboard_arrow_right</i>
+                    </a>
+                    <ul class="menu">
+                        <li class="item"><a href="#">Dropdown 1</a></li>
+                        <li class="item"><a href="#">Dropdown 2</a></li>
+                        <li class="item"><a href="#">Dropdown 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+		<div class="vertical buttons">
+			<button class="button">
+                ..
+			</button>
+			<button class="button">
+				..
+			</button>
+		</div>
+		</script>
+        </div>
+
+        <div class="content mb-100">
+            <div class="row">
+                <div class="col-8 align right">
+                    <div class="block vertical buttons">
+                        <button class="button">Account Info</button>
+                        <button class="button">Privacy Preferences</button>
+                        <div class="right dropdown">
+                            <a class="button toggle">
+                                Scheduled Reminders <i class="material-symbols-outlined ml-5">keyboard_arrow_right</i>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="#">Dropdown 1</a></li>
+                                <li class="item"><a href="#">Dropdown 2</a></li>
+                                <li class="item"><a href="#">Dropdown 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content overflow-auto">
+            <table class="table text-small">
+                <caption>Props</caption>
+                <thead>
+                    <tr>
+                        <th>Default Class Name</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>buttons</code></td>
+                        <td><code>.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>button</code></td>
+                        <td><code>.button</code><br><code>.buttons > .button</code></td>
+                    </tr>
+                </tbody>
+
+                <thead>
+                    <tr>
+                        <th>Styles</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>primary</code></td>
+                        <td><code>.primary.button</code><br><code>.primary.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>success</code></td>
+                        <td><code>.success.button</code><br><code>.success.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>warning</code></td>
+                        <td><code>.warning.button</code><br><code>.warning.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>error</code></td>
+                        <td><code>.error.button</code><br><code>.error.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>.dark.button</code><br><code>.dark.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>outlined</code></td>
+                        <td><code>.outlined.button</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Sizes</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>tiny</code></td>
+                        <td><code>.tiny.button</code><br><code>.tiny.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>mini</code></td>
+                        <td><code>.mini.button</code><br><code>.mini.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>small</code></td>
+                        <td><code>.small.button</code><br><code>.small.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>large</code></td>
+                        <td><code>.large.button</code><br><code>.large.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>huge</code></td>
+                        <td><code>.huge.button</code><br><code>.huge.buttons</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>States</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>active</code></td>
+                        <td><code>.active.button</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>inactive</code></td>
+                        <td><code>.inactive.button</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>disabled</code></td>
+                        <td><code>.disabled.button</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>block</code></td>
+                        <td><code>.block.button</code><br><code>.block.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>vertical</code></td>
+                        <td><code>.vertical.buttons</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>preloader</code></td>
+                        <td><code>.preloader.button</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Dropdown</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>dropdown</code></td>
+                        <td><code>.dropdown</code><br><code>.buttons > dropdown</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>right</code></td>
+                        <td><code>.right.dropdown</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>left</code></td>
+                        <td><code>.left.dropdown</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>top</code></td>
+                        <td><code>.top.dropdown</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>bottom</code></td>
+                        <td><code>.bottom.dropdown</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>toggle</code></td>
+                        <td><code>.dropdown > .button.toggle</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>clickable</code></td>
+                        <td><code>.clickable.dropdown</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://codeforms.github.io/Punica-CSS-Framework/assets/build/js/prism.js"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 1024px) {
+                .sidebar {
+                    position: relative !important;
+                    top: auto !important;
+                    width: 100% !important;
+                    z-index: 0;
+                }
+                .main-container {
+                    flex-direction: column !important;                
+                }
+                .content-container,
+                .main-container {
+                    margin: 0 !important;
+                }
+                .navbar .section .dark.tab {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                }
+                .navbar .section .dark.tab > .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </body>
+</html>

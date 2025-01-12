@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/elements/table">
+        <title> Table - Punica CSS Framework v3 </title>
+        <meta name="description" content="Just add the &lt;code&gt;.table&lt;/code&gt; class to any &lt;code&gt;table&lt;/code&gt; element. The class will add padding, border and emphasized table header.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica.min.css">
+        <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
+    </head>
+    <body class="overflow-auto">
+        <div class="reset container">
+            <header class="fixed small navbar border-bottom-1">
+    <div class="container reset">
+        <!-- responsive hamburger menu -->
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burger"></label>
+        <!-- /responsive hamburger menu-->
+
+        <section class="brand width-240">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/" class="display-flex align-items-center">
+                Punica CSS <span class="weight-normal ml-5 text-small">v3</span>
+            </a>
+        </section>
+
+        <section class="links">
+            <div class="divided section justify-content-flex-start">
+                <div class="dark full height borderless tab align-items-center">
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Components</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
+                    <a href="javascript:" class="disabled button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">
+                        API Docs
+                    </a>
+                </div>
+            </div>
+            <div class="section justify-content-flex-end flex-initial px-50">
+                <div class="buttons">
+                    <div class="dropdown bottom right">
+                        <a class="button toggle" tabindex="0">
+                            Github <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                        </a>
+                        <ul class="small menu">
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">cabin</i> Github Repo
+                                </a>    
+                            </li>   
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">code</i> Changelog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+            <div class="main-container display-flex" style="margin-top: 65px;">
+                                <div class="sidebar display-flex border-right-1 width-240 shrink-0 position-fixed left-0" style="height: calc(-65px + 100vh); padding-bottom: calc(-65px + 100vh); top: 65px;">
+                    <div class="position-sticky top-0 left-0 height-100 border-bottom-1 border-x-0 border-top-0 border-grey weight-normal border-solid mb-10 pt-0 full width display-block position-relative">
+    <div class="leading-1 display-flex align-items-center full height width border-left-10 border-dark">
+        <div class="full width px-40">
+            <div class="h5 weight-normal">Elements</div>
+            <small class="color-grey-darken-25 letter-widest">Table</small>
+        </div>
+    </div>
+    <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
+                <li class="item" id="button">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button#button" class="py-0 ">
+                <span class="color-text-lighten-20">Button</span> 
+            </a>
+        </li>
+                <li class="item" id="form">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/form#form" class="py-0 ">
+                <span class="color-text-lighten-20">Form</span> 
+            </a>
+        </li>
+                <li class="item" id="grid">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/grid#grid" class="py-0 ">
+                <span class="color-text-lighten-20">Grid</span> 
+            </a>
+        </li>
+                <li class="item" id="table">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/table#table" class="py-0 active border-left-4 border-dark transparent weight-bold">
+                <span class="color-text-lighten-20">Table</span> 
+            </a>
+        </li>
+            </div>
+</div>
+                </div>
+                                <main class="content-container display-flex flex-direction-column flex-1  ml-240 ">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">
+                                    <main class="row position-relative">
+    <div class="col-16">
+        <div class="row py-20 height-32 radius-8 align-items-center">
+            <div class="col-16 px-20 opacity-1">
+                <div class="display-flex align-items-center border-bottom-1">
+                    <h2 class="display-flex mb-10">
+                        Table
+                    </h2>
+                    <div class="spacer"></div>
+                    <div>
+                        <div class="mini buttons">
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Modules/Elements/Table/Table.scss" class="button" target="_blank">Source</a>
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/options.scss" class="button" target="_blank">API</a>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="mt-20">Just add the <code>.table</code> class to any <code>table</code> element. The class will add padding, border and emphasized table header.</div>
+                            </div>
+        </div>
+    </div>
+</main>     <div class="container">   
+	        <div class="pure panel reset">
+        <div class="content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table Data</td>
+                    </tr>
+                </tbody>
+            </table>
+            </script>
+        </div>
+        <div class="content overflow-auto">
+            <table class="table text-small">
+                <caption>Props</caption>
+                <thead>
+                    <tr>
+                        <th>Default Class Name</th>
+                        <th><span class="HwtZe" lang="en"><span class="jCAhz ChMk0b"><span
+                                        class="ryNqvb">Combinators</span></span></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.table</code></td>
+                        <td><code>.table</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.striped</code></td>
+                        <td><code>.table.striped</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.hovered</code></td>
+                        <td><code>.table.hovered</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.active</code></td>
+                        <td><code>.table &gt; tr.active</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="header mt-50">
+            <div class="title">
+                Table with Caption
+            </div>
+        </div>
+        <div class="content">
+            <table class="table">
+                <caption>Caption</caption>
+                <thead>
+                    <tr>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+		<table class="table">
+			<caption>Caption</caption>
+			<thead>
+				<tr>
+					<th>Header</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Table Data</td>
+				</tr>
+			</tbody>
+		</table>
+		</script>
+        </div>
+        <!-- Hovered Tables-->
+        <div class="header mt-50">
+            <div class="title">
+                Hovered Tables
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Add the <code>.hovered</code> class to display a hover state on table rows.
+            </p>
+            <div class="panel pure mt-40">
+                <div class="content">
+                    <table class="hovered table">
+                        <thead>
+                            <tr>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                            </tr>
+                            <tr>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                            </tr>
+                            <tr>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <table class="hovered table">
+                ...
+            </table>
+            </script>
+        </div>
+
+        <!-- Striped Tables-->
+        <div class="header mt-50">
+            <div class="title">
+                Striped Tables
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Add zebra-striping to a table by adding the <code>.striped</code> class.
+            </p>
+            <div class="panel pure mt-40">
+                <div class="content">
+                    <table class="striped table">
+                        <thead>
+                            <tr>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                            </tr>
+                            <tr>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                            </tr>
+                            <tr>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <table class="striped table">
+                ...
+            </table>
+            </script>
+        </div>
+
+        <!-- Active Table Row -->
+        <div class="header mt-50">
+            <div class="title">
+                Active Table Row
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Just add the <code>.active</code> class to any <code>tr</code> element in table.
+            </p>
+        </div>
+        <div class="content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td class="center align">
+                            <div class="shadowless buttons mini">
+                                <a href="javascript:" class="button">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </a>
+                                <a href="javascript:" class="button">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="active">
+                        <td>Active</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td class="center align">
+                            <div class="shadowless buttons mini">
+                                <a href="javascript:" class="button">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </a>
+                                <a href="javascript:" class="button">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td class="center align">
+                            <div class="shadowless buttons mini">
+                                <a href="javascript:" class="button">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </a>
+                                <a href="javascript:" class="button">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <table class="table">
+                <tbody>
+                    <tr class="active">
+                    ...
+            </table>
+            </script>
+        </div>
+    </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://codeforms.github.io/Punica-CSS-Framework/assets/build/js/prism.js"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 1024px) {
+                .sidebar {
+                    position: relative !important;
+                    top: auto !important;
+                    width: 100% !important;
+                    z-index: 0;
+                }
+                .main-container {
+                    flex-direction: column !important;                
+                }
+                .content-container,
+                .main-container {
+                    margin: 0 !important;
+                }
+                .navbar .section .dark.tab {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                }
+                .navbar .section .dark.tab > .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </body>
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/components/card">
+        <title> Card - Punica CSS Framework v3 </title>
+        <meta name="description" content="The Card component is a flexible and modular container for displaying content. It typically includes elements like a title/subtitle, image, description, and actions section, but can be customized to suit various needs. Cards are perfect for organizing information in a visually appealing and consistent layout.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica.min.css">
+        <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
+    </head>
+    <body class="overflow-auto">
+        <div class="reset container">
+            <header class="fixed small navbar border-bottom-1">
+    <div class="container reset">
+        <!-- responsive hamburger menu -->
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burger"></label>
+        <!-- /responsive hamburger menu-->
+
+        <section class="brand width-240">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/" class="display-flex align-items-center">
+                Punica CSS <span class="weight-normal ml-5 text-small">v3</span>
+            </a>
+        </section>
+
+        <section class="links">
+            <div class="divided section justify-content-flex-start">
+                <div class="dark full height borderless tab align-items-center">
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">Components</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
+                    <a href="javascript:" class="disabled button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">
+                        API Docs
+                    </a>
+                </div>
+            </div>
+            <div class="section justify-content-flex-end flex-initial px-50">
+                <div class="buttons">
+                    <div class="dropdown bottom right">
+                        <a class="button toggle" tabindex="0">
+                            Github <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                        </a>
+                        <ul class="small menu">
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">cabin</i> Github Repo
+                                </a>    
+                            </li>   
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">code</i> Changelog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+            <div class="main-container display-flex" style="margin-top: 65px;">
+                                <div class="sidebar display-flex border-right-1 width-240 shrink-0 position-fixed left-0" style="height: calc(-65px + 100vh); padding-bottom: calc(-65px + 100vh); top: 65px;">
+                    <div class="position-sticky top-0 left-0 height-100 border-bottom-1 border-x-0 border-top-0 border-grey weight-normal border-solid mb-10 pt-0 full width display-block position-relative">
+    <div class="leading-1 display-flex align-items-center full height width border-left-10 border-dark">
+        <div class="full width px-40">
+            <div class="h5 weight-normal">Components</div>
+            <small class="color-grey-darken-25 letter-widest">Card</small>
+        </div>
+    </div>
+    <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
+                <li class="item" id="alert">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert#alert" class="py-0 ">
+                <span class="color-text-lighten-20">Alert</span> 
+            </a>
+        </li>
+                <li class="item" id="badge">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/badge#badge" class="py-0 ">
+                <span class="color-text-lighten-20">Badge</span> 
+            </a>
+        </li>
+                <li class="item" id="breadcrumb">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/breadcrumb#breadcrumb" class="py-0 ">
+                <span class="color-text-lighten-20">Breadcrumb</span> 
+            </a>
+        </li>
+                <li class="item" id="caption">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/caption#caption" class="py-0 ">
+                <span class="color-text-lighten-20">Caption</span> 
+            </a>
+        </li>
+                <li class="item" id="card">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/card#card" class="py-0 active border-left-4 border-dark transparent weight-bold">
+                <span class="color-text-lighten-20">Card</span> 
+            </a>
+        </li>
+                <li class="item" id="label">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/label#label" class="py-0 ">
+                <span class="color-text-lighten-20">Label</span> 
+            </a>
+        </li>
+                <li class="item" id="list">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/list#list" class="py-0 ">
+                <span class="color-text-lighten-20">List</span> 
+            </a>
+        </li>
+                <li class="item" id="menu">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/menu#menu" class="py-0 ">
+                <span class="color-text-lighten-20">Menu</span> 
+            </a>
+        </li>
+                <li class="item" id="navbar">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/navbar#navbar" class="py-0 ">
+                <span class="color-text-lighten-20">Navbar</span> 
+            </a>
+        </li>
+                <li class="item" id="panel">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/panel#panel" class="py-0 ">
+                <span class="color-text-lighten-20">Panel</span> 
+            </a>
+        </li>
+                <li class="item" id="process">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/process#process" class="py-0 ">
+                <span class="color-text-lighten-20">Process</span> 
+            </a>
+        </li>
+                <li class="item" id="stats">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/stats#stats" class="py-0 ">
+                <span class="color-text-lighten-20">Stats</span> 
+            </a>
+        </li>
+                <li class="item" id="tabnav">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tabnav#tabnav" class="py-0 ">
+                <span class="color-text-lighten-20">Tabnav</span> 
+            </a>
+        </li>
+                <li class="item" id="timeline">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/timeline#timeline" class="py-0 ">
+                <span class="color-text-lighten-20">Timeline</span> 
+            </a>
+        </li>
+                <li class="item" id="tooltip">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tooltip#tooltip" class="py-0 ">
+                <span class="color-text-lighten-20">Tooltip</span> 
+            </a>
+        </li>
+            </div>
+</div>
+                </div>
+                                <main class="content-container display-flex flex-direction-column flex-1  ml-240 ">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">
+                                	<main class="row position-relative">
+    <div class="col-16">
+        <div class="row py-20 height-32 radius-8 align-items-center">
+            <div class="col-16 px-20 opacity-1">
+                <div class="display-flex align-items-center border-bottom-1">
+                    <h2 class="display-flex mb-10">
+                        Card
+                    </h2>
+                    <div class="spacer"></div>
+                    <div>
+                        <div class="mini buttons">
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Modules/Components/Card/Card.scss" class="button" target="_blank">Source</a>
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/options.scss" class="button" target="_blank">API</a>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="mt-20">The Card component is a flexible and modular container for displaying content. It typically includes elements like a title/subtitle, image, description, and actions section, but can be customized to suit various needs. Cards are perfect for organizing information in a visually appealing and consistent layout.</div>
+                            </div>
+        </div>
+    </div>
+</main>     <div class="container">   
+	        <div class="pure panel reset">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-16 col-xs-16 col-lg-5">
+                    <div class="card">
+                        <div class="media">
+                            <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                        </div>
+                        <div class="title">
+                            <div class="h5">Title</div>
+                            <div class="subtitle">Subtitle</div>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat.
+                        </div>
+                        <div class="actions">
+                            <div class="small shadowless block buttons">
+                                <button class="button">Button</button>
+                                <button class="dark button">Button</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-16 col-xs-16 col-lg-10 offset-lg-7">
+                    <div class="content">
+                        <script type="text/plain" class="language-markup">
+                        <div class="card">
+                            <div class="media">
+                                <img src="">
+                            </div>
+                            <div class="title">
+                                <div class="h5">Title</div>
+                                <div class="subtitle">Subtitle</div>
+                            </div>
+                            <div class="description">
+                                ...
+                            </div>
+                            <div class="actions">
+                                ...
+                            </div>
+                        </div>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="header mt-50">
+			<div class="title">
+				Multi-Card
+			</div>
+		</div>
+		<div class="content">
+            You can choose an arbitrary card count per row. Default system allows maximum <b>11</b> cards each row (2 through 12). The example below
+            shows three cards will fit in the first row and the fourth card dynamically moves to the
+            second row. Also card groups automatically uses flex styles to match height between cards in the same row.
+		</div>
+        <div class="content">
+            <div class="three cards mt-20">
+                <div class="card">
+                    <div class="media">
+						<img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+					</div>
+					<div class="title">
+						<div class="h6">Card Title</div>
+						<div class="subtitle">Card Subtitle</div>
+					</div>
+					<div class="description">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos eos odio vero saepe assumenda, impedit veniam unde dolorem.
+					</div>
+                    <div class="actions border-top-1 py-10">
+                        <div class="pure small menu reset">
+                            <div class="item">
+                                <a href="javascript:"><i class="material-symbols-outlined">person</i> An Item</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:"><i class="material-symbols-outlined">email</i> A Second Item</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:"><i class="material-symbols-outlined">notifications_active</i> A Third Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions border-top-1">
+                        <div class="small shadowless block buttons">
+                            <button class="button">Button</button>
+                            <button class="dark button">Button</button>
+                        </div>
+                    </div>
+				</div>
+                <div class="card border-y-10 radius-16">
+					<div class="title">
+						<div class="h6">Card Title</div>
+						<div class="subtitle">Card Subtitle</div>
+					</div>
+					<div class="description">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos eos odio vero saepe assumenda, impedit veniam unde dolorem.
+					</div>
+                    <a href="javascript:" class="zoom-in media">
+						<img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+					</a>
+                    <div class="actions">
+                        <div class="small shadowless block buttons">
+                            <button class="button">Button</button>
+                            <button class="active button">Button</button>
+                        </div>
+                    </div>
+                    <div class="actions border-top-1 py-10">
+                        <div class="pure divided menu reset">
+                            <div class="item">
+                                <a href="javascript:"><i class="material-symbols-outlined">person</i> An Item</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:"><i class="material-symbols-outlined">email</i> A Second Item</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:"><i class="material-symbols-outlined">notifications_active</i> A Third Item</a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="card border-bottom-8">
+                    <div class="media">
+						<img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg">
+					</div>
+					<div class="description border-top-8">
+						<div class="form">
+                            <div class="item">
+                                <label>Name</label>
+                                <input type="text" placeholder="placeholder...">
+                                <small>This is my helper text</small>
+                            </div>
+                            <div class="item">
+                                <label>Description</label>
+                                <textarea placeholder="your message..."></textarea>
+                                <small>This is my description</small>
+                            </div>
+                        </div>
+					</div>
+                    <div class="actions border-top-1">
+                        <div class="small shadowless block buttons">
+                            <button class="button">Cancel</button>
+                            <button class="primary button">Submit</button>
+                        </div>
+                    </div>
+				</div>
+                <div class="card">
+					<div class="title">
+						<div class="h6">Card Title</div>
+						<div class="subtitle">Card Subtitle</div>
+					</div>
+					<div class="description">
+						Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat.
+					</div>
+					<div class="media">
+						<img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg">
+					</div>
+				</div>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <div class="three cards">
+                <div class="card">
+                    <div class="title">
+                        <div class="h5">Title</div>
+                        <div class="subtitle">Subtitle</div>
+                    </div>
+                    <div class="description">
+                        ...
+                    </div>
+                    <div class="media">
+                        <img src="">
+                    </div>
+                </div>
+                ....
+                ....
+            </div>
+            </script>
+        </div>
+        <div class="header mt-50">
+			<div class="title">
+				Multi-Image
+			</div>
+		</div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-16 col-xs-16 col-lg-5">
+                    <div class="card full width">
+                        <div class="two media">
+                            <a href="javascript:">
+                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg">
+                            </a>
+                            <a href="javascript:">
+                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg">
+                            </a>
+                            <a href="javascript:">
+                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg">
+                            </a>
+                            <a href="javascript:">
+                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/06.jpg">
+                            </a>
+                        </div>
+                        <div class="title">
+                            <div class="h4">Title</div>
+                            <div class="subtitle">Subtitle</div>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, eam ut singulis vituperata.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-16 col-xs-16 col-lg-10 offset-lg-7">
+                    <div class="content">
+                        <script type="text/plain" class="language-markup">
+                        <div class="card">
+                            <div class="two media">
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                            </div>
+                            <div class="title">
+                                <div class="h4"></div>
+                                <div class="subtitle"></div>
+                            </div>
+                            <div class="description">
+                                ...
+                            </div>
+                        </div>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mt-50">
+			<div class="title">
+				Hovered Card
+			</div>
+		</div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-16 col-xs-16 col-lg-5">
+                    <div class="hovered card">
+                        <div class="media">
+                            <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg">
+                        </div>
+                        <div class="title">
+                            <div class="h5">Title</div>
+                            <div class="subtitle">Subtitle</div>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-16 col-xs-16 col-lg-10 offset-lg-7">
+                    <div class="content">
+                        <script type="text/plain" class="language-markup">
+                        <div class="hovered card">
+                            <div class="media">
+                                <img src="">
+                            </div>
+                            <div class="title">
+                                <div class="h5">Title</div>
+                                <div class="subtitle">Subtitle</div>
+                            </div>
+                            <div class="description">
+                                ...
+                            </div>
+                        </div>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mt-50">
+			<div class="title">
+				Zoom-in Effect for Media
+			</div>
+		</div>
+        <div class="content">
+			<div class="four cards">
+	            <div class="card p-5">
+	                <a href="javascript:" class="zoom-in media">
+                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+	                </a>
+	            </div>
+	            <div class="card p-5">
+	                <div href="javascript:" class="zoom-in media">
+	                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg">
+	                </div>
+	            </div>
+	            <div class="card p-5">
+	                <div href="javascript:" class="zoom-in media">
+	                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg">
+	                </div>
+	            </div>
+	            <div class="card p-5">
+	                <div href="javascript:" class="zoom-in media">
+                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg">
+	                </div>
+	            </div>
+	        </div>
+		</div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <div class="four cards">
+                <div class="card">
+                    <a href="" class="zoom-in media">
+                        <img src="">
+                    </a>
+                </div>
+                ....
+                ....
+            </div>
+            </script>
+        </div>
+        <div class="header mt-50">
+			<div class="title">
+				Horizontal Cards
+			</div>
+		</div>
+        <div class="content">
+			<p>
+				Just add the <code>.horizontal</code> class to <code>.card</code> container class.
+			</p>
+		</div>
+        <div class="content">
+			<div class="horizontal card">
+				<div class="media">
+					<img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+				</div>
+				<div class="body">
+					<div class="title">
+						<div class="h4">Punica CSS v3</div>
+						<div class="subtitle">API-Driven Framework</div>
+					</div>
+					<div class="description">
+						<p>
+							Lorem ipsum dolor sit amet, his harum mediocrem euripidis at, in mutat legere vim, et vel aeque vitae abhorreant. Id simul omnesque efficiantur pro.
+						</p>
+
+						<div class="shadowless mini buttons">
+							<button class="button">
+								<i class="material-symbols-outlined">account_circle</i>
+							</button>
+							<button class="button">
+								<i class="material-symbols-outlined">anchor</i>
+							</button>
+							<button class="button">
+								<i class="material-symbols-outlined">api</i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="content">
+            <div class="alert center align">
+				<code>.title</code>, <code>.subtitle</code> and <code>.description</code> classes should be used in
+				<code>.body</code> container class for horizontal cards.
+			</div>
+            <script type="text/plain" class="language-markup">
+            <div class="horizontal card">
+                <div class="media">
+                    <img src="">
+                </div>
+                <div class="body">
+                    <div class="title">
+                        <div class="h4"></div>
+                        <div class="subtitle"></div>
+                    </div>
+                    <div class="description">
+                        ...
+                    </div>
+                </div>
+            </div>
+            </script>
+        </div>
+        <div class="content">
+            <div class="horizontal card">
+	            <div class="body">
+	                <div class="title">
+	                    <div class="h3">Multi-Image</div>
+	                    <div class="subtitle">Punica CSS Framework</div>
+	                </div>
+	                <div class="description">
+	                    <p>
+	                        Lorem ipsum dolor sit amet, his harum mediocrem euripidis at, in mutat legere vim, et vel aeque vitae
+	                        abhorreant.
+	                    </p>
+	            
+	                    <div class="shadowless mini buttons">
+	                        <button class="button">
+	                            <span class="material-symbols-outlined">account_circle</span>
+	                        </button>
+	                        <button class="button">
+	                            <span class="material-symbols-outlined">anchor</span>
+	                        </button>
+	                        <button class="button">
+	                            <span class="material-symbols-outlined">api</span>
+	                        </button>
+	                    </div>
+	                </div>
+	            </div>
+				<div class="two media">
+					<a href="javascript:">
+                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                    </a>
+                    <a href="javascript:">
+                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg">
+                    </a>
+                    <a href="javascript:">
+                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg">
+                    </a>
+                    <a href="javascript:">
+                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg">
+                    </a>
+				</div>
+			</div>
+        </div>
+        <div class="content overflow-auto">
+            <table class="table text-small">
+                <caption>Props</caption>
+                <thead>
+                    <tr>
+                        <th>Default Class Name</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>cards</code></td>
+                        <td><code>.cards</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>card</code></td>
+                        <td><code>.card</code><br><code>.cards > .card</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>media</code></td>
+                        <td><code>.card > .media</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code></td>
+                        <td><code>.card > .title</code><br><code>.horizontal.card > .body .title</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>subtitle</code></td>
+                        <td><code>.card > .title > .subtitle</code><br><code>.horizontal.card > .body .title > .subtitle</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>description</code></td>
+                        <td><code>.card > .description</code><br><code>.horizontal.card > .body .description</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>actions</code></td>
+                        <td><code>.card > .actions</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>body</code> (only for horizontal card)</td>
+                        <td><code>.horizontal.card > .body</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>States</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>horizontal</code></td>
+                        <td><code>.horizontal.card</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>hovered</code></td>
+                        <td><code>.hovered.cards</code><br><code>.hovered.card</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>zoom-in</code></td>
+                        <td><code>.card > .zoom-in.media</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://codeforms.github.io/Punica-CSS-Framework/assets/build/js/prism.js"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 1024px) {
+                .sidebar {
+                    position: relative !important;
+                    top: auto !important;
+                    width: 100% !important;
+                    z-index: 0;
+                }
+                .main-container {
+                    flex-direction: column !important;                
+                }
+                .content-container,
+                .main-container {
+                    margin: 0 !important;
+                }
+                .navbar .section .dark.tab {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                }
+                .navbar .section .dark.tab > .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </body>
+</html>

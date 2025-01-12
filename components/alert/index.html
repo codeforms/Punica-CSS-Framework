@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/components/alert">
+        <title> Alert - Punica CSS Framework v3 </title>
+        <meta name="description" content="The Alert component is designed to display important messages or notifications to users. It offers a straightforward and effective way to capture attention, emphasize key information, or convey the status of an action. With six available themes—default, &lt;code&gt;.primary&lt;/code&gt;, &lt;code&gt;.success&lt;/code&gt;, &lt;code&gt;.warning&lt;/code&gt;, &lt;code&gt;.error&lt;/code&gt;, and &lt;code&gt;.dark&lt;/code&gt;—Alerts are highly customizable to suit various designs and themes. Simply add the &lt;code&gt;.alert&lt;/code&gt; class to a &lt;code&gt;span&lt;/code&gt; or &lt;code&gt;div&lt;/code&gt; container element to create an alert.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica.min.css">
+        <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
+    </head>
+    <body class="overflow-auto">
+        <div class="reset container">
+            <header class="fixed small navbar border-bottom-1">
+    <div class="container reset">
+        <!-- responsive hamburger menu -->
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burger"></label>
+        <!-- /responsive hamburger menu-->
+
+        <section class="brand width-240">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/" class="display-flex align-items-center">
+                Punica CSS <span class="weight-normal ml-5 text-small">v3</span>
+            </a>
+        </section>
+
+        <section class="links">
+            <div class="divided section justify-content-flex-start">
+                <div class="dark full height borderless tab align-items-center">
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">Components</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
+                    <a href="javascript:" class="disabled button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">
+                        API Docs
+                    </a>
+                </div>
+            </div>
+            <div class="section justify-content-flex-end flex-initial px-50">
+                <div class="buttons">
+                    <div class="dropdown bottom right">
+                        <a class="button toggle" tabindex="0">
+                            Github <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                        </a>
+                        <ul class="small menu">
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">cabin</i> Github Repo
+                                </a>    
+                            </li>   
+                            <li class="item">
+                                <a href="https://github.com/codeforms/Punica-CSS-Framework/releases" target="_blank">
+                                    <i class="material-symbols-outlined mr-5">code</i> Changelog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+            <div class="main-container display-flex" style="margin-top: 65px;">
+                                <div class="sidebar display-flex border-right-1 width-240 shrink-0 position-fixed left-0" style="height: calc(-65px + 100vh); padding-bottom: calc(-65px + 100vh); top: 65px;">
+                    <div class="position-sticky top-0 left-0 height-100 border-bottom-1 border-x-0 border-top-0 border-grey weight-normal border-solid mb-10 pt-0 full width display-block position-relative">
+    <div class="leading-1 display-flex align-items-center full height width border-left-10 border-dark">
+        <div class="full width px-40">
+            <div class="h5 weight-normal">Components</div>
+            <small class="color-grey-darken-25 letter-widest">Alert</small>
+        </div>
+    </div>
+    <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
+                <li class="item" id="alert">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert#alert" class="py-0 active border-left-4 border-dark transparent weight-bold">
+                <span class="color-text-lighten-20">Alert</span> 
+            </a>
+        </li>
+                <li class="item" id="badge">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/badge#badge" class="py-0 ">
+                <span class="color-text-lighten-20">Badge</span> 
+            </a>
+        </li>
+                <li class="item" id="breadcrumb">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/breadcrumb#breadcrumb" class="py-0 ">
+                <span class="color-text-lighten-20">Breadcrumb</span> 
+            </a>
+        </li>
+                <li class="item" id="caption">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/caption#caption" class="py-0 ">
+                <span class="color-text-lighten-20">Caption</span> 
+            </a>
+        </li>
+                <li class="item" id="card">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/card#card" class="py-0 ">
+                <span class="color-text-lighten-20">Card</span> 
+            </a>
+        </li>
+                <li class="item" id="label">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/label#label" class="py-0 ">
+                <span class="color-text-lighten-20">Label</span> 
+            </a>
+        </li>
+                <li class="item" id="list">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/list#list" class="py-0 ">
+                <span class="color-text-lighten-20">List</span> 
+            </a>
+        </li>
+                <li class="item" id="menu">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/menu#menu" class="py-0 ">
+                <span class="color-text-lighten-20">Menu</span> 
+            </a>
+        </li>
+                <li class="item" id="navbar">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/navbar#navbar" class="py-0 ">
+                <span class="color-text-lighten-20">Navbar</span> 
+            </a>
+        </li>
+                <li class="item" id="panel">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/panel#panel" class="py-0 ">
+                <span class="color-text-lighten-20">Panel</span> 
+            </a>
+        </li>
+                <li class="item" id="process">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/process#process" class="py-0 ">
+                <span class="color-text-lighten-20">Process</span> 
+            </a>
+        </li>
+                <li class="item" id="stats">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/stats#stats" class="py-0 ">
+                <span class="color-text-lighten-20">Stats</span> 
+            </a>
+        </li>
+                <li class="item" id="tabnav">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tabnav#tabnav" class="py-0 ">
+                <span class="color-text-lighten-20">Tabnav</span> 
+            </a>
+        </li>
+                <li class="item" id="timeline">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/timeline#timeline" class="py-0 ">
+                <span class="color-text-lighten-20">Timeline</span> 
+            </a>
+        </li>
+                <li class="item" id="tooltip">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/components/tooltip#tooltip" class="py-0 ">
+                <span class="color-text-lighten-20">Tooltip</span> 
+            </a>
+        </li>
+            </div>
+</div>
+                </div>
+                                <main class="content-container display-flex flex-direction-column flex-1  ml-240 ">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">
+                                	<main class="row position-relative">
+    <div class="col-16">
+        <div class="row py-20 height-32 radius-8 align-items-center">
+            <div class="col-16 px-20 opacity-1">
+                <div class="display-flex align-items-center border-bottom-1">
+                    <h2 class="display-flex mb-10">
+                        Alert
+                    </h2>
+                    <div class="spacer"></div>
+                    <div>
+                        <div class="mini buttons">
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Modules/Components/Alert/Alert.scss" class="button" target="_blank">Source</a>
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/options.scss" class="button" target="_blank">API</a>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="mt-20">The Alert component is designed to display important messages or notifications to users. It offers a straightforward and effective way to capture attention, emphasize key information, or convey the status of an action. With six available themes—default, <code>.primary</code>, <code>.success</code>, <code>.warning</code>, <code>.error</code>, and <code>.dark</code>—Alerts are highly customizable to suit various designs and themes. Simply add the <code>.alert</code> class to a <code>span</code> or <code>div</code> container element to create an alert.</div>
+                            </div>
+        </div>
+    </div>
+</main>     <div class="container">   
+	        <div class="pure reset panel">
+        <div class="content">
+            <span class="alert">Lorem ipsum <a href="javascript:">dolor sit</a> amet.</span>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <span class="alert"></span>
+            <div class="alert"></div>
+            </script>
+        </div>
+        <div class="content">
+            <div class="primary alert">Lorem ipsum <a href="javascript:">dolor sit</a> amet.</div>
+            <div class="success alert">Lorem ipsum <a href="javascript:">dolor sit</a> amet.</div>
+            <div class="warning alert">Lorem ipsum <a href="javascript:">dolor sit</a> amet.</div>
+            <div class="error alert">Lorem ipsum <a href="javascript:">dolor sit</a> amet.</div>
+            <div class="dark alert">Lorem ipsum <a href="javascript:">dolor sit</a> amet.</div>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <div class="primary alert"></div>
+            <div class="success alert"></div>
+            <div class="warning alert"></div>
+            <div class="error alert"></div>
+            <div class="dark alert"></div>
+            </script>
+        </div>
+        <div class="header">
+            <div class="title">Sizes</div>
+        </div>
+        <div class="content">
+            <span class="small alert">Small</span>
+            <span class="alert">Default</span>
+            <span class="large alert">Large</span>
+        </div>
+        <div class="content">
+            <script type="text/plain" class="language-markup">
+            <span class="small alert"></span>
+            <span class="alert"></span>
+            <span class="large alert"></span>
+            </script>
+        </div>
+        <div class="content overflow-auto">
+            <table class="table text-small">
+                <thead>
+                    <tr>
+                        <th>Styles</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>primary</code></td>
+                        <td><code>.primary.alert</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>success</code></td>
+                        <td><code>.success.alert</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>warning</code></td>
+                        <td><code>.warning.alert</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>error</code></td>
+                        <td><code>.error.alert</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>.dark.alert</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Sizes</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>small</code></td>
+                        <td><code>.small.alert</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>large</code></td>
+                        <td><code>.large.alert</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://codeforms.github.io/Punica-CSS-Framework/assets/build/js/prism.js"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 1024px) {
+                .sidebar {
+                    position: relative !important;
+                    top: auto !important;
+                    width: 100% !important;
+                    z-index: 0;
+                }
+                .main-container {
+                    flex-direction: column !important;                
+                }
+                .content-container,
+                .main-container {
+                    margin: 0 !important;
+                }
+                .navbar .section .dark.tab {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                }
+                .navbar .section .dark.tab > .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </body>
+</html>
