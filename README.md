@@ -20,7 +20,7 @@ Punica's API-based structure allows you to create or customize a CSS framework t
 ### TODO List
 - [x] Default Theme
 - [ ] Default Dark Theme (95%)
-- [ ] Documentation (90%)
+- [x] Documentation
 - [ ] API Documentation (0%)
 - [ ] Starter Templates (65%)
 - [ ] Themes (0%)
