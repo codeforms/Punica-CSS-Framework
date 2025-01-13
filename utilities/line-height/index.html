@@ -524,6 +524,35 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="shadowless small panel mt-70 border-grey border-top-10 border-bottom-6 radius-12">
+        <div class="header border-dashed">
+            <span class="title">utilities.scss API</span>
+        </div>
+        <div class="content reset">
+            <script type="text/plain" class="language-scss m-0 borderless">
+                'line-height': (
+                    'enabled'    : true, // true or false
+                    'property'   : 'line-height', // css property name (don't change it !)
+                    'prefix'     : 'leading-', // prefix of class name
+                    'specificity': !important, // or null
+                    'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
+                    'args'       : null, // for extra variables
+                    'variables'  : (
+                        (1, 1), // none
+                        (3, .75rem), // 12px
+                        (4, 1rem), // 16px
+                        (5, 1.25rem), // 20px
+                        (6, 1.5rem), // 24px
+                        (7, 1.75rem), // 28px
+                        (8, 2rem), // 32px
+                        (9, 2.25rem), // 36px
+                        (10, 2.5rem) // 40px
+                    )
+                )
+            </script>
+        </div>
+    </div>
 </div>
     </div>
                             </div>

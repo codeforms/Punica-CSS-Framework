@@ -510,6 +510,38 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="shadowless small panel mt-70 border-grey border-top-10 border-bottom-6 radius-12">
+        <div class="header border-dashed">
+            <span class="title">utilities.scss API</span>
+        </div>
+        <div class="content reset">
+            <script type="text/plain" class="language-scss m-0 borderless">
+                'background-position': (
+                    'enabled'    : true, // true or false
+                    'property'   : 'background-position', // css property name (don't change it !)
+                    'prefix'     : 'bg-', // prefix of class name
+                    'specificity': !important, // or null
+                    'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
+                    'args'       : null, // for extra variables
+                    'variables'  : (
+                        // class name (suffix), value
+                        ("left", left),
+                        ("left-top", left top),
+                        ("left-center", left center),
+                        ("left-bottom", left bottom),
+                        ("right", right),
+                        ("right-top", right top),
+                        ("right-center", right center),
+                        ("right-bottom", right bottom),
+                        ("center", center),
+                        ("center-top", center top),
+                        ("center-bottom", center bottom)
+                    )
+                )
+            </script>
+        </div>
+    </div>
 </div>
     </div>
                             </div>

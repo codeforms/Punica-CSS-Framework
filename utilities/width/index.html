@@ -694,6 +694,53 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="shadowless small panel mt-70 border-grey border-top-10 border-bottom-6 radius-12">
+        <div class="header border-dashed">
+            <span class="title">utilities.scss API</span>
+        </div>
+        <div class="content reset">
+            <script type="text/plain" class="language-scss m-0 borderless">
+                'width': (
+                    'enabled'    : true, // true or false
+                    'property'   : 'width', // css property name (don't change it !)
+                    'prefix'     : 'width-', // prefix of class name
+                    'specificity': !important, // or null
+                    'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
+                    'args'       : null, // for extra variables
+                    'variables'  : (
+                        // class name (suffix), value
+                        ("min-content", min-content),
+                        ("max-content", max-content),
+                        ("fit-content", fit-content),
+                        (10, 0.625rem), // 10px
+                        (20, 1.25rem), // 20px
+                        (30, 1.875rem), // 30px
+                        (40, 2.5rem), // 40px
+                        (50, 3.125rem), // 50px
+                        (60, 3.75rem), // 60px
+                        (70, 4.375rem), // 70px
+                        (80, 5rem), // 80px
+                        (100, 6.25rem), // 100px
+                        (160, 10rem), // 160px
+                        (200, 12.5rem), // 200px
+                        (240, 15rem), // 240px
+                        (280, 17.5rem), // 280px
+                        (320, 20rem), // 320px
+                        (400, 25rem), // 400px
+                        (480, 30rem), // 480px
+                        (560, 35rem), // 560px
+                        (640, 40rem), // 640px
+                        (720, 45rem), // 720px
+                        (800, 50rem), // 800px
+                        (1200, 75rem), // 1200px
+                        (1400, 87.5rem), // 1400px
+                        (1600, 100rem), // 1600px
+                    )
+                )
+            </script>
+        </div>
+    </div>
 </div>
     </div>
                             </div>

@@ -518,6 +518,39 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="shadowless small panel mt-70 border-grey border-top-10 border-bottom-6 radius-12">
+        <div class="header border-dashed">
+            <span class="title">utilities.scss API</span>
+        </div>
+        <div class="content reset">
+            <script type="text/plain" class="language-scss m-0 borderless">
+                'font-size': (
+                    'enabled'    : true, // true or false
+                    'property'   : 'font-size', // css property name (don't change it !)
+                    'prefix'     : 'text-', // prefix of class name
+                    'specificity': !important, // or null
+                    'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
+                    'args'       : null, // for extra variables
+                    'variables'  : (
+                        // class name (suffix), value
+                        ("mini", 60%),
+                        ("tiny", 73%),
+                        ("small", 85%),
+                        ("medium", 110%),
+                        ("large", 120%),
+                        ("larger", 145%),
+                        ("largest", 170%),
+                        ("big", 200%),
+                        ("bigger", 225%),
+                        ("biggest", 250%),
+                        ("huge", 350%),
+                        ("giant", 450%)
+                    )
+                )
+            </script>
+        </div>
+    </div>
 </div>
     </div>
                             </div>

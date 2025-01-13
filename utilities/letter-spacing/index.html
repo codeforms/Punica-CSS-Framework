@@ -478,6 +478,34 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="shadowless small panel mt-70 border-grey border-top-10 border-bottom-6 radius-12">
+        <div class="header border-dashed">
+            <span class="title">utilities.scss API</span>
+        </div>
+        <div class="content reset">
+            <script type="text/plain" class="language-scss m-0 borderless">
+                'letter-spacing': (
+                    'enabled'    : true, // true or false
+                    'property'   : 'letter-spacing', // css property name (don't change it !)
+                    'prefix'     : 'letter-', // prefix of class name
+                    'specificity': !important, // or null
+                    'unit'       : rem, // length/angle units (px, rem, em, %, vh, vw etc)
+                    'args'       : null, // for extra variables
+                    'variables'  : (
+                        // class name (suffix), value
+                        ("tightest", -0.094), // -1.5px
+                        ("tighter", -0.063), // -1px
+                        ("tight", -0.031), // -0.5px
+                        ("normal", 0),
+                        ("wide", 0.031), // 0.5px
+                        ("wider", 0.063), // 1px
+                        ("widest", 0.094) // 1.5px
+                    )
+                )
+            </script>
+        </div>
+    </div>
 </div>
     </div>
                             </div>

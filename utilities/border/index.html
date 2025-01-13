@@ -892,6 +892,43 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="shadowless small panel mt-70 border-grey border-top-10 border-bottom-6 radius-12">
+        <div class="header border-dashed">
+            <span class="title">utilities.scss API</span>
+        </div>
+        <div class="content reset">
+            <script type="text/plain" class="language-scss m-0 borderless">
+                'border':(
+                    'enabled'    : true, // true or false
+                    'property'   : 'border', // css property name (don't change it !)
+                    'prefix'     : 'border', // prefix of class name
+                    'specificity': !important, // or null
+                    'unit'       : rem, // length/angle units (px, rem, em, %, vh, vw etc)
+                    'args'       : (
+                        // suffix, value
+                        (0, 0), // 0
+                        (1, 0.063), // 1px
+                        (2, 0.125), // 2px
+                        (3, 0.188), // 3px
+                        (4, 0.25), // 4px
+                        (5, 0.313), // 5px
+                        (6, 0.375), // 6px
+                        (8, 0.5), // 8px
+                        (10, 0.625) // 10px
+                    ),
+                    'variables': (
+                        // infix, property
+                        ("-", border-width)
+                        ("-top-", border-top-width)
+                        ("-right-", border-right-width)
+                        ("-bottom-", border-bottom-width)
+                        ("-left-", border-left-width)
+                    )
+                )
+            </script>
+        </div>
+    </div>
 </div>
     </div>
                             </div>

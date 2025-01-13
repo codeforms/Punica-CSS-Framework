@@ -494,6 +494,36 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="shadowless small panel mt-70 border-grey border-top-10 border-bottom-6 radius-12">
+        <div class="header border-dashed">
+            <span class="title">utilities.scss API</span>
+        </div>
+        <div class="content reset">
+            <script type="text/plain" class="language-scss m-0 borderless">
+                'outline-color': (
+                    'enabled'    : true, // true or false
+                    'property'   : 'outline-color', // css property name (don't change it !)
+                    'prefix'     : 'outline-', // prefix of class name
+                    'specificity': !important, // or null
+                    'unit'       : null, // length/angle units (px, rem, em, %, vh, vw etc)
+                    'args'       : null, // for extra variables
+                    'variables'  : (
+                        // class name (suffix), value
+                        ("grey", color.$grey),
+                        ("white", white),
+                        ("black", black),
+                        ("text", theme('color', 'text')),
+                        ("primary", theme('color', 'primary')),
+                        ("success", theme('color', 'success')),
+                        ("warning", theme('color', 'warning')),
+                        ("error", theme('color', 'error')),
+                        ("dark", theme('color', 'dark'))
+                    )
+                )
+            </script>
+        </div>
+    </div>
 </div>
     </div>
                             </div>
