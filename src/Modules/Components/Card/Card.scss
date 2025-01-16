@@ -145,7 +145,8 @@
 					flex: inherit;
 					.#{class('card', 'title')},
 					.#{class('card', 'description')} {
-						padding: components('card', 'padding');
+						//padding: components('card', 'padding');
+						padding: calc(#{components('card', 'padding')} / 2) calc(#{components('card', 'padding')} * 3);
 					}
 					.#{class('card', 'description')} {
 						flex: 1;
@@ -167,6 +168,12 @@
 		@if features('components', 'card', 'horizontal') {
 			.#{class('card', 'name')}.#{class('card', 'horizontal')} {
 				flex-direction: column;
+				>.#{class('card', 'body')} {
+					.#{class('card', 'title')},
+					.#{class('card', 'description')} {
+						padding: components('card', 'padding');
+					}
+				}
 			}
 		}
 	}
