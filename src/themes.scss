@@ -61,10 +61,10 @@ $themes: (
 			'success'   : #369138,
 			'warning'   : #c17f2a,
 			'error'     : #CC2B52,
-			'dark'      : #393644
+			'dark'      : #29292f
 		),
 		'border': (
-			'color' : #373a48,
+			'color' : #454859,
 			'width' : 1px,
 			'style' : solid,
 			'radius': 2px,
@@ -97,7 +97,7 @@ $themes: (
 			'navbar': (
 				'background-color': lighten(#222226, 2.5%),
 				'input': (
-					'background-color': #2f2f35
+					'background-color': #29292f
 				),
 				'menu': (
 					'background-color': lighten(#222226, 2.5%),
@@ -115,7 +115,7 @@ $themes: (
 			),
 			'form': (
 				'input': (
-					'background-color': #2e2d33
+					'background-color': #28282d
 				)
 			),
 			'typography': (

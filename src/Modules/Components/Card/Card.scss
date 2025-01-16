@@ -145,7 +145,7 @@
 					flex: inherit;
 					.#{class('card', 'title')},
 					.#{class('card', 'description')} {
-						padding: calc(#{components('card', 'padding')} / 2) calc(#{components('card', 'padding')} * 3);
+						padding: components('card', 'padding');
 					}
 					.#{class('card', 'description')} {
 						flex: 1;
