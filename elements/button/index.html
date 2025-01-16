@@ -70,23 +70,23 @@
         </div>
     </div>
     <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
-                <li class="item" id="button">
-            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button#button" class="py-0 active border-left-4 border-dark transparent weight-bold">
+                <li class="item" id="0">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button#0" class="py-0 active border-left-4 border-dark transparent weight-bold">
                 <span class="color-text-lighten-20">Button</span> 
             </a>
         </li>
-                <li class="item" id="form">
-            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/form#form" class="py-0 ">
+                <li class="item" id="1">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/form#1" class="py-0 ">
                 <span class="color-text-lighten-20">Form</span> 
             </a>
         </li>
-                <li class="item" id="grid">
-            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/grid#grid" class="py-0 ">
+                <li class="item" id="2">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/grid#2" class="py-0 ">
                 <span class="color-text-lighten-20">Grid</span> 
             </a>
         </li>
-                <li class="item" id="table">
-            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/table#table" class="py-0 ">
+                <li class="item" id="3">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/table#3" class="py-0 ">
                 <span class="color-text-lighten-20">Table</span> 
             </a>
         </li>
@@ -170,10 +170,14 @@
 
         <div class="content">
             <script type="text/plain" class="language-markup">
-		<button class="button"></button>
-		<a class="primary button"></a>
-		<div class="preloader button">Text</div>
-        </script>
+            <button class="button"></button>
+            <button class="active button"></button>
+            <a class="primary button"></a>
+            <div class="preloader button">Text</div>
+            <button class="disabled button"></button>
+            <button class="inactive button"></button>
+            <button class="rounded button"></button>
+            </script>
         </div>
 
         <!-- BUTTON SIZES -->
@@ -239,13 +243,13 @@
                     <div class="button inactive">254</div>
                 </div>
                 <div class="buttons mini ml-20">
-                    <a href="javascript:" class="button error">
+                    <a href="javascript:" class="button">
                         <i class="material-symbols-outlined">thumb_up</i>
                     </a>
                     <div class="button inactive">276</div>
                 </div>
                 <div class="buttons mini ml-20">
-                    <a href="javascript:" class="button primary">
+                    <a href="javascript:" class="button">
                         <i class="material-symbols-outlined">lock</i>
                     </a>
                     <div class="button inactive">63</div>
@@ -274,17 +278,9 @@
                 <a class="button" href="javascript:">1</a>
                 <a class="button active" href="javascript:">2</a>
                 <a class="button" href="javascript:">3</a>
-                <div class="dropdown top right">
-                    <a tabindex="0" class="button toggle">
-                        <span class="material-symbols-outlined">keyboard_arrow_up</span>
-                    </a>
-                    <ul class="small menu">
-                        <div class="title">Per Page</div>
-                        <li class="item"><a href="#">10 items</a></li>
-                        <li class="item"><a href="#">20 items</a></li>
-                        <li class="item"><a href="#">30 items</a></li>
-                    </ul>
-                </div>
+                <a class="inactive button">
+                    ...
+                </a>
                 <a class="button" href="javascript:">56</a>
                 <a class="button" href="javascript:">57</a>
                 <a class="button" href="javascript:">58</a>
