@@ -16,6 +16,10 @@ If you want to quickly add the Punica CSS to your project, you can use the JsDel
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica.min.css" crossorigin="anonymous">
 ```
+for Default Dark Theme;
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica-dark.min.css" crossorigin="anonymous">
+```
 ### HTML Markup
 For your default setup, add the Punica CSS file to the <head> element of your HTML5 document.
 ```html
@@ -47,7 +51,7 @@ Punica's API-based structure allows you to create or customize a CSS framework t
 
 ### TODO List
 - [x] Default Theme
-- [ ] Default Dark Theme (testing)
+- [x] Default Dark Theme
 - [x] Documentation
 - [ ] API Documentation (0%)
 - [ ] Starter Templates (65%)

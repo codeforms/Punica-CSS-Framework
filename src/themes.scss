@@ -61,7 +61,7 @@ $themes: (
 			'success'   : #369138,
 			'warning'   : #c17f2a,
 			'error'     : #CC2B52,
-			'dark'      : #29292f
+			'dark'      : #39414f
 		),
 		'border': (
 			'color' : #454859,
@@ -96,9 +96,6 @@ $themes: (
 			),
 			'navbar': (
 				'background-color': lighten(#222226, 2.5%),
-				'input': (
-					'background-color': #29292f
-				),
 				'menu': (
 					'background-color': lighten(#222226, 2.5%),
 				)

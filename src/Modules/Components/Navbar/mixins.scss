@@ -51,14 +51,15 @@
 	}
 
 	.#{class('button', 'group')} {
-		.#{class('button', 'name')} {
-			color: $text-color;
+		.#{class('button', 'name')},
+		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+			color     : $text-color;
 			min-height: 100%;
 			i {
 				color: $text-color;
 			}
 			&:hover {
-				background: darken($bg-color, 5%);
+				background: lighten($bg-color, 5%);
 			}
 		}
 	}
@@ -72,8 +73,8 @@
 		div.#{class('navbar', 'section')} {
 			input[type='text'] {
 				background-color: $input-bg;
-				border-color: $input-border-color;
-				color: $input-color;
+				border-color    : $input-border-color;
+				color           : $input-color;
 				&::placeholder {
 					color: $text-color;
 				}
@@ -86,12 +87,12 @@
 				.#{class('button', 'dropdown')} .#{class('button', 'name')} {
 					&:active,
 					&.#{class('button', 'active')} {
-						color: $text-color;
-						background: darken($bg-color, 5%);
-						transition: components('button', 'transition');
+						color           : $text-color;
+						background-color: lighten($bg-color, 5%);
+						transition      : components('button', 'transition');
 						&:hover {
-							transition: components('button', 'transition');
-							background: darken($bg-color, 7%);
+							transition      : components('button', 'transition');
+							//background-color: darken($bg-color, 7%);
 						}
 					}
 				}

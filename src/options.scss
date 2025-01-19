@@ -499,13 +499,17 @@ $options: (
 			'font-size'       : 1rem,
 			'color'           : theme('color', 'text'),
 			'font-weight'     : bold,
-			'background-color': #fff,
+			'background-color': white,
 			'width'           : 100%,
 			'min-height'      : 5rem,
 			'button'          : (
 				'padding': .935rem 1.4rem,
 				'icon'   : (
 					'color': theme('color', 'text')
+				),
+				'hover': (
+					'color'           : theme('color', 'text'),
+					'background-color': color.$grey
 				),
 				'active': (
 					'color'           : theme('color', 'text'),
@@ -531,7 +535,7 @@ $options: (
 			),
 			'input': (
 				'color'           : theme('color', 'text'),
-				'background-color': white,
+				'background-color': transparent,
 				'border-color'    : theme('border', 'color'),
 				'border-width'    : theme('border', 'width'),
 				'focus'           : (
@@ -559,7 +563,7 @@ $options: (
 				(
 					"primary", // theme name (class)
 					theme('color', 'primary'), // bg color
-					white, // text color
+					white, // text/button color
 					darken(theme('color', 'primary'), 7%), // input bg
 					white, // input color
 					lighten(theme('color', 'primary'), 4%), // input border color
@@ -568,7 +572,7 @@ $options: (
 				(
 					"dark", // theme name (class)
 					theme('color', 'dark'), // bg color
-					white, // text color
+					white, // text/button color
 					lighten(theme('color', 'dark'), 7%), // input bg
 					white, // input color
 					lighten(theme('color', 'dark'), 25.75%), // input border color
@@ -1081,7 +1085,7 @@ $options: (
 				'font-family'     : inherit,
 				'box-sizing'      : inherit,
 				'color'           : inherit,
-				'background-color': initial,
+				'background-color': transparent,
 				'border-color'    : inherit,
 				'height'          : initial,
 				'padding'         : .7rem .5rem,
