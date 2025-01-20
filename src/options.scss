@@ -271,6 +271,9 @@ $options: (
 			'horizontal': (
 				'margin-bottom': 1rem
 			),
+			'hover': (
+				'background-color': darken(theme('color', 'background'), 4%)
+			),
 			'columns': (
 				// maximum number of cards in a single row (default : 2 through 12)
 				// class name, value
@@ -582,19 +585,19 @@ $options: (
 			'sizes': (
 				(
 					"mini", // size name (class)
-					2.813rem, // min-height
+					2.813rem, // min-height (45px)
 					.875rem, // button font-size
 					.445rem .9rem, // button padding
 			    ),
 			    (
 					"small", // size name (class)
-					4.063rem, // min-height
+					4.063rem, // min-height (65px)
 					.945rem, // button font-size
 					.65rem 1.2rem, // button padding
 			    ),
 			    (
 					"large", // size name (class)
-					5.938rem, // min-height
+					5.938rem, // min-height (95px)
 					1.08rem, // button font-size
 					.845rem 1.4rem, // button padding
 			    )
@@ -1354,6 +1357,12 @@ $options: (
 			),
 			'small': (
 				'font-size': 80%
+			),
+			'code': (
+				'color'      : theme('color', 'error'),
+				'white-space': nowrap,
+				'padding'    : 2px 6px,
+				'font-size'  : 1em
 			),
 			'header': (
 				'margin-top'   : 0,

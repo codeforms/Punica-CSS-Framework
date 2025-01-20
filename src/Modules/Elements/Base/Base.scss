@@ -195,10 +195,10 @@ pre {
 :not(pre)>code, 
 :not(pre)>kbd, 
 :not(pre)>samp {
-	color      : theme('color', 'error');
-	white-space: nowrap;
-	padding    : 2px 6px;
-	font-size  : 1em;
+	color      : elements('typography', 'code', 'color');
+	white-space: elements('typography', 'code', 'white-space');
+	padding    : elements('typography', 'code', 'padding');
+	font-size  : elements('typography', 'code', 'font-size');
 }
 [hidden],
 .hidden {

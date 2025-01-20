@@ -56,7 +56,7 @@
 		// hover effect for single card only
 		@if features('components', 'card', 'hovered') {
 			&.#{class('card', 'hovered')}:hover {
-				background-color: darken(components('card', 'background-color'), 4%);
+				background-color: components('card', 'hover', 'background-color');
 				transition      : components('card', 'transition');
 			}
 		}

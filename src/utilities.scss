@@ -285,6 +285,7 @@ $utilities: (
 	/// can have from one to four variables.
 	///
 	/// @example border-primary
+	/// @example border-color (default border color)
 	/// 
 	'border-color': (
 		'enabled'    : true, // true or false
@@ -295,14 +296,16 @@ $utilities: (
 		'args'       : null, // for extra variables
 		'variables'  : (
 			// class name (suffix), value
-			("grey", color.$grey),
 			("white", white),
 			("black", black),
-			("dark", theme('color', 'dark')),
+			("grey", color.$grey),
+			("color", theme('border', 'color')),
+			("text", theme('color', 'text')),
 			("primary", theme('color', 'primary')),
 			("success", theme('color', 'success')),
 			("warning", theme('color', 'warning')),
-			("error", theme('color', 'error'))
+			("error", theme('color', 'error')),
+			("dark", theme('color', 'dark'))
 		)
 	),
 	///
