@@ -30,8 +30,8 @@ $themes: (
 			'primary'   : #3266ec,
 			'success'   : #369138,
 			'warning'   : #c17f2a,
-			'error'     : #CC2B52,
-			'dark'      : #393644
+			'error'     : #bd3254,
+			'dark'      : #39414f
 		),
 		'border': (
 			'color' : #cbd3db,
@@ -60,7 +60,7 @@ $themes: (
 			'primary'   : #3266ec,
 			'success'   : #369138,
 			'warning'   : #c17f2a,
-			'error'     : #CC2B52,
+			'error'     : #bd3254,
 			'dark'      : #39414f
 		),
 		'border': (
@@ -121,9 +121,6 @@ $themes: (
 					'hover': (
 						'color': lighten(#5580ff, 3%)
 					)
-				),
-				'code': (
-					'color': #bd3254
 				)
 			)
 		),
