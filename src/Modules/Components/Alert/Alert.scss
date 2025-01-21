@@ -21,6 +21,7 @@
 			border       : components('alert', 'border');
 			border-radius: components('alert', 'border-radius');
 			line-height  : components('alert', 'line-height');
+			text-align   : components('alert', 'text-align');
 			a {
 				color          : components('alert', 'href', 'color');
 				text-decoration: components('alert', 'href', 'text-decoration');

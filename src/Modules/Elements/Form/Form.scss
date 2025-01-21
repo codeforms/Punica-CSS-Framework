@@ -73,6 +73,10 @@
 		margin-bottom: elements('form', 'legend', 'margin-bottom');
 		white-space  : elements('form', 'legend', 'white-space');
 	}
+	select option {
+		color           : elements('form', 'input', 'color');
+		background-color: elements('form', 'input', 'background-color');
+	}
 	input:disabled {
 	  opacity: .59;
 	}

@@ -5,14 +5,7 @@
   "homepage"   : "https://github.com/codeforms/Punica-CSS-Framework",
   "author"     : "Fatih Keçeci",
   "license"    : "MIT",
-  "keywords"   : [
-    "css",
-    "framework",
-    "sass",
-    "responsive",
-    "customizable",
-    "multi-theme"
-  ],
+  "keywords"   : ["css", "framework", "sass", "responsive", "customizable", "api-driven", "multi-theme"],
   "scripts": {
     "prod"          : "sass src/punica.scss dist/punica.min.css --no-source-map --style compressed",
     "unminify"      : "sass src/punica.scss dist/punica.css --no-source-map",
@@ -20,6 +13,6 @@
     "watch"         : "npm run prod -- -w"
   },
   "dependencies": {
-    "sass": "1.83.0"
+    "sass": "1.83.4"
   }
 }
