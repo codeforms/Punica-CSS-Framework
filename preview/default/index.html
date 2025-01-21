@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Default Theme - Punica CSS Framework v3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@latest/dist/punica.min.css" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="fixed shadowed navbar">
+        <div class="container">
+
+            <!-- responsive hamburger menu -->
+            <input type="checkbox" id="burger">
+            <label for="burger" class="burger"></label>
+            <!-- /responsive hamburger menu-->
+
+            <section class="brand width-300 mr-100">
+                <a href="https://codeforms.github.io/Punica-CSS-Framework/" target="_blank">
+                    Punica CSS Framework
+                </a>
+            </section>
+            <section class="links">
+                <div class="divided section justify-content-flex-end flex-initial">
+                    <div class="buttons">
+                        <a href="javascript:" class="button">Item</a>
+                        <div class="bottom dropdown">
+                            <a class="toggle button" tabindex="0">
+                                Dropdown <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="javascript:">Lorem ipsum dolor</a></li>
+                                <li class="item"><a href="javascript:" class="active">Lorem ipsum dolor</a></li>
+                            </ul>
+                        </div>
+                        <a href="javascript:" class="active button">Active</a>
+                    </div>
+                </div>
+                <div class="divided section justify-content-flex-end">
+                    <div class="form">
+                        <div class="group">
+                            <input type="text" name="query" placeholder="search..." id="query">
+                            <button class="button">
+                                <i class="material-symbols-outlined">search</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="bottom right dropdown">
+                            <a class="toggle button" tabindex="0">
+                                Dropdown <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                            </a>
+                            <ul class="menu">
+                                <li class="item"><a href="javascript:">Lorem ipsum dolor</a></li>
+                                <li class="item"><a href="javascript:">Lorem ipsum dolor</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="javascript:" class="primary button radius-500 ml-10">Button</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <div class="container-xxl mt-80">
+        <div class="row">
+            <div class="col-16">
+
+                <div class="borderless shadowless panel bg-color-darken-5 px-50 py-125">
+                    <div class="borderless header flex-direction-column align-items-flex-start leading-1">
+                        <div class="text-big">
+                            Welcome To
+                        </div>
+                        <div class="text-giant weight-bold">
+                            Punica CSS v3
+                        </div>
+                    </div>
+                    <div class="content pt-5">
+                        <p class="text-balance text-large">
+                            Punica CSS Framework is a clean, lightweight, responsive, modern,
+                            and fully customizable <span class="text-underline">API-driven framework</span> built with
+                            SASS/SCSS,
+                            offering multi-theme support.
+                        </p>
+                        <p>
+                            <span class="weight-700">View on <a href="https://github.com/codeforms/Punica-CSS-Framework"
+                                    target="_blank">Github</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="small divided caption mt-40">
+                    Default Theme
+                </div>
+
+                <div class="pure panel">
+                    <div class="content overflow-x-auto">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50%;">Info</th>
+                                    <th>Default Variable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Font Family</td>
+                                    <td>
+                                        <a href="https://fonts.google.com/specimen/Inter+Tight" target="_blank" class="weight-700">
+                                            Inter Tight
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Font Size</td>
+                                    <td><code>1rem</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Font Weight</td>
+                                    <td><code>400</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Line Height</td>
+                                    <td><code>1.7</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- GRID -->
+                <div class="pure panel">
+                    <div class="header">
+                        <span class="h3">Grid</span>
+                    </div>
+                    <div class="content">
+                        <div class="container">
+                            <div class="row m-2 gap-8 weight-bold">
+                                <div class="col-lg-1 col-sm-16 col-xs-16 bordered p-10">1</div>
+                                <div class="col-lg-15 col-sm-16 col-xs-16 bordered p-10">15</div>
+                                <div class="col-lg-2 col-sm-16 col-xs-16 bordered p-10">2</div>
+                                <div class="col-lg-14 col-sm-16 col-xs-16 bordered p-10">14</div>
+                                <div class="col-lg-3 col-sm-16 col-xs-16 bordered p-10">3</div>
+                                <div class="col-lg-13 col-sm-16 col-xs-16 bordered p-10">13</div>
+                                <div class="col-lg-4 col-sm-16 col-xs-16 bordered p-10">4</div>
+                                <div class="col-lg-12 col-sm-16 col-xs-16 bordered p-10">12</div>
+                                <div class="col-lg-5 col-sm-16 col-xs-16 bordered p-10">5</div>
+                                <div class="col-lg-11 col-sm-16 col-xs-16 bordered p-10">11</div>
+                                <div class="col-lg-6 col-sm-16 col-xs-16 bordered p-10">6</div>
+                                <div class="col-lg-10 col-sm-16 col-xs-16 bordered p-10">10</div>
+                                <div class="col-lg-7 col-sm-16 col-xs-16 bordered p-10">7</div>
+                                <div class="col-lg-9 col-sm-16 col-xs-16 bordered p-10">9</div>
+                                <div class="col-lg-8 col-sm-16 col-xs-16 bordered p-10">8</div>
+                                <div class="col-lg-8 col-sm-16 col-xs-16 bordered p-10">8</div>
+                                <div class="col-lg-9 col-sm-16 col-xs-16 bordered p-10">9</div>
+                                <div class="col-lg-7 col-sm-16 col-xs-16 bordered p-10">7</div>
+                                <div class="col-lg-10 col-sm-16 col-xs-16 bordered p-10">10</div>
+                                <div class="col-lg-6 col-sm-16 col-xs-16 bordered p-10">6</div>
+                                <div class="col-lg-11 col-sm-16 col-xs-16 bordered p-10">11</div>
+                                <div class="col-lg-5 col-sm-16 col-xs-16 bordered p-10">5</div>
+                                <div class="col-lg-12 col-sm-16 col-xs-16 bordered p-10">12</div>
+                                <div class="col-lg-4 col-sm-16 col-xs-16 bordered p-10">4</div>
+                                <div class="col-lg-13 col-sm-16 col-xs-16 bordered p-10">13</div>
+                                <div class="col-lg-3 col-sm-16 col-xs-16 bordered p-10">3</div>
+                                <div class="col-lg-14 col-sm-16 col-xs-16 bordered p-10">14</div>
+                                <div class="col-lg-2 col-sm-16 col-xs-16 bordered p-10">2</div>
+                                <div class="col-lg-15 col-sm-16 col-xs-16 bordered p-10">15</div>
+                                <div class="col-lg-1 col-sm-16 col-xs-16 bordered p-10">1</div>
+                                <div class="col-16 bordered p-10">16</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content mt-30">
+                        <div class="row text-center gap-8">
+                            <div class="col-lg-4 offset-lg-2 col-xs-16 bordered p-10">
+                                col-lg-4 offset-lg-2
+                            </div>
+                            <div class="col-lg-4 offset-lg-12 col-xs-16 bordered p-10">
+                                col-lg-4 offset-lg-12
+                            </div>
+                            <div class="col-md-6 offset-md-6 col-xs-16 bordered p-10">
+                                col-md-4 offset-md-6
+                            </div>
+                            <div class="col-lg-4 offset-lg-2 col-xs-16 bordered p-10">
+                                col-lg-4 offset-lg-2
+                            </div>
+                            <div class="col-sm-4 offset-sm-12 col-xs-16 bordered p-10">
+                                col-sm-4 offset-sm-12
+                            </div>
+                            <div class="col-lg-2 offset-lg-2 col-xs-16 bordered p-10">
+                                col-lg-2 <br> offset-lg-2
+                            </div>
+                            <div class="col-lg-2 offset-lg-6 col-xs-16 bordered p-10">
+                                col-lg-2 <br> offset-lg-6
+                            </div>
+                            <div class="col-lg-2 offset-lg-10 col-xs-16 bordered p-10">
+                                col-lg-2 <br> offset-lg-10
+                            </div>
+                            <div class="col-lg-2 offset-lg-14 col-xs-16 bordered p-10">
+                                col-lg-2 <br> offset-lg-14
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TYPOGRAPHY -->
+                <div class="pure panel">
+                    <div class="header">
+                        <span class="h3">Typography</span>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-lg-5 col-sm-16 col-xs-16">
+                                <h1>Heading H1</h1>
+                                <h2>Heading H2</h2>
+                                <h3>Heading H3</h3>
+                                <h4>Heading H4</h4>
+                                <h5>Heading H5</h5>
+                                <h6>Heading H6</h6>
+                            </div>
+                            <div class="col-lg-5 col-sm-16 col-xs-16">
+                                <h3>Example Title</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, quo in nibh <a href="#"
+                                        class="weight-bold">mediocritatem</a> concludaturque. Aeque consectetuer nam
+                                    ut, ad appetere ocurreret mea. Nec an facilis torquatos. Pro te ferri
+                                    <code>democritum</code> inciderint.
+                                </p>
+                                <p>
+                                    Quis inani virtute vim cu, ad debet tincidunt mea. Audire mentitum deleniti has ex,
+                                    sea veri omnis ut. Pri eu enim prodesset abhorreant.
+                                </p>
+                            </div>
+                            <div class="col-lg-5 col-sm-16 col-xs-16">
+                                <div class="p-40">
+                                    <blockquote>
+                                        <p>Learning never exhausts the mind.</p>
+                                        <cite>- Leonardo da Vinci</cite>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLE -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Table</div>
+                    </div>
+                    <div class="content overflow-x-auto">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Table Heading</th>
+                                    <th>Table Heading</th>
+                                    <th>Table Heading</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                </tr>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                </tr>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="content overflow-x-auto">
+                        <table class="striped table">
+                            <caption>This is my table caption</caption>
+                            <thead>
+                                <tr>
+                                    <th>Table Heading</th>
+                                    <th>Table Heading</th>
+                                    <th>Table Heading</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                </tr>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                </tr>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="content overflow-x-auto">
+                        <table class="hovered table">
+                            <thead>
+                                <tr>
+                                    <th>Table Heading</th>
+                                    <th>Table Heading</th>
+                                    <th>Table Heading</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td class="center align">
+                                        <div class="shadowless mini buttons">
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">edit</i>
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">delete</i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td class="center align">
+                                        <div class="shadowless mini buttons">
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">edit</i>
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">delete</i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td class="center align">
+                                        <div class="shadowless mini buttons">
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">edit</i>
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">delete</i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Active Table Row</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td class="center align">
+                                        <div class="shadowless mini buttons">
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">edit</i>
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">delete</i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td class="center align">
+                                        <div class="shadowless mini buttons">
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">edit</i>
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">delete</i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td>Table Data</td>
+                                    <td class="center align">
+                                        <div class="shadowless mini buttons">
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">edit</i>
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined">delete</i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--LIST -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">HTML Lists</div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-lg-5 col-xs-16 col-sm-16">
+                                <h6>Unordered list</h6>
+                                <ul>
+                                    <li>list item 1</li>
+                                    <li>list item 2
+                                        <ul>
+                                            <li>list item 2.1</li>
+                                            <li>list item 2.2</li>
+                                            <li>list item 2.3</li>
+                                        </ul>
+                                    </li>
+                                    <li>list item 3</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-xs-16 col-sm-16">
+                                <h6>Ordered list</h6>
+                                <ol>
+                                    <li>list item 1</li>
+                                    <li>list item 2
+                                        <ol>
+                                            <li>list item 2.1</li>
+                                            <li>list item 2.2</li>
+                                            <li>list item 2.3</li>
+                                        </ol>
+                                    </li>
+                                    <li>list item 3</li>
+                                </ol>
+                            </div>
+                            <div class="col-lg-5 col-xs-16 col-sm-16">
+                                <h6>Description List</h6>
+                                <dl>
+                                    <dt>Coffee</dt>
+                                    <dd>- black hot drink</dd>
+                                    <dt>Milk</dt>
+                                    <dd>- white cold drink</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--FORM -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Form</div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-lg-8 col-xs-16 col-xs-16">
+                                <div class="form">
+                                    <div class="item">
+                                        <label for="name1">Name</label>
+                                        <input type="text" name="name1" placeholder="name..." id="name1">
+                                        <small>This is my description</small>
+                                    </div>
+                                    <!-- two items -->
+                                    <div class="two items">
+                                        <div class="item">
+                                            <label for="x">Name</label>
+                                            <input id="x" name="x" type="text">
+                                            <small>This is my description</small>
+                                        </div>
+                                        <div class="item">
+                                            <label for="y">Surname</label>
+                                            <input type="text" id="y" name="text">
+                                            <small>This is my description</small>
+                                        </div>
+                                    </div>
+                                    <!-- input group -->
+                                    <div class="item">
+                                        <label>Full Name</label>
+                                        <div class="group">
+                                            <input type="text" name="name">
+                                            <input type="text" name="surname">
+                                            <button class="button primary">Submit</button>
+                                        </div>
+                                        <small>This is my description</small>
+                                    </div>
+                                    <div class="item">
+                                        <label>Select</label>
+                                        <select name="selection">
+                                            <option value="">Select...</option>
+                                            <option value="hello">Hello there!</option>
+                                        </select>
+                                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit</small>
+                                    </div>
+                                    <div class="item">
+                                        <label for="address">Address</label>
+                                        <textarea name="address" id="address"></textarea>
+                                        <small>This is my description</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-xs-16 col-xs-16">
+                                <div class="form">
+                                    <div class="item">
+                                        <label for="firstname">Warning</label>
+                                        <input type="text" name="warning" placeholder="four items" id="warning"
+                                            class="warning" value="Invalid">
+                                        <small class="color-warning">This is my description</small>
+                                    </div>
+                                    <div class="item">
+                                        <label for="firstname">Error</label>
+                                        <input type="text" name="error" placeholder="four items" id="error"
+                                            class="error" value="Invalid">
+                                        <small class="color-error">This is my description</small>
+                                    </div>
+                                    <div class="item">
+                                        <label for="middle">Success</label>
+                                        <input type="text" name="success" placeholder="four items" id="success"
+                                            class="success" value="Valid">
+                                        <small class="color-success">This is my description</small>
+                                    </div>
+                                    <div class="item">
+                                        <div class="radio">
+                                            <input id="abc" name="letters" type="radio" checked>
+                                            <label for="abc">ABC</label>
+                                        </div>
+                                        <div class="radio ml-30">
+                                            <input id="xyz" name="letters" type="radio">
+                                            <label for="xyz">XYZ</label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="checkbox">
+                                            <input id="email" name="notification-email" type="checkbox" checked>
+                                            <label for="email">Notification email.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAVBAR -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <span class="h3">Navbar</span>
+                    </div>
+                    <!-- mini navbar-->
+                    <div class="content">
+                        <header class="mini shadowed bordered navbar">
+                            <div class="container">
+                                <section class="brand">
+                                    <a href="javascript:">
+                                        Mini
+                                    </a>
+                                </section>
+                                <section class="links">
+                                    <div class="divided section justify-content-flex-end">
+                                        <div class="buttons">
+                                            <a href="javascript:" class="button">Developers</a>
+                                            <div class="dropdown bottom right large">
+                                                <a class="button toggle" tabindex="0">
+                                                    Documentation <i
+                                                        class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                </a>
+                                                <ul class="menu">
+                                                    <li class="item"><a href="javascript:">Lorem ipsum dolor</a>
+                                                    </li>
+                                                    <li class="item"><a href="javascript:">Lorem ipsum dolor</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined text-larger">person</i>
+                                            </a>
+                                        </div>
+                                        <a href="javascript:" class="button primary radius-500 ml-10">Signin</a>
+                                    </div>
+                                </section>
+                            </div>
+                        </header>
+                    </div>
+                    <!-- small navbar-->
+                    <div class="content">
+                        <header class="small shadowed bordered navbar">
+                            <div class="container">
+                                <section class="brand mr-50">
+                                    <a href="javascript:">
+                                        Small
+                                    </a>
+                                </section>
+                                <section class="links ml-50">
+                                    <div class="divided section">
+                                        <div class="buttons">
+                                            <a href="javascript:" class="button">Home</a>
+                                            <div class="dropdown">
+                                                <a class="button toggle" tabindex="0">
+                                                    Features <i
+                                                        class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                </a>
+                                                <ul class="menu">
+                                                    <li class="item"><a href="javascript:">Lorem ipsum dolor</a>
+                                                    </li>
+                                                    <li class="item"><a href="javascript:">Lorem ipsum dolor</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="javascript:" class="button">Pricing</a>
+                                        </div>
+                                    </div>
+                                    <div class="divided section">
+                                        <div class="buttons">
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined text-larger">person</i>
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined text-larger">settings</i>
+                                            </a>
+                                        </div>
+                                        <a href="javascript:" class="button primary radius-500 ml-10">Signin</a>
+                                    </div>
+                                </section>
+                            </div>
+                        </header>
+                    </div>
+                    <!-- primary navbar-->
+                    <div class="content">
+                        <header class="primary shadowed navbar">
+                            <div class="container">
+                                <section class="brand mr-50">
+                                    <a href="javascript:">
+                                        Primary
+                                    </a>
+                                </section>
+                                <section class="links ml-50">
+                                    <div class="divided section justify-content-center">
+                                        <div class="buttons">
+                                            <a href="javascript:" class="button">Home</a>
+                                            <div class="dropdown">
+                                                <a class="button toggle" tabindex="0">
+                                                    Features <i
+                                                        class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                </a>
+                                                <ul class="menu">
+                                                    <li class="item"><a href="javascript:">Lorem ipsum dolor</a>
+                                                    </li>
+                                                    <li class="item"><a href="javascript:">Lorem ipsum dolor</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="javascript:" class="button">Pricing</a>
+                                        </div>
+                                    </div>
+                                    <div class="divided section flex-initial">
+                                        <div class="buttons">
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined text-larger">deployed_code</i>
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined text-larger">settings</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </header>
+                    </div>
+                    <!-- large navbar-->
+                    <div class="content">
+                        <header class="large shadowed bordered dark navbar">
+                            <div class="container">
+                                <section class="brand">
+                                    <a href="javascript:">
+                                        Dark
+                                    </a>
+                                </section>
+                                <section class="links">
+                                    <div class="divided section justify-content-flex-end">
+                                        <div class="buttons">
+                                            <a href="javascript:" class="button">Developers</a>
+                                            <div class="bottom right dropdown">
+                                                <a class="toggle button" tabindex="0">
+                                                    Documentation <i
+                                                        class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                </a>
+                                                <ul class="menu">
+                                                    <li class="item"><a href="javascript:">Lorem ipsum dolor</a>
+                                                    </li>
+                                                    <li class="item"><a href="javascript:">Lorem ipsum dolor</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="javascript:" class="button">
+                                                <i class="material-symbols-outlined text-larger">person</i>
+                                            </a>
+                                        </div>
+                                        <a href="javascript:" class="button primary radius-500 ml-10">Signin</a>
+                                    </div>
+                                </section>
+                            </div>
+                        </header>
+                    </div>
+                </div>
+
+                <!-- BUTTON -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <span class="h3">Buttons</span>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-16">
+                                <div class="pure panel">
+                                    <div class="content pb-5">
+                                        <div class="button">Default</div>
+                                        <div class="active button">Active</div>
+                                        <div class="disabled button">Disabled</div>
+                                        <div class="inactive button">Inactive</div>
+                                        <div class="preloader button">Preloader</div>
+                                        <div class="rounded button">Rounded</div>
+                                    </div>
+                                    <div class="content pt-0 pb-5">
+                                        <button class="primary button">Button</button>
+                                        <div class="primary outlined button">Outlined</div>
+                                        <a class="primary active button">Active</a>
+                                        <div class="primary disabled button">Disabled</div>
+                                        <div class="primary inactive button">Inactive</div>
+                                        <div class="primary rounded button">Rounded</div>
+                                    </div>
+                                    <div class="content pt-0 pb-5">
+                                        <button class="success button">Button</button>
+                                        <div class="success outlined button">Outlined</div>
+                                        <a class="success active button">Active</a>
+                                        <div class="success disabled button">Disabled</div>
+                                        <div class="success inactive button">Inactive</div>
+                                        <div class="success rounded button">Rounded</div>
+                                    </div>
+                                    <div class="content pt-0 pb-5">
+                                        <button class="warning button">Button</button>
+                                        <div class="warning outlined button">Outlined</div>
+                                        <a class="warning active button">Active</a>
+                                        <div class="warning disabled button">Disabled</div>
+                                        <div class="warning inactive button">Inactive</div>
+                                        <div class="warning rounded button">Rounded</div>
+                                    </div>
+                                    <div class="content pt-0 pb-5">
+                                        <button class="error button">Button</button>
+                                        <div class="error button outlined">Outlined</div>
+                                        <a class="error button active">Active</a>
+                                        <div class="error disabled button">Disabled</div>
+                                        <div class="error inactive button">Inactive</div>
+                                        <div class="error rounded button">Rounded</div>
+                                    </div>
+                                    <div class="content pt-0">
+                                        <button class="dark button">Button</button>
+                                        <div class="dark outlined button">Outlined</div>
+                                        <a class="active dark button">Active</a>
+                                        <div class="dark disabled button">Disabled</div>
+                                        <div class="dark inactive button">Inactive</div>
+                                        <div class="dark rounded button">Rounded</div>
+                                    </div>
+                                    <div class="content">
+                                        <a class="tiny button mr-5">Tiny</a>
+                                        <a class="mini button mr-5">Mini</a>
+                                        <a class="small button mr-5">Small</a>
+                                        <a class="button mr-5">Default</a>
+                                        <a class="large button mr-5">Large</a>
+                                        <a class="huge button">Huge</a>
+                                        <p></p>
+                                        <a class="block button">Block Button</a>
+                                    </div>
+                                    <div class="content">
+                                        <div class="block buttons">
+                                            <a href="javascript:" class="button">
+                                                Button
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                Button
+                                            </a>
+                                            <a href="javascript:" class="button">
+                                                Button
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="buttons">
+                                            <button class="button">
+                                                Button
+                                            </button>
+                                            <a href="javascript:" class="active button">
+                                                Button
+                                            </a>
+                                            <button class="button">
+                                                Button
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="buttons">
+                                            <div class="dropdown">
+                                                <a tabindex="0" class="toggle button">
+                                                    Default Dropdown <i
+                                                        class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                </a>
+                                                <ul class="menu">
+                                                    <li class="item"><a href="#">Dropdown 1</a></li>
+                                                    <li class="item"><a href="#">Dropdown 2</a></li>
+                                                    <li class="item"><a href="#">Dropdown 3</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="buttons ml-20">
+                                            <div class="clickable dropdown">
+                                                <a tabindex="0" class="toggle button">
+                                                    Clickable Dropdown <i
+                                                        class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                                                </a>
+                                                <ul class="small menu">
+                                                    <li class="item"><a href="#">Dropdown 1</a></li>
+                                                    <li class="item"><a href="#">Dropdown 2</a></li>
+                                                    <li class="item"><a href="#">Dropdown 3</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="small buttons ml-20">
+                                            <div class="button">Small Dropdown</div>
+                                            <div class="dropdown right bottom">
+                                                <a tabindex="0" class="button toggle">
+                                                    <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                </a>
+                                                <ul class="small menu">
+                                                    <li class="item"><a href="#">Dropdown 1</a></li>
+                                                    <li class="item"><a href="#">Dropdown 2</a></li>
+                                                    <li class="item"><a href="#">Dropdown 3</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="mini buttons mr-20">
+                                            <div class="primary button">
+                                                <i class="material-symbols-outlined mr-5">drafts</i> Mini
+                                            </div>
+                                            <div class="inactive button">254</div>
+                                            <div class="right top dropdown">
+                                                <a tabindex="0" class="toggle button">
+                                                    <i class="material-symbols-outlined">keyboard_arrow_up</i>
+                                                </a>
+                                                <ul class="small menu">
+                                                    <li class="item"><a href="#">Dropdown 1</a></li>
+                                                    <li class="item"><a href="#">Dropdown 2</a></li>
+                                                    <li class="item"><a href="#">Dropdown 3</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="mini buttons mr-20">
+                                            <a href="javascript:" class="primary outlined button">
+                                                <i class="material-symbols-outlined">edit</i>
+                                            </a>
+                                            <a href="javascript:" class="primary outlined button">
+                                                <i class="material-symbols-outlined">clear</i>
+                                            </a>
+                                        </div>
+                                        <div class="mini buttons">
+                                            <div class="top left dropdown">
+                                                <a tabindex="0" class="toggle button">
+                                                    <i class="material-symbols-outlined">keyboard_arrow_up</i>
+                                                </a>
+                                                <ul class="small menu">
+                                                    <li class="item"><a href="#">Dropdown 1</a></li>
+                                                    <li class="item"><a href="#">Dropdown 2</a></li>
+                                                    <li class="item"><a href="#">Dropdown 3</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="inactive button">254</div>
+                                            <div class="button">
+                                                <i class="material-symbols-outlined">drafts</i>
+                                            </div>
+                                        </div>
+                                        <div class="primary mini buttons ml-20">
+                                            <div class="dropdown">
+                                                <a tabindex="0" class="toggle button">
+                                                    <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                </a>
+                                                <ul class="small menu">
+                                                    <li class="item"><a href="#">Dropdown 1</a></li>
+                                                    <li class="item"><a href="#">Dropdown 2</a></li>
+                                                    <li class="item"><a href="#">Dropdown 3</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="inactive button">254</div>
+                                            <div class="button">
+                                                <i class="material-symbols-outlined">drafts</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="mini buttons">
+                                            <a class="button" href="javascript:">
+                                                <span class="material-symbols-outlined">keyboard_arrow_left</span>
+                                            </a>
+                                            <a class="button" href="javascript:">1</a>
+                                            <a class="active button" href="javascript:">2</a>
+                                            <a class="button" href="javascript:">3</a>
+                                            <a class="inactive button">
+                                                ...
+                                            </a>
+                                            <a class="button" href="javascript:">56</a>
+                                            <a class="button" href="javascript:">57</a>
+                                            <a class="button" href="javascript:">58</a>
+                                            <a class="button" href="javascript:">
+                                                <span class="material-symbols-outlined">keyboard_arrow_right</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="tiny vertical buttons">
+                                            <button class="button">
+                                                <i class="material-symbols-outlined">group_work</i>
+                                            </button>
+                                            <button class="button">
+                                                <i class="material-symbols-outlined">verified_user</i>
+                                            </button>
+                                            <button class="button">
+                                                <i class="material-symbols-outlined">settings</i>
+                                            </button>
+                                        </div>
+                                        <div class="small vertical success buttons ml-30">
+                                            <button class="button">
+                                                <i class="material-symbols-outlined">group_work</i>
+                                            </button>
+                                            <button class="button">
+                                                <i class="material-symbols-outlined">verified_user</i>
+                                            </button>
+                                            <button class="button">
+                                                <i class="material-symbols-outlined">settings</i>
+                                            </button>
+                                        </div>
+                                        <div class="vertical warning buttons ml-30">
+                                            <button class="button">
+                                                <i class="material-symbols-outlined">group_work</i>
+                                            </button>
+                                            <div class="left dropdown">
+                                                <a tabindex="0" class="toggle button">
+                                                    <i class="material-symbols-outlined mr-5">keyboard_arrow_left</i>
+                                                    <i class="material-symbols-outlined">verified_user</i>
+                                                </a>
+                                                <ul class="menu">
+                                                    <li class="item"><a href="#">Dropdown 1</a></li>
+                                                    <li class="item"><a href="#">Dropdown 2</a></li>
+                                                    <li class="item"><a href="#">Dropdown 3</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="right dropdown">
+                                                <a tabindex="0" class="toggle button">
+                                                    <i class="material-symbols-outlined">settings</i> <i
+                                                        class="material-symbols-outlined ml-5">keyboard_arrow_right</i>
+                                                </a>
+                                                <ul class="menu">
+                                                    <li class="item"><a href="#">Dropdown 1</a></li>
+                                                    <li class="item"><a href="#">Dropdown 2</a></li>
+                                                    <li class="item"><a href="#">Dropdown 3</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--MENU -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Menu</div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-16 col-xs-16 col-lg-8">
+                                <div class="menu">
+                                    <div class="title">Menu</div>
+                                    <div class="item">
+                                        <a href="javascript:" class="active">
+                                            Active Menu Item
+                                        </a>
+                                    </div>
+                                    <div class="disabled item">
+                                        <a href="javascript:">
+                                            Disabled Menu Item
+                                        </a>
+                                        <div class="warning badge">
+                                            63
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            Notifications
+                                        </a>
+                                        <div class="badge">
+                                            85
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-16 col-xs-16 col-lg-8">
+                                <div class="divided menu">
+                                    <div class="title">Divided Menu</div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            <i class="material-symbols-outlined">person</i> My profile
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            <i class="material-symbols-outlined">email</i> Mail
+                                        </a>
+                                        <div class="badge">
+                                            63
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            <i class="material-symbols-outlined">notifications_active</i> Notifications
+                                        </a>
+                                        <div class="primary badge">
+                                            85
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-16 col-xs-16 col-lg-8">
+                                <div class="pure divided menu">
+                                    <div class="title">Pure Menu</div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            <i class="material-symbols-outlined">person</i> My profile
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="javascript:" class="active">
+                                            <i class="material-symbols-outlined">email</i> Mail
+                                        </a>
+                                        <div class="dark badge">
+                                            63
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            <i class="material-symbols-outlined">notifications_active</i> Notifications
+                                        </a>
+                                        <div class="dark badge">
+                                            85
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-16 col-xs-16 col-lg-8">
+                                <div class="pure small menu">
+                                    <div class="title">Pure Small Menu</div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            <i class="material-symbols-outlined">person</i> My profile
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            <i class="material-symbols-outlined">email</i> Mail
+                                        </a>
+                                        <div class="badge dark">
+                                            63
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="javascript:">
+                                            <i class="material-symbols-outlined">notifications_active</i> Notifications
+                                        </a>
+                                        <div class="badge dark">
+                                            85
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--PANEL -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Panel</div>
+                    </div>
+                    <div class="content">
+                        <div class="panel">
+                            <div class="header">
+                                <div class="title">Title</div>
+                                <div class="actions">Actions</div>
+                            </div>
+                            <div class="content">
+                                <div class="headline">
+                                    Headline
+                                </div>
+                                <p>Content</p>
+                            </div>
+                            <div class="bottom">
+                                Bottom
+                                <div class="actions">
+                                    Actions
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8 col-xs-16 col-sm-16">
+                                <div class="mini panel">
+                                    <div class="dashed header">
+                                        <div class="title">Mini Panel</div>
+                                        <div class="actions">Actions</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="headline">
+                                            Headline
+                                        </div>
+                                        <p>Content</p>
+                                    </div>
+                                    <div class="bottom">
+                                        Bottom
+                                        <div class="actions">Actions</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-sm-16 col-xs-16">
+                                <div class="small panel">
+                                    <div class="dashed header">
+                                        <div class="title">Small Panel</div>
+                                        <div class="actions">Actions</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="headline">
+                                            Headline
+                                        </div>
+                                        <p>Content</p>
+                                    </div>
+                                    <div class="bottom">
+                                        Bottom
+                                        <div class="actions">Actions</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-xs-16 col-sm-16 offset-lg-2">
+                                <div class="panel">
+                                    <div class="header">
+                                        <div class="title">Panel with Media</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="headline">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </div>
+                                        <p>
+                                            Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal
+                                            <code>integre</code> est cu, sea tacimates
+                                            percipitur adversarium ei,
+                                            justo volumus assentior cu nec. Ut facilisi consequat duo, te ius eleifend
+                                            sadipscing scriptorem.
+                                        </p>
+                                        <div class="media">
+                                            <svg class="bd-placeholder-img card-img-top" width="100%"
+                                                height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                                                aria-label="Placeholder: Image cap"
+                                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                                <title>Placeholder</title>
+                                                <rect width="100%" height="100%" fill="#868e96"></rect><text
+                                                    x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-16 col-xs-16 offset-lg-10">
+                                <div class="pure panel">
+                                    <div class="header">
+                                        <div class="title">Pure Panel with Photos</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="headline">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </div>
+                                        <div class="three media">
+                                            <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg"></div>
+                                            <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg"></div>
+                                            <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg"></div>
+                                            <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg"></div>
+                                            <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg"></div>
+                                            <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/06.jpg"></div>
+                                        </div>
+                                        <p>
+                                            Eam insolens elaboraret in, sumo habeo nec ne. Dicta animal
+                                            <code>integre</code> est cu, sea tacimates
+                                            percipitur adversarium ei,
+                                            justo volumus assentior cu nec. Ut facilisi consequat duo, te ius eleifend
+                                            sadipscing scriptorem.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Card</div>
+                    </div>
+                    <div class="content">
+                        <div class="four hovered cards">
+                            <div class="card border-primary border-2">
+                                <div class="zoom-in media">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                                </div>
+                                <div class="title">
+                                    <div class="h6">Punica CSS v3</div>
+                                    <div class="subtitle">API-Driven Framework</div>
+                                </div>
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat
+                                    temporibus vix, ei probo velit debitis eos.
+                                </div>
+                                <div class="actions">
+                                    <div class="small shadowless block buttons">
+                                        <button class="button">Button</button>
+                                        <button class="dark button">Button</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="title">
+                                    <div class="h6">Punica CSS v3</div>
+                                    <div class="subtitle">API-Driven Framework</div>
+                                </div>
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat
+                                    temporibus vix, ei probo velit debitis eos.
+                                </div>
+                                <div class="actions">
+                                    <div class="small shadowless block buttons">
+                                        <button class="button">Button</button>
+                                        <button class="dark button">Button</button>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                                </div>
+                            </div>
+                            <div class="card border-error border-2">
+                                <div class="two media">
+                                    <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg"></div>
+                                    <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg"></div>
+                                    <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg"></div>
+                                    <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg"></div>
+                                </div>
+                                <div class="title">
+                                    <div class="h6">Punica CSS v3</div>
+                                    <div class="subtitle">API-Driven Framework</div>
+                                </div>
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat
+                                    temporibus vix, ei probo
+                                    velit debitis eos.Te vidisse cotidieque est, in adhuc honestatis his. Vel et clita
+                                    oporteat, nam in
+                                    quaeque ocurreret.
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="title">
+                                    <div class="h6">Punica CSS v3</div>
+                                    <div class="subtitle">API-Driven Framework</div>
+                                </div>
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, eam ut singulis vituperata, ut aliquid consequat
+                                    temporibus vix, ei probo
+                                    velit debitis eos.Te vidisse cotidieque est, in adhuc honestatis his. Vel et clita
+                                    oporteat, nam in
+                                    quaeque ocurreret.
+                                </div>
+                                <div class="two media">
+                                    <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg"></div>
+                                    <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg"></div>
+                                    <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/06.jpg"></div>
+                                    <div><img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content mb-0 mt-50 mb-50">
+                        <div class="horizontal card">
+                            <div class="two media">
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg">
+                                </a>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg">
+                                </a>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/06.jpg">
+                                </a>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                                </a>
+                            </div>
+                            <div class="body">
+                                <div class="title">
+                                    <div class="h4">Punica CSS v3</div>
+                                    <div class="subtitle">API-Driven Framework</div>
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, his harum mediocrem euripidis at, in mutat legere
+                                        vim, et vel aeque
+                                        vitae
+                                        abhorreant. Id simul omnesque efficiantur pro.
+                                    </p>
+
+                                    <div class="shadowless mini buttons">
+                                        <button class="button">
+                                            <i class="material-symbols-outlined">account_circle</i>
+                                        </button>
+                                        <button class="button">
+                                            <i class="material-symbols-outlined">anchor</i>
+                                        </button>
+                                        <button class="button">
+                                            <i class="material-symbols-outlined">api</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="horizontal hovered card">
+                            <div class="zoom-in media">
+                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg">
+                            </div>
+                            <div class="body">
+                                <div class="title">
+                                    <div class="h4">Punica CSS v3</div>
+                                    <div class="subtitle">API-Driven Framework</div>
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, his harum mediocrem euripidis at, in mutat legere
+                                        vim, et vel aeque vitae abhorreant. Id simul omnesque efficiantur pro.
+                                    </p>
+
+                                    <div class="shadowless mini buttons">
+                                        <button class="button">
+                                            <i class="material-symbols-outlined">account_circle</i>
+                                        </button>
+                                        <button class="button">
+                                            <i class="material-symbols-outlined">anchor</i>
+                                        </button>
+                                        <button class="button">
+                                            <i class="material-symbols-outlined">api</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--PROCESS -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Process</div>
+                    </div>
+                    <div class="content">
+                        <div class="process mt-70">
+                            <div class="item">
+                                <a href="javascript:">Planning</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Design</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Content</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Coding</a>
+                            </div>
+                            <div class="active item">
+                                <a href="javascript:">Testing</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Maintenance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="process mt-70">
+                            <div class="item">
+                                <a href="javascript:">Planning</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Design</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Content</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Coding</a>
+                            </div>
+                            <div class="failed item">
+                                <a href="javascript:">Testing</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Maintenance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content pt-0">
+                        <div class="vertical process">
+                            <div class="item">
+                                <a href="javascript:">Planning</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Design</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Content</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Coding</a>
+                            </div>
+                            <div class="active item">
+                                <a href="javascript:">Testing</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Maintenance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content pt-0">
+                        <div class="vertical reversed process">
+                            <div class="item">
+                                <a href="javascript:">Planning</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Design</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Content</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Coding</a>
+                            </div>
+                            <div class="failed item">
+                                <a href="javascript:">Testing</a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:">Maintenance</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--TABNAV -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Tabnav</div>
+                    </div>
+                    <div class="content">
+                        <div class="tab">
+                            <div class="button">Item</div>
+                            <div class="active button">Active <span class="badge small primary ml-10">45</span></div>
+                            <div class="disabled button">Disabled</div>
+                            <div class="spacer"></div>
+                            <div class="buttons">
+                                <div class="button">
+                                    <i class="material-symbols-outlined mr-5">add</i> Add
+                                </div>
+                                <div class="bottom right dropdown">
+                                    <a tabindex="0" class="active toggle button">
+                                        Options <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                                    </a>
+                                    <ul class="menu">
+                                        <li class="item"><a href="#">Options 1</a></li>
+                                        <li class="item"><a href="#">Options 2</a></li>
+                                        <li class="item"><a href="#">Options 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="bottom error tab">
+                            <div class="button">Item</div>
+                            <div class="button active">Active</div>
+                            <div class="disabled button">Disabled</div>
+                            <div class="spacer"></div>
+                            <div class="buttons">
+                                <div class="button">
+                                    <i class="material-symbols-outlined mr-5">add</i> Add
+                                </div>
+                                <div class="top right dropdown">
+                                    <a tabindex="0" class="active toggle button">
+                                        Options <i class="material-symbols-outlined ml-5">keyboard_arrow_up</i>
+                                    </a>
+                                    <ul class="menu">
+                                        <li class="item"><a href="#">Options 1</a></li>
+                                        <li class="item"><a href="#">Options 2</a></li>
+                                        <li class="item"><a href="#">Options 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="centered tab">
+                            <a href="javascript:" class="active button">
+                                <i class="material-symbols-outlined">panorama_wide_angle</i>
+                            </a>
+                            <a href="javascript:" class="button">
+                                <i class="material-symbols-outlined">edit_location_alt</i>
+                            </a>
+                            <a href="javascript:" class="button">
+                                <i class="material-symbols-outlined">mail</i>
+                            </a>
+                            <a href="javascript:" class="button">
+                                <i class="material-symbols-outlined">shopping_cart</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="centered tab">
+                            <div class="button">Email</div>
+                            <div class="active button">Notifications <span class="small primary badge ml-10">45</span>
+                            </div>
+                            <div class="button">Privacy</div>
+                            <div class="button">Account Info</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--TIMELINE -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Timeline</div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-16 col-xs-16 col-lg-6">
+                                <div class="timeline">
+                                    <div class="item">
+                                        <div class="type">
+                                            <i class="material-symbols-outlined">lock</i>
+                                        </div>
+                                        <div class="date">12.12.2020</div>
+                                        <div class="author">John Doe,</div>
+                                        <div class="body">
+                                            Te vidisse cotidieque est, in adhuc honestatis his.
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="primary type">
+                                            <i class="material-symbols-outlined">lock</i>
+                                        </div>
+                                        <div class="date">12.12.2020</div>
+                                        <div class="author">Jane Doe,</div>
+                                        <div class="body">
+                                            Te vidisse cotidieque est, in adhuc honestatis his.
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="success type">
+                                            <i class="material-symbols-outlined">wifi_protected_setup</i>
+                                        </div>
+                                        <div class="body">
+                                            <a href="#1" class="weight-700">Jane Doe</a> aliquid consequat
+                                            <a href="#2">debitis eos.</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="warning type">
+                                            <i class="material-symbols-outlined">extension</i>
+                                        </div>
+                                        <div class="author">John Doe,</div>
+                                        <div class="body">
+                                            Oeehhh, that's awesome.. Me too!
+                                        </div>
+                                        <div class="date">12.12.2020</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="error type">
+                                            <i class="material-symbols-outlined">build</i>
+                                        </div>
+                                        <div class="author">Jane Doe,</div>
+                                        <div class="body">
+                                            Lorem ipsum dolor sit amet, eam ut singulis vituperata!
+                                        </div>
+                                        <div class="date">12.12.2020</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="dark type">
+                                            <i class="material-symbols-outlined">build</i>
+                                        </div>
+                                        <div class="author">John Doe,</div>
+                                        <div class="body">
+                                            Random words in front of other random words create a random sentence.
+                                        </div>
+                                        <div class="date">12.12.2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-16 col-xs-16 col-lg-6 offset-lg-9">
+                                <div class="timeline">
+                                    <div class="item">
+                                        <div class="warning type">
+                                            <i class="material-symbols-outlined">play_arrow</i>
+                                        </div>
+                                        <a href="javascript:" class="author">Youtube Video</a>
+                                        <div class="body">
+                                            Et equidem ponderum posidonium ius, eu eum modo dictas <a
+                                                href="javascript:">impetus</a>. Omnes voluptaria ea nam, vis ut ullum
+                                            hendrerit.
+                                        </div>
+                                        <div class="date">2 hours ago</div>
+                                        <div class="media">
+                                            <iframe width="560" height="315"
+                                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen=""></iframe>
+                                        </div>
+                                        <div class="actions">
+                                            <div class="shadowless tiny buttons">
+                                                <button class="borderless button">
+                                                    <i class="material-symbols-outlined">thumb_up</i>
+                                                </button>
+                                                <button class="button borderless inactive">256K</button>
+                                            </div>
+                                            <div class="shadowless tiny buttons ml-10">
+                                                <button class="borderless button">
+                                                    <i class="material-symbols-outlined color-error">favorite</i>
+                                                </button>
+                                                <button class="borderless inactive button">130</button>
+                                            </div>
+                                            <div class="shadowless tiny buttons ml-10">
+                                                <button class="borderless button">
+                                                    <i class="material-symbols-outlined">mode_comment</i>
+                                                </button>
+                                                <button class="borderless inactive button">47</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="success type">
+                                            <i class="material-symbols-outlined">photo</i>
+                                        </div>
+                                        <div class="author">Two Photo Columns</div>
+                                        <div class="body">
+                                            Et equidem ponderum posidonium ius, eu eum modo dictas impetus. Omnes
+                                            voluptaria ea nam, vis ut ullum hendrerit.
+                                        </div>
+                                        <div class="date">2 weeks ago</div>
+                                        <div class="two media">
+                                            <div>
+                                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                                            </div>
+                                            <a href="">
+                                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg">
+                                            </a>
+                                            <a href="">
+                                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg">
+                                            </a>
+                                            <a href="">
+                                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CAPTION -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Caption</div>
+                    </div>
+                    <div class="content">
+                        <div class="small caption">
+                            Lorem ipsum, <a href="javascript:">dolor sit</a> amet consectetur adipisicing elit. Fuga
+                            delectus
+                            commodi illo dolore, officia ratione?
+                        </div>
+                        <div class="divided caption">
+                            Lorem ipsum, <a href="javascript:">dolor sit</a> amet consectetur adipisicing elit. Fuga
+                            delectus
+                            commodi illo dolore, officia ratione?
+                        </div>
+                        <div class="large caption">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. <a href="javascript:">Fuga
+                                delectus</a>
+                            commodi illo dolore, officia ratione?
+                        </div>
+                    </div>
+                </div>
+
+                <!--BREADCRUMB -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Breadcrumb</div>
+                    </div>
+                    <div class="content">
+                        <div class="small breadcrumb">
+                            <a href="javascript:" class="item">Punica</a>
+                            <a href="javascript:" class="item">Components</a>
+                            <a href="javascript:" class="active item">Breadcrumb</a>
+                        </div><br>
+                        <div class="breadcrumb">
+                            <a href="javascript:" class="item">Punica</a>
+                            <a href="javascript:" class="item">Components</a>
+                            <a href="javascript:" class="active item">Breadcrumb</a>
+                        </div><br>
+                        <div class="large breadcrumb">
+                            <a href="javascript:" class="item">Punica</a>
+                            <a href="javascript:" class="item">Components</a>
+                            <a href="javascript:" class="active item">Breadcrumb</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--ALERT -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Alert</div>
+                    </div>
+                    <div class="content">
+                        <div class="alert">Lorem ipsum dolor sit amet.</div>
+                        <div class="primary alert">Lorem ipsum dolor sit amet.</div>
+                        <div class="success alert">Lorem ipsum dolor sit amet.</div>
+                        <div class="warning alert">Lorem ipsum dolor sit amet.</div>
+                        <div class="error alert">Lorem ipsum dolor sit amet.</div>
+                        <div class="dark alert">Lorem ipsum dolor sit <a href="javascript:">amet</a>.</div>
+                    </div>
+                    <div class="content">
+                        <div class="small alert">Small</div>
+                        <div class="alert">Default</div>
+                        <div class="large alert">Large</div>
+                    </div>
+                </div>
+
+                <!--LABEL -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Label</div>
+                    </div>
+                    <div class="content">
+                        <span class="label">Default</span>
+                        <div class="primary label">Primary</div>
+                        <div class="success label">Success</div>
+                        <div class="warning label">Warning</div>
+                        <div class="error label">Error</div>
+                        <div class="dark label">Dark</div>
+                    </div>
+                    <div class="content">
+                        <span class="small label">Small</span>
+                        <span class="label">Default</span>
+                        <span class="large label">Large</span>
+                    </div>
+                </div>
+
+                <!--BADGE -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Badge</div>
+                    </div>
+                    <div class="content">
+                        <div class="badge">12</div>
+                        <div class="primary badge">75</div>
+                        <div class="success badge">336</div>
+                        <div class="warning badge">89567</div>
+                        <div class="error badge">59</div>
+                        <div class="dark badge">549</div>
+                    </div>
+                    <div class="content">
+                        <div class="small badge">Small</div>
+                        <div class="success badge">Default</div>
+                        <div class="large badge">Large</div>
+                    </div>
+                </div>
+
+                <!--STATS -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Stats</div>
+                    </div>
+                    <div class="content">
+                        <a href="javascript:" class="primary stats">
+                            <div class="title">Primary style</div>
+                            <div class="value">46,6K </div>
+                            <div class="subtitle">This is a subtitle.</div>
+                        </a>
+                        <div class="success stats">
+                            <div class="title">Success style</div>
+                            <div class="value">
+                                <i class="material-symbols-outlined">redeem</i> 83K
+                            </div>
+                            <div class="subtitle">This is a subtitle.</div>
+                        </div>
+                        <div class="warning stats">
+                            <div class="title">Warning style</div>
+                            <div class="value">
+                                <i class="material-symbols-outlined">surfing</i> 7K
+                            </div>
+                            <div class="subtitle">This is a subtitle.</div>
+                        </div>
+                        <div class="error stats">
+                            <div class="title">Error style</div>
+                            <div class="value">
+                                <i class="material-symbols-outlined">beenhere</i> 3.765
+                            </div>
+                            <div class="subtitle">This is a subtitle.</div>
+                        </div>
+                        <div class="dark stats">
+                            <div class="title">Dark style</div>
+                            <div class="value">
+                                <i class="material-symbols-outlined">ads_click</i> 549
+                            </div>
+                            <div class="subtitle">This is a subtitle.</div>
+                        </div>
+                        <div class="stats">
+                            <div class="title">Stats with Photo</div>
+                            <div class="value">
+                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg" class="avatar" width="30"> 15K
+                            </div>
+                            <div class="subtitle">This is a subtitle.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--TOOLTIP -->
+                <div class="pure panel mt-70">
+                    <div class="header">
+                        <div class="h3">Tooltip</div>
+                    </div>
+                    <div class="content">
+                        <div class="tooltip mr-20">
+                            <div class="button">Button</div>
+                            <span class="text">Hello World!</span>
+                        </div>
+                        <div class="tooltip button mr-20">
+                            Long Text
+                            <span class="text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                            </span>
+                        </div>
+                        <div class="tooltip">
+                            Text
+                            <span class="text">Hello World!</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="tooltip left mr-20">
+                            <div class="button">Left</div>
+                            <span class="text">Hello World!</span>
+                        </div>
+                        <div class="tooltip top mr-20">
+                            <div class="button">Top</div>
+                            <span class="text">Hello World!</span>
+                        </div>
+                        <div class="tooltip right">
+                            <div class="button">Right</div>
+                            <span class="text">Hello World!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--LIST -->
+                <div class="pure panel mt-70 mb-200">
+                    <div class="header">
+                        <div class="h3">List</div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-16 col-lg-7">
+                                <ul class="list">
+                                    <li class="item">
+                                        Lorem ipsum dolor sit amet
+                                    </li>
+                                    <li class="active item">
+                                        Lorem ipsum dolor sit amet
+                                    </li>
+                                    <li class="item">
+                                        Lorem ipsum dolor sit amet
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-16 col-lg-7 offset-lg-9">
+                                <div class="divided list">
+                                    <div class="h5">
+                                        Divided List
+                                    </div>
+                                    <div class="item">
+                                        Lorem ipsum dolor sit amet
+                                    </div>
+                                    <div class="item">
+                                        Lorem ipsum dolor sit amet
+                                    </div>
+                                    <div class="active item">
+                                        Lorem ipsum dolor sit amet
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-16 col-lg-7">
+                                <div class="striped divided list">
+                                    <div class="h5">
+                                        Striped List
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined">reorder</i>
+                                        <div class="body">
+                                            Lorem ipsum dolor sit amet
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined">reorder</i>
+                                        <div class="body">
+                                            Lorem ipsum dolor sit amet
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined">reorder</i>
+                                        <div class="body">
+                                            Lorem ipsum dolor sit amet
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined">reorder</i>
+                                        <div class="body">
+                                            Lorem ipsum dolor sit amet
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-16 col-lg-7 offset-lg-9">
+                                <div class="hovered divided list">
+                                    <div class="h5">
+                                        Hovered List
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined">reorder</i>
+                                        <div class="body">
+                                            Lorem ipsum dolor sit amet
+                                        </div>
+                                        <div class="actions">
+                                            <div class="shadowless tiny buttons">
+                                                <a href="javascript:" class="button">
+                                                    <i class="material-symbols-outlined">edit</i>
+                                                </a>
+                                                <a href="javascript:" class="button">
+                                                    <i class="material-symbols-outlined">delete</i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined">reorder</i>
+                                        <div class="body">
+                                            Lorem ipsum dolor sit amet
+                                        </div>
+                                        <div class="actions">
+                                            <div class="shadowless tiny buttons">
+                                                <a href="javascript:" class="button">
+                                                    <i class="material-symbols-outlined">edit</i>
+                                                </a>
+                                                <a href="javascript:" class="button">
+                                                    <i class="material-symbols-outlined">delete</i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined">reorder</i>
+                                        <div class="body">
+                                            Lorem ipsum dolor sit amet
+                                        </div>
+                                        <div class="actions">
+                                            <div class="shadowless tiny buttons">
+                                                <a href="javascript:" class="button">
+                                                    <i class="material-symbols-outlined">edit</i>
+                                                </a>
+                                                <a href="javascript:" class="button">
+                                                    <i class="material-symbols-outlined">delete</i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-16 col-lg-7">
+                                <div class="divided list">
+                                    <div class="item">
+                                        <i class="material-symbols-outlined cursor-move">reorder</i>
+                                        <div class="body">
+                                            <div class="small form reset">
+                                                <div class="item reset">
+                                                    <div class="group">
+                                                        <input type="text" placeholder="key...">
+                                                        <input type="text" placeholder="value...">
+                                                        <a class="error button">
+                                                            <i class="material-symbols-outlined">clear</i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined cursor-move">reorder</i>
+                                        <div class="body">
+                                            <div class="small form reset">
+                                                <div class="item reset">
+                                                    <div class="group">
+                                                        <input type="text" placeholder="key...">
+                                                        <input type="text" placeholder="value...">
+                                                        <a class="error button">
+                                                            <i class="material-symbols-outlined">clear</i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="material-symbols-outlined cursor-move">reorder</i>
+                                        <div class="body">
+                                            <div class="small form reset">
+                                                <div class="item reset">
+                                                    <div class="group">
+                                                        <input type="text" placeholder="key...">
+                                                        <input type="text" placeholder="value...">
+                                                        <a class="error button">
+                                                            <i class="material-symbols-outlined">clear</i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-16 col-lg-7 offset-lg-9">
+                                <div class="divided list">
+                                    <div class="item">
+                                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg" width="80">
+                                        <div class="body">
+                                            <a href="javascript:" class="title">Lorem ipsum dolor</a>
+                                            <span class="subtitle">Lorem ipsum dolor</span>
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                        <div class="actions">
+                                            <div class="shadowless mini buttons">
+                                                <div class="bottom right dropdown">
+                                                    <a tabindex="0" class="toggle button">
+                                                        <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                    </a>
+                                                    <ul class="small menu">
+                                                        <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                                        <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                                        <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg" width="80">
+                                        <div class="body">
+                                            <a href="javascript:" class="title">Lorem ipsum dolor</a>
+                                            <span class="subtitle">Lorem ipsum dolor</span>
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                        <div class="actions">
+                                            <div class="shadowless mini buttons">
+                                                <div class="bottom right dropdown">
+                                                    <a tabindex="0" class="toggle button">
+                                                        <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                    </a>
+                                                    <ul class="small menu">
+                                                        <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                                        <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                                        <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg" width="80">
+                                        <div class="body">
+                                            <a href="javascript:" class="title">Lorem ipsum dolor</a>
+                                            <span class="subtitle">Lorem ipsum dolor</span>
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                        <div class="actions">
+                                            <div class="shadowless mini buttons">
+                                                <div class="bottom right dropdown">
+                                                    <a tabindex="0" class="toggle button">
+                                                        <i class="material-symbols-outlined">keyboard_arrow_down</i>
+                                                    </a>
+                                                    <ul class="small menu">
+                                                        <li class="item"><a href="javascript:">Dropdown 1</a></li>
+                                                        <li class="item"><a href="javascript:">Dropdown 2</a></li>
+                                                        <li class="item"><a href="javascript:">Dropdown 3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                	
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
