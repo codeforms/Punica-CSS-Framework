@@ -28,6 +28,6 @@
 
 @use "Modules/Elements/index" as elements;
 @use "Modules/Components/index" as components;
-@use "Modules/Utilities/helpers";
+@use "Core/Utilities/handler";
 @debug "#{theme('name')} is compiled successfully.";
 $theme: null !global;

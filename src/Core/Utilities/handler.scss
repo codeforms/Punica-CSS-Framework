@@ -1,10 +1,10 @@
 ///
 /// Punica CSS Framework
-/// Utilities : Helpers
+/// Utilities : Handler
 ///
 
-@use "../../Core/Global/Getters" as *;
-@use "../../Core/Global/Options" as *;
+@use "../Global/Getters" as *;
+@use "../Global/Options" as *;
 @use "mixins" as *;
 
 @if enabled('utilities', 'helpers') {

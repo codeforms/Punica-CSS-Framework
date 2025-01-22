@@ -5,9 +5,9 @@
 
 @use "sass:map" as map;
 @use "sass:color" as *;
-@use "../../Core/Global/Getters" as *;
-@use "../../Core/Theme/Getters" as *;
-@use "../../Core/Theme/Setters" as *;
+@use "../Global/Getters" as *;
+@use "../Theme/Getters" as *;
+@use "../Theme/Setters" as *;
 
 /// 
 /// Set default helpers
