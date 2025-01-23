@@ -272,11 +272,19 @@
 				.#{class('navbar', 'section')} {
 					padding: 0 !important;
 					margin: 0 !important;
+					>.#{class('form', 'name')} {
+						padding-top: 10px;
+						padding-bottom: 10px;
+					}
+					>.#{class('button', 'name')} {
+						display: flex;
+						width: auto;
+					}
 				}
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('button', 'name')},
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'name')} {
 					color: theme('color', 'text');
-					background: color.$grey;
+					//background: color.$grey;
 					i {
 						color         : theme('color', 'text');
 						font-size     : components('menu', 'icon', 'font-size') !important;
@@ -286,6 +294,7 @@
 				.#{class('navbar', 'section')} .#{class('button', 'group')} .#{class('button', 'dropdown')} .#{class('menu', 'name')} {
 					max-height: 100%;
 					box-shadow: none;
+					padding-top: 0;
 				}
 			}
 			@each $size-name, $min-height, $font-size, $button-padding in components('navbar', 'sizes') {
