@@ -71,6 +71,7 @@
 			color      : components('card', 'title', 'color');
 			line-height: components('card', 'title', 'line-height');
 			&>.#{class('card', 'subtitle')} {
+				font-family: components('card', 'title', 'subtitle', 'font-family');
 				@if theme('type') == 'light' {
 					color: darken(color.$grey, 20%);
 				} @else if theme('type') == 'dark' {
@@ -79,18 +80,20 @@
 			}
 		}
 		>.#{class('card', 'title')} {
-			text-align: components('card', 'title', 'text-align');
+			font-family: components('card', 'title', 'font-family');
+			text-align : components('card', 'title', 'text-align');
 		}
 		>.#{class('card', 'title')}, 
 		>.#{class('card', 'description')},
 		>.#{class('card', 'actions')} {
-			padding: components('card', 'padding');
+			padding    : components('card', 'padding');
 		}
 		>.#{class('card', 'description')} {
-			flex      : 1 1 auto;
-			color     : components('card', 'description', 'color');
-			font-size : components('card', 'description', 'font-size');
-			text-align: components('card', 'description', 'text-align');
+			flex       : 1 1 auto;
+			font-family: components('card', 'description', 'font-family');
+			color      : components('card', 'description', 'color');
+			font-size  : components('card', 'description', 'font-size');
+			text-align : components('card', 'description', 'text-align');
 		}
 		///
 		/// MEDIA

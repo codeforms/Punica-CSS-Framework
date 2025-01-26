@@ -13,10 +13,11 @@
 @if enabled('components', 'badge') {
 	.#{class('badge', 'name')} {
 		@include set-style(color.$grey, theme('color', 'text')) {
-			position       : relative;
-			display        : inline-flex;
-			justify-content: center;
-			align-items    : center;
+			position       : components('badge', 'position');
+			display        : components('badge', 'display');
+			justify-content: components('badge', 'justify-content');
+			align-items    : components('badge', 'align-items');
+			font-family    : components('badge', 'font-family');
 			font-weight    : components('badge', 'font-weight');
 			white-space    : components('badge', 'white-space');
 			border         : components('badge', 'border');

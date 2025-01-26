@@ -99,6 +99,7 @@
 				margin        : elements('form', 'label', 'margin');
 				color         : elements('form', 'label', 'color');
 				font-size     : elements('form', 'label', 'font-size');
+				font-family   : elements('form', 'label', 'font-family');
 				font-weight   : elements('form', 'label', 'font-weight');
 				text-transform: elements('form', 'label', 'text-transform');
 				height        : elements('form', 'label', 'height');
@@ -231,8 +232,11 @@
 				}
 			}
 			&>label {
-				font-weight: normal;
-				user-select: none;
+				color      : elements('form', 'radio-checkbox', 'label', 'color');
+				font-size  : elements('form', 'radio-checkbox', 'label', 'font-size');
+				font-family: elements('form', 'radio-checkbox', 'label', 'font-family');
+				font-weight: elements('form', 'radio-checkbox', 'label', 'font-weight');
+				user-select: elements('form', 'radio-checkbox', 'label', 'user-select');
 			}
 		}
 	}

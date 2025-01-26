@@ -18,6 +18,7 @@
 			text-decoration: components('breadcrumb', 'text-decoration');
 			color          : components('breadcrumb', 'color');
 			font-size      : components('breadcrumb', 'font-size');
+			font-family    : components('breadcrumb', 'font-family');
 			font-weight    : components('breadcrumb', 'font-weight');
 			&:focus,&:hover,&:active,&.active {
 				color: theme('color', 'primary');

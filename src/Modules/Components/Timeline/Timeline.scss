@@ -68,19 +68,25 @@
 			.#{class('timeline', 'media')} {
 				min-width  : 0;
 				max-width  : 100%;
-				color      : theme('color', 'text');
 				flex       : auto;
 				margin-left: 10px;
 				width      : 100%;
 			}
+			.#{class('timeline', 'body')} {
+				color      : components('timeline', 'item', 'body', 'color');
+				font-family: components('timeline', 'item', 'body', 'font-family');
+			}
 			.#{class('timeline', 'author')} {
 				font-weight: components('timeline', 'item', 'author', 'font-weight');
 				font-size  : components('timeline', 'item', 'author', 'font-size');
+				font-family: components('timeline', 'item', 'author', 'font-family');
 				color      : components('timeline', 'item', 'author', 'color');
 			}
 			.#{class('timeline', 'date')} {
-				font-size: components('timeline', 'item', 'date', 'font-size');
-				opacity  : components('timeline', 'item', 'date', 'opacity');
+				color      : components('timeline', 'item', 'date', 'color');
+				font-size  : components('timeline', 'item', 'date', 'font-size');
+				font-family: components('timeline', 'item', 'date', 'font-family');
+				opacity    : components('timeline', 'item', 'date', 'opacity');
 			}
 			///
 			/// MEDIA

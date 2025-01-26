@@ -49,12 +49,14 @@
 			>.#{class('panel', 'title')} {
 				font-size  : components('panel', 'header', 'title', 'font-size');
 				font-weight: components('panel', 'header', 'title', 'font-weight');
+				font-family: components('panel', 'header', 'title', 'font-family');
 			}
 		}
 		&>.#{class('panel', 'content')} {
-			flex   : 1 1 auto;
-			padding: components('panel', 'content', 'padding');
-			height : auto;
+			height     : auto;
+			flex       : 1 1 auto;
+			font-family: components('panel', 'content', 'font-family');
+			padding    : components('panel', 'content', 'padding');
 			///
 			/// MEDIA
 			///
@@ -79,6 +81,7 @@
 			}
 			.#{class('panel', 'headline')},
 			p.#{class('panel', 'headline')} {
+				font-family   : components('panel', 'content', 'headline', 'font-family');
 				font-size     : components('panel', 'content', 'headline', 'font-size');
 				line-height   : components('panel', 'content', 'headline', 'line-height');
 				margin-bottom : components('panel', 'content', 'headline', 'margin-bottom');

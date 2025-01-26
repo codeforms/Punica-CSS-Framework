@@ -21,6 +21,7 @@
 		caption {
 			text-align      : elements('table', 'caption', 'text-align');
 			color           : elements('table', 'caption', 'color');
+			font-family     : elements('table', 'caption', 'font-family');
 			font-size       : elements('table', 'caption', 'font-size');
 			font-weight     : elements('table', 'caption', 'font-weight');
 			padding         : elements('table', 'caption', 'padding');
@@ -80,6 +81,7 @@
 		thead tr {
 			background: transparent !important;
 			th {
+				font-family     : elements('table', 'th', 'font-family');
 				font-size       : elements('table', 'th', 'font-size');
 				font-weight     : elements('table', 'th', 'font-weight');
 				color           : elements('table', 'th', 'color');

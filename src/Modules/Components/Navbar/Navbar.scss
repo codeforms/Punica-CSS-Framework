@@ -42,11 +42,12 @@
 			}
 			a,
 			a:visited {
-				text-decoration: none;
-				color          : components('navbar', 'brand', 'href', 'color');
 				display        : flex;
-				font-size      : components('navbar', 'font-size');
-				font-weight    : components('navbar', 'brand', 'font-weight');
+				color          : components('navbar', 'brand', 'href', 'color');
+				font-family    : components('navbar', 'brand', 'href', 'font-family');
+				font-size      : components('navbar', 'brand', 'href', 'font-size');
+				font-weight    : components('navbar', 'brand', 'href', 'font-weight');
+				text-decoration: none;
 			}
 		}
 		// navbar burger

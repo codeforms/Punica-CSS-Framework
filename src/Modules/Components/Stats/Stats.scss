@@ -33,11 +33,13 @@
 			flex-direction: column;
 		}
 		>.#{class('stats', 'title')} {
-			font-size: components('stats', 'title', 'font-size');
+			font-size  : components('stats', 'title', 'font-size');
+			font-family: components('stats', 'title', 'font-family');
 		}
 		>.#{class('stats', 'subtitle')} {
-			font-size : components('stats', 'subtitle', 'font-size');
-			margin-top: components('stats', 'subtitle', 'margin-top');
+			font-size  : components('stats', 'subtitle', 'font-size');
+			font-family: components('stats', 'subtitle', 'font-family');
+			margin-top : components('stats', 'subtitle', 'margin-top');
 
 			@if theme('type') == 'light' {
 				color: darken(color.$grey, 20%);
@@ -50,6 +52,7 @@
 			align-items   : center;
 			font-weight   : components('stats', 'value', 'font-weight');
 			font-size     : components('stats', 'value', 'font-size');
+			font-family   : components('stats', 'value', 'font-family');
 			line-height   : components('stats', 'value', 'line-height');
 			>img,
 		    >i {

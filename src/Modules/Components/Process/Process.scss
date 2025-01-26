@@ -28,6 +28,7 @@
 			text-align     : components('process', 'item', 'text-align');
 			min-height     : components('process', 'min-height');
 			font-weight    : components('process', 'item', 'font-weight');
+			font-family    : components('process', 'item', 'font-family');
 			&:not(:first-child)::before {
 				content   : "";
 				left      : -50%;

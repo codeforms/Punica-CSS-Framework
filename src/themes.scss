@@ -101,9 +101,11 @@ $themes: (
 				)
 			),
 			'tooltip': (
-				'color'           : #222226,
-				'font-weight'     : 500,
-				'background-color': #e1e6ff
+				'background-color': #e1e6ff,
+				'text': (
+					'color'      : #222226,
+					'font-weight': 500,
+				)
 			)
 		),
 		'elements': (

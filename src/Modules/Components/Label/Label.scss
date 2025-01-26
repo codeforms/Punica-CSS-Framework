@@ -14,6 +14,7 @@
 	.#{class('label', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display        : components('label', 'display');
+			font-family    : components('label', 'font-family');
 			font-weight    : components('label', 'font-weight');
 			line-height    : components('label', 'line-height');
 			margin         : components('label', 'margin');
