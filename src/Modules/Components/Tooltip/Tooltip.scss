@@ -53,47 +53,47 @@
 		/// DIRECTIONS
 		///
 		@if features('components', 'tooltip', 'directions') {
-	        &.#{class('tooltip', 'left')},
-	        &.#{class('tooltip', 'right')},
-	        &.#{class('tooltip', 'top')} {
-	            &>.#{class('tooltip', 'text')} {
-	                top: auto;
-	                 &::after {
-	                    bottom: auto;
-	                 }
-	            }
-	        }
-	        &.#{class('tooltip', 'right')} {
-	            &>.#{class('tooltip', 'text')} {
-	                left: 110%;
-	                &::after {
+			&.#{class('tooltip', 'left')},
+			&.#{class('tooltip', 'right')},
+			&.#{class('tooltip', 'top')} {
+				&>.#{class('tooltip', 'text')} {
+					top: auto;
+					&::after {
+						bottom: auto;
+					}
+				}
+			}
+			&.#{class('tooltip', 'right')} {
+				&>.#{class('tooltip', 'text')} {
+					left: 110%;
+					&::after {
 						right       : 100%;
 						left        : auto;
 						border-color: transparent components('tooltip', 'background-color') transparent transparent;
-	                }
-	            }
-	        }
-	        &.#{class('tooltip', 'left')} {
-	            &>.#{class('tooltip', 'text')} {
-	                right: 110%;
-	                &::after {
+					}
+				}
+			}
+			&.#{class('tooltip', 'left')} {
+				&>.#{class('tooltip', 'text')} {
+					right: 110%;
+					&::after {
 						left        : 100%;
 						right       : auto;
 						margin      : auto -5px auto auto ;
 						border-color: transparent transparent transparent components('tooltip', 'background-color');
-	                }
-	            }
-	        }
-	        &.#{class('tooltip', 'top')} {
-	            &>.#{class('tooltip', 'text')} {
-	                bottom: 120%;
-	                &::after {
+					}
+				}
+			}
+			&.#{class('tooltip', 'top')} {
+				&>.#{class('tooltip', 'text')} {
+					bottom: 120%;
+					&::after {
 						top         : 100%;
 						border-color: components('tooltip', 'background-color') transparent transparent transparent;
-	                }
-	            }
-	        }
-        }
+					}
+				}
+			}
+		}
 		&:hover .#{class('tooltip', 'text')} {
 			visibility: visible;
 			opacity   : 1;
