@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/api/configuration">
         <title> Configuration - Punica CSS Framework v3 </title>
-        <meta name="description" content="Punica CSS Framework allows you to seamlessly modify all configuration settings through &lt;span class=&#039;color-warning&#039;&gt;3 API files&lt;/span&gt;, enabling effortless customization and recompilation for your project.">
+        <meta name="description" content="Punica CSS Framework allows you to seamlessly modify all configuration settings through &lt;span class=&#039;color-warning&#039;&gt;3 API files&lt;/span&gt; (options, utilities, and themes), enabling effortless customization and recompilation for your project.">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica-dark.min.css">
         <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
@@ -127,58 +127,52 @@
 </div>
                 </div>
                                 <main class="content-container display-flex flex-direction-column flex-1  ml-280 ">
-                    <div class="container-xxl">
+                    <div class="container-xl">
                         <div class="row">
-                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">                               
+                            <div class="col-lg-14 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">                               
                                 <main class="row position-relative">
-    <div class="col-lg-10 col-sm-16 col-xs-16">
+    <div class="col-lg-12 col-sm-16 col-xs-16">
         <div class="row py-20 height-32 radius-8 align-items-center">
             <div class="col-16 px-20 opacity-1">
-                <div class="small alert center align text-italic">
-                    API documentation is not yet complete.
-                </div>
                 <div class="display-flex align-items-center border-bottom-1">
                     <h2 class="display-flex mb-10">
                         Configuration
                     </h2>
                     <div class="spacer"></div>
                                     </div>
-                                    <div class="mt-20">Punica CSS Framework allows you to seamlessly modify all configuration settings through <span class='color-warning'>3 API files</span>, enabling effortless customization and recompilation for your project.</div>
+                                    <div class="mt-20">Punica CSS Framework allows you to seamlessly modify all configuration settings through <span class='color-warning'>3 API files</span> (options, utilities, and themes), enabling effortless customization and recompilation for your project.</div>
                             </div>
         </div>
     </div>
-    <div class="col-lg-10 col-sm-16 col-xs-16">
+    <div class="col-lg-12 col-sm-16 col-xs-16">
         <div class="pure panel reset">
-	<div class="header">
-    	<div class="h6">options.scss</div>
-    </div>
-    <div class="content">
-    	The <a href="https://codeforms.github.io/Punica-CSS-Framework/api/options">options.scss</a> API file defines the settings and options for all components and elements. It allows you to completely disable any component/element or turn off its features. You can also customize styles by adding new size or color options, renaming class names, and modifying all CSS properties for full flexibility.
+    <div class="content pt-0">
+    	The <a href="https://codeforms.github.io/Punica-CSS-Framework/api/options">options.scss</a> API file defines the settings and options for all components and elements. It allows you to completely enable/disable any component/element or turn on/off its features. You can also customize styles by adding new size or color options, renaming class names, and modifying all CSS properties for full flexibility.
     </div>
     <div class="content">
     	<script type="text/plain" class="language-scss">
+    	// options.scss
 		$options: (
 			'alert': (
 				'enabled': false,
+				'features': (
+					'styles': true,
+					'sizes' : false
+				),
 				...
     	</script>
-    </div>
-    <div class="header">
-    	<div class="h6">utilities.scss</div>
     </div>
     <div class="content">
     	The <a href="https://codeforms.github.io/Punica-CSS-Framework/api/utils">utilities.scss</a> API file provides a flexible interface for managing and customizing Punica’s utility class library. It allows you to add new utility classes, disable existing ones, and adjust predefined settings to seamlessly align with your project’s needs.
     </div>
     <div class="content">
     	<script type="text/plain" class="language-scss">
+    	// utilities.scss
 		$utilities: (
 			'accent-color': (
 				'enabled': false,
 				...
     	</script>
-    </div>
-    <div class="header">
-    	<div class="h6">themes.scss</div>
     </div>
     <div class="content">
     	You can create new themes using the <a href="https://codeforms.github.io/Punica-CSS-Framework/api/themes">themes.scss</a> API file and manage all settings in the <code>options.scss</code> and <code>utilities.scss</code> API files through your theme map. This approach allows for easy customization and flexibility, enabling you to adapt Punica to meet the specific needs of your project. By consolidating all configuration settings into <u>a single theme map</u>, you streamline the process of updating or switching between themes without the need for modifying multiple files.

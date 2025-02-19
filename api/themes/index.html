@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/api/themes">
         <title> Themes API - Punica CSS Framework v3 </title>
-        <meta name="description" content="You can create new themes using the &lt;code&gt;themes.scss&lt;/code&gt; API file and manage all settings in the &lt;code&gt;options.scss&lt;/code&gt; and &lt;code&gt;utilities.scss&lt;/code&gt; API files through your theme map. This approach allows for easy customization and flexibility, enabling you to adapt Punica to meet the specific needs of your project. &lt;br&gt;&lt;br&gt;By consolidating all configuration settings into &lt;u&gt;a single theme map&lt;/u&gt;, you streamline the process of updating or switching between themes without the need for modifying multiple files.">
+        <meta name="description" content="You can create new themes using the &lt;code&gt;themes.scss&lt;/code&gt; API file and manage all settings in the &lt;code&gt;options.scss&lt;/code&gt; and &lt;code&gt;utilities.scss&lt;/code&gt; API files through your theme map. This approach allows for easy customization and flexibility, enabling you to adapt Punica to meet the specific needs of your project. &lt;br&gt;&lt;br&gt;By consolidating all configuration settings into &lt;u&gt;a single theme map&lt;/u&gt;, you streamline the process of updating or switching between themes without the need for modifying multiple API files.">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica-dark.min.css">
         <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
@@ -127,27 +127,29 @@
 </div>
                 </div>
                                 <main class="content-container display-flex flex-direction-column flex-1  ml-280 ">
-                    <div class="container-xxl">
+                    <div class="container-xl">
                         <div class="row">
-                            <div class="col-lg-16 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">                               
+                            <div class="col-lg-14 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">                               
                                 <main class="row position-relative">
-    <div class="col-lg-10 col-sm-16 col-xs-16">
+    <div class="col-lg-12 col-sm-16 col-xs-16">
         <div class="row py-20 height-32 radius-8 align-items-center">
             <div class="col-16 px-20 opacity-1">
-                <div class="small alert center align text-italic">
-                    API documentation is not yet complete.
-                </div>
                 <div class="display-flex align-items-center border-bottom-1">
                     <h2 class="display-flex mb-10">
                         Themes API
                     </h2>
                     <div class="spacer"></div>
+                                        <div class="tiny buttons">
+                        <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/themes.scss" class="button " target="_blank">
+                            <span class="material-symbols-outlined mr-5 text-small">article</span> Source
+                        </a>
+                    </div>
                                     </div>
-                                    <div class="mt-20">You can create new themes using the <code>themes.scss</code> API file and manage all settings in the <code>options.scss</code> and <code>utilities.scss</code> API files through your theme map. This approach allows for easy customization and flexibility, enabling you to adapt Punica to meet the specific needs of your project. <br><br>By consolidating all configuration settings into <u>a single theme map</u>, you streamline the process of updating or switching between themes without the need for modifying multiple files.</div>
+                                    <div class="mt-20">You can create new themes using the <code>themes.scss</code> API file and manage all settings in the <code>options.scss</code> and <code>utilities.scss</code> API files through your theme map. This approach allows for easy customization and flexibility, enabling you to adapt Punica to meet the specific needs of your project. <br><br>By consolidating all configuration settings into <u>a single theme map</u>, you streamline the process of updating or switching between themes without the need for modifying multiple API files.</div>
                             </div>
         </div>
     </div>
-    <div class="col-lg-10 col-sm-16 col-xs-16">
+    <div class="col-lg-12 col-sm-16 col-xs-16">
         <div class="pure panel reset">
 	<div class="content pt-0">
 		<table class="hovered table mb-30">
@@ -260,6 +262,14 @@
 		        </tr>
 		    </tbody>
 		</table>
+	</div>
+    <div class="header">
+    	<div class="title">Your Custom Theme</div>
+    </div>
+    <div class="content">
+    	<p class="mb-50">
+    		In Punica, the default theme map in <code>themes.scss</code> is structured to help you create your own theme. The <code>classnames</code>, <code>components</code>, <code>elements</code>, and <code>utilities</code> keys are fully optional and can be used as needed for your project.
+		</p>
 		<script type="text/plain" class="language-scss">
 		// themes.scss
 		$themes: (
@@ -296,12 +306,131 @@
 				'components': (),
 				'elements'  : (),
 				// You can use this section to override/change the 
-				// all default utility variables in the 
-				// Modules/Utilities/index.scss API file.
+				// all default utility variables in the utilities.scss API file.
 				'utilities' : ()
 				//////////////////////////////////////////////////////////
 			)
 		)
+    	</script>
+    	<p class="my-50">
+    		If you've finished creating your theme, simply update the <code>$active-theme</code> variable in the <code>punica.scss</code> starter file with your theme's name and recompile Punica.
+    	</p>
+    	<script type="text/plain" class="language-scss">
+    	// punica.scss
+    	$active-theme: your_theme;
+    	</script>
+    </div>
+    <div class="header">
+    	<div class="title">Customization & Override</div>
+    </div>
+    <div class="content">
+    	<p>
+    		In Punica, if you want to override default settings, variables, and class names in the <code>options.scss</code> and <code>utilities.scss</code> API files, you can use the <span class="color-warning">classnames</span>, <span class="color-warning">components</span>, <span class="color-warning">elements</span>, and <span class="color-warning">utilities</span></span> keys within your theme map. These keys allow you to customize Punica's default settings and recompile it to fit your project's needs.
+    	</p>
+    </div>
+    <div class="content">
+    	If you want to change the class names of an element or component through your theme map;
+    	<script type="text/plain" class="language-scss">
+		// themes.scss
+		$themes: (
+			your_theme: (
+				..
+				..
+				'classnames': (
+					'panel': (
+						'name'    : 'box',
+						'headline': 'spot'
+					),
+					'grid': (
+						'offset': 'off'
+					)
+				),
+				..
+    	</script>
+    </div>
+    <div class="content">
+    	If you want to modify the settings of a component through your theme map;
+    	<script type="text/plain" class="language-scss">
+		// themes.scss
+		$themes: (
+			your_theme: (
+				..
+				..
+				'components': (
+					'menu': (
+						'background-color': lighten(#222226, 2.5%),
+						'item': (
+							'active': (
+								'color': white,
+								'background-color': #3266ec
+							)
+						)
+					),
+					'navbar': (
+						'background-color': lighten(#222226, 2.5%),
+						'menu': (
+							'background-color': lighten(#222226, 2.5%),
+						)
+					),
+					'tooltip': (
+						'background-color': #e1e6ff,
+						'text': (
+							'color'      : #222226,
+							'font-weight': 500,
+						)
+					)
+				),
+				..
+    	</script>
+    </div>
+    <div class="content">
+    	If you want to modify the settings of an element through your theme map;
+    	<script type="text/plain" class="language-scss">
+		// themes.scss
+		$themes: (
+			your_theme: (
+				..
+				..
+				'elements': (
+					'button': (
+						'font-weight': 500
+					),
+					'form': (
+						'input': (
+							'background-color': #28282d
+						)
+					),
+					'typography': (
+						'href': (
+							'color': #5580ff,
+							'hover': (
+								'color': lighten(#5580ff, 3%)
+							)
+						)
+					)
+				),
+				..
+    	</script>
+    </div>
+    <div class="content">
+    	If you want to modify the settings of an utility through your theme map;
+    	<script type="text/plain" class="language-scss">
+		// themes.scss
+		$themes: (
+			your_theme: (
+				..
+				..
+				'utilities': (
+					// this option disables all helpers (default true)
+					//'enabled': false,
+					'flex-wrap': (
+						'enabled': false 
+					),
+					'overflow': (
+						'prefix': 'flow-' 
+					)
+				),
+				..
     	</script>
     </div>
 </div>
