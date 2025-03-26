@@ -86,68 +86,6 @@ $options: (
 			)
 		),
 	),
-	'badge': (
-		'enabled': true,
-		'features': (
-			'styles': true,
-			'sizes' : true
-		),
-		'classnames': (
-			'name': 'badge'
-		),
-		'settings': (
-			'position'       : relative,
-			'display'        : inline-flex,
-			'justify-content': center,
-			'align-items'    : center,
-			'border-radius'  : 500px,
-			'white-space'    : nowrap,
-			'font-size'      : .935rem,
-			'font-family'    : unset,
-			'font-weight'    : theme('typography', 'font-weight'),
-			'padding'        : 0 .45rem,
-			'border'         : set-border(), // default border
-			'styles'         : (
-				(
-					"primary", // style name (class)
-					white, // text color
-					theme('color', 'primary') // bg-color
-				),
-				(
-					"success", // style name (class)
-					white, // text color
-					theme('color', 'success') // bg-color
-				),
-				(
-					"warning", // style name (class)
-					white, // text color
-					theme('color', 'warning') // bg-color
-				),
-				(
-					"error", // style name (class)
-					white, // text color
-					theme('color', 'error') // bg-color
-				),
-				(
-					"dark", // style name (class)
-					white, // text color
-					theme('color', 'dark') // bg-color
-				)
-			),
-			'sizes': (
-				(
-					"small", // size name (class)
-					.749rem!important, // font-size
-					0 .45rem!important // padding
-				),
-				(
-					"large", // size name (class)
-					1.1rem!important, // font-size
-					0 .45rem!important // padding
-				)
-			)
-		)
-	),
 	'breadcrumb': (
 		'enabled': true,
 		'features': (
@@ -188,7 +126,7 @@ $options: (
 			    	1.075rem, // font-size
 			    	.3em, // seperator-padding
 			    	null, // seperator-size
-			        text-bottom, // vertical align
+			        unset, // vertical align
 			    )
 			),
 			'responsive': (
@@ -316,7 +254,8 @@ $options: (
 			'sizes' : true
 		),
 		'classnames': (
-			'name': 'label'
+			'name' : 'label',
+			'badge': 'badge'
 		),
 		'settings': (
 			'display'        : inline-block,
@@ -331,6 +270,10 @@ $options: (
 			'text-align'     : center,
 			'box-shadow'     : none,
 			'border-radius'  : theme('border', 'radius'),
+			'badge': (
+				'border-radius': 500px,
+				'white-space'  : nowrap
+			),
 			'icon': (
 				'vertical-align': middle
 			),
@@ -365,12 +308,12 @@ $options: (
 				(
 			    	"small", // size name (class)
 			    	.18rem .85rem, // padding
-			    	.8195em // font-size
+			    	.8495em // font-size
 			    ),
 			    (
 			    	"large", // size name (class)
 			    	.415rem 1.159rem, // padding
-			    	1em // font-size
+			    	1.1em // font-size
 			    )
 			)
 		)
@@ -432,7 +375,6 @@ $options: (
 			'title'  : 'title',
 			'item'   : 'item',
 			'active' : 'active',
-			'badge'  : 'badge',
 			'divided': 'divided',
 			'small'  : 'small'
 		),
@@ -817,6 +759,9 @@ $options: (
 			'padding'      : .935rem 1.4rem,
 			'thickness'    : 2px, // tab bar thickness
 			'border-bottom': 4px, // border-bottom-width of tab button
+			'badge': (
+				'padding': 0 .45rem
+			),
 			'styles'       : (
 				(
 					'success', // style name (class)

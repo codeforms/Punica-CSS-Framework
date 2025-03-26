@@ -59,6 +59,10 @@
 			i {
 				font-size: components('button', 'icon', 'font-size');
 			}
+			// .tabnav .button .badge
+			.#{class('label', 'badge')} {
+				padding: components('tabnav', 'badge', 'padding');
+			}
 		}
 		///
 		/// SIZES

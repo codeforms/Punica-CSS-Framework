@@ -10,8 +10,10 @@
 @use "../../../Core/Theme/Setters" as *;
 
 @if enabled('components', 'label') {
-	a.#{class('label', 'name')},
-	.#{class('label', 'name')} {
+	.#{class('label', 'badge')},
+	a.#{class('label', 'badge')},
+	.#{class('label', 'name')},
+	a.#{class('label', 'name')} {
 		@include set-style(theme('color', 'background'), theme('color', 'text')) {
 			display        : components('label', 'display');
 			font-family    : components('label', 'font-family');
@@ -25,8 +27,13 @@
 			border-radius  : components('label', 'border-radius');
 			@include set-size(components('label', 'font-size'), components('label', 'padding'));
 			// .label > i
+			// .badge > i
 			>i {
 				vertical-align: components('label', 'icon', 'vertical-align');
+			}
+			&.#{class('label', 'badge')} {
+				border-radius: components('label', 'badge', 'border-radius');
+				white-space  : components('label', 'badge', 'white-space');
 			}
 		};
 		///

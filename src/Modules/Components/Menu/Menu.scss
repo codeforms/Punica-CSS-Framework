@@ -89,7 +89,7 @@
 			}
 		}
 		// .menu .badge
-		.#{class('menu', 'badge')} {
+		.#{class('label', 'badge')} {
 			position : absolute;
 			right    : components('menu', 'badge', 'right');
 			top      : components('menu', 'badge', 'top');
