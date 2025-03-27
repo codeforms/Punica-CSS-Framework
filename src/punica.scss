@@ -9,7 +9,7 @@
 
 ////////////////////////////////////////////////////////////////
 ///-------------------------------------------------------------
-	$active-theme: dark;
+	$active-theme: default;
 ///-------------------------------------------------------------
 ////////////////////////////////////////////////////////////////
 	$theme-name: if(map.has-key(get.$themes, $active-theme), $active-theme, theme-not-found($active-theme));
@@ -18,7 +18,7 @@
 
 /*! 
  * Punica CSS Framework - #{theme('name')}
- * v3.0.4 b262
+ * v3.0.5 b264
  * 
  * @link http://github.com/codeforms/Punica-CSS-Framework
  * 
