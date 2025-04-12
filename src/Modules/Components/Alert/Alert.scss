@@ -39,6 +39,19 @@
 				vertical-align: components('alert', 'icon', 'vertical-align');
 			}
 		}
+		&.#{class('alert', 'closable')} {
+			position: relative;
+			&::after {
+				position  : absolute;
+				content   : components('alert', 'closable', 'content');
+				font-size : components('alert', 'closable', 'font-size');
+				right     : components('alert', 'closable', 'right');
+				top       : components('alert', 'closable', 'top');
+				transform : components('alert', 'closable', 'transform');
+				cursor    : components('alert', 'closable', 'cursor');
+				opacity   : components('alert', 'closable', 'opacity');
+			}
+		}
 		///
 		/// STYLES
 		///
@@ -50,6 +63,16 @@
 						color: $color;
 					}
 				};
+				@if features('components', 'alert', 'outlined') {
+					&.#{$style-name}.#{class('alert', 'outlined')} {
+						color           : $bg-color;
+						border-color    : darken($bg-color, 3%);
+						background-color: transparent;
+						a {
+							color: $bg-color;
+						}
+					}
+				}
 			}
 		}
 		///

@@ -34,6 +34,8 @@
 			&.#{class('label', 'badge')} {
 				border-radius: components('label', 'badge', 'border-radius');
 				white-space  : components('label', 'badge', 'white-space');
+				line-height  : components('label', 'badge', 'line-height');
+				padding      : components('label', 'badge', 'padding');
 			}
 		};
 		///

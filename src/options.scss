@@ -19,12 +19,15 @@ $options: (
 	'alert': (
 		'enabled': true,
 		'features': (
-			'styles': true,
-			'sizes' : true
+			'styles'  : true,
+			'sizes'   : true,
+			'outlined': true
 		),
 		'classnames': (
-			'name'  : 'alert',
-			'active': 'active'
+			'name'    : 'alert',
+			'active'  : 'active',
+			'closable': 'closable',
+			'outlined': 'outlined'
 		),
 		'settings': (
 			'display'      : block,
@@ -44,6 +47,15 @@ $options: (
 			),
 			'icon': (
 				'vertical-align': middle
+			),
+			'closable': (
+				'content'   : "x",
+				'font-size' : 1.25rem,
+				'right'     : 1rem,
+				'top'       : 50%,
+				'transform' : translateY(-50%),
+				'cursor'    : pointer,
+				'opacity'   : .75
 			),
 			'styles': (
 				(
@@ -272,7 +284,9 @@ $options: (
 			'border-radius'  : theme('border', 'radius'),
 			'badge': (
 				'border-radius': 500px,
-				'white-space'  : nowrap
+				'white-space'  : nowrap,
+				'line-height'  : 1,
+				'padding'      : .28rem .7rem
 			),
 			'icon': (
 				'vertical-align': middle
