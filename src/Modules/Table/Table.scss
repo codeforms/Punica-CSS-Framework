@@ -1,0 +1,93 @@
+///
+/// Punica CSS Framework
+/// Module : Table
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Colors" as color;
+@use "../../Core/Theme/Getters" as *;
+@use "../../Core/Theme/Setters" as *;
+
+@if enabled('table') {
+	.#{class('table', 'name')} {
+		position       : module('table', 'position');
+		border-collapse: module('table', 'border-collapse');
+		border-spacing : module('table', 'border-spacing');
+		width          : module('table', 'width');
+		max-width      : module('table', 'max-width');
+		text-align     : module('table', 'text-align');
+		margin-bottom  : module('table', 'margin-bottom');
+		caption {
+			text-align      : module('table', 'caption', 'text-align');
+			color           : module('table', 'caption', 'color');
+			font-family     : module('table', 'caption', 'font-family');
+			font-size       : module('table', 'caption', 'font-size');
+			font-weight     : module('table', 'caption', 'font-weight');
+			padding         : module('table', 'caption', 'padding');
+			border-bottom   : module('table', 'caption', 'border-bottom');
+			background-color: module('table', 'caption', 'background-color');
+		}
+		///
+		/// STRIPED
+		///
+		@if features('table', 'striped') {
+			&.#{class('table', 'striped')} {
+				tr,
+				tbody tr {
+					&.#{class('table', 'active')} {
+						@extend .#{class('table', 'active')};
+					}
+					&:nth-of-type(odd) {
+						background-color: module('table', 'striped', 'background-color');
+					}
+				}
+			}
+		}
+		/// 
+		/// HOVERED
+		///
+		@if features('table', 'hovered') {
+			&.#{class('table', 'hovered')} {
+				tr,
+				tbody tr {
+					&:hover {
+						background-color: module('table', 'hover', 'background-color');
+						color           : module('table', 'hover', 'color');
+					}
+				}
+			}
+		}
+		tr,
+		tbody tr {
+			transition: module('table', 'transition');
+			&.#{class('table', 'active')},
+			&.#{class('table', 'active')}:hover {
+				color           : module('table', 'active', 'color');
+				background-color: module('table', 'active', 'background-color');
+			}
+		}
+		td,
+		th {
+			border-bottom: set-border();
+			text-align   : inherit;
+		}
+		td {
+			padding: module('table', 'td', 'padding');
+		}
+		th {
+			border-bottom-color: module('table', 'th', 'border-bottom-color');
+		}
+		thead tr {
+			background: transparent !important;
+			th {
+				font-family     : module('table', 'th', 'font-family');
+				font-size       : module('table', 'th', 'font-size');
+				font-weight     : module('table', 'th', 'font-weight');
+				color           : module('table', 'th', 'color');
+				padding         : module('table', 'th', 'padding');
+				background-color: module('table', 'th', 'background-color');
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+///
+/// Punica CSS Framework
+/// Module : Panel
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Mixins" as *;
+@use "../../Core/Theme/Getters" as *;
+@use "../../Core/Theme/Setters" as *;
+
+@if enabled('panel') {
+	.#{class('panel', 'name')} {
+		display         : flex;
+		flex-direction  : column;
+		background-color: module('panel', 'background-color');
+		margin          : module('panel', 'margin');
+
+		@if features('panel', 'border') {
+			border       : module('panel', 'border');
+			border-radius: module('panel', 'border-radius');
+		}
+
+		@if features('panel', 'shadow') {
+			box-shadow: theme('shadow');
+		}
+		
+		&>.#{class('panel', 'header')},
+		&>.#{class('panel', 'bottom')} {
+			display       : flex;
+			flex-direction: row;
+			align-items   : center;
+			.#{class('panel', 'actions')} {
+				margin-left: auto;
+				&:before {
+					flex-grow: 1;
+				}
+			}
+		}
+		&>.#{class('panel', 'header')} {
+			border-bottom: set-border();
+			padding      : module('panel', 'header', 'padding');
+			&.dashed {
+				border-bottom-style: dashed;
+			}
+			&.dotted {
+				border-bottom-style: dotted;
+			}
+			>.#{class('panel', 'title')} {
+				font-size  : module('panel', 'header', 'title', 'font-size');
+				font-weight: module('panel', 'header', 'title', 'font-weight');
+				font-family: module('panel', 'header', 'title', 'font-family');
+			}
+		}
+		&>.#{class('panel', 'content')} {
+			height     : auto;
+			flex       : 1 1 auto;
+			font-family: module('panel', 'content', 'font-family');
+			padding    : module('panel', 'content', 'padding');
+			///
+			/// MEDIA
+			///
+			@if features('panel', 'media') {
+				&>.#{class('panel', 'media')} {
+					display      : flex;
+					flex         : auto;
+					min-width    : 0;
+					flex-wrap    : wrap;
+					margin-bottom: module('panel', 'content', 'media', 'margin-bottom');
+					@include embedded-media();
+					img {
+						display: block;
+					}
+				}
+				///
+				/// MEDIA GROUP
+				///
+				@if features('panel', 'media-group') {
+					@include media-group-specs(class('panel', 'media'));
+				}
+			}
+			.#{class('panel', 'headline')},
+			p.#{class('panel', 'headline')} {
+				font-family   : module('panel', 'content', 'headline', 'font-family');
+				font-size     : module('panel', 'content', 'headline', 'font-size');
+				line-height   : module('panel', 'content', 'headline', 'line-height');
+				margin-bottom : module('panel', 'content', 'headline', 'margin-bottom');
+				color         : module('panel', 'content', 'headline', 'color');
+				letter-spacing: module('panel', 'content', 'headline', 'letter-spacing');
+				text-wrap     : module('panel', 'content', 'headline', 'text-wrap')
+			}
+		}
+		&>.#{class('panel', 'bottom')} {
+			min-height: module('panel', 'bottom', 'min-height');
+			border-top: module('panel', 'bottom', 'border-top');
+			padding   : module('panel', 'bottom', 'padding');
+		}
+		///
+		/// SIZES
+		///
+		@if features('panel', 'sizes') {
+			@each $size-name, $font-size, $padding in module('panel', 'sizes') {
+				&.#{$size-name} {
+					>.#{class('panel', 'header')} {
+						padding: $padding;
+						.#{class('panel', 'title')} {
+							font-size: $font-size;
+						}
+					}
+					>.#{class('panel', 'content')} {
+						.#{class('panel', 'headline')},
+						p.#{class('panel', 'headline')} {
+							font-size: $font-size * 1.2;
+						}
+					}
+					>.#{class('panel', 'content')},
+					>.#{class('panel', 'bottom')} {
+						padding: $padding;
+					}
+				}
+			}
+		}
+	}
+}

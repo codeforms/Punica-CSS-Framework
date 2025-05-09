@@ -1,0 +1,149 @@
+///
+/// Punica CSS Framework
+/// Module : Button
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Sass" as *;
+@use "../../Core/Global/Mixins" as *;
+@use "../../Core/Global/Colors" as color;
+@use "../../Core/Theme/Getters" as *;
+@use "mixins" as *;
+
+@if enabled('button') {
+	a.#{class('button', 'name')},
+	.#{class('button', 'name')} {
+		display         : module('button', 'display');
+		align-items     : module('button', 'align-items');
+		justify-content : module('button', 'justify-content');
+		font-family     : module('button', 'font-family');
+		font-size       : module('button', 'font-size');
+		font-weight     : module('button', 'font-weight');
+		line-height     : module('button', 'line-height');
+		text-align      : module('button', 'text-align');
+		text-decoration : module('button', 'text-decoration');
+		white-space     : module('button', 'white-space');
+		color           : module('button', 'color');
+		background-color: module('button', 'background');
+		background-image: module('button', 'background-image');
+		outline         : module('button', 'outline');
+		width           : module('button', 'width');
+		padding         : module('button', 'padding');
+		transition      : module('button', 'transition');
+		appearance      : module('button', 'appearance');
+		cursor          : module('button', 'cursor');
+		border          : module('button', 'border');
+		border-radius   : module('button', 'border-radius');
+		user-select     : module('button', 'user-select');
+		box-shadow      : module('button', 'box-shadow');
+		overflow        : module('button', 'overflow');
+		box-sizing      : border-box;
+		&:focus,
+		&:hover {
+			transition      : module('button', 'transition');
+			background-image: none;
+		}
+		&:hover {
+			background-color: color.$grey;
+		}
+		&:active,
+		&:focus {
+			background-color: module('button', 'background');
+		}
+		&.#{class('button', 'active')} {
+			color           : module('button', 'color');
+			background-color: color.$grey;
+			background-image: none;
+			text-decoration : none;
+			&:hover {
+				background-color: lighten(color.$grey, 5%);
+			}
+			&:active,
+			&:focus {
+				background-color: lighten(color.$grey, 15%);
+			}
+		}
+		// inactive button
+        &.#{class('button', 'inactive')} {
+			pointer-events  : none;
+			cursor          : default;
+			background-image: none;
+		}
+		// rounded button
+		&.#{class('button', 'rounded')} {
+			border-radius: 500px;
+		}
+		///
+		/// PRELOADER BUTTON
+		///
+		@if features('button', 'preloader') {
+	        &.#{class('button', 'preloader')} {
+				position      : relative;
+				color         : transparent !important;
+				pointer-events: module('button', 'preloader', 'pointer-events');
+	        	&::after {
+					position          : absolute !important;
+					content           : "";
+					width             : module('button', 'preloader', 'width');
+					height            : module('button', 'preloader', 'height');
+					border-width      : module('button', 'preloader', 'border-width');
+					border-style      : module('button', 'preloader', 'border-style');
+					border-color      : module('button', 'preloader', 'indicator-color');
+					border-radius     : module('button', 'preloader', 'border-radius');
+					border-right-color: module('button', 'preloader', 'border-right-color');
+					border-top-color  : module('button', 'preloader', 'border-top-color');
+					animation         : module('button', 'preloader', 'animation');
+				}
+			}
+			@keyframes spin {
+				0% {transform: rotate(0deg);}
+				100% {transform: rotate(360deg);}
+			}
+		}
+		// Block Button
+		&.#{class('button', 'block')} {
+			display: flex;
+			flex   : 1;
+			width  : auto;
+		}
+		i {
+			font-size  : module('button', 'icon', 'font-size');
+			color      : module('button', 'color');
+			text-shadow: none;
+		}
+		///
+		/// STYLES
+		///
+		@if features('button', 'styles') {
+			@each $theme-name, $bg-color, $text-color, $border-color in module('button', 'styles') {
+				&.#{$theme-name} {
+					@include button-styles($bg-color, $text-color, $border-color);
+				}
+				@if features('button', 'outlined') {
+					&.#{$theme-name}.#{class('button', 'outlined')} {
+						@include button-styles($bg-color, $text-color, $border-color, true);
+					}
+				}
+			}
+		}
+		///
+		/// SIZES
+		///
+		@if features('button', 'sizes') {
+			@include button-sizes();
+		}
+	}
+	///
+	/// BUTTON GROUPS
+	///
+	@if features('button', 'group') {
+		@include button-group();
+	}
+	///
+	/// DROPDOWN
+	///
+	@if features('button', 'dropdown') {
+		@include dropdown();
+	}
+}

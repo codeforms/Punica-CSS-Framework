@@ -1,0 +1,186 @@
+///
+/// Punica CSS Framework
+/// Module : Card
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Sass" as *;
+@use "../../Core/Global/Mixins" as *;
+@use "../../Core/Global/Colors" as color;
+@use "../../Core/Theme/Getters" as *;
+@use "../../Core/Theme/Setters" as *;
+
+@if enabled('card') {
+	.#{class('card', 'cards')} {
+		display  : flex;
+		flex-wrap: wrap;
+
+		// hover effect for all cards
+		@if features('card', 'hovered') {
+			// .hovered.cards
+			&.#{class('card', 'hovered')} > .#{class('card', 'name')}:hover {
+				@extend .#{class('card', 'hovered')}, :hover;
+			}
+		}
+	}
+	///
+	/// CARD GROUPS
+	///
+	@if features('card', 'group') {
+		@each $name, $number in module('card', 'columns') {
+			.#{$name}.#{class('card', 'cards')} {
+				&>.#{class('card', 'name')} {
+					flex  : 0 0 calc(100% * (1 / #{$number}) - (2 * #{module('card', 'group', 'margin')}));
+					height: auto;
+					margin: module('card', 'group', 'margin');
+				}
+			}
+		}
+	}
+	.#{class('card', 'name')} {
+		background-color: module('card', 'background-color');
+		transition      : module('card', 'transition');
+
+		// has card border?
+		@if features('card', 'border') {
+			border       : module('card', 'border');
+			border-radius: module('card', 'border-radius');
+		}
+
+		// has card shadow?
+		@if features('card', 'shadow') {
+			box-shadow: theme('shadow');
+		}
+
+		// hover effect for single card only
+		@if features('card', 'hovered') {
+			&.#{class('card', 'hovered')}:hover {
+				background-color: module('card', 'hover', 'background-color');
+				transition      : module('card', 'transition');
+			}
+		}
+		
+		display       : flex;
+		flex-direction: column;
+		width         : module('card', 'width'); // for only a single card
+		height        : module('card', 'height');
+		overflow      : hidden;
+		>.#{class('card', 'body')} .#{class('card', 'title')},
+		>.#{class('card', 'title')} {
+			color      : module('card', 'title', 'color');
+			line-height: module('card', 'title', 'line-height');
+			&>.#{class('card', 'subtitle')} {
+				font-family: module('card', 'title', 'subtitle', 'font-family');
+				@if theme('type') == 'light' {
+					color: darken(color.$grey, 20%);
+				} @else if theme('type') == 'dark' {
+					color: lighten(color.$grey, 20%);
+				}
+			}
+		}
+		>.#{class('card', 'title')} {
+			font-family: module('card', 'title', 'font-family');
+			text-align : module('card', 'title', 'text-align');
+		}
+		>.#{class('card', 'title')}, 
+		>.#{class('card', 'description')},
+		>.#{class('card', 'actions')} {
+			padding    : module('card', 'padding');
+		}
+		>.#{class('card', 'description')} {
+			flex       : 1 1 auto;
+			font-family: module('card', 'description', 'font-family');
+			color      : module('card', 'description', 'color');
+			font-size  : module('card', 'description', 'font-size');
+			text-align : module('card', 'description', 'text-align');
+		}
+		///
+		/// MEDIA
+		///
+		@if features('card', 'media') {
+			&>.#{class('card', 'media')} {
+				display  : flex;
+				flex-wrap: wrap;
+				overflow : hidden;
+				img {
+					display: block;
+					width  : 100%;
+				}
+				@if features('card', 'zoom-in') {
+					&.#{class('card', 'zoom-in')} > img,
+					&.#{class('card', 'zoom-in')} a > img {
+						transform : scale(1);
+						transition: module('card', 'transition');
+					}
+					&.#{class('card', 'zoom-in')} > img:hover,
+					&.#{class('card', 'zoom-in')} a > img:hover {
+						transform: scale(1.2);
+					}
+				}
+			}
+			///
+			/// MEDIA GROUP
+			///
+			@if features('card', 'media-group') {
+				@include media-group-specs(class('card', 'media'), 0);
+			}
+		}
+		///
+		/// HORIZONTAL CARDS
+		///
+		@if features('card', 'horizontal') {
+			&.#{class('card', 'horizontal')} {
+				flex-direction: row;
+				width         : 100%;
+				align-items   : center;
+				margin-bottom : module('card', 'horizontal', 'margin-bottom');
+				///
+				/// MEDIA
+				///
+				@if features('card', 'media') {
+					>.#{class('card', 'media')} {
+						align-self: normal;
+						width     : fit-content;
+						img	{
+							width     : auto;
+							object-fit: cover
+						}
+					}
+				}
+				>.#{class('card', 'body')} {
+					flex: inherit;
+					.#{class('card', 'title')},
+					.#{class('card', 'description')} {
+						padding: calc(#{module('card', 'padding')} / 2) calc(#{module('card', 'padding')} * 3);
+					}
+					.#{class('card', 'description')} {
+						flex: 1;
+					}
+				}
+			}
+		}
+	}
+	@include breakpoints(module('grid', 'breakpoints', 'medium'), 'max-width') {
+		.#{class('card', 'name')},
+		.#{class('card', 'cards')} > .#{class('card', 'name')} {
+			flex  : 0 0 100% !important;
+			width : 100%; // for only a single card
+			height: fit-content !important;
+		}
+		///
+		/// HORIZONTAL CARDS
+		///
+		@if features('card', 'horizontal') {
+			.#{class('card', 'name')}.#{class('card', 'horizontal')} {
+				flex-direction: column;
+				>.#{class('card', 'body')} {
+					.#{class('card', 'title')},
+					.#{class('card', 'description')} {
+						padding: module('card', 'padding');
+					}
+				}
+			}
+		}
+	}
+}

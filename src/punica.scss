@@ -18,7 +18,7 @@
 
 /*! 
  * Punica CSS Framework - #{theme('name')}
- * v3.0.6 b265
+ * v3.1.0 b267
  * 
  * @link http://github.com/codeforms/Punica-CSS-Framework
  * 
@@ -26,8 +26,7 @@
  * @link http://opensource.org/licenses/MIT
  */
 
-@use "Modules/Elements/index" as elements;
-@use "Modules/Components/index" as components;
+@use "Modules/index" as module;
 @use "Core/Utilities/handler";
 @debug "#{theme('name')} is compiled successfully.";
 $theme: null !global;

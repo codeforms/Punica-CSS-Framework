@@ -10,81 +10,64 @@
 @use "Helpers" as helper;
 
 ///
-/// Get a specific component's variable from the theme map
-/// or from the options.scss API file,
-/// which contains the default settings.
-///
-/// @param {String(s)} $keys
-/// 
-/// @example components('card', 'padding')
-/// @example components('card', 'group', 'margin')
-///
-/// @return mixed
-/// 
-@function components($keys...) 
-{
-	@return set_variable('components', $keys...);
-}
-
-///
-/// Get a specific element's variable from the theme map 
+/// Get a specific module's variable from the theme map 
 /// or from the options.scss API file, 
 /// which contains the default settings.
 ///
 /// @param {String(s)} $keys
 ///
-/// @example elements('button', 'font-weight')
-/// @example elements('form', 'input', 'color')
+/// @example module('button', 'font-weight')
+/// @example module('form', 'input', 'color')
 /// 
 /// @return mixed
 /// 
-@function elements($keys...) 
+@function module($keys...) 
 {
-	@return set_variable('elements', $keys...);
+	@return set_variable($keys...);
 }
 
 ///
-/// Get features of Components/Elements from the theme map 
+/// Get features of a module from the theme map 
 /// or from the options.scss API file, 
 /// which contains the default settings.
 /// 
-/// @param {String} $node
 /// @param {String} $module
 /// @param {String|null} $feature
 /// 
-/// @example features('components', 'card', 'horizontal')
-/// @example features('elements', 'button', 'preloader')
+/// @example features('card', 'horizontal')
+/// @example features('button', 'preloader')
 ///
 /// @return bool
 ///
-@function features($node, $module, $feature : null) 
+@function features($module, $feature : null) 
 {
-	@if theme($node, $module, 'features', $feature) != null {
-		@return theme($node, $module, 'features', $feature);
+	@if theme($module, 'features', $feature) != null {
+		@return theme($module, 'features', $feature);
 	}
 
 	@return map.get(map.get(get.options($module), 'features'), $feature);
 }
 
 ///
-/// Is component/element enabled?
+/// Is module enabled?
 ///
 /// @param {String} $node
 /// @param {String} $module
 /// 
-/// @example enabled('elements', 'grid')
-/// @example enabled('components', 'navbar')
+/// @example enabled('grid')
+/// @example enabled('navbar')
+/// @example enabled('utilities')
 /// 
 /// @return bool
 ///
-@function enabled($node, $module: null) 
+@function enabled($module: null) 
 {
-	@if theme($node,'enabled') != null {
-		@return theme($node, 'enabled');
+	@if theme('modules','enabled') != null {
+		@return theme('modules', 'enabled');
 	}
 
-	@if theme($node, $module, 'enabled') != null {
-		@return theme($node, $module, 'enabled');
+	@if theme('modules', $module, 'enabled') != null {
+		@return theme('modules', $module, 'enabled');
 	}
 
 	@return get.options($module, 'enabled');
@@ -98,9 +81,9 @@
 ///
 /// @return mixed
 ///
-@function set_variable($module, $keys...) 
+@function set_variable($keys...) 
 {
-	$value: theme($module, $keys...);
+	$value: theme('modules', $keys...);
 
 	@if($value != null) {
 		@return $value;

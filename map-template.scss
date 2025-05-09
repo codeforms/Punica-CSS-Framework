@@ -1,6 +1,9 @@
 ///
 /// Punica CSS Framework
 /// v3.0 Theme API
+///
+/// Note: You can take a look at the dark theme
+/// in the themes.scss file.
 /// 
 
 theme_slug: (
@@ -31,13 +34,11 @@ theme_slug: (
 	'shadow': ,
 	//////////////////////////////////////////////////////////
 	// You can use this section to override/change
-	// the all default variables in the options.scss API file.
+	// the all default variables in the options.scss 
+	// and utilities.scss API files.
 	'classnames': (),
-	'components': (),
-	'elements'  : (),
-	// You can use this section to override/change the 
-	// all default utility variables in the 
-	// Modules/Utilities/index.scss API file.
-	'utilities' : ()
+	'modules': (
+		'utilities' : ()
+	)
 	//////////////////////////////////////////////////////////
 )

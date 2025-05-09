@@ -147,8 +147,8 @@
 ///
 @function utils($node, $key: null) 
 {
-	@if theme('utilities', $node, $key) != null {
-		@return theme('utilities', $node, $key);
+	@if theme('modules', 'utilities', $node, $key) != null {
+		@return theme('modules', 'utilities', $node, $key);
 	}
 
 	$util: if(map.has-key(utility.$utilities, $node), map.get(utility.$utilities, $node), null);

@@ -1,0 +1,74 @@
+///
+/// Punica CSS Framework
+/// Module : Caption
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Mixins" as *;
+@use "../../Core/Theme/Setters" as *;
+
+@if enabled('caption') {
+	.#{class('caption', 'name')} {
+		display    : flex;
+		align-items: center;
+		text-align : module('caption', 'text-align');
+		margin     : module('caption', 'margin');
+		font-size  : module('caption', 'font-size');
+		font-family: module('caption', 'font-family');
+		font-weight: module('caption', 'font-weight');
+		line-height: module('caption', 'line-height');
+		text-wrap  : module('caption', 'text-wrap');
+		>img,
+	    >i {
+	    	margin-right: module('caption', 'media', 'margin');
+	    	font-size: module('caption', 'font-size') * 1.4;
+	    }
+	    &.#{class('caption', 'divided')} {
+			border-bottom : set-border();
+			padding-bottom: module('caption', 'media', 'margin');
+	    }
+	    &>a,
+	    &>span,
+	    &>div {
+	    	/// ..children of a flex container are
+	    	/// forced to have a block-flavored display type.
+	    	display: contents;
+	    }
+	    &.#{class('caption', 'centered')} {
+			flex-direction: column;
+			text-align    : center;
+			margin        : inherit;
+	    	>img,
+		    >i {
+				margin-right : unset;
+				margin-bottom: 2rem;
+		    }
+	    }
+	    ///
+		/// SIZES
+		///
+		@if features('caption', 'sizes') {
+			@each $size-name, $margin, $font-size, $font-weight in module('caption', 'sizes') {
+				@include set-size($font-size, null, $size-name) {
+					margin     : $margin;
+					font-weight: $font-weight;
+				    >i {
+				    	font-size: $font-size * 1.4;
+				    }
+				};
+			}
+		}
+		//
+		@include breakpoints(module('grid', 'breakpoints', 'medium'), 'max-width') {
+			flex-direction: column;
+			text-align    : center;
+			margin        : inherit;
+	    	>img,
+		    >i {
+				margin-right : unset;
+				margin-bottom: 2rem;
+		    }
+		}
+	}
+}

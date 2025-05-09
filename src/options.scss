@@ -13,9 +13,6 @@
 @use "Core/Global/Colors" as color;
 
 $options: (
-	///
-	/// 01.COMPONENTS
-	/// 
 	'alert': (
 		'enabled': true,
 		'features': (
@@ -98,6 +95,29 @@ $options: (
 			)
 		),
 	),
+	'base': (
+		'settings': (
+			'selection': (
+				'color'           : white,
+				'background-color': lighten(theme('color', 'primary'), 8.5%)
+			),
+			'horizontal-rule': (
+				'border'    : 0,
+				'border-top': 0.1rem solid theme('border', 'color'),
+				'margin'    : 2.0rem 0,
+				'box-sizing': content-box,
+				'overflow'  : visible
+			),
+			'embedded': (
+				'max-width'        : 100%,
+				'height'           : auto,
+				'vertical-align'   : middle,
+				'font-style'       : italic,
+				'background-repeat': no-repeat,
+				'background-size'  : cover
+			)
+		)
+	),
 	'breadcrumb': (
 		'enabled': true,
 		'features': (
@@ -144,6 +164,138 @@ $options: (
 			'responsive': (
 				'font-size'     : 1rem,
 				'vertical-align': middle
+			)
+		)
+	),
+	'button': (
+		'enabled': true,
+		'features': (
+			'group'    : true,
+			'vertical' : true,
+			'styles'   : true,
+			'sizes'    : true,
+			'outlined' : true,
+			'dropdown' : true,
+			'preloader': true
+		),
+		'classnames': (
+			'name'              : 'button',
+			'group'             : 'buttons',
+			'outlined'          : 'outlined',
+			'rounded'			: 'rounded',
+			'active'            : 'active',
+			'inactive'          : 'inactive',
+			'block'             : 'block',
+			'vertical'          : 'vertical',
+			'preloader'			: 'preloader',
+			// dropdown
+			'dropdown'          : 'dropdown',
+			'dropdown-right'    : 'right',
+			'dropdown-left'     : 'left',
+			'dropdown-top'      : 'top',
+			'dropdown-bottom'   : 'bottom',
+			'dropdown-toggle'   : 'toggle',
+			'dropdown-clickable': 'clickable'
+		),
+		'settings': (
+			'display'         : inline-flex,
+			'align-items'     : center,
+			'justify-content' : center,
+			'font-family'     : inherit,
+			'font-size'       : 1rem,
+			'font-weight'     : normal,
+			'line-height'     : 1,
+			'text-align'      : center,
+			'text-decoration' : none,
+			'white-space'     : nowrap,
+			'color'           : theme('color', 'text'),
+			'background'      : theme('color', 'background'),
+			'background-image': none,
+			'outline'         : none,
+			'width'           : min-content,
+			'padding'         : .935rem 1.6rem,
+			'transition'      : .2s,
+			'appearance'      : none,
+			'cursor'          : pointer,
+			'border'          : set-border(), // default border
+			'border-radius'   : theme('border', 'radius'),
+			'user-select'     : none,
+			'box-shadow'      : none,
+			'overflow'        : visible,
+			'icon'            : (
+				'font-size': 1.12rem
+			),
+			'preloader': (
+				'pointer-events'    : none,
+				'width'             : 1.3rem,
+				'height'            : 1.3rem,
+				'border-radius'     : 50%,
+				'border-width'      : 3px,
+				'border-style'      : solid,
+				'indicator-color'   : theme('color', 'primary'), // border color
+				'border-right-color': transparent,
+				'border-top-color'  : transparent,
+				'animation'         : spin .55s linear infinite
+			),
+			'styles': (
+				(
+					'primary', // class name
+					theme('color', 'primary'), // bg color
+					white, // text color
+					lighten(theme('color', 'primary'), 4%) // border color 
+
+				),
+				(
+					'success', // class name
+					theme('color', 'success'), // bg color
+					white,
+					lighten(theme('color', 'success'), 4%) // border color
+				),
+				(
+					'warning', // class name
+					theme('color', 'warning'), // bg color
+					white, // text color
+					lighten(theme('color', 'warning'), 4%) // border color
+				),
+				(
+					'error', // class name
+					theme('color', 'error'), // bg color
+					white, // text color
+					lighten(theme('color', 'error'), 4%) // border color
+				),
+				(
+					'dark', // class name
+					theme('color', 'dark'), // bg color
+					white, // text color
+					if((theme('type') == "light"), color.$dark-grey, color.$grey) // border color
+				)
+			),
+			'sizes': (
+				(
+					"tiny", // size name (class)
+					.809em, // font-size
+					.415rem .5rem // padding
+				),
+				(
+					"mini", // size name (class)
+					.909em, // font-size
+					.445rem .9rem // padding
+				),
+				(
+					"small", // size name (class)
+					.979em, // font-size
+					.645rem 1.4rem // padding
+				),
+				(
+					"large", // size name (class)
+					1.25em, // font-size
+					1.15rem 2.1rem // padding
+				),
+				(
+					"huge", // size name (class)
+					1.45em, // font-size
+					1.3rem 2.4rem // padding
+				)
 			)
 		)
 	),
@@ -256,6 +408,209 @@ $options: (
 				"ten"   : 10,
 				"eleven": 11,
 				"twelve": 12
+			)
+		)
+	),
+	'form': (
+		'enabled': true,
+		'features': (
+			'group'            : true,
+			'sizes'            : true,
+			'validation-styles': true,
+			'checkbox-radio'   : true,
+			'upload'           : true
+		),
+		'classnames': (
+			'name'    : 'form',
+			'items'   : 'items',
+			'item'    : 'item',
+			'checkbox': 'checkbox',
+			'radio'   : 'radio',
+			'group'   : 'group'
+		),
+		'settings': (
+			'padding': 0 16px,
+			'input'  : (
+				'font-family'     : unset,
+				'box-sizing'      : inherit,
+				'color'           : inherit,
+				'background-color': transparent,
+				'border-color'    : inherit,
+				'height'          : initial,
+				'padding'         : .7rem .5rem,
+				'font-size'       : initial,
+				'font-weight'     : theme('typography', 'font-weight'),
+				'border-width'    : theme('border', 'width'),
+				'border-style'    : theme('border', 'style'),
+				'border-radius'   : theme('border', 'radius'),
+				'box-shadow'      : none,
+				'width'           : 100%,
+				'max-width'       : 100%,
+				'transition'      : .35s,
+				'outline-color'   : transparent,
+				'outline-width'   : 2px,
+				'focus': (
+					'color'           : inherit,
+					'background-color': initial,
+					'outline-color'   : theme('color', 'primary'),
+					'outline-width'   : 2px
+				),
+				'placeholder': (
+					'color': color.$dark-grey
+				)
+			),
+			'group': (
+				'button': (
+					'padding': .7rem 1.75rem
+				)
+			),
+			'items': (
+				'margin': 0
+			),
+			'item': (
+				'height'     : fit-content,
+				'margin-y'   : .495rem,
+				'margin-x'   : 5px,
+				'display'    : inline-flex,
+				'flex-wrap'  : wrap,
+				'width'      : 100%,
+				'max-width'  : 100%,
+				'position'   : relative,
+				'align-items': center,
+				'padding'    : .295rem
+			),
+			'label': (
+				'color'         : theme('color', 'text'),
+				'font-size'     : .955rem,
+				'font-family'   : unset,
+				'font-weight'   : bold,
+				'margin'        : 0,
+				'text-transform': none,
+				'height'        : fit-content
+			),
+			'radio-checkbox': (
+				'display'              : grid,
+				'grid-template-columns': 1em auto,
+				'gap'                  : 1rem,
+				'place-content'        : center,
+				'margin'               : 0,
+				'width'                : 1.6em,
+				'height'               : 1.6em,
+				'accent-color'         : theme('color', 'primary'),
+				'label'                : (
+					'color'      : theme('color', 'text'),
+					'font-size'  : .955rem,
+					'font-family': unset,
+					'font-weight': normal,
+					'user-select': none
+				)
+			),
+			'textarea': (
+				'min-height': 6.5rem,
+				'resize'    : vertical
+			),
+			'fieldset': (
+				'border-width': 0,
+				'padding'     : 0.6em
+			),
+			'legend': (
+				'display'      : block,
+				'font-size'    : 1.3rem,
+				'font-weight'  : bold,
+				'margin-bottom': .7rem,
+				'white-space'  : normal
+			),
+			'small': (
+				'color': color.$darken-grey,
+			),
+			// for input validations
+			'styles': (
+				(
+					'success', // class name
+					theme('color', 'success') // style color
+				),
+				(
+					'warning', // class name
+					theme('color', 'warning') // style color
+				),
+				(
+					'error', // class name
+					theme('color', 'error') // style color
+				)
+			),
+			// input sizes
+			'sizes': (
+				(
+					'small', // class name
+					.875rem, // font-size
+					2.5rem, // input height
+					.645rem 1.4rem, // button padding
+				),
+				(
+					'large', // class name
+					1.05rem, // font-size
+					3.2rem, // input height
+					1.15rem 2.1rem, // button padding
+				)
+			),
+			'columns': (
+				// maximum number of form items in a single row (default : 2 through 6)
+				// class name, value
+				"two"  : 2,
+				"three": 3,
+				"four" : 4,
+				"five" : 5,
+				"six"  : 6
+			)
+		)
+	),
+	'grid': (
+		'enabled': true, 
+		'features': (
+			'equal' : true, // equal height
+			'offset': true // [!] increases the size
+		),
+		'classnames': (
+			'row'      : 'row',
+			'container': 'container',
+			'column'   : 'col',
+			'offset'   : 'offset',
+			'equal'    : 'equal'
+		),
+		'settings': (
+			'gap': .375rem,
+			'columns': (
+				'size'      : 16,
+				'padding'   : .3rem,
+				'min-height': .125rem
+			),
+			'container': (
+				'width'  : 100%,
+				'padding': 40px, // for left and right sides
+				'margin' : 0 auto,
+				'viewports': ( // only for containers
+					('sm', 500px),
+					('md', 768px),
+					('lg', 992px),
+					('xl', 1260px),
+					('xxl', 1400px)
+				)
+			),
+			'breakpoints': (
+				'extra-small'      : 0,
+				'small'            : 500px,
+				'medium'           : 768px,
+				'large'            : 992px,
+				'extra-large'      : 1260px,
+				'extra-extra-large': 1400px
+			),
+			'viewports': (
+				('xs', 0),
+				('sm', 500px),
+				('md', 768px),
+				('lg', 992px),
+				('xl', 1260px),
+				('xxl', 1400px)
 			)
 		)
 	),
@@ -751,6 +1106,63 @@ $options: (
 			)
 		)
 	),
+	'table': (
+		'enabled': true,
+		'features': (
+			'hovered': true,
+			'striped': true
+		),
+		'classnames': (
+			'name'   : 'table',
+			'striped': 'striped',
+			'hovered': 'hovered',
+			'active' : 'active'
+		),
+		'settings': (
+			'width'          : 100%,
+			'max-width'      : 100%,
+			'text-align'     : left,
+			'margin-bottom'  : margin-bottom,
+			'border-spacing' : 0,
+			'border-collapse': collapse,
+			'position'       : relative,
+			'transition'     : all 0.3s,
+			'hover': (
+				'color'           : theme('color', 'text'),
+				'background-color': color.$lighten-grey
+			),
+			'striped': (
+				'color'           : theme('color', 'text'),
+				'background-color': color.$lighten-grey
+			),
+			'active': (
+				'color'           : theme('color', 'text'),
+				'background-color': color.$light-grey
+			),
+			'td': (
+				'padding': .313rem .7rem,
+			),
+			'th': (
+				'color'              : theme('color', 'text'),
+				'font-size'          : inherit,
+				'font-family'        : unset,
+				'font-weight'        : bold,
+				'padding'            : .90rem .7rem,
+				'background-color'   : transparent,
+				'border-bottom-color': color.$dark-grey
+			),
+			'caption': (
+				'text-align'      : inherit,
+				'color'           : theme('color', 'text'),
+				'font-size'       : 1.15rem,
+				'font-family'     : unset,
+				'font-weight'     : bold,
+				'padding'         : 1rem .6rem,
+				'border-bottom'   : 1px theme('border', 'style') color.$darken-grey,
+				'background-color': transparent
+			)
+		)
+	),
 	'tabnav': (
 		'enabled': true,
 		'features': (
@@ -918,424 +1330,6 @@ $options: (
 			)
 		)
 	),
-	///
-	/// 02.ELEMENTS
-	/// 
-	'base': (
-		'settings': (
-			'selection': (
-				'color'           : white,
-				'background-color': lighten(theme('color', 'primary'), 8.5%)
-			),
-			'horizontal-rule': (
-				'border'    : 0,
-				'border-top': 0.1rem solid theme('border', 'color'),
-				'margin'    : 2.0rem 0,
-				'box-sizing': content-box,
-				'overflow'  : visible
-			),
-			'embedded': (
-				'max-width'        : 100%,
-				'height'           : auto,
-				'vertical-align'   : middle,
-				'font-style'       : italic,
-				'background-repeat': no-repeat,
-				'background-size'  : cover
-			)
-		)
-	),
-	'button': (
-		'enabled': true,
-		'features': (
-			'group'    : true,
-			'vertical' : true,
-			'styles'   : true,
-			'sizes'    : true,
-			'outlined' : true,
-			'dropdown' : true,
-			'preloader': true
-		),
-		'classnames': (
-			'name'              : 'button',
-			'group'             : 'buttons',
-			'outlined'          : 'outlined',
-			'rounded'			: 'rounded',
-			'active'            : 'active',
-			'inactive'          : 'inactive',
-			'block'             : 'block',
-			'vertical'          : 'vertical',
-			'preloader'			: 'preloader',
-			// dropdown
-			'dropdown'          : 'dropdown',
-			'dropdown-right'    : 'right',
-			'dropdown-left'     : 'left',
-			'dropdown-top'      : 'top',
-			'dropdown-bottom'   : 'bottom',
-			'dropdown-toggle'   : 'toggle',
-			'dropdown-clickable': 'clickable'
-		),
-		'settings': (
-			'display'         : inline-flex,
-			'align-items'     : center,
-			'justify-content' : center,
-			'font-family'     : inherit,
-			'font-size'       : 1rem,
-			'font-weight'     : normal,
-			'line-height'     : 1,
-			'text-align'      : center,
-			'text-decoration' : none,
-			'white-space'     : nowrap,
-			'color'           : theme('color', 'text'),
-			'background'      : theme('color', 'background'),
-			'background-image': none,
-			'outline'         : none,
-			'width'           : min-content,
-			'padding'         : .935rem 1.6rem,
-			'transition'      : .2s,
-			'appearance'      : none,
-			'cursor'          : pointer,
-			'border'          : set-border(), // default border
-			'border-radius'   : theme('border', 'radius'),
-			'user-select'     : none,
-			'box-shadow'      : none,
-			'overflow'        : visible,
-			'icon'            : (
-				'font-size': 1.12rem
-			),
-			'preloader': (
-				'pointer-events'    : none,
-				'width'             : 1.3rem,
-				'height'            : 1.3rem,
-				'border-radius'     : 50%,
-				'border-width'      : 3px,
-				'border-style'      : solid,
-				'indicator-color'   : theme('color', 'primary'), // border color
-				'border-right-color': transparent,
-				'border-top-color'  : transparent,
-				'animation'         : spin .55s linear infinite
-			),
-			'styles': (
-				(
-					'primary', // class name
-					theme('color', 'primary'), // bg color
-					white, // text color
-					lighten(theme('color', 'primary'), 4%) // border color 
-
-				),
-				(
-					'success', // class name
-					theme('color', 'success'), // bg color
-					white,
-					lighten(theme('color', 'success'), 4%) // border color
-				),
-				(
-					'warning', // class name
-					theme('color', 'warning'), // bg color
-					white, // text color
-					lighten(theme('color', 'warning'), 4%) // border color
-				),
-				(
-					'error', // class name
-					theme('color', 'error'), // bg color
-					white, // text color
-					lighten(theme('color', 'error'), 4%) // border color
-				),
-				(
-					'dark', // class name
-					theme('color', 'dark'), // bg color
-					white, // text color
-					if((theme('type') == "light"), color.$dark-grey, color.$grey) // border color
-				)
-			),
-			'sizes': (
-				(
-					"tiny", // size name (class)
-					.809em, // font-size
-					.415rem .5rem // padding
-				),
-				(
-					"mini", // size name (class)
-					.909em, // font-size
-					.445rem .9rem // padding
-				),
-				(
-					"small", // size name (class)
-					.979em, // font-size
-					.645rem 1.4rem // padding
-				),
-				(
-					"large", // size name (class)
-					1.25em, // font-size
-					1.15rem 2.1rem // padding
-				),
-				(
-					"huge", // size name (class)
-					1.45em, // font-size
-					1.3rem 2.4rem // padding
-				)
-			)
-		)
-	),
-	'form': (
-		'enabled': true,
-		'features': (
-			'group'            : true,
-			'sizes'            : true,
-			'validation-styles': true,
-			'checkbox-radio'   : true,
-			'upload'           : true
-		),
-		'classnames': (
-			'name'    : 'form',
-			'items'   : 'items',
-			'item'    : 'item',
-			'checkbox': 'checkbox',
-			'radio'   : 'radio',
-			'group'   : 'group'
-		),
-		'settings': (
-			'padding': 0 16px,
-			'input'  : (
-				'font-family'     : unset,
-				'box-sizing'      : inherit,
-				'color'           : inherit,
-				'background-color': transparent,
-				'border-color'    : inherit,
-				'height'          : initial,
-				'padding'         : .7rem .5rem,
-				'font-size'       : initial,
-				'font-weight'     : theme('typography', 'font-weight'),
-				'border-width'    : theme('border', 'width'),
-				'border-style'    : theme('border', 'style'),
-				'border-radius'   : theme('border', 'radius'),
-				'box-shadow'      : none,
-				'width'           : 100%,
-				'max-width'       : 100%,
-				'transition'      : .35s,
-				'outline-color'   : transparent,
-				'outline-width'   : 2px,
-				'focus': (
-					'color'           : inherit,
-					'background-color': initial,
-					'outline-color'   : theme('color', 'primary'),
-					'outline-width'   : 2px
-				),
-				'placeholder': (
-					'color': color.$dark-grey
-				)
-			),
-			'group': (
-				'button': (
-					'padding': .7rem 1.75rem
-				)
-			),
-			'items': (
-				'margin': 0
-			),
-			'item': (
-				'height'     : fit-content,
-				'margin-y'   : .495rem,
-				'margin-x'   : 5px,
-				'display'    : inline-flex,
-				'flex-wrap'  : wrap,
-				'width'      : 100%,
-				'max-width'  : 100%,
-				'position'   : relative,
-				'align-items': center,
-				'padding'    : .295rem
-			),
-			'label': (
-				'color'         : theme('color', 'text'),
-				'font-size'     : .955rem,
-				'font-family'   : unset,
-				'font-weight'   : bold,
-				'margin'        : 0,
-				'text-transform': none,
-				'height'        : fit-content
-			),
-			'radio-checkbox': (
-				'display'              : grid,
-				'grid-template-columns': 1em auto,
-				'gap'                  : 1rem,
-				'place-content'        : center,
-				'margin'               : 0,
-				'width'                : 1.6em,
-				'height'               : 1.6em,
-				'accent-color'         : theme('color', 'primary'),
-				'label'                : (
-					'color'      : theme('color', 'text'),
-					'font-size'  : .955rem,
-					'font-family': unset,
-					'font-weight': normal,
-					'user-select': none
-				)
-			),
-			'textarea': (
-				'min-height': 6.5rem,
-				'resize'    : vertical
-			),
-			'fieldset': (
-				'border-width': 0,
-				'padding'     : 0.6em
-			),
-			'legend': (
-				'display'      : block,
-				'font-size'    : 1.3rem,
-				'font-weight'  : bold,
-				'margin-bottom': .7rem,
-				'white-space'  : normal
-			),
-			'small': (
-				'color': color.$darken-grey,
-			),
-			// for input validations
-			'styles': (
-				(
-					'success', // class name
-					theme('color', 'success') // style color
-				),
-				(
-					'warning', // class name
-					theme('color', 'warning') // style color
-				),
-				(
-					'error', // class name
-					theme('color', 'error') // style color
-				)
-			),
-			// input sizes
-			'sizes': (
-				(
-					'small', // class name
-					.875rem, // font-size
-					2.5rem, // input height
-					.645rem 1.4rem, // button padding
-				),
-				(
-					'large', // class name
-					1.05rem, // font-size
-					3.2rem, // input height
-					1.15rem 2.1rem, // button padding
-				)
-			),
-			'columns': (
-				// maximum number of form items in a single row (default : 2 through 6)
-				// class name, value
-				"two"  : 2,
-				"three": 3,
-				"four" : 4,
-				"five" : 5,
-				"six"  : 6
-			)
-		)
-	),
-	'grid': (
-		'enabled': true, 
-		'features': (
-			'equal' : true, // equal height
-			'offset': true // [!] increases the size
-		),
-		'classnames': (
-			'row'      : 'row',
-			'container': 'container',
-			'column'   : 'col',
-			'offset'   : 'offset',
-			'equal'    : 'equal'
-		),
-		'settings': (
-			'gap': .375rem,
-			'columns': (
-				'size'      : 16,
-				'padding'   : .3rem,
-				'min-height': .125rem
-			),
-			'container': (
-				'width'  : 100%,
-				'padding': 40px, // for left and right sides
-				'margin' : 0 auto,
-				'viewports': ( // only for containers
-					('sm', 500px),
-					('md', 768px),
-					('lg', 992px),
-					('xl', 1260px),
-					('xxl', 1400px)
-				)
-			),
-			'breakpoints': (
-				'extra-small'      : 0,
-				'small'            : 500px,
-				'medium'           : 768px,
-				'large'            : 992px,
-				'extra-large'      : 1260px,
-				'extra-extra-large': 1400px
-			),
-			'viewports': (
-				('xs', 0),
-				('sm', 500px),
-				('md', 768px),
-				('lg', 992px),
-				('xl', 1260px),
-				('xxl', 1400px)
-			)
-		)
-	),
-	'table': (
-		'enabled': true,
-		'features': (
-			'hovered': true,
-			'striped': true
-		),
-		'classnames': (
-			'name'   : 'table',
-			'striped': 'striped',
-			'hovered': 'hovered',
-			'active' : 'active'
-		),
-		'settings': (
-			'width'          : 100%,
-			'max-width'      : 100%,
-			'text-align'     : left,
-			'margin-bottom'  : margin-bottom,
-			'border-spacing' : 0,
-			'border-collapse': collapse,
-			'position'       : relative,
-			'transition'     : all 0.3s,
-			'hover': (
-				'color'           : theme('color', 'text'),
-				'background-color': color.$lighten-grey
-			),
-			'striped': (
-				'color'           : theme('color', 'text'),
-				'background-color': color.$lighten-grey
-			),
-			'active': (
-				'color'           : theme('color', 'text'),
-				'background-color': color.$light-grey
-			),
-			'td': (
-				'padding': .313rem .7rem,
-			),
-			'th': (
-				'color'              : theme('color', 'text'),
-				'font-size'          : inherit,
-				'font-family'        : unset,
-				'font-weight'        : bold,
-				'padding'            : .90rem .7rem,
-				'background-color'   : transparent,
-				'border-bottom-color': color.$dark-grey
-			),
-			'caption': (
-				'text-align'      : inherit,
-				'color'           : theme('color', 'text'),
-				'font-size'       : 1.15rem,
-				'font-family'     : unset,
-				'font-weight'     : bold,
-				'padding'         : 1rem .6rem,
-				'border-bottom'   : 1px theme('border', 'style') color.$darken-grey,
-				'background-color': transparent
-			)
-		)
-	),
 	'typography': (
 		'settings': (
 			'paragraph': (
@@ -1427,9 +1421,9 @@ $options: (
 		)
 	),
 	///
-	/// 03.UTILITIES
+	/// UTILITIES
 	/// 
-	'helpers': (
+	'utilities': (
 		'enabled': true
 	)
 ) !default;

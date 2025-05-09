@@ -84,7 +84,15 @@ $themes: (
 			)
 			*/
 		),
-		'components': (
+		'modules': (
+			'button': (
+				'font-weight': 500
+			),
+			'form': (
+				'input': (
+					'background-color': #28282d
+				)
+			),
 			'menu': (
 				'background-color': lighten(#222226, 2.5%),
 				'item': (
@@ -106,16 +114,6 @@ $themes: (
 					'color'      : #222226,
 					'font-weight': 500,
 				)
-			)
-		),
-		'elements': (
-			'button': (
-				'font-weight': 500
-			),
-			'form': (
-				'input': (
-					'background-color': #28282d
-				)
 			),
 			'typography': (
 				'href': (
@@ -124,21 +122,21 @@ $themes: (
 						'color': lighten(#5580ff, 3%)
 					)
 				)
-			)
-		),
-		// You can use this section to override/change the 
-		// all default variable of utilities in the 
-		// utilities.scss API file.
-		'utilities': (
-			//'enabled': false, // this option disables all helpers (default true).
-			/*
-			'flex-wrap': (
-				'enabled': false 
 			),
-			'overflow': (
-				'prefix': 'flow-' 
+			// You can use this section to override/change the 
+			// all default variable of utilities in the 
+			// utilities.scss API file.
+			'utilities': (
+				//'enabled': false, // this option disables all helpers (default true).
+				/*
+				'flex-wrap': (
+					'enabled': false 
+				),
+				'overflow': (
+					'prefix': 'flow-' 
+				)
+				*/
 			)
-			*/
 		)
 		//////////////////////////////////////////////////////////
 	),

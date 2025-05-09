@@ -1,0 +1,84 @@
+///
+/// Punica CSS Framework
+/// Module : Grid
+///
+
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Mixins" as *;
+
+@if enabled('grid') {
+	$column-size: module('grid', 'columns', 'size');
+
+	// Containers
+	.#{class('grid', 'container')},
+	[class^="#{class('grid', 'container')}-"] {
+		width  : module('grid', 'container', 'width');
+		margin : module('grid', 'container', 'margin');
+		padding: 0 module('grid', 'container', 'padding');
+	}
+	@include breakpoints(module('grid', 'breakpoints', 'medium'), 'max-width') {
+		.#{class('grid', 'container')},
+		[class^="#{class('grid', 'container')}-"] {
+			padding: 0 calc(module('grid', 'container', 'padding') / 3);
+		}
+	}
+	@each $label, $breakpoint in module('grid', 'container', 'viewports') {
+		@include breakpoints($breakpoint) {
+			.#{class('grid', 'container')}-#{$label} {
+				max-width: calc(#{$breakpoint} - 1.7%);
+			}
+		}
+	}
+
+	// Row
+	.#{class('grid', 'row')} {
+		display              : grid;
+		grid-gap             : module('grid', 'gap');
+		grid-template-columns: repeat($column-size, minmax(0, 1fr));
+		&> [class^="#{class('grid', 'column')}"] {
+			height    : fit-content;
+			padding   : module('grid', 'columns', 'padding');
+			min-height: module('grid', 'columns', 'min-height');
+		}
+		/// Equal height
+		@if features('grid', 'equal') {
+			&.#{class('grid', 'equal')} > [class^="#{class('grid', 'column')}"] {
+				height: auto;
+			}
+		}
+	}
+
+	// Default Grid System
+	@for $id from 1 through $column-size {
+		.#{class('grid', 'column')}-#{$id} {
+			grid-column: span #{$id};
+		}
+	}
+
+	// Breakpoints
+	@each $label, $breakpoint in module('grid', 'viewports') {
+		@include breakpoints($breakpoint) {
+			@for $id from 1 through $column-size {
+				.#{class('grid', 'column')}-#{$label}-#{$id} {
+					grid-column: span #{$id};
+				}
+			}
+		}
+	}
+	
+	// Offset
+	@if features('grid', 'offset') {
+		@each $label, $breakpoint in module('grid', 'viewports') {
+			@include breakpoints($breakpoint) {
+				@for $id from 1 through $column-size {
+					@for $offset-id from 2 through $column-size {
+						.#{class('grid', 'column')}-#{$label}-#{$id}.#{class('grid', 'offset')}-#{$label}-#{$offset-id} {
+							grid-column: #{$offset-id} / span #{$id};
+						}
+					}
+				}
+			}
+		}
+	}
+}

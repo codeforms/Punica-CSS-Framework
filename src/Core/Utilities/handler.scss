@@ -7,7 +7,7 @@
 @use "../Global/Options" as *;
 @use "mixins" as *;
 
-@if enabled('utilities', 'helpers') {
+@if enabled('utilities') {
 	@include set_utils('accent-color', true);
 	@include set_utils('align-content');
 	@include set_utils('align-items');

@@ -27,7 +27,7 @@
 @mixin media-group-specs(
 	$item-name, $padding: 1px
 ) {
-	@each $name, $number in components('card', 'columns') {
+	@each $name, $number in module('card', 'columns') {
 		&>.#{$item-name}.#{$name} {
 			padding-bottom: initial !important;
 			height: auto;

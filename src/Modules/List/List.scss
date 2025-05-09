@@ -1,0 +1,124 @@
+///
+/// Punica CSS Framework
+/// Module : List
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Sass" as *;
+@use "../../Core/Global/Mixins" as *;
+@use "../../Core/Global/Colors" as color;
+@use "../../Core/Theme/Getters" as *;
+@use "../../Core/Theme/Setters" as *;
+
+@if enabled('list') {
+	.#{class('list', 'name')} {
+		list-style: none;
+		margin    : module('list', 'margin');
+		// .list > .item
+		>.#{class('list', 'item')} {
+			display    : flex;
+			align-items: center;
+			padding    : module('list', 'item', 'padding');
+			margin     : module('list', 'item', 'margin');
+			transition : module('list', 'item', 'transition');
+			// .list > .item > img
+			// .list > .item > i
+		    >img,
+		    >i {
+		    	margin-right: module('list', 'item', 'media', 'margin-right');
+		    }
+		    // .list > .item > span
+			// .list > .item > div
+		    &>span,
+		    &>div {
+		    	/// ..children of a flex container are
+		    	/// forced to have a block-flavored display type.
+		    	display: contents;
+		    }
+		    // .list > .item > body
+		    >.#{class('list', 'body')} {
+				display    : initial;
+				flex       : 1;
+				line-height: module('list', 'item', 'body', 'line-height');
+				text-align : module('list', 'item', 'body', 'text-align');
+				// .list > .item > .body > .title
+				// .list > .item > .body > .subtitle
+		    	>.#{class('list', 'title')},
+		    	>.#{class('list', 'subtitle')} {
+					display: block;
+				}
+				// .list > .item > .body > .title
+		    	>.#{class('list', 'title')} {
+					font-size  : module('list', 'item', 'title', 'font-size');
+					font-weight: module('list', 'item', 'title', 'font-weight');
+					line-height: module('list', 'item', 'title', 'line-height');
+		    	}
+		    	// .list > .item > .body > .subtitle
+				>.#{class('list', 'subtitle')} {
+					font-size    : module('list', 'item', 'subtitle', 'font-size');
+					font-weight  : module('list', 'item', 'subtitle', 'font-weight');
+					margin-bottom: module('list', 'item', 'subtitle', 'margin-bottom');
+					@if theme('type') == 'light' {
+						color: darken(color.$grey, 20%);
+					} @else if theme('type') == 'dark' {
+						color: lighten(color.$grey, 20%);
+					}
+				}
+		    }
+		    // .list > .item > .actions
+		    >.#{class('list', 'actions')} {
+				width      : module('list', 'item', 'actions', 'width');
+				margin-left: module('list', 'item', 'actions', 'margin-left');
+			}
+			// .list > .item.active
+			&.#{class('list', 'active')} {
+				background: color.$grey;
+			}
+		}
+		///
+		/// DIVIDED
+		///
+		@if features('list', 'divided') {
+			// .divided.list
+			&.#{class('list', 'divided')} {
+				>.#{class('list', 'item')} {
+					border-bottom: set-border();
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+		///
+		/// STRIPED
+		///
+		@if features('list', 'striped') {
+			// .striped.list
+			&.#{class('list', 'striped')} {
+				// .striped.list > .item
+				>.#{class('list', 'item')} {
+					&:nth-of-type(odd) {
+						background: color.$grey;
+					}
+				}
+			}
+		}
+		///
+		/// HOVERED
+		///
+		@if features('list', 'hovered') {
+			// .hovered.list
+			&.#{class('list', 'hovered')} {
+				// .hovered.list > .item
+				>.#{class('list', 'item')} {
+					// .hovered.list > .item:hover
+					&:hover {
+						background: color.$grey;
+						transition: module('list', 'item', 'transition');
+					}
+				}
+			}
+		}
+	}
+}

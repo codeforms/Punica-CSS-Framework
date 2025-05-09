@@ -1,0 +1,22 @@
+///
+/// Punica CSS Framework
+/// Module : Tabnav -> Mixins
+///
+
+@use "../../Core/Global/Getters" as *;
+
+///
+/// Class list for button styles
+///
+@mixin tab-buttons() {
+	&>.#{class('button', 'name')},
+	&>a.#{class('button', 'name')},
+	&>.#{class('button', 'group')} > .#{class('button', 'name')},
+	&>.#{class('button', 'group')} > a.#{class('button', 'name')},
+	&>.#{class('button', 'dropdown')} > .#{class('button', 'name')},
+	&>.#{class('button', 'dropdown')} > a.#{class('button', 'name')},
+	&>.#{class('button', 'group')} > .#{class('button', 'dropdown')} > .#{class('button', 'name')},
+	&>.#{class('button', 'group')} > .#{class('button', 'dropdown')} > a.#{class('button', 'name')} {
+		@content
+	}
+}

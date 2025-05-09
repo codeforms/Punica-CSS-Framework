@@ -1,0 +1,144 @@
+///
+/// Punica CSS Framework
+/// Module : Navbar -> Mixins
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Sass" as *;
+@use "../../Core/Theme/Getters" as *;
+
+///
+/// Navbar Themes
+/// @param {Color} $bg-color
+/// @param {Color} $text-color
+/// @param {Color} $input-bg
+/// @param {Color} $input-color
+/// @param {Color} $input-border-color
+///
+@mixin navbar-themes(
+	$bg-color: $navbar-bg, 
+	$text-color: $navbar-color,
+	$input-bg: $navbar-color,
+	$input-color: $main-font-color,
+	$input-border-color: inherit,
+	$divider-color: inherit
+) {
+	background: $bg-color;
+	color: $text-color;
+
+	///
+	/// GRADIENT
+	///
+	@if features('navbar', 'gradient') {
+		&.#{class('navbar', 'gradient')} {
+			background: linear-gradient(
+				to top, 
+				$bg-color 0%, 
+				lighten($bg-color, 11.5%) 2%, 
+				darken($bg-color, 3%) 97%, 
+				lighten($bg-color, 11.5%) 100%
+			);
+		}
+		/// Gradient Left-To-Right
+		&.#{class('navbar', 'gradient')}#{'-ltr'} {
+			background: linear-gradient(135deg, lighten($bg-color, 9%), $bg-color);
+		}
+		/// Gradient Right-To-Left
+		&.#{class('navbar', 'gradient')}#{'-rtl'} {
+			background: linear-gradient(-135deg, lighten($bg-color, 9%), $bg-color);
+		}
+	}
+
+	.#{class('button', 'group')} {
+		.#{class('button', 'name')},
+		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+			color     : $text-color;
+			min-height: 100%;
+			i {
+				color: $text-color;
+			}
+			&:hover {
+				background: lighten($bg-color, 5%);
+			}
+		}
+	}
+	.#{class('navbar', 'brand')} {
+		a,
+		a:visited {
+			color: $text-color;
+		}
+	}
+	section.#{class('navbar', 'links')} {
+		div.#{class('navbar', 'section')} {
+			input[type='text'] {
+				background-color: $input-bg;
+				border-color    : $input-border-color;
+				color           : $input-color;
+				&::placeholder {
+					color: $text-color;
+				}
+				&:focus {
+					outline: module('form', 'input', 'focus', 'outline-width') solid lighten($input-border-color, 13%);
+				}
+			}
+			.#{class('button', 'group')} {
+				.#{class('button', 'name')},
+				.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+					&:active,
+					&.#{class('button', 'active')} {
+						color           : $text-color;
+						background-color: lighten($bg-color, 5%);
+						transition      : module('button', 'transition');
+						&:hover {
+							transition      : module('button', 'transition');
+						}
+					}
+				}
+			}
+			///
+			/// DIVIDED NAVBAR
+			///
+			@if features('navbar', 'divided') {
+				&.#{class('navbar', 'divided')} {
+					.#{class('button', 'group')} {
+						.#{class('button', 'name')},
+						.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+							border: solid $divider-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+///
+/// Divided Navbar
+///
+@mixin navbar-divided() {
+	.#{class('button', 'group')} {
+		.#{class('button', 'name')},
+		.#{class('button', 'dropdown')} .#{class('button', 'name')} {
+			border-width: 0 1px !important;
+		}
+		&>.#{class('button', 'name')}:first-child {
+			border-left-width: 0 !important;
+		}
+		&>.#{class('button', 'name')}:last-child {
+			border-right-width: 0 !important;
+		}
+		.#{class('button', 'dropdown')}:first-child {
+			.#{class('button', 'name')} {
+				border-left-width: 0 !important;
+			}
+		}
+		.#{class('button', 'dropdown')}:last-child {
+			.#{class('button', 'name')} {
+				border-right-width: 0 !important;
+				border-left-width: 0 !important;
+				margin-left: 1px;
+			}
+		}
+	}
+}

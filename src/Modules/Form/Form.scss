@@ -1,0 +1,243 @@
+///
+/// Punica CSS Framework
+/// Module : Form
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Mixins" as *;
+@use "../../Core/Global/Colors" as color;
+@use "../../Core/Theme/Getters" as *;
+@use "mixins";
+
+@if enabled('form') {
+	@include mixins.form-inputs() {
+		font-family     : module('form', 'input', 'font-family');
+		box-sizing      : module('form', 'input', 'box-sizing');
+		background-color: module('form', 'input', 'background-color');
+		border-width    : module('form', 'input', 'border-width');
+		border-style    : module('form', 'input', 'border-style');
+		border-color    : module('form', 'input', 'border-color');
+		height          : module('form', 'input', 'height');
+		border-radius   : module('form', 'input', 'border-radius');
+		outline         : module('form', 'input', 'outline-width') solid transparent;
+		outline-color   : module('form', 'input', 'outline-color');
+		outline-offset  : -#{module('form', 'input', 'outline-width')};
+		box-shadow      : module('form', 'input', 'box-shadow');
+		padding         : module('form', 'input', 'padding');
+		width           : module('form', 'input', 'width');
+		max-width       : module('form', 'input', 'max-width');
+		color           : module('form', 'input', 'color');
+		font-size       : module('form', 'input', 'font-size');
+		font-weight     : module('form', 'input', 'font-weight');
+		transition      : module('form', 'input', 'transition');
+		&:focus {
+			outline-color   : module('form', 'input', 'focus', 'outline-color');
+			outline-width   : module('form', 'input', 'focus', 'outline-width');
+			outline-offset  : -#{module('form', 'input', 'focus', 'outline-width')};
+			background-color: module('form', 'input', 'focus', 'background-color');
+			color           : module('form', 'input', 'focus', 'color');
+			z-index         : 0;
+		}
+		&::placeholder {
+			color: module('form', 'input', 'placeholder', 'color');
+		}
+		///
+		/// VALIDATION STYLES
+		///
+		@if features('form', 'validation-styles') {
+			@each $style-name, $style-color in module('form', 'styles') {
+				&.#{$style-name} {
+					color       : $style-color;
+					border-color: $style-color;
+					border-width: theme('border', 'width');
+					&:focus {
+						outline-color: $style-color;
+					}
+				}
+			}
+		}
+	};
+	textarea {
+		min-height: module('form', 'textarea', 'min-height');
+		resize    : module('form', 'textarea', 'resize');
+	}
+	fieldset {
+		border-width: module('form', 'fieldset', 'border-width');
+		padding     : module('form', 'fieldset', 'padding');
+	}
+	legend {
+		display      : module('form', 'legend', 'display');
+		font-size    : module('form', 'legend', 'font-size');
+		font-weight  : module('form', 'legend', 'font-weight');
+		margin-bottom: module('form', 'legend', 'margin-bottom');
+		white-space  : module('form', 'legend', 'white-space');
+	}
+	select option {
+		color           : module('form', 'input', 'color');
+		background-color: module('form', 'input', 'background-color');
+	}
+	input:disabled {
+	  opacity: .59;
+	}
+	.#{class('form', 'name')} {
+		position : relative;
+		max-width: 100%;
+		padding  : module('form', 'padding');
+		.#{class('form', 'item')} {
+			height     : module('form', 'item', 'height');
+			margin     : module('form', 'item', 'margin-y') module('form', 'item', 'margin-x');
+			display    : module('form', 'item', 'display');
+			flex-wrap  : module('form', 'item', 'flex-wrap');
+			width      : module('form', 'item', 'width');
+			max-width  : module('form', 'item', 'max-width');
+			position   : module('form', 'item', 'position');
+			align-items: module('form', 'item', 'align-items');
+			padding    : module('form', 'item', 'padding');
+			@at-root .#{class('form', 'name')} label,
+			&>label {
+				margin        : module('form', 'label', 'margin');
+				color         : module('form', 'label', 'color');
+				font-size     : module('form', 'label', 'font-size');
+				font-family   : module('form', 'label', 'font-family');
+				font-weight   : module('form', 'label', 'font-weight');
+				text-transform: module('form', 'label', 'text-transform');
+				height        : module('form', 'label', 'height');
+			}
+			&>small {
+				color: module('form', 'small', 'color');
+			}
+			///
+			/// Custom file input
+			///
+			@if features('form', 'upload') {
+				> input[type="file"] {
+					opacity : 0;
+					position: absolute;
+					top     : 0;
+					left    : 0;
+					height  : 100%;
+					cursor  : default;
+				}
+			}
+			///
+			/// FORM GROUPS
+			///
+			@if features('form', 'group') {
+				@at-root .#{class('form', 'name')} .#{class('form', 'group')},
+				&>.#{class('form', 'group')} {
+					display: flex;
+					width  : 100%;
+					>* {
+						flex: 1 1 auto;
+						&:last-child {
+			    			margin-left: if(module('form', 'input', 'border-width') != 0 , -1px , .5rem);
+						}
+						&:not(:first-child):not(:last-child) {
+							margin-left  : if(module('form', 'input', 'border-width') != 0 , -1px , .5rem);
+							margin-right : 0;
+							border-radius: 0;
+						}
+					}
+					>.#{class('button', 'group')} {
+						box-shadow: none;
+					}
+					>.#{class('button', 'name')} {
+						padding   : module('form', 'group', 'button', 'padding');
+						box-shadow: none;
+						&:first-child {
+							border-bottom-right-radius: 0;
+							border-top-right-radius   : 0;
+						}
+						&:last-child:not(:first-child) {
+							border-bottom-left-radius: 0;
+							border-top-left-radius   : 0;
+						}
+					}
+					@include mixins.form-inputs() {
+						box-shadow: none !important;
+						&:first-child {
+							border-bottom-right-radius: 0;
+							border-top-right-radius   : 0;
+						}
+						&:last-child:not(:first-child) {
+							border-bottom-left-radius: 0;
+							border-top-left-radius   : 0;
+						}
+					}
+				}
+			}
+		}
+		.#{class('form', 'items')} {
+			margin   : module('form', 'items', 'margin');
+			display  : flex;
+			flex-wrap: wrap;
+		}
+		@each $name, $number in module('form', 'columns') {
+			.#{$name}.#{class('form', 'items')} {
+				>.#{class('form', 'item')} {
+					flex: 0 0 calc(100% * (1 / #{$number}) - (2 * #{module('form', 'item', 'margin-x')}));
+				}
+			}
+			@include breakpoints(module('grid', 'breakpoints', 'medium'), 'max-width') {
+				.#{$name}.#{class('form', 'items')} {
+					>.#{class('form', 'item')} {
+						flex: 0 0 100%;
+					}
+				}
+			}
+		}
+		///
+		/// INPUT SIZES
+		///
+		@if features('form', 'sizes') {
+			@each $size-name, $font-size, $input-height, $button-padding in module('form', 'sizes') {
+				&.#{$size-name} {
+					@include mixins.form-inputs() {
+						height   : $input-height;
+						font-size: $font-size;
+					}
+					.#{class('button', 'name')} {
+						height   : $input-height !important;
+						font-size: $font-size !important;
+						padding  : $button-padding !important;
+					}
+					@at-root .#{class('form', 'name')}.#{$size-name} label,
+					&>.#{class('form', 'items')}>.#{class('form', 'item')}>label,
+					&>.#{class('form', 'item')}>label {
+						font-size: $font-size;
+					}
+				}
+			}
+		}
+	}
+	///
+	/// CHECKBOX & RADIO
+	///
+	@if features('form', 'checkbox-radio') {
+		.#{class('form', 'radio')},
+		.#{class('form', 'checkbox')} {
+			display              : module('form', 'radio-checkbox', 'display');
+			grid-template-columns: module('form', 'radio-checkbox', 'grid-template-columns');
+			gap                  : module('form', 'radio-checkbox', 'gap');
+			input {
+				display      : module('form', 'radio-checkbox', 'display');
+				place-content: module('form', 'radio-checkbox', 'place-content');
+				margin       : module('form', 'radio-checkbox', 'margin');
+				width        : module('form', 'radio-checkbox', 'width');
+				height       : module('form', 'radio-checkbox', 'height');
+				accent-color : module('form', 'radio-checkbox', 'accent-color');
+				&:disabled {
+				  cursor: not-allowed;
+				}
+			}
+			&>label {
+				color      : module('form', 'radio-checkbox', 'label', 'color');
+				font-size  : module('form', 'radio-checkbox', 'label', 'font-size');
+				font-family: module('form', 'radio-checkbox', 'label', 'font-family');
+				font-weight: module('form', 'radio-checkbox', 'label', 'font-weight');
+				user-select: module('form', 'radio-checkbox', 'label', 'user-select');
+			}
+		}
+	}
+}

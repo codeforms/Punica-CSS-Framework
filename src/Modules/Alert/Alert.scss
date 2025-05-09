@@ -1,0 +1,87 @@
+///
+/// Punica CSS Framework
+/// Module : Alert
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Sass" as *;
+@use "../../Core/Theme/Getters" as *;
+@use "../../Core/Theme/Setters" as *;
+
+@if enabled('alert') {
+	.#{class('alert', 'name')} {
+		@include set-style(theme('color', 'background'), theme('color', 'text')) {
+			display      : module('alert', 'display');
+			padding      : module('alert', 'padding');
+			margin       : module('alert', 'margin');
+			width        : module('alert', 'width');
+			font-size    : module('alert', 'font-size');
+			font-family  : module('alert', 'font-family');
+			font-weight  : module('alert', 'font-weight');
+			border       : module('alert', 'border');
+			border-radius: module('alert', 'border-radius');
+			line-height  : module('alert', 'line-height');
+			text-align   : module('alert', 'text-align');
+			a {
+				color          : module('alert', 'href', 'color');
+				text-decoration: module('alert', 'href', 'text-decoration');
+				&:focus,&:hover,&:active,&.#{class('alert', 'active')} {
+					opacity: .75;
+				}
+			}
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			>i {
+				vertical-align: module('alert', 'icon', 'vertical-align');
+			}
+		}
+		&.#{class('alert', 'closable')} {
+			position: relative;
+			&::after {
+				position  : absolute;
+				content   : module('alert', 'closable', 'content');
+				font-size : module('alert', 'closable', 'font-size');
+				right     : module('alert', 'closable', 'right');
+				top       : module('alert', 'closable', 'top');
+				transform : module('alert', 'closable', 'transform');
+				cursor    : module('alert', 'closable', 'cursor');
+				opacity   : module('alert', 'closable', 'opacity');
+			}
+		}
+		///
+		/// STYLES
+		///
+		@if features('alert', 'styles') {
+			@each $style-name, $color, $bg-color in module('alert', 'styles') {
+				@include set-style($bg-color, $color, $style-name) {
+					border-color: darken($bg-color, 3%);
+					a {
+						color: $color;
+					}
+				};
+				@if features('alert', 'outlined') {
+					&.#{$style-name}.#{class('alert', 'outlined')} {
+						color           : $bg-color;
+						border-color    : darken($bg-color, 3%);
+						background-color: transparent;
+						a {
+							color: $bg-color;
+						}
+					}
+				}
+			}
+		}
+		///
+		/// SIZES
+		///
+		@if features('alert', 'sizes') {
+			@each $size-name, $font-size, $padding in module('alert', 'sizes') {
+				@include set-size($font-size, $padding, $size-name);
+			}
+		}
+	}
+}

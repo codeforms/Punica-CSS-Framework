@@ -1,7 +1,7 @@
 {
   "name"       : "Punica-CSS-Framework",
   "description": "Punica CSS Framework is a clean, lightweight, responsive, modern, and fully customizable API-Driven Framework built with SASS/SCSS, offering multi-theme support.",
-  "version"    : "3.0.0",
+  "version"    : "3.1.0",
   "homepage"   : "https://github.com/codeforms/Punica-CSS-Framework",
   "author"     : "Fatih Keçeci",
   "license"    : "MIT",
@@ -13,6 +13,6 @@
     "watch"         : "npm run prod -- -w"
   },
   "dependencies": {
-    "sass": "1.83.4"
+    "sass": "1.87.0"
   }
 }

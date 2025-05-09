@@ -1,0 +1,102 @@
+///
+/// Punica CSS Framework
+/// Module : Tooltip
+///
+
+@use "../../Core/Global/Getters" as *;
+@use "../../Core/Global/Options" as *;
+@use "../../Core/Global/Mixins" as *;
+
+@if enabled('tooltip') {
+	.#{class('tooltip', 'name')} {
+		display         : module('tooltip', 'display');
+		justify-content : module('tooltip', 'justify-content');
+		align-items     : module('tooltip', 'align-items');
+		position        : module('tooltip', 'position');
+		cursor          : module('tooltip', 'cursor');
+		transition      : module('tooltip', 'transition');
+		.#{class('tooltip', 'text')} {
+			position        : absolute;
+			visibility      : hidden;
+			opacity         : 0;
+			top             : module('tooltip', 'text', 'top');
+			display         : module('tooltip', 'text', 'display');
+			align-items     : module('tooltip', 'text', 'align-items');
+			justify-content : module('tooltip', 'text', 'justify-content');
+			border-radius   : module('tooltip', 'border-radius');
+			background-color: module('tooltip', 'background-color');
+			z-index         : module('tooltip', 'text', 'z-index');
+			color           : module('tooltip', 'text', 'color');
+			font-size       : module('tooltip', 'text', 'font-size');
+			font-family     : module('tooltip', 'text', 'font-family');
+			font-weight     : module('tooltip', 'text', 'font-weight');
+			width           : module('tooltip', 'text', 'width');
+			max-width       : module('tooltip', 'text', 'max-width');
+			text-wrap       : module('tooltip', 'text', 'text-wrap');
+			white-space     : module('tooltip', 'text', 'white-space');
+			text-align      : module('tooltip', 'text', 'text-align');
+			line-height     : module('tooltip', 'text', 'line-height');
+			padding         : module('tooltip', 'text', 'padding');
+			&::after {
+				content     : "";
+				position    : absolute;
+				top         : auto;
+				bottom      : 100%;
+				left        : 50%;
+				margin-left : -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: transparent transparent module('tooltip', 'background-color') transparent;
+			}
+		}
+		///
+		/// DIRECTIONS
+		///
+		@if features('tooltip', 'directions') {
+			&.#{class('tooltip', 'left')},
+			&.#{class('tooltip', 'right')},
+			&.#{class('tooltip', 'top')} {
+				&>.#{class('tooltip', 'text')} {
+					top: auto;
+					&::after {
+						bottom: auto;
+					}
+				}
+			}
+			&.#{class('tooltip', 'right')} {
+				&>.#{class('tooltip', 'text')} {
+					left: 110%;
+					&::after {
+						right       : 100%;
+						left        : auto;
+						border-color: transparent module('tooltip', 'background-color') transparent transparent;
+					}
+				}
+			}
+			&.#{class('tooltip', 'left')} {
+				&>.#{class('tooltip', 'text')} {
+					right: 110%;
+					&::after {
+						left        : 100%;
+						right       : auto;
+						margin      : auto -5px auto auto ;
+						border-color: transparent transparent transparent module('tooltip', 'background-color');
+					}
+				}
+			}
+			&.#{class('tooltip', 'top')} {
+				&>.#{class('tooltip', 'text')} {
+					bottom: 120%;
+					&::after {
+						top         : 100%;
+						border-color: module('tooltip', 'background-color') transparent transparent transparent;
+					}
+				}
+			}
+		}
+		&:hover .#{class('tooltip', 'text')} {
+			visibility: visible;
+			opacity   : 1;
+		}
+	}
+}
