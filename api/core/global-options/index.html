@@ -28,8 +28,7 @@
         <section class="links">
             <div class="divided section justify-content-flex-start">
                 <div class="full height borderless tab align-items-center">
-                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Components</a>
-                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Modules</a>
                     <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
                     <a href="https://codeforms.github.io/Punica-CSS-Framework/api/installation" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">API Docs</a>
                 </div>
@@ -153,11 +152,11 @@
         <div class="pure panel reset">
 	<div class="header">
 		<div class="h5">
-			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">components</span> <span class="weight-normal">(<span class="color-error">$</span>keys...)</span>
+			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">module</span> <span class="weight-normal">(<span class="color-error">$</span>keys...)</span>
 		</div>
 	</div>
 	<div class="content">
-		<p>Get a specific component's variable from the theme map or from the <code>options.scss</code> API file, which contains the default settings.</p>
+		<p>Get a specific module's variable from the theme map or from the <code>options.scss</code> API file, which contains the default settings.</p>
 		<table class="table">
 		    <thead>
 		        <tr>
@@ -176,17 +175,17 @@
 	<div class="content">
 		<script type="text/plain" class="language-scss">
 		// example usage
-		components('card', 'padding') // 1rem
-		components('process', 'item', 'indicator', 'font-size') // 2.16rem
+		module('card', 'padding') // 1rem
+		module('process', 'item', 'indicator', 'font-size') // 2.16rem
     	</script>
 	</div>
 	<div class="header">
 		<div class="h5">
-			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">elements</span> <span class="weight-normal">(<span class="color-error">$</span>keys...)</span>
+			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">features</span> <span class="weight-normal">(<span class="color-error">$</span>module, <span class="color-error">$</span>feature: null): bool</span>
 		</div>
 	</div>
 	<div class="content">
-		<p>Get a specific element's variable from the theme map or from the <code>options.scss</code> API file, which contains the default settings.</p>
+		<p>Get features of a module from the theme map or from the <code>options.scss</code> API file, which contains the default settings.</p>
 		<table class="table">
 		    <thead>
 		        <tr>
@@ -195,39 +194,6 @@
 		        </tr>
 		    </thead>
 		    <tbody>
-		        <tr>
-		            <td><code>$keys</code></td>
-		            <td>String(s)</td>
-		        </tr>
-		    </tbody>
-		</table>
-	</div>
-	<div class="content">
-		<script type="text/plain" class="language-scss">
-		// example usage
-		elements('button', 'preloader', 'border-width') // 3px
-		elements('form', 'textarea', 'min-height') // 6.5rem
-    	</script>
-	</div>
-	<div class="header">
-		<div class="h5">
-			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">features</span> <span class="weight-normal">(<span class="color-error">$</span>node, <span class="color-error">$</span>module, <span class="color-error">$</span>feature: null): bool</span>
-		</div>
-	</div>
-	<div class="content">
-		<p>Get features of Components/Elements from the theme map or from the <code>options.scss</code> API file, which contains the default settings.</p>
-		<table class="table">
-		    <thead>
-		        <tr>
-		            <th>Parameters</th>
-		            <th>Type</th>
-		        </tr>
-		    </thead>
-		    <tbody>
-		        <tr>
-		            <td><code>$node</code></td>
-		            <td>String</td>
-		        </tr>
 		        <tr>
 		            <td><code>$module</code></td>
 		            <td>String</td>
@@ -242,17 +208,17 @@
 	<div class="content">
 		<script type="text/plain" class="language-scss">
 		// example usage
-		features('components', 'card', 'horizontal') // true
-		features('elements', 'button', 'preloader') // true
+		features('card', 'horizontal') // true
+		features('button', 'preloader') // true
     	</script>
 	</div>
 	<div class="header">
 		<div class="h5">
-			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">enabled</span> <span class="weight-normal">(<span class="color-error">$</span>node, <span class="color-error">$</span>module: null): bool</span>
+			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">enabled</span> <span class="weight-normal">(<span class="color-error">$</span>module: null): bool</span>
 		</div>
 	</div>
 	<div class="content">
-		<p>Is component/element enabled?</p>
+		<p>Is module enabled?</p>
 		<table class="table">
 		    <thead>
 		        <tr>
@@ -262,12 +228,8 @@
 		    </thead>
 		    <tbody>
 		        <tr>
-		            <td><code>$node</code></td>
-		            <td>String</td>
-		        </tr>
-		        <tr>
 		            <td><code>$module</code></td>
-		            <td>String</td>
+		            <td>String|null</td>
 		        </tr>
 		    </tbody>
 		</table>
@@ -275,13 +237,13 @@
 	<div class="content">
 		<script type="text/plain" class="language-scss">
 		// example usage
-		enabled('elements', 'grid') // true
-		enabled('components', 'navbar') // true
+		enabled('grid') // true
+		enabled('navbar') // true
     	</script>
 	</div>
 	<div class="header">
 		<div class="h5">
-			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">set_variable</span> <span class="weight-normal">(<span class="color-error">$</span>module, <span class="color-error">$</span>keys...)</span>
+			<i class="material-symbols-outlined align-middle text-larger color-error">alternate_email</i>function <span class="color-warning">set_variable</span> <span class="weight-normal">(<span class="color-error">$</span>keys...)</span>
 		</div>
 	</div>
 	<div class="content">
@@ -293,10 +255,6 @@
 		        </tr>
 		    </thead>
 		    <tbody>
-		        <tr>
-		            <td><code>$module</code></td>
-		            <td>String</td>
-		        </tr>
 		        <tr>
 		            <td><code>$keys</code></td>
 		            <td>String(s)</td>

@@ -28,8 +28,7 @@
         <section class="links">
             <div class="divided section justify-content-flex-start">
                 <div class="full height borderless tab align-items-center">
-                    <a href="https://codeforms.github.io/Punica-CSS-Framework/components/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Components</a>
-                    <a href="https://codeforms.github.io/Punica-CSS-Framework/elements/button" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Elements</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Modules</a>
                     <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
                     <a href="https://codeforms.github.io/Punica-CSS-Framework/api/installation" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">API Docs</a>
                 </div>
@@ -249,12 +248,8 @@
 		            <td>Used to change/override classnames of a component/element</td>
 		        </tr>
 		        <tr>
-		            <td><code>components</code></td>
-		            <td>Used to change/override properties of a component</td>
-		        </tr>
-		        <tr>
-		            <td><code>elements</code></td>
-		            <td>Used to change/override properties of an element</td>
+		            <td><code>modules</code></td>
+		            <td>Used to change/override properties of a module</td>
 		        </tr>
 		        <tr>
 		            <td><code>utilities</code></td>
@@ -268,12 +263,13 @@
     </div>
     <div class="content">
     	<p class="mb-50">
-    		In Punica, the default theme map in <code>themes.scss</code> is structured to help you create your own theme. The <code>classnames</code>, <code>components</code>, <code>elements</code>, and <code>utilities</code> keys are fully optional and can be used as needed for your project.
+    		In Punica, the default theme map in <code>themes.scss</code> is structured to help you create your own theme. The <code>classnames</code>, <code>modules</code>, and <code>utilities</code> keys are fully optional and can be used as needed for your project.
 		</p>
 		<script type="text/plain" class="language-scss">
-		// themes.scss
+		/// Note: You can take a look at the dark theme
+		/// in the themes.scss file.
 		$themes: (
-			your_theme: (
+			theme_slug: (
 				'name': '',
 				'type': '', // light or dark (required*),
 				'typography': (
@@ -301,13 +297,12 @@
 				'shadow': ,
 				//////////////////////////////////////////////////////////
 				// You can use this section to override/change
-				// the all default variables in the options.scss API file.
+				// the all default variables in the options.scss 
+				// and utilities.scss API files.
 				'classnames': (),
-				'components': (),
-				'elements'  : (),
-				// You can use this section to override/change the 
-				// all default utility variables in the utilities.scss API file.
-				'utilities' : ()
+				'modules': (
+					'utilities' : ()
+				)
 				//////////////////////////////////////////////////////////
 			)
 		)
@@ -325,7 +320,7 @@
     </div>
     <div class="content">
     	<p>
-    		In Punica, if you want to override default settings, variables, and class names in the <code>options.scss</code> and <code>utilities.scss</code> API files, you can use the <span class="color-warning">classnames</span>, <span class="color-warning">components</span>, <span class="color-warning">elements</span>, and <span class="color-warning">utilities</span></span> keys within your theme map. These keys allow you to customize Punica's default settings and recompile it to fit your project's needs.
+    		In Punica, if you want to override default settings, variables, and class names in the <code>options.scss</code> and <code>utilities.scss</code> API files, you can use the <span class="color-warning">classnames</span>, <span class="color-warning">modules</span>, and <span class="color-warning">utilities</span></span> keys within your theme map. These keys allow you to customize Punica's default settings and recompile it to fit your project's needs.
     	</p>
     </div>
     <div class="content">
@@ -349,14 +344,22 @@
     	</script>
     </div>
     <div class="content">
-    	If you want to modify the settings of a component through your theme map;
+    	If you want to modify the settings of a module through your theme map;
     	<script type="text/plain" class="language-scss">
 		// themes.scss
 		$themes: (
 			your_theme: (
 				..
 				..
-				'components': (
+				'modules': (
+					'button': (
+						'font-weight': 500
+					),
+					'form': (
+						'input': (
+							'background-color': #28282d
+						)
+					),
 					'menu': (
 						'background-color': lighten(#222226, 2.5%),
 						'item': (
@@ -377,27 +380,6 @@
 						'text': (
 							'color'      : #222226,
 							'font-weight': 500,
-						)
-					)
-				),
-				..
-    	</script>
-    </div>
-    <div class="content">
-    	If you want to modify the settings of an element through your theme map;
-    	<script type="text/plain" class="language-scss">
-		// themes.scss
-		$themes: (
-			your_theme: (
-				..
-				..
-				'elements': (
-					'button': (
-						'font-weight': 500
-					),
-					'form': (
-						'input': (
-							'background-color': #28282d
 						)
 					),
 					'typography': (
@@ -420,16 +402,18 @@
 			your_theme: (
 				..
 				..
-				'utilities': (
-					// this option disables all helpers (default true)
-					//'enabled': false,
-					'flex-wrap': (
-						'enabled': false 
-					),
-					'overflow': (
-						'prefix': 'flow-' 
+				'modules': (
+					'utilities': (
+						// this option disables all helpers (default true)
+						//'enabled': false,
+						'flex-wrap': (
+							'enabled': false 
+						),
+						'overflow': (
+							'prefix': 'flow-' 
+						)
 					)
-				),
+				)
 				..
     	</script>
     </div>

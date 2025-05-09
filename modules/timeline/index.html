@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://codeforms.github.io/Punica-CSS-Framework/modules/timeline">
+        <title> Timeline - Punica CSS Framework v3 </title>
+        <meta name="description" content="The Timeline component is used to display a sequence of events or milestones in chronological order. It can be customized with various styles, images, videos, and icons to enhance clarity and engagement. To apply this component, add a container element with the &lt;code&gt;.timeline&lt;/code&gt; class and add &lt;code&gt;.item&lt;/code&gt; class for child elements.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codeforms/Punica-CSS-Framework@3.x.x/dist/punica-dark.min.css">
+        <link rel="stylesheet" href="https://codeforms.github.io/Punica-CSS-Framework/assets/build/css/prism.css">
+    </head>
+    <body class="overflow-auto">
+        <div class="reset container">
+            <header class="fixed small navbar border-bottom-1 bg-color">
+    <div class="container reset">
+        <!-- responsive hamburger menu -->
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burger"></label>
+        <!-- /responsive hamburger menu-->
+
+        <section class="brand width-240">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/" class="display-flex align-items-center text-large">
+                Punica CSS <span class="weight-normal ml-5 text-small">v3</span>
+            </a>
+        </section>
+
+        <section class="links">
+            <div class="divided section justify-content-flex-start">
+                <div class="full height borderless tab align-items-center">
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/alert" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 active">Modules</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/utilities/accent-color" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">Utilities</a>
+                    <a href="https://codeforms.github.io/Punica-CSS-Framework/api/installation" class="button color-text-lighten-20 weight-500 height-30 border-1 px-0 mx-15 ">API Docs</a>
+                </div>
+            </div>
+            <div class="section justify-content-flex-end flex-initial px-50">
+                <div class="buttons">
+                    <div class="dropdown bottom right">
+                        <a class="button toggle " tabindex="0">
+                            Preview <i class="material-symbols-outlined ml-5">keyboard_arrow_down</i>
+                        </a>
+                        <ul class="small menu">
+                            <li class="item">
+                                <a href="https://codeforms.github.io/Punica-CSS-Framework/preview/default" target="_blank">
+                                    Default Theme
+                                </a>    
+                            </li>   
+                            <li class="item">
+                                <a href="https://codeforms.github.io/Punica-CSS-Framework/preview/dark" target="_blank">
+                                    Default Dark Theme
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://github.com/codeforms/Punica-CSS-Framework" class="mx-20" target="_blank">
+                    <svg viewBox="0 0 20 20" style="fill: white;" class="width-30 height-30"><path d="M10 0C4.475 0 0 4.475 0 10a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.287-.6-1.175-1.025-1.412-.35-.188-.85-.65-.013-.663.788-.013 1.35.725 1.538 1.025.9 1.512 2.337 1.087 2.912.825.088-.65.35-1.088.638-1.338-2.225-.25-4.55-1.112-4.55-4.937 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.274.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0020 10c0-5.525-4.475-10-10-10z"></path></svg>
+                </a>
+            </div>
+        </section>
+    </div>
+</header>
+            <div class="main-container display-flex" style="margin-top: 65px;">
+                                <div class="sidebar display-flex border-right-1 width-280 shrink-0 position-fixed left-0" style="height: calc(-65px + 100vh); padding-bottom: calc(-65px + 100vh); top: 65px;">
+                    <div class="position-sticky top-0 left-0 height-100 border-bottom-1 border-x-0 border-top-0 border-grey weight-normal border-solid mb-10 pt-0 full width display-block">
+    <div class="leading-1 display-flex align-items-center full height width border-left-10 border-dark">
+        <div class="full width px-40">
+            <div class="h5 weight-normal">Modules</div>
+            <small class="letter-widest disabled">Timeline</small>
+        </div>
+    </div>
+    <div class="pure small menu display-block overflow-y-auto pb-100 pt-20 px-30" style="height: calc(-145px + 100vh);">
+                <li class="item" id="0">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/alert#0" class="py-0 ">
+                <span class="color-text-lighten-20">Alert</span>
+            </a>
+        </li>
+                <li class="item" id="1">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/breadcrumb#1" class="py-0 ">
+                <span class="color-text-lighten-20">Breadcrumb</span>
+            </a>
+        </li>
+                <li class="item" id="2">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/button#2" class="py-0 ">
+                <span class="color-text-lighten-20">Button</span>
+            </a>
+        </li>
+                <li class="item" id="3">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/caption#3" class="py-0 ">
+                <span class="color-text-lighten-20">Caption</span>
+            </a>
+        </li>
+                <li class="item" id="4">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/card#4" class="py-0 ">
+                <span class="color-text-lighten-20">Card</span>
+            </a>
+        </li>
+                <li class="item" id="5">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/form#5" class="py-0 ">
+                <span class="color-text-lighten-20">Form</span>
+            </a>
+        </li>
+                <li class="item" id="6">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/grid#6" class="py-0 ">
+                <span class="color-text-lighten-20">Grid</span>
+            </a>
+        </li>
+                <li class="item" id="7">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/label#7" class="py-0 ">
+                <span class="color-text-lighten-20">Label</span>
+            </a>
+        </li>
+                <li class="item" id="8">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/list#8" class="py-0 ">
+                <span class="color-text-lighten-20">List</span>
+            </a>
+        </li>
+                <li class="item" id="9">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/menu#9" class="py-0 ">
+                <span class="color-text-lighten-20">Menu</span>
+            </a>
+        </li>
+                <li class="item" id="10">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/navbar#10" class="py-0 ">
+                <span class="color-text-lighten-20">Navbar</span>
+            </a>
+        </li>
+                <li class="item" id="11">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/panel#11" class="py-0 ">
+                <span class="color-text-lighten-20">Panel</span>
+            </a>
+        </li>
+                <li class="item" id="12">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/process#12" class="py-0 ">
+                <span class="color-text-lighten-20">Process</span>
+            </a>
+        </li>
+                <li class="item" id="13">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/stats#13" class="py-0 ">
+                <span class="color-text-lighten-20">Stats</span>
+            </a>
+        </li>
+                <li class="item" id="14">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/table#14" class="py-0 ">
+                <span class="color-text-lighten-20">Table</span>
+            </a>
+        </li>
+                <li class="item" id="15">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/tabnav#15" class="py-0 ">
+                <span class="color-text-lighten-20">Tabnav</span>
+            </a>
+        </li>
+                <li class="item" id="16">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/timeline#16" class="py-0 active bg-dark">
+                <span class="color-text-lighten-20">Timeline</span>
+            </a>
+        </li>
+                <li class="item" id="17">
+            <a href="https://codeforms.github.io/Punica-CSS-Framework/modules/tooltip#17" class="py-0 ">
+                <span class="color-text-lighten-20">Tooltip</span>
+            </a>
+        </li>
+            </div>
+</div>
+                </div>
+                                <main class="content-container display-flex flex-direction-column flex-1  ml-280 ">
+                    <div class="container-xl">
+                        <div class="row">
+                            <div class="col-lg-14 col-sm-16 col-xs-16 col-md-16 pt-20 pb-200 position-relative">                               
+                                	<main class="row position-relative">
+    <div class="col-16">
+        <div class="row py-20 height-32 radius-8 align-items-center">
+            <div class="col-16 px-20 opacity-1">
+                <div class="display-flex align-items-center border-bottom-1">
+                    <h2 class="display-flex mb-10">
+                        Timeline
+                    </h2>
+                    <div class="spacer"></div>
+                                        <div>
+                        <div class="mini buttons">
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/Modules/Components/Timeline/Timeline.scss" class="button " target="_blank">Source</a>
+                            <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/src/options.scss" class="button " target="_blank">API</a>
+                        </div>
+                    </div>
+                                    </div>
+                                    <div class="mt-20">The Timeline component is used to display a sequence of events or milestones in chronological order. It can be customized with various styles, images, videos, and icons to enhance clarity and engagement. To apply this component, add a container element with the <code>.timeline</code> class and add <code>.item</code> class for child elements.</div>
+                            </div>
+        </div>
+    </div>
+</main>     <div class="container">   
+	        <div class="pure panel reset">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-16 col-xs-16 col-lg-7">
+                    <div class="timeline">
+                        <div class="item">
+                            <div class="type">
+                                <i class="material-symbols-outlined">lock</i>
+                            </div>
+                            <div class="date">12.12.2020</div>
+                            <div class="author">John Doe,</div>
+                            <div class="body">
+                                Te vidisse cotidieque est, in adhuc honestatis his.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="type success">
+                                <i class="material-symbols-outlined">wifi_protected_setup</i>
+                            </div>
+                            <div class="body">
+                                <a href="#1" class="weight-700">Jane Doe</a> aliquid consequat
+                                <a href="#2">debitis eos.</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="type warning">
+                                <i class="material-symbols-outlined">extension</i>
+                            </div>
+                            <div class="author">John Doe,</div>
+                            <div class="body">
+                                Oeehhh, that's awesome.. Me too!
+                            </div>
+                            <div class="date">12.12.2020</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-16 col-xs-16 col-lg-8 offset-lg-9">
+                    <script type="text/plain" class="language-markup mt-30">
+                    <div class="timeline">
+                        <div class="item">
+                            <div class="type"></div>
+                            <div class="date"></div>
+                            <div class="author"></div>
+                            <div class="body"></div>
+                        </div>
+                        ...
+                        ...
+                    </div>
+                </script>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="title">
+                Media & Actions
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Also, you can add the media elements or actions to Timeline component with the <code>.media</code> and
+                <code>.actions</code> classes.
+            </p>
+            <div class="row mt-50">
+                <div class="col-sm-16 col-xs-16 col-lg-11">
+                    <div class="timeline">
+                        <div class="item">
+                            <div class="type success">
+                                <i class="material-symbols-outlined">photo</i>
+                            </div>
+                            <div class="author">Single Photo</div>
+                            <div class="body">
+                                Et equidem ponderum posidonium ius, eu eum modo dictas impetus. Omnes voluptaria ea nam, vis
+                                ut ullum hendrerit.
+                            </div>
+                            <div class="date">2 weeks ago</div>
+                            <div class="media">
+                                <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                            </div>
+                            <div class="actions">
+                                <div class="buttons shadowless tiny">
+                                    <button class="button borderless">
+                                        <i class="material-symbols-outlined">thumb_up</i>
+                                    </button>
+                                    <button class="button borderless inactive">2,6K</button>
+                                </div>
+                                <div class="buttons shadowless tiny ml-10">
+                                    <button class="button borderless">
+                                        <i class="material-symbols-outlined color-error">favorite</i>
+                                    </button>
+                                    <button class="button borderless inactive">25</button>
+                                </div>
+                                <div class="buttons shadowless tiny ml-10">
+                                    <button class="button borderless">
+                                        <i class="material-symbols-outlined">mode_comment</i>
+                                    </button>
+                                    <button class="button borderless inactive">7</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="type warning">
+                                <i class="material-symbols-outlined">play_arrow</i>
+                            </div>
+                            <a href="javascript:" class="author">Youtube Video</a>
+                            <div class="body">
+                                Et equidem ponderum posidonium ius, eu eum modo dictas <a href="javascript:">impetus</a>.
+                                Omnes voluptaria ea nam, vis ut ullum hendrerit.
+                            </div>
+                            <div class="date">2 hours ago</div>
+                            <div class="media">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="actions">
+                                <div class="buttons shadowless tiny">
+                                    <button class="button borderless">
+                                        <i class="material-symbols-outlined">thumb_up</i>
+                                    </button>
+                                    <button class="button borderless inactive">256K</button>
+                                </div>
+                                <div class="buttons shadowless tiny ml-10">
+                                    <button class="button borderless">
+                                        <i class="material-symbols-outlined color-error">favorite</i>
+                                    </button>
+                                    <button class="button borderless inactive">130</button>
+                                </div>
+                                <div class="buttons shadowless tiny ml-10">
+                                    <button class="button borderless">
+                                        <i class="material-symbols-outlined">mode_comment</i>
+                                    </button>
+                                    <button class="button borderless inactive">47</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="type success">
+                                <i class="material-symbols-outlined">photo</i>
+                            </div>
+                            <div class="author">Three Photo Columns</div>
+                            <div class="body">
+                                Et equidem ponderum posidonium ius, eu eum modo dictas impetus. Omnes voluptaria ea nam, vis
+                                ut ullum hendrerit.
+                            </div>
+                            <div class="date">2 weeks ago</div>
+                            <div class="three media">
+                                <div>
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/01.jpg">
+                                </div>
+                                <div>
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/02.jpg">
+                                </div>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/03.jpg">
+                                </a>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/04.jpg">
+                                </a>
+                                <a href="">
+                                    <img src="https://codeforms.github.io/Punica-CSS-Framework/assets/images/05.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content overflow-auto">
+            <table class="table text-small">
+                <caption>Props</caption>
+                <thead>
+                    <tr>
+                        <th>Default Class Name</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>timeline</code></td>
+                        <td><code>.timeline</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>item</code></td>
+                        <td><code>.timeline .item</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>author</code></td>
+                        <td><code>.timeline .item .author</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>body</code></td>
+                        <td><code>.timeline .item .body</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td><code>.timeline .item .type</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>date</code></td>
+                        <td><code>.timeline .item .date</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>media</code></td>
+                        <td><code>.timeline .item .media</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>actions</code></td>
+                        <td><code>.timeline .item .actions</code></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Style</th>
+                        <th>Combinators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>primary</code></td>
+                        <td><code>.primary.type</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>success</code></td>
+                        <td><code>.success.type</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>warning</code></td>
+                        <td><code>.warning.type</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>error</code></td>
+                        <td><code>.error.type</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>.dark.type</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://codeforms.github.io/Punica-CSS-Framework/assets/build/js/prism.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 1024px) {
+                .sidebar {
+                    position: relative !important;
+                    top: auto !important;
+                    width: 100% !important;
+                    z-index: 0;
+                }
+                .main-container {
+                    flex-direction: column !important;                
+                }
+                .content-container,
+                .main-container {
+                    margin: 0 !important;
+                }
+                .navbar .section .dark.tab {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                }
+                .navbar .section .dark.tab > .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </body>
+</html>
