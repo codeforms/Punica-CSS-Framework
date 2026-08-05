@@ -7,7 +7,6 @@
 @use "../../Core/Global/Options" as *;
 @use "../../Core/Global/Sass" as *;
 @use "../../Core/Global/Mixins" as *;
-@use "../../Core/Global/Colors" as color;
 @use "../../Core/Theme/Getters" as *;
 @use "../../Core/Theme/Setters" as *;
 
@@ -27,7 +26,7 @@
 				bottom          : 0;
 				left            : 0;
 				width           : module('timeline', 'border-width');
-				background-color: module('timeline', 'item', 'background-color');
+				background-color: theme('border', 'color');
 			}
 			&:target .#{class('timeline', 'type')} {
 				border-color: theme('color', 'primary');
@@ -38,7 +37,7 @@
 				z-index         : 1;
 				display         : flex;
 				align-items     : center;
-				background-color: color.$grey;
+				background-color: module('timeline', 'item', 'background-color');
 				justify-content : center;
 				flex-shrink     : 0;
 				width           : module('timeline', 'item', 'type', 'width');
@@ -47,7 +46,7 @@
 				left            : -(calc(module('timeline', 'item', 'type', 'width') / 2px) - module('timeline', 'border-width'));
 				border          : module('timeline', 'item', 'type', 'border');
 				border-radius   : module('timeline', 'item', 'type', 'border-radius');
-				box-shadow: theme('shadow');
+				box-shadow		: theme('shadow');
 				///
 				/// STYLES
 				///

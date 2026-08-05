@@ -7,7 +7,6 @@
 @use "../../Core/Global/Options" as *;
 @use "../../Core/Global/Sass" as *;
 @use "../../Core/Global/Mixins" as *;
-@use "../../Core/Global/Colors" as color;
 @use "../../Core/Theme/Getters" as *;
 @use "../../Core/Theme/Setters" as *;
 
@@ -72,10 +71,10 @@
 			line-height: module('card', 'title', 'line-height');
 			&>.#{class('card', 'subtitle')} {
 				font-family: module('card', 'title', 'subtitle', 'font-family');
-				@if theme('type') == 'light' {
-					color: darken(color.$grey, 20%);
-				} @else if theme('type') == 'dark' {
-					color: lighten(color.$grey, 20%);
+				@if theme('is_light') {
+					color: darken(theme('color', 'background'), 32%);
+				} @else {
+					color: lighten(theme('color', 'background'), 32%);
 				}
 			}
 		}

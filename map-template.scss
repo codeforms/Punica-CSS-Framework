@@ -8,7 +8,7 @@
 
 theme_slug: (
 	'name': '',
-	'type': '', // light or dark (required*),
+	'is_light': true, // is this theme light? (required*),
 	'typography': (
 		'font-family': '',
 		'font-url'   : '', // embed/import url

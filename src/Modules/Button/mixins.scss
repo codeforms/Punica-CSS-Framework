@@ -271,11 +271,10 @@
 	/// OUTLINED STYLE
 	///
 	@if $outlined {
-		$textcolor      : if(theme('type') == 'dark', $text-color, $bg-color);
 		background-color: transparent;
-		color           : $textcolor;
+		color           : $bg-color;
 		i {
-			color: $textcolor;
+			color: $text-color;
 		}
 		&:hover {
 			background-color: $bg-color !important;

@@ -16,7 +16,7 @@ $themes: (
 	//
 	default: (
 		'name'      : 'Default Theme',
-		'type'      : 'light', // light or dark (required*),
+		'is_light'  : true, // is this theme light? (required*)
 		'typography': (
 			'font-family': 'Inter Tight',
 			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap', // embed/import url
@@ -46,7 +46,7 @@ $themes: (
 	//
 	dark: (
 		'name'      : 'Dark Theme',
-		'type'      : 'dark', // light or dark (required*),
+		'is_light'  : false, // is this theme light? (required*)
 		'typography': (
 			'font-family': 'Inter Tight',
 			'font-url'   : 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap', // embed/import url
@@ -61,7 +61,7 @@ $themes: (
 			'success'   : #369138,
 			'warning'   : #c17f2a,
 			'error'     : #bd3254,
-			'dark'      : #39414f
+			'dark'      : #485264
 		),
 		'border': (
 			'color' : #454859,

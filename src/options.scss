@@ -10,7 +10,6 @@
 @use "Core/Theme/Getters" as *;
 @use "Core/Theme/Setters" as *;
 @use "Core/Global/Sass" as *;
-@use "Core/Global/Colors" as color;
 
 $options: (
 	'alert': (
@@ -222,7 +221,21 @@ $options: (
 			'user-select'     : none,
 			'box-shadow'      : none,
 			'overflow'        : visible,
-			'icon'            : (
+			'hover': (
+				'color': theme('color', 'text'),
+				'background': if(theme('is_light'), 
+					darken(theme('color', 'background'), 12%), 
+					lighten(theme('color', 'background'), 12%)
+				),
+			),
+			'active': (
+				'color': theme('color', 'text'),
+				'background': if(theme('is_light'), 
+					darken(theme('color', 'background'), 12%), 
+					lighten(theme('color', 'background'), 12%)
+				),
+			),
+			'icon': (
 				'font-size': 1.12rem
 			),
 			'preloader': (
@@ -248,7 +261,7 @@ $options: (
 				(
 					'success', // class name
 					theme('color', 'success'), // bg color
-					white,
+					white, // text color
 					lighten(theme('color', 'success'), 4%) // border color
 				),
 				(
@@ -267,7 +280,7 @@ $options: (
 					'dark', // class name
 					theme('color', 'dark'), // bg color
 					white, // text color
-					if((theme('type') == "light"), color.$dark-grey, color.$grey) // border color
+					lighten(theme('color', 'dark'), 4%) // border color
 				)
 			),
 			'sizes': (
@@ -456,7 +469,10 @@ $options: (
 					'outline-width'   : 2px
 				),
 				'placeholder': (
-					'color': color.$dark-grey
+					'color': if(theme('is_light'), 
+						darken(theme('color', 'background'), 32%), 
+						lighten(theme('color', 'background'), 32%)
+					)
 				)
 			),
 			'group': (
@@ -521,7 +537,10 @@ $options: (
 				'white-space'  : normal
 			),
 			'small': (
-				'color': color.$darken-grey,
+				'color': if(theme('is_light'), 
+					darken(theme('color', 'background'), 38%), 
+					lighten(theme('color', 'background'), 38%)
+				),
 			),
 			// for input validations
 			'styles': (
@@ -782,12 +801,18 @@ $options: (
 					'transition'     : background .15s,
 				),
 				'active': (
-					'color'           : theme('color', 'text'),
-					'background-color': color.$light-grey
+					'color': theme('color', 'text'),
+					'background-color': if(theme('is_light'), 
+						darken(theme('color', 'background'), 12%), 
+						lighten(theme('color', 'background'), 12%)
+					)
 				),
 				'hover': (
-					'color'           : theme('color', 'text'),
-					'background-color': color.$grey
+					'color': theme('color', 'text'),
+					'background-color': if(theme('is_light'), 
+						darken(theme('color', 'background'), 12%), 
+						lighten(theme('color', 'background'), 12%)
+					)
 				),
 				// sub menu
 				'menu': (
@@ -842,12 +867,18 @@ $options: (
 					'color': theme('color', 'text')
 				),
 				'hover': (
-					'color'           : theme('color', 'text'),
-					'background-color': color.$grey
+					'color': theme('color', 'text'),
+					'background-color': if(theme('is_light'), 
+						darken(theme('color', 'background'), 12%), 
+						lighten(theme('color', 'background'), 12%)
+					)
 				),
 				'active': (
-					'color'           : theme('color', 'text'),
-					'background-color': color.$grey
+					'color': theme('color', 'text'),
+					'background-color': if(theme('is_light'), 
+						darken(theme('color', 'background'), 12%), 
+						lighten(theme('color', 'background'), 12%)
+					)
 				)
 			),
 			'brand': (
@@ -878,7 +909,10 @@ $options: (
 					'outline': 2px solid theme('color', 'primary')
 				),
 				'placeholder': (
-					'color': color.$dark-grey
+					'color': if(theme('is_light'), 
+						darken(theme('color', 'background'), 32%), 
+						lighten(theme('color', 'background'), 32%)
+					)
 				)
 			),
 			'menu': ( // settings of dropdown menu in navbar
@@ -887,12 +921,18 @@ $options: (
 					'color': theme('color', 'text')
 				),
 				'hover': (
-					'color'           : theme('color', 'text'),
-					'background-color': color.$grey
+					'color': theme('color', 'text'),
+					'background-color': if(theme('is_light'), 
+						darken(theme('color', 'background'), 12%), 
+						lighten(theme('color', 'background'), 12%)
+					)
 				),
 				'active': (
-					'color'           : theme('color', 'text'),
-					'background-color': color.$grey
+					'color': theme('color', 'text'),
+					'background-color': if(theme('is_light'), 
+						darken(theme('color', 'background'), 12%), 
+						lighten(theme('color', 'background'), 12%)
+					)
 				)
 			),
 			'styles': (
@@ -1102,7 +1142,7 @@ $options: (
 				"success": theme('color', 'success'),
 				"warning": theme('color', 'warning'),
 				"error"  : theme('color', 'error'),
-				"dark"   : color.$dark-grey,
+				"dark"   : theme('color', 'dark'),
 			)
 		)
 	),
@@ -1129,15 +1169,24 @@ $options: (
 			'transition'     : all 0.3s,
 			'hover': (
 				'color'           : theme('color', 'text'),
-				'background-color': color.$lighten-grey
+				'background-color': if(theme('is_light'), 
+					darken(theme('color', 'background'), 5%), 
+					lighten(theme('color', 'background'), 5%)
+				)
 			),
 			'striped': (
 				'color'           : theme('color', 'text'),
-				'background-color': color.$lighten-grey
+				'background-color': if(theme('is_light'), 
+					darken(theme('color', 'background'), 5%), 
+					lighten(theme('color', 'background'), 5%)
+				)
 			),
 			'active': (
 				'color'           : theme('color', 'text'),
-				'background-color': color.$light-grey
+				'background-color': if(theme('is_light'), 
+					darken(theme('color', 'background'), 9%), 
+					lighten(theme('color', 'background'), 9%)
+				)
 			),
 			'td': (
 				'padding': .313rem .7rem,
@@ -1149,7 +1198,10 @@ $options: (
 				'font-weight'        : bold,
 				'padding'            : .90rem .7rem,
 				'background-color'   : transparent,
-				'border-bottom-color': color.$dark-grey
+				'border-bottom-color': if(theme('is_light'), 
+					darken(theme('color', 'background'), 32%), 
+					lighten(theme('color', 'background'), 32%)
+				)
 			),
 			'caption': (
 				'text-align'      : inherit,
@@ -1158,7 +1210,10 @@ $options: (
 				'font-family'     : unset,
 				'font-weight'     : bold,
 				'padding'         : 1rem .6rem,
-				'border-bottom'   : 1px theme('border', 'style') color.$darken-grey,
+				'border-bottom'   : 1px theme('border', 'style') if(theme('is_light'), 
+					darken(theme('color', 'background'), 32%), 
+					lighten(theme('color', 'background'), 32%)
+				),
 				'background-color': transparent
 			)
 		)
@@ -1235,7 +1290,7 @@ $options: (
 		'settings': (
 			'border-width': 1px,
 			'item': (
-				'background-color': color.$grey,
+				'background-color': theme('color', 'background'),
 				'padding'         : 1.25em 2em 2.85em,
 				'type': (
 					'width'        : 32px,
@@ -1283,8 +1338,8 @@ $options: (
 				),
 				(
 					"dark", // style name (class)
-					theme('color', 'text'), // bg color
-					lighten(color.$grey, 20%) // text color
+					theme('color', 'dark'), // bg color
+					white // text color
 				),
 			)
 		)

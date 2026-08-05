@@ -7,7 +7,6 @@
 @use "../../Core/Global/Options" as *;
 @use "../../Core/Global/Sass" as *;
 @use "../../Core/Global/Mixins" as *;
-@use "../../Core/Global/Colors" as color;
 @use "../../Core/Theme/Getters" as *;
 @use "mixins" as *;
 
@@ -45,7 +44,7 @@
 			background-image: none;
 		}
 		&:hover {
-			background-color: color.$grey;
+			background-color: module('button', 'hover', 'background');
 		}
 		&:active,
 		&:focus {
@@ -53,15 +52,15 @@
 		}
 		&.#{class('button', 'active')} {
 			color           : module('button', 'color');
-			background-color: color.$grey;
+			background-color: module('button', 'active', 'background');
 			background-image: none;
 			text-decoration : none;
 			&:hover {
-				background-color: lighten(color.$grey, 5%);
+				background-color: lighten(module('button', 'active', 'background'), 5%);
 			}
 			&:active,
 			&:focus {
-				background-color: lighten(color.$grey, 15%);
+				background-color: lighten(module('button', 'active', 'background'), 15%);
 			}
 		}
 		// inactive button

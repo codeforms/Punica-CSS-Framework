@@ -7,7 +7,6 @@
 @use "../../Core/Global/Options" as *;
 @use "../../Core/Global/Sass" as *;
 @use "../../Core/Global/Mixins" as *;
-@use "../../Core/Global/Colors" as color;
 @use "../../Core/Theme/Getters" as *;
 @use "../../Core/Theme/Setters" as *;
 
@@ -40,11 +39,10 @@
 			font-size  : module('stats', 'subtitle', 'font-size');
 			font-family: module('stats', 'subtitle', 'font-family');
 			margin-top : module('stats', 'subtitle', 'margin-top');
-
-			@if theme('type') == 'light' {
-				color: darken(color.$grey, 20%);
-			} @else if theme('type') == 'dark' {
-				color: lighten(color.$grey, 20%);
+			@if theme('is_light') {
+				color: darken(theme('color', 'background'), 32%);
+			} @else {
+				color: lighten(theme('color', 'background'), 32%);
 			}
 		}
 		>.#{class('stats', 'value')} {
@@ -83,7 +81,7 @@
 		}
 	}
 	a.#{class('stats', 'name')}:hover {
-		@if theme('type') == 'light' {
+		@if theme('is_light') {
 			background-color: darken(theme('color', 'background'), 4.75%);
 		} @else {
 			background-color: lighten(theme('color', 'background'), 3.25%);

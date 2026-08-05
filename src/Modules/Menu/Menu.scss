@@ -7,7 +7,6 @@
 @use "../../Core/Global/Options" as *;
 @use "../../Core/Global/Sass" as *;
 @use "../../Core/Global/Mixins" as *;
-@use "../../Core/Global/Colors" as color;
 @use "../../Core/Theme/Getters" as *;
 @use "../../Core/Theme/Setters" as *;
 
@@ -73,10 +72,10 @@
 			}
 			// .menu .item i
 			i {
-				@if theme('type') == 'light' {
-					color: darken(color.$grey, 28%);
-				} @else if theme('type') == 'dark' {
-					color: lighten(color.$grey, 28%);
+				@if theme('is_light') {
+					color: darken(theme('color', 'background'), 32%);
+				} @else {
+					color: lighten(theme('color', 'background'), 32%);
 				}
 				font-size     : module('menu', 'icon', 'font-size');
 				margin-right  : module('menu', 'icon', 'margin-right');
