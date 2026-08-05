@@ -63,8 +63,8 @@
 				}
 				// .menu .item > a.active
 				&.#{class('menu', 'active')} {
-					color           : module('menu', 'item', 'active', 'color');
-					background-color: module('menu', 'item', 'active', 'background-color');
+					color            : module('menu', 'item', 'active', 'color');
+					background-color : module('menu', 'item', 'active', 'background-color');
 					i {
 						color: module('menu', 'item', 'active', 'color') !important;
 					}
@@ -72,11 +72,10 @@
 			}
 			// .menu .item i
 			i {
-				@if theme('is_light') {
-					color: darken(theme('color', 'background'), 32%);
-				} @else {
-					color: lighten(theme('color', 'background'), 32%);
-				}
+				color: if(theme('is_light'), 
+					darken(theme('color', 'background'), 32%), 
+					lighten(theme('color', 'background'), 32%)
+				);
 				font-size     : module('menu', 'icon', 'font-size');
 				margin-right  : module('menu', 'icon', 'margin-right');
 				vertical-align: module('menu', 'icon', 'vertical-align');

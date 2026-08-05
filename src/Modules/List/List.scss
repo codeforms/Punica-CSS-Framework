@@ -55,14 +55,13 @@
 		    	}
 		    	// .list > .item > .body > .subtitle
 				>.#{class('list', 'subtitle')} {
-					font-size    : module('list', 'item', 'subtitle', 'font-size');
-					font-weight  : module('list', 'item', 'subtitle', 'font-weight');
-					margin-bottom: module('list', 'item', 'subtitle', 'margin-bottom');
-					@if theme('is_light') {
-						color: darken(theme('color', 'background'), 32%);
-					} @else {
-						color: lighten(theme('color', 'background'), 32%);
-					}
+					font-size     : module('list', 'item', 'subtitle', 'font-size');
+					font-weight   : module('list', 'item', 'subtitle', 'font-weight');
+					margin-bottom : module('list', 'item', 'subtitle', 'margin-bottom');
+					color         : if(theme('is_light'), 
+						darken(theme('color', 'background'), 32%), 
+						lighten(theme('color', 'background'), 32%)
+					);
 				}
 		    }
 		    // .list > .item > .actions

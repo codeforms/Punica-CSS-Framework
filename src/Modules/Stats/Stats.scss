@@ -36,14 +36,13 @@
 			font-family: module('stats', 'title', 'font-family');
 		}
 		>.#{class('stats', 'subtitle')} {
-			font-size  : module('stats', 'subtitle', 'font-size');
-			font-family: module('stats', 'subtitle', 'font-family');
-			margin-top : module('stats', 'subtitle', 'margin-top');
-			@if theme('is_light') {
-				color: darken(theme('color', 'background'), 32%);
-			} @else {
-				color: lighten(theme('color', 'background'), 32%);
-			}
+			font-size   : module('stats', 'subtitle', 'font-size');
+			font-family : module('stats', 'subtitle', 'font-family');
+			margin-top  : module('stats', 'subtitle', 'margin-top');
+			color       : if(theme('is_light'), 
+				darken(theme('color', 'background'), 32%), 
+				lighten(theme('color', 'background'), 32%)
+			);
 		}
 		>.#{class('stats', 'value')} {
 			flex-direction: row;
@@ -81,11 +80,9 @@
 		}
 	}
 	a.#{class('stats', 'name')}:hover {
-		@if theme('is_light') {
-			background-color: darken(theme('color', 'background'), 4.75%);
-		} @else {
-			background-color: lighten(theme('color', 'background'), 3.25%);
-		}
-		
+		background-color: if(theme('is_light'), 
+			darken(theme('color', 'background'), 4.75%), 
+			lighten(theme('color', 'background'), 3.25%)
+		);
 	}
 }

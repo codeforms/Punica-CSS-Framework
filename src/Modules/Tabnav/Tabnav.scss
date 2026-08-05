@@ -39,11 +39,10 @@
 			margin-bottom: -#{module('tabnav', 'thickness')};
 			&:hover {
 				color: theme('color', 'text');
-				@if theme('is_light') {
-					border-bottom-color: darken(theme('border', 'color'), 35%);
-				} @else {
-					border-bottom-color: lighten(theme('border', 'color'), 35%);
-				}
+				border-bottom-color: if(theme('is_light'), 
+					darken(theme('border', 'color'), 35%), 
+					lighten(theme('border', 'color'), 35%)
+				);
 			}
 			&:hover,
 			&:focus {
@@ -87,11 +86,10 @@
 					border-bottom: 0;
 					margin-bottom: 0; 
 					&:hover {
-						@if theme('is_light') {
-							border-top-color: darken(theme('border', 'color'), 30%);
-						} @else {
-							border-top-color: lighten(theme('border', 'color'), 30%);
-						}
+						border-top-color: if(theme('is_light'), 
+							darken(theme('border', 'color'), 30%), 
+							lighten(theme('border', 'color'), 30%)
+						);
 					}
 					&.#{class('tabnav', 'active')} {
 						border-top-color: theme('color', 'primary');

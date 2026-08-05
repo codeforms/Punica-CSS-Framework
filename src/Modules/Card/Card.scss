@@ -70,12 +70,11 @@
 			color      : module('card', 'title', 'color');
 			line-height: module('card', 'title', 'line-height');
 			&>.#{class('card', 'subtitle')} {
-				font-family: module('card', 'title', 'subtitle', 'font-family');
-				@if theme('is_light') {
-					color: darken(theme('color', 'background'), 32%);
-				} @else {
-					color: lighten(theme('color', 'background'), 32%);
-				}
+				font-family : module('card', 'title', 'subtitle', 'font-family');
+				color       : if(theme('is_light'), 
+					darken(theme('color', 'background'), 32%), 
+					lighten(theme('color', 'background'), 32%)
+				);
 			}
 		}
 		>.#{class('card', 'title')} {
