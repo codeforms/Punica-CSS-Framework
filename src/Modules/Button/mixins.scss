@@ -271,10 +271,10 @@
 	/// OUTLINED STYLE
 	///
 	@if $outlined {
-		background-color: transparent;
 		color           : $bg-color;
+		background-color: transparent;
 		i {
-			color: $text-color;
+			color: $bg-color;
 		}
 		&:hover {
 			background-color: $bg-color !important;

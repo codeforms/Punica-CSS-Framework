@@ -110,6 +110,7 @@
 			font-size  : module('button', 'icon', 'font-size');
 			color      : module('button', 'color');
 			text-shadow: none;
+			transition : module('button', 'transition');
 		}
 		///
 		/// STYLES
