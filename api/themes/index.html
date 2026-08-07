@@ -165,8 +165,8 @@
 		            <td>Name of your theme</td>
 		        </tr>
 		        <tr>
-		            <td><code>type</code></td>
-		            <td>Style of your theme (light or dark)</td>
+		            <td><code>is_light</code></td>
+		            <td>Is this theme light? (required*) (boolean)</td>
 		        </tr>
 		        <tr>
 		            <td><code>typography</code></td>
@@ -271,7 +271,7 @@
 		$themes: (
 			theme_slug: (
 				'name': '',
-				'type': '', // light or dark (required*),
+				'is_light': true, // is this theme light? (required*),
 				'typography': (
 					'font-family': '',
 					'font-url'   : '', // embed/import url
