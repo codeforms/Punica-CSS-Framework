@@ -4,7 +4,7 @@
     <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelog</a>
 </p>
 <p>
-    Punica CSS Framework is a clean, lightweight, responsive, modern, and fully customizable <ins><b>API-Driven Framework</b></ins> built with SASS/SCSS, offering multi-theme support.
+    Punica CSS Framework is a clean, lightweight, responsive, modern, and fully customizable <ins><b>API-Driven Framework</b></ins> built with Sass/SCSS, offering multi-theme support.
 </p>
 <p>
     <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codeforms/Punica-CSS-Framework"></a>
@@ -35,16 +35,43 @@ For your default setup, add the Punica CSS file to the <head> element of your HT
     </body>
 </html>
 ```
-### Punica 3.0 API for Developers
-Punica's API-based structure allows you to create or customize a CSS framework to suit your needs and preferences. The ```options.scss``` API file, which contains all the default variables and settings required by Punica, can be customized—even class names can be modified if desired. Additionally, you can make all these changes directly through your own theme map instead of editing ```options.scss``` or ```utilities.scss``` API files. With this flexibility, you can customize and adapt the Punica to suit your preferences across different themes. You are completely free!
+## Punica 3.0 API for Developers
+Punica is built around a flexible, API-driven architecture that gives developers full control over the framework's configuration, modules, utilities, and themes.
+
+Instead of modifying the framework's core files, Punica allows you to define or override its configuration through your own API settings and theme maps. This makes it possible to build a customized version of Punica without having to maintain changes inside the framework itself.
+
+## Configuration & API
+Punica's core configuration can be accessed and customized through its SCSS API. The ```options.scss``` API contains the default variables and settings used throughout the framework and can be customized to match the requirements of your project.
+
+However, direct modification of ```options.scss``` is not required. You can override the framework's defaults through your own theme map, keeping your project-specific configuration separate from Punica's source code.
 
 ### Core Features
 * Fully customizable, API-driven structure
-* Modular design for easy configuration
+* Modular and extensible architecture
 * Flexible, fully functional multi-theme support
-* Option to enable or disable any component, element, utility, and their features
-* Ability to rename class names for all components and elements
-* Customizable settings for every component, element, and utility
-* Dynamic color scale generation based on specified color variables
+* Enable or disable modules, utilities, and their features
+* Customize module and utility settings
+* Rename module and utility class names
+* Define project-specific variables
+* Dynamic color scale generation from color variables
 * Simple and functional debugging
 * Clean and readable code structure
+
+## Customize Without Changing the Core Files
+One of the main goals of Punica's API is to keep customization separate from the framework itself. Instead of modifying framework files such as ```options.scss``` and ```utilities.scss```, you can define your own configuration and theme maps and let Punica apply those settings during compilation. This makes upgrades easier and keeps your project's customizations isolated from the framework's source code.
+
+The result is a framework that can be adapted to your project's design system while keeping the underlying Punica architecture intact.
+
+## Customize the Punica
+Punica is designed to be more than a collection of predefined CSS classes. Its API provides a configurable foundation that you can adapt to your own needs and preferences.
+
+#### You decide;
+* Which modules and utilities are included
+* Which features are enabled
+* Which utility features are available
+* How module and utility class names are defined
+* How colors and color scales are generated
+* How individual themes are configured
+* Which variables and settings are used
+
+Punica provides the foundation. <ins>You define the rules</ins>.
