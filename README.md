@@ -58,7 +58,7 @@ However, direct modification of ```options.scss``` is not required. You can over
 * Clean and readable code structure
 
 ## Customize Without Changing the Core Files
-One of the main goals of Punica's API is to keep customization separate from the framework itself. Instead of modifying framework files such as ```options.scss``` and ```utilities.scss```, you can define your own configuration and theme maps and let Punica apply those settings during compilation. This makes upgrades easier and keeps your project's customizations isolated from the framework's source code.
+One of the main goals of Punica's API is to keep customization separate from the framework itself. Instead of modifying framework files such as ```options.scss``` and ```utilities.scss```, you can define your own theme map and use it to customize or override all settings provided by these files. This keeps your project's customizations separate from the framework's source code and makes future upgrades easier.
 
 The result is a framework that can be adapted to your project's design system while keeping the underlying Punica architecture intact.
 
