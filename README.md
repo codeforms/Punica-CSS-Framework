@@ -38,12 +38,12 @@ For your default setup, add the Punica CSS file to the <head> element of your HT
 ## Punica 3.0 API for Developers
 Punica is built around a flexible, API-driven architecture that gives developers full control over the framework's configuration, modules, utilities, and themes.
 
-Instead of modifying the framework's core files, Punica allows you to define or override its configuration through your own API settings and theme maps. This makes it possible to build a customized version of Punica without having to maintain changes inside the framework itself.
+Instead of modifying the settings in the framework's API files (```options.scss``` and ```utilities.scss```), Punica allows you to define or override all configuration settings through your theme maps. This makes it possible to build a customized version of Punica without having to modify the framework itself.
 
 ## Configuration & API
 Punica's core configuration can be accessed and customized through its SCSS API. The ```options.scss``` API contains the default variables and settings used throughout the framework and can be customized to match the requirements of your project.
 
-However, direct modification of ```options.scss``` is not required. You can override the framework's defaults through your own theme map, keeping your project-specific configuration separate from Punica's source code.
+However, directly modifying the settings in ```options.scss``` or ```utilities.scss``` is not required. You can override the framework's defaults through your own theme map, keeping your project-specific configuration separate from Punica's source code.
 
 ### Core Features
 * Fully customizable, API-driven structure
