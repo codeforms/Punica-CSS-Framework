@@ -54,10 +54,10 @@ One of the main goals of Punica's API is to keep customization separate from the
 
 The result is a framework that can be adapted to your project's design system while keeping the underlying Punica architecture intact.
 
-## Customize the Punica
+## Customize Punica
 Punica is designed to be more than a collection of predefined CSS classes. Its API provides a configurable foundation that you can adapt to your own needs and preferences.
 
-#### You decide;
+#### You decide:
 * Which modules and utilities are included
 * Which features are enabled
 * Which utility features are available
