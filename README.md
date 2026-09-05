@@ -4,7 +4,7 @@
     <a href="https://github.com/codeforms/Punica-CSS-Framework/releases">Changelog</a>
 </p>
 <p>
-    Punica CSS Framework is a clean, lightweight, responsive, modern, and fully customizable <ins><b>API-Driven Framework</b></ins> built with Sass/SCSS, offering multi-theme support.
+    Punica CSS Framework is a clean, lightweight, responsive, modern, and fully customizable <ins><b>API-driven Framework</b></ins> built with Sass/SCSS, offering multi-theme support.
 </p>
 <p>
     <a href="https://github.com/codeforms/Punica-CSS-Framework/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codeforms/Punica-CSS-Framework"></a>
@@ -50,7 +50,9 @@ For your default setup, add the Punica CSS file to the <head> element of your HT
 ## Punica 3.0 API for Developers
 Punica is built around a flexible, API-driven architecture that gives developers full control over the framework's configuration, modules, utilities, and themes.
 
-One of the main goals of Punica's API is to keep customization separate from the framework itself. Instead of modifying framework files such as ```options.scss``` and ```utilities.scss```, you can define your own theme map and use it to customize or override all settings provided by these files. This keeps your project's customizations separate from the framework's source code and makes future upgrades easier.
+One of the main goals of Punica's API is to keep customization separate from the framework itself. Instead of modifying Punica's API files such as ```options.scss``` and ```utilities.scss```, you can define your own theme map and use it to customize or override all settings provided by these files. This keeps your project's customizations separate from the framework's source code and makes future upgrades easier.
+
+You can create new themes using the ```themes.scss``` API file and manage all settings in the ```options.scss``` and ```utilities.scss``` API files through your theme map. This approach allows for easy customization and flexibility, enabling you to adapt Punica to meet the specific needs of your project. By consolidating all configuration settings into <ins>a single theme map</ins>, you streamline the process of updating or switching between themes without the need for modifying multiple files. 
 
 The result is a framework that can be adapted to your project's design system while keeping the underlying Punica architecture intact.
 
